@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net.Mail" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd4" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:element name="CreateMessageUsingSmartTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Type" type="q1:MessageType" />
+        <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="To" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/System.Net.Mail" minOccurs="0" name="Priority" type="q2:MailPriority" />
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q3:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMessageUsingSmartTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q4:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMessageUsingBasicTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="From" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="To" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Subject" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Body" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Priority" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q5:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMessageUsingBasicTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q6:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="Message" nillable="true" type="q7:Message" />
+        <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q8:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q9:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObjectCollection" nillable="true" type="q10:ArrayOfWorkflowMDMObject" />
+        <xs:element minOccurs="0" name="workflowID" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowActivityID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q11:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q12:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObjectCollection" nillable="true" type="q13:ArrayOfWorkflowMDMObject" />
+        <xs:element minOccurs="0" name="workflowID" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowActivityID" type="xs:int" />
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userIDs" nillable="true" type="q14:ArrayOfint" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q15:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q16:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObjectCollection" nillable="true" type="q17:ArrayOfWorkflowMDMObject" />
+        <xs:element minOccurs="0" name="workflowVersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="activityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q18:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q19:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObjectCollection" nillable="true" type="q20:ArrayOfWorkflowMDMObject" />
+        <xs:element minOccurs="0" name="workflowVersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="activityName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userIDs" nillable="true" type="q21:ArrayOfint" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q22="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q22:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q23:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowID" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowActivityID" type="xs:int" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q24="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q24:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q25:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowID" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowActivityID" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userIDs" nillable="true" type="q26:ArrayOfint" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q27:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q28:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowID" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowActivityID" type="xs:int" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q29:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q30:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowID" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowActivityID" type="xs:int" />
+        <xs:element xmlns:q31="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userLogins" nillable="true" type="q31:ArrayOfstring" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q32="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q32:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLoginsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q33:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowVersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="activityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userID" type="xs:int" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q34:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q35:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowVersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="activityName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userIDs" nillable="true" type="q36:ArrayOfint" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q37="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q37:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q38:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowVersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="activityName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q39="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q39:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLoginResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q40:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="MDMObjectIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="MDMObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowVersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="activityName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q41="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userLogins" nillable="true" type="q41:ArrayOfstring" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q42:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLoginsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q43:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowInstances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowInstances" nillable="true" type="q44:ArrayOfWorkflowInstance" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q45="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q45:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByWorkflowInstancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q46:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByInstanceIdList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InstanceIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q47="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q47:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByInstanceIdListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q48:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByEscalationCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="escalationCollection" nillable="true" type="q49:ArrayOfEscalation" />
+        <xs:element minOccurs="0" name="templateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q50="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q50:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendWorkflowMessagesByEscalationCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q51:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIdList" nillable="true" type="q52:ArrayOflong" />
+        <xs:element minOccurs="0" name="mailTemplateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q53="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="toMDMUsers" nillable="true" type="q53:ArrayOfstring" />
+        <xs:element xmlns:q54="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="toMailIds" nillable="true" type="q54:ArrayOfstring" />
+        <xs:element xmlns:q55="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ccMDMUsers" nillable="true" type="q55:ArrayOfstring" />
+        <xs:element xmlns:q56="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ccMailIds" nillable="true" type="q56:ArrayOfstring" />
+        <xs:element minOccurs="0" name="workflowName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q57:CallerContext" />
+        <xs:element minOccurs="0" name="consolidateAllEntitiesMessages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://mdmobjects.riversand.com/" minOccurs="0" name="SendMailWithWorkflowDetailsResult" nillable="true" type="q58:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetailsUsingMailContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIdList" nillable="true" type="q59:ArrayOflong" />
+        <xs:element xmlns:q60="http://mdmobjects.riversand.com/" minOccurs="0" name="emailContext" nillable="true" type="q60:EmailContext" />
+        <xs:element minOccurs="0" name="workflowName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q61:CallerContext" />
+        <xs:element minOccurs="0" name="consolidateAllEntitiesMessages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetailsUsingMailContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://mdmobjects.riversand.com/" minOccurs="0" name="SendMailWithWorkflowDetailsUsingMailContextResult" nillable="true" type="q62:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGenericMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://mdmobjects.riversand.com/" minOccurs="0" name="emailContext" nillable="true" type="q63:EmailContext" />
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q64:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendGenericMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://mdmobjects.riversand.com/" minOccurs="0" name="SendGenericMailResult" nillable="true" type="q65:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIdList" nillable="true" type="q66:ArrayOflong" />
+        <xs:element minOccurs="0" name="mailTemplateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q67="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="toMDMUsers" nillable="true" type="q67:ArrayOfstring" />
+        <xs:element xmlns:q68="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="toMailIds" nillable="true" type="q68:ArrayOfstring" />
+        <xs:element xmlns:q69="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ccMDMUsers" nillable="true" type="q69:ArrayOfstring" />
+        <xs:element xmlns:q70="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ccMailIds" nillable="true" type="q70:ArrayOfstring" />
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q71:CallerContext" />
+        <xs:element minOccurs="0" name="consolidateAllEntitiesMessages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://mdmobjects.riversand.com/" minOccurs="0" name="SendMailResult" nillable="true" type="q72:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIdList" nillable="true" type="q73:ArrayOflong" />
+        <xs:element xmlns:q74="http://mdmobjects.riversand.com/" minOccurs="0" name="emailContext" nillable="true" type="q74:EmailContext" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q75:CallerContext" />
+        <xs:element minOccurs="0" name="consolidateAllEntitiesMessages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://mdmobjects.riversand.com/" minOccurs="0" name="SendMailWithContextResult" nillable="true" type="q76:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetailsUsingBRContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowBusinessRuleContext" nillable="true" type="q77:WorkflowBusinessRuleContext" />
+        <xs:element minOccurs="0" name="mailTemplateName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q78="http://mdmobjects.riversand.com/" minOccurs="0" name="assignedUserOfActivityInContext" nillable="true" type="q78:SecurityUser" />
+        <xs:element xmlns:q79="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="toMDMUsers" nillable="true" type="q79:ArrayOfstring" />
+        <xs:element xmlns:q80="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="toMailIds" nillable="true" type="q80:ArrayOfstring" />
+        <xs:element xmlns:q81="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ccMDMUsers" nillable="true" type="q81:ArrayOfstring" />
+        <xs:element xmlns:q82="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ccMailIds" nillable="true" type="q82:ArrayOfstring" />
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q83:CallerContext" />
+        <xs:element minOccurs="0" name="consolidateAllEntitiesMessages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetailsUsingBRContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://mdmobjects.riversand.com/" minOccurs="0" name="SendMailWithWorkflowDetailsUsingBRContextResult" nillable="true" type="q84:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetailsUsingBRContextAndMailContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowBusinessRuleContext" nillable="true" type="q85:WorkflowBusinessRuleContext" />
+        <xs:element xmlns:q86="http://mdmobjects.riversand.com/" minOccurs="0" name="assignedUserOfActivityInContext" nillable="true" type="q86:SecurityUser" />
+        <xs:element xmlns:q87="http://mdmobjects.riversand.com/" minOccurs="0" name="emailContext" nillable="true" type="q87:EmailContext" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q88:CallerContext" />
+        <xs:element minOccurs="0" name="consolidateAllEntitiesMessages" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SendMailWithWorkflowDetailsUsingBRContextAndMailContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://mdmobjects.riversand.com/" minOccurs="0" name="SendMailWithWorkflowDetailsUsingBRContextAndMailContextResult" nillable="true" type="q89:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

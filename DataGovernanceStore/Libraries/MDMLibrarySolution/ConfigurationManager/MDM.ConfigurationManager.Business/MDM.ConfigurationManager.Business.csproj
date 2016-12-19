@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D8B5C77D-FFF9-4B31-814A-AC12DDEAC98C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.ConfigurationManager.Business</RootNamespace>
+    <AssemblyName>RS.MDM.ConfigurationManager.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>    
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.ConfigurationManager.Business.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.ConfigurationManager.Business.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApplicationConfigurationBL.cs" />
+    <Compile Include="ApplicationMessageBL.cs" />
+    <Compile Include="ConnectionStringBL.cs" />
+    <Compile Include="DBCommandHelper.cs" />
+    <Compile Include="MDMEventHandlerBL.cs" />
+    <Compile Include="MDMEventInfoBL.cs" />
+    <Compile Include="MDMEventHandlerDataProviderUsingDB.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\AdminManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\AttributeManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\BusinessRuleManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\DataModelManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\AttributeDependencyManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\EntityManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\JobManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\KnowledgeManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\MessageManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\SyndicationManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\TrackingManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\WorkflowDesigner.Parameters.config" />
+    <Content Include="Config\SqlParameters\WorkflowPersistence.Parameters.config" />
+    <Content Include="Data\cs-CZ\MessagesConfig.xml" />
+    <Content Include="Data\cs-CZ\MessagesConfigDescription.xml" />
+    <Content Include="Data\en-US\MessagesConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\en-US\MessagesConfigDescription.xml" />
+    <Content Include="Data\de-DE\MessagesConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\de-DE\MessagesConfigDescription.xml" />
+    <Content Include="Data\en-WW\MessagesConfig.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Data\en-WW\MessagesConfigDescription.xml" />
+    <Content Include="Data\es-ES\MessagesConfig.xml" />
+    <Content Include="Data\es-ES\MessagesConfigDescription.xml" />
+    <Content Include="Data\fr-FR\MessagesConfig.xml" />
+    <Content Include="Data\fr-FR\MessagesConfigDescription.xml" />
+    <Content Include="Data\it-IT\MessagesConfig.xml" />
+    <Content Include="Data\it-IT\MessagesConfigDescription.xml" />
+    <Content Include="Data\ja-JP\MessagesConfig.xml" />
+    <Content Include="Data\ja-JP\MessagesConfigDescription.xml" />
+    <Content Include="Data\ko-KR\MessagesConfig.xml" />
+    <Content Include="Data\ko-KR\MessagesConfigDescription.xml" />
+    <Content Include="Data\nl-NL\MessagesConfig.xml" />
+    <Content Include="Data\nl-NL\MessagesConfigDescription.xml" />
+    <Content Include="Data\pl-PL\MessagesConfig.xml" />
+    <Content Include="Data\pl-PL\MessagesConfigDescription.xml" />
+    <Content Include="Data\pt-PT\MessagesConfig.xml" />
+    <Content Include="Data\pt-PT\MessagesConfigDescription.xml" />
+    <Content Include="Data\ru-RU\MessagesConfig.xml" />
+    <Content Include="Data\ru-RU\MessagesConfigDescription.xml" />
+    <Content Include="Data\sv-SE\MessagesConfig.xml" />
+    <Content Include="Data\sv-SE\MessagesConfigDescription.xml" />
+    <Content Include="Data\zh-CN\MessagesConfig.xml" />
+    <Content Include="Data\zh-CN\MessagesConfigDescription.xml" />
+    <Content Include="Data\zh-TW\MessagesConfig.xml" />
+    <Content Include="Data\zh-TW\MessagesConfigDescription.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\ExceptionManager.Config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\OrganizationManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\RelationshipManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\ApplicationServiceManager.Parameters.Config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\AttributeModelManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BufferManager\MDM.BufferManager\MDM.BufferManager.csproj">
+      <Project>{e62bf6f6-8c07-4681-9cbf-80f9e250356c}</Project>
+      <Name>MDM.BufferManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CacheManager\MDM.CacheManager.Business\MDM.CacheManager.Business.csproj">
+      <Project>{9078D667-A162-4258-8E8C-53725D5C2BE8}</Project>
+      <Name>MDM.CacheManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExceptionManager\MDM.ExceptionManager\MDM.ExceptionManager.csproj">
+      <Project>{C26B08D2-5D90-476E-8DEF-A740C9E9C4AD}</Project>
+      <Name>MDM.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5a452cd7-42cf-41b0-83e9-759c68b43eef}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.DataProviderInterfaces\MDM.DataProviderInterfaces.csproj">
+      <Project>{8ab47cc5-a143-4341-ba1d-36030833460a}</Project>
+      <Name>MDM.DataProviderInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OperationContextManager\MDM.OperationContextManager.Business\MDM.OperationContextManager.Business.csproj">
+      <Project>{2B0D6267-080C-493A-89E6-D90E4F4EECC0}</Project>
+      <Name>MDM.OperationContextManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mdm.configurationmanager.data.sqlclient\MDM.ConfigurationManager.Data.SqlClient.csproj">
+      <Project>{30642999-DC19-4C83-82D3-808462CF7C29}</Project>
+      <Name>MDM.ConfigurationManager.Data.SqlClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\CategoryManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\SearchManager.Parameters.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\VendorManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\ConfigurationManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\ImportManager.Parameters.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\ProfileManager.Parameters.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameterKeyEntries.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config\SqlParameters\IntegrationManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\BusinessRuleManagement.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Config\SqlParameters\ContainerManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\LookupManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\PermissionManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\DenormManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\MonitorManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\UomManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\ExportProfileManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\DataQualityManager.Parameters.config" />
+    <Content Include="Config\SqlParameters\SecurityManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\InstrumentationManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Config\SqlParameters\ActivityLogManager.Parameters.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Config\SqlParameters\DiagnosticManager.Parameters.Config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

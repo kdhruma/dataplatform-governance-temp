@@ -1,0 +1,362 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2530CC21-8559-4AAB-8DA4-0BBC552428DA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.Services</RootNamespace>
+    <AssemblyName>RS.MDM.Services.InternalClient</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.Services.InternalClient.xml</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="InternalCommonService.cs" />
+    <Compile Include="InternalServiceProxies\LegacyDataAccessServiceProxy.cs" />
+    <Compile Include="LegacyDataAccessService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="InternalServiceProxies\InternalCommonServiceProxy.cs" />
+    <Compile Include="Service References\InternalCommonServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\LegacyDataAccessServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceClientDataProviders\MDMEventHandlerDataProviderUsingService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177ae776-aabc-4e81-99de-733fff5221d0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{b907bb1d-d3ba-4316-a05f-b3a99d66a6b9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExceptionManager\MDM.ExceptionManager\MDM.ExceptionManager.csproj">
+      <Project>{c26b08d2-5d90-476e-8def-a740c9e9c4ad}</Project>
+      <Name>MDM.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5A452CD7-42CF-41B0-83E9-759C68B43EEF}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.DataProviderInterfaces\MDM.DataProviderInterfaces.csproj">
+      <Project>{8ab47cc5-a143-4341-ba1d-36030833460a}</Project>
+      <Name>MDM.DataProviderInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776be6c-5371-41e2-b444-3c42377cc9ca}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{c465d67c-eb64-4b40-82ba-04cc0c202c03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.Services.Client\MDM.Services.Client.csproj">
+      <Project>{e277413e-fdd8-47e0-8558-614e5aecae2c}</Project>
+      <Name>MDM.Services.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.WCFServiceInterfaces\MDM.WCFServiceInterfaces.csproj">
+      <Project>{88c67d80-ddc8-4228-8c98-428e435036d3}</Project>
+      <Name>MDM.WCFServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AppConfig.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AppConfigCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ApplicationContext.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Attribute.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeGroup.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeModel.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeModelCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeVersionCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.BusinessRule.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.BusinessRuleAttributeMapping.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.BusinessRuleOperationResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.BusinessRuleOperationResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.CategoryCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerRelationshipTypeEntityTypeMapping.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerRelationshipTypeEntityTypeMappingCollection3.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DataModel.DataModelOperationResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Entity.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityActivityLogCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityBusinessConditionCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityGetResultWithDiagnosticReport.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityGetWithDiagnosticsResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityOperationResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityOperationResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityPaginationResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityProcessResultWithDiagnosticReport.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityReadResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityStateValidationCollection2.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityStateValidationScoreCollection2.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityType.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityType1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityValidationScoreCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityValidationStateCollection2.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityViewCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.ExportProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.File.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.Job.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.LocaleMessageCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMEventHandlerCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMEventInfoCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMFeatureConfig.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMFeatureConfigCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleContext.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleContext1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleKeyword.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleKeywordCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleKeywordGroupCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleMapCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMRuleParams1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.OperationResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.OperationResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.TimeZone.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowActivity.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1212.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1213.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1214.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1215.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1216.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1217.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1218.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1219.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1220.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1221.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1222.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService1223.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService22.wsdl">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService23.wsdl" />
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.Attribute.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.AttributeVersionCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.CategoryCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.ContainerRelationshipTypeEntityTypeMappingCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.DataModelOperationResultCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.EntityOperationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.EntityPaginationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.EntityReadResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.EntityViewCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.EvaluateMDMRulesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.File.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.MDMEventHandlerCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.MDMEventInfoCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.OperationResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.OperationResultCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.QueuedEntityCollection.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\InternalCommonServiceClient\MDM.Services.InternalCommonServiceClient.Table.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService.wsdl" />
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService1.wsdl" />
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\InternalCommonServiceClient\" />
+    <WCFMetadataStorage Include="Service References\LegacyDataAccessServiceClient\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\MDM.BusinessObjects.QueuedEntityCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Table.datasource" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalCommonServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalCommonServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalCommonServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\InternalCommonServiceClient\InternalCommonService11.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LegacyDataAccessServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LegacyDataAccessServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\LegacyDataAccessServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

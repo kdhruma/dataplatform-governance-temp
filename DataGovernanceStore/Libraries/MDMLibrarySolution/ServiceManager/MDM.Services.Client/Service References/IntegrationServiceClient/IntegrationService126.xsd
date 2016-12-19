@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="IntegrationActivityLog">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" type="q1:ObjectAction" />
+          <xs:element minOccurs="0" name="ConnectorId" type="xs:short" />
+          <xs:element minOccurs="0" name="ConnectorLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConnectorName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="IntegrationId" type="xs:long" />
+          <xs:element minOccurs="0" name="IntegrationMessageTypeId" type="xs:short" />
+          <xs:element minOccurs="0" name="IntegrationMessageTypeLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IntegrationMessageTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IntegrationType" type="q1:IntegrationType" />
+          <xs:element minOccurs="0" name="IsLoaded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLoadingInProgress" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsProcessed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MDMObjectId" type="xs:long" />
+          <xs:element minOccurs="0" name="MDMObjectTypeId" type="xs:short" />
+          <xs:element minOccurs="0" name="MDMObjectTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MessageCount" type="xs:int" />
+          <xs:element minOccurs="0" name="MessageLoadEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="MessageLoadStartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProcessEndTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ProcessStartTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerId" type="xs:int" />
+          <xs:element minOccurs="0" name="Weightage" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationActivityLog" nillable="true" type="tns:IntegrationActivityLog" />
+  <xs:complexType name="ConnectorProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://mdmobjects.riversand.com/" base="q2:MDMObject">
+        <xs:sequence>
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="AdditionalConfigurations" nillable="true" type="q3:ArrayOfKeyValuePairOfstringstring" />
+          <xs:element minOccurs="0" name="AggregationConfiguration" nillable="true" type="tns:AggregationConfiguration" />
+          <xs:element minOccurs="0" name="DefaultInboundIntegrationMessageTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:short" />
+          <xs:element minOccurs="0" name="ProcessingConfiguration" nillable="true" type="tns:ProcessingConfiguration" />
+          <xs:element minOccurs="0" name="QualificationConfiguration" nillable="true" type="tns:QualificationConfiguration" />
+          <xs:element minOccurs="0" name="RunTimeSpecifications" nillable="true" type="tns:RunTimeSpecifications" />
+          <xs:element minOccurs="0" name="Weightage" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConnectorProfile" nillable="true" type="tns:ConnectorProfile" />
+  <xs:complexType name="AggregationConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InboundBatchSize" type="xs:int" />
+      <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="InboundScheduleCriteria" nillable="true" type="q4:ScheduleCriteria" />
+      <xs:element minOccurs="0" name="IsEnabledForInbound" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEnabledForOutbound" type="xs:boolean" />
+      <xs:element minOccurs="0" name="OutboundBatchSize" type="xs:int" />
+      <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="OutboundScheduleCriteria" nillable="true" type="q5:ScheduleCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AggregationConfiguration" nillable="true" type="tns:AggregationConfiguration" />
+  <xs:complexType name="ProcessingConfiguration">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="ScheduleCriteria" nillable="true" type="q6:ScheduleCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProcessingConfiguration" nillable="true" type="tns:ProcessingConfiguration" />
+  <xs:complexType name="QualificationConfiguration">
+    <xs:sequence>
+      <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="ScheduleCriteria" nillable="true" type="q7:ScheduleCriteria" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="QualificationConfiguration" nillable="true" type="tns:QualificationConfiguration" />
+  <xs:complexType name="RunTimeSpecifications">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AssemblyName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FileWatcherFolderName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UseInplaceOrchestration" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RunTimeSpecifications" nillable="true" type="tns:RunTimeSpecifications" />
+  <xs:complexType name="ConnectorProfileCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://mdmobjects.riversand.com/" base="q8:InterfaceContractCollectionOfanyTypeConnectorProfileOX2zyehR">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ConnectorProfileCollection" nillable="true" type="tns:ConnectorProfileCollection" />
+  <xs:complexType name="ArrayOfConnectorProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ConnectorProfile" nillable="true" type="tns:ConnectorProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfConnectorProfile" nillable="true" type="tns:ArrayOfConnectorProfile" />
+  <xs:complexType name="IntegrationMessage">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://mdmobjects.riversand.com/" base="q9:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" type="q9:ObjectAction" />
+          <xs:element minOccurs="0" name="AggregatedMessageId" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="MDMObjectTypeId" type="xs:short" />
+          <xs:element minOccurs="0" name="MessageBody" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MessageHeader" nillable="true" type="tns:IntegrationMessageHeader" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationMessage" nillable="true" type="tns:IntegrationMessage" />
+  <xs:complexType name="IntegrationMessageHeader">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://mdmobjects.riversand.com/" base="q10:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConnectorId" type="xs:short" />
+          <xs:element minOccurs="0" name="ConnectorName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Context" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IntegrationMessageTypeId" type="xs:short" />
+          <xs:element minOccurs="0" name="IntegrationMessageTypeLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IntegrationType" type="q10:IntegrationType" />
+          <xs:element minOccurs="0" name="MDMObjectId" type="xs:long" />
+          <xs:element minOccurs="0" name="MDMObjectTypeId" type="xs:short" />
+          <xs:element minOccurs="0" name="MDMObjectTypeLongName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ParentMessageIds" nillable="true" type="q11:ArrayOflong" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationMessageHeader" nillable="true" type="tns:IntegrationMessageHeader" />
+  <xs:complexType name="IntegrationMessageTypeCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://mdmobjects.riversand.com/" base="q12:InterfaceContractCollectionOfanyTypeIntegrationMessageTypeOX2zyehR">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationMessageTypeCollection" nillable="true" type="tns:IntegrationMessageTypeCollection" />
+  <xs:complexType name="ArrayOfIntegrationMessageType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IntegrationMessageType" nillable="true" type="tns:IntegrationMessageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIntegrationMessageType" nillable="true" type="tns:ArrayOfIntegrationMessageType" />
+  <xs:complexType name="IntegrationMessageType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://mdmobjects.riversand.com/" base="q13:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" type="q13:ObjectAction" />
+          <xs:element minOccurs="0" name="ConnectorId" type="xs:short" />
+          <xs:element minOccurs="0" name="ConnectorLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:short" />
+          <xs:element minOccurs="0" name="LongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Weightage" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationMessageType" nillable="true" type="tns:IntegrationMessageType" />
+  <xs:complexType name="MDMObjectTypeCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://mdmobjects.riversand.com/" base="q14:InterfaceContractCollectionOfanyTypeMDMObjectType7cXCH591">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MDMObjectTypeCollection" nillable="true" type="tns:MDMObjectTypeCollection" />
+  <xs:complexType name="IntegrationItemStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://mdmobjects.riversand.com/" base="q15:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ConnectorName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalObjectTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsExternalStatus" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MDMObjectId" type="xs:long" />
+          <xs:element minOccurs="0" name="MDMObjectTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferenceId" type="xs:int" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StatusDimensionCollection" nillable="true" type="tns:IntegrationItemStatusDimensionCollection" />
+          <xs:element minOccurs="0" name="StatusType" type="q15:OperationResultType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatus" nillable="true" type="tns:IntegrationItemStatus" />
+  <xs:complexType name="IntegrationItemStatusDimensionCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://mdmobjects.riversand.com/" base="q16:InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionOX2zyehR">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusDimensionCollection" nillable="true" type="tns:IntegrationItemStatusDimensionCollection" />
+  <xs:complexType name="ArrayOfIntegrationItemStatusDimension">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IntegrationItemStatusDimension" nillable="true" type="tns:IntegrationItemStatusDimension" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIntegrationItemStatusDimension" nillable="true" type="tns:ArrayOfIntegrationItemStatusDimension" />
+  <xs:complexType name="IntegrationItemStatusDimension">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://mdmobjects.riversand.com/" base="q17:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IntegrationItemDimensionTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IntegrationItemDimensionValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferenceId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusDimension" nillable="true" type="tns:IntegrationItemStatusDimension" />
+  <xs:complexType name="IntegrationItemStatusSearchCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://mdmobjects.riversand.com/" base="q18:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConnectorId" type="xs:short" />
+          <xs:element minOccurs="0" name="DimensionValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+          <xs:element minOccurs="0" name="ExternalObjectValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+          <xs:element minOccurs="0" name="IncludeHistoryData" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ItemStatusComments" nillable="true" type="tns:IntegrationItemStatusSearchParameter" />
+          <xs:element minOccurs="0" name="MDMObjectValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+          <xs:element minOccurs="0" name="StatusTypes" nillable="true" type="q18:ArrayOfOperationResultType" />
+          <xs:element minOccurs="0" name="StatusValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+          <xs:element minOccurs="0" name="_dimensionValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+          <xs:element minOccurs="0" name="_externalObjectValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+          <xs:element minOccurs="0" name="_mdmObjectValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+          <xs:element minOccurs="0" name="_statusTypes" nillable="true" type="q18:ArrayOfOperationResultType" />
+          <xs:element minOccurs="0" name="_statusValues" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusSearchCriteria" nillable="true" type="tns:IntegrationItemStatusSearchCriteria" />
+  <xs:complexType name="IntegrationItemStatusSearchParameterCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://mdmobjects.riversand.com/" base="q19:InterfaceContractCollectionOfanyTypeIntegrationItemStatusSearchParameterOX2zyehR">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusSearchParameterCollection" nillable="true" type="tns:IntegrationItemStatusSearchParameterCollection" />
+  <xs:complexType name="ArrayOfIntegrationItemStatusSearchParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IntegrationItemStatusSearchParameter" nillable="true" type="tns:IntegrationItemStatusSearchParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIntegrationItemStatusSearchParameter" nillable="true" type="tns:ArrayOfIntegrationItemStatusSearchParameter" />
+  <xs:complexType name="IntegrationItemStatusSearchParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://mdmobjects.riversand.com/" base="q20:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Operator" type="q20:SearchOperator" />
+          <xs:element minOccurs="0" name="SearchKey" type="xs:int" />
+          <xs:element xmlns:q21="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="SearchValues" nillable="true" type="q21:ArrayOfstring" />
+          <xs:element xmlns:q22="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="_searchValues" nillable="true" type="q22:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusSearchParameter" nillable="true" type="tns:IntegrationItemStatusSearchParameter" />
+  <xs:complexType name="IntegrationItemStatusInternalCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://mdmobjects.riversand.com/" base="q23:InterfaceContractCollectionOfanyTypeIntegrationItemStatusInternalOX2zyehR">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusInternalCollection" nillable="true" type="tns:IntegrationItemStatusInternalCollection" />
+  <xs:complexType name="ArrayOfIntegrationItemStatusInternal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IntegrationItemStatusInternal" nillable="true" type="tns:IntegrationItemStatusInternal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIntegrationItemStatusInternal" nillable="true" type="tns:ArrayOfIntegrationItemStatusInternal" />
+  <xs:complexType name="IntegrationItemStatusInternal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IntegrationItemStatus">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuditTimeStamp" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ConnectorId" type="xs:short" />
+          <xs:element minOccurs="0" name="ConnectorLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalObjectTypeId" type="xs:short" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="MDMObjectTypeId" type="xs:short" />
+          <xs:element minOccurs="0" name="StatusDimensionInternalCollection" nillable="true" type="tns:IntegrationItemStatusDimensionInternalCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusInternal" nillable="true" type="tns:IntegrationItemStatusInternal" />
+  <xs:complexType name="IntegrationItemStatusDimensionInternalCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://mdmobjects.riversand.com/" base="q24:InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionInternalOX2zyehR">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusDimensionInternalCollection" nillable="true" type="tns:IntegrationItemStatusDimensionInternalCollection" />
+  <xs:complexType name="ArrayOfIntegrationItemStatusDimensionInternal">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IntegrationItemStatusDimensionInternal" nillable="true" type="tns:IntegrationItemStatusDimensionInternal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIntegrationItemStatusDimensionInternal" nillable="true" type="tns:ArrayOfIntegrationItemStatusDimensionInternal" />
+  <xs:complexType name="IntegrationItemStatusDimensionInternal">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:IntegrationItemStatusDimension">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IntegrationItemDimensionTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="IntegrationItemDimensionTypeLongName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemStatusDimensionInternal" nillable="true" type="tns:IntegrationItemStatusDimensionInternal" />
+  <xs:complexType name="IntegrationItemDimensionTypeCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://mdmobjects.riversand.com/" base="q25:InterfaceContractCollectionOfanyTypeIntegrationItemDimensionTypeOX2zyehR">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemDimensionTypeCollection" nillable="true" type="tns:IntegrationItemDimensionTypeCollection" />
+  <xs:complexType name="ArrayOfIntegrationItemDimensionType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IntegrationItemDimensionType" nillable="true" type="tns:IntegrationItemDimensionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIntegrationItemDimensionType" nillable="true" type="tns:ArrayOfIntegrationItemDimensionType" />
+  <xs:complexType name="IntegrationItemDimensionType">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://mdmobjects.riversand.com/" base="q26:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ConnectorId" type="xs:short" />
+          <xs:element minOccurs="0" name="ConnectorName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="IntegrationItemDimensionType" nillable="true" type="tns:IntegrationItemDimensionType" />
+</xs:schema>

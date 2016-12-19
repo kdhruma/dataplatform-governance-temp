@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WorkflowService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/WorkflowService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Activities.Tracking" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/WorkflowService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkflowService_StartWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithRunOptions_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithRunOptions" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithRunOptions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithRunOptionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowInstancesByRuntimeInstanceIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowInstancesByRuntimeInstanceIds" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowInstancesByRuntimeInstanceIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowInstancesByRuntimeInstanceIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowInstanceByMDMObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowInstanceByMDMObject" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowInstanceByMDMObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowInstanceByMDMObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowInstance" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeMultipleWorkflowInstancesByMDMObjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeMultipleWorkflowInstancesByMDMObjects" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeMultipleWorkflowInstancesByMDMObjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeMultipleWorkflowInstancesByMDMObjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeMultipleWorkflowInstances_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeMultipleWorkflowInstances" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeMultipleWorkflowInstances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeMultipleWorkflowInstancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeAbortedWorkflowInstances_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeAbortedWorkflowInstances" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeAbortedWorkflowInstances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeAbortedWorkflowInstancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_TerminateWorkflowInstances_InputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateWorkflowInstances" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_TerminateWorkflowInstances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TerminateWorkflowInstancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_PromoteWorkflowInstances_InputMessage">
+    <wsdl:part name="parameters" element="tns:PromoteWorkflowInstances" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_PromoteWorkflowInstances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PromoteWorkflowInstancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_FindWorkflowInstanceInWorkflow_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindWorkflowInstanceInWorkflow" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_FindWorkflowInstanceInWorkflow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindWorkflowInstanceInWorkflowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_FindWorkflowInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindWorkflowInstance" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_FindWorkflowInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindWorkflowInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllWorkflowDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkflowDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllWorkflowDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkflowDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceSummary" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowStatistics_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowStatistics" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowStatistics_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowStatisticsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetActionButtons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionButtons" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetActionButtons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActionButtonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetActivityActionButtons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityActionButtons" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetActivityActionButtons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityActionButtonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAssignmentButtons_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignmentButtons" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAssignmentButtons_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssignmentButtonsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowPanelDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowPanelDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowPanelDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowPanelDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowPanelDetailsExt_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowPanelDetailsExt" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowPanelDetailsExt_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowPanelDetailsExtResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkItemsPanelDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItemsPanelDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkItemsPanelDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItemsPanelDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkItemDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItemDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkItemDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkItemDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_UpdateWorkflowInstances_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkflowInstances" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_UpdateWorkflowInstances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWorkflowInstancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessEscalation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessEscalation" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessEscalation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessEscalationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowEscalationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowEscalationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowEscalationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowEscalationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowEscalationDetails_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_SendMailWithWorkflowEscalationDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowEscalationDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_SendMailWithWorkflowEscalationDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowEscalationDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_SendMailWithWorkflowEscalationDetails_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessWorkflows_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessWorkflows" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessWorkflows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessWorkflowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessActivities_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessActivities" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessActivities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowViewDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowViewDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowViewDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowViewDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowExecutionDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowExecutionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowExecutionDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowExecutionDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowDoneReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowDoneReport" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowDoneReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowDoneReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowDoneReportWithAttributesDataSourceParameter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowDoneReportWithAttributesDataSourceParameter" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowDoneReportWithAttributesDataSourceParameter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowDoneReportWithAttributesDataSourceParameterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityIdList_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityIdList" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityIdList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityId_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityId" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityList" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntity_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntity" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityIdListAndRunOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityIdListAndRunOption" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityIdListAndRunOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityIdListAndRunOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityIdAndRunOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityIdAndRunOption" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityIdAndRunOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityIdAndRunOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityListAndRunOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityListAndRunOption" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityListAndRunOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityListAndRunOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityAndRunOption_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityAndRunOption" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_StartWorkflowWithEntityAndRunOption_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartWorkflowWithEntityAndRunOptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowWithEntityIdList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowWithEntityIdList" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowWithEntityIdList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowWithEntityIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowWithEntityList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowWithEntityList" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ResumeWorkflowWithEntityList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ResumeWorkflowWithEntityListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ChangeAssignment_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAssignment" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ChangeAssignment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangeAssignmentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowActivityPerformedUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowActivityPerformedUser" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowActivityPerformedUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowActivityPerformedUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWorkflowActivityPerformedUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAppConfigValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfigValue" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAppConfigValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfigValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllWorkflowInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkflowInformation" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllWorkflowInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkflowInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllWorkflowInformation_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkflowService">
+    <wsdl:operation name="StartWorkflow">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflow" message="tns:IWorkflowService_StartWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowResponse" message="tns:IWorkflowService_StartWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithRunOptions">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithRunOptions" message="tns:IWorkflowService_StartWorkflowWithRunOptions_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithRunOptionsResponse" message="tns:IWorkflowService_StartWorkflowWithRunOptions_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeWorkflowInstancesByRuntimeInstanceIds">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowInstancesByRuntimeInstanceIds" message="tns:IWorkflowService_ResumeWorkflowInstancesByRuntimeInstanceIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowInstancesByRuntimeInstanceIdsResponse" message="tns:IWorkflowService_ResumeWorkflowInstancesByRuntimeInstanceIds_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeWorkflowInstanceByMDMObject">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowInstanceByMDMObject" message="tns:IWorkflowService_ResumeWorkflowInstanceByMDMObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowInstanceByMDMObjectResponse" message="tns:IWorkflowService_ResumeWorkflowInstanceByMDMObject_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeWorkflowInstance">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowInstance" message="tns:IWorkflowService_ResumeWorkflowInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowInstanceResponse" message="tns:IWorkflowService_ResumeWorkflowInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeMultipleWorkflowInstancesByMDMObjects">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeMultipleWorkflowInstancesByMDMObjects" message="tns:IWorkflowService_ResumeMultipleWorkflowInstancesByMDMObjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeMultipleWorkflowInstancesByMDMObjectsResponse" message="tns:IWorkflowService_ResumeMultipleWorkflowInstancesByMDMObjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeMultipleWorkflowInstances">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeMultipleWorkflowInstances" message="tns:IWorkflowService_ResumeMultipleWorkflowInstances_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeMultipleWorkflowInstancesResponse" message="tns:IWorkflowService_ResumeMultipleWorkflowInstances_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeAbortedWorkflowInstances">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeAbortedWorkflowInstances" message="tns:IWorkflowService_ResumeAbortedWorkflowInstances_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeAbortedWorkflowInstancesResponse" message="tns:IWorkflowService_ResumeAbortedWorkflowInstances_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TerminateWorkflowInstances">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/TerminateWorkflowInstances" message="tns:IWorkflowService_TerminateWorkflowInstances_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/TerminateWorkflowInstancesResponse" message="tns:IWorkflowService_TerminateWorkflowInstances_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PromoteWorkflowInstances">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/PromoteWorkflowInstances" message="tns:IWorkflowService_PromoteWorkflowInstances_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/PromoteWorkflowInstancesResponse" message="tns:IWorkflowService_PromoteWorkflowInstances_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindWorkflowInstanceInWorkflow">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/FindWorkflowInstanceInWorkflow" message="tns:IWorkflowService_FindWorkflowInstanceInWorkflow_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/FindWorkflowInstanceInWorkflowResponse" message="tns:IWorkflowService_FindWorkflowInstanceInWorkflow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindWorkflowInstance">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/FindWorkflowInstance" message="tns:IWorkflowService_FindWorkflowInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/FindWorkflowInstanceResponse" message="tns:IWorkflowService_FindWorkflowInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWorkflowDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAllWorkflowDetails" message="tns:IWorkflowService_GetAllWorkflowDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAllWorkflowDetailsResponse" message="tns:IWorkflowService_GetAllWorkflowDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceSummary">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetInstanceSummary" message="tns:IWorkflowService_GetInstanceSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetInstanceSummaryResponse" message="tns:IWorkflowService_GetInstanceSummary_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetInstanceDetails" message="tns:IWorkflowService_GetInstanceDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetInstanceDetailsResponse" message="tns:IWorkflowService_GetInstanceDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowStatistics">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowStatistics" message="tns:IWorkflowService_GetWorkflowStatistics_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowStatisticsResponse" message="tns:IWorkflowService_GetWorkflowStatistics_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActionButtons">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetActionButtons" message="tns:IWorkflowService_GetActionButtons_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetActionButtonsResponse" message="tns:IWorkflowService_GetActionButtons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityActionButtons">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetActivityActionButtons" message="tns:IWorkflowService_GetActivityActionButtons_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetActivityActionButtonsResponse" message="tns:IWorkflowService_GetActivityActionButtons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssignmentButtons">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAssignmentButtons" message="tns:IWorkflowService_GetAssignmentButtons_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAssignmentButtonsResponse" message="tns:IWorkflowService_GetAssignmentButtons_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowPanelDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowPanelDetails" message="tns:IWorkflowService_GetWorkflowPanelDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowPanelDetailsResponse" message="tns:IWorkflowService_GetWorkflowPanelDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowPanelDetailsExt">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowPanelDetailsExt" message="tns:IWorkflowService_GetWorkflowPanelDetailsExt_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowPanelDetailsExtResponse" message="tns:IWorkflowService_GetWorkflowPanelDetailsExt_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkItemsPanelDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkItemsPanelDetails" message="tns:IWorkflowService_GetWorkItemsPanelDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkItemsPanelDetailsResponse" message="tns:IWorkflowService_GetWorkItemsPanelDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkItemDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkItemDetails" message="tns:IWorkflowService_GetWorkItemDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkItemDetailsResponse" message="tns:IWorkflowService_GetWorkItemDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWorkflowInstances">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/UpdateWorkflowInstances" message="tns:IWorkflowService_UpdateWorkflowInstances_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/UpdateWorkflowInstancesResponse" message="tns:IWorkflowService_UpdateWorkflowInstances_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEscalation">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ProcessEscalation" message="tns:IWorkflowService_ProcessEscalation_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ProcessEscalationResponse" message="tns:IWorkflowService_ProcessEscalation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowEscalationDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowEscalationDetails" message="tns:IWorkflowService_GetWorkflowEscalationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowEscalationDetailsResponse" message="tns:IWorkflowService_GetWorkflowEscalationDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowEscalationDetailsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IWorkflowService_GetWorkflowEscalationDetails_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithWorkflowEscalationDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/SendMailWithWorkflowEscalationDetails" message="tns:IWorkflowService_SendMailWithWorkflowEscalationDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/SendMailWithWorkflowEscalationDetailsResponse" message="tns:IWorkflowService_SendMailWithWorkflowEscalationDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/SendMailWithWorkflowEscalationDetailsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IWorkflowService_SendMailWithWorkflowEscalationDetails_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessWorkflows">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ProcessWorkflows" message="tns:IWorkflowService_ProcessWorkflows_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ProcessWorkflowsResponse" message="tns:IWorkflowService_ProcessWorkflows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessActivities">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ProcessActivities" message="tns:IWorkflowService_ProcessActivities_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ProcessActivitiesResponse" message="tns:IWorkflowService_ProcessActivities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowViewDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowViewDetails" message="tns:IWorkflowService_GetWorkflowViewDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowViewDetailsResponse" message="tns:IWorkflowService_GetWorkflowViewDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowExecutionDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowExecutionDetails" message="tns:IWorkflowService_GetWorkflowExecutionDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowExecutionDetailsResponse" message="tns:IWorkflowService_GetWorkflowExecutionDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowDoneReport">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowDoneReport" message="tns:IWorkflowService_GetWorkflowDoneReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowDoneReportResponse" message="tns:IWorkflowService_GetWorkflowDoneReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowDoneReportWithAttributesDataSourceParameter">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowDoneReportWithAttributesDataSourceParameter" message="tns:IWorkflowService_GetWorkflowDoneReportWithAttributesDataSourceParameter_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowDoneReportWithAttributesDataSourceParameterResponse" message="tns:IWorkflowService_GetWorkflowDoneReportWithAttributesDataSourceParameter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntityIdList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityIdList" message="tns:IWorkflowService_StartWorkflowWithEntityIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityIdListResponse" message="tns:IWorkflowService_StartWorkflowWithEntityIdList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntityId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityId" message="tns:IWorkflowService_StartWorkflowWithEntityId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityIdResponse" message="tns:IWorkflowService_StartWorkflowWithEntityId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntityList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityList" message="tns:IWorkflowService_StartWorkflowWithEntityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityListResponse" message="tns:IWorkflowService_StartWorkflowWithEntityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntity">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntity" message="tns:IWorkflowService_StartWorkflowWithEntity_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityResponse" message="tns:IWorkflowService_StartWorkflowWithEntity_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntityIdListAndRunOption">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityIdListAndRunOption" message="tns:IWorkflowService_StartWorkflowWithEntityIdListAndRunOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityIdListAndRunOptionResponse" message="tns:IWorkflowService_StartWorkflowWithEntityIdListAndRunOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntityIdAndRunOption">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityIdAndRunOption" message="tns:IWorkflowService_StartWorkflowWithEntityIdAndRunOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityIdAndRunOptionResponse" message="tns:IWorkflowService_StartWorkflowWithEntityIdAndRunOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntityListAndRunOption">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityListAndRunOption" message="tns:IWorkflowService_StartWorkflowWithEntityListAndRunOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityListAndRunOptionResponse" message="tns:IWorkflowService_StartWorkflowWithEntityListAndRunOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartWorkflowWithEntityAndRunOption">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityAndRunOption" message="tns:IWorkflowService_StartWorkflowWithEntityAndRunOption_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/StartWorkflowWithEntityAndRunOptionResponse" message="tns:IWorkflowService_StartWorkflowWithEntityAndRunOption_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeWorkflowWithEntityIdList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowWithEntityIdList" message="tns:IWorkflowService_ResumeWorkflowWithEntityIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowWithEntityIdListResponse" message="tns:IWorkflowService_ResumeWorkflowWithEntityIdList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ResumeWorkflowWithEntityList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowWithEntityList" message="tns:IWorkflowService_ResumeWorkflowWithEntityList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ResumeWorkflowWithEntityListResponse" message="tns:IWorkflowService_ResumeWorkflowWithEntityList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangeAssignment">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ChangeAssignment" message="tns:IWorkflowService_ChangeAssignment_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/ChangeAssignmentResponse" message="tns:IWorkflowService_ChangeAssignment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowActivityPerformedUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowActivityPerformedUser" message="tns:IWorkflowService_GetWorkflowActivityPerformedUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowActivityPerformedUserResponse" message="tns:IWorkflowService_GetWorkflowActivityPerformedUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetWorkflowActivityPerformedUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IWorkflowService_GetWorkflowActivityPerformedUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppConfigValue">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAppConfigValue" message="tns:IWorkflowService_GetAppConfigValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAppConfigValueResponse" message="tns:IWorkflowService_GetAppConfigValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWorkflowInformation">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAllWorkflowInformation" message="tns:IWorkflowService_GetAllWorkflowInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAllWorkflowInformationResponse" message="tns:IWorkflowService_GetAllWorkflowInformation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IWorkflowService/GetAllWorkflowInformationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IWorkflowService_GetAllWorkflowInformation_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="WorkflowService">
+    <wsdl:port name="WSHttpBinding_IWorkflowService" binding="i0:WSHttpBinding_IWorkflowService">
+      <soap12:address location="http://localhost/Development_WCFServices/WorkflowService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/WorkflowService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IWorkflowService" binding="i0:NetTcpBinding_IWorkflowService">
+      <soap12:address location="net.tcp://rst-engdhrumak.riversand.com/Development_WCFServices/WorkflowService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://rst-engdhrumak.riversand.com/Development_WCFServices/WorkflowService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

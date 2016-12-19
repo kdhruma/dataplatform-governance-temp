@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ConfigurationService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/ConfigurationService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IConfigurationService_GetApplicationConfigurations_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetApplicationConfigurations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteApplicationConfigurations_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteApplicationConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteApplicationConfigurations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteApplicationConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateApplicationConfigurations_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateApplicationConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateApplicationConfigurations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateApplicationConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateApplicationConfigurations_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationConfigurations" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateApplicationConfigurations_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationConfigurationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAppConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfig" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAppConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAppConfig_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAppConfigObject_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfigObject" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAppConfigObject_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfigObjectResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAppConfigObject_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAllAppConfigs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAppConfigs" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAllAppConfigs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllAppConfigsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetAllAppConfigs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateAppConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAppConfig" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateAppConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAppConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateAppConfig_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateAppConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAppConfig" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateAppConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAppConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateAppConfig_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteAppConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAppConfig" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteAppConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteAppConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteAppConfig_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessAppConfigs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessAppConfigs" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessAppConfigs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessAppConfigsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessAppConfigs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessUserConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUserConfig" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessUserConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUserConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessUserConfig_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetApplicationContextById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationContextById" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetApplicationContextById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationContextByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetApplicationContextById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateApplicationContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateApplicationContext" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateApplicationContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateApplicationContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_CreateApplicationContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateApplicationContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationContext" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateApplicationContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateApplicationContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_UpdateApplicationContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://mdmobjects.riversand.com/" name="detail" element="q15:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteApplicationContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteApplicationContext" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteApplicationContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteApplicationContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_DeleteApplicationContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://mdmobjects.riversand.com/" name="detail" element="q16:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessApplicationContexts_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessApplicationContexts" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessApplicationContexts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessApplicationContextsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessApplicationContexts_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://mdmobjects.riversand.com/" name="detail" element="q17:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetLocaleMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocaleMessages" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetLocaleMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocaleMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetLocaleMessages_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://mdmobjects.riversand.com/" name="detail" element="q18:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessLocaleMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessLocaleMessage" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessLocaleMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessLocaleMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessLocaleMessage_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://mdmobjects.riversand.com/" name="detail" element="q19:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessLocaleMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessLocaleMessages" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessLocaleMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessLocaleMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_ProcessLocaleMessages_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://mdmobjects.riversand.com/" name="detail" element="q20:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetMDMFeatureConfigCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMFeatureConfigCollection" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetMDMFeatureConfigCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMFeatureConfigCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetMDMFeatureConfigCollection_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://mdmobjects.riversand.com/" name="detail" element="q21:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetFeatureConfig_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeatureConfig" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetFeatureConfig_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFeatureConfigResponse" />
+  </wsdl:message>
+  <wsdl:message name="IConfigurationService_GetFeatureConfig_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://mdmobjects.riversand.com/" name="detail" element="q22:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IConfigurationService">
+    <wsdl:operation name="GetApplicationConfigurations">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetApplicationConfigurations" message="tns:IConfigurationService_GetApplicationConfigurations_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetApplicationConfigurationsResponse" message="tns:IConfigurationService_GetApplicationConfigurations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetApplicationConfigurationsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicationConfigurations">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteApplicationConfigurations" message="tns:IConfigurationService_DeleteApplicationConfigurations_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteApplicationConfigurationsResponse" message="tns:IConfigurationService_DeleteApplicationConfigurations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteApplicationConfigurationsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_DeleteApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicationConfigurations">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateApplicationConfigurations" message="tns:IConfigurationService_CreateApplicationConfigurations_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateApplicationConfigurationsResponse" message="tns:IConfigurationService_CreateApplicationConfigurations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateApplicationConfigurationsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_CreateApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicationConfigurations">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateApplicationConfigurations" message="tns:IConfigurationService_UpdateApplicationConfigurations_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateApplicationConfigurationsResponse" message="tns:IConfigurationService_UpdateApplicationConfigurations_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateApplicationConfigurationsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_UpdateApplicationConfigurations_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppConfig">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAppConfig" message="tns:IConfigurationService_GetAppConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAppConfigResponse" message="tns:IConfigurationService_GetAppConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAppConfigMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetAppConfig_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAppConfigObject">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAppConfigObject" message="tns:IConfigurationService_GetAppConfigObject_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAppConfigObjectResponse" message="tns:IConfigurationService_GetAppConfigObject_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAppConfigObjectMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetAppConfigObject_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllAppConfigs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAllAppConfigs" message="tns:IConfigurationService_GetAllAppConfigs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAllAppConfigsResponse" message="tns:IConfigurationService_GetAllAppConfigs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetAllAppConfigsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetAllAppConfigs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAppConfig">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateAppConfig" message="tns:IConfigurationService_CreateAppConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateAppConfigResponse" message="tns:IConfigurationService_CreateAppConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateAppConfigMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_CreateAppConfig_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAppConfig">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateAppConfig" message="tns:IConfigurationService_UpdateAppConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateAppConfigResponse" message="tns:IConfigurationService_UpdateAppConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateAppConfigMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_UpdateAppConfig_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteAppConfig">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteAppConfig" message="tns:IConfigurationService_DeleteAppConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteAppConfigResponse" message="tns:IConfigurationService_DeleteAppConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteAppConfigMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_DeleteAppConfig_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessAppConfigs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessAppConfigs" message="tns:IConfigurationService_ProcessAppConfigs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessAppConfigsResponse" message="tns:IConfigurationService_ProcessAppConfigs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessAppConfigsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_ProcessAppConfigs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessUserConfig">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessUserConfig" message="tns:IConfigurationService_ProcessUserConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessUserConfigResponse" message="tns:IConfigurationService_ProcessUserConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessUserConfigMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_ProcessUserConfig_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetApplicationContextById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetApplicationContextById" message="tns:IConfigurationService_GetApplicationContextById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetApplicationContextByIdResponse" message="tns:IConfigurationService_GetApplicationContextById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetApplicationContextByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetApplicationContextById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateApplicationContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateApplicationContext" message="tns:IConfigurationService_CreateApplicationContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateApplicationContextResponse" message="tns:IConfigurationService_CreateApplicationContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/CreateApplicationContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_CreateApplicationContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateApplicationContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateApplicationContext" message="tns:IConfigurationService_UpdateApplicationContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateApplicationContextResponse" message="tns:IConfigurationService_UpdateApplicationContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/UpdateApplicationContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_UpdateApplicationContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteApplicationContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteApplicationContext" message="tns:IConfigurationService_DeleteApplicationContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteApplicationContextResponse" message="tns:IConfigurationService_DeleteApplicationContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/DeleteApplicationContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_DeleteApplicationContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessApplicationContexts">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessApplicationContexts" message="tns:IConfigurationService_ProcessApplicationContexts_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessApplicationContextsResponse" message="tns:IConfigurationService_ProcessApplicationContexts_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessApplicationContextsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_ProcessApplicationContexts_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocaleMessages">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetLocaleMessages" message="tns:IConfigurationService_GetLocaleMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetLocaleMessagesResponse" message="tns:IConfigurationService_GetLocaleMessages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetLocaleMessagesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetLocaleMessages_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessLocaleMessage">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessLocaleMessage" message="tns:IConfigurationService_ProcessLocaleMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessLocaleMessageResponse" message="tns:IConfigurationService_ProcessLocaleMessage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessLocaleMessageMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_ProcessLocaleMessage_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessLocaleMessages">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessLocaleMessages" message="tns:IConfigurationService_ProcessLocaleMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessLocaleMessagesResponse" message="tns:IConfigurationService_ProcessLocaleMessages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/ProcessLocaleMessagesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_ProcessLocaleMessages_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMFeatureConfigCollection">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetMDMFeatureConfigCollection" message="tns:IConfigurationService_GetMDMFeatureConfigCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetMDMFeatureConfigCollectionResponse" message="tns:IConfigurationService_GetMDMFeatureConfigCollection_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetMDMFeatureConfigCollectionMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetMDMFeatureConfigCollection_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFeatureConfig">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetFeatureConfig" message="tns:IConfigurationService_GetFeatureConfig_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetFeatureConfigResponse" message="tns:IConfigurationService_GetFeatureConfig_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IConfigurationService/GetFeatureConfigMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IConfigurationService_GetFeatureConfig_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="ConfigurationService">
+    <wsdl:port name="WSHttpBinding_IConfigurationService" binding="i0:WSHttpBinding_IConfigurationService">
+      <soap12:address location="http://localhost/Development_WCFServices/ConfigurationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/ConfigurationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IConfigurationService" binding="i0:NetTcpBinding_IConfigurationService">
+      <soap12:address location="net.tcp://tista.riversand.com/Development_WCFServices/ConfigurationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://tista.riversand.com/Development_WCFServices/ConfigurationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

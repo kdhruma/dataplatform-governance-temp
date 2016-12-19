@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C92ED5BD-BC56-4A36-8B9E-ABDBBA20C119}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.SecurityManager.Business</RootNamespace>
+    <AssemblyName>RS.MDM.SecurityManager.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="PasswordResetRequestBL.cs" />
+    <Compile Include="SecurityPrincipalManagerBL.cs" />
+    <Compile Include="UserCredentialRequestBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BufferManager\MDM.BufferManager\MDM.BufferManager.csproj">
+      <Project>{e62bf6f6-8c07-4681-9cbf-80f9e250356c}</Project>
+      <Name>MDM.BufferManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177ae776-aabc-4e81-99de-733fff5221d0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConfigurationManager\MDM.ConfigurationManager.Business\MDM.ConfigurationManager.Business.csproj">
+      <Project>{d8b5c77d-fff9-4b31-814a-ac12ddeac98c}</Project>
+      <Name>MDM.ConfigurationManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{b907bb1d-d3ba-4316-a05f-b3a99d66a6b9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5a452cd7-42cf-41b0-83e9-759c68b43eef}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776be6c-5371-41e2-b444-3c42377cc9ca}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MessageManager\MDM.MessageManager.Business\MDM.MessageManager.Business.csproj">
+      <Project>{696d72c4-bbe3-4c9d-a47c-c1508330a11a}</Project>
+      <Name>MDM.MessageManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NotificationManager\MDM.NotificationManager.Business\MDM.NotificationManager.Business.csproj">
+      <Project>{d92ee921-e637-4789-9c1b-5a06fef05d6d}</Project>
+      <Name>MDM.NotificationManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{c465d67c-eb64-4b40-82ba-04cc0c202c03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.AdminManager.Business\MDM.AdminManager.Business.csproj">
+      <Project>{8f148d32-8428-405b-ad0f-e8aa554d6564}</Project>
+      <Name>MDM.AdminManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.SecurityManager.Data.SqlClient\MDM.SecurityManager.Data.SqlClient.csproj">
+      <Project>{20d84aa2-5aed-49b5-a2f5-d7660eb0d0e7}</Project>
+      <Name>MDM.SecurityManager.Data.SqlClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

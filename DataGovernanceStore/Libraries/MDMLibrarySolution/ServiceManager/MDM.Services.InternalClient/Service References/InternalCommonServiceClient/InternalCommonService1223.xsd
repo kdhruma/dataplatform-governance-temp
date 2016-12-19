@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="DataModelExportContext">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:MDMObject">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ContainerIdList" nillable="true" type="q2:ArrayOfint" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EntityTypeIdList" nillable="true" type="q3:ArrayOfint" />
+          <xs:element minOccurs="0" name="ExcludeNonTranslatedModelData" type="xs:boolean" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="HierarchyIdList" nillable="true" type="q4:ArrayOfint" />
+          <xs:element minOccurs="0" name="Locales" nillable="true" type="q1:ArrayOfLocaleEnum" />
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="LookupTableNames" nillable="true" type="q5:ArrayOfstring" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="OrganizationIdList" nillable="true" type="q6:ArrayOfint" />
+          <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="RelationshipTypeIdList" nillable="true" type="q7:ArrayOfint" />
+          <xs:element minOccurs="0" name="SheetNames" nillable="true" type="q1:ArrayOfDataModelSheet" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataModelExportContext" nillable="true" type="tns:DataModelExportContext" />
+</xs:schema>

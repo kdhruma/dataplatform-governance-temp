@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="EntityExportService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/EntityExportService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IEntityExportService_CreateEntityExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEntityExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_CreateEntityExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEntityExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_CreateEntityExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_DeleteEntityExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEntityExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_DeleteEntityExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteEntityExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_DeleteEntityExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_UpdateEntityExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntityExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_UpdateEntityExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntityExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_UpdateEntityExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityExportProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityExportProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfileById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityExportProfileByName" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityExportProfileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfileByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfilesByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityExportProfilesByType" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfilesByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityExportProfilesByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetEntityExportProfilesByType_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetAllEntityExportProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEntityExportProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetAllEntityExportProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEntityExportProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_GetAllEntityExportProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_ExportToExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportToExcel" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_ExportToExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportToExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_ExportToExcel_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_ExportObjectToExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportObjectToExcel" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_ExportObjectToExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportObjectToExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IEntityExportService_ExportObjectToExcel_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IEntityExportService">
+    <wsdl:operation name="CreateEntityExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/CreateEntityExportProfile" message="tns:IEntityExportService_CreateEntityExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/CreateEntityExportProfileResponse" message="tns:IEntityExportService_CreateEntityExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/CreateEntityExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_CreateEntityExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteEntityExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/DeleteEntityExportProfile" message="tns:IEntityExportService_DeleteEntityExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/DeleteEntityExportProfileResponse" message="tns:IEntityExportService_DeleteEntityExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/DeleteEntityExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_DeleteEntityExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntityExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/UpdateEntityExportProfile" message="tns:IEntityExportService_UpdateEntityExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/UpdateEntityExportProfileResponse" message="tns:IEntityExportService_UpdateEntityExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/UpdateEntityExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_UpdateEntityExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityExportProfileById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfileById" message="tns:IEntityExportService_GetEntityExportProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfileByIdResponse" message="tns:IEntityExportService_GetEntityExportProfileById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfileByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_GetEntityExportProfileById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityExportProfileByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfileByName" message="tns:IEntityExportService_GetEntityExportProfileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfileByNameResponse" message="tns:IEntityExportService_GetEntityExportProfileByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfileByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_GetEntityExportProfileByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityExportProfilesByType">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfilesByType" message="tns:IEntityExportService_GetEntityExportProfilesByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfilesByTypeResponse" message="tns:IEntityExportService_GetEntityExportProfilesByType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetEntityExportProfilesByTypeMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_GetEntityExportProfilesByType_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEntityExportProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetAllEntityExportProfiles" message="tns:IEntityExportService_GetAllEntityExportProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetAllEntityExportProfilesResponse" message="tns:IEntityExportService_GetAllEntityExportProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/GetAllEntityExportProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_GetAllEntityExportProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportToExcel">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/ExportToExcel" message="tns:IEntityExportService_ExportToExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/ExportToExcelResponse" message="tns:IEntityExportService_ExportToExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/ExportToExcelMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_ExportToExcel_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportObjectToExcel">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/ExportObjectToExcel" message="tns:IEntityExportService_ExportObjectToExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/ExportObjectToExcelResponse" message="tns:IEntityExportService_ExportObjectToExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IEntityExportService/ExportObjectToExcelMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IEntityExportService_ExportObjectToExcel_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="EntityExportService">
+    <wsdl:port name="WSHttpBinding_IEntityExportService" binding="i0:WSHttpBinding_IEntityExportService">
+      <soap12:address location="http://localhost/Development_WCFServices/EntityExportService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/EntityExportService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IEntityExportService" binding="i0:NetTcpBinding_IEntityExportService">
+      <soap12:address location="net.tcp://bloom.softservecom.com/Development_WCFServices/EntityExportService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://bloom.softservecom.com/Development_WCFServices/EntityExportService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

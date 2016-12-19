@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7A19E53C-F42B-4E29-A69E-85A54403413F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.Workflow.TrackingManager.Business</RootNamespace>
+    <AssemblyName>RS.MDM.Workflow.TrackingManager.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActivityTrackingBL.cs" />
+    <Compile Include="EscalationBL.cs" />
+    <Compile Include="FaultTrackingBL.cs" />
+    <Compile Include="InstanceTrackingBL.cs" />
+    <Compile Include="JigsawIntegrationHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkflowDenormBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\ConfigurationManager\MDM.ConfigurationManager.Business\MDM.ConfigurationManager.Business.csproj">
+      <Project>{D8B5C77D-FFF9-4B31-814A-AC12DDEAC98C}</Project>
+      <Name>MDM.ConfigurationManager.Business</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\EntityManager\MDM.EntityManager.Business\MDM.EntityManager.Business.csproj">
+      <Project>{a796d6e2-bc0b-441b-9703-eb2204552536}</Project>
+      <Name>MDM.EntityManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\ExceptionManager\MDM.ExceptionManager\MDM.ExceptionManager.csproj">
+      <Project>{c26b08d2-5d90-476e-8def-a740c9e9c4ad}</Project>
+      <Name>MDM.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5a452cd7-42cf-41b0-83e9-759c68b43eef}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\IntegrationManager\MDM.JigsawIntegrationManager\MDM.JigsawIntegrationManager.csproj">
+      <Project>{685c0e09-3385-4bda-96d3-0ab568049df1}</Project>
+      <Name>MDM.JigsawIntegrationManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776be6c-5371-41e2-b444-3c42377cc9ca}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\MessageManager\MDM.MessageBrokerManager\MDM.MessageBrokerManager.csproj">
+      <Project>{F1A7148F-2409-4AB4-9BE0-17BE240D1DA9}</Project>
+      <Name>MDM.MessageBrokerManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\NotificationManager\MDM.NotificationManager.Business\MDM.NotificationManager.Business.csproj">
+      <Project>{d92ee921-e637-4789-9c1b-5a06fef05d6d}</Project>
+      <Name>MDM.NotificationManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\SearchManager\MDM.SearchManager.Business\MDM.SearchManager.Business.csproj">
+      <Project>{e5dd1e5b-c0a7-4857-98da-41a287b5545d}</Project>
+      <Name>MDM.SearchManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkflowDesigner\MDM.Workflow.Designer.Business\MDM.Workflow.Designer.Business.csproj">
+      <Project>{178FA615-A0C2-45E6-B81B-B70A0DB2577A}</Project>
+      <Name>MDM.Workflow.Designer.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkflowPersistenceManager\MDM.Workflow.PersistenceManager.Business\MDM.Workflow.PersistenceManager.Business.csproj">
+      <Project>{7dd7fb57-a1e5-4e1b-b481-4f0a0f7f3d46}</Project>
+      <Name>MDM.Workflow.PersistenceManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkflowUtility\MDM.Workflow.Utility\MDM.Workflow.Utility.csproj">
+      <Project>{e7c6965e-b494-43eb-85ce-05fe2d502a31}</Project>
+      <Name>MDM.Workflow.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.Workflow.TrackingManager.Data.SqlClient\MDM.Workflow.TrackingManager.Data.SqlClient.csproj">
+      <Project>{3ED14F68-B52B-4044-A28B-63ACFA316A97}</Project>
+      <Name>MDM.Workflow.TrackingManager.Data.SqlClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

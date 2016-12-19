@@ -1,0 +1,78 @@
+﻿<ContractData>
+  <Data MethodName="Create_RelationshipType">
+    <Input>
+      <Parameters>
+        <Parameter Name="ProgramName">
+          Unit Test - Create_RelationshipType
+        </Parameter>
+        <Parameter Name="RelationshipTypes">
+          <RelationshipTypes>
+            <RelationshipType Id="-1" Name="Unit Test - Relationship Type 1 - SN" LongName="Unit Test - Relationship Type 1 - LN" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Create" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+          </RelationshipTypes>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Create_Bulk_RelationshipType">
+    <Input>
+      <Parameters>
+        <Parameter Name="ProgramName">
+          Unit Test - Create_Bulk_RelationshipType
+        </Parameter>
+        <Parameter Name="RelationshipTypes">
+          <RelationshipTypes>
+            <RelationshipType Id="-1" Name="Unit Test - Relationship Type 2 - SN" LongName="Unit Test - Relationship Type 2 - LN" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Create" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+            <RelationshipType Id="-1" Name="Unit Test - Relationship Type 3 - SN" LongName="Unit Test - Relationship Type 3 - LN" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Create" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+            <RelationshipType Id="-1" Name="Unit Test - Relationship Type 4 - SN" LongName="Unit Test - Relationship Type 4 - LN" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Create" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+          </RelationshipTypes>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Update_RelationshipTypes">
+    <Input>
+      <Parameters>
+        <Parameter Name="ProgramName">
+          Unit Test - Update_RelationshipTypes
+        </Parameter>
+        <Parameter Name="RelationshipTypes">
+          <RelationshipTypes>
+            <RelationshipType Id="-1" Name="Unit Test - Relationship Type 5 - SN" LongName="Unit Test - Relationship Type 5 - LN" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Create" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+          </RelationshipTypes>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <RelationshipTypes>
+        <RelationshipType Id="-1" Name="Unit Test - Relationship Type 5 - SN - Updated" LongName="Unit Test - Relationship Type 5 - LN" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Read" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+      </RelationshipTypes>
+    </Output>
+  </Data>
+
+  <Data MethodName="Delete_Using_Only_Id_RelationshipType">
+    <Input>
+      <Parameters>
+        <Parameter Name="ProgramName">
+          Unit Test - Delete_Using_Only_Id_RelationshipType
+        </Parameter>
+        <Parameter Name="RelationshipTypes">
+          <RelationshipTypes>
+            <RelationshipType Id="-1" Name="Unit Test - Relationship Type 6 - SN" LongName="Unit Test - Relationship Type 6 - LN" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Create" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+          </RelationshipTypes>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+  
+</ContractData>

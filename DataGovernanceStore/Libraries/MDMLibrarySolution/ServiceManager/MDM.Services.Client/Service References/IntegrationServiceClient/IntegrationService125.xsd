@@ -1,0 +1,3894 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mdmobjects.riversand.com/" elementFormDefault="qualified" targetNamespace="http://mdmobjects.riversand.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/IntegrationService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+  <xs:simpleType name="JobType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="EntityImport" />
+      <xs:enumeration value="EntityExport" />
+      <xs:enumeration value="AttributeModelImport" />
+      <xs:enumeration value="DataModelMappingImport" />
+      <xs:enumeration value="AttributeMatching" />
+      <xs:enumeration value="BulkOperation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Import">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DenormMetaDataChange">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DenormCategoryAttributeChange">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DenormDelta">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LookupImport">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Custom">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataQualityManagement">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LookupExport">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">15</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobType" nillable="true" type="tns:JobType" />
+  <xs:simpleType name="MDMCenterApplication">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MDMCenter" />
+      <xs:enumeration value="PIM" />
+      <xs:enumeration value="JobService" />
+      <xs:enumeration value="VendorPortal" />
+      <xs:enumeration value="MAM" />
+      <xs:enumeration value="WindowsWorkflow" />
+      <xs:enumeration value="DataQualityManagement" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MDMCenterApplication" nillable="true" type="tns:MDMCenterApplication" />
+  <xs:complexType name="MDMObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" type="tns:ObjectAction" />
+          <xs:element minOccurs="0" name="AuditRefId" type="xs:long" />
+          <xs:element minOccurs="0" name="ExtendedProperties" nillable="true" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="string" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Id" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="int" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Locale" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="LocaleEnum" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="LongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NameInLowerCase" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PermissionSet" nillable="true" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="ArrayOfUserAction" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="ProgramName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="string" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MDMObject" nillable="true" type="tns:MDMObject" />
+  <xs:complexType name="ObjectBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ObjectType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ObjectTypeId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ObjectBase" nillable="true" type="tns:ObjectBase" />
+  <xs:simpleType name="ObjectAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Read" />
+      <xs:enumeration value="Create" />
+      <xs:enumeration value="Update" />
+      <xs:enumeration value="Delete" />
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Ignore" />
+      <xs:enumeration value="Exclude" />
+      <xs:enumeration value="Rename" />
+      <xs:enumeration value="UnExclude" />
+      <xs:enumeration value="Reclassify" />
+      <xs:enumeration value="ReParent" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ObjectAction" nillable="true" type="tns:ObjectAction" />
+  <xs:simpleType name="LocaleEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="en_WW" />
+      <xs:enumeration value="fr_WW" />
+      <xs:enumeration value="sp_WW" />
+      <xs:enumeration value="de_WW" />
+      <xs:enumeration value="zh_WW" />
+      <xs:enumeration value="da_DK">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">16</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="de_AT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">18</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="de_CH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">19</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="de_DE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">21</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="el_GR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">22</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="en_CA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">24</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="en_GB">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">25</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="en_IE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">26</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="en_US">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">27</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="es_ES">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">28</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fi_FI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">29</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fr_BE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">31</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fr_CA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">32</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fr_CH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fr_FR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="it_CH">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="it_IT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">36</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ja_JP">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ko_KR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nl_BE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nl_NL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">41</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="no_NO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">42</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="no_NO_B">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pt_PT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">44</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sv_SE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">45</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="tr_TR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">46</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="zh_CN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">47</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="zh_TW">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">48</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ay_AL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">49</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="th_IN">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">52</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="es_VE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">56</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="it_WW">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">59</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="es_AR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">60</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Neutral">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">61</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ja_WW">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">70</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bg_BG">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">71</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cs_CZ">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">72</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="et_EE">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">73</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hr_HR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">74</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hu_HU">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">75</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="uk_UA">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">76</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lt_LT">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">77</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lv_LV">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">78</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pl_PL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">79</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ro_RO">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">80</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ru_RU">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">81</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sk_SK">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">82</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sl_SI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">83</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cr_CR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">84</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="es_MX">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">85</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="gr_GR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">86</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sl_SL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">87</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="tk_TK">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">88</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pt_BR">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">89</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LocaleEnum" nillable="true" type="tns:LocaleEnum" />
+  <xs:complexType name="ArrayOfUserAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UserAction" type="tns:UserAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUserAction" nillable="true" type="tns:ArrayOfUserAction" />
+  <xs:simpleType name="UserAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="View">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Add">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Update">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Delete">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Export">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Import">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LinkComponents" />
+      <xs:enumeration value="Execute" />
+      <xs:enumeration value="WorkflowActions" />
+      <xs:enumeration value="Reclassify">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Schedule">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Subscribe">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="UserAction" nillable="true" type="tns:UserAction" />
+  <xs:simpleType name="JobAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Pause" />
+      <xs:enumeration value="Continue" />
+      <xs:enumeration value="Abort" />
+      <xs:enumeration value="Retry" />
+      <xs:enumeration value="Delete" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobAction" nillable="true" type="tns:JobAction" />
+  <xs:complexType name="OperationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ErrorCollection" />
+          <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtendedProperties" nillable="true" type="q1:ArrayOfKeyValueOfanyTypeanyType" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Informations" nillable="true" type="tns:InformationCollection" />
+          <xs:element minOccurs="0" name="OperationResultStatus" type="tns:OperationResultStatusEnum" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ReturnValues" nillable="true" type="q2:ArrayOfanyType" />
+          <xs:element minOccurs="0" name="Warnings" nillable="true" type="tns:WarningCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResult" nillable="true" type="tns:OperationResult" />
+  <xs:complexType name="ErrorCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_errors" nillable="true" type="tns:ArrayOfError" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ErrorCollection" nillable="true" type="tns:ErrorCollection" />
+  <xs:complexType name="ArrayOfError">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Error" nillable="true" type="tns:Error" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfError" nillable="true" type="tns:ArrayOfError" />
+  <xs:complexType name="Error">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ErrorCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ErrorMessage" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q3:ArrayOfanyType" />
+          <xs:element minOccurs="0" name="ReferenceId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Error" nillable="true" type="tns:Error" />
+  <xs:complexType name="InformationCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_informations" nillable="true" type="tns:ArrayOfInformation" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InformationCollection" nillable="true" type="tns:InformationCollection" />
+  <xs:complexType name="ArrayOfInformation">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Information" nillable="true" type="tns:Information" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInformation" nillable="true" type="tns:ArrayOfInformation" />
+  <xs:complexType name="Information">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InformationCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InformationMessage" nillable="true" type="xs:string" />
+          <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q4:ArrayOfanyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Information" nillable="true" type="tns:Information" />
+  <xs:simpleType name="OperationResultStatusEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Pending">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Successful">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CompletedWithErrors">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Failed">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CompletedWithWarnings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OperationResultStatusEnum" nillable="true" type="tns:OperationResultStatusEnum" />
+  <xs:complexType name="WarningCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_warnings" nillable="true" type="tns:ArrayOfWarning" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WarningCollection" nillable="true" type="tns:WarningCollection" />
+  <xs:complexType name="ArrayOfWarning">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Warning" nillable="true" type="tns:Warning" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWarning" nillable="true" type="tns:ArrayOfWarning" />
+  <xs:complexType name="Warning">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q5:ArrayOfanyType" />
+          <xs:element minOccurs="0" name="WarningCode" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WarningMessage" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Warning" nillable="true" type="tns:Warning" />
+  <xs:complexType name="Table">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Columns" nillable="true" type="tns:ColumnCollection" />
+          <xs:element minOccurs="0" name="ExtendedProperties" nillable="true" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="ArrayOfKeyValueOfanyTypeanyType" Namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Rows" nillable="true" type="tns:RowCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Table" nillable="true" type="tns:Table" />
+  <xs:complexType name="ColumnCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_columns" nillable="true" type="tns:ArrayOfColumn" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ColumnCollection" nillable="true" type="tns:ColumnCollection" />
+  <xs:complexType name="ArrayOfColumn">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Column" nillable="true" type="tns:Column" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfColumn" nillable="true" type="tns:ArrayOfColumn" />
+  <xs:complexType name="Column">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DataLength" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DataType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DefaultValue" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="IsUnique" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SortOrder" type="tns:SortOrder" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Column" nillable="true" type="tns:Column" />
+  <xs:simpleType name="SortOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Ascending" />
+      <xs:enumeration value="Descending" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SortOrder" nillable="true" type="tns:SortOrder" />
+  <xs:complexType name="RowCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_rows" nillable="true" type="tns:ArrayOfRow" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RowCollection" nillable="true" type="tns:RowCollection" />
+  <xs:complexType name="ArrayOfRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Row" nillable="true" type="tns:Row" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRow" nillable="true" type="tns:ArrayOfRow" />
+  <xs:complexType name="Row">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Cells" nillable="true" type="tns:CellCollection" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtendedProperties" nillable="true" type="q6:ArrayOfKeyValueOfanyTypeanyType" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="IsSystemLocaleRow" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Row" nillable="true" type="tns:Row" />
+  <xs:complexType name="CellCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_cells" nillable="true" type="tns:ArrayOfCell" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CellCollection" nillable="true" type="tns:CellCollection" />
+  <xs:complexType name="ArrayOfCell">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Cell" nillable="true" type="tns:Cell" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCell" nillable="true" type="tns:ArrayOfCell" />
+  <xs:complexType name="Cell">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ColumnId" type="xs:int" />
+          <xs:element minOccurs="0" name="ColumnName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExtendedProperties" nillable="true" type="q7:ArrayOfKeyValueOfanyTypeanyType" />
+          <xs:element minOccurs="0" name="IsSystemLocaleValue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="SystemLocaleValue" nillable="true" type="xs:anyType" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:anyType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Cell" nillable="true" type="tns:Cell" />
+  <xs:complexType name="EntityOperationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeOperationResultCollection" nillable="true" type="tns:AttributeOperationResultCollection" />
+          <xs:element minOccurs="0" name="EntityId" type="xs:long" />
+          <xs:element minOccurs="0" name="EntityLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+          <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" minOccurs="0" name="NamedKPIValues" nillable="true" type="q8:ArrayOfNamedKPIValue" />
+          <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" minOccurs="0" name="NormalizationResults" nillable="true" type="q9:NormalizationResultsCollection" />
+          <xs:element minOccurs="0" name="ReferenceId" type="xs:long" />
+          <xs:element minOccurs="0" name="RelationshipOperationResultCollection" nillable="true" type="tns:RelationshipOperationResultCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityOperationResult" nillable="true" type="tns:EntityOperationResult" />
+  <xs:complexType name="AttributeOperationResultCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OperationResultStatus" type="tns:OperationResultStatusEnum" />
+      <xs:element minOccurs="0" name="_attributeOperationResultCollection" nillable="true" type="tns:ArrayOfAttributeOperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttributeOperationResultCollection" nillable="true" type="tns:AttributeOperationResultCollection" />
+  <xs:complexType name="ArrayOfAttributeOperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttributeOperationResult" nillable="true" type="tns:AttributeOperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttributeOperationResult" nillable="true" type="tns:ArrayOfAttributeOperationResult" />
+  <xs:complexType name="AttributeOperationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeId" type="xs:int" />
+          <xs:element minOccurs="0" name="AttributeLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AttributeModelType" type="tns:AttributeModelType" />
+          <xs:element minOccurs="0" name="AttributeShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locale" type="tns:LocaleEnum" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeOperationResult" nillable="true" type="tns:AttributeOperationResult" />
+  <xs:simpleType name="AttributeModelType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AttributeMaster" />
+      <xs:enumeration value="Common" />
+      <xs:enumeration value="Category" />
+      <xs:enumeration value="System" />
+      <xs:enumeration value="Relationship" />
+      <xs:enumeration value="All" />
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="AttributeGroup" />
+      <xs:enumeration value="MetaDataAttribute" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AttributeModelType" nillable="true" type="tns:AttributeModelType" />
+  <xs:complexType name="RelationshipOperationResultCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Errors" nillable="true" type="tns:ErrorCollection" />
+      <xs:element minOccurs="0" name="Informations" nillable="true" type="tns:InformationCollection" />
+      <xs:element minOccurs="0" name="OperationResultStatus" type="tns:OperationResultStatusEnum" />
+      <xs:element minOccurs="0" name="Warnings" nillable="true" type="tns:WarningCollection" />
+      <xs:element minOccurs="0" name="_relationshipOperationResultCollection" nillable="true" type="tns:ArrayOfRelationshipOperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RelationshipOperationResultCollection" nillable="true" type="tns:RelationshipOperationResultCollection" />
+  <xs:complexType name="ArrayOfRelationshipOperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RelationshipOperationResult" nillable="true" type="tns:RelationshipOperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRelationshipOperationResult" nillable="true" type="tns:ArrayOfRelationshipOperationResult" />
+  <xs:complexType name="RelationshipOperationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:OperationResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeOperationResultCollection" nillable="true" type="tns:AttributeOperationResultCollection" />
+          <xs:element minOccurs="0" name="RelationshipExternalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RelationshipId" type="xs:long" />
+          <xs:element minOccurs="0" name="RelationshipOperationResultCollection" nillable="true" type="tns:RelationshipOperationResultCollection" />
+          <xs:element minOccurs="0" name="RelationshipTypeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ToExternalId" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RelationshipOperationResult" nillable="true" type="tns:RelationshipOperationResult" />
+  <xs:complexType name="SecurityUser">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AuthenticationToken" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AuthenticationType" type="tns:AuthenticationType" />
+          <xs:element minOccurs="0" name="Disabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExternalEntityID" type="xs:int" />
+          <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Initials" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSystemCreatedUser" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsWindowsAuthentication" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ManagerId" type="xs:int" />
+          <xs:element minOccurs="0" name="ManagerLogin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Roles" nillable="true" type="tns:SecurityRoleCollection" />
+          <xs:element minOccurs="0" name="SecurityRoleId" type="xs:int" />
+          <xs:element minOccurs="0" name="SecurityUserLogin" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SecurityUserTypeID" type="xs:int" />
+          <xs:element minOccurs="0" name="Smtp" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SystemUser" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SecurityUser" nillable="true" type="tns:SecurityUser" />
+  <xs:simpleType name="AuthenticationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Forms" />
+      <xs:enumeration value="Windows" />
+      <xs:enumeration value="Claims" />
+      <xs:enumeration value="Hybrid" />
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AuthenticationType" nillable="true" type="tns:AuthenticationType" />
+  <xs:complexType name="SecurityRoleCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_securityRoleCollection" nillable="true" type="tns:ArrayOfSecurityRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecurityRoleCollection" nillable="true" type="tns:SecurityRoleCollection" />
+  <xs:complexType name="ArrayOfSecurityRole">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SecurityRole" nillable="true" type="tns:SecurityRole" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSecurityRole" nillable="true" type="tns:ArrayOfSecurityRole" />
+  <xs:complexType name="SecurityRole">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsPrivateRole" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsSystemRole" type="xs:boolean" />
+          <xs:element minOccurs="0" name="PermissionSet" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="SecurityUserType" type="tns:SecurityUserType" />
+          <xs:element minOccurs="0" name="Users" nillable="true" type="tns:SecurityUserCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SecurityRole" nillable="true" type="tns:SecurityRole" />
+  <xs:simpleType name="SecurityUserType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Internal" />
+      <xs:enumeration value="Supplier" />
+      <xs:enumeration value="Manufacturer" />
+      <xs:enumeration value="Customer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SecurityUserType" nillable="true" type="tns:SecurityUserType" />
+  <xs:complexType name="SecurityUserCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_securityUsers" nillable="true" type="tns:ArrayOfSecurityUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SecurityUserCollection" nillable="true" type="tns:SecurityUserCollection" />
+  <xs:complexType name="ArrayOfSecurityUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SecurityUser" nillable="true" type="tns:SecurityUser" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSecurityUser" nillable="true" type="tns:ArrayOfSecurityUser" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfNormalizationResultADdI0yA3">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" />
+  <xs:complexType name="ItemContractCollectionOfNormalizationResultADdI0yA3">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" minOccurs="0" name="_items" nillable="true" type="q10:ArrayOfNormalizationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfNormalizationResultADdI0yA3" nillable="true" type="tns:ItemContractCollectionOfNormalizationResultADdI0yA3" />
+  <xs:simpleType name="JobStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="Stopping" />
+      <xs:enumeration value="Paused" />
+      <xs:enumeration value="Running" />
+      <xs:enumeration value="Completed" />
+      <xs:enumeration value="Aborted" />
+      <xs:enumeration value="Deleted" />
+      <xs:enumeration value="Pending" />
+      <xs:enumeration value="CompletedWithErrors" />
+      <xs:enumeration value="Queued" />
+      <xs:enumeration value="CompletedWithWarnings" />
+      <xs:enumeration value="CompletedWithWarningsAndErrors" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobStatus" nillable="true" type="tns:JobStatus" />
+  <xs:simpleType name="JobSubType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="Excel" />
+      <xs:enumeration value="CustomXml" />
+      <xs:enumeration value="RSXml" />
+      <xs:enumeration value="API" />
+      <xs:enumeration value="Csv" />
+      <xs:enumeration value="Tab" />
+      <xs:enumeration value="DataCleansing" />
+      <xs:enumeration value="Normalization" />
+      <xs:enumeration value="AttributeExtraction" />
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="UnKnown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobSubType" nillable="true" type="tns:JobSubType" />
+  <xs:complexType name="MDMExceptionDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element xmlns:q11="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="MessageArguments" nillable="true" type="q11:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="MessageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Source" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TargetSite" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MDMExceptionDetails" nillable="true" type="tns:MDMExceptionDetails" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeJobGtF4Gnug">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="Job" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfJobPtBE3Ihj">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeJobGtF4Gnug" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeJobGtF4Gnug" />
+  <xs:complexType name="ItemContractCollectionOfJobPtBE3Ihj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Job" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="_items" nillable="true" type="q12:ArrayOfJob" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfJobPtBE3Ihj" nillable="true" type="tns:ItemContractCollectionOfJobPtBE3Ihj" />
+  <xs:complexType name="JobFilterContext">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DateTimeFrom" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="DateTimeTo" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="JobId" type="xs:int" />
+          <xs:element minOccurs="0" name="JobStatus" type="tns:JobStatus" />
+          <xs:element minOccurs="0" name="JobSubType" type="tns:JobSubType" />
+          <xs:element minOccurs="0" name="JobType" type="tns:JobType" />
+          <xs:element minOccurs="0" name="Key" type="xs:int" />
+          <xs:element minOccurs="0" name="Locale" type="tns:LocaleEnum" />
+          <xs:element minOccurs="0" name="SkipJobDataLoading" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobFilterContext" nillable="true" type="tns:JobFilterContext" />
+  <xs:complexType name="CallerContext">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Application" type="tns:MDMCenterApplication" />
+          <xs:element minOccurs="0" name="JobId" type="xs:int" />
+          <xs:element minOccurs="0" name="MDMPublisher" type="tns:MDMPublisher" />
+          <xs:element minOccurs="0" name="MDMSource" type="tns:EventSource" />
+          <xs:element minOccurs="0" name="MDMSubscriber" type="tns:EventSubscriber" />
+          <xs:element minOccurs="0" name="Module" type="tns:MDMCenterModules" />
+          <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProgramName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ServerId" type="xs:short" />
+          <xs:element minOccurs="0" name="ServerName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="CallerContext" nillable="true" type="tns:CallerContext" />
+  <xs:simpleType name="MDMPublisher">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="MDM_UIProcess" />
+      <xs:enumeration value="MDM_Import" />
+      <xs:enumeration value="MDM_Export" />
+      <xs:enumeration value="VendorPortal_UIProcess" />
+      <xs:enumeration value="VendorPortal_Import" />
+      <xs:enumeration value="VendorPortal_Export" />
+      <xs:enumeration value="MAM_UIProcess" />
+      <xs:enumeration value="MAM_Import" />
+      <xs:enumeration value="MAM_Export" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MDMPublisher" nillable="true" type="tns:MDMPublisher" />
+  <xs:simpleType name="EventSource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="ProductCenter" />
+      <xs:enumeration value="AdvacedSearch" />
+      <xs:enumeration value="DQMGuidedSearch" />
+      <xs:enumeration value="PNMatching" />
+      <xs:enumeration value="DescriptionMatching" />
+      <xs:enumeration value="AutoClassification" />
+      <xs:enumeration value="PromoteDemote" />
+      <xs:enumeration value="Relationship" />
+      <xs:enumeration value="Home" />
+      <xs:enumeration value="Normalization" />
+      <xs:enumeration value="AttributeExtraction" />
+      <xs:enumeration value="Validation" />
+      <xs:enumeration value="NodeTypeApplications" />
+      <xs:enumeration value="DocumentExplorer" />
+      <xs:enumeration value="ItemEdit" />
+      <xs:enumeration value="ChildEntityDetail" />
+      <xs:enumeration value="StageTransitionService" />
+      <xs:enumeration value="DefaultValue" />
+      <xs:enumeration value="EntityDetail" />
+      <xs:enumeration value="EntityExplorer" />
+      <xs:enumeration value="MetaData" />
+      <xs:enumeration value="EntityEditor" />
+      <xs:enumeration value="ConfigurableAttributeGroups" />
+      <xs:enumeration value="RuleBasedAttributeGroups" />
+      <xs:enumeration value="Entity" />
+      <xs:enumeration value="EntityUpdating" />
+      <xs:enumeration value="EntityUpdated" />
+      <xs:enumeration value="EntityCommonAttributesUpdating" />
+      <xs:enumeration value="EntityCategoryAttributesUpdating" />
+      <xs:enumeration value="EntitySystemAttributesUpdating" />
+      <xs:enumeration value="EntityCommonAttributesUpdated" />
+      <xs:enumeration value="EntityCategoryAttributesUpdated" />
+      <xs:enumeration value="EntitySystemAttributesUpdated" />
+      <xs:enumeration value="RelationShipUpdating" />
+      <xs:enumeration value="RelationShipUpdated" />
+      <xs:enumeration value="EntityAttributePublish" />
+      <xs:enumeration value="RelationShipCreating" />
+      <xs:enumeration value="RelationShipCreated" />
+      <xs:enumeration value="EntityCreating" />
+      <xs:enumeration value="EntityCreated" />
+      <xs:enumeration value="VendorPortal" />
+      <xs:enumeration value="VPEntityExplorer" />
+      <xs:enumeration value="VPEntityEditor" />
+      <xs:enumeration value="VPStageTransitionPreProcess" />
+      <xs:enumeration value="VPStageTransitionPostProcess" />
+      <xs:enumeration value="VPStateTransitionPreProcess" />
+      <xs:enumeration value="VPStateTransitionPostProcess" />
+      <xs:enumeration value="EntityProcessing" />
+      <xs:enumeration value="EntityProcessed" />
+      <xs:enumeration value="HierarchyRelationshipProcessing" />
+      <xs:enumeration value="HierarchyRelationshipProcessed" />
+      <xs:enumeration value="EntityValidate" />
+      <xs:enumeration value="MDMCenter" />
+      <xs:enumeration value="EntityHierarchy" />
+      <xs:enumeration value="MAM" />
+      <xs:enumeration value="MAMEntityExplorer" />
+      <xs:enumeration value="MAMEntityEditor" />
+      <xs:enumeration value="EntityLoaded" />
+      <xs:enumeration value="EntityAttributesCreating" />
+      <xs:enumeration value="EntityExtensionsCreating" />
+      <xs:enumeration value="EntityHierarchyCreating" />
+      <xs:enumeration value="EntityRelationShipsCreating" />
+      <xs:enumeration value="EntityAttributesCreated" />
+      <xs:enumeration value="EntityExtensionsCreated" />
+      <xs:enumeration value="EntityHierarchyCreated" />
+      <xs:enumeration value="EntityRelationShipsCreated" />
+      <xs:enumeration value="EntityAttributesUpdating" />
+      <xs:enumeration value="EntityExtensionsUpdating" />
+      <xs:enumeration value="EntityHierarchyUpdating" />
+      <xs:enumeration value="EntityRelationShipsUpdating" />
+      <xs:enumeration value="EntityAttributesUpdated" />
+      <xs:enumeration value="EntityExtensionsUpdated" />
+      <xs:enumeration value="EntityHierarchyUpdated" />
+      <xs:enumeration value="EntityRelationShipsUpdated" />
+      <xs:enumeration value="EntityReclassifying" />
+      <xs:enumeration value="EntityReclassified" />
+      <xs:enumeration value="VPBulkLoader" />
+      <xs:enumeration value="EntityHierarchyChanged" />
+      <xs:enumeration value="EntityExtensionsChanged" />
+      <xs:enumeration value="EntityMerging" />
+      <xs:enumeration value="EntityMerged" />
+      <xs:enumeration value="EntityTransitioning" />
+      <xs:enumeration value="EntityTransitioned" />
+      <xs:enumeration value="EntityAssignmentChanging">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">85</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityAssignmentChanged">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">86</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHierarchyConfiguration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">87</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityCreatePostProcessStarting">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">88</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityUpdatePostProcessStarting">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">89</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityCreatePostProcessCompleted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">90</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityUpdatePostProcessCompleted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">91</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityDeletePostProcessStarting">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">92</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityDeletePostProcessCompleted">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">93</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityDataQualityValidation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">94</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataQualityManagement">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">95</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMDashboard">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">96</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ComplexAttributeEditor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">97</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPComplexAttributeEditor">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">98</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHistoryView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityHistoryView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPCatalogView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityNormalization">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CatalogView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">103</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityLoading">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">104</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityValidation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">106</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventSource" nillable="true" type="tns:EventSource" />
+  <xs:simpleType name="EventSubscriber">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="ProductCenter" />
+      <xs:enumeration value="WebUI" />
+      <xs:enumeration value="AdvancedSearchPage" />
+      <xs:enumeration value="AdvancedSearchPageGrid" />
+      <xs:enumeration value="AdvancedSearchPageSearchAttributes" />
+      <xs:enumeration value="AdvancedSearchPageToolBar" />
+      <xs:enumeration value="DQMGuidedSearchPage" />
+      <xs:enumeration value="DQMGuidedSearchPageGrid" />
+      <xs:enumeration value="DQMGuidedSearchPageToolBar" />
+      <xs:enumeration value="ServiceResultsPage" />
+      <xs:enumeration value="ServiceResultsPageGrid" />
+      <xs:enumeration value="ServiceResultsPageToolBar" />
+      <xs:enumeration value="ServiceResultsPageDataSource" />
+      <xs:enumeration value="ServiceSelectorPage" />
+      <xs:enumeration value="ServiceSelectorPageToolBar" />
+      <xs:enumeration value="ServiceSelectorAdvancedSearch" />
+      <xs:enumeration value="AdvancedSearchPageToolBarRelationship" />
+      <xs:enumeration value="RelationshipPage" />
+      <xs:enumeration value="RelationshipPageToolBar" />
+      <xs:enumeration value="WhereUsedPage" />
+      <xs:enumeration value="WhereUsedPageToolBar" />
+      <xs:enumeration value="WhereUsedPageGrid" />
+      <xs:enumeration value="HomePage" />
+      <xs:enumeration value="HomePagePanelBar" />
+      <xs:enumeration value="NodeTypeApplicationsPage" />
+      <xs:enumeration value="NodeTypeApplicationsPageToolBar" />
+      <xs:enumeration value="NodeTypeApplicationsPageGrid" />
+      <xs:enumeration value="NodeTypeApplicationsPageControls" />
+      <xs:enumeration value="RelationshipPageGrid" />
+      <xs:enumeration value="DocumentBrowserPage" />
+      <xs:enumeration value="DocumentBrowserPageDocumentExplorer" />
+      <xs:enumeration value="DocumentBrowserPageGrid" />
+      <xs:enumeration value="AdvancedSearchPageToolBarDocumentAssociation" />
+      <xs:enumeration value="ItemEditPage" />
+      <xs:enumeration value="ItemEditPageToolBar" />
+      <xs:enumeration value="ChildEntityDetailPage" />
+      <xs:enumeration value="ChildEntityDetailGrid" />
+      <xs:enumeration value="ChildEntityDetailToolBar" />
+      <xs:enumeration value="EntityDetailPage" />
+      <xs:enumeration value="EntityDetailPageRibbonBar" />
+      <xs:enumeration value="EntityDetailPageActionToolBar" />
+      <xs:enumeration value="EntityDetailPageStageTransitionToolBar" />
+      <xs:enumeration value="EntityDetailPageAssignmentToolBar" />
+      <xs:enumeration value="EntityExplorerPage" />
+      <xs:enumeration value="EntityExplorerPageGrid" />
+      <xs:enumeration value="EntityExplorerPageSearchAttributes" />
+      <xs:enumeration value="EntityExplorerPageRibbonBar" />
+      <xs:enumeration value="EntityExplorerPageActionToolBar" />
+      <xs:enumeration value="EntityExplorerPageStageTransitionToolBar" />
+      <xs:enumeration value="EntityExplorerPageAssignmentToolBar" />
+      <xs:enumeration value="MetaDataPage" />
+      <xs:enumeration value="MetaDataPageToolBar" />
+      <xs:enumeration value="AdvancedSearchPageToolBarTestRuleSet" />
+      <xs:enumeration value="EntityEditorPage" />
+      <xs:enumeration value="EntityEditorPageNavigationPanel" />
+      <xs:enumeration value="EntityEditorPageOtherViewsPanel" />
+      <xs:enumeration value="EntityEditorStandardViewsTreeView" />
+      <xs:enumeration value="EntityEditorMyViewsTreeView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">59</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorContainersTreeView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">60</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorDefaultSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">61</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorPageNavigationPanelStateViews">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">62</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityExplorerPageLeftPanelBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">63</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorPageBreadCrumb">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">64</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorPageTitle">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">65</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityExplorerPageWindowsWorkflowActionToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">66</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityExplorerPageWindowsWorkflowAssignmentToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">67</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityDetailPageWindowsWorkflowActionToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">68</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityDetailPageWindowsWorkflowAssignmentToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">69</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorPageOtherviewsPanelWorkflowTasksTreeView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">70</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorContainerPanelDataConfig">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">71</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VendorPortal">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">72</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPWebUI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">73</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">74</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageMenu">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">75</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageSearchGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">76</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageTreeView">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">77</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">78</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageStageTransitionToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">79</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">80</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageViewPanel">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">81</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">82</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageStageTransitionToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">83</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageReportGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">84</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageSearchPanel">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">85</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPSearchConfiguration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">86</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageTabTitle">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">87</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityEditorPageOtherViewsPanelConfiguration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">88</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MDMCenter">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">89</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHierarchy">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">90</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHierarchyMatrixToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">91</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHierarchyLevelDetailToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">92</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MAM">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">93</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MAMWebUI">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">94</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MAMEntityExplorerPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">95</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MAMEntityEditorPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">96</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHierarchyRuleToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">97</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHierarchyLevelDetailGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">98</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SearchManager">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">99</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SearchCriteria">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">100</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SearchWeightage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WorkflowSearch">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MDMCenterSearchConfiguration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">113</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LocaleConfiguration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">114</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">115</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageImportTemplatesList">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">116</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageBatchJobGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">117</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageImportProfilesList">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">118</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageBatchJobToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">119</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageEntityAssignmentToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">120</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageBatchJobDetailsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">121</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageBatchJobDetailsGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">122</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MetaDataPagePanelBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">123</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">124</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageWorkflowStageToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">125</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageEntityAssignmentToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">126</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageEntityHierarchySimpleGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">127</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityExplorerPageExportToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">128</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageDownloadTemplateSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">129</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPDoneReportPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">130</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPDoneReportPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">131</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPDoneReportPageSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">132</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageEntityHierarchySimpleActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">133</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageEntityComparerSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">134</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageHierarchySimpleBatchJobDetailsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">135</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageHierarchySimpleImportProfilesList">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">136</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageHierarchySimpleBatchJobDetailsGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">137</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHierarchyConfiguration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">138</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityEditorPageHierarchySimpleBatchJobDetailsDownloadSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">139</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPBulkLoaderPageBatchJobDetailsDownloadSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">140</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataQualityManagement">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">141</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMDashboard">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">142</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMReportPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">143</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMDashboardPageSettings">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">144</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMReportPageReportGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">145</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMEntitySetReportPageReportGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">146</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMKpiManagementPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">147</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMKpiManagementPageToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">148</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMValidationProfileManagementPageToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">149</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMValidationJobsPageToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">150</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ComplexAttributeEditorPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">151</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ComplexAttributeEditorPageToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">152</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ComplexAttributeEditorPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">153</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPComplexAttributeEditorPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">154</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPComplexAttributeEditorPageToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">155</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPComplexAttributeEditorPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">156</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHistoryViewPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">157</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHistoryViewPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">158</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityHistoryViewPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">159</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityHistoryViewPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">160</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPCatalogViewPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">161</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPCatalogViewPageActionsToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">162</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPCatalogViewPageSearchGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">163</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPCatalogViewPageSearchPanel">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">164</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityHistoryViewPageExcludeList">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">165</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VPEntityHistoryViewPageExcludeList">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">166</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataNormalization">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">167</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataNormalizationProfileManagementPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">168</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataNormalizationProfileManagementPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">169</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataNormalizationRuleManagementPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">170</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataNormalizationRuleManagementPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">171</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CatalogViewPage">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">172</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CatalogViewRelationshipPageActionToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">173</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CatalogViewPageSearchGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">174</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CatalogViewPageSearchPanel">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">175</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataNormalizationReportPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">176</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataNormalizationReportPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">177</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="VariantsPanelDataConfig">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">178</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CatalogViewEHPageActionToolbar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">179</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMValidationProfileManagementPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">180</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DQMValidationJobsPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">181</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMerge">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">182</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeMergePlanningRulesetPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">183</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeMergePlanningRulesetPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">184</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeSourceManagementPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">185</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeSourceManagementPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">186</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TranslationConfiguration">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">187</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeMergeReportPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">188</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeMergeReportPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">189</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataValidation">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">190</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataValidationProfileManagementPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">191</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataValidationProfileManagementPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">192</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeProfileManagementPageBasicActionsToolBar">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">193</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DataMergeProfileManagementPageGrid">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">194</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventSubscriber" nillable="true" type="tns:EventSubscriber" />
+  <xs:simpleType name="MDMCenterModules">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Entity" />
+      <xs:enumeration value="Search" />
+      <xs:enumeration value="Import" />
+      <xs:enumeration value="Export" />
+      <xs:enumeration value="Staging" />
+      <xs:enumeration value="PDR" />
+      <xs:enumeration value="DQM" />
+      <xs:enumeration value="Promote" />
+      <xs:enumeration value="Validation" />
+      <xs:enumeration value="AttributeImport" />
+      <xs:enumeration value="CategoryMapping" />
+      <xs:enumeration value="TaxonomyImport" />
+      <xs:enumeration value="AttributeExport" />
+      <xs:enumeration value="AttributeMatching" />
+      <xs:enumeration value="AttributeExtraction" />
+      <xs:enumeration value="AttributeGenerationMC" />
+      <xs:enumeration value="BulkOperation" />
+      <xs:enumeration value="AttributeGeneration" />
+      <xs:enumeration value="Synchronization" />
+      <xs:enumeration value="UIProcess" />
+      <xs:enumeration value="Denorm" />
+      <xs:enumeration value="SubscriberUIProcess" />
+      <xs:enumeration value="MDMAdvanceWorkflow" />
+      <xs:enumeration value="WindowsWorkflow" />
+      <xs:enumeration value="Distributor" />
+      <xs:enumeration value="Monitoring" />
+      <xs:enumeration value="Security" />
+      <xs:enumeration value="Modeling" />
+      <xs:enumeration value="EntityExport" />
+      <xs:enumeration value="Integration" />
+      <xs:enumeration value="LookupExport" />
+      <xs:enumeration value="TMSConnector" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MDMCenterModules" nillable="true" type="tns:MDMCenterModules" />
+  <xs:complexType name="OperationResultCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterfaceContractCollectionOfanyTypeOperationResult7cXCH591">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OperationResultStatus" type="tns:OperationResultStatusEnum" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OperationResultCollection" nillable="true" type="tns:OperationResultCollection" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeOperationResult7cXCH591">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="OperationResult" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfOperationResultXK0exmbb">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeOperationResult7cXCH591" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeOperationResult7cXCH591" />
+  <xs:complexType name="ItemContractCollectionOfOperationResultXK0exmbb">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="OperationResult" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_items" nillable="true" type="tns:ArrayOfOperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfOperationResultXK0exmbb" nillable="true" type="tns:ItemContractCollectionOfOperationResultXK0exmbb" />
+  <xs:complexType name="ArrayOfOperationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperationResult" nillable="true" type="tns:OperationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperationResult" nillable="true" type="tns:ArrayOfOperationResult" />
+  <xs:simpleType name="JobObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="LookUp" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="JobObjectType" nillable="true" type="tns:JobObjectType" />
+  <xs:complexType name="File">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FileData" nillable="true" type="xs:base64Binary" />
+          <xs:element minOccurs="0" name="FileType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsArchive" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="File" nillable="true" type="tns:File" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeImportProfileicpZqzYd">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfImportProfileWNy_PbAwg">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeImportProfileicpZqzYd" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeImportProfileicpZqzYd" />
+  <xs:complexType name="ItemContractCollectionOfImportProfileWNy_PbAwg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="_items" nillable="true" type="q13:ArrayOfImportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfImportProfileWNy_PbAwg" nillable="true" type="tns:ItemContractCollectionOfImportProfileWNy_PbAwg" />
+  <xs:complexType name="JobProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerId" type="xs:int" />
+          <xs:element minOccurs="0" name="ContainerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSystemProfile" type="xs:boolean" />
+          <xs:element minOccurs="0" name="OrganizationId" type="xs:int" />
+          <xs:element minOccurs="0" name="OrganizationName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfileDataXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfileDomain" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobProfile" nillable="true" type="tns:JobProfile" />
+  <xs:complexType name="Attribute">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplyLocaleFormat" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ApplyTimeZoneConversion" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AttributeDataType" type="tns:AttributeDataType" />
+          <xs:element minOccurs="0" name="AttributeModelType" type="tns:AttributeModelType" />
+          <xs:element minOccurs="0" name="AttributeParentId" type="xs:int" />
+          <xs:element minOccurs="0" name="AttributeParentLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AttributeParentName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AttributeType" type="tns:AttributeTypeEnum" />
+          <xs:element minOccurs="0" name="Attributes" nillable="true" type="tns:AttributeCollection" />
+          <xs:element minOccurs="0" name="EntityId" type="xs:long" />
+          <xs:element minOccurs="0" name="InstanceRefId" type="xs:int" />
+          <xs:element minOccurs="0" name="IsCollection" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsComplex" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLocalizable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsLookup" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Precision" type="xs:int" />
+          <xs:element minOccurs="0" name="ReadOnly" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Required" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Sequence" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SourceClassInherited" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceClassOverridden" type="xs:int" />
+          <xs:element minOccurs="0" name="SourceEntityIdInherited" type="xs:long" />
+          <xs:element minOccurs="0" name="SourceEntityIdOverridden" type="xs:long" />
+          <xs:element minOccurs="0" name="SourceFlag" type="tns:AttributeValueSource" />
+          <xs:element minOccurs="0" name="_inheritedValues" nillable="true" type="tns:ValueCollection" />
+          <xs:element minOccurs="0" name="_overriddenValues" nillable="true" type="tns:ValueCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Attribute" nillable="true" type="tns:Attribute" />
+  <xs:simpleType name="AttributeDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Date" />
+      <xs:enumeration value="String" />
+      <xs:enumeration value="Decimal" />
+      <xs:enumeration value="Boolean" />
+      <xs:enumeration value="Image" />
+      <xs:enumeration value="Integer">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="File">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fraction">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="URL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ImageURL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DateTime">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AttributeDataType" nillable="true" type="tns:AttributeDataType" />
+  <xs:simpleType name="AttributeTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Simple" />
+      <xs:enumeration value="SimpleCollection" />
+      <xs:enumeration value="Complex" />
+      <xs:enumeration value="ComplexCollection" />
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="AttributeGroup" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AttributeTypeEnum" nillable="true" type="tns:AttributeTypeEnum" />
+  <xs:complexType name="AttributeCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_attributes" nillable="true" type="tns:ArrayOfAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttributeCollection" nillable="true" type="tns:AttributeCollection" />
+  <xs:complexType name="ArrayOfAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Attribute" nillable="true" type="tns:Attribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttribute" nillable="true" type="tns:ArrayOfAttribute" />
+  <xs:simpleType name="AttributeValueSource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Overridden" />
+      <xs:enumeration value="Inherited" />
+      <xs:enumeration value="Master" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AttributeValueSource" nillable="true" type="tns:AttributeValueSource" />
+  <xs:complexType name="ValueCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_values" nillable="true" type="tns:ArrayOfValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ValueCollection" nillable="true" type="tns:ValueCollection" />
+  <xs:complexType name="ArrayOfValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Value" nillable="true" type="tns:Value" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfValue" nillable="true" type="tns:ArrayOfValue" />
+  <xs:complexType name="Value">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="HasInvalidValue" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:anyType">
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="long" Namespace="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:element>
+          <xs:element minOccurs="0" name="Sequence" type="xs:decimal" />
+          <xs:element minOccurs="0" name="SourceInfo" nillable="true" type="tns:SourceInfo" />
+          <xs:element minOccurs="0" name="Uom" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UomId" type="xs:int" />
+          <xs:element minOccurs="0" name="ValueRefId" type="xs:int" />
+          <xs:element minOccurs="0" name="_attrVal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_displayVal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_exportVal" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_invariantVal" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Value" nillable="true" type="tns:Value" />
+  <xs:complexType name="SourceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SourceEntityId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="SourceId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SourceInfo" nillable="true" type="tns:SourceInfo" />
+  <xs:complexType name="EntityProcessingOptions">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AllowInvalidData" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ApplyAVS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ApplyDMS" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AttributeProcessingOptionCollection" nillable="true" type="tns:AttributeProcessingOptionsCollection" />
+          <xs:element minOccurs="0" name="CanAddEntities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanDeleteEntities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanReclassifyEntities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanUpdateEntities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CollectionProcessingType" type="tns:CollectionProcessingType" />
+          <xs:element minOccurs="0" name="DataQualityValidation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FailEntityOnAnyError" type="xs:boolean" />
+          <xs:element minOccurs="0" name="InitialLoadProcessInheritedValues" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPartialAttributeprocessingEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPartialRelationshipAttributeProcessingEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsPartialRelationshipTypeProcessingEnabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessDefaultValues" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessOnlyEntities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessSources" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProcessingMode" type="tns:ProcessingMode" />
+          <xs:element minOccurs="0" name="PublishEvents" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RefreshDenorm" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidateEntities" type="xs:boolean" />
+          <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ValidationMustOnAttributeIdList" nillable="true" type="q14:ArrayOfint" />
+          <xs:element xmlns:q15="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ValidationMustOnRelationshipAttributeIdList" nillable="true" type="q15:ArrayOfint" />
+          <xs:element xmlns:q16="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ValidationMustOnRelationshipTypeIdList" nillable="true" type="q16:ArrayOfint" />
+          <xs:element minOccurs="0" name="ValidationProfileId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityProcessingOptions" nillable="true" type="tns:EntityProcessingOptions" />
+  <xs:complexType name="AttributeProcessingOptionsCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_attributeProcessingOptions" nillable="true" type="tns:ArrayOfAttributeProcessingOptions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttributeProcessingOptionsCollection" nillable="true" type="tns:AttributeProcessingOptionsCollection" />
+  <xs:complexType name="ArrayOfAttributeProcessingOptions">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttributeProcessingOptions" nillable="true" type="tns:AttributeProcessingOptions" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttributeProcessingOptions" nillable="true" type="tns:ArrayOfAttributeProcessingOptions" />
+  <xs:complexType name="AttributeProcessingOptions">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeId" type="xs:int" />
+          <xs:element minOccurs="0" name="AttributeModelType" type="tns:AttributeModelType" />
+          <xs:element minOccurs="0" name="AttributeName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CanAddAttribute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanDeleteAttribute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanUpdateAttribute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Locale" type="tns:LocaleEnum" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeProcessingOptions" nillable="true" type="tns:AttributeProcessingOptions" />
+  <xs:simpleType name="CollectionProcessingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Merge" />
+      <xs:enumeration value="Replace" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="CollectionProcessingType" nillable="true" type="tns:CollectionProcessingType" />
+  <xs:simpleType name="ProcessingMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Sync" />
+      <xs:enumeration value="AsyncCreate" />
+      <xs:enumeration value="AsyncUpdate" />
+      <xs:enumeration value="AsyncDelete" />
+      <xs:enumeration value="Async" />
+      <xs:enumeration value="None" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ProcessingMode" nillable="true" type="tns:ProcessingMode" />
+  <xs:complexType name="JobProcessingOptions">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AbortThreasholdEntityCount" type="xs:int" />
+          <xs:element minOccurs="0" name="AbortThreasholdErrorCount" type="xs:int" />
+          <xs:element minOccurs="0" name="AttributeValidationLevel" type="tns:OperationResultType" />
+          <xs:element minOccurs="0" name="BatchSize" type="xs:int" />
+          <xs:element minOccurs="0" name="ExecuteDenormProcess" type="xs:boolean" />
+          <xs:element minOccurs="0" name="NumberofAttributeThreadsPerEntityThread" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberofEntityThreads" type="xs:int" />
+          <xs:element minOccurs="0" name="PopulateLookupRefIdForInitialLoad" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RelationshipAttributeValidationLevel" type="tns:OperationResultType" />
+          <xs:element minOccurs="0" name="RelationshipTypeValidationLevel" type="tns:OperationResultType" />
+          <xs:element minOccurs="0" name="SaveSuccessEntitiesResult" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ValidateSchema" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobProcessingOptions" nillable="true" type="tns:JobProcessingOptions" />
+  <xs:simpleType name="OperationResultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Information">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Warning">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ignore">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="OperationResultType" nillable="true" type="tns:OperationResultType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeLookupImportProfileicpZqzYd">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="LookupImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfLookupImportProfileWNy_PbAwg">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeLookupImportProfileicpZqzYd" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeLookupImportProfileicpZqzYd" />
+  <xs:complexType name="ItemContractCollectionOfLookupImportProfileWNy_PbAwg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LookupImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="_items" nillable="true" type="q17:ArrayOfLookupImportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfLookupImportProfileWNy_PbAwg" nillable="true" type="tns:ItemContractCollectionOfLookupImportProfileWNy_PbAwg" />
+  <xs:simpleType name="ExportProfileType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="EntityExportUIProfile" />
+      <xs:enumeration value="EntityExportSyndicationProfile" />
+      <xs:enumeration value="LookupExportUIProfile" />
+      <xs:enumeration value="LookupExportSyndicationProfile" />
+      <xs:enumeration value="TranslationExportProfile" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExportProfileType" nillable="true" type="tns:ExportProfileType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeExecutionSettingkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ExecutionSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfExecutionSettingpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeExecutionSettingkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeExecutionSettingkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfExecutionSettingpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExecutionSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q18:ArrayOfExecutionSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfExecutionSettingpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfExecutionSettingpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeMDMObjectGroupkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="MDMObjectGroup" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfMDMObjectGrouppli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeMDMObjectGroupkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeMDMObjectGroupkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfMDMObjectGrouppli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MDMObjectGroup" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q19:ArrayOfMDMObjectGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfMDMObjectGrouppli5DGe2" nillable="true" type="tns:ItemContractCollectionOfMDMObjectGrouppli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeMDMObject7cXCH591">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="MDMObject" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfMDMObjectXK0exmbb">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeMDMObject7cXCH591" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeMDMObject7cXCH591" />
+  <xs:complexType name="ItemContractCollectionOfMDMObjectXK0exmbb">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MDMObject" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_items" nillable="true" type="tns:ArrayOfMDMObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfMDMObjectXK0exmbb" nillable="true" type="tns:ItemContractCollectionOfMDMObjectXK0exmbb" />
+  <xs:complexType name="ArrayOfMDMObject">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MDMObject" nillable="true" type="tns:MDMObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMDMObject" nillable="true" type="tns:ArrayOfMDMObject" />
+  <xs:simpleType name="ObjectType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Organization">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Catalog">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Node">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">33</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Component">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CommercialAttribute">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">34</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="TechnicalAttribute">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">35</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Taxonomy">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">38</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="View">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">39</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Relationships">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">40</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Profile">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">43</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Syndication">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">44</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RelationshipAttribute">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">101</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Category">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">102</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Entity">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">103</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CategoryAttribute">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">104</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SystemAttribute">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">105</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="WorkflowAttribute">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">106</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">107</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="RelationshipType">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">108</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Locale">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">109</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="EntityMetadata">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">110</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="CommonAttribute">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">111</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ObjectType" nillable="true" type="tns:ObjectType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeLookupExportScopekIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="LookupExportScope" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfLookupExportScopepli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeLookupExportScopekIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeLookupExportScopekIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfLookupExportScopepli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LookupExportScope" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q20:ArrayOfLookupExportScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfLookupExportScopepli5DGe2" nillable="true" type="tns:ItemContractCollectionOfLookupExportScopepli5DGe2" />
+  <xs:simpleType name="LookupExportFileFormat">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="RSLookupExcel10" />
+      <xs:enumeration value="RSLookupXml10" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LookupExportFileFormat" nillable="true" type="tns:LookupExportFileFormat" />
+  <xs:simpleType name="LookupExportGroupOrder">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="ColumnName" />
+      <xs:enumeration value="Locale" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="LookupExportGroupOrder" nillable="true" type="tns:LookupExportGroupOrder" />
+  <xs:complexType name="LocaleCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_locales" nillable="true" type="tns:ArrayOfLocale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocaleCollection" nillable="true" type="tns:LocaleCollection" />
+  <xs:complexType name="ArrayOfLocale">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Locale" nillable="true" type="tns:Locale" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocale" nillable="true" type="tns:ArrayOfLocale" />
+  <xs:complexType name="Locale">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CultureId" type="xs:int" />
+          <xs:element minOccurs="0" name="CultureName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageId" type="xs:int" />
+          <xs:element minOccurs="0" name="LanguageName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RegionId" type="xs:int" />
+          <xs:element minOccurs="0" name="RegionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Locale" nillable="true" type="tns:Locale" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeEmailNotificationkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="EmailNotification" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfEmailNotificationpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeEmailNotificationkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeEmailNotificationkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfEmailNotificationpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EmailNotification" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q21:ArrayOfEmailNotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfEmailNotificationpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfEmailNotificationpli5DGe2" />
+  <xs:simpleType name="ExportJobStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Begin" />
+      <xs:enumeration value="Complete" />
+      <xs:enumeration value="Failure" />
+      <xs:enumeration value="Success" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExportJobStatus" nillable="true" type="tns:ExportJobStatus" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeDataFormatterSettingkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="DataFormatterSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfDataFormatterSettingpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeDataFormatterSettingkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeDataFormatterSettingkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfDataFormatterSettingpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataFormatterSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q22:ArrayOfDataFormatterSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfDataFormatterSettingpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfDataFormatterSettingpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeDataSubscriberkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="DataSubscriber" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfDataSubscriberpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeDataSubscriberkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeDataSubscriberkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfDataSubscriberpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataSubscriber" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q23:ArrayOfDataSubscriber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfDataSubscriberpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfDataSubscriberpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeProfileSettingkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ProfileSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfProfileSettingpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeProfileSettingkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeProfileSettingkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfProfileSettingpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ProfileSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q24:ArrayOfProfileSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfProfileSettingpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfProfileSettingpli5DGe2" />
+  <xs:complexType name="ScheduleCriteria">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DailyDelay" type="xs:int" />
+          <xs:element minOccurs="0" name="DailyFrequency" type="tns:DailyFrequencyOptions" />
+          <xs:element minOccurs="0" name="DayOfMonth" type="xs:int" />
+          <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="DayOfWeek" type="q25:DayOfWeek" />
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="DaysOfWeek" nillable="true" type="q26:ArrayOfDayOfWeek" />
+          <xs:element minOccurs="0" name="EffectiveEndDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EffectiveStartDate" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MonthlyFrequency" type="tns:MonthlyFrequencyOptions" />
+          <xs:element minOccurs="0" name="RecurrenceDelay" type="xs:int" />
+          <xs:element minOccurs="0" name="RecurrenceFrequency" type="tns:RecurrenceFrequencyOptions" />
+          <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WeekOfMonth" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScheduleCriteria" nillable="true" type="tns:ScheduleCriteria" />
+  <xs:simpleType name="DailyFrequencyOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Once" />
+      <xs:enumeration value="Hourly" />
+      <xs:enumeration value="EveryMinute" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DailyFrequencyOptions" nillable="true" type="tns:DailyFrequencyOptions" />
+  <xs:simpleType name="MonthlyFrequencyOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Daily" />
+      <xs:enumeration value="Weekly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MonthlyFrequencyOptions" nillable="true" type="tns:MonthlyFrequencyOptions" />
+  <xs:simpleType name="RecurrenceFrequencyOptions">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Daily" />
+      <xs:enumeration value="Weekly" />
+      <xs:enumeration value="Monthly" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="RecurrenceFrequencyOptions" nillable="true" type="tns:RecurrenceFrequencyOptions" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeJobScheduleGtF4Gnug">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="JobSchedule" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfJobSchedulePtBE3Ihj">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeJobScheduleGtF4Gnug" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeJobScheduleGtF4Gnug" />
+  <xs:complexType name="ItemContractCollectionOfJobSchedulePtBE3Ihj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="JobSchedule" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="_items" nillable="true" type="q27:ArrayOfJobSchedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfJobSchedulePtBE3Ihj" nillable="true" type="tns:ItemContractCollectionOfJobSchedulePtBE3Ihj" />
+  <xs:simpleType name="ExportSubscriberType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="FileSystem" />
+      <xs:enumeration value="FTP" />
+      <xs:enumeration value="MSMQ" />
+      <xs:enumeration value="JMSQ" />
+      <xs:enumeration value="TibcoJMSQ" />
+      <xs:enumeration value="MQSeries" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExportSubscriberType" nillable="true" type="tns:ExportSubscriberType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeExportSubscriberkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ExportSubscriber" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfExportSubscriberpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeExportSubscriberkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeExportSubscriberkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfExportSubscriberpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExportSubscriber" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q28:ArrayOfExportSubscriber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfExportSubscriberpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfExportSubscriberpli5DGe2" />
+  <xs:simpleType name="IntegrationType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="Outbound" />
+      <xs:enumeration value="Inbound" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="IntegrationType" nillable="true" type="tns:IntegrationType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeConnectorProfileOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ConnectorProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfConnectorProfileFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeConnectorProfileOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeConnectorProfileOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfConnectorProfileFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ConnectorProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q29:ArrayOfConnectorProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfConnectorProfileFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfConnectorProfileFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationMessageTypeOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationMessageType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationMessageTypeFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationMessageTypeOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationMessageTypeOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationMessageTypeFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationMessageType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q30:ArrayOfIntegrationMessageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationMessageTypeFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationMessageTypeFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeMDMObjectType7cXCH591">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="MDMObjectType" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfMDMObjectTypeXK0exmbb">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeMDMObjectType7cXCH591" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeMDMObjectType7cXCH591" />
+  <xs:complexType name="ItemContractCollectionOfMDMObjectTypeXK0exmbb">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MDMObjectType" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_items" nillable="true" type="tns:ArrayOfMDMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfMDMObjectTypeXK0exmbb" nillable="true" type="tns:ItemContractCollectionOfMDMObjectTypeXK0exmbb" />
+  <xs:complexType name="ArrayOfMDMObjectType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MDMObjectType" nillable="true" type="tns:MDMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMDMObjectType" nillable="true" type="tns:ArrayOfMDMObjectType" />
+  <xs:complexType name="MDMObjectType">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AssemblyName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClassName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Id" type="xs:short" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MDMObjectType" nillable="true" type="tns:MDMObjectType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusDimension" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusDimension" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q31:ArrayOfIntegrationItemStatusDimension" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusSearchParameterOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusSearchParameter" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusSearchParameterOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusSearchParameterOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusSearchParameter" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q32:ArrayOfIntegrationItemStatusSearchParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG" />
+  <xs:simpleType name="SearchOperator">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EqualTo">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Contains">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NotContains">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HasValue">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="HasNoValue">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="In">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="NotIn">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LessThan">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">8</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GreaterThan">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">9</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="GreaterThanOrEqualTo">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">10</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="LessThanOrEqualTo">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">11</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Like">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">12</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="None">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">13</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SubsetOf">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">14</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchOperator" nillable="true" type="tns:SearchOperator" />
+  <xs:complexType name="ArrayOfOperationResultType">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OperationResultType" type="tns:OperationResultType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOperationResultType" nillable="true" type="tns:ArrayOfOperationResultType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusInternalOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusInternalOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusInternalOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q33:ArrayOfIntegrationItemStatusInternal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionInternalOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusDimensionInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionInternalOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionInternalOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusDimensionInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q34:ArrayOfIntegrationItemStatusDimensionInternal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemDimensionTypeOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemDimensionType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemDimensionTypeOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemDimensionTypeOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemDimensionType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q35:ArrayOfIntegrationItemDimensionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG" />
+  <xs:complexType name="LookupExportContext">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FileFormat" type="tns:LookupExportFileFormat" />
+          <xs:element minOccurs="0" name="GroupBy" type="tns:LookupExportGroupOrder" />
+          <xs:element minOccurs="0" name="LocaleList" nillable="true" type="tns:ArrayOfLocaleEnum" />
+          <xs:element minOccurs="0" name="MaxNoOfLookupsPerFile" type="xs:int" />
+          <xs:element minOccurs="0" name="MaxRecordsPerLookup" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupExportContext" nillable="true" type="tns:LookupExportContext" />
+  <xs:complexType name="ArrayOfLocaleEnum">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocaleEnum" type="tns:LocaleEnum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocaleEnum" nillable="true" type="tns:ArrayOfLocaleEnum" />
+  <xs:complexType name="FileCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:InterfaceContractCollectionOfanyTypeFile7cXCH591">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="FileCollection" nillable="true" type="tns:FileCollection" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeFile7cXCH591">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="File" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfFileXK0exmbb">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeFile7cXCH591" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeFile7cXCH591" />
+  <xs:complexType name="ItemContractCollectionOfFileXK0exmbb">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://mdmobjects.riversand.com/" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="File" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_items" nillable="true" type="tns:ArrayOfFile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfFileXK0exmbb" nillable="true" type="tns:ItemContractCollectionOfFileXK0exmbb" />
+  <xs:complexType name="ArrayOfFile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="File" nillable="true" type="tns:File" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFile" nillable="true" type="tns:ArrayOfFile" />
+</xs:schema>

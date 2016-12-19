@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D2932C9B-BB7E-4628-A3F0-22A13E77305C}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.Workflow.Activities.Designer</RootNamespace>
+    <AssemblyName>RS.MDM.Workflow.Activities.Designer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Workflow.Activities" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ActivityActionsEditorWindow.xaml.cs">
+      <DependentUpon>ActivityActionsEditorWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BatchSendDesigner.xaml.cs">
+      <DependentUpon>BatchSendDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteMatchingReviewDecisionDesigner.xaml.cs">
+      <DependentUpon>ExecuteMatchingReviewDecisionDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MatchReviewDesigner.xaml.cs">
+      <DependentUpon>MatchReviewDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CheckforReApprovalDesigner.xaml.cs">
+      <DependentUpon>CheckforReApprovalDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CompareAttributeValueDesigner.xaml.cs">
+      <DependentUpon>CompareAttributeValueDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomEditors\ActivityActionsEditor.cs" />
+    <Compile Include="ExecuteBusinessRuleDesigner.xaml.cs">
+      <DependentUpon>ExecuteBusinessRuleDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ExecuteBusinessRulesAsyncDesigner.xaml.cs">
+      <DependentUpon>ExecuteBusinessRulesAsyncDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GetEntityDesigner.xaml.cs">
+      <DependentUpon>GetEntityDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HasAttributeValueDesigner.xaml.cs">
+      <DependentUpon>HasAttributeValueDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HumanApprovalDesigner.xaml.cs">
+      <DependentUpon>HumanApprovalDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HumanWorkDesigner.xaml.cs">
+      <DependentUpon>HumanWorkDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InvokeSubWorkflowDesigner.xaml.cs">
+      <DependentUpon>InvokeSubWorkflowDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PromoteDesigner.xaml.cs">
+      <DependentUpon>PromoteDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReceiveDesigner.xaml.cs">
+      <DependentUpon>ReceiveDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SendDesigner.xaml.cs">
+      <DependentUpon>SendDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SendMailDesigner.xaml.cs">
+      <DependentUpon>SendMailDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SendMailUsingTemplateDesigner.xaml.cs">
+      <DependentUpon>SendMailUsingTemplateDesigner.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SendMDMMessageDesigner.xaml.cs">
+      <DependentUpon>SendMDMMessageDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TransformDesigner.xaml.cs">
+      <DependentUpon>TransformDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateEntityDesigner.xaml.cs">
+      <DependentUpon>UpdateEntityDesigner.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WebServicesCallDesigner.xaml.cs">
+      <DependentUpon>WebServicesCallDesigner.xaml</DependentUpon>
+    </Compile>
+    <Resource Include="Images\ExecuteBusinessRuleAsync.bmp" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="Images\Promote.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="ActivityActionsEditorWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BatchSendDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ExecuteMatchingReviewDecisionDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MatchReviewDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CheckforReApprovalDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CompareAttributeValueDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteBusinessRuleDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ExecuteBusinessRulesAsyncDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GetEntityDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HasAttributeValueDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HumanApprovalDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HumanWorkDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InvokeSubWorkflowDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PromoteDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ReceiveDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SendDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SendMailDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SendMailUsingTemplateDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SendMDMMessageDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TransformDesigner.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UpdateEntityDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WebServicesCallDesigner.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\HumanApproval.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\ExecuteBusinessRule.bmp" />
+    <EmbeddedResource Include="Images\GetEntity.bmp" />
+    <EmbeddedResource Include="Images\HasAttributeValue.bmp" />
+    <EmbeddedResource Include="Images\HumanWork.bmp" />
+    <EmbeddedResource Include="Images\InvokeSubWorkflow.bmp" />
+    <EmbeddedResource Include="Images\SendMail.bmp" />
+    <EmbeddedResource Include="Images\SendMDMMessage.bmp" />
+    <EmbeddedResource Include="Images\UpdateEntity.bmp" />
+    <EmbeddedResource Include="Images\WebServicesCall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\CompareAttributeValue.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Images\SendMailUsingTemplate.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CheckforReapproval.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\MatchReview.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ExecuteMatchingReviewDecision.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

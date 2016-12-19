@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://mdmobjects.riversand.com/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+  <xs:element name="GetJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobId" type="xs:int" />
+        <xs:element xmlns:q1="http://mdmobjects.riversand.com/" minOccurs="0" name="jobType" type="q1:JobType" />
+        <xs:element xmlns:q2="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q2:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobResult" nillable="true" type="q3:Job" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="jobType" type="q4:JobType" />
+        <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="jobSubType" type="q5:JobSubType" />
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="jobStatus" type="q6:JobStatus" />
+        <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q7:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobsResult" nillable="true" type="q8:JobCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsWithAbilityToSkipJobDataLoading">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="jobType" type="q9:JobType" />
+        <xs:element xmlns:q10="http://mdmobjects.riversand.com/" minOccurs="0" name="jobSubType" type="q10:JobSubType" />
+        <xs:element xmlns:q11="http://mdmobjects.riversand.com/" minOccurs="0" name="jobStatus" type="q11:JobStatus" />
+        <xs:element minOccurs="0" name="skipJobDataLoading" type="xs:boolean" />
+        <xs:element xmlns:q12="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q12:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsWithAbilityToSkipJobDataLoadingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobsWithAbilityToSkipJobDataLoadingResult" nillable="true" type="q13:JobCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsWithSqlFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="jobType" type="q14:JobType" />
+        <xs:element minOccurs="0" name="sql" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q15:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsWithSqlFilterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobsWithSqlFilterResult" nillable="true" type="q16:JobCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://mdmobjects.riversand.com/" minOccurs="0" name="jobType" type="q17:JobType" />
+        <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q18:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobsByTypeResult" nillable="true" type="q19:JobCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsByTypeWithAbilityToSkipJobDataLoading">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://mdmobjects.riversand.com/" minOccurs="0" name="jobType" type="q20:JobType" />
+        <xs:element minOccurs="0" name="skipJobDataLoading" type="xs:boolean" />
+        <xs:element xmlns:q21="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q21:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobsByTypeWithAbilityToSkipJobDataLoadingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobsByTypeWithAbilityToSkipJobDataLoadingResult" nillable="true" type="q22:JobCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilteredJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://mdmobjects.riversand.com/" minOccurs="0" name="jobFilterContext" nillable="true" type="q23:JobFilterContext" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q24:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFilteredJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetFilteredJobsResult" nillable="true" type="q25:JobCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessJobs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="jobsCollection" nillable="true" type="q26:JobCollection" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q27:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessJobsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessJobsResult" nillable="true" type="q28:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="job" nillable="true" type="q29:Job" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q30:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateJobResult" nillable="true" type="q31:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="job" nillable="true" type="q32:Job" />
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q33:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateJobResult" nillable="true" type="q34:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="job" nillable="true" type="q35:Job" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q36:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteJobResult" nillable="true" type="q37:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitiateImportJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="job" nillable="true" type="q38:Job" />
+        <xs:element xmlns:q39="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q39:MDMCenterApplication" />
+        <xs:element xmlns:q40="http://mdmobjects.riversand.com/" minOccurs="0" name="module" type="q40:MDMCenterModules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InitiateImportJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InitiateImportJobResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImportJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="job" nillable="true" type="q41:Job" />
+        <xs:element xmlns:q42="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q42:MDMCenterApplication" />
+        <xs:element xmlns:q43="http://mdmobjects.riversand.com/" minOccurs="0" name="module" type="q43:MDMCenterModules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImportJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateImportJobResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportJobResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="importJobId" type="xs:int" />
+        <xs:element xmlns:q44="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q44:MDMCenterApplication" />
+        <xs:element xmlns:q45="http://mdmobjects.riversand.com/" minOccurs="0" name="module" type="q45:MDMCenterModules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportJobResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetImportJobResultsResult" nillable="true" type="q46:JobImportResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartImportJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q47:MDMCenterApplication" />
+        <xs:element xmlns:q48="http://mdmobjects.riversand.com/" minOccurs="0" name="file" nillable="true" type="q48:File" />
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element minOccurs="0" name="parentJobId" type="xs:int" />
+        <xs:element xmlns:q49="http://mdmobjects.riversand.com/" minOccurs="0" name="jobType" type="q49:JobType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartImportJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartImportJobResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetErrorStates">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobId" type="xs:int" />
+        <xs:element xmlns:q50="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q50:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetErrorStatesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetErrorStatesResult" nillable="true" type="q51:JobImportResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataModelImportJobResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="importJobId" type="xs:int" />
+        <xs:element xmlns:q52="http://mdmobjects.riversand.com/" minOccurs="0" name="objectType" type="q52:ObjectType" />
+        <xs:element minOccurs="0" name="externalId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q53:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataModelImportJobResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" minOccurs="0" name="GetDataModelImportJobResultsResult" nillable="true" type="q54:DataModelOperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataModelOperationResultSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobId" type="xs:int" />
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q55:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataModelOperationResultSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q56="http://mdmobjects.riversand.com/" minOccurs="0" name="GetDataModelOperationResultSummaryResult" nillable="true" type="q56:DataModelOperationResultSummaryCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q57:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="GetProfilesResult" nillable="true" type="q58:ImportProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobExecutionStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobId" type="xs:int" />
+        <xs:element xmlns:q59="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q59:MDMCenterApplication" />
+        <xs:element xmlns:q60="http://mdmobjects.riversand.com/" minOccurs="0" name="module" type="q60:MDMCenterModules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobExecutionStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobExecutionStatusResult" nillable="true" type="q61:JobOperationStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTranslationExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="translationExportProfile" nillable="true" type="q62:TranslationExportProfile" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q63:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateTranslationExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateTranslationExportProfileResult" nillable="true" type="q64:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTranslationExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="translationExportProfile" nillable="true" type="q65:TranslationExportProfile" />
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q66:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTranslationExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateTranslationExportProfileResult" nillable="true" type="q67:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTranslationExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="translationExportProfile" nillable="true" type="q68:TranslationExportProfile" />
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q69:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTranslationExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteTranslationExportProfileResult" nillable="true" type="q70:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranslationExportProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q71:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranslationExportProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetTranslationExportProfileByIdResult" nillable="true" type="q72:TranslationExportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteImportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="importProfile" nillable="true" type="q73:ImportProfile" />
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q74:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteImportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteImportProfileResult" nillable="true" type="q75:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="importProfile" nillable="true" type="q76:ImportProfile" />
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q77:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateImportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q78="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateImportProfileResult" nillable="true" type="q78:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateImportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="importProfile" nillable="true" type="q79:ImportProfile" />
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q80:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateImportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateImportProfileResult" nillable="true" type="q81:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessImportProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q82="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="importProfiles" nillable="true" type="q82:ImportProfileCollection" />
+        <xs:element xmlns:q83="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q83:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessImportProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q84="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessImportProfilesResult" nillable="true" type="q84:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q85:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q86="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="GetImportProfileByIdResult" nillable="true" type="q86:ImportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportProfileByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q87:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportProfileByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="GetImportProfileByNameResult" nillable="true" type="q88:ImportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllImportProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q89="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q89:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllImportProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q90="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="GetAllImportProfilesResult" nillable="true" type="q90:ImportProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportProfileType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q91="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q91:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportProfileTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetImportProfileTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupImportProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q92="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q92:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupImportProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q93="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="GetLookupImportProfileByIdResult" nillable="true" type="q93:LookupImportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupImportProfileByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q94="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q94:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupImportProfileByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q95="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="GetLookupImportProfileByNameResult" nillable="true" type="q95:LookupImportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLookupImportProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q96="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q96:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLookupImportProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q97="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="GetAllLookupImportProfilesResult" nillable="true" type="q97:LookupImportProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllExportProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q98="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q98:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllExportProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q99="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetAllExportProfilesResult" nillable="true" type="q99:ExportProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exportProfileId" type="xs:int" />
+        <xs:element xmlns:q100="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q100:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q101="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetExportProfileByIdResult" nillable="true" type="q101:ExportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportProfileByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exportProfileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q102="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q102:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportProfileByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q103="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetExportProfileByNameResult" nillable="true" type="q103:ExportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsExportProfileExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q104="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q104:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsExportProfileExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsExportProfileExistsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedExportProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q105="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q105:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedExportProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q106="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetLockedExportProfilesResult" nillable="true" type="q106:ExportProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseExportLockOnProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q107="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="profileIds" nillable="true" type="q107:ArrayOfint" />
+        <xs:element xmlns:q108="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q108:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseExportLockOnProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q109="http://mdmobjects.riversand.com/" minOccurs="0" name="ReleaseExportLockOnProfilesResult" nillable="true" type="q109:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateLookupExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q110="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="lookupExportProfile" nillable="true" type="q110:LookupExportProfile" />
+        <xs:element xmlns:q111="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q111:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateLookupExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q112="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateLookupExportProfileResult" nillable="true" type="q112:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLookupExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q113="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="lookupExportProfile" nillable="true" type="q113:LookupExportProfile" />
+        <xs:element xmlns:q114="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q114:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteLookupExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q115="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteLookupExportProfileResult" nillable="true" type="q115:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLookupExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q116="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="lookupExportProfile" nillable="true" type="q116:LookupExportProfile" />
+        <xs:element xmlns:q117="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q117:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLookupExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q118="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateLookupExportProfileResult" nillable="true" type="q118:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupExportProfileByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q119="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q119:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupExportProfileByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q120="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetLookupExportProfileByNameResult" nillable="true" type="q120:LookupExportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupExportProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q121="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q121:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLookupExportProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q122="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetLookupExportProfileByIdResult" nillable="true" type="q122:LookupExportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJobSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q123="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="jobSchedule" nillable="true" type="q123:JobSchedule" />
+        <xs:element xmlns:q124="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q124:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateJobScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q125="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateJobScheduleResult" nillable="true" type="q125:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJobSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q126="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="jobSchedule" nillable="true" type="q126:JobSchedule" />
+        <xs:element xmlns:q127="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q127:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateJobScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q128="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateJobScheduleResult" nillable="true" type="q128:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJobSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q129="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="jobSchedule" nillable="true" type="q129:JobSchedule" />
+        <xs:element xmlns:q130="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q130:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteJobScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q131="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteJobScheduleResult" nillable="true" type="q131:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessJobSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q132="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="jobSchedules" nillable="true" type="q132:JobScheduleCollection" />
+        <xs:element xmlns:q133="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q133:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessJobSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q134="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessJobSchedulesResult" nillable="true" type="q134:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobSchedules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q135="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q135:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllJobSchedulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q136="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetAllJobSchedulesResult" nillable="true" type="q136:JobScheduleCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobScheduleById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobScheduleId" type="xs:int" />
+        <xs:element xmlns:q137="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q137:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobScheduleByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q138="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="GetJobScheduleByIdResult" nillable="true" type="q138:JobSchedule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExportSubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q139="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="exportSubscriber" nillable="true" type="q139:ExportSubscriber" />
+        <xs:element xmlns:q140="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q140:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateExportSubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q141="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateExportSubscriberResult" nillable="true" type="q141:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExportSubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q142="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="exportSubscriber" nillable="true" type="q142:ExportSubscriber" />
+        <xs:element xmlns:q143="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q143:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateExportSubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q144="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateExportSubscriberResult" nillable="true" type="q144:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExportSubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q145="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="exportSubscriber" nillable="true" type="q145:ExportSubscriber" />
+        <xs:element xmlns:q146="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q146:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteExportSubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q147="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteExportSubscriberResult" nillable="true" type="q147:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessExportSubscribers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q148="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="exportSubscribers" nillable="true" type="q148:ExportSubscriberCollection" />
+        <xs:element xmlns:q149="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q149:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessExportSubscribersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q150="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessExportSubscribersResult" nillable="true" type="q150:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllExportSubscribers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q151="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q151:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllExportSubscribersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q152="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetAllExportSubscribersResult" nillable="true" type="q152:ExportSubscriberCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportSubscriberById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="exportSubscriberId" type="xs:int" />
+        <xs:element xmlns:q153="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q153:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetExportSubscriberByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q154="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetExportSubscriberByIdResult" nillable="true" type="q154:ExportSubscriber" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIntegrationActivityLogWithShortNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mdmObjectId" type="xs:long" />
+        <xs:element minOccurs="0" name="mdmObjectTypeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="context" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="connectorShortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="integrationMessageTypeShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q155="http://mdmobjects.riversand.com/" minOccurs="0" name="integrationType" type="q155:IntegrationType" />
+        <xs:element minOccurs="0" name="weightage" type="xs:int" />
+        <xs:element minOccurs="0" name="messsageCount" type="xs:int" />
+        <xs:element xmlns:q156="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q156:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIntegrationActivityLogWithShortNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q157="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateIntegrationActivityLogWithShortNamesResult" nillable="true" type="q157:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIntegrationActivityLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q158="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="integrationActivityLog" nillable="true" type="q158:IntegrationActivityLog" />
+        <xs:element xmlns:q159="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q159:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateIntegrationActivityLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q160="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateIntegrationActivityLogResult" nillable="true" type="q160:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateConnectorProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q161="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="connectorProfile" nillable="true" type="q161:ConnectorProfile" />
+        <xs:element xmlns:q162="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q162:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateConnectorProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q163="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateConnectorProfileResult" nillable="true" type="q163:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConnectorProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q164="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="connectorProfile" nillable="true" type="q164:ConnectorProfile" />
+        <xs:element xmlns:q165="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q165:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateConnectorProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q166="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateConnectorProfileResult" nillable="true" type="q166:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteConnectorProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q167="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="connectorProfile" nillable="true" type="q167:ConnectorProfile" />
+        <xs:element xmlns:q168="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q168:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteConnectorProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q169="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteConnectorProfileResult" nillable="true" type="q169:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllConnectorProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q170="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q170:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllConnectorProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q171="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetAllConnectorProfilesResult" nillable="true" type="q171:ConnectorProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConnectorProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connectorProfileId" type="xs:short" />
+        <xs:element xmlns:q172="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q172:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConnectorProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q173="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetConnectorProfileByIdResult" nillable="true" type="q173:ConnectorProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConnectorProfileByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connectorProfileShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q174="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q174:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetConnectorProfileByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q175="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetConnectorProfileByNameResult" nillable="true" type="q175:ConnectorProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationMessageById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="integrationMessageId" type="xs:long" />
+        <xs:element xmlns:q176="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q176:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationMessageByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q177="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetIntegrationMessageByIdResult" nillable="true" type="q177:IntegrationMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllIntegrationMessageTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q178="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q178:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllIntegrationMessageTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q179="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetAllIntegrationMessageTypesResult" nillable="true" type="q179:IntegrationMessageTypeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationMessageTypeById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="integrationMessageTypeId" type="xs:short" />
+        <xs:element xmlns:q180="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q180:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationMessageTypeByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q181="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetIntegrationMessageTypeByIdResult" nillable="true" type="q181:IntegrationMessageType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationMessageTypeByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="integrationMessageTypeShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q182="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q182:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationMessageTypeByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q183="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetIntegrationMessageTypeByNameResult" nillable="true" type="q183:IntegrationMessageType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMDMObjectTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q184="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q184:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMDMObjectTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q185="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetAllMDMObjectTypesResult" nillable="true" type="q185:MDMObjectTypeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMObjectTypeById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mdmObjectTypeId" type="xs:short" />
+        <xs:element xmlns:q186="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q186:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMObjectTypeByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q187="http://mdmobjects.riversand.com/" minOccurs="0" name="GetMDMObjectTypeByIdResult" nillable="true" type="q187:MDMObjectType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMObjectTypeByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mdmObjectTypeShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q188="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q188:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMObjectTypeByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q189="http://mdmobjects.riversand.com/" minOccurs="0" name="GetMDMObjectTypeByNameResult" nillable="true" type="q189:MDMObjectType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIntegrationItemStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q190="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="integrationItemStatus" nillable="true" type="q190:IntegrationItemStatus" />
+        <xs:element xmlns:q191="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q191:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIntegrationItemStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q192="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateIntegrationItemStatusResult" nillable="true" type="q192:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchIntegrationItemStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q193="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="integrationItemStatusSearchCriteria" nillable="true" type="q193:IntegrationItemStatusSearchCriteria" />
+        <xs:element xmlns:q194="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q194:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchIntegrationItemStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q195="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="SearchIntegrationItemStatusResult" nillable="true" type="q195:IntegrationItemStatusInternalCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllIntegrationItemDimensionTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q196="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q196:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllIntegrationItemDimensionTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q197="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetAllIntegrationItemDimensionTypesResult" nillable="true" type="q197:IntegrationItemDimensionTypeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationItemDimensionTypeById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="integrationItemDimensionTypeId" type="xs:short" />
+        <xs:element xmlns:q198="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q198:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationItemDimensionTypeByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q199="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetIntegrationItemDimensionTypeByIdResult" nillable="true" type="q199:IntegrationItemDimensionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationItemDimensionTypeByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="integrationItemDimensionTypeShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q200="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q200:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationItemDimensionTypeByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q201="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetIntegrationItemDimensionTypeByNameResult" nillable="true" type="q201:IntegrationItemDimensionType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationItemDimensionTypesByConnectorId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="connectorId" type="xs:short" />
+        <xs:element xmlns:q202="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q202:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIntegrationItemDimensionTypesByConnectorIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q203="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="GetIntegrationItemDimensionTypesByConnectorIdResult" nillable="true" type="q203:IntegrationItemDimensionTypeCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportLookupCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q204="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="lookupNames" nillable="true" type="q204:ArrayOfstring" />
+        <xs:element xmlns:q205="http://mdmobjects.riversand.com/" minOccurs="0" name="exportContext" nillable="true" type="q205:LookupExportContext" />
+        <xs:element xmlns:q206="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q206:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportLookupCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q207="http://mdmobjects.riversand.com/" minOccurs="0" name="ExportLookupCollectionResult" nillable="true" type="q207:FileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportLookupToExcel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="lookupName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q208="http://mdmobjects.riversand.com/" minOccurs="0" name="exportContext" nillable="true" type="q208:LookupExportContext" />
+        <xs:element xmlns:q209="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q209:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportLookupToExcelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q210="http://mdmobjects.riversand.com/" minOccurs="0" name="ExportLookupToExcelResult" nillable="true" type="q210:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

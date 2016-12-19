@@ -1,0 +1,43 @@
+﻿<ContractData>
+  
+  <Data MethodName ="GetAttributeId_ProperValue">
+    <Input>
+      <Parameters>
+        <Parameter Name="attributeName">DateRV</Parameter>
+        <Parameter Name="attributeGroupName">ValidateEntity</Parameter>
+      </Parameters>
+    </Input>
+    <Output>7731</Output>
+  </Data>
+
+  <Data MethodName ="GetAttributeId_AttributeName_LongName">
+    <Input>
+      <Parameters>
+        <Parameter Name="attributeName">High Resolution Images Sequence</Parameter>
+        <Parameter Name="attributeGroupName">Image</Parameter>
+      </Parameters>
+    </Input>
+    <Output>6608</Output>
+  </Data>
+
+  <Data MethodName="GetAttributeId_AttributeGroupName_LongName">
+    <Input>
+      <Parameters>
+        <Parameter Name="attributeName">Attr SN</Parameter>
+        <Parameter Name="attributeGroupName">Testing Attribute</Parameter>
+      </Parameters>
+    </Input>
+    <Output>7741</Output>
+  </Data>
+  
+  <Data MethodName ="GetAttributeId_MultipleId_NegativeTest">
+    <Input>
+      <Parameters>
+        <Parameter Name="attributeName">Attribute Long Name</Parameter>
+        <Parameter Name="attributeGroupName">ValidateEntity</Parameter>
+      </Parameters>
+    </Input>
+    <!--<Output> Multiple attributes found with Attribute ShortName / LongName = "Attribute Long Name" or Attribute Group ShortName / LongName = "ValidateEntity"</Output>-->
+  </Data>
+  
+</ContractData>

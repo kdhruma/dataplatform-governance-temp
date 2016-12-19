@@ -1,0 +1,50 @@
+﻿<Testdata>
+  <Data MethodName="Get_All_Organizations">
+    <Input/>
+    <Output>
+      <Organizations>
+        <Organization Id="1" Name="river Works Workspace" LongName="River Works WorkSpace" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+          <Attributes />
+        </Organization>
+        <Organization Id="2" Name="river Works" LongName="River Works Corporation" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+          <Attributes />
+        </Organization>
+        <Organization Id="3" Name="river Works NA" LongName="River Works North America" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="2" DenormalizationWeightage="2">
+          <Attributes />
+        </Organization>
+        <Organization Id="4" Name="river Works Asia" LongName="River Works Asia" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="2" DenormalizationWeightage="2">
+          <Attributes />
+        </Organization>
+        <Organization Id="5" Name="river Works Europe" LongName="River Works Europe" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="2" DenormalizationWeightage="2">
+          <Attributes />
+        </Organization>
+      </Organizations>
+    </Output>
+  </Data>
+
+  <Data MethodName="Get_By_Id_ProperValue">
+    <Input>
+      <Parameters>
+        <Parameter Name="OrganizationId">1</Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Organizations>
+        <Organization Id="1" Name="river Works Workspace" LongName="River Works WorkSpace" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+          <Attributes />
+        </Organization>
+      </Organizations>
+    </Output>
+  </Data>
+
+  <Data MethodName="Get_By_Id_Less_Than_0">
+    <Input>
+      <Parameters>
+        <Parameter Name="OrganizationId">-1</Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Organizations></Organizations>
+    </Output>
+  </Data>
+</Testdata>

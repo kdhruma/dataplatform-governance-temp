@@ -1,0 +1,96 @@
+﻿<Testdata>
+
+  <Data MethodName="Create_CategoryAttributeMapping">
+    <Input>
+      <Parameters>
+        <Parameter Name="CategoryAttributeMappings">
+          <CategoryAttributemMappingCollection>
+            <CategoryAttributeMapping Id="-1" DNINodeCharacteristicTemplateId="0" CategoryId="1" CatalogId="1" ParentEntityId="0" CategoryName="" MandatoryFlag="" IsDraft="False" SourceFlag="" LongName="" Action="Create"
+						                          AttributeId="5003" AttributeName="create attribute Name" AttributeLongName="create attribute Long Name" AttributeParentId="5004" AttributeParentName="" AttributeParentLongName="" AttributeDataTypeName=""
+						                          SortOrder="0" Required="False" ReadOnly="False" ShowAtCreation="False" AllowableValues="1|2|3" MaxLength="10" MinLength="1" AllowableUOM="1" DefaultUOM="1" UomType="" Precision="2"
+						                          MinInclusive="1" MinExclusive="1" MaxInclusive="1" MaxExclusive="1" Definition="1" AttributeExample="1234" BusinessRule="1234" DefaultValue=""
+						                          ExportMask="" Extension="" WebUri="www.example.com">
+            </CategoryAttributeMapping>
+          </CategoryAttributemMappingCollection>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Update_CategoryAttributeMapping">
+    <Input>
+      <Parameters>
+        <Parameter Name="CategoryAttributeMappings">
+          <CategoryAttributemMappingCollection>
+            <CategoryAttributeMapping Id="-1" DNINodeCharacteristicTemplateId="0" CategoryId="1" CatalogId="1" ParentEntityId="0" CategoryName="" MandatoryFlag="" IsDraft="False" SourceFlag="" LongName="" Action="Create"
+                                      AttributeId="4072" AttributeName="update attribute Name" AttributeLongName="update attribute Long Name" AttributeParentId="4073" AttributeParentName="" AttributeParentLongName="" AttributeDataTypeName=""
+						                          SortOrder="0" Required="False" ReadOnly="False" ShowAtCreation="False" AllowableValues="1|2|3" MaxLength="10" MinLength="1" AllowableUOM="1" DefaultUOM="1" UomType="" Precision="2"
+						                          MinInclusive="1" MinExclusive="1" MaxInclusive="1" MaxExclusive="1" Definition="1" AttributeExample="1234" BusinessRule="1234" DefaultValue=""
+						                          ExportMask="" Extension="" WebUri="www.example.com">
+            </CategoryAttributeMapping>
+          </CategoryAttributemMappingCollection>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Delete_CategoryAttributeMapping">
+    <Input>
+      <Parameters>
+        <Parameter Name="CategoryAttributeMappings">
+          <CategoryAttributemMappingCollection>
+            <CategoryAttributeMapping Id="-1" DNINodeCharacteristicTemplateId="0" CategoryId="1" CatalogId="1" ParentEntityId="0" CategoryName="" MandatoryFlag="" IsDraft="False" SourceFlag="" LongName="" Action="Create"
+                                      AttributeId="4079" AttributeName="delete attribute Name" AttributeLongName="delete attribute Long Name" AttributeParentId="4080" AttributeParentName="" AttributeParentLongName="" AttributeDataTypeName=""
+						                          SortOrder="0" Required="False" ReadOnly="False" ShowAtCreation="False" AllowableValues="1|2|3" MaxLength="10" MinLength="1" AllowableUOM="1" DefaultUOM="1" UomType="" Precision="2"
+						                          MinInclusive="1" MinExclusive="1" MaxInclusive="1" MaxExclusive="1" Definition="1" AttributeExample="1234" BusinessRule="1234" DefaultValue=""
+						                          ExportMask="" Extension="" WebUri="www.example.com">
+            </CategoryAttributeMapping>
+          </CategoryAttributemMappingCollection>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Process_CategoryAttributeMapping">
+    <Input>
+      <Parameters>
+        <Parameter Name="CategoryAttributeMappings">
+          <CategoryAttributemMappingCollection>
+            <CategoryAttributeMapping Id="-1" DNINodeCharacteristicTemplateId="0" CategoryId="1" CatalogId="1" ParentEntityId="0" CategoryName="" MandatoryFlag="" IsDraft="False" SourceFlag="" LongName="" Action="Create"
+                                      AttributeId="4082" AttributeName="delete attribute Name" AttributeLongName="delete attribute Long Name" AttributeParentId="4083" AttributeParentName="" AttributeParentLongName="" AttributeDataTypeName=""
+						                          SortOrder="0" Required="False" ReadOnly="False" ShowAtCreation="False" AllowableValues="1|2|3" MaxLength="10" MinLength="1" AllowableUOM="1" DefaultUOM="1" UomType="" Precision="2"
+						                          MinInclusive="1" MinExclusive="1" MaxInclusive="1" MaxExclusive="1" Definition="1" AttributeExample="1234" BusinessRule="1234" DefaultValue=""
+						                          ExportMask="" Extension="" WebUri="www.example.com">  
+            </CategoryAttributeMapping>
+            <CategoryAttributeMapping Id="-1" DNINodeCharacteristicTemplateId="0" CategoryId="1" CatalogId="1" ParentEntityId="0" CategoryName="" MandatoryFlag="" IsDraft="False" SourceFlag="" LongName="" Action="Create"
+                                      AttributeId="4084" AttributeName="delete attribute Name" AttributeLongName="delete attribute Long Name" AttributeParentId="4086" AttributeParentName="" AttributeParentLongName="" AttributeDataTypeName=""
+						                          SortOrder="0" Required="False" ReadOnly="False" ShowAtCreation="False" AllowableValues="1|2|3" MaxLength="10" MinLength="1" AllowableUOM="1" DefaultUOM="1" UomType="" Precision="2"
+						                          MinInclusive="1" MinExclusive="1" MaxInclusive="1" MaxExclusive="1" Definition="1" AttributeExample="1234" BusinessRule="1234" DefaultValue=""
+						                          ExportMask="" Extension="" WebUri="www.example.com">
+            </CategoryAttributeMapping>
+            <CategoryAttributeMapping Id="-1" DNINodeCharacteristicTemplateId="0" CategoryId="1" CatalogId="1" ParentEntityId="0" CategoryName="" MandatoryFlag="" IsDraft="False" SourceFlag="" LongName="" Action="Create"
+                                      AttributeId="4091" AttributeName="delete attribute Name" AttributeLongName="delete attribute Long Name" AttributeParentId="4093" AttributeParentName="" AttributeParentLongName="" AttributeDataTypeName=""
+						                          SortOrder="0" Required="False" ReadOnly="False" ShowAtCreation="False" AllowableValues="1|2|3" MaxLength="10" MinLength="1" AllowableUOM="1" DefaultUOM="1" UomType="" Precision="2"
+						                          MinInclusive="1" MinExclusive="1" MaxInclusive="1" MaxExclusive="1" Definition="1" AttributeExample="1234" BusinessRule="1234" DefaultValue=""
+						                          ExportMask="" Extension="" WebUri="www.example.com">
+            </CategoryAttributeMapping>
+          </CategoryAttributemMappingCollection>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+  
+
+</Testdata>

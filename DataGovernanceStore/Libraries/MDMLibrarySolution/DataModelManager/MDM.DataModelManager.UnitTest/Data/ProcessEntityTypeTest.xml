@@ -1,0 +1,49 @@
+﻿<Testdata>
+
+  <Data MethodName="Create_EntityType">
+    <Input>
+      <Parameters>
+        <Parameter Name="EntityType">
+          <EntityType Id="-1" Name="Test_Name" LongName="Test_LongName" ShowAtCreation="False" HasChildNodes="True" CatalogBranchLevel="1" ParentEntityTypeId="0" ParentEntityTypeName="" Action="Create" />
+        </Parameter>
+        <Parameter Name="ProgramName">Unit Test</Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Update_EntityType">
+    <Input>
+      <Parameters>
+        <Parameter Name="EntityType">
+          <EntityType Id="-1" Name="Test_Name2" LongName="Test_LongName2" ShowAtCreation="False" HasChildNodes="True" CatalogBranchLevel="1" ParentEntityTypeId="0" ParentEntityTypeName="" Action="Create" />
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Delete_EntityType">
+    <Input>
+      <Parameters>
+        <Parameter Name="EntityType">
+          <EntityType Id="-1" Name="Test_Name3" LongName="Test_LongName3 For Delete" ShowAtCreation="False" HasChildNodes="True" CatalogBranchLevel="1" ParentEntityTypeId="0" ParentEntityTypeName="" Action="Create" />
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+</Testdata>

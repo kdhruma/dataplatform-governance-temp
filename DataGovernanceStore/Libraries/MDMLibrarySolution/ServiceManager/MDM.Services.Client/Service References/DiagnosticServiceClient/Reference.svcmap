@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="30bf8ccb-d96d-4824-a7a0-09de18fdc08a" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Development_WCFServices/DiagnosticService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DiagnosticService.xsd" MetadataType="Schema" ID="ad49c8de-56a5-44c5-a49e-90e006310c3d" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DiagnosticService3.wsdl" MetadataType="Wsdl" ID="3967d19e-9efd-4e47-8e0f-4d20adb2824e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="DiagnosticService6.xsd" MetadataType="Schema" ID="8aaf2326-8283-48cc-b5ff-bc0e0f82f4a8" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd6" />
+    <MetadataFile FileName="DiagnosticService8.xsd" MetadataType="Schema" ID="033f3056-6efa-4951-a58f-18f2cd6ea601" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DiagnosticService10.xsd" MetadataType="Schema" ID="0c3c648c-b36a-40fe-8b3e-3cb7241a0c4e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DiagnosticService11.xsd" MetadataType="Schema" ID="83279935-8f4b-4cd6-9a9f-07c7bcf79785" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd7" />
+    <MetadataFile FileName="DiagnosticService12.xsd" MetadataType="Schema" ID="93e9bd7b-76e3-4751-87ed-a0a0822d3077" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd8" />
+    <MetadataFile FileName="DiagnosticService4.wsdl" MetadataType="Wsdl" ID="8060ddcc-7392-489c-a5bc-b93d6e3e3c94" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?wsdl" />
+    <MetadataFile FileName="DiagnosticService.disco" MetadataType="Disco" ID="5ec5b71e-536b-45bf-acc9-6454a9abb8bc" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?disco" />
+    <MetadataFile FileName="DiagnosticService13.xsd" MetadataType="Schema" ID="2484a554-304f-4508-9687-b3d3ede1c0b2" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DiagnosticService14.xsd" MetadataType="Schema" ID="1272a597-860c-4ee3-afc3-c995bcdb14ec" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DiagnosticService15.xsd" MetadataType="Schema" ID="d669c6ad-8bf4-4850-acf7-4287fe4198db" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

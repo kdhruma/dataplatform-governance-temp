@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://mdmobjects.riversand.com/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:complexType name="Job">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ComputerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FileId" type="xs:int" />
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsEnable" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JobAction" type="q1:JobAction" />
+          <xs:element minOccurs="0" name="JobData" nillable="true" type="tns:JobData" />
+          <xs:element minOccurs="0" name="JobDataXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="JobStatus" type="q1:JobStatus" />
+          <xs:element minOccurs="0" name="JobSubType" type="q1:JobSubType" />
+          <xs:element minOccurs="0" name="JobType" type="q1:JobType" />
+          <xs:element minOccurs="0" name="ModifiedDateTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextRunDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentJobId" type="xs:int" />
+          <xs:element minOccurs="0" name="Priority" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfileType" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Job" nillable="true" type="tns:Job" />
+  <xs:complexType name="JobData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://mdmobjects.riversand.com/" base="q2:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExecutionStatus" nillable="true" type="tns:ExecutionStatus" />
+          <xs:element minOccurs="0" name="JobExecutionStep" nillable="true" type="tns:JobExecutionStepCollection" />
+          <xs:element minOccurs="0" name="JobParameters" nillable="true" type="tns:JobParameterCollection" />
+          <xs:element minOccurs="0" name="OperationResult" nillable="true" type="q2:OperationResult" />
+          <xs:element minOccurs="0" name="ProfileId" type="xs:int" />
+          <xs:element minOccurs="0" name="_jobParameters" nillable="true" type="tns:JobParameterCollection" />
+          <xs:element minOccurs="0" name="_jobexecutionStep" nillable="true" type="tns:JobExecutionStepCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobData" nillable="true" type="tns:JobData" />
+  <xs:complexType name="ExecutionStatus">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://mdmobjects.riversand.com/" base="q3:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CurrentStatusMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EstimatedMilliSeconds" type="xs:double" />
+          <xs:element minOccurs="0" name="OverAllProgress" type="xs:int" />
+          <xs:element minOccurs="0" name="RemainingMilliSeconds" type="xs:double" />
+          <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="TotalElementsFailed" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalElementsPartiallySucceed" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalElementsProcessed" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalElementsSucceed" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalElementsToProcess" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalElementsWarned" type="xs:long" />
+          <xs:element minOccurs="0" name="TotalMilliSeconds" type="xs:double" />
+          <xs:element minOccurs="0" name="TotalSteps" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecutionStatus" nillable="true" type="tns:ExecutionStatus" />
+  <xs:complexType name="JobExecutionStepCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_executionSteps" nillable="true" type="tns:ArrayOfJobExecutionStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobExecutionStepCollection" nillable="true" type="tns:JobExecutionStepCollection" />
+  <xs:complexType name="ArrayOfJobExecutionStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobExecutionStep" nillable="true" type="tns:JobExecutionStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobExecutionStep" nillable="true" type="tns:ArrayOfJobExecutionStep" />
+  <xs:complexType name="JobExecutionStep">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://mdmobjects.riversand.com/" base="q4:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExecutionStatus" nillable="true" type="tns:ExecutionStatus" />
+          <xs:element minOccurs="0" name="PK_DN_Step" type="xs:int" />
+          <xs:element minOccurs="0" name="_executionStatus" nillable="true" type="tns:ExecutionStatus" />
+          <xs:element minOccurs="0" name="_pkDnStep" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobExecutionStep" nillable="true" type="tns:JobExecutionStep" />
+  <xs:complexType name="JobParameterCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_jobParameters" nillable="true" type="tns:ArrayOfJobParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobParameterCollection" nillable="true" type="tns:JobParameterCollection" />
+  <xs:complexType name="ArrayOfJobParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobParameter" nillable="true" type="tns:JobParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobParameter" nillable="true" type="tns:ArrayOfJobParameter" />
+  <xs:complexType name="JobParameter">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://mdmobjects.riversand.com/" base="q5:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobParameter" nillable="true" type="tns:JobParameter" />
+  <xs:complexType name="JobCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://schemas.datacontract.org/2004/07/MDM.Core" base="q6:InterfaceContractCollectionOfanyTypeJobGtF4Gnug">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobCollection" nillable="true" type="tns:JobCollection" />
+  <xs:complexType name="ArrayOfJob">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Job" nillable="true" type="tns:Job" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJob" nillable="true" type="tns:ArrayOfJob" />
+  <xs:complexType name="JobImportResultCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_jobImportResults" nillable="true" type="tns:ArrayOfJobImportResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobImportResultCollection" nillable="true" type="tns:JobImportResultCollection" />
+  <xs:complexType name="ArrayOfJobImportResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobImportResult" nillable="true" type="tns:JobImportResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobImportResult" nillable="true" type="tns:ArrayOfJobImportResult" />
+  <xs:complexType name="JobImportResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://mdmobjects.riversand.com/" base="q7:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InternalId" type="xs:long" />
+          <xs:element minOccurs="0" name="JobId" type="xs:int" />
+          <xs:element minOccurs="0" name="ObjectType" type="q7:ObjectType" />
+          <xs:element minOccurs="0" name="OperationResult" nillable="true" type="q7:OperationResult" />
+          <xs:element minOccurs="0" name="OperationResultXML" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PerformedAction" type="q7:ObjectAction" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobImportResult" nillable="true" type="tns:JobImportResult" />
+  <xs:complexType name="JobOperationStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ProgressValue" type="xs:int" />
+      <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobOperationStatus" nillable="true" type="tns:JobOperationStatus" />
+  <xs:complexType name="JobSchedule">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://mdmobjects.riversand.com/" base="q8:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ComputerName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LastModofiedDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastRunDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="LastRunStatus" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NextRunDate" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="Profiles" nillable="true" type="q8:BaseProfileCollection" />
+          <xs:element minOccurs="0" name="ScheduleCriteria" nillable="true" type="q8:ScheduleCriteria" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobSchedule" nillable="true" type="tns:JobSchedule" />
+  <xs:complexType name="JobScheduleCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/MDM.Core" base="q9:InterfaceContractCollectionOfanyTypeJobScheduleGtF4Gnug">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobScheduleCollection" nillable="true" type="tns:JobScheduleCollection" />
+  <xs:complexType name="ArrayOfJobSchedule">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobSchedule" nillable="true" type="tns:JobSchedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobSchedule" nillable="true" type="tns:ArrayOfJobSchedule" />
+</xs:schema>

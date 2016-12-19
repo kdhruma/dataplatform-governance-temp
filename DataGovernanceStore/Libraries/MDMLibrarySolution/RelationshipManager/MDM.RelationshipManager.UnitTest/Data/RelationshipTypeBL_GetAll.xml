@@ -1,0 +1,15 @@
+﻿<ContractData>
+  <Data MethodName="GetAllRelationshipTypes_ProperValue">
+    <Input>
+      
+    </Input>
+    <Output>
+      <RelationshipTypes>
+        <RelationshipType Id="1" Name="accessories" LongName="Accessories" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Read" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+        <RelationshipType Id="2" Name="cross-sell" LongName="Cross Sell" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Read" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+        <RelationshipType Id="4" Name="included Parts" LongName="Included Parts" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Read" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+        <RelationshipType Id="3" Name="new Releases" LongName="New Releases" ValidationRequired="false" ShowValidFlag="false" ReadOnly="false" DrillDown="false" IsDefault="" Action="Read" EnforceRelatedEntityStateOnSourceEntity="false" CheckRelatedEntityPromoteStatusOnPromote="false" />
+      </RelationshipTypes>
+    </Output>
+  </Data>
+</ContractData>

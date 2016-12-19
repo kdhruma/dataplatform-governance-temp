@@ -1,0 +1,410 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://mdmobjects.riversand.com/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+  <xs:complexType name="TranslationExportProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExportProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DataObject" nillable="true" type="tns:TranslationExportProfileData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TranslationExportProfile" nillable="true" type="tns:TranslationExportProfile" />
+  <xs:complexType name="ExportProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:BaseProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ApplicationConfigId" type="xs:long" />
+          <xs:element minOccurs="0" name="CreateUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsSystemProfile" type="xs:boolean" />
+          <xs:element minOccurs="0" name="LegacyProfileId" type="xs:int" />
+          <xs:element minOccurs="0" name="ProfileData" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ProfileType" type="q1:ExportProfileType" />
+          <xs:element minOccurs="0" name="TemplateId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExportProfile" nillable="true" type="tns:ExportProfile" />
+  <xs:complexType name="TranslationExportProfileData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://mdmobjects.riversand.com/" base="q2:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Notifications" nillable="true" type="tns:Notification" />
+          <xs:element minOccurs="0" name="OutputSpecification" nillable="true" type="tns:OutputSpecification" />
+          <xs:element minOccurs="0" name="ProfileSettings" nillable="true" type="tns:ProfileSettingCollection" />
+          <xs:element minOccurs="0" name="ScopeSpecification" nillable="true" type="tns:ScopeSpecification" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TranslationExportProfileData" nillable="true" type="tns:TranslationExportProfileData" />
+  <xs:complexType name="Notification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://mdmobjects.riversand.com/" base="q3:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EmailNotifications" nillable="true" type="tns:EmailNotificationCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Notification" nillable="true" type="tns:Notification" />
+  <xs:complexType name="EmailNotificationCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/MDM.Core" base="q4:InterfaceContractCollectionOfanyTypeEmailNotificationkIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailNotificationCollection" nillable="true" type="tns:EmailNotificationCollection" />
+  <xs:complexType name="ArrayOfEmailNotification">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="EmailNotification" nillable="true" type="tns:EmailNotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEmailNotification" nillable="true" type="tns:ArrayOfEmailNotification" />
+  <xs:complexType name="EmailNotification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://mdmobjects.riversand.com/" base="q5:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Action" type="q5:ExportJobStatus" />
+          <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Emails" nillable="true" type="q6:ArrayOfstring" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EmailNotification" nillable="true" type="tns:EmailNotification" />
+  <xs:complexType name="OutputSpecification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q7="http://mdmobjects.riversand.com/" base="q7:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DataFormatter" nillable="true" type="tns:DataFormatter" />
+          <xs:element minOccurs="0" name="DataSubscribers" nillable="true" type="tns:DataSubscriberCollection" />
+          <xs:element minOccurs="0" name="OutputDataSpecification" nillable="true" type="tns:OutputDataSpecification" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OutputSpecification" nillable="true" type="tns:OutputSpecification" />
+  <xs:complexType name="DataFormatter">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://mdmobjects.riversand.com/" base="q8:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DataFormatterSettings" nillable="true" type="tns:DataFormatterSettingCollection" />
+          <xs:element minOccurs="0" name="Type" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataFormatter" nillable="true" type="tns:DataFormatter" />
+  <xs:complexType name="DataFormatterSettingCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://schemas.datacontract.org/2004/07/MDM.Core" base="q9:InterfaceContractCollectionOfanyTypeDataFormatterSettingkIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataFormatterSettingCollection" nillable="true" type="tns:DataFormatterSettingCollection" />
+  <xs:complexType name="ArrayOfDataFormatterSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataFormatterSetting" nillable="true" type="tns:DataFormatterSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataFormatterSetting" nillable="true" type="tns:ArrayOfDataFormatterSetting" />
+  <xs:complexType name="DataFormatterSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://mdmobjects.riversand.com/" base="q10:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataFormatterSetting" nillable="true" type="tns:DataFormatterSetting" />
+  <xs:complexType name="DataSubscriberCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://schemas.datacontract.org/2004/07/MDM.Core" base="q11:InterfaceContractCollectionOfanyTypeDataSubscriberkIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataSubscriberCollection" nillable="true" type="tns:DataSubscriberCollection" />
+  <xs:complexType name="ArrayOfDataSubscriber">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataSubscriber" nillable="true" type="tns:DataSubscriber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataSubscriber" nillable="true" type="tns:ArrayOfDataSubscriber" />
+  <xs:complexType name="DataSubscriber">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://mdmobjects.riversand.com/" base="q12:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataSubscriber" nillable="true" type="tns:DataSubscriber" />
+  <xs:complexType name="OutputDataSpecification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://mdmobjects.riversand.com/" base="q13:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MDMObjectGroups" nillable="true" type="tns:MDMObjectGroupCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="OutputDataSpecification" nillable="true" type="tns:OutputDataSpecification" />
+  <xs:complexType name="MDMObjectGroupCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://schemas.datacontract.org/2004/07/MDM.Core" base="q14:InterfaceContractCollectionOfanyTypeMDMObjectGroupkIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MDMObjectGroupCollection" nillable="true" type="tns:MDMObjectGroupCollection" />
+  <xs:complexType name="ArrayOfMDMObjectGroup">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MDMObjectGroup" nillable="true" type="tns:MDMObjectGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMDMObjectGroup" nillable="true" type="tns:ArrayOfMDMObjectGroup" />
+  <xs:complexType name="MDMObjectGroup">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q15="http://mdmobjects.riversand.com/" base="q15:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IncludeAll" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeEmpty" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MDMObjects" nillable="true" type="tns:MDMObjectCollection" />
+          <xs:element minOccurs="0" name="ObjectType" type="q15:ObjectType" />
+          <xs:element minOccurs="0" name="StartWith" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MDMObjectGroup" nillable="true" type="tns:MDMObjectGroup" />
+  <xs:complexType name="MDMObjectCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.Core" base="q16:InterfaceContractCollectionOfanyTypeMDMObject7cXCH591">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MDMObjectCollection" nillable="true" type="tns:MDMObjectCollection" />
+  <xs:complexType name="ProfileSettingCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://schemas.datacontract.org/2004/07/MDM.Core" base="q17:InterfaceContractCollectionOfanyTypeProfileSettingkIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileSettingCollection" nillable="true" type="tns:ProfileSettingCollection" />
+  <xs:complexType name="ArrayOfProfileSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProfileSetting" nillable="true" type="tns:ProfileSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProfileSetting" nillable="true" type="tns:ArrayOfProfileSetting" />
+  <xs:complexType name="ProfileSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q18="http://mdmobjects.riversand.com/" base="q18:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProfileSetting" nillable="true" type="tns:ProfileSetting" />
+  <xs:complexType name="ScopeSpecification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://mdmobjects.riversand.com/" base="q19:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExportScopes" nillable="true" type="tns:ExportScopeCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ScopeSpecification" nillable="true" type="tns:ScopeSpecification" />
+  <xs:complexType name="ExportScopeCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.Core" base="q20:InterfaceContractCollectionOfanyTypeExportScopekIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExportScopeCollection" nillable="true" type="tns:ExportScopeCollection" />
+  <xs:complexType name="ArrayOfExportScope">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExportScope" nillable="true" type="tns:ExportScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExportScope" nillable="true" type="tns:ArrayOfExportScope" />
+  <xs:complexType name="ExportScope">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://mdmobjects.riversand.com/" base="q21:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExportScopes" nillable="true" type="tns:ExportScopeCollection" />
+          <xs:element minOccurs="0" name="Include" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IsRecursive" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ObjectId" type="xs:long" />
+          <xs:element minOccurs="0" name="ObjectName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ObjectType" type="q21:ObjectType" />
+          <xs:element minOccurs="0" name="ObjectUniqueIdentifier" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="SearchAttributeRuleGroups" nillable="true" type="q21:SearchAttributeRuleGroupCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExportScope" nillable="true" type="tns:ExportScope" />
+  <xs:complexType name="ExportProfileCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_exportProfiles" nillable="true" type="tns:ArrayOfExportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExportProfileCollection" nillable="true" type="tns:ExportProfileCollection" />
+  <xs:complexType name="ArrayOfExportProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExportProfile" nillable="true" type="tns:ExportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExportProfile" nillable="true" type="tns:ArrayOfExportProfile" />
+  <xs:complexType name="LookupExportProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ExportProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="LookupProfileData" nillable="true" type="tns:LookupExportProfileData" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupExportProfile" nillable="true" type="tns:LookupExportProfile" />
+  <xs:complexType name="LookupExportProfileData">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q22="http://mdmobjects.riversand.com/" base="q22:MDMObject">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupExportProfileData" nillable="true" type="tns:LookupExportProfileData" />
+  <xs:complexType name="LookupExportSyndicationProfileData">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:LookupExportProfileData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExecutionSpecification" nillable="true" type="tns:ExecutionSpecification" />
+          <xs:element minOccurs="0" name="LookupExportScopes" nillable="true" type="tns:LookupExportScopeCollection" />
+          <xs:element minOccurs="0" name="Notification" nillable="true" type="tns:Notification" />
+          <xs:element minOccurs="0" name="OutputSpecification" nillable="true" type="tns:OutputSpecification" />
+          <xs:element minOccurs="0" name="ProfileSettings" nillable="true" type="tns:ProfileSettingCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupExportSyndicationProfileData" nillable="true" type="tns:LookupExportSyndicationProfileData" />
+  <xs:complexType name="ExecutionSpecification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://mdmobjects.riversand.com/" base="q23:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ExecutionSettings" nillable="true" type="tns:ExecutionSettingCollection" />
+          <xs:element minOccurs="0" name="TriggeringDataSpecification" nillable="true" type="tns:TriggeringDataSpecification" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecutionSpecification" nillable="true" type="tns:ExecutionSpecification" />
+  <xs:complexType name="ExecutionSettingCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.Core" base="q24:InterfaceContractCollectionOfanyTypeExecutionSettingkIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecutionSettingCollection" nillable="true" type="tns:ExecutionSettingCollection" />
+  <xs:complexType name="ArrayOfExecutionSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExecutionSetting" nillable="true" type="tns:ExecutionSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExecutionSetting" nillable="true" type="tns:ArrayOfExecutionSetting" />
+  <xs:complexType name="ExecutionSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://mdmobjects.riversand.com/" base="q25:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecutionSetting" nillable="true" type="tns:ExecutionSetting" />
+  <xs:complexType name="TriggeringDataSpecification">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q26="http://mdmobjects.riversand.com/" base="q26:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="MDMObjectGroups" nillable="true" type="tns:MDMObjectGroupCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TriggeringDataSpecification" nillable="true" type="tns:TriggeringDataSpecification" />
+  <xs:complexType name="LookupExportScopeCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://schemas.datacontract.org/2004/07/MDM.Core" base="q27:InterfaceContractCollectionOfanyTypeLookupExportScopekIZLKYdt">
+        <xs:sequence>
+          <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="FileFormat" type="q28:LookupExportFileFormat" />
+          <xs:element xmlns:q29="http://mdmobjects.riversand.com/" minOccurs="0" name="GroupBy" type="q29:LookupExportGroupOrder" />
+          <xs:element minOccurs="0" name="IncludeAllLocale" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IncludeAllLookup" type="xs:boolean" />
+          <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="Locales" nillable="true" type="q30:LocaleCollection" />
+          <xs:element minOccurs="0" name="LookupExportScopes" nillable="true" type="tns:ArrayOfLookupExportScope" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupExportScopeCollection" nillable="true" type="tns:LookupExportScopeCollection" />
+  <xs:complexType name="ArrayOfLookupExportScope">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LookupExportScope" nillable="true" type="tns:LookupExportScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLookupExportScope" nillable="true" type="tns:ArrayOfLookupExportScope" />
+  <xs:complexType name="LookupExportScope">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://mdmobjects.riversand.com/" base="q31:MDMObject">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupExportScope" nillable="true" type="tns:LookupExportScope" />
+  <xs:complexType name="ExportSubscriber">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q32="http://mdmobjects.riversand.com/" base="q32:MDMObject">
+        <xs:sequence>
+          <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/System.Collections.Generic" minOccurs="0" name="ConfigurationParameters" nillable="true" type="q33:ArrayOfKeyValuePairOfstringstring" />
+          <xs:element minOccurs="0" name="SubscriberType" type="q32:ExportSubscriberType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExportSubscriber" nillable="true" type="tns:ExportSubscriber" />
+  <xs:complexType name="ExportSubscriberCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q34="http://mdmobjects.riversand.com/" base="q34:InterfaceContractCollectionOfanyTypeExportSubscriberkIZLKYdt">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExportSubscriberCollection" nillable="true" type="tns:ExportSubscriberCollection" />
+  <xs:complexType name="ArrayOfExportSubscriber">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExportSubscriber" nillable="true" type="tns:ExportSubscriber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExportSubscriber" nillable="true" type="tns:ArrayOfExportSubscriber" />
+</xs:schema>

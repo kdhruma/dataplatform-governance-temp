@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1092893d-23fe-4f91-9d41-a20d242a3f81" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Development_WCFServices/EntityExportService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="EntityExportService7.wsdl" MetadataType="Wsdl" ID="2a16981e-0c0b-4814-a6cc-288071e4f4d0" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="EntityExportService2.xsd" MetadataType="Schema" ID="cd75b4d7-82c8-4690-8874-100f3b59eb90" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd9" />
+    <MetadataFile FileName="EntityExportService22.xsd" MetadataType="Schema" ID="977e0812-7acc-420b-a4cc-f156da80b291" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd8" />
+    <MetadataFile FileName="EntityExportService14.disco" MetadataType="Disco" ID="82717c44-b5e5-406e-86e2-4bf0bb0916f3" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?disco" />
+    <MetadataFile FileName="EntityExportService23.xsd" MetadataType="Schema" ID="55b0b30d-4d43-4012-992e-361244fbc9df" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd1" />
+    <MetadataFile FileName="EntityExportService24.xsd" MetadataType="Schema" ID="2d6e30b2-811e-45f9-9f32-3b79f9fa558e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd0" />
+    <MetadataFile FileName="EntityExportService25.xsd" MetadataType="Schema" ID="f2a7d673-5da0-4cb5-b9c7-111b726a3176" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd3" />
+    <MetadataFile FileName="EntityExportService26.xsd" MetadataType="Schema" ID="9cf248bc-1223-47ea-94bc-4f042ce41dbb" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd2" />
+    <MetadataFile FileName="EntityExportService27.xsd" MetadataType="Schema" ID="7e710869-22c1-48d3-a2b6-d1a1c75cedc9" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd5" />
+    <MetadataFile FileName="EntityExportService28.xsd" MetadataType="Schema" ID="72fba2f8-71d5-482e-936b-2832cc0204f8" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd4" />
+    <MetadataFile FileName="EntityExportService29.xsd" MetadataType="Schema" ID="3342ce27-5f3d-4c43-bcf8-1ec95321177a" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd7" />
+    <MetadataFile FileName="EntityExportService30.xsd" MetadataType="Schema" ID="b539ec82-ad0c-4341-be36-f9ffcde86c26" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd6" />
+    <MetadataFile FileName="EntityExportService8.wsdl" MetadataType="Wsdl" ID="81a87b72-c790-4ccd-97f7-5a1a5746315f" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?wsdl" />
+    <MetadataFile FileName="EntityExportService31.xsd" MetadataType="Schema" ID="ffacd2a4-2c0f-45ff-8c61-c8e1a40482e9" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd10" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

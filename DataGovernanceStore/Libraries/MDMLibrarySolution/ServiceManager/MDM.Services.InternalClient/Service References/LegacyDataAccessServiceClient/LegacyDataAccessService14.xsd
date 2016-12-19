@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/LegacyDataAccessService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="WorkflowActionContext">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActingUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="ActingUserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Comments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentActivityLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CurrentActivityName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ExtendedProperties" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="FaultMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="NewlyAssignedUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="NewlyAssignedUserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousAssignedUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="PreviousAssignedUserName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UserAction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkflowActionContext" nillable="true" type="tns:WorkflowActionContext" />
+  <xs:complexType name="WorkflowStateCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_workflowStateCollection" nillable="true" type="tns:ArrayOfWorkflowState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkflowStateCollection" nillable="true" type="tns:WorkflowStateCollection" />
+  <xs:complexType name="ArrayOfWorkflowState">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkflowState" nillable="true" type="tns:WorkflowState" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkflowState" nillable="true" type="tns:ArrayOfWorkflowState" />
+  <xs:complexType name="WorkflowState">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://mdmobjects.riversand.com/" base="q2:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActivityId" type="xs:int" />
+          <xs:element minOccurs="0" name="ActivityLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ActivityShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignedRole" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignedUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignedUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="EventDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InstanceId" type="xs:int" />
+          <xs:element minOccurs="0" name="PreviousActivityAction" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousActivityComments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousActivityEventDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousActivityLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousActivityShortName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousActivityUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PreviousActivityUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkflowComments" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowId" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkflowLongName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowVersionId" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkflowVersionName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkflowState" nillable="true" type="tns:WorkflowState" />
+  <xs:complexType name="ArrayOfWorkflowActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkflowActivity" nillable="true" type="tns:WorkflowActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkflowActivity" nillable="true" type="tns:ArrayOfWorkflowActivity" />
+  <xs:complexType name="WorkflowActivity">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://mdmobjects.riversand.com/" base="q3:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ActingUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ActingUserId" type="xs:int" />
+          <xs:element minOccurs="0" name="ActivityActionsCollection" nillable="true" type="tns:ArrayOfActivityAction" />
+          <xs:element minOccurs="0" name="AllowedRoles" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AllowedUsers" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="AssignmentType" type="q3:AssignmentType" />
+          <xs:element minOccurs="0" name="DelegationAllowed" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DisplayOtherUsersEntities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="DisplayUnassignedEntities" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EscalationContext" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EscalationLevel" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="IsHumanActivity" type="xs:boolean" />
+          <xs:element minOccurs="0" name="MetadataAttributeId" type="xs:int" />
+          <xs:element minOccurs="0" name="NodeValue" type="xs:int" />
+          <xs:element minOccurs="0" name="SortOrder" type="xs:int" />
+          <xs:element minOccurs="0" name="StartDate" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowId" type="xs:int" />
+          <xs:element minOccurs="0" name="WorkflowType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WorkflowVersionId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WorkflowActivity" nillable="true" type="tns:WorkflowActivity" />
+  <xs:complexType name="ArrayOfActivityAction">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ActivityAction" nillable="true" type="tns:ActivityAction" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfActivityAction" nillable="true" type="tns:ArrayOfActivityAction" />
+  <xs:complexType name="ActivityAction">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://mdmobjects.riversand.com/" base="q4:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CommentsRequired" type="q4:CommentsRequired" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="TransitionMessageCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ActivityAction" nillable="true" type="tns:ActivityAction" />
+</xs:schema>

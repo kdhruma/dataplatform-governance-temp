@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd4" namespace="http://mdmobjects.riversand.com/" />
+  <xs:element name="GetApplicationDiagnostic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="type" type="q1:ApplicationDiagnosticType" />
+        <xs:element minOccurs="0" name="startDateTime" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="entityId" type="xs:long" />
+        <xs:element minOccurs="0" name="count" type="xs:long" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q2:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationDiagnosticResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetApplicationDiagnosticResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemDiagnostic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="type" type="q3:SystemDiagnosticType" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="subType" type="q4:SystemDiagnosticSubType" />
+        <xs:element minOccurs="0" name="count" type="xs:long" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q5:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemDiagnosticResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSystemDiagnosticResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDiagnosticData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="diagnosticActivities" nillable="true" type="q6:DiagnosticActivityCollection" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="diagnosticRecords" nillable="true" type="q7:DiagnosticRecordCollection" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q8:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDiagnosticDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessDiagnosticDataResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="diagnosticReportSettings" nillable="true" type="q9:DiagnosticReportSettings" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q10:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="GetActivitiesResult" nillable="true" type="q11:DiagnosticActivityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecords">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/" minOccurs="0" name="operationId" type="q12:guid" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q13:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRecordsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="GetRecordsResult" nillable="true" type="q14:DiagnosticRecordCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelatedDiagnosticRecordData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="relativeDataReferanceId" type="xs:long" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="diagnosticRelativeDataType" type="q15:DiagnosticRelativeDataType" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q16:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelatedDiagnosticRecordDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRelatedDiagnosticRecordDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartDiagnosticTraces">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q17:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartDiagnosticTracesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="StartDiagnosticTracesResult" nillable="true" type="q18:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopDiagnosticTraces">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q19:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopDiagnosticTracesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://mdmobjects.riversand.com/" minOccurs="0" name="StopDiagnosticTracesResult" nillable="true" type="q20:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDiagnosticToolsReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="reportType" type="q21:DiagnosticToolsReportType" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="reportSubType" type="q22:DiagnosticToolsReportSubType" />
+        <xs:element minOccurs="0" name="inputXml" nillable="true" type="xs:string" />
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q23:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDiagnosticToolsReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="ProcessDiagnosticToolsReportResult" nillable="true" type="q24:DiagnosticToolsReportResultWrapper" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="reportType" type="q25:DiagnosticToolsReportType" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="reportSubType" type="q26:DiagnosticToolsReportSubType" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q27:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetReportTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetReportTemplateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDiagnosticReportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="diagnosticReportProfile" nillable="true" type="q28:DiagnosticReportProfile" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q29:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDiagnosticReportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateDiagnosticReportProfileResult" nillable="true" type="q30:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDiagnosticReportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="diagnosticReportProfile" nillable="true" type="q31:DiagnosticReportProfile" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q32:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDiagnosticReportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateDiagnosticReportProfileResult" nillable="true" type="q33:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosticReportProfileByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q34:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDiagnosticReportProfileByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="GetDiagnosticReportProfileByNameResult" nillable="true" type="q35:DiagnosticReportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDiagnosticReportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="diagnosticReportProfile" nillable="true" type="q36:DiagnosticReportProfile" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q37:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDiagnosticReportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteDiagnosticReportProfileResult" nillable="true" type="q38:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

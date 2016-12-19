@@ -1,0 +1,58 @@
+﻿<Testdata>
+  
+  <Data MethodName="Get_All_Hierarchies">
+    <Input/>
+    <Output>
+      <Hierarchies>
+        <Hierarchy Id="1" Name="product Hierarchy" LongName="Product Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="read">
+          <Attributes />
+        </Hierarchy>
+        <Hierarchy Id="2" Name="vendor Hierarchy" LongName="Vendor Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="read">
+          <Attributes />
+        </Hierarchy>
+        <Hierarchy Id="3" Name="web Hierarchy" LongName="Web Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="read">
+          <Attributes />
+        </Hierarchy>
+      </Hierarchies>
+    </Output>
+  </Data>
+  
+  <Data MethodName="Get_Hierarchy_By_Id_Proper">
+    <Input>
+      <Parameters>
+        <Parameter Name="hierarchyId">3</Parameter>
+      </Parameters>
+    </Input>      
+    <Output>
+      <Hierarchies>
+        <Hierarchy Id="3" Name="web Hierarchy" LongName="Web Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="read">
+          <Attributes />
+        </Hierarchy>
+      </Hierarchies>
+    </Output>
+  </Data>
+
+  <Data MethodName="Get_Hierarchy_By_Id_Not_Exists">
+    <Input>
+      <Parameters>
+        <Parameter Name="hierarchyId">4535</Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Get_Hierarchy_By_Id_Less_Than_1">
+    <Input>
+      <Parameters>
+        <Parameter Name="hierarchyId">0</Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+
+</Testdata>

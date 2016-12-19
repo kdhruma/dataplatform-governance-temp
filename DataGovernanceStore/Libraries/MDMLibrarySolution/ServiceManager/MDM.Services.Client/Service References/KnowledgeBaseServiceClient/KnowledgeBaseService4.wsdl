@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KnowledgeBaseService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IKnowledgeBaseService_GetLocale_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocale" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetLocale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetLocale_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAvailableLocales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableLocales" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAvailableLocales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableLocalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAvailableLocales_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLocales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLocales" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLocales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLocalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLocales_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetLocalesByContainer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalesByContainer" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetLocalesByContainer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalesByContainerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetLocalesByContainer_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLookupTableNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLookupTableNames" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLookupTableNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLookupTableNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLookupTableNames_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllWordLists_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWordLists" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllWordLists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWordListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllWordLists_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordListById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordListById" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordListById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordListByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordListById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordListByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordListByName" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordListByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordListByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordListByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_CreateWordList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWordList" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_CreateWordList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWordListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_CreateWordList_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_UpdateWordList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWordList" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_UpdateWordList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateWordListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_UpdateWordList_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_DeleteWordList_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWordList" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_DeleteWordList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteWordListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_DeleteWordList_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_ProcessWordLists_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessWordLists" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_ProcessWordLists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessWordListsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_ProcessWordLists_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordElements_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordElements" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordElements_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWordElementsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetWordElements_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_CheckWordlistForDuplicateSubstitute_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckWordlistForDuplicateSubstitute" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_CheckWordlistForDuplicateSubstitute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckWordlistForDuplicateSubstituteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_CheckWordlistForDuplicateSubstitute_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IKnowledgeBaseService">
+    <wsdl:operation name="GetLocale">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocale" message="tns:IKnowledgeBaseService_GetLocale_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocaleResponse" message="tns:IKnowledgeBaseService_GetLocale_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocaleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetLocale_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableLocales">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAvailableLocales" message="tns:IKnowledgeBaseService_GetAvailableLocales_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAvailableLocalesResponse" message="tns:IKnowledgeBaseService_GetAvailableLocales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAvailableLocalesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetAvailableLocales_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLocales">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLocales" message="tns:IKnowledgeBaseService_GetAllLocales_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLocalesResponse" message="tns:IKnowledgeBaseService_GetAllLocales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLocalesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetAllLocales_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalesByContainer">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocalesByContainer" message="tns:IKnowledgeBaseService_GetLocalesByContainer_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocalesByContainerResponse" message="tns:IKnowledgeBaseService_GetLocalesByContainer_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocalesByContainerMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetLocalesByContainer_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableNames">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLookupTableNames" message="tns:IKnowledgeBaseService_GetAllLookupTableNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLookupTableNamesResponse" message="tns:IKnowledgeBaseService_GetAllLookupTableNames_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLookupTableNamesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetAllLookupTableNames_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWordLists">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllWordLists" message="tns:IKnowledgeBaseService_GetAllWordLists_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllWordListsResponse" message="tns:IKnowledgeBaseService_GetAllWordLists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllWordListsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetAllWordLists_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWordListById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordListById" message="tns:IKnowledgeBaseService_GetWordListById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordListByIdResponse" message="tns:IKnowledgeBaseService_GetWordListById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordListByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetWordListById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWordListByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordListByName" message="tns:IKnowledgeBaseService_GetWordListByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordListByNameResponse" message="tns:IKnowledgeBaseService_GetWordListByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordListByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetWordListByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWordList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/CreateWordList" message="tns:IKnowledgeBaseService_CreateWordList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/CreateWordListResponse" message="tns:IKnowledgeBaseService_CreateWordList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/CreateWordListMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_CreateWordList_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateWordList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/UpdateWordList" message="tns:IKnowledgeBaseService_UpdateWordList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/UpdateWordListResponse" message="tns:IKnowledgeBaseService_UpdateWordList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/UpdateWordListMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_UpdateWordList_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteWordList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/DeleteWordList" message="tns:IKnowledgeBaseService_DeleteWordList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/DeleteWordListResponse" message="tns:IKnowledgeBaseService_DeleteWordList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/DeleteWordListMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_DeleteWordList_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessWordLists">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/ProcessWordLists" message="tns:IKnowledgeBaseService_ProcessWordLists_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/ProcessWordListsResponse" message="tns:IKnowledgeBaseService_ProcessWordLists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/ProcessWordListsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_ProcessWordLists_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWordElements">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordElements" message="tns:IKnowledgeBaseService_GetWordElements_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordElementsResponse" message="tns:IKnowledgeBaseService_GetWordElements_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetWordElementsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetWordElements_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckWordlistForDuplicateSubstitute">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/CheckWordlistForDuplicateSubstitute" message="tns:IKnowledgeBaseService_CheckWordlistForDuplicateSubstitute_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/CheckWordlistForDuplicateSubstituteResponse" message="tns:IKnowledgeBaseService_CheckWordlistForDuplicateSubstitute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/CheckWordlistForDuplicateSubstituteMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_CheckWordlistForDuplicateSubstitute_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="KnowledgeBaseService">
+    <wsdl:port name="WSHttpBinding_IKnowledgeBaseService" binding="i0:WSHttpBinding_IKnowledgeBaseService">
+      <soap12:address location="http://localhost/Development_WCFServices/KnowledgeBaseService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/KnowledgeBaseService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IKnowledgeBaseService" binding="i0:NetTcpBinding_IKnowledgeBaseService">
+      <soap12:address location="net.tcp://rst-devphani.riversand.com/Development_WCFServices/KnowledgeBaseService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://rst-devphani.riversand.com/Development_WCFServices/KnowledgeBaseService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

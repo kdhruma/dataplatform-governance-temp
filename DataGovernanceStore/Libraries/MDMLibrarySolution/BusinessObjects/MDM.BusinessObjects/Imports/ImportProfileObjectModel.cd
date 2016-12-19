@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="NameAndType">
+  <Class Name="MDM.BusinessObjects.Imports.AttributeMap" Collapsed="true">
+    <Position X="4.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQACAAAAAAAAAAAAAAAAAAAAAAECIEAAAAAAIA=</HashCode>
+      <FileName>Imports\AttributeMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.TargetCategoryMap" Collapsed="true">
+    <Position X="6.75" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAMAAggAAAgAAAAAAAAAAAAAEAIAAAgAAAAA=</HashCode>
+      <FileName>Imports\TargetCategoryMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.AttributeMapCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="12.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAARBAQgAAABAQAAAAAAIAEAAAAAABQIAA=</HashCode>
+      <FileName>Imports\AttributeMapCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.AttributeSource" Collapsed="true">
+    <Position X="5.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGIAAAAAAAAAAAAAAAAAQAAAIAAAAEAIAAAAAAAAA=</HashCode>
+      <FileName>Imports\AttributeSource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.AttributeTarget" Collapsed="true">
+    <Position X="7.25" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiIAAAAAAMAAgAAABAAARgAABAAQAEEIAAAAAAAAA=</HashCode>
+      <FileName>Imports\AttributeTarget.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ContainerMap" Collapsed="true">
+    <Position X="8.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAABAAMAAAAACAgAAAAAAAEAAAAAEAIAAAAAAAAA=</HashCode>
+      <FileName>Imports\ContainerMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.EntityIdentificationMap" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3.25" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAgAAEAAA=</HashCode>
+      <FileName>Imports\EntityIdentificationMap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.EntityMetadataMap" Collapsed="true">
+    <Position X="3.25" Y="9.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AIAAgABBgAAAkAACEIIAAgACAAAAAABEAIBACAAAACA=</HashCode>
+      <FileName>Imports\EntityMetadataMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.EntityTypeMap" Collapsed="true">
+    <Position X="10.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAhQAMAAAAAAAgAAAAAAAAAAAAAEAIAAAAAAAAA=</HashCode>
+      <FileName>Imports\EntityTypeMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ExecutionStep" Collapsed="true">
+    <Position X="3.25" Y="21.25" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Public" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>wAAAAAAAAAAAEIAAAAAAQAAAQQAAAQAUAIAoAIAAAAA=</HashCode>
+      <FileName>Imports\ExecutionStep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ExecutionStepCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2" Y="20.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABAQgCAABAQAAAAAAIQEAAAAAABQIAA=</HashCode>
+      <FileName>Imports\ExecutionStepCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.HierarchyParentEntityMap" Collapsed="true">
+    <Position X="8.75" Y="11.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAMAAAAAAAgAAACAAAAAAAAAEAIAAAAAAAAA=</HashCode>
+      <FileName>Imports\HierarchyParentEntityMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ImportProfile" Collapsed="true">
+    <Position X="1" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIEAAAAEAIQAACEAAAAgAAAAAAAcgICAgEQgAAA=</HashCode>
+      <FileName>Imports\ImportProfile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ImportProfileCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABAQkCAABAQAAAAAAIAEAAAgAABQIAA=</HashCode>
+      <FileName>Imports\ImportProfileCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.InputSpecifications" Collapsed="true">
+    <Position X="2" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAAAAAAAAAAAAAAAAAAAAAEAJAAAAAIAAA=</HashCode>
+      <FileName>Imports\InputSpecifications.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.KeywordProcessingOptions" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAABAEgCAAEAAAAAAAAAAAeAAAACAJAAAE=</HashCode>
+      <FileName>Imports\KeywordProcessingOptions.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.LocaleMap" Collapsed="true">
+    <Position X="3.25" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABACMAAAAAAAgAAAAAAAABAAAAEEIAAAAAAAAA=</HashCode>
+      <FileName>Imports\LocaleMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.LongNameMap" Collapsed="true">
+    <Position X="6.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAMAAAAAAAgAAAAAAAAAAAAAEAIABAAAAAAA=</HashCode>
+      <FileName>Imports\LongNameMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.Mapping" Collapsed="true">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAgAAAAAAIAAAAAAAAAAkAIAEyAAAACA=</HashCode>
+      <FileName>Imports\Mapping.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.MappingCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="7.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAEAAAAAABAQgAAABAQAAAAAAIAEAAAAgABQIAA=</HashCode>
+      <FileName>Imports\MappingCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.MappingSpecifications" Collapsed="true">
+    <Position X="2" Y="5.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAgBAAAAgABAAIBAAAAAgAAIAAAAAEAIAAAQAAAAA=</HashCode>
+      <FileName>Imports\MappingSpecifications.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.MDLParentEntityMap" Collapsed="true">
+    <Position X="11" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAMAAAAAAAgAAAAAAAAAAAAAEAIAAAIAAAAA=</HashCode>
+      <FileName>Imports\MDLParentEntityMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ProcessingSpecifications" Collapsed="true">
+    <Position X="2" Y="16.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>CARAAAAAAAAAAAAABIEAAAAAAIAAEAAEgIIAAAAAAAA=</HashCode>
+      <FileName>Imports\ProcessingSpecifications.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.Provider" Collapsed="true">
+    <Position X="3.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAIwAAAAAAAQAAAAAAAAWAYAAAAAABAA=</HashCode>
+      <FileName>Imports\Provider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ProviderCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2" Y="18.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAEAAAAAABAYgAAABAQAAAAAAIAEAAAEAABQIAA=</HashCode>
+      <FileName>Imports\ProviderCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ProviderSetting" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAIAAAAAAAAACAAAAAAAQAAAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>Imports\ProviderSetting.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ProviderSettingCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.5" Y="19.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABBQiAAABAQEAAAAAIAEAAAAAABQJAA=</HashCode>
+      <FileName>Imports\ProviderSettingCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ReaderSetting" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABABIAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAgAAAAAAA=</HashCode>
+      <FileName>Imports\ReaderSetting.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ReaderSettingCollection" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="3.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAADAAAABBQiAAABAQAAAAAAIAEAAAAAABQIAA=</HashCode>
+      <FileName>Imports\ReaderSettingCollection.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.ShortNameMap" Collapsed="true">
+    <Position X="4.75" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAMAAAAAAAgAAAAAAAAAAAAAEAIAAABAAAAA=</HashCode>
+      <FileName>Imports\ShortNameMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.SourceCategoryMap" Collapsed="true">
+    <Position X="4.75" Y="11.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgABAAMAAggAAAgAAAAAAAAAAAAAEAIAAAAAAAAA=</HashCode>
+      <FileName>Imports\SourceCategoryMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.Imports.StepConfiguration" Collapsed="true">
+    <Position X="5" Y="21.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAAAAAAg=</HashCode>
+      <FileName>Imports\StepConfiguration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.JobProcessingOptions" Collapsed="true">
+    <Position X="3.5" Y="17.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>JAEAgAAAACAwABACAAAgAAggAAAAAAAEAAEAgBAAEAA=</HashCode>
+      <FileName>Imports\JobProcessingOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.BusinessObjects.EntityProcessingOptions" Collapsed="true">
+    <Position X="5.5" Y="17.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AhAAAEAAAAAgAICACAAIAAABAAACEAMGAAQAAAAQAJQ=</HashCode>
+      <FileName>EntityProcessingOptions.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="InternalCommonService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/InternalCommonService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.MergeCopy" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/System.Text" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/System.Security.Claims" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByIdsAndPagination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesByIdsAndPagination" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByIdsAndPagination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesByIdsAndPaginationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByIdsAndPagination_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByPagination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesByPagination" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByPagination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesByPaginationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByPagination_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByEntityScopes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesByEntityScopes" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByEntityScopes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesByEntityScopesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesByEntityScopes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_CreateEntityHavingImageAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEntityHavingImageAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_CreateEntityHavingImageAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateEntityHavingImageAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_CreateEntityHavingImageAttributes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_UpdateEntityHavingImageAttributes_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntityHavingImageAttributes" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_UpdateEntityHavingImageAttributes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateEntityHavingImageAttributesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_UpdateEntityHavingImageAttributes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityViewCompletionStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityViewCompletionStatus" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityViewCompletionStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityViewCompletionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityViewCompletionStatus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_IsEntityExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsEntityExists" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_IsEntityExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsEntityExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_IsEntityExists_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_SendEntityHistoryDetailsAsMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendEntityHistoryDetailsAsMail" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_SendEntityHistoryDetailsAsMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendEntityHistoryDetailsAsMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_SendEntityHistoryDetailsAsMail_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ExportDataModelAsExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportDataModelAsExcel" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ExportDataModelAsExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportDataModelAsExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ExportDataModelAsExcel_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_SearchCategories_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCategories" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_SearchCategories_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_SearchCategories_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ReclassifyLegacy_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReclassifyLegacy" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ReclassifyLegacy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReclassifyLegacyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ReclassifyLegacy_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_IsEntityHierarchyMatrixLatest_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsEntityHierarchyMatrixLatest" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_IsEntityHierarchyMatrixLatest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsEntityHierarchyMatrixLatestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_IsEntityHierarchyMatrixLatest_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityVariantLevels_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityVariantLevels" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityVariantLevels_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityVariantLevelsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityVariantLevels_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetComplexAttributeVersions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComplexAttributeVersions" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetComplexAttributeVersions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComplexAttributeVersionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetComplexAttributeVersions_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetComplexDataByAuditRefId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetComplexDataByAuditRefId" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetComplexDataByAuditRefId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetComplexDataByAuditRefIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetComplexDataByAuditRefId_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://mdmobjects.riversand.com/" name="detail" element="q15:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetHierarchicalAttributeByAuditRefId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHierarchicalAttributeByAuditRefId" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetHierarchicalAttributeByAuditRefId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHierarchicalAttributeByAuditRefIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetHierarchicalAttributeByAuditRefId_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://mdmobjects.riversand.com/" name="detail" element="q16:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetImportTemplateFileByImportProfileName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportTemplateFileByImportProfileName" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetImportTemplateFileByImportProfileName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportTemplateFileByImportProfileNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetImportTemplateFileByImportProfileName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://mdmobjects.riversand.com/" name="detail" element="q17:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetQueuedEntities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuedEntities" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetQueuedEntities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetQueuedEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetQueuedEntities_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://mdmobjects.riversand.com/" name="detail" element="q18:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityDeltaJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityDeltaJson" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityDeltaJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityDeltaJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityDeltaJson_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://mdmobjects.riversand.com/" name="detail" element="q19:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_CopyPasteHierarchy_InputMessage">
+    <wsdl:part name="parameters" element="tns:CopyPasteHierarchy" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_CopyPasteHierarchy_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CopyPasteHierarchyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_CopyPasteHierarchy_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://mdmobjects.riversand.com/" name="detail" element="q20:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMEventInformation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMEventInformation" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMEventInformation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMEventInformationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMEventInformation_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://mdmobjects.riversand.com/" name="detail" element="q21:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMEventHandlers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMEventHandlers" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMEventHandlers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMEventHandlersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMEventHandlers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://mdmobjects.riversand.com/" name="detail" element="q22:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMEventHandlers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMDMEventHandlers" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMEventHandlers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMDMEventHandlersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMEventHandlers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://mdmobjects.riversand.com/" name="detail" element="q23:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetContainerRelationshipTypeEntityTypeMappings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerRelationshipTypeEntityTypeMappings" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetContainerRelationshipTypeEntityTypeMappings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetContainerRelationshipTypeEntityTypeMappingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetContainerRelationshipTypeEntityTypeMappings_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://mdmobjects.riversand.com/" name="detail" element="q24:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ValidateMDMRule_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateMDMRule" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ValidateMDMRule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateMDMRuleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ValidateMDMRule_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://mdmobjects.riversand.com/" name="detail" element="q25:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EvaluateMDMRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateMDMRules" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EvaluateMDMRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EvaluateMDMRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EvaluateMDMRules_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://mdmobjects.riversand.com/" name="detail" element="q26:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRules" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRules_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://mdmobjects.riversand.com/" name="detail" element="q27:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMRules_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMDMRules" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMRules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMDMRulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMRules_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://mdmobjects.riversand.com/" name="detail" element="q28:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetAttributeModelsByContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttributeModelsByContext" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetAttributeModelsByContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAttributeModelsByContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetAttributeModelsByContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://mdmobjects.riversand.com/" name="detail" element="q29:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywordGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleKeywordGroups" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywordGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleKeywordGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywordGroups_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://mdmobjects.riversand.com/" name="detail" element="q30:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleKeywords" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleKeywordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywords_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://mdmobjects.riversand.com/" name="detail" element="q31:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywordsByKeywordGroupId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleKeywordsByKeywordGroupId" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywordsByKeywordGroupId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleKeywordsByKeywordGroupIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleKeywordsByKeywordGroupId_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://mdmobjects.riversand.com/" name="detail" element="q32:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleContext" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://mdmobjects.riversand.com/" name="detail" element="q33:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleMaps_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleMaps" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleMaps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleMapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleMaps_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://mdmobjects.riversand.com/" name="detail" element="q34:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRulesByContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRulesByContext" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRulesByContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRulesByContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRulesByContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://mdmobjects.riversand.com/" name="detail" element="q35:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMRuleMaps_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMDMRuleMaps" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMRuleMaps_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMDMRuleMapsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessMDMRuleMaps_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://mdmobjects.riversand.com/" name="detail" element="q36:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleMapsByContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleMapsByContext" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleMapsByContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMRuleMapsByContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMDMRuleMapsByContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://mdmobjects.riversand.com/" name="detail" element="q37:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetDDGLocaleMessagesByMessageCodesAndLocale_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDGLocaleMessagesByMessageCodesAndLocale" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetDDGLocaleMessagesByMessageCodesAndLocale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDGLocaleMessagesByMessageCodesAndLocaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetDDGLocaleMessagesByMessageCodesAndLocale_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://mdmobjects.riversand.com/" name="detail" element="q38:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetDDGLocaleMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDGLocaleMessages" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetDDGLocaleMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDDGLocaleMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetDDGLocaleMessages_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://mdmobjects.riversand.com/" name="detail" element="q39:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessDDGLocaleMessages_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDDGLocaleMessages" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessDDGLocaleMessages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDDGLocaleMessagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessDDGLocaleMessages_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://mdmobjects.riversand.com/" name="detail" element="q40:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ExportRulesAndRuleMapsAsExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportRulesAndRuleMapsAsExcel" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ExportRulesAndRuleMapsAsExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportRulesAndRuleMapsAsExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ExportRulesAndRuleMapsAsExcel_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://mdmobjects.riversand.com/" name="detail" element="q41:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EnqueueForPromote_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueForPromote" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EnqueueForPromote_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueForPromoteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EnqueueForPromote_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://mdmobjects.riversand.com/" name="detail" element="q42:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesStateValidation_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesStateValidation" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesStateValidation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntitiesStateValidationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntitiesStateValidation_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://mdmobjects.riversand.com/" name="detail" element="q43:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EnqueueForRevalidate_InputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueForRevalidate" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EnqueueForRevalidate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EnqueueForRevalidateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_EnqueueForRevalidate_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://mdmobjects.riversand.com/" name="detail" element="q44:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityBusinessConditions_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityBusinessConditions" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityBusinessConditions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityBusinessConditionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityBusinessConditions_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://mdmobjects.riversand.com/" name="detail" element="q45:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityScores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityScores" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityScores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityScoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityScores_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://mdmobjects.riversand.com/" name="detail" element="q46:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityActivityLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityActivityLogs" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityActivityLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityActivityLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetEntityActivityLogs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://mdmobjects.riversand.com/" name="detail" element="q47:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMappedAttributeModelsByContainers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappedAttributeModelsByContainers" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMappedAttributeModelsByContainers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMappedAttributeModelsByContainersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_GetMappedAttributeModelsByContainers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://mdmobjects.riversand.com/" name="detail" element="q48:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessManualMerge_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessManualMerge" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessManualMerge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessManualMergeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_ProcessManualMerge_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://mdmobjects.riversand.com/" name="detail" element="q49:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_PerformBulkWorkflowOperation_InputMessage">
+    <wsdl:part name="parameters" element="tns:PerformBulkWorkflowOperation" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_PerformBulkWorkflowOperation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PerformBulkWorkflowOperationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInternalCommonService_PerformBulkWorkflowOperation_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://mdmobjects.riversand.com/" name="detail" element="q50:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IInternalCommonService">
+    <wsdl:operation name="GetEntitiesByIdsAndPagination">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByIdsAndPagination" message="tns:IInternalCommonService_GetEntitiesByIdsAndPagination_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByIdsAndPaginationResponse" message="tns:IInternalCommonService_GetEntitiesByIdsAndPagination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByIdsAndPaginationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntitiesByIdsAndPagination_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesByPagination">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByPagination" message="tns:IInternalCommonService_GetEntitiesByPagination_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByPaginationResponse" message="tns:IInternalCommonService_GetEntitiesByPagination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByPaginationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntitiesByPagination_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesByEntityScopes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByEntityScopes" message="tns:IInternalCommonService_GetEntitiesByEntityScopes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByEntityScopesResponse" message="tns:IInternalCommonService_GetEntitiesByEntityScopes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesByEntityScopesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntitiesByEntityScopes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateEntityHavingImageAttributes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/CreateEntityHavingImageAttributes" message="tns:IInternalCommonService_CreateEntityHavingImageAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/CreateEntityHavingImageAttributesResponse" message="tns:IInternalCommonService_CreateEntityHavingImageAttributes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/CreateEntityHavingImageAttributesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_CreateEntityHavingImageAttributes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateEntityHavingImageAttributes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/UpdateEntityHavingImageAttributes" message="tns:IInternalCommonService_UpdateEntityHavingImageAttributes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/UpdateEntityHavingImageAttributesResponse" message="tns:IInternalCommonService_UpdateEntityHavingImageAttributes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/UpdateEntityHavingImageAttributesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_UpdateEntityHavingImageAttributes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityViewCompletionStatus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityViewCompletionStatus" message="tns:IInternalCommonService_GetEntityViewCompletionStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityViewCompletionStatusResponse" message="tns:IInternalCommonService_GetEntityViewCompletionStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityViewCompletionStatusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntityViewCompletionStatus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEntityExists">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/IsEntityExists" message="tns:IInternalCommonService_IsEntityExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/IsEntityExistsResponse" message="tns:IInternalCommonService_IsEntityExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/IsEntityExistsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_IsEntityExists_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendEntityHistoryDetailsAsMail">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/SendEntityHistoryDetailsAsMail" message="tns:IInternalCommonService_SendEntityHistoryDetailsAsMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/SendEntityHistoryDetailsAsMailResponse" message="tns:IInternalCommonService_SendEntityHistoryDetailsAsMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/SendEntityHistoryDetailsAsMailMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_SendEntityHistoryDetailsAsMail_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportDataModelAsExcel">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ExportDataModelAsExcel" message="tns:IInternalCommonService_ExportDataModelAsExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ExportDataModelAsExcelResponse" message="tns:IInternalCommonService_ExportDataModelAsExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ExportDataModelAsExcelMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ExportDataModelAsExcel_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchCategories">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/SearchCategories" message="tns:IInternalCommonService_SearchCategories_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/SearchCategoriesResponse" message="tns:IInternalCommonService_SearchCategories_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/SearchCategoriesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_SearchCategories_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReclassifyLegacy">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ReclassifyLegacy" message="tns:IInternalCommonService_ReclassifyLegacy_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ReclassifyLegacyResponse" message="tns:IInternalCommonService_ReclassifyLegacy_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ReclassifyLegacyMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ReclassifyLegacy_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsEntityHierarchyMatrixLatest">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/IsEntityHierarchyMatrixLatest" message="tns:IInternalCommonService_IsEntityHierarchyMatrixLatest_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/IsEntityHierarchyMatrixLatestResponse" message="tns:IInternalCommonService_IsEntityHierarchyMatrixLatest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/IsEntityHierarchyMatrixLatestMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_IsEntityHierarchyMatrixLatest_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityVariantLevels">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityVariantLevels" message="tns:IInternalCommonService_GetEntityVariantLevels_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityVariantLevelsResponse" message="tns:IInternalCommonService_GetEntityVariantLevels_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityVariantLevelsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntityVariantLevels_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComplexAttributeVersions">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetComplexAttributeVersions" message="tns:IInternalCommonService_GetComplexAttributeVersions_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetComplexAttributeVersionsResponse" message="tns:IInternalCommonService_GetComplexAttributeVersions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetComplexAttributeVersionsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetComplexAttributeVersions_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetComplexDataByAuditRefId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetComplexDataByAuditRefId" message="tns:IInternalCommonService_GetComplexDataByAuditRefId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetComplexDataByAuditRefIdResponse" message="tns:IInternalCommonService_GetComplexDataByAuditRefId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetComplexDataByAuditRefIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetComplexDataByAuditRefId_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHierarchicalAttributeByAuditRefId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetHierarchicalAttributeByAuditRefId" message="tns:IInternalCommonService_GetHierarchicalAttributeByAuditRefId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetHierarchicalAttributeByAuditRefIdResponse" message="tns:IInternalCommonService_GetHierarchicalAttributeByAuditRefId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetHierarchicalAttributeByAuditRefIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetHierarchicalAttributeByAuditRefId_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportTemplateFileByImportProfileName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetImportTemplateFileByImportProfileName" message="tns:IInternalCommonService_GetImportTemplateFileByImportProfileName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetImportTemplateFileByImportProfileNameResponse" message="tns:IInternalCommonService_GetImportTemplateFileByImportProfileName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetImportTemplateFileByImportProfileNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetImportTemplateFileByImportProfileName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetQueuedEntities">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetQueuedEntities" message="tns:IInternalCommonService_GetQueuedEntities_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetQueuedEntitiesResponse" message="tns:IInternalCommonService_GetQueuedEntities_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetQueuedEntitiesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetQueuedEntities_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityDeltaJson">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityDeltaJson" message="tns:IInternalCommonService_GetEntityDeltaJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityDeltaJsonResponse" message="tns:IInternalCommonService_GetEntityDeltaJson_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityDeltaJsonMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntityDeltaJson_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CopyPasteHierarchy">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/CopyPasteHierarchy" message="tns:IInternalCommonService_CopyPasteHierarchy_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/CopyPasteHierarchyResponse" message="tns:IInternalCommonService_CopyPasteHierarchy_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/CopyPasteHierarchyMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_CopyPasteHierarchy_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMEventInformation">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMEventInformation" message="tns:IInternalCommonService_GetMDMEventInformation_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMEventInformationResponse" message="tns:IInternalCommonService_GetMDMEventInformation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMEventInformationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMEventInformation_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMEventHandlers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMEventHandlers" message="tns:IInternalCommonService_GetMDMEventHandlers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMEventHandlersResponse" message="tns:IInternalCommonService_GetMDMEventHandlers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMEventHandlersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMEventHandlers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMDMEventHandlers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMEventHandlers" message="tns:IInternalCommonService_ProcessMDMEventHandlers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMEventHandlersResponse" message="tns:IInternalCommonService_ProcessMDMEventHandlers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMEventHandlersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ProcessMDMEventHandlers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetContainerRelationshipTypeEntityTypeMappings">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetContainerRelationshipTypeEntityTypeMappings" message="tns:IInternalCommonService_GetContainerRelationshipTypeEntityTypeMappings_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetContainerRelationshipTypeEntityTypeMappingsResponse" message="tns:IInternalCommonService_GetContainerRelationshipTypeEntityTypeMappings_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetContainerRelationshipTypeEntityTypeMappingsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetContainerRelationshipTypeEntityTypeMappings_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateMDMRule">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ValidateMDMRule" message="tns:IInternalCommonService_ValidateMDMRule_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ValidateMDMRuleResponse" message="tns:IInternalCommonService_ValidateMDMRule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ValidateMDMRuleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ValidateMDMRule_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EvaluateMDMRules">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EvaluateMDMRules" message="tns:IInternalCommonService_EvaluateMDMRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EvaluateMDMRulesResponse" message="tns:IInternalCommonService_EvaluateMDMRules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EvaluateMDMRulesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_EvaluateMDMRules_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRules">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRules" message="tns:IInternalCommonService_GetMDMRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRulesResponse" message="tns:IInternalCommonService_GetMDMRules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRulesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRules_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMDMRules">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMRules" message="tns:IInternalCommonService_ProcessMDMRules_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMRulesResponse" message="tns:IInternalCommonService_ProcessMDMRules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMRulesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ProcessMDMRules_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAttributeModelsByContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetAttributeModelsByContext" message="tns:IInternalCommonService_GetAttributeModelsByContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetAttributeModelsByContextResponse" message="tns:IInternalCommonService_GetAttributeModelsByContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetAttributeModelsByContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetAttributeModelsByContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRuleKeywordGroups">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordGroups" message="tns:IInternalCommonService_GetMDMRuleKeywordGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordGroupsResponse" message="tns:IInternalCommonService_GetMDMRuleKeywordGroups_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordGroupsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRuleKeywordGroups_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRuleKeywords">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywords" message="tns:IInternalCommonService_GetMDMRuleKeywords_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordsResponse" message="tns:IInternalCommonService_GetMDMRuleKeywords_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRuleKeywords_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRuleKeywordsByKeywordGroupId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordsByKeywordGroupId" message="tns:IInternalCommonService_GetMDMRuleKeywordsByKeywordGroupId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordsByKeywordGroupIdResponse" message="tns:IInternalCommonService_GetMDMRuleKeywordsByKeywordGroupId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleKeywordsByKeywordGroupIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRuleKeywordsByKeywordGroupId_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRuleContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleContext" message="tns:IInternalCommonService_GetMDMRuleContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleContextResponse" message="tns:IInternalCommonService_GetMDMRuleContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRuleContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRuleMaps">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleMaps" message="tns:IInternalCommonService_GetMDMRuleMaps_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleMapsResponse" message="tns:IInternalCommonService_GetMDMRuleMaps_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleMapsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRuleMaps_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRulesByContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRulesByContext" message="tns:IInternalCommonService_GetMDMRulesByContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRulesByContextResponse" message="tns:IInternalCommonService_GetMDMRulesByContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRulesByContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRulesByContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMDMRuleMaps">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMRuleMaps" message="tns:IInternalCommonService_ProcessMDMRuleMaps_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMRuleMapsResponse" message="tns:IInternalCommonService_ProcessMDMRuleMaps_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessMDMRuleMapsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ProcessMDMRuleMaps_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMRuleMapsByContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleMapsByContext" message="tns:IInternalCommonService_GetMDMRuleMapsByContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleMapsByContextResponse" message="tns:IInternalCommonService_GetMDMRuleMapsByContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMDMRuleMapsByContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMDMRuleMapsByContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDGLocaleMessagesByMessageCodesAndLocale">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetDDGLocaleMessagesByMessageCodesAndLocale" message="tns:IInternalCommonService_GetDDGLocaleMessagesByMessageCodesAndLocale_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetDDGLocaleMessagesByMessageCodesAndLocaleResponse" message="tns:IInternalCommonService_GetDDGLocaleMessagesByMessageCodesAndLocale_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetDDGLocaleMessagesByMessageCodesAndLocaleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetDDGLocaleMessagesByMessageCodesAndLocale_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDDGLocaleMessages">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetDDGLocaleMessages" message="tns:IInternalCommonService_GetDDGLocaleMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetDDGLocaleMessagesResponse" message="tns:IInternalCommonService_GetDDGLocaleMessages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetDDGLocaleMessagesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetDDGLocaleMessages_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDDGLocaleMessages">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessDDGLocaleMessages" message="tns:IInternalCommonService_ProcessDDGLocaleMessages_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessDDGLocaleMessagesResponse" message="tns:IInternalCommonService_ProcessDDGLocaleMessages_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessDDGLocaleMessagesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ProcessDDGLocaleMessages_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportRulesAndRuleMapsAsExcel">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ExportRulesAndRuleMapsAsExcel" message="tns:IInternalCommonService_ExportRulesAndRuleMapsAsExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ExportRulesAndRuleMapsAsExcelResponse" message="tns:IInternalCommonService_ExportRulesAndRuleMapsAsExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ExportRulesAndRuleMapsAsExcelMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ExportRulesAndRuleMapsAsExcel_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnqueueForPromote">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EnqueueForPromote" message="tns:IInternalCommonService_EnqueueForPromote_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EnqueueForPromoteResponse" message="tns:IInternalCommonService_EnqueueForPromote_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EnqueueForPromoteMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_EnqueueForPromote_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntitiesStateValidation">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesStateValidation" message="tns:IInternalCommonService_GetEntitiesStateValidation_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesStateValidationResponse" message="tns:IInternalCommonService_GetEntitiesStateValidation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntitiesStateValidationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntitiesStateValidation_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EnqueueForRevalidate">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EnqueueForRevalidate" message="tns:IInternalCommonService_EnqueueForRevalidate_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EnqueueForRevalidateResponse" message="tns:IInternalCommonService_EnqueueForRevalidate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/EnqueueForRevalidateMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_EnqueueForRevalidate_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityBusinessConditions">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityBusinessConditions" message="tns:IInternalCommonService_GetEntityBusinessConditions_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityBusinessConditionsResponse" message="tns:IInternalCommonService_GetEntityBusinessConditions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityBusinessConditionsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntityBusinessConditions_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityScores">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityScores" message="tns:IInternalCommonService_GetEntityScores_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityScoresResponse" message="tns:IInternalCommonService_GetEntityScores_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityScoresMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntityScores_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityActivityLogs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityActivityLogs" message="tns:IInternalCommonService_GetEntityActivityLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityActivityLogsResponse" message="tns:IInternalCommonService_GetEntityActivityLogs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetEntityActivityLogsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetEntityActivityLogs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMappedAttributeModelsByContainers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMappedAttributeModelsByContainers" message="tns:IInternalCommonService_GetMappedAttributeModelsByContainers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMappedAttributeModelsByContainersResponse" message="tns:IInternalCommonService_GetMappedAttributeModelsByContainers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/GetMappedAttributeModelsByContainersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_GetMappedAttributeModelsByContainers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessManualMerge">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessManualMerge" message="tns:IInternalCommonService_ProcessManualMerge_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessManualMergeResponse" message="tns:IInternalCommonService_ProcessManualMerge_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/ProcessManualMergeMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_ProcessManualMerge_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PerformBulkWorkflowOperation">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/PerformBulkWorkflowOperation" message="tns:IInternalCommonService_PerformBulkWorkflowOperation_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/PerformBulkWorkflowOperationResponse" message="tns:IInternalCommonService_PerformBulkWorkflowOperation_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IInternalCommonService/PerformBulkWorkflowOperationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IInternalCommonService_PerformBulkWorkflowOperation_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="InternalCommonService">
+    <wsdl:port name="WSHttpBinding_IInternalCommonService" binding="i0:WSHttpBinding_IInternalCommonService">
+      <soap12:address location="http://localhost/Development_WCFServices/InternalCommonService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/InternalCommonService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IInternalCommonService" binding="i0:NetTcpBinding_IInternalCommonService">
+      <soap12:address location="net.tcp://rst-devvijay.riversand.com/Development_WCFServices/InternalCommonService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://rst-devvijay.riversand.com/Development_WCFServices/InternalCommonService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

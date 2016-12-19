@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="CreateEntityExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="entityExportProfile" nillable="true" type="q1:EntityExportProfile" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q2:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateEntityExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateEntityExportProfileResult" nillable="true" type="q3:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEntityExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="entityExportProfile" nillable="true" type="q4:EntityExportProfile" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q5:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteEntityExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteEntityExportProfileResult" nillable="true" type="q6:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEntityExportProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="entityExportProfile" nillable="true" type="q7:EntityExportProfile" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="iCallerContext" nillable="true" type="q8:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateEntityExportProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateEntityExportProfileResult" nillable="true" type="q9:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityExportProfileById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q10:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityExportProfileByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetEntityExportProfileByIdResult" nillable="true" type="q11:EntityExportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityExportProfileByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q12:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityExportProfileByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetEntityExportProfileByNameResult" nillable="true" type="q13:EntityExportProfile" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityExportProfilesByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="profileType" type="q14:ExportProfileType" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q15:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityExportProfilesByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetEntityExportProfilesByTypeResult" nillable="true" type="q16:EntityExportProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntityExportProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q17:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntityExportProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="GetAllEntityExportProfilesResult" nillable="true" type="q18:EntityExportProfileCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportToExcel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="exportContext" nillable="true" type="q19:ExportContext" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q20:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportToExcelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://mdmobjects.riversand.com/" minOccurs="0" name="ExportToExcelResult" nillable="true" type="q21:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportObjectToExcel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://mdmobjects.riversand.com/" minOccurs="0" name="objectsToExport" nillable="true" type="q22:ArrayOfBusinessObject" />
+        <xs:element xmlns:q23="http://mdmobjects.riversand.com/" minOccurs="0" name="models" nillable="true" type="q23:ArrayOfAttributeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportObjectToExcelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://mdmobjects.riversand.com/" minOccurs="0" name="ExportObjectToExcelResult" nillable="true" type="q24:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityIdsAndProfileId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIds" nillable="true" type="q25:ArrayOflong" />
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q26:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityIdsAndProfileIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://mdmobjects.riversand.com/" minOccurs="0" name="GenerateRSExcelUsingEntityIdsAndProfileIdResult" nillable="true" type="q27:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityCollectionAndProfileId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="entityCollection" nillable="true" type="q28:EntityCollection" />
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q29:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityCollectionAndProfileIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="GenerateRSExcelUsingEntityCollectionAndProfileIdResult" nillable="true" type="q30:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://mdmobjects.riversand.com/" minOccurs="0" name="entityCollection" nillable="true" type="q31:EntityCollection" />
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q32:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://mdmobjects.riversand.com/" minOccurs="0" name="GenerateRSExcelUsingEntityCollectionResult" nillable="true" type="q33:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityIdsAndEntityTypeIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIds" nillable="true" type="q34:ArrayOflong" />
+        <xs:element xmlns:q35="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="childEntityTypeIds" nillable="true" type="q35:ArrayOfint" />
+        <xs:element xmlns:q36="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="cloneAttributesIds" nillable="true" type="q36:ArrayOfint" />
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element minOccurs="0" name="getOnlyChildren" type="xs:boolean" />
+        <xs:element minOccurs="0" name="generateEmptyChildren" type="xs:boolean" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q37:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelUsingEntityIdsAndEntityTypeIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://mdmobjects.riversand.com/" minOccurs="0" name="GenerateRSExcelUsingEntityIdsAndEntityTypeIdsResult" nillable="true" type="q38:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+        <xs:element minOccurs="0" name="entityTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:long" />
+        <xs:element minOccurs="0" name="includeChildCategoryTemplate" type="xs:boolean" />
+        <xs:element xmlns:q39="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="relationshipTypeIds" nillable="true" type="q39:ArrayOfint" />
+        <xs:element xmlns:q40="http://mdmobjects.riversand.com/" minOccurs="0" name="locale" type="q40:LocaleEnum" />
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q41:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://mdmobjects.riversand.com/" minOccurs="0" name="GenerateRSExcelTemplateResult" nillable="true" type="q42:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelTemplateUsingProfileId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+        <xs:element minOccurs="0" name="entityTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:long" />
+        <xs:element minOccurs="0" name="includeChildCategoryTemplate" type="xs:boolean" />
+        <xs:element xmlns:q43="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="relationshipTypeIds" nillable="true" type="q43:ArrayOfint" />
+        <xs:element xmlns:q44="http://mdmobjects.riversand.com/" minOccurs="0" name="locale" type="q44:LocaleEnum" />
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q45:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelTemplateUsingProfileIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://mdmobjects.riversand.com/" minOccurs="0" name="GenerateRSExcelTemplateUsingProfileIdResult" nillable="true" type="q46:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelTemplateUsingProfileIdAndEntityTypeIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+        <xs:element xmlns:q47="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityTypeIds" nillable="true" type="q47:ArrayOfint" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:long" />
+        <xs:element minOccurs="0" name="includeChildCategoryTemplate" type="xs:boolean" />
+        <xs:element xmlns:q48="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="relationshipTypeIds" nillable="true" type="q48:ArrayOfint" />
+        <xs:element xmlns:q49="http://mdmobjects.riversand.com/" minOccurs="0" name="locale" type="q49:LocaleEnum" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q50:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerateRSExcelTemplateUsingProfileIdAndEntityTypeIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://mdmobjects.riversand.com/" minOccurs="0" name="GenerateRSExcelTemplateUsingProfileIdAndEntityTypeIdsResult" nillable="true" type="q51:File" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

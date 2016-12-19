@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Caching" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Caching" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="CacheConfiguration">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CacheType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DisplayName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="KeyFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RetentionTime" type="xs:int" />
+      <xs:element xmlns:q1="http://mdmobjects.riversand.com/" minOccurs="0" name="RetentionUnit" type="q1:DateInterval" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CacheConfiguration" nillable="true" type="tns:CacheConfiguration" />
+</xs:schema>

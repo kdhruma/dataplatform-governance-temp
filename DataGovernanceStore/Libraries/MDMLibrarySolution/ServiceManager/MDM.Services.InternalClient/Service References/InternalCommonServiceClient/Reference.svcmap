@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8374cb96-4b30-4eef-a2b2-bfee9c3d6cf8" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Development_WCFServices/InternalCommonService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="InternalCommonService1212.xsd" MetadataType="Schema" ID="9f73772b-9731-4ac7-b6f0-29fba375860a" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd9" />
+    <MetadataFile FileName="InternalCommonService1213.xsd" MetadataType="Schema" ID="1e490349-b409-411d-83ef-ae68e95d9d7e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd0" />
+    <MetadataFile FileName="InternalCommonService1220.xsd" MetadataType="Schema" ID="80c62853-4bf9-4dcd-b9ea-7be43972b15e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd7" />
+    <MetadataFile FileName="InternalCommonService1214.xsd" MetadataType="Schema" ID="08b44368-d265-4094-a760-f9204079c246" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd5" />
+    <MetadataFile FileName="InternalCommonService1215.xsd" MetadataType="Schema" ID="03225957-e6c3-42a0-99d0-787fc71fa99d" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd2" />
+    <MetadataFile FileName="InternalCommonService1.xsd" MetadataType="Schema" ID="394fc633-7cf8-4cda-8460-481ea70ff805" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd13" />
+    <MetadataFile FileName="InternalCommonService1216.xsd" MetadataType="Schema" ID="10f577d8-d2b2-4368-9490-82fcc1d433d8" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd11" />
+    <MetadataFile FileName="InternalCommonService1217.xsd" MetadataType="Schema" ID="1b6ba55c-6214-4aee-a01d-bd97190e60fc" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd1" />
+    <MetadataFile FileName="InternalCommonService22.wsdl" MetadataType="Wsdl" ID="bf3c2932-9717-44e5-a445-c8bdd05e62f5" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?wsdl" />
+    <MetadataFile FileName="InternalCommonService1218.xsd" MetadataType="Schema" ID="a3134ded-9d6e-4421-88fd-35ee198c8d44" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd8" />
+    <MetadataFile FileName="InternalCommonService1219.xsd" MetadataType="Schema" ID="e9296bff-4395-49a3-a995-54e993a1db77" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd6" />
+    <MetadataFile FileName="InternalCommonService23.wsdl" MetadataType="Wsdl" ID="beac16f0-6fb0-432b-8c07-0fc44fd79c0c" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="InternalCommonService11.disco" MetadataType="Disco" ID="5586579d-b445-495f-a788-d23a2e31e552" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?disco" />
+    <MetadataFile FileName="InternalCommonService13.xsd" MetadataType="Schema" ID="ef626c16-a852-49a6-a65d-5962f9b14d75" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd12" />
+    <MetadataFile FileName="InternalCommonService1221.xsd" MetadataType="Schema" ID="5f99377c-aee1-47fd-abac-ec807908a604" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd4" />
+    <MetadataFile FileName="InternalCommonService1222.xsd" MetadataType="Schema" ID="b1b46657-5fd1-4564-8e44-1853bdc1f1f3" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd3" />
+    <MetadataFile FileName="InternalCommonService1223.xsd" MetadataType="Schema" ID="4921488f-0f0a-45a9-bb51-791ef5db54ed" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/InternalCommonService.svc?xsd=xsd10" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

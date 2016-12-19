@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:import namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="ImportProfileCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.Core" base="q1:InterfaceContractCollectionOfanyTypeImportProfileicpZqzYd">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportProfileCollection" nillable="true" type="tns:ImportProfileCollection" />
+  <xs:complexType name="ArrayOfImportProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImportProfile" nillable="true" type="tns:ImportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImportProfile" nillable="true" type="tns:ArrayOfImportProfile" />
+  <xs:complexType name="ImportProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://mdmobjects.riversand.com/" base="q2:JobProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExecutionSteps" nillable="true" type="tns:ExecutionStepCollection" />
+          <xs:element minOccurs="0" name="FileWatcherFolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImportType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InputSpecifications" nillable="true" type="tns:InputSpecifications" />
+          <xs:element minOccurs="0" name="MappingSpecifications" nillable="true" type="tns:MappingSpecifications" />
+          <xs:element minOccurs="0" name="ProcessingSpecifications" nillable="true" type="tns:ProcessingSpecifications" />
+          <xs:element minOccurs="0" name="Providers" nillable="true" type="tns:ProviderCollection" />
+          <xs:element minOccurs="0" name="UIProfile" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImportProfile" nillable="true" type="tns:ImportProfile" />
+  <xs:complexType name="ExecutionStepCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_executionSteps" nillable="true" type="tns:ArrayOfExecutionStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ExecutionStepCollection" nillable="true" type="tns:ExecutionStepCollection" />
+  <xs:complexType name="ArrayOfExecutionStep">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExecutionStep" nillable="true" type="tns:ExecutionStep" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfExecutionStep" nillable="true" type="tns:ArrayOfExecutionStep" />
+  <xs:complexType name="ExecutionStep">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://mdmobjects.riversand.com/" base="q3:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AbortOnError" type="xs:boolean" />
+          <xs:element minOccurs="0" name="AssemblyFileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ClassFullName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="StepConfiguration" nillable="true" type="tns:StepConfiguration" />
+          <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="StepType" type="q4:ExecutionStepType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ExecutionStep" nillable="true" type="tns:ExecutionStep" />
+  <xs:complexType name="StepConfiguration">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://mdmobjects.riversand.com/" base="q5:ObjectBase">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="StepConfiguration" nillable="true" type="tns:StepConfiguration" />
+  <xs:complexType name="InputSpecifications">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q6="http://mdmobjects.riversand.com/" base="q6:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="FileTypesSupported" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Reader" type="q7:ImportSourceType" />
+          <xs:element minOccurs="0" name="ReaderSettings" nillable="true" type="tns:ReaderSettingCollection" />
+          <xs:element minOccurs="0" name="SourceId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InputSpecifications" nillable="true" type="tns:InputSpecifications" />
+  <xs:complexType name="ReaderSettingCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_readerSettings" nillable="true" type="tns:ArrayOfReaderSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReaderSettingCollection" nillable="true" type="tns:ReaderSettingCollection" />
+  <xs:complexType name="ArrayOfReaderSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReaderSetting" nillable="true" type="tns:ReaderSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReaderSetting" nillable="true" type="tns:ArrayOfReaderSetting" />
+  <xs:complexType name="ReaderSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q8="http://mdmobjects.riversand.com/" base="q8:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ReaderSetting" nillable="true" type="tns:ReaderSetting" />
+  <xs:complexType name="MappingSpecifications">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q9="http://mdmobjects.riversand.com/" base="q9:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeMaps" nillable="true" type="tns:AttributeMapCollection" />
+          <xs:element minOccurs="0" name="EntityIdentificationMap" nillable="true" type="tns:EntityIdentificationMap" />
+          <xs:element minOccurs="0" name="EntityMetadataMap" nillable="true" type="tns:EntityMetadataMap" />
+          <xs:element minOccurs="0" name="LocaleMap" nillable="true" type="tns:LocaleMap" />
+          <xs:element minOccurs="0" name="RelationshipTypeMaps" nillable="true" type="tns:RelationshipTypeMaps" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MappingSpecifications" nillable="true" type="tns:MappingSpecifications" />
+  <xs:complexType name="AttributeMapCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_attributeMaps" nillable="true" type="tns:ArrayOfAttributeMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AttributeMapCollection" nillable="true" type="tns:AttributeMapCollection" />
+  <xs:complexType name="ArrayOfAttributeMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AttributeMap" nillable="true" type="tns:AttributeMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAttributeMap" nillable="true" type="tns:ArrayOfAttributeMap" />
+  <xs:complexType name="AttributeMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q10="http://mdmobjects.riversand.com/" base="q10:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeSource" nillable="true" type="tns:AttributeSource" />
+          <xs:element minOccurs="0" name="AttributeTarget" nillable="true" type="tns:AttributeTarget" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeMap" nillable="true" type="tns:AttributeMap" />
+  <xs:complexType name="AttributeSource">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://mdmobjects.riversand.com/" base="q11:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsMandatory" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StagingAttributeInfo" nillable="true" type="q11:Attribute" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeSource" nillable="true" type="tns:AttributeSource" />
+  <xs:complexType name="AttributeTarget">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q12="http://mdmobjects.riversand.com/" base="q12:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CanAddAttribute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanDeleteAttribute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="CanUpdateAttribute" type="xs:boolean" />
+          <xs:element minOccurs="0" name="FailEntityOnError" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Id" type="xs:int" />
+          <xs:element minOccurs="0" name="Locale" type="q12:LocaleEnum" />
+          <xs:element minOccurs="0" name="ModelType" type="q12:AttributeModelType" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="AttributeTarget" nillable="true" type="tns:AttributeTarget" />
+  <xs:complexType name="EntityIdentificationMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mappings" nillable="true" type="tns:MappingCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityIdentificationMap" nillable="true" type="tns:EntityIdentificationMap" />
+  <xs:complexType name="MappingCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_mappings" nillable="true" type="tns:ArrayOfMapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MappingCollection" nillable="true" type="tns:MappingCollection" />
+  <xs:complexType name="ArrayOfMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Mapping" nillable="true" type="tns:Mapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMapping" nillable="true" type="tns:ArrayOfMapping" />
+  <xs:complexType name="Mapping">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://mdmobjects.riversand.com/" base="q13:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="SourceType" type="q14:MappingDataType" />
+          <xs:element minOccurs="0" name="TargetName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="TargetType" type="q15:MappingDataType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Mapping" nillable="true" type="tns:Mapping" />
+  <xs:complexType name="EntityMetadataMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q16="http://mdmobjects.riversand.com/" base="q16:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerMap" nillable="true" type="tns:ContainerMap" />
+          <xs:element minOccurs="0" name="EntityTypeMap" nillable="true" type="tns:EntityTypeMap" />
+          <xs:element minOccurs="0" name="HierarchyParentEntityMap" nillable="true" type="tns:HierarchyParentEntityMap" />
+          <xs:element minOccurs="0" name="LongNameMap" nillable="true" type="tns:LongNameMap" />
+          <xs:element minOccurs="0" name="MDLParentEntityMap" nillable="true" type="tns:MDLParentEntityMap" />
+          <xs:element minOccurs="0" name="ShortNameMap" nillable="true" type="tns:ShortNameMap" />
+          <xs:element minOccurs="0" name="SourceCategoryMap" nillable="true" type="tns:SourceCategoryMap" />
+          <xs:element minOccurs="0" name="TargetCategoryMap" nillable="true" type="tns:TargetCategoryMap" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityMetadataMap" nillable="true" type="tns:EntityMetadataMap" />
+  <xs:complexType name="ContainerMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q17="http://mdmobjects.riversand.com/" base="q17:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContainerId" type="xs:int" />
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q18:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ContainerMap" nillable="true" type="tns:ContainerMap" />
+  <xs:complexType name="EntityTypeMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q19="http://mdmobjects.riversand.com/" base="q19:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EntityTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q20:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="EntityTypeMap" nillable="true" type="tns:EntityTypeMap" />
+  <xs:complexType name="HierarchyParentEntityMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q21="http://mdmobjects.riversand.com/" base="q21:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q22:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="HierarchyParentEntityMap" nillable="true" type="tns:HierarchyParentEntityMap" />
+  <xs:complexType name="LongNameMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q23="http://mdmobjects.riversand.com/" base="q23:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q24:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LongNameMap" nillable="true" type="tns:LongNameMap" />
+  <xs:complexType name="MDLParentEntityMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q25="http://mdmobjects.riversand.com/" base="q25:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q26:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MDLParentEntityMap" nillable="true" type="tns:MDLParentEntityMap" />
+  <xs:complexType name="ShortNameMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q27="http://mdmobjects.riversand.com/" base="q27:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q28:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ShortNameMap" nillable="true" type="tns:ShortNameMap" />
+  <xs:complexType name="SourceCategoryMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q29="http://mdmobjects.riversand.com/" base="q29:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryId" type="xs:long" />
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q30:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="SourceCategoryMap" nillable="true" type="tns:SourceCategoryMap" />
+  <xs:complexType name="TargetCategoryMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q31="http://mdmobjects.riversand.com/" base="q31:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CategoryId" type="xs:long" />
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q32:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="TargetCategoryMap" nillable="true" type="tns:TargetCategoryMap" />
+  <xs:complexType name="LocaleMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q33="http://mdmobjects.riversand.com/" base="q33:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="InputFieldName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Locale" type="q33:LocaleEnum" />
+          <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="Mode" type="q34:MappingMode" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LocaleMap" nillable="true" type="tns:LocaleMap" />
+  <xs:complexType name="RelationshipTypeMaps">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_RelationshipTypeMaps" nillable="true" type="tns:ArrayOfRelationshipTypeMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RelationshipTypeMaps" nillable="true" type="tns:RelationshipTypeMaps" />
+  <xs:complexType name="ArrayOfRelationshipTypeMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RelationshipTypeMap" nillable="true" type="tns:RelationshipTypeMap" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRelationshipTypeMap" nillable="true" type="tns:ArrayOfRelationshipTypeMap" />
+  <xs:complexType name="RelationshipTypeMap">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q35="http://mdmobjects.riversand.com/" base="q35:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeMapCollection" nillable="true" type="tns:AttributeMapCollection" />
+          <xs:element minOccurs="0" name="FailEntityOnError" type="xs:boolean" />
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RelationshipTypeMap" nillable="true" type="tns:RelationshipTypeMap" />
+  <xs:complexType name="ProcessingSpecifications">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q36="http://mdmobjects.riversand.com/" base="q36:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="EntityProcessingOptions" nillable="true" type="q36:EntityProcessingOptions" />
+          <xs:element minOccurs="0" name="EntityTypeList" nillable="true" type="xs:string" />
+          <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="ImportMode" type="q37:ImportMode" />
+          <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="ImportProcessingType" type="q38:ImportProcessingType" />
+          <xs:element minOccurs="0" name="JobProcessingOptions" nillable="true" type="q36:JobProcessingOptions" />
+          <xs:element minOccurs="0" name="KeywordProcessingOptions" nillable="true" type="tns:KeywordProcessingOptions" />
+          <xs:element minOccurs="0" name="Priority" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProcessingSpecifications" nillable="true" type="tns:ProcessingSpecifications" />
+  <xs:complexType name="KeywordProcessingOptions">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q39="http://mdmobjects.riversand.com/" base="q39:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BlankKeyword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CollectionDataSeparator" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="DeleteKeyword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EnableBlankKeyword" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableDeleteKeyword" type="xs:boolean" />
+          <xs:element minOccurs="0" name="EnableIgnoreKeyword" type="xs:boolean" />
+          <xs:element minOccurs="0" name="IgnoreKeyword" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UomDataSeparator" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="KeywordProcessingOptions" nillable="true" type="tns:KeywordProcessingOptions" />
+  <xs:complexType name="ProviderCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_providers" nillable="true" type="tns:ArrayOfProvider" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProviderCollection" nillable="true" type="tns:ProviderCollection" />
+  <xs:complexType name="ArrayOfProvider">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Provider" nillable="true" type="tns:Provider" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProvider" nillable="true" type="tns:ArrayOfProvider" />
+  <xs:complexType name="Provider">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q40="http://mdmobjects.riversand.com/" base="q40:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ProviderSettings" nillable="true" type="tns:ProviderSettingCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Provider" nillable="true" type="tns:Provider" />
+  <xs:complexType name="ProviderSettingCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_providerSettings" nillable="true" type="tns:ArrayOfProviderSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProviderSettingCollection" nillable="true" type="tns:ProviderSettingCollection" />
+  <xs:complexType name="ArrayOfProviderSetting">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ProviderSetting" nillable="true" type="tns:ProviderSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfProviderSetting" nillable="true" type="tns:ArrayOfProviderSetting" />
+  <xs:complexType name="ProviderSetting">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q41="http://mdmobjects.riversand.com/" base="q41:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ProviderSetting" nillable="true" type="tns:ProviderSetting" />
+  <xs:complexType name="LookupImportProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q42="http://mdmobjects.riversand.com/" base="q42:JobProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ExecutionSteps" nillable="true" type="tns:ExecutionStepCollection" />
+          <xs:element minOccurs="0" name="FileWatcherFolderName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImportType" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="InputSpecifications" nillable="true" type="tns:InputSpecifications" />
+          <xs:element minOccurs="0" name="LookupJobProcessingOptions" nillable="true" type="tns:LookupJobProcessingOptions" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupImportProfile" nillable="true" type="tns:LookupImportProfile" />
+  <xs:complexType name="LookupJobProcessingOptions">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q43="http://mdmobjects.riversand.com/" base="q43:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="BatchSize" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberofLookupRecordThreadsPerLookupThread" type="xs:int" />
+          <xs:element minOccurs="0" name="NumberofLookupThreads" type="xs:int" />
+          <xs:element minOccurs="0" name="ValidateSchema" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupJobProcessingOptions" nillable="true" type="tns:LookupJobProcessingOptions" />
+  <xs:complexType name="LookupImportProfileCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q44="http://schemas.datacontract.org/2004/07/MDM.Core" base="q44:InterfaceContractCollectionOfanyTypeLookupImportProfileicpZqzYd">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="LookupImportProfileCollection" nillable="true" type="tns:LookupImportProfileCollection" />
+  <xs:complexType name="ArrayOfLookupImportProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LookupImportProfile" nillable="true" type="tns:LookupImportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLookupImportProfile" nillable="true" type="tns:ArrayOfLookupImportProfile" />
+</xs:schema>

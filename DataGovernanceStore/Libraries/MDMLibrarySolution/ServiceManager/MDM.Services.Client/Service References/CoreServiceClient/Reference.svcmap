@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="1e44be99-b249-447e-8c43-8a7fdc4dc5ca" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Development_WCFServices/CoreService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CoreService4.disco" MetadataType="Disco" ID="3fba3da3-3f36-4cff-a106-17c78b3baf45" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?disco" />
+    <MetadataFile FileName="CoreService1.xsd" MetadataType="Schema" ID="2ff8b064-d83f-4cd2-bbc1-0bb0bfce2873" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CoreService3.xsd" MetadataType="Schema" ID="8f84e227-1328-4242-a995-d19021fca7b9" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd0" />
+    <MetadataFile FileName="CoreService33.xsd" MetadataType="Schema" ID="5f86c91c-4a1a-4752-a168-577d940f9968" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd3" />
+    <MetadataFile FileName="CoreService34.xsd" MetadataType="Schema" ID="b5456637-3b45-4f53-98d9-5339a6e863f9" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CoreService35.xsd" MetadataType="Schema" ID="239f2c00-6d66-40d4-851d-726d54df2f95" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd5" />
+    <MetadataFile FileName="CoreService1.wsdl" MetadataType="Wsdl" ID="48bd7b00-efcd-4830-bf07-1f02181b6362" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="CoreService36.xsd" MetadataType="Schema" ID="e97fa475-5937-47ee-86d7-54ccd0f04451" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd7" />
+    <MetadataFile FileName="CoreService37.xsd" MetadataType="Schema" ID="ed83f7d1-3236-4eb0-a4fb-7f973d5008fd" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd6" />
+    <MetadataFile FileName="CoreService9.wsdl" MetadataType="Wsdl" ID="2a11f6e7-0547-433d-a6ba-1c8bd85bab5a" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?wsdl" />
+    <MetadataFile FileName="CoreService38.xsd" MetadataType="Schema" ID="f9bb2bbb-0a7c-4368-8347-2da33f103ce7" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd4" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

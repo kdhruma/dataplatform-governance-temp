@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CACBE842-58B7-4A5F-9CA1-75551517FED1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.Workflow.WCFServices</RootNamespace>
+    <AssemblyName>RS.MDM.Workflow.WCFServices</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ApplicationServices\ApplicationServices.csproj">
+      <Project>{EFAD3883-9650-4195-B355-D9A40C56A130}</Project>
+      <Name>ApplicationServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\CacheManager\MDM.CacheManager.Business\MDM.CacheManager.Business.csproj">
+      <Project>{9078D667-A162-4258-8E8C-53725D5C2BE8}</Project>
+      <Name>MDM.CacheManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\ExceptionManager\MDM.ExceptionManager\MDM.ExceptionManager.csproj">
+      <Project>{C26B08D2-5D90-476E-8DEF-A740C9E9C4AD}</Project>
+      <Name>MDM.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\ServiceManager\MDM.Services.Client\MDM.Services.Client.csproj">
+      <Project>{E277413E-FDD8-47E0-8558-614E5AECAE2C}</Project>
+      <Name>MDM.Services.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMLibrarySolution\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkflowDesigner\MDM.Workflow.Designer.Business\MDM.Workflow.Designer.Business.csproj">
+      <Project>{178FA615-A0C2-45E6-B81B-B70A0DB2577A}</Project>
+      <Name>MDM.Workflow.Designer.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkflowPersistenceManager\MDM.Workflow.PersistenceManager.Business\MDM.Workflow.PersistenceManager.Business.csproj">
+      <Project>{7DD7FB57-A1E5-4E1B-B481-4F0A0F7F3D46}</Project>
+      <Name>MDM.Workflow.PersistenceManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkflowRuntime\MDM.WorkflowRuntimeEngine\MDM.WorkflowRuntimeEngine.csproj">
+      <Project>{DFD4FD2D-BAB6-45BD-B65C-8701894CAF87}</Project>
+      <Name>MDM.WorkflowRuntimeEngine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WorkflowTrackingManager\MDM.Workflow.TrackingManager.Business\MDM.Workflow.TrackingManager.Business.csproj">
+      <Project>{7A19E53C-F42B-4E29-A69E-85A54403413F}</Project>
+      <Name>MDM.Workflow.TrackingManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.Workflow.WCFServices.Interfaces\MDM.Workflow.WCFServices.Interfaces.csproj">
+      <Project>{3F71447D-7776-4534-B16C-4E1211AFF0DD}</Project>
+      <Name>MDM.Workflow.WCFServices.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DenormService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import schemaLocation="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/MainLine-7.8_WCFServices/DenormService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Denorm" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDenormService_GetEntityActivityLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityActivityLogs" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityActivityLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityActivityLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityActivityLogs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityActivityLogsWithPagination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityActivityLogsWithPagination" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityActivityLogsWithPagination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityActivityLogsWithPaginationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityActivityLogsWithPagination_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetImpactedEntitiesByEntityActivityLogId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImpactedEntitiesByEntityActivityLogId" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetImpactedEntitiesByEntityActivityLogId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImpactedEntitiesByEntityActivityLogIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetImpactedEntitiesByEntityActivityLogId_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetImpactedEntitiesByEntityActivityLogIdWithPagination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImpactedEntitiesByEntityActivityLogIdWithPagination" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetImpactedEntitiesByEntityActivityLogIdWithPagination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImpactedEntitiesByEntityActivityLogIdWithPaginationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetImpactedEntitiesByEntityActivityLogIdWithPagination_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_LoadImpactedEntities_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadImpactedEntities" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_LoadImpactedEntities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadImpactedEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_LoadImpactedEntities_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityProcessorErrorLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityProcessorErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityProcessorErrorLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityProcessorErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityProcessorErrorLog_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityProcessorErrorLogWithPagination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityProcessorErrorLogWithPagination" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityProcessorErrorLogWithPagination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetEntityProcessorErrorLogWithPaginationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetEntityProcessorErrorLogWithPagination_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetAllEntityProcessorErrorLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEntityProcessorErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetAllEntityProcessorErrorLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEntityProcessorErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetAllEntityProcessorErrorLog_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetAllEntityProcessorErrorLogWithPagination_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEntityProcessorErrorLogWithPagination" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetAllEntityProcessorErrorLogWithPagination_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllEntityProcessorErrorLogWithPaginationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetAllEntityProcessorErrorLogWithPagination_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RefreshEntityProcessorErrorLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshEntityProcessorErrorLog" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RefreshEntityProcessorErrorLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RefreshEntityProcessorErrorLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RefreshEntityProcessorErrorLog_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_ProcessEntityActivityLogs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessEntityActivityLogs" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_ProcessEntityActivityLogs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessEntityActivityLogsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_ProcessEntityActivityLogs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetParallelizationEngineStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetParallelizationEngineStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetParallelizationEngineStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetParallelizationEngineStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetParallelizationEngineStatus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StartParallelProcessingEngine_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartParallelProcessingEngine" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StartParallelProcessingEngine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartParallelProcessingEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StartParallelProcessingEngine_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StopParallelProcessingEngine_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopParallelProcessingEngine" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StopParallelProcessingEngine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopParallelProcessingEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StopParallelProcessingEngine_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RestartParallelProcessingEngine_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestartParallelProcessingEngine" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RestartParallelProcessingEngine_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestartParallelProcessingEngineResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RestartParallelProcessingEngine_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://mdmobjects.riversand.com/" name="detail" element="q15:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RestartProcessor_InputMessage">
+    <wsdl:part name="parameters" element="tns:RestartProcessor" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RestartProcessor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RestartProcessorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_RestartProcessor_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://mdmobjects.riversand.com/" name="detail" element="q16:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StartProcessor_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartProcessor" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StartProcessor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartProcessorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StartProcessor_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://mdmobjects.riversand.com/" name="detail" element="q17:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StopProcessor_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopProcessor" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StopProcessor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopProcessorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_StopProcessor_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://mdmobjects.riversand.com/" name="detail" element="q18:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetServiceStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetServiceStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_GetServiceStatus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://mdmobjects.riversand.com/" name="detail" element="q19:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_ProcessServiceStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessServiceStatus" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_ProcessServiceStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessServiceStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDenormService_ProcessServiceStatus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://mdmobjects.riversand.com/" name="detail" element="q20:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IDenormService">
+    <wsdl:operation name="GetEntityActivityLogs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityActivityLogs" message="tns:IDenormService_GetEntityActivityLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityActivityLogsResponse" message="tns:IDenormService_GetEntityActivityLogs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityActivityLogsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetEntityActivityLogs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityActivityLogsWithPagination">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityActivityLogsWithPagination" message="tns:IDenormService_GetEntityActivityLogsWithPagination_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityActivityLogsWithPaginationResponse" message="tns:IDenormService_GetEntityActivityLogsWithPagination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityActivityLogsWithPaginationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetEntityActivityLogsWithPagination_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImpactedEntitiesByEntityActivityLogId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetImpactedEntitiesByEntityActivityLogId" message="tns:IDenormService_GetImpactedEntitiesByEntityActivityLogId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetImpactedEntitiesByEntityActivityLogIdResponse" message="tns:IDenormService_GetImpactedEntitiesByEntityActivityLogId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetImpactedEntitiesByEntityActivityLogIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetImpactedEntitiesByEntityActivityLogId_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImpactedEntitiesByEntityActivityLogIdWithPagination">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetImpactedEntitiesByEntityActivityLogIdWithPagination" message="tns:IDenormService_GetImpactedEntitiesByEntityActivityLogIdWithPagination_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetImpactedEntitiesByEntityActivityLogIdWithPaginationResponse" message="tns:IDenormService_GetImpactedEntitiesByEntityActivityLogIdWithPagination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetImpactedEntitiesByEntityActivityLogIdWithPaginationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetImpactedEntitiesByEntityActivityLogIdWithPagination_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadImpactedEntities">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/LoadImpactedEntities" message="tns:IDenormService_LoadImpactedEntities_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/LoadImpactedEntitiesResponse" message="tns:IDenormService_LoadImpactedEntities_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/LoadImpactedEntitiesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_LoadImpactedEntities_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityProcessorErrorLog">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityProcessorErrorLog" message="tns:IDenormService_GetEntityProcessorErrorLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityProcessorErrorLogResponse" message="tns:IDenormService_GetEntityProcessorErrorLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityProcessorErrorLogMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetEntityProcessorErrorLog_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEntityProcessorErrorLogWithPagination">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityProcessorErrorLogWithPagination" message="tns:IDenormService_GetEntityProcessorErrorLogWithPagination_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityProcessorErrorLogWithPaginationResponse" message="tns:IDenormService_GetEntityProcessorErrorLogWithPagination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetEntityProcessorErrorLogWithPaginationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetEntityProcessorErrorLogWithPagination_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEntityProcessorErrorLog">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetAllEntityProcessorErrorLog" message="tns:IDenormService_GetAllEntityProcessorErrorLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetAllEntityProcessorErrorLogResponse" message="tns:IDenormService_GetAllEntityProcessorErrorLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetAllEntityProcessorErrorLogMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetAllEntityProcessorErrorLog_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllEntityProcessorErrorLogWithPagination">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetAllEntityProcessorErrorLogWithPagination" message="tns:IDenormService_GetAllEntityProcessorErrorLogWithPagination_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetAllEntityProcessorErrorLogWithPaginationResponse" message="tns:IDenormService_GetAllEntityProcessorErrorLogWithPagination_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetAllEntityProcessorErrorLogWithPaginationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetAllEntityProcessorErrorLogWithPagination_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RefreshEntityProcessorErrorLog">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/RefreshEntityProcessorErrorLog" message="tns:IDenormService_RefreshEntityProcessorErrorLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/RefreshEntityProcessorErrorLogResponse" message="tns:IDenormService_RefreshEntityProcessorErrorLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/RefreshEntityProcessorErrorLogMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_RefreshEntityProcessorErrorLog_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessEntityActivityLogs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/ProcessEntityActivityLogs" message="tns:IDenormService_ProcessEntityActivityLogs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/ProcessEntityActivityLogsResponse" message="tns:IDenormService_ProcessEntityActivityLogs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/ProcessEntityActivityLogsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_ProcessEntityActivityLogs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetParallelizationEngineStatus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetParallelizationEngineStatus" message="tns:IDenormService_GetParallelizationEngineStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetParallelizationEngineStatusResponse" message="tns:IDenormService_GetParallelizationEngineStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetParallelizationEngineStatusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetParallelizationEngineStatus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartParallelProcessingEngine">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/StartParallelProcessingEngine" message="tns:IDenormService_StartParallelProcessingEngine_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/StartParallelProcessingEngineResponse" message="tns:IDenormService_StartParallelProcessingEngine_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/StartParallelProcessingEngineMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_StartParallelProcessingEngine_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopParallelProcessingEngine">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/StopParallelProcessingEngine" message="tns:IDenormService_StopParallelProcessingEngine_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/StopParallelProcessingEngineResponse" message="tns:IDenormService_StopParallelProcessingEngine_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/StopParallelProcessingEngineMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_StopParallelProcessingEngine_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestartParallelProcessingEngine">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/RestartParallelProcessingEngine" message="tns:IDenormService_RestartParallelProcessingEngine_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/RestartParallelProcessingEngineResponse" message="tns:IDenormService_RestartParallelProcessingEngine_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/RestartParallelProcessingEngineMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_RestartParallelProcessingEngine_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RestartProcessor">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/RestartProcessor" message="tns:IDenormService_RestartProcessor_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/RestartProcessorResponse" message="tns:IDenormService_RestartProcessor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/RestartProcessorMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_RestartProcessor_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartProcessor">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/StartProcessor" message="tns:IDenormService_StartProcessor_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/StartProcessorResponse" message="tns:IDenormService_StartProcessor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/StartProcessorMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_StartProcessor_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopProcessor">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/StopProcessor" message="tns:IDenormService_StopProcessor_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/StopProcessorResponse" message="tns:IDenormService_StopProcessor_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/StopProcessorMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_StopProcessor_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServiceStatus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetServiceStatus" message="tns:IDenormService_GetServiceStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetServiceStatusResponse" message="tns:IDenormService_GetServiceStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/GetServiceStatusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_GetServiceStatus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessServiceStatus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDenormService/ProcessServiceStatus" message="tns:IDenormService_ProcessServiceStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDenormService/ProcessServiceStatusResponse" message="tns:IDenormService_ProcessServiceStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDenormService/ProcessServiceStatusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDenormService_ProcessServiceStatus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="DenormService">
+    <wsdl:port name="WSHttpBinding_IDenormService" binding="i0:WSHttpBinding_IDenormService">
+      <soap12:address location="http://localhost/MainLine-7.8_WCFServices/DenormService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/MainLine-7.8_WCFServices/DenormService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IDenormService" binding="i0:NetTcpBinding_IDenormService">
+      <soap12:address location="net.tcp://sabintfsbuild.riversand.com/MainLine-7.8_WCFServices/DenormService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://sabintfsbuild.riversand.com/MainLine-7.8_WCFServices/DenormService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

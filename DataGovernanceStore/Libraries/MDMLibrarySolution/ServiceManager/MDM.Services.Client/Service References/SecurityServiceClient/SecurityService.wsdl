@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SecurityService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/MainLine_WCFServices/SecurityService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/SecurityService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/SecurityService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/SecurityService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/SecurityService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/SecurityService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/SecurityService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Security.Claims" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISecurityService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_AuthenticateUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserPreference_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreference" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserPreference_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserPreferenceResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserPreference_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRoles" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserRoles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByRoleId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsByRoleId" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByRoleId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsByRoleIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByRoleId_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByUserId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsByUserId" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByUserId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsByUserIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByUserId_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByRoleName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsByRoleName" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByRoleName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorsByRoleNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetVendorsByRoleName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_LoadUserPermissions_InputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUserPermissions" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_LoadUserPermissions_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoadUserPermissionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_LoadUserPermissions_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessUserPreferences_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUserPreferences" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessUserPreferences_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUserPreferencesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessUserPreferences_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserMenus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMenus" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserMenus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserMenusResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserMenus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_SetAuditInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetAuditInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_SetAuditInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetAuditInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_SetAuditInfo_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAuditInfoByIds_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditInfoByIds" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAuditInfoByIds_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditInfoByIdsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAuditInfoByIds_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAuditInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditInfo" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAuditInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAuditInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAuditInfo_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUsersAllowedForWorkflowActivity_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAllowedForWorkflowActivity" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUsersAllowedForWorkflowActivity_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersAllowedForWorkflowActivityResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUsersAllowedForWorkflowActivity_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUsersInRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUsersInRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersInRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUsersInRole_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllUsersOld_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersOld" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllUsersOld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersOldResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllUsersOld_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://mdmobjects.riversand.com/" name="detail" element="q15:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsers" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllUsers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://mdmobjects.riversand.com/" name="detail" element="q16:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserById" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUserByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetUserById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://mdmobjects.riversand.com/" name="detail" element="q17:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_CreateUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://mdmobjects.riversand.com/" name="detail" element="q18:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdateUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://mdmobjects.riversand.com/" name="detail" element="q19:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://mdmobjects.riversand.com/" name="detail" element="q20:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUsers" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessUsers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://mdmobjects.riversand.com/" name="detail" element="q21:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRoles" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetAllRoles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://mdmobjects.riversand.com/" name="detail" element="q22:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetRoleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleById" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetRoleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRoleByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetRoleById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://mdmobjects.riversand.com/" name="detail" element="q23:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_CreateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_CreateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_CreateRole_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://mdmobjects.riversand.com/" name="detail" element="q24:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdateRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdateRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdateRole_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://mdmobjects.riversand.com/" name="detail" element="q25:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_DeleteRole_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://mdmobjects.riversand.com/" name="detail" element="q26:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessRoles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRoles" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessRoles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessRolesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_ProcessRoles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://mdmobjects.riversand.com/" name="detail" element="q27:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForWindowsAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipalForWindowsAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForWindowsAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipalForWindowsAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForWindowsAuthentication_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://mdmobjects.riversand.com/" name="detail" element="q28:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForFormsAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipalForFormsAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForFormsAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipalForFormsAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForFormsAuthentication_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://mdmobjects.riversand.com/" name="detail" element="q29:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForClaimsBasedAuthentication_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipalForClaimsBasedAuthentication" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForClaimsBasedAuthentication_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipalForClaimsBasedAuthenticationResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityPrincipalForClaimsBasedAuthentication_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://mdmobjects.riversand.com/" name="detail" element="q30:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityRoleByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityRoleByName" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityRoleByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityRoleByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityRoleByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://mdmobjects.riversand.com/" name="detail" element="q31:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUserByLoginName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityUserByLoginName" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUserByLoginName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityUserByLoginNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUserByLoginName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://mdmobjects.riversand.com/" name="detail" element="q32:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUsersByLoginNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityUsersByLoginNames" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUsersByLoginNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityUsersByLoginNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUsersByLoginNames_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://mdmobjects.riversand.com/" name="detail" element="q33:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUsersInSecurityRole_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityUsersInSecurityRole" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUsersInSecurityRole_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityUsersInSecurityRoleResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetSecurityUsersInSecurityRole_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://mdmobjects.riversand.com/" name="detail" element="q34:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetMDMObjectPermission_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMObjectPermission" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetMDMObjectPermission_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMObjectPermissionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_GetMDMObjectPermission_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://mdmobjects.riversand.com/" name="detail" element="q35:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_IsPasswordResetRequestValid_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPasswordResetRequestValid" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_IsPasswordResetRequestValid_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPasswordResetRequestValidResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_IsPasswordResetRequestValid_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://mdmobjects.riversand.com/" name="detail" element="q36:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdatePassword_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePassword" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdatePassword_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePasswordResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISecurityService_UpdatePassword_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://mdmobjects.riversand.com/" name="detail" element="q37:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="ISecurityService">
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/AuthenticateUser" message="tns:ISecurityService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/AuthenticateUserResponse" message="tns:ISecurityService_AuthenticateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/AuthenticateUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_AuthenticateUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserPreference">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserPreference" message="tns:ISecurityService_GetUserPreference_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserPreferenceResponse" message="tns:ISecurityService_GetUserPreference_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserPreferenceMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetUserPreference_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserRoles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserRoles" message="tns:ISecurityService_GetUserRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserRolesResponse" message="tns:ISecurityService_GetUserRoles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserRolesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetUserRoles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorsByRoleId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByRoleId" message="tns:ISecurityService_GetVendorsByRoleId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByRoleIdResponse" message="tns:ISecurityService_GetVendorsByRoleId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByRoleIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetVendorsByRoleId_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorsByUserId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByUserId" message="tns:ISecurityService_GetVendorsByUserId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByUserIdResponse" message="tns:ISecurityService_GetVendorsByUserId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByUserIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetVendorsByUserId_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendorsByRoleName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByRoleName" message="tns:ISecurityService_GetVendorsByRoleName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByRoleNameResponse" message="tns:ISecurityService_GetVendorsByRoleName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetVendorsByRoleNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetVendorsByRoleName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoadUserPermissions">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/LoadUserPermissions" message="tns:ISecurityService_LoadUserPermissions_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/LoadUserPermissionsResponse" message="tns:ISecurityService_LoadUserPermissions_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/LoadUserPermissionsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_LoadUserPermissions_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessUserPreferences">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessUserPreferences" message="tns:ISecurityService_ProcessUserPreferences_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessUserPreferencesResponse" message="tns:ISecurityService_ProcessUserPreferences_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessUserPreferencesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_ProcessUserPreferences_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserMenus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserMenus" message="tns:ISecurityService_GetUserMenus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserMenusResponse" message="tns:ISecurityService_GetUserMenus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserMenusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetUserMenus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetAuditInfo">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/SetAuditInfo" message="tns:ISecurityService_SetAuditInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/SetAuditInfoResponse" message="tns:ISecurityService_SetAuditInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/SetAuditInfoMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_SetAuditInfo_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuditInfoByIds">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAuditInfoByIds" message="tns:ISecurityService_GetAuditInfoByIds_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAuditInfoByIdsResponse" message="tns:ISecurityService_GetAuditInfoByIds_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAuditInfoByIdsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetAuditInfoByIds_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAuditInfo">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAuditInfo" message="tns:ISecurityService_GetAuditInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAuditInfoResponse" message="tns:ISecurityService_GetAuditInfo_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAuditInfoMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetAuditInfo_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersAllowedForWorkflowActivity">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUsersAllowedForWorkflowActivity" message="tns:ISecurityService_GetUsersAllowedForWorkflowActivity_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUsersAllowedForWorkflowActivityResponse" message="tns:ISecurityService_GetUsersAllowedForWorkflowActivity_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUsersAllowedForWorkflowActivityMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetUsersAllowedForWorkflowActivity_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsersInRole">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUsersInRole" message="tns:ISecurityService_GetUsersInRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUsersInRoleResponse" message="tns:ISecurityService_GetUsersInRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUsersInRoleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetUsersInRole_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsersOld">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllUsersOld" message="tns:ISecurityService_GetAllUsersOld_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllUsersOldResponse" message="tns:ISecurityService_GetAllUsersOld_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllUsersOldMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetAllUsersOld_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllUsers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllUsers" message="tns:ISecurityService_GetAllUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllUsersResponse" message="tns:ISecurityService_GetAllUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllUsersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetAllUsers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserById" message="tns:ISecurityService_GetUserById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserByIdResponse" message="tns:ISecurityService_GetUserById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetUserByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetUserById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/CreateUser" message="tns:ISecurityService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/CreateUserResponse" message="tns:ISecurityService_CreateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/CreateUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_CreateUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdateUser" message="tns:ISecurityService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdateUserResponse" message="tns:ISecurityService_UpdateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdateUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_UpdateUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/DeleteUser" message="tns:ISecurityService_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/DeleteUserResponse" message="tns:ISecurityService_DeleteUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/DeleteUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_DeleteUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessUsers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessUsers" message="tns:ISecurityService_ProcessUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessUsersResponse" message="tns:ISecurityService_ProcessUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessUsersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_ProcessUsers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllRoles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllRoles" message="tns:ISecurityService_GetAllRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllRolesResponse" message="tns:ISecurityService_GetAllRoles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetAllRolesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetAllRoles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRoleById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetRoleById" message="tns:ISecurityService_GetRoleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetRoleByIdResponse" message="tns:ISecurityService_GetRoleById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetRoleByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetRoleById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRole">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/CreateRole" message="tns:ISecurityService_CreateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/CreateRoleResponse" message="tns:ISecurityService_CreateRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/CreateRoleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_CreateRole_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRole">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdateRole" message="tns:ISecurityService_UpdateRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdateRoleResponse" message="tns:ISecurityService_UpdateRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdateRoleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_UpdateRole_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRole">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/DeleteRole" message="tns:ISecurityService_DeleteRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/DeleteRoleResponse" message="tns:ISecurityService_DeleteRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/DeleteRoleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_DeleteRole_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessRoles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessRoles" message="tns:ISecurityService_ProcessRoles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessRolesResponse" message="tns:ISecurityService_ProcessRoles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/ProcessRolesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_ProcessRoles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityPrincipalForWindowsAuthentication">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForWindowsAuthentication" message="tns:ISecurityService_GetSecurityPrincipalForWindowsAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForWindowsAuthenticationResponse" message="tns:ISecurityService_GetSecurityPrincipalForWindowsAuthentication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForWindowsAuthenticationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetSecurityPrincipalForWindowsAuthentication_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityPrincipalForFormsAuthentication">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForFormsAuthentication" message="tns:ISecurityService_GetSecurityPrincipalForFormsAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForFormsAuthenticationResponse" message="tns:ISecurityService_GetSecurityPrincipalForFormsAuthentication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForFormsAuthenticationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetSecurityPrincipalForFormsAuthentication_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityPrincipalForClaimsBasedAuthentication">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForClaimsBasedAuthentication" message="tns:ISecurityService_GetSecurityPrincipalForClaimsBasedAuthentication_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForClaimsBasedAuthenticationResponse" message="tns:ISecurityService_GetSecurityPrincipalForClaimsBasedAuthentication_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityPrincipalForClaimsBasedAuthenticationMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetSecurityPrincipalForClaimsBasedAuthentication_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityRoleByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityRoleByName" message="tns:ISecurityService_GetSecurityRoleByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityRoleByNameResponse" message="tns:ISecurityService_GetSecurityRoleByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityRoleByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetSecurityRoleByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityUserByLoginName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUserByLoginName" message="tns:ISecurityService_GetSecurityUserByLoginName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUserByLoginNameResponse" message="tns:ISecurityService_GetSecurityUserByLoginName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUserByLoginNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetSecurityUserByLoginName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityUsersByLoginNames">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUsersByLoginNames" message="tns:ISecurityService_GetSecurityUsersByLoginNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUsersByLoginNamesResponse" message="tns:ISecurityService_GetSecurityUsersByLoginNames_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUsersByLoginNamesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetSecurityUsersByLoginNames_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityUsersInSecurityRole">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUsersInSecurityRole" message="tns:ISecurityService_GetSecurityUsersInSecurityRole_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUsersInSecurityRoleResponse" message="tns:ISecurityService_GetSecurityUsersInSecurityRole_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetSecurityUsersInSecurityRoleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetSecurityUsersInSecurityRole_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMObjectPermission">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetMDMObjectPermission" message="tns:ISecurityService_GetMDMObjectPermission_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetMDMObjectPermissionResponse" message="tns:ISecurityService_GetMDMObjectPermission_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/GetMDMObjectPermissionMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_GetMDMObjectPermission_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPasswordResetRequestValid">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/IsPasswordResetRequestValid" message="tns:ISecurityService_IsPasswordResetRequestValid_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/IsPasswordResetRequestValidResponse" message="tns:ISecurityService_IsPasswordResetRequestValid_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/IsPasswordResetRequestValidMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_IsPasswordResetRequestValid_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePassword">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdatePassword" message="tns:ISecurityService_UpdatePassword_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdatePasswordResponse" message="tns:ISecurityService_UpdatePassword_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/ISecurityService/UpdatePasswordMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:ISecurityService_UpdatePassword_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="SecurityService">
+    <wsdl:port name="WSHttpBinding_ISecurityService" binding="i0:WSHttpBinding_ISecurityService">
+      <soap12:address location="http://localhost/MainLine_WCFServices/SecurityService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/MainLine_WCFServices/SecurityService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_ISecurityService" binding="i0:NetTcpBinding_ISecurityService">
+      <soap12:address location="net.tcp://om.riversand.com/MainLine_WCFServices/SecurityService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://om.riversand.com/MainLine_WCFServices/SecurityService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

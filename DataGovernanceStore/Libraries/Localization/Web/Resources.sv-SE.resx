@@ -1,0 +1,1518 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="1 Container found" xml:space="preserve">
+    <value>1 Katalog gefunden</value>
+  </data>
+  <data name="1 taxonomy found" xml:space="preserve">
+    <value>1 Taxonomie gefunden</value>
+  </data>
+  <data name="1 view found" xml:space="preserve">
+    <value>1 Ansicht fand</value>
+  </data>
+  <data name="Active Tasks" xml:space="preserve">
+    <value>Aktive Aufgaben</value>
+  </data>
+  <data name="Add" xml:space="preserve">
+    <value>Addieren</value>
+  </data>
+  <data name="Add Attributes" xml:space="preserve">
+    <value>Addieren Sie Attribute</value>
+  </data>
+  <data name="Add Container" xml:space="preserve">
+    <value>Addieren Sie Katalog</value>
+  </data>
+  <data name="Add Container: Width" xml:space="preserve">
+    <value>Addieren Katalogisierte Weite</value>
+  </data>
+  <data name="Add Component" xml:space="preserve">
+    <value>Add Component</value>
+  </data>
+  <data name="Add New Saved Search" xml:space="preserve">
+    <value>Neue Gespeicherte Suche</value>
+  </data>
+  <data name="Add Products" xml:space="preserve">
+    <value>Addieren Sie Produkte</value>
+  </data>
+  <data name="Add Relations" xml:space="preserve">
+    <value>Addieren Relationen</value>
+  </data>
+  <data name="Add Relationships" xml:space="preserve">
+    <value>Addieren Verhältnisse</value>
+  </data>
+  <data name="Add taxonomy" xml:space="preserve">
+    <value>Addieren Sie Taxonomie</value>
+  </data>
+  <data name="Add Taxonomy:Width" xml:space="preserve">
+    <value>Addieren Taxonomie Weite</value>
+  </data>
+  <data name="Add View" xml:space="preserve">
+    <value>Addieren Sie Ansicht</value>
+  </data>
+  <data name="Add View:Width" xml:space="preserve">
+    <value>Addieren Ansicht:Weite</value>
+  </data>
+  <data name="Add/Modify Categories" xml:space="preserve">
+    <value>Hinzufügen / Ändern Kategorien</value>
+  </data>
+  <data name="Add:Width" xml:space="preserve">
+    <value>Addieren Weite</value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>Verwaltung</value>
+  </data>
+  <data name="Advanced Search" xml:space="preserve">
+    <value>Vorgerückte Suche</value>
+  </data>
+  <data name="Affected Info" xml:space="preserve">
+    <value>Betroffene Informationen</value>
+  </data>
+  <data name="Aggregation" xml:space="preserve">
+    <value>Anhäufung</value>
+  </data>
+  <data name="All Organizations" xml:space="preserve">
+    <value>Alle Organisationen</value>
+  </data>
+  <data name="All Taxonomies" xml:space="preserve">
+    <value>Alle Taxonomie</value>
+  </data>
+  <data name="All the components must be from the same All the components must be from the same Container" xml:space="preserve">
+    <value>Alle Komponenten müssen aus dem gleichen Katalog</value>
+  </data>
+  <data name="All the components must be in the same category" xml:space="preserve">
+    <value>Alle Komponenten müssen in der gleichen Kategorie</value>
+  </data>
+  <data name="Allowable Values" xml:space="preserve">
+    <value>Zulässige Werte</value>
+  </data>
+  <data name="and" xml:space="preserve">
+    <value>und</value>
+  </data>
+  <data name="API" xml:space="preserve">
+    <value>API</value>
+  </data>
+  <data name="API Delta" xml:space="preserve">
+    <value>API-Dreieck</value>
+  </data>
+  <data name="Approver Configuration" xml:space="preserve">
+    <value>Approver Konfiguration</value>
+  </data>
+  <data name="are left blank" xml:space="preserve">
+    <value>werden freigelassen</value>
+  </data>
+  <data name="are left blank1" xml:space="preserve">
+    <value>är tomt</value>
+  </data>
+  <data name="Are you sure to continue?" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie weiterhin?</value>
+  </data>
+  <data name="Are You sure you want to delete the selected objects?" xml:space="preserve">
+    <value>Sind Sie Sie möchten die vorgewählten Gegenstände löschen sicher?</value>
+  </data>
+  <data name="Are you sure you want to delete this item?" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie löschen möchten dieses Artikels?</value>
+  </data>
+  <data name="Are You sure you want to delete this object?" xml:space="preserve">
+    <value>Sind Sie Sie möchten diesen Gegenstand löschen sicher?</value>
+  </data>
+  <data name="Are you sure you want to Delete?" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie löschen möchten?</value>
+  </data>
+  <data name="Are you sure, you want to clear the search screen" xml:space="preserve">
+    <value>Sind Sie sicher, dass Sie wollen, um den Bildschirm</value>
+  </data>
+  <data name="Assignment" xml:space="preserve">
+    <value>Zuteilung</value>
+  </data>
+  <data name="Attachments" xml:space="preserve">
+    <value>Zubehöre</value>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Attribut</value>
+  </data>
+  <data name="Attribute Generator" xml:space="preserve">
+    <value>Attribut-Generator</value>
+  </data>
+  <data name="Attribute Group" xml:space="preserve">
+    <value>Attribut-Gruppe</value>
+  </data>
+  <data name="Attribute Mapping" xml:space="preserve">
+    <value>Attribut-Diagramm</value>
+  </data>
+  <data name="Attribute section" xml:space="preserve">
+    <value>Attributabschnitt</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attribut</value>
+  </data>
+  <data name="Attributes mentioned in the config [ MDMCenter.EntityCreator.PageConfig ] are not associated to this NodeType for this" xml:space="preserve">
+    <value>Die Attribute, die in erwähnt werden [ MDMCenter.EntityCreator.PageConfig ] sind nicht zu dieser Nullpunkt-Art für dieses verbunden</value>
+  </data>
+  <data name="Auto Classification" xml:space="preserve">
+    <value>Automatische Klassifikation</value>
+  </data>
+  <data name="Auto-Classify" xml:space="preserve">
+    <value>Auto-Klassifizierung</value>
+  </data>
+  <data name="Browse Catalog" xml:space="preserve">
+    <value>Grasen Sie Katalog</value>
+  </data>
+  <data name="Browse Contracts" xml:space="preserve">
+    <value>Grasen Sie Verträge</value>
+  </data>
+  <data name="Bulk" xml:space="preserve">
+    <value>Masse</value>
+  </data>
+  <data name="Bulk Edit" xml:space="preserve">
+    <value>Masse redigieren</value>
+  </data>
+  <data name="Bulk Operation" xml:space="preserve">
+    <value>Massenbetrieb</value>
+  </data>
+  <data name="Bulk Simulation" xml:space="preserve">
+    <value>Massensimulation</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Löschen</value>
+  </data>
+  <data name="Cannot add more" xml:space="preserve">
+    <value>Kann nicht mehr hinzufügen</value>
+  </data>
+  <data name="Container Change" xml:space="preserve">
+    <value>Katalog ändern</value>
+  </data>
+  <data name="Container Maintenance" xml:space="preserve">
+    <value>Katalog-Wartung</value>
+  </data>
+  <data name="Container Profile" xml:space="preserve">
+    <value>Katalog-Profil</value>
+  </data>
+  <data name="Container Staging" xml:space="preserve">
+    <value>Katalog-Inszenierung</value>
+  </data>
+  <data name="categories" xml:space="preserve">
+    <value>Kategorien</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Kategorie</value>
+  </data>
+  <data name="Category Attribute Mapping" xml:space="preserve">
+    <value>Kategorien-Attribut-Diagramm</value>
+  </data>
+  <data name="Category Completeness" xml:space="preserve">
+    <value>Kategorie Vollständigkeit</value>
+  </data>
+  <data name="Category Mapping" xml:space="preserve">
+    <value>Kategorien-Diagramm</value>
+  </data>
+  <data name="Change Status" xml:space="preserve">
+    <value>Status ändern</value>
+  </data>
+  <data name="Channel Management" xml:space="preserve">
+    <value>Gestaltung der Vertriebswege</value>
+  </data>
+  <data name="Checked out Exclusively for You" xml:space="preserve">
+    <value>ausschließlich überprüft auf Ihnen Heraus</value>
+  </data>
+  <data name="Checked out Exclusively for You in Draft" xml:space="preserve">
+    <value>Heraus ausschließlich überprüft auf Ihnen im Entwurf</value>
+  </data>
+  <data name="Checked out Exclusively for You in Production" xml:space="preserve">
+    <value>ausschließlich überprüft auf Ihnen in der Produktion</value>
+  </data>
+  <data name="Clear Search Criteria" xml:space="preserve">
+    <value>Clear Search Criteria</value>
+  </data>
+  <data name="Click to download the file" xml:space="preserve">
+    <value>Klicken, zum der Akte herunterzuladen</value>
+  </data>
+  <data name="Click to view the Details of this complex Attribute" xml:space="preserve">
+    <value>Klicken Sie, um die Details dieses komplizierten Attributes anzusehen</value>
+  </data>
+  <data name="Clone Component" xml:space="preserve">
+    <value>Klon-Komponente</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="Close Container" xml:space="preserve">
+    <value>Naher Katalog</value>
+  </data>
+  <data name="Close Container: Width" xml:space="preserve">
+    <value>Naher Katalog:Weite</value>
+  </data>
+  <data name="Close Taxonomy" xml:space="preserve">
+    <value>Nahe Taxonomie</value>
+  </data>
+  <data name="Close Taxonomy:Width" xml:space="preserve">
+    <value>Nahe Taxonomie:Weite</value>
+  </data>
+  <data name="Close View:Width" xml:space="preserve">
+    <value>Nahe Ansicht:Weite</value>
+  </data>
+  <data name="Columnar Files" xml:space="preserve">
+    <value>Säulenakten</value>
+  </data>
+  <data name="Comma" xml:space="preserve">
+    <value>Komma</value>
+  </data>
+  <data name="Commercial Attributes" xml:space="preserve">
+    <value>Handelsattribute</value>
+  </data>
+  <data name="Common" xml:space="preserve">
+    <value>Allgemein</value>
+  </data>
+  <data name="Completed Tasks" xml:space="preserve">
+    <value>Abgeschlossene Aufgaben</value>
+  </data>
+  <data name="Compliance Check" xml:space="preserve">
+    <value>Befolgung-Überprüfung</value>
+  </data>
+  <data name="Component" xml:space="preserve">
+    <value>Bestandteil</value>
+  </data>
+  <data name="Component(s) deleted successfully." xml:space="preserve">
+    <value>Komponente (n) erfolgreich gelöscht.</value>
+  </data>
+  <data name="Configure Category Attribute Approvers" xml:space="preserve">
+    <value>Bauen Sie Kategorien-Attribut Approvers zusammen</value>
+  </data>
+  <data name="Configure Notification Users" xml:space="preserve">
+    <value>Bauen Sie Mitteilungs-Benutzer zusammen</value>
+  </data>
+  <data name="Configure Org Delta" xml:space="preserve">
+    <value>Bauen Sie Org Dreieck zusammen</value>
+  </data>
+  <data name="Configure Organization for Notifications" xml:space="preserve">
+    <value>Bauen Sie Organisation für Mitteilungen zusammen</value>
+  </data>
+  <data name="Configure Stages" xml:space="preserve">
+    <value>Bauen Sie Stadien zusammen</value>
+  </data>
+  <data name="Configure Suppliers" xml:space="preserve">
+    <value>Bauen Sie Lieferanten zusammen</value>
+  </data>
+  <data name="Configure System Delta" xml:space="preserve">
+    <value>Bauen Sie Systems-Dreieck zusammen</value>
+  </data>
+  <data name="Configure WorkFlow Approvers" xml:space="preserve">
+    <value>Bauen Sie Arbeitsfluß Approvers zusammen</value>
+  </data>
+  <data name="Configure Workflow Users" xml:space="preserve">
+    <value>Bauen Sie Arbeitsfluss-Benutzer zusammen</value>
+  </data>
+  <data name="Configured" xml:space="preserve">
+    <value>Konfigurierte</value>
+  </data>
+  <data name="Container" xml:space="preserve">
+    <value>Behälter</value>
+  </data>
+  <data name="Container Metadata" xml:space="preserve">
+    <value>Behälter-Metadaten</value>
+  </data>
+  <data name="Content Cleanser" xml:space="preserve">
+    <value>Zufriedener Reiniger</value>
+  </data>
+  <data name="Contracts" xml:space="preserve">
+    <value>Verträge</value>
+  </data>
+  <data name="Copy Content" xml:space="preserve">
+    <value>Kopieren Inhalt</value>
+  </data>
+  <data name="Country Factor &amp; Discount" xml:space="preserve">
+    <value>Land-Faktor &amp; Diskont</value>
+  </data>
+  <data name="Create Category Mapping" xml:space="preserve">
+    <value>Verursachen Sie das Kategorien-Diagramm</value>
+  </data>
+  <data name="Cross Reference Generation Failed" xml:space="preserve">
+    <value>Kreuzverweis-Erzeugung verlassen</value>
+  </data>
+  <data name="Cross Reference Generation Succeeded" xml:space="preserve">
+    <value>Kreuzverweis-Erzeugung folgte</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Kunde</value>
+  </data>
+  <data name="Data Cleansing" xml:space="preserve">
+    <value>Daten-Reinigung</value>
+  </data>
+  <data name="Data Error" xml:space="preserve">
+    <value>Daten-Störung</value>
+  </data>
+  <data name="Data Governance" xml:space="preserve">
+    <value>Daten-Regierungsgewalt</value>
+  </data>
+  <data name="Data Pools" xml:space="preserve">
+    <value>Daten-Lachen</value>
+  </data>
+  <data name="Data Quality Services" xml:space="preserve">
+    <value>Daten-Qualitätsdienstleistungen</value>
+  </data>
+  <data name="Database" xml:space="preserve">
+    <value>Datenbank</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Löschung</value>
+  </data>
+  <data name="Delete Container" xml:space="preserve">
+    <value>Löschung-Katalog</value>
+  </data>
+  <data name="Delete operation successful." xml:space="preserve">
+    <value>Löschungbetrieb erfolgreich.</value>
+  </data>
+  <data name="Delete Relations" xml:space="preserve">
+    <value>Löschung-Relationen</value>
+  </data>
+  <data name="Delete Taxonomy" xml:space="preserve">
+    <value>Löschung-Taxonomie</value>
+  </data>
+  <data name="Delete View" xml:space="preserve">
+    <value>Löschung-Ansicht</value>
+  </data>
+  <data name="Demote : Demote" xml:space="preserve">
+    <value>Herabstufen: degradieren</value>
+  </data>
+  <data name="Demote Failed" xml:space="preserve">
+    <value>Herabstufen Fehler</value>
+  </data>
+  <data name="Demote Succeeded" xml:space="preserve">
+    <value>Herabstufen Erfolgreich</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="Description Matching" xml:space="preserve">
+    <value>Beschreibungs-Zusammenbringen</value>
+  </data>
+  <data name="Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="Detail Attributes" xml:space="preserve">
+    <value>Detail-Attribute</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Detailss</value>
+  </data>
+  <data name="Direct Connect" xml:space="preserve">
+    <value>Direkt Schließen Sie an</value>
+  </data>
+  <data name="Displaying" xml:space="preserve">
+    <value>Anzeigen</value>
+  </data>
+  <data name="Do you want to overwrite the existing criteria?" xml:space="preserve">
+    <value>Wollen Sie überschreiben die bestehenden Kriterien?</value>
+  </data>
+  <data name="DQM" xml:space="preserve">
+    <value>DQM</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Entwurf</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Bearbeiten</value>
+  </data>
+  <data name="Edit Container" xml:space="preserve">
+    <value>Redigieren Sie Katalog</value>
+  </data>
+  <data name="Edit Container Locales" xml:space="preserve">
+    <value>Redigieren Sie Katalog-Schauplätze</value>
+  </data>
+  <data name="Edit Multiple Items" xml:space="preserve">
+    <value>Bearbeiten Sie mehrere Artikel</value>
+  </data>
+  <data name="Edit Taxonomy" xml:space="preserve">
+    <value>Redigieren Sie Taxonomie</value>
+  </data>
+  <data name="Edit Taxonomy Locales" xml:space="preserve">
+    <value>Redigieren Sie Taxonomie-Schauplätze</value>
+  </data>
+  <data name="Edit View" xml:space="preserve">
+    <value>Redigieren Sie Ansicht</value>
+  </data>
+  <data name="Edit View Locales" xml:space="preserve">
+    <value>Redigieren Sie Ansicht-Schauplätze</value>
+  </data>
+  <data name="Edit/View current contracts" xml:space="preserve">
+    <value>Redigieren Sie oder sehen Sie gegenwärtige Verträge an</value>
+  </data>
+  <data name="Edit/View current product information" xml:space="preserve">
+    <value>Redigieren Sie oder sehen Sie gegenwärtige Produktinformation an</value>
+  </data>
+  <data name="EffectiveFrom" xml:space="preserve">
+    <value>Wirkungsvoll von</value>
+  </data>
+  <data name="EffectiveTo" xml:space="preserve">
+    <value>Wirkungsvoll zu</value>
+  </data>
+  <data name="Either No Components were selected or Search results were Discarded. Please try again" xml:space="preserve">
+    <value>Entweder keine Komponenten ausgewählt wurden oder Suchergebnisse wurden verworfen. Bitte versuchen Sie es erneut</value>
+  </data>
+  <data name="Either select a saved search or enter a new search name" xml:space="preserve">
+    <value>Entweder wählen Sie eine gespeicherte Suche oder geben Sie einen neuen Namen suchen</value>
+  </data>
+  <data name="Error Occured" xml:space="preserve">
+    <value>Störung trat auf</value>
+  </data>
+  <data name="ERROR_UNLINKED_ORG_LOCALES" xml:space="preserve">
+    <value>STÖRUNG GELÖSTE ORG SCHAUPLÄTZE</value>
+  </data>
+  <data name="Estimate Default" xml:space="preserve">
+    <value>Schätzungs-Rückstellung</value>
+  </data>
+  <data name="Event Log" xml:space="preserve">
+    <value>Ereignis-Maschinenbordbuch</value>
+  </data>
+  <data name="EXC" xml:space="preserve">
+    <value>EXC</value>
+  </data>
+  <data name="Exception occured" xml:space="preserve">
+    <value>Ausnahme trat auf</value>
+  </data>
+  <data name="Export Inbox" xml:space="preserve">
+    <value>Export Inbox</value>
+  </data>
+  <data name="Export Price Factors" xml:space="preserve">
+    <value>Exportpreis-Faktoren</value>
+  </data>
+  <data name="Exports" xml:space="preserve">
+    <value>Exporte</value>
+  </data>
+  <data name="External NPI" xml:space="preserve">
+    <value>External NPI</value>
+  </data>
+  <data name="Extract" xml:space="preserve">
+    <value>Auszug</value>
+  </data>
+  <data name="failed" xml:space="preserve">
+    <value>nicht</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Entdeckung</value>
+  </data>
+  <data name="Generate Rules" xml:space="preserve">
+    <value>Erzeugen Sie Richtlinien</value>
+  </data>
+  <data name="Generate XRef" xml:space="preserve">
+    <value>Generate XRef</value>
+  </data>
+  <data name="Given search name already exists in this context" xml:space="preserve">
+    <value>Da die Suche Name existiert bereits in diesem Zusammenhang</value>
+  </data>
+  <data name="Global search with the same name has already been defined by some other user. Duplicate global search name is not allowed." xml:space="preserve">
+    <value>Die globale Suche mit dem gleichen Namen ist bereits durch einen anderen Benutzer. Doppelte globale Suche Name ist nicht erlaubt.</value>
+  </data>
+  <data name="Group" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="Hash" xml:space="preserve">
+    <value>Durcheinander</value>
+  </data>
+  <data name="Hide/Show this section" xml:space="preserve">
+    <value>Hide / Show diesem Abschnitt</value>
+  </data>
+  <data name="Hierarchy" xml:space="preserve">
+    <value>Hierarchie</value>
+  </data>
+  <data name="Hierarchy Metadata" xml:space="preserve">
+    <value>Hierarchien-Metadaten</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Haus</value>
+  </data>
+  <data name="if" xml:space="preserve">
+    <value>wenn</value>
+  </data>
+  <data name="Import Inbox" xml:space="preserve">
+    <value>Import Inbox</value>
+  </data>
+  <data name="Imports" xml:space="preserve">
+    <value>Die Einfuhren</value>
+  </data>
+  <data name="Inbox" xml:space="preserve">
+    <value>Inbox</value>
+  </data>
+  <data name="Included By" xml:space="preserve">
+    <value>Vorbei eingeschlossen</value>
+  </data>
+  <data name="Inherited" xml:space="preserve">
+    <value>Übernommen</value>
+  </data>
+  <data name="Inherited Relationship" xml:space="preserve">
+    <value>Vererbte Verbindungen</value>
+  </data>
+  <data name="Integration" xml:space="preserve">
+    <value>Integration</value>
+  </data>
+  <data name="Integration Services" xml:space="preserve">
+    <value>Integrations-Dienstleistungen</value>
+  </data>
+  <data name="Invalid search string" xml:space="preserve">
+    <value>Ungültiger Suchbegriff</value>
+  </data>
+  <data name="is signed in" xml:space="preserve">
+    <value>wird innen unterzeichnet</value>
+  </data>
+  <data name="Is this search available to other users?" xml:space="preserve">
+    <value>Diese Suche ist für andere Benutzer verfügbar?</value>
+  </data>
+  <data name="Item" xml:space="preserve">
+    <value>Element</value>
+  </data>
+  <data name="Item Change" xml:space="preserve">
+    <value>Punkt ändern</value>
+  </data>
+  <data name="Item Edit" xml:space="preserve">
+    <value>Posten bearbeiten</value>
+  </data>
+  <data name="Item Number" xml:space="preserve">
+    <value>Artikelnummer</value>
+  </data>
+  <data name="items and will take" xml:space="preserve">
+    <value>Artikel und wird</value>
+  </data>
+  <data name="Job Status" xml:space="preserve">
+    <value>Job Status</value>
+  </data>
+  <data name="Keyword" xml:space="preserve">
+    <value>Stichwort</value>
+  </data>
+  <data name="Keyword1" xml:space="preserve">
+    <value>Keyword</value>
+  </data>
+  <data name="Language independent information" xml:space="preserve">
+    <value>Sprachunabhängige Informationen</value>
+  </data>
+  <data name="Language Maintainance" xml:space="preserve">
+    <value>Sprachwartung</value>
+  </data>
+  <data name="Languages and Locales" xml:space="preserve">
+    <value>Sprachen und Schauplätze</value>
+  </data>
+  <data name="Link Components" xml:space="preserve">
+    <value>Verbindungs-Bestandteile</value>
+  </data>
+  <data name="Link Pricing Types To Tiers" xml:space="preserve">
+    <value>Verbindungs-Preiskalkulations-Arten zu den Reihen</value>
+  </data>
+  <data name="Load Jobs" xml:space="preserve">
+    <value>Lasts-Jobs</value>
+  </data>
+  <data name="Loading Data..." xml:space="preserve">
+    <value>Laden-Daten…</value>
+  </data>
+  <data name="Loading Document..." xml:space="preserve">
+    <value>Laden-Dokument…</value>
+  </data>
+  <data name="Loading..." xml:space="preserve">
+    <value>Laden…</value>
+  </data>
+  <data name="Local Relationship" xml:space="preserve">
+    <value>Lokale Verbindungen</value>
+  </data>
+  <data name="Locale" xml:space="preserve">
+    <value>Schauplatz</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="LongName" xml:space="preserve">
+    <value>Langer Name</value>
+  </data>
+  <data name="Main Attributes" xml:space="preserve">
+    <value>Hauptattribute</value>
+  </data>
+  <data name="Maintain Attribute Metadata" xml:space="preserve">
+    <value>Behalten Sie Attribut-Metadaten bei</value>
+  </data>
+  <data name="Maintain Bulk Pricing" xml:space="preserve">
+    <value>Behalten Sie Massenpreiskalkulation bei</value>
+  </data>
+  <data name="Maintain Container" xml:space="preserve">
+    <value>Behalten Sie Katalog bei</value>
+  </data>
+  <data name="Maintain Component" xml:space="preserve">
+    <value>Behalten Sie Bestandteil bei</value>
+  </data>
+  <data name="Maintain Component Type" xml:space="preserve">
+    <value>Behalten Sie Teilart bei</value>
+  </data>
+  <data name="Maintain Contract" xml:space="preserve">
+    <value>Behalten Sie Vertrag bei</value>
+  </data>
+  <data name="Maintain Country/Regions" xml:space="preserve">
+    <value>Behalten Sie Land oder Regionen bei</value>
+  </data>
+  <data name="Maintain Currency" xml:space="preserve">
+    <value>Behalten Sie Währung bei</value>
+  </data>
+  <data name="Maintain Customer" xml:space="preserve">
+    <value>Behalten Sie Kunden bei</value>
+  </data>
+  <data name="Maintain Ext Sys Key Data" xml:space="preserve">
+    <value>Behalten Sie ausgedehnte Systems-Schlüssel-Daten bei</value>
+  </data>
+  <data name="Maintain Hierarchies" xml:space="preserve">
+    <value>Behalten Sie Hierarchien bei</value>
+  </data>
+  <data name="Maintain Interface Definition" xml:space="preserve">
+    <value>Behalten Sie Schnittstellendefinition bei</value>
+  </data>
+  <data name="Maintain Languages" xml:space="preserve">
+    <value>Behalten Sie Sprachen bei</value>
+  </data>
+  <data name="Maintain Locales" xml:space="preserve">
+    <value>Behalten Sie Schauplätze bei</value>
+  </data>
+  <data name="Maintain Object Type" xml:space="preserve">
+    <value>Behalten Sie Objekt-Typ bei</value>
+  </data>
+  <data name="Maintain Organization" xml:space="preserve">
+    <value>Behalten Sie Organisation bei</value>
+  </data>
+  <data name="Maintain Organization Structure" xml:space="preserve">
+    <value>Behalten Sie Organisationsstruktur bei</value>
+  </data>
+  <data name="Maintain Organization Types" xml:space="preserve">
+    <value>Behalten Sie Organisations-Arten bei</value>
+  </data>
+  <data name="Maintain Pricing" xml:space="preserve">
+    <value>Behalten Sie Preiskalkulation bei</value>
+  </data>
+  <data name="Maintain Pricing Tiers" xml:space="preserve">
+    <value>Behalten Sie Preiskalkulations-Reihen bei</value>
+  </data>
+  <data name="Maintain Pricing Types" xml:space="preserve">
+    <value>Behalten Sie Preiskalkulations-Arten bei</value>
+  </data>
+  <data name="Maintain Profiles" xml:space="preserve">
+    <value>Behalten Sie Profile bei</value>
+  </data>
+  <data name="Maintain Roles" xml:space="preserve">
+    <value>Behalten Sie Rollen bei</value>
+  </data>
+  <data name="Maintain Schedules" xml:space="preserve">
+    <value>Behalten Sie Zeitpläne bei</value>
+  </data>
+  <data name="Maintain Scheme" xml:space="preserve">
+    <value>Behalten Sie Entwurf bei</value>
+  </data>
+  <data name="Maintain Scripts" xml:space="preserve">
+    <value>Beibehalten Sie Indexe en</value>
+  </data>
+  <data name="Maintain SKU" xml:space="preserve">
+    <value>Behalten Sie SKU bei</value>
+  </data>
+  <data name="Maintain System" xml:space="preserve">
+    <value>Behalten Sie System bei</value>
+  </data>
+  <data name="Maintain Taxonomy" xml:space="preserve">
+    <value>Behalten Sie Taxonomie bei</value>
+  </data>
+  <data name="Maintain Users" xml:space="preserve">
+    <value>Behalten Sie Benutzer bei</value>
+  </data>
+  <data name="Maintain View" xml:space="preserve">
+    <value>Behalten Sie Ansicht bei</value>
+  </data>
+  <data name="Make Default Container" xml:space="preserve">
+    <value>Bilden Sie Rückstellungs-Katalog</value>
+  </data>
+  <data name="Manage Alerts and Notifications" xml:space="preserve">
+    <value>Handhaben Sie Alarme und Mitteilungen</value>
+  </data>
+  <data name="Manage Content" xml:space="preserve">
+    <value>Handhaben Sie Inhalt</value>
+  </data>
+  <data name="Mandatory" xml:space="preserve">
+    <value>Vorgeschrieben</value>
+  </data>
+  <data name="Map Locales to Organization" xml:space="preserve">
+    <value>Diagramm-Schauplätze zur Organisation</value>
+  </data>
+  <data name="Mapping Configuration" xml:space="preserve">
+    <value>Diagramm von Konfiguration</value>
+  </data>
+  <data name="Mapping Currency to Organization" xml:space="preserve">
+    <value>Diagramm von Währung zur Organisation</value>
+  </data>
+  <data name="Master" xml:space="preserve">
+    <value>Meister</value>
+  </data>
+  <data name="Master Container" xml:space="preserve">
+    <value>Vorlagenkatalog</value>
+  </data>
+  <data name="Meta data" xml:space="preserve">
+    <value>Meta-Daten</value>
+  </data>
+  <data name="Multiple item selection is not allowed for the action you want to perform" xml:space="preserve">
+    <value>Mehrere Artikel Auswahl ist nicht zulässig für die Aktion, die Sie ausführen möchten</value>
+  </data>
+  <data name="My Jobs" xml:space="preserve">
+    <value>Meine Jobs</value>
+  </data>
+  <data name="My Work Items" xml:space="preserve">
+    <value>Meine Arbeits-Einzelteile</value>
+  </data>
+  <data name="My Workspace" xml:space="preserve">
+    <value>Mein Arbeitsplatz</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Need to identify" xml:space="preserve">
+    <value>Notwendigkeit zu identifizierenen</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nein</value>
+  </data>
+  <data name="No Columns configured for display" xml:space="preserve">
+    <value>Keine Spalten für die Anzeige konfiguriert</value>
+  </data>
+  <data name="No data available for this" xml:space="preserve">
+    <value>Keine Daten vorhanden für dieses</value>
+  </data>
+  <data name="No data was found for this node" xml:space="preserve">
+    <value>Keine Daten wurden für diesen Nullpunkt gefunden</value>
+  </data>
+  <data name="No inherited relationships found" xml:space="preserve">
+    <value>Nr. geerbt Beziehungen gefunden</value>
+  </data>
+  <data name="No local relationships found" xml:space="preserve">
+    <value>Keine lokale Beziehungen gefunden</value>
+  </data>
+  <data name="No options available" xml:space="preserve">
+    <value>Keine Wahlen vorhanden</value>
+  </data>
+  <data name="No Options Configured for Alternate" xml:space="preserve">
+    <value>Keine Optionen Konfiguriert für Alternate</value>
+  </data>
+  <data name="No Relationship types associated with this" xml:space="preserve">
+    <value>Nr. Verbindungen Arten, die mit dieser</value>
+  </data>
+  <data name="No Results found for the search criteria" xml:space="preserve">
+    <value>Keine Ergebnisse für die Suchkriterien</value>
+  </data>
+  <data name="No Technical Attribute data was found for this node" xml:space="preserve">
+    <value>Keine technischen Attributdaten wurden für diesen Nullpunkt gefunden</value>
+  </data>
+  <data name="No Technical Specifications were found for this node" xml:space="preserve">
+    <value>Keine technischen Spezifikationen wurden für diesen Nullpunkt gefunden</value>
+  </data>
+  <data name="No1" xml:space="preserve">
+    <value>Nej</value>
+  </data>
+  <data name="Normalization" xml:space="preserve">
+    <value>Normalisierung</value>
+  </data>
+  <data name="Normalize" xml:space="preserve">
+    <value>Normalisieren</value>
+  </data>
+  <data name="Note" xml:space="preserve">
+    <value>Anmerkung</value>
+  </data>
+  <data name="Notification Sent Successfully" xml:space="preserve">
+    <value>Anmeldung erfolgreich gesendet</value>
+  </data>
+  <data name="Notify Supplier" xml:space="preserve">
+    <value>Benachrichtigen Sie Lieferant</value>
+  </data>
+  <data name="NPI" xml:space="preserve">
+    <value>NPI</value>
+  </data>
+  <data name="Object Extended Attributes" xml:space="preserve">
+    <value>Gegenstand verlängerte Attribute</value>
+  </data>
+  <data name="Object Maintenance" xml:space="preserve">
+    <value>Gegenstand-Wartung</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>von</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>O.K.</value>
+  </data>
+  <data name="Open Container" xml:space="preserve">
+    <value>Öffnen Katalog</value>
+  </data>
+  <data name="Open Container: Width" xml:space="preserve">
+    <value>Öffnen Katalog:Weite</value>
+  </data>
+  <data name="Open Taxonomy" xml:space="preserve">
+    <value>Öffnen Taxonomie</value>
+  </data>
+  <data name="Open Taxonomy:Width" xml:space="preserve">
+    <value>Öffnen Taxonomie:Weite</value>
+  </data>
+  <data name="Open View:Width" xml:space="preserve">
+    <value>Öffnen Ansicht:Weite</value>
+  </data>
+  <data name="Org Commercial Attribute Relations" xml:space="preserve">
+    <value>Org Handelsattribut-Relationen</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Gesellschaft</value>
+  </data>
+  <data name="Organizations" xml:space="preserve">
+    <value>Organisationen</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Andere</value>
+  </data>
+  <data name="Overwrite" xml:space="preserve">
+    <value>Überschreiben Sie</value>
+  </data>
+  <data name="Owner Info" xml:space="preserve">
+    <value>Inhaber-Informationen</value>
+  </data>
+  <data name="Page" xml:space="preserve">
+    <value>Seite</value>
+  </data>
+  <data name="Parent" xml:space="preserve">
+    <value>Elternteil</value>
+  </data>
+  <data name="Part No" xml:space="preserve">
+    <value>Teilenummer</value>
+  </data>
+  <data name="Part Number Matching" xml:space="preserve">
+    <value>Teilenummer-Zusammenbringen</value>
+  </data>
+  <data name="PartNumber" xml:space="preserve">
+    <value>Teilenummer</value>
+  </data>
+  <data name="Paste Content" xml:space="preserve">
+    <value>Einfügen Inhalt</value>
+  </data>
+  <data name="Paste or enter delimited values here" xml:space="preserve">
+    <value>Einfügen oder getrennte Werte hier</value>
+  </data>
+  <data name="Performance Reports" xml:space="preserve">
+    <value>Leistungs-Berichte</value>
+  </data>
+  <data name="Picker" xml:space="preserve">
+    <value>Picker</value>
+  </data>
+  <data name="Pipe" xml:space="preserve">
+    <value>Rohr</value>
+  </data>
+  <data name="Please check the configuration in XML file and Administration -&gt; Maintain" xml:space="preserve">
+    <value>Überprüfen Sie bitte die Konfiguration in der XML Akte und in der Verwaltung - &gt; Behalten Sie bei</value>
+  </data>
+  <data name="Please Check The Permissions" xml:space="preserve">
+    <value>Überprüfen Sie bitte die Erlaubnis</value>
+  </data>
+  <data name="Please contact System Administrator" xml:space="preserve">
+    <value>Treten Sie bitte mit Systemverwalter in Verbindung</value>
+  </data>
+  <data name="Please correct the following errors" xml:space="preserve">
+    <value>Beheben Sie bitte die folgenden Störungen</value>
+  </data>
+  <data name="please enter a Valid Quantity" xml:space="preserve">
+    <value>Bitte geben Sie eine gültige Menge</value>
+  </data>
+  <data name="Please enter only numeric values(upto 8 digits) for attribute" xml:space="preserve">
+    <value>Bitte geben Sie nur numerische Werte (bis zu 8-stellig) für das Attribut</value>
+  </data>
+  <data name="Please Select a" xml:space="preserve">
+    <value>Bitte wählen Sie eine</value>
+  </data>
+  <data name="Please select a different item for paste as the target item and source item are same" xml:space="preserve">
+    <value>Bitte wählen Sie ein anderes Element für "Einfügen" als Ziel und Quelle Punkt Punkt sind gleich</value>
+  </data>
+  <data name="Please Select a record" xml:space="preserve">
+    <value>Bitte wählen Sie eine Aufzeichnung</value>
+  </data>
+  <data name="Please select an item to update" xml:space="preserve">
+    <value>Bitte wählen Sie einen Artikel zu aktualisieren</value>
+  </data>
+  <data name="Please Select an option" xml:space="preserve">
+    <value>Bitte wählen WaitPlease eine Wahl vor</value>
+  </data>
+  <data name="Please select at least one component!" xml:space="preserve">
+    <value>Bitte wählen Sie mindestens eine Komponente!</value>
+  </data>
+  <data name="Please select atleast one component!" xml:space="preserve">
+    <value>Bitte wählen Sie mindestens eine Komponente!</value>
+  </data>
+  <data name="Please select the Item(s) for the action you want to perform!" xml:space="preserve">
+    <value>Bitte wählen Sie die Nummer (n) für die Aktion, die Sie ausführen möchten!</value>
+  </data>
+  <data name="Please select the Item(s) for the action you want to perform!1" xml:space="preserve">
+    <value>Välj objektet (er) för de åtgärder du vill göra!</value>
+  </data>
+  <data name="Please specify at least one criteria for search" xml:space="preserve">
+    <value>Bitte geben Sie mindestens ein Kriterium für die Suche</value>
+  </data>
+  <data name="Please Wait" xml:space="preserve">
+    <value>Warten Sie bitte</value>
+  </data>
+  <data name="Price Factors" xml:space="preserve">
+    <value>Preis-Faktoren</value>
+  </data>
+  <data name="Price Syndication" xml:space="preserve">
+    <value>Preis-Syndikatsbildung</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Preiskalkulation</value>
+  </data>
+  <data name="Pricing Metadata" xml:space="preserve">
+    <value>Preiskalkulations-Metadaten</value>
+  </data>
+  <data name="Pricing Tiers" xml:space="preserve">
+    <value>Preiskalkulations-Reihen</value>
+  </data>
+  <data name="Pricing Types" xml:space="preserve">
+    <value>Preiskalkulations-Arten</value>
+  </data>
+  <data name="Product Comparison" xml:space="preserve">
+    <value>Produkt-Vergleich</value>
+  </data>
+  <data name="Product Details" xml:space="preserve">
+    <value>Produkt-Details</value>
+  </data>
+  <data name="Product Hierarchy" xml:space="preserve">
+    <value>Produkt-Hierarchie</value>
+  </data>
+  <data name="Product Master" xml:space="preserve">
+    <value>Produkt-Meister</value>
+  </data>
+  <data name="Product Relationships" xml:space="preserve">
+    <value>Produkt-Verhältnisse</value>
+  </data>
+  <data name="Product Updates" xml:space="preserve">
+    <value>Produkt-Updates</value>
+  </data>
+  <data name="Promote" xml:space="preserve">
+    <value>Förderung</value>
+  </data>
+  <data name="Promote Failed" xml:space="preserve">
+    <value>Förderung Fehler</value>
+  </data>
+  <data name="Promote Succeeded" xml:space="preserve">
+    <value>Förderung Erfolgreich</value>
+  </data>
+  <data name="Qty" xml:space="preserve">
+    <value>Menge</value>
+  </data>
+  <data name="Quantity Limit is exceded.Quantity limit is 5 Digits" xml:space="preserve">
+    <value>Menge Limit ist exceded.Quantity Grenze ist 5-stellig</value>
+  </data>
+  <data name="Quantity should be greater than Zero" xml:space="preserve">
+    <value>Menge ist größer als Null</value>
+  </data>
+  <data name="Quick Links" xml:space="preserve">
+    <value>Schnelle Verbindungen</value>
+  </data>
+  <data name="reached maximum count" xml:space="preserve">
+    <value>erreichter maximaler Zählimpuls</value>
+  </data>
+  <data name="Reclassify" xml:space="preserve">
+    <value>Reklassifizieren Sie</value>
+  </data>
+  <data name="Reclassifying for following components" xml:space="preserve">
+    <value>Neu für die folgenden Komponenten</value>
+  </data>
+  <data name="records matched" xml:space="preserve">
+    <value>Datensätze mit</value>
+  </data>
+  <data name="Refresh" xml:space="preserve">
+    <value>Erneuern Sie</value>
+  </data>
+  <data name="Relationship" xml:space="preserve">
+    <value>Verhältnis</value>
+  </data>
+  <data name="Relationship Not Selected" xml:space="preserve">
+    <value>Verhältnis nicht vorgewählt</value>
+  </data>
+  <data name="relationship(s) were found" xml:space="preserve">
+    <value>Beziehung (en) gefunden</value>
+  </data>
+  <data name="Replace Relations" xml:space="preserve">
+    <value>Ersetzen Relations</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="required" xml:space="preserve">
+    <value>erforderlich</value>
+  </data>
+  <data name="Required Information is missing" xml:space="preserve">
+    <value>Erforderliche Informationen fehlen</value>
+  </data>
+  <data name="results" xml:space="preserve">
+    <value>Ergebnisse</value>
+  </data>
+  <data name="Save Search Criteria" xml:space="preserve">
+    <value>Speichern Sie Ihre Suchkriterien ein</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>Entwurf</value>
+  </data>
+  <data name="Scheme  Pricing Types" xml:space="preserve">
+    <value>Entwurf-Preiskalkulations-Arten</value>
+  </data>
+  <data name="Scheme Determination" xml:space="preserve">
+    <value>Entwurf-Ermittlung</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Suche</value>
+  </data>
+  <data name="Search Products" xml:space="preserve">
+    <value>Suche Produkte</value>
+  </data>
+  <data name="Search Value" xml:space="preserve">
+    <value>Suche Preis</value>
+  </data>
+  <data name="Search:Width" xml:space="preserve">
+    <value>Suche:Weite</value>
+  </data>
+  <data name="seconds for exports to pick up the changes. Are you sure to want to proceed making these changes?" xml:space="preserve">
+    <value>Sekunden für die Ausfuhren um die Änderungen. Sind Sie sicher, dass Sie wollen, gehen Sie diese Änderungen?</value>
+  </data>
+  <data name="seconds for exports to pick up the changes. Are you sure to want to proceed making these changes?&quot;" xml:space="preserve">
+    <value>Sekunden für die Ausfuhren um die Änderungen. Sind Sie sicher, dass Sie wollen, gehen Sie diese Änderungen? "</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Sicherheit</value>
+  </data>
+  <data name="Select All" xml:space="preserve">
+    <value>Wählen Sie alle vor</value>
+  </data>
+  <data name="Select an option" xml:space="preserve">
+    <value>Wählen Sie eine Wahl vor</value>
+  </data>
+  <data name="Select Equipment" xml:space="preserve">
+    <value>Wählen Sie die Ausstattung</value>
+  </data>
+  <data name="Select Parts" xml:space="preserve">
+    <value>Wählen Sie die Teile</value>
+  </data>
+  <data name="Select saved Search" xml:space="preserve">
+    <value>Wählen Sie die gespeicherte Suche</value>
+  </data>
+  <data name="Select Separator" xml:space="preserve">
+    <value>Wählen Sie Separator</value>
+  </data>
+  <data name="Select Target Item(s) for copy" xml:space="preserve">
+    <value>Wählen Sie die Ziel-Punkt (en) für die Kopie</value>
+  </data>
+  <data name="Selection" xml:space="preserve">
+    <value>Auswahl</value>
+  </data>
+  <data name="ShortName" xml:space="preserve">
+    <value>Kurzer Name</value>
+  </data>
+  <data name="Show all Container attributes" xml:space="preserve">
+    <value>Zeigen Sie alle Katalogattribute</value>
+  </data>
+  <data name="Show all Category attributes" xml:space="preserve">
+    <value>Zeigen Sie alle Kategorienattribute</value>
+  </data>
+  <data name="Show all Organization attributes" xml:space="preserve">
+    <value>Zeigen Sie alle Organisationsattribute</value>
+  </data>
+  <data name="Show the first" xml:space="preserve">
+    <value>Zeige den ersten</value>
+  </data>
+  <data name="Siemens" xml:space="preserve">
+    <value>Siemens</value>
+  </data>
+  <data name="Sign-out" xml:space="preserve">
+    <value>Zeichen-heraus</value>
+  </data>
+  <data name="Simulation" xml:space="preserve">
+    <value>Simulation</value>
+  </data>
+  <data name="SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="SKU1" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Source Container" xml:space="preserve">
+    <value>Quellkatalog</value>
+  </data>
+  <data name="Source Organization" xml:space="preserve">
+    <value>Quellorganisation</value>
+  </data>
+  <data name="Specific" xml:space="preserve">
+    <value>Spezifische</value>
+  </data>
+  <data name="Split Values" xml:space="preserve">
+    <value>Split-Werte</value>
+  </data>
+  <data name="Staging Container" xml:space="preserve">
+    <value>Inszenierung-Katalog</value>
+  </data>
+  <data name="Staging WorkFlow" xml:space="preserve">
+    <value>Inszenierung-Arbeitsfluß</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Supplier Content Portal" xml:space="preserve">
+    <value>Lieferanten-zufriedenes Portal</value>
+  </data>
+  <data name="Supplier Content Portal - Home" xml:space="preserve">
+    <value>Lieferanten-zufriedenes Portal - Haupt</value>
+  </data>
+  <data name="Supplier Inbox" xml:space="preserve">
+    <value>Lieferant Inbox</value>
+  </data>
+  <data name="Supplier Portal" xml:space="preserve">
+    <value>Lieferanten-Portal</value>
+  </data>
+  <data name="Synchronization" xml:space="preserve">
+    <value>Synchronisation</value>
+  </data>
+  <data name="Synchronizer" xml:space="preserve">
+    <value>Synchronisationsvorrichtung</value>
+  </data>
+  <data name="Syndication" xml:space="preserve">
+    <value>Syndikatsbildung</value>
+  </data>
+  <data name="Taxonomy" xml:space="preserve">
+    <value>Taxonomie</value>
+  </data>
+  <data name="Taxonomy History" xml:space="preserve">
+    <value>Taxonomie-Geschichte</value>
+  </data>
+  <data name="Taxonomy Maintenance" xml:space="preserve">
+    <value>Taxonomie-Wartung</value>
+  </data>
+  <data name="Technical Attributes" xml:space="preserve">
+    <value>Technische Attribute</value>
+  </data>
+  <data name="Technical Info" xml:space="preserve">
+    <value>Technische Informationen</value>
+  </data>
+  <data name="Test" xml:space="preserve">
+    <value>Test</value>
+  </data>
+  <data name="The character max character reached. Please remove some search values" xml:space="preserve">
+    <value>Das Zeichen max Zeichen erreicht. Bitte entfernen Sie einige Werte Suche</value>
+  </data>
+  <data name="These changes will affect" xml:space="preserve">
+    <value>Diese Veränderungen werden sich</value>
+  </data>
+  <data name="These changes will take" xml:space="preserve">
+    <value>Diese Änderungen werden</value>
+  </data>
+  <data name="This Entity already exists" xml:space="preserve">
+    <value>Dieses Wesen existiert bereits</value>
+  </data>
+  <data name="Trading Partners" xml:space="preserve">
+    <value>Handelspartner</value>
+  </data>
+  <data name="TradingCenter" xml:space="preserve">
+    <value>Handelnmitte</value>
+  </data>
+  <data name="TradingCenter-DS" xml:space="preserve">
+    <value>Handelnmitte-DS</value>
+  </data>
+  <data name="TradingCenter-SS" xml:space="preserve">
+    <value>Handelnmitte-SS</value>
+  </data>
+  <data name="Transora" xml:space="preserve">
+    <value>Transora</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Typ</value>
+  </data>
+  <data name="UCCnet" xml:space="preserve">
+    <value>UCCnet</value>
+  </data>
+  <data name="Unable to Load Data from the File, Please Check the file again" xml:space="preserve">
+    <value>Nicht imstande, Daten von der Akte zu laden, überprüfen Sie bitte die Akte wieder</value>
+  </data>
+  <data name="Unable to Load Data from the File, Please Check the file again1" xml:space="preserve">
+    <value>Det går inte att ladda data från Arkiv, Kontrollera filen igen</value>
+  </data>
+  <data name="Unselect All" xml:space="preserve">
+    <value>Unselect alles</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Update the product content by uploading files with updated product information" xml:space="preserve">
+    <value>Aktualisieren Sie den Produktinhalt, indem Sie Akten mit modernisierter Produktinformation laden</value>
+  </data>
+  <data name="Update:Width" xml:space="preserve">
+    <value>Updaten:Weite</value>
+  </data>
+  <data name="User Preferences" xml:space="preserve">
+    <value>Benutzer-Präferenzen</value>
+  </data>
+  <data name="Validate" xml:space="preserve">
+    <value>Validieren</value>
+  </data>
+  <data name="Value" xml:space="preserve">
+    <value>Wert</value>
+  </data>
+  <data name="Vendor" xml:space="preserve">
+    <value>Vendor</value>
+  </data>
+  <data name="Versioning Info" xml:space="preserve">
+    <value>Betroffene Informationen</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>Ansicht</value>
+  </data>
+  <data name="View Maintenance" xml:space="preserve">
+    <value>Ansicht-Wartung</value>
+  </data>
+  <data name="View Messages" xml:space="preserve">
+    <value>Ansicht-Mitteilungen</value>
+  </data>
+  <data name="View1" xml:space="preserve">
+    <value>Ansicht1</value>
+  </data>
+  <data name="Welcome to Riversand's Supplier Content Portal" xml:space="preserve">
+    <value>Willkommen zu Riversand' s-Lieferanten-Inhalts-Portal</value>
+  </data>
+  <data name="Where Used" xml:space="preserve">
+    <value>Wo verwendet</value>
+  </data>
+  <data name="will be named after the" xml:space="preserve">
+    <value>wird nach genannt</value>
+  </data>
+  <data name="Work Bench" xml:space="preserve">
+    <value>Werkbank</value>
+  </data>
+  <data name="Work List" xml:space="preserve">
+    <value>Arbeits-Liste</value>
+  </data>
+  <data name="Workflow" xml:space="preserve">
+    <value>Arbeitsfluß</value>
+  </data>
+  <data name="Workflow Inbox" xml:space="preserve">
+    <value>Arbeitsfluß Inbox</value>
+  </data>
+  <data name="WWRE" xml:space="preserve">
+    <value>WWRE</value>
+  </data>
+  <data name="XML Files" xml:space="preserve">
+    <value>XML Akten</value>
+  </data>
+  <data name="You are trying to remove global availability of saved search" xml:space="preserve">
+    <value>Sie versuchen, um globale Verfügbarkeit der gespeicherten Suche</value>
+  </data>
+  <data name="You do not have any permissions for this relationship type" xml:space="preserve">
+    <value>Sie haben keine Berechtigung für diese Art Beziehung</value>
+  </data>
+  <data name="You do not have permissions" xml:space="preserve">
+    <value>Sie haben keine Berechtigung</value>
+  </data>
+  <data name="You do not have sufficient permissions to perform this operation" xml:space="preserve">
+    <value>Sie haben nicht genügende Erlaubnis, diesen Betrieb durchzuführen</value>
+  </data>
+  <data name="{0} Containers were found" xml:space="preserve">
+    <value>{0} Kataloge wurden gefunden</value>
+  </data>
+  <data name="{0} taxonomies were found" xml:space="preserve">
+    <value>{0} Taxonomie wurden gefunden</value>
+  </data>
+  <data name="{0} views were found" xml:space="preserve">
+    <value>{0} Ansichten wurden gefunden</value>
+  </data>
+  <data name="Keyword Search" xml:space="preserve">
+    <value>Sökordsvolym</value>
+  </data>
+  <data name="Saved search list" xml:space="preserve">
+    <value>Sparade sökning listan</value>
+  </data>
+  <data name="Create Product" xml:space="preserve">
+    <value>Skapa Produkt</value>
+  </data>
+  <data name="Entity Masters" xml:space="preserve">
+    <value>Entitetsnivå Meisters</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Hjälp</value>
+  </data>
+  <data name="Integration Jobs" xml:space="preserve">
+    <value>Integration Jobb</value>
+  </data>
+  <data name="Knowledge Management" xml:space="preserve">
+    <value>Hantera Kunskap</value>
+  </data>
+  <data name="Knowledge References" xml:space="preserve">
+    <value>Knowledge Referenser</value>
+  </data>
+  <data name="Maintain Breaker Sets" xml:space="preserve">
+    <value>Bibehålla Breaker Satser</value>
+  </data>
+  <data name="Maintain Lists" xml:space="preserve">
+    <value>Bibehålla Listor</value>
+  </data>
+  <data name="Maintain Lookups" xml:space="preserve">
+    <value>Bibehålla Lookups</value>
+  </data>
+  <data name="Maintain Policies" xml:space="preserve">
+    <value>Bibehålla Politik</value>
+  </data>
+  <data name="Maintain Synonyms" xml:space="preserve">
+    <value>Bibehålla Synonymer</value>
+  </data>
+  <data name="Maintain UOM Types" xml:space="preserve">
+    <value>Bibehålla UOM Typer</value>
+  </data>
+  <data name="Maintain UOMs" xml:space="preserve">
+    <value>Bibehålla UOMs</value>
+  </data>
+  <data name="Maintain Word List Types" xml:space="preserve">
+    <value>Bibehålla Word List Typer</value>
+  </data>
+  <data name="Maintain Word Lists" xml:space="preserve">
+    <value>Bibehålla Word Lists</value>
+  </data>
+  <data name="Maintain Word Rules" xml:space="preserve">
+    <value>Bibehålla Word Regler</value>
+  </data>
+  <data name="Metadata Management" xml:space="preserve">
+    <value>Metadata Management</value>
+  </data>
+  <data name="Tools" xml:space="preserve">
+    <value>Verktyg</value>
+  </data>
+  <data name="Quick Search" xml:space="preserve">
+    <value>Snabbsök</value>
+  </data>
+  <data name="Get Images" xml:space="preserve">
+    <value>Hämta bilder</value>
+  </data>
+  <data name="Add Rule" xml:space="preserve">
+    <value>Lägg artikel</value>
+  </data>
+  <data name="Attribute Selection" xml:space="preserve">
+    <value>Attributuppsättning Urval</value>
+  </data>
+  <data name="No Results found for the search criteria." xml:space="preserve">
+    <value>Inga resultat hittades för sökningen kriterier.</value>
+  </data>
+  <data name="Save Search" xml:space="preserve">
+    <value>Spara sökning</value>
+  </data>
+  <data name="Saved Searches" xml:space="preserve">
+    <value>Sparade sökningar</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>All the components must be from the same Container</value>
+  </data>
+</root>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:import namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="EntityIdentificationMap">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Mappings" nillable="true" type="tns:MappingCollection" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="EntityIdentificationMap" nillable="true" type="tns:EntityIdentificationMap" />
+  <xs:complexType name="MappingCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_mappings" nillable="true" type="tns:ArrayOfMapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MappingCollection" nillable="true" type="tns:MappingCollection" />
+  <xs:complexType name="ArrayOfMapping">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Mapping" nillable="true" type="tns:Mapping" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMapping" nillable="true" type="tns:ArrayOfMapping" />
+  <xs:complexType name="Mapping">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="SourceName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="SourceType" type="q2:MappingDataType" />
+          <xs:element minOccurs="0" name="TargetName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="TargetType" type="q3:MappingDataType" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Mapping" nillable="true" type="tns:Mapping" />
+</xs:schema>

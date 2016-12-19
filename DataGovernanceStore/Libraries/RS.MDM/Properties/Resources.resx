@@ -1,0 +1,787 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DefaultStyleSheet" xml:space="preserve">
+    <value>&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+   &lt;xsl:output indent="no" method="html"/&gt;
+
+   &lt;xsl:template match="/"&gt;
+      &lt;HTML&gt;
+         &lt;HEAD&gt;
+            &lt;SCRIPT&gt;
+               &lt;xsl:comment&gt;&lt;![CDATA[
+                  function f(e){
+                     if (e.className=="ci") {
+                       if (e.children(0).innerText.indexOf("\n")&gt;0) fix(e,"cb");
+                     }
+                     if (e.className=="di") {
+                       if (e.children(0).innerText.indexOf("\n")&gt;0) fix(e,"db");
+                     } e.id="";
+                  }
+                  function fix(e,cl){
+                    e.className=cl;
+                    e.style.display="block";
+                    j=e.parentElement.children(0);
+                    j.className="c";
+                    k=j.children(0);
+                    k.style.visibility="visible";
+                    k.href="#";
+                  }
+                  function ch(e) {
+                    mark=e.children(0).children(0);
+                    if (mark.innerText=="+") {
+                      mark.innerText="-";
+                      for (var i=1;i&lt;e.children.length;i++) {
+                        e.children(i).style.display="block";
+                      }
+                    }
+                    else if (mark.innerText=="-") {
+                      mark.innerText="+";
+                      for (var i=1;i&lt;e.children.length;i++) {
+                        e.children(i).style.display="none";
+                      }
+                    }
+                  }
+                  function ch2(e) {
+                    mark=e.children(0).children(0);
+                    contents=e.children(1);
+                    if (mark.innerText=="+") {
+                      mark.innerText="-";
+                      if (contents.className=="db"||contents.className=="cb") {
+                        contents.style.display="block";
+                      }
+                      else {
+                        contents.style.display="inline";
+                      }
+                    }
+                    else if (mark.innerText=="-") {
+                      mark.innerText="+";
+                      contents.style.display="none";
+                    }
+                  }
+                  function cl() {
+                    e=window.event.srcElement;
+                    if (e.className!="c") {
+                      e=e.parentElement;
+                      if (e.className!="c") {
+                        return;
+                      }
+                    }
+                    e=e.parentElement;
+                    if (e.className=="e") {
+                      ch(e);
+                    }
+                    if (e.className=="k") {
+                      ch2(e);
+                    }
+                  }
+                  function ex(){}
+                  function h(){window.status=" ";}
+                  document.onclick=cl;
+              ]]&gt;
+              &lt;/xsl:comment&gt;
+            &lt;/SCRIPT&gt;
+            &lt;STYLE&gt;
+              BODY {font:x-small 'Verdana'; margin-right:1.5em}
+                .c  {cursor:hand}
+                .b  {color:red; font-family:'Courier New'; font-weight:bold;
+                     text-decoration:none}
+                .e  {margin-left:1em; text-indent:-1em; margin-right:1em}
+                .k  {margin-left:1em; text-indent:-1em; margin-right:1em}
+                .t  {color:#990000}
+                .xt {color:#990099}
+                .ns {color:red}
+                .dt {color:green}
+                .m  {color:blue}
+                .tx {font-weight:bold}
+                .db {text-indent:0px; margin-left:1em; margin-top:0px;
+                     margin-bottom:0px;padding-left:.3em;
+                     border-left:1px solid #CCCCCC; font:small Courier}
+                .di {font:small Courier}
+                .d  {color:blue}
+                .pi {color:blue}
+                .cb {text-indent:0px; margin-left:1em; margin-top:0px;
+                     margin-bottom:0px;padding-left:.3em; font:small Courier;
+                     color:#888888}
+                .ci {font:small Courier; color:#888888}
+                PRE {margin:0px; display:inline}
+           &lt;/STYLE&gt;
+         &lt;/HEAD&gt;
+         &lt;BODY class="st"&gt;
+            &lt;xsl:apply-templates/&gt;
+         &lt;/BODY&gt;
+      &lt;/HTML&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="processing-instruction()"&gt;
+      &lt;DIV class="e"&gt;
+         &lt;SPAN class="b"&gt;
+            &lt;xsl:call-template name="entity-ref"&gt;
+               &lt;xsl:with-param name="name"&gt;nbsp&lt;/xsl:with-param&gt;
+            &lt;/xsl:call-template&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="m"&gt;
+            &lt;xsl:text&gt;&amp;lt;?&lt;/xsl:text&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="pi"&gt;
+            &lt;xsl:value-of select="name(.)"/&gt;
+            &lt;xsl:value-of select="."/&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="m"&gt;
+            &lt;xsl:text&gt;?&gt;&lt;/xsl:text&gt;
+         &lt;/SPAN&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="processing-instruction('xml')"&gt;
+      &lt;DIV class="e"&gt;
+         &lt;SPAN class="b"&gt;
+            &lt;xsl:call-template name="entity-ref"&gt;
+               &lt;xsl:with-param name="name"&gt;nbsp&lt;/xsl:with-param&gt;
+            &lt;/xsl:call-template&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="m"&gt;
+            &lt;xsl:text&gt;&amp;lt;?&lt;/xsl:text&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="pi"&gt;
+            &lt;xsl:text&gt;xml &lt;/xsl:text&gt;
+            &lt;xsl:for-each select="@*"&gt;
+               &lt;xsl:value-of select="name(.)"/&gt;
+               &lt;xsl:text&gt;="&lt;/xsl:text&gt;
+               &lt;xsl:value-of select="."/&gt;
+               &lt;xsl:text&gt;" &lt;/xsl:text&gt;
+            &lt;/xsl:for-each&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="m"&gt;
+            &lt;xsl:text&gt;?&gt;&lt;/xsl:text&gt;
+         &lt;/SPAN&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="@*"&gt;
+      &lt;SPAN&gt;
+         &lt;xsl:attribute name="class"&gt;
+            &lt;xsl:if test="xsl:*/@*"&gt;
+              &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+            &lt;/xsl:if&gt;
+            &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+         &lt;/xsl:attribute&gt;
+         &lt;xsl:value-of select="name(.)"/&gt;
+      &lt;/SPAN&gt;
+      &lt;SPAN class="m"&gt;="&lt;/SPAN&gt;
+      &lt;B&gt;
+         &lt;xsl:value-of select="."/&gt;
+      &lt;/B&gt;
+      &lt;SPAN class="m"&gt;"&lt;/SPAN&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="text()"&gt;
+      &lt;DIV class="e"&gt;
+         &lt;SPAN class="b"&gt; &lt;/SPAN&gt;
+         &lt;SPAN class="tx"&gt;
+            &lt;xsl:value-of select="."/&gt;
+         &lt;/SPAN&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="comment()"&gt;
+      &lt;DIV class="k"&gt;
+         &lt;SPAN&gt;
+            &lt;A STYLE="visibility:hidden" class="b" onclick="return false" 
+               onfocus="h()"&gt;-&lt;/A&gt;
+            &lt;SPAN class="m"&gt;
+               &lt;xsl:text&gt;&amp;lt;!--&lt;/xsl:text&gt;
+            &lt;/SPAN&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="ci" id="clean"&gt;
+            &lt;PRE&gt;
+               &lt;xsl:value-of select="."/&gt;
+            &lt;/PRE&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="b"&gt;
+            &lt;xsl:call-template name="entity-ref"&gt;
+               &lt;xsl:with-param name="name"&gt;nbsp&lt;/xsl:with-param&gt;
+            &lt;/xsl:call-template&gt;
+         &lt;/SPAN&gt;
+         &lt;SPAN class="m"&gt;
+            &lt;xsl:text&gt;--&gt;&lt;/xsl:text&gt;
+         &lt;/SPAN&gt;
+         &lt;SCRIPT&gt;f(clean);&lt;/SCRIPT&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="*"&gt;
+      &lt;DIV class="e"&gt;
+         &lt;DIV STYLE="margin-left:1em;text-indent:-2em"&gt;
+            &lt;SPAN class="b"&gt;
+               &lt;xsl:call-template name="entity-ref"&gt;
+                  &lt;xsl:with-param name="name"&gt;nbsp&lt;/xsl:with-param&gt;
+               &lt;/xsl:call-template&gt;
+            &lt;/SPAN&gt;
+            &lt;SPAN class="m"&gt;&amp;lt;&lt;/SPAN&gt;
+            &lt;SPAN&gt;
+               &lt;xsl:attribute name="class"&gt;
+                  &lt;xsl:if test="xsl:*"&gt;
+                     &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+                  &lt;/xsl:if&gt;
+                  &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+               &lt;/xsl:attribute&gt;
+               &lt;xsl:value-of select="name(.)"/&gt;
+               &lt;xsl:if test="@*"&gt;
+                  &lt;xsl:text&gt; &lt;/xsl:text&gt;
+               &lt;/xsl:if&gt;
+            &lt;/SPAN&gt;
+            &lt;xsl:apply-templates select="@*"/&gt;
+            &lt;SPAN class="m"&gt;
+               &lt;xsl:text&gt;/&gt;&lt;/xsl:text&gt;
+            &lt;/SPAN&gt;
+         &lt;/DIV&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="*[node()]"&gt;
+      &lt;DIV class="e"&gt;
+         &lt;DIV class="c"&gt;
+            &lt;A class="b" href="#" onclick="return false" onfocus="h()"&gt;-&lt;/A&gt;
+            &lt;SPAN class="m"&gt;&amp;lt;&lt;/SPAN&gt;
+            &lt;SPAN&gt;
+               &lt;xsl:attribute name="class"&gt;
+                  &lt;xsl:if test="xsl:*"&gt;
+                     &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+                  &lt;/xsl:if&gt;
+                  &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+               &lt;/xsl:attribute&gt;
+               &lt;xsl:value-of select="name(.)"/&gt;
+               &lt;xsl:if test="@*"&gt;
+                  &lt;xsl:text&gt; &lt;/xsl:text&gt;
+               &lt;/xsl:if&gt;
+            &lt;/SPAN&gt;
+            &lt;xsl:apply-templates select="@*"/&gt;
+            &lt;SPAN class="m"&gt;
+               &lt;xsl:text&gt;&gt;&lt;/xsl:text&gt;
+            &lt;/SPAN&gt;
+         &lt;/DIV&gt;
+         &lt;DIV&gt;
+            &lt;xsl:apply-templates/&gt;
+            &lt;DIV&gt;
+               &lt;SPAN class="b"&gt;
+                  &lt;xsl:call-template name="entity-ref"&gt;
+                     &lt;xsl:with-param name="name"&gt;nbsp&lt;/xsl:with-param&gt;
+                  &lt;/xsl:call-template&gt;
+               &lt;/SPAN&gt;
+               &lt;SPAN class="m"&gt;
+                  &lt;xsl:text&gt;&amp;lt;/&lt;/xsl:text&gt;
+               &lt;/SPAN&gt;
+               &lt;SPAN&gt;
+                  &lt;xsl:attribute name="class"&gt;
+                     &lt;xsl:if test="xsl:*"&gt;
+                        &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+                     &lt;/xsl:if&gt;
+                     &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+                  &lt;/xsl:attribute&gt;
+                  &lt;xsl:value-of select="name(.)"/&gt;
+               &lt;/SPAN&gt;
+               &lt;SPAN class="m"&gt;
+                  &lt;xsl:text&gt;&gt;&lt;/xsl:text&gt;
+               &lt;/SPAN&gt;
+            &lt;/DIV&gt;
+         &lt;/DIV&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="*[text() and not (comment() or processing-instruction())]"&gt;
+      &lt;DIV class="e"&gt;
+         &lt;DIV STYLE="margin-left:1em;text-indent:-2em"&gt;
+            &lt;SPAN class="b"&gt;
+               &lt;xsl:call-template name="entity-ref"&gt;
+                  &lt;xsl:with-param name="name"&gt;nbsp&lt;/xsl:with-param&gt;
+               &lt;/xsl:call-template&gt;
+            &lt;/SPAN&gt;
+            &lt;SPAN class="m"&gt;
+               &lt;xsl:text&gt;&amp;lt;&lt;/xsl:text&gt;
+            &lt;/SPAN&gt;
+            &lt;SPAN&gt;
+               &lt;xsl:attribute name="class"&gt;
+                  &lt;xsl:if test="xsl:*"&gt;
+                     &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+                  &lt;/xsl:if&gt;
+                  &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+               &lt;/xsl:attribute&gt;
+               &lt;xsl:value-of select="name(.)"/&gt;
+               &lt;xsl:if test="@*"&gt;
+                  &lt;xsl:text&gt; &lt;/xsl:text&gt;
+               &lt;/xsl:if&gt;
+            &lt;/SPAN&gt;
+            &lt;xsl:apply-templates select="@*"/&gt;
+            &lt;SPAN class="m"&gt;
+               &lt;xsl:text&gt;&gt;&lt;/xsl:text&gt;
+            &lt;/SPAN&gt;
+            &lt;SPAN class="tx"&gt;
+               &lt;xsl:value-of select="."/&gt;
+            &lt;/SPAN&gt;
+            &lt;SPAN class="m"&gt;&amp;lt;/&lt;/SPAN&gt;
+            &lt;SPAN&gt;
+               &lt;xsl:attribute name="class"&gt;
+                  &lt;xsl:if test="xsl:*"&gt;
+                     &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+                  &lt;/xsl:if&gt;
+                  &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+               &lt;/xsl:attribute&gt;
+               &lt;xsl:value-of select="name(.)"/&gt;
+            &lt;/SPAN&gt;
+            &lt;SPAN class="m"&gt;
+               &lt;xsl:text&gt;&gt;&lt;/xsl:text&gt;
+            &lt;/SPAN&gt;
+         &lt;/DIV&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template match="*[*]" priority="20"&gt;
+      &lt;DIV class="e"&gt;
+         &lt;DIV STYLE="margin-left:1em;text-indent:-2em" class="c"&gt;
+            &lt;A class="b" href="#" onclick="return false" onfocus="h()"&gt;-&lt;/A&gt;
+            &lt;SPAN class="m"&gt;&amp;lt;&lt;/SPAN&gt;
+            &lt;SPAN&gt;
+               &lt;xsl:attribute name="class"&gt;
+                  &lt;xsl:if test="xsl:*"&gt;
+                     &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+                  &lt;/xsl:if&gt;
+                  &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+               &lt;/xsl:attribute&gt;
+               &lt;xsl:value-of select="name(.)"/&gt;
+               &lt;xsl:if test="@*"&gt;
+                  &lt;xsl:text&gt; &lt;/xsl:text&gt;
+               &lt;/xsl:if&gt;
+            &lt;/SPAN&gt;
+            &lt;xsl:apply-templates select="@*"/&gt;
+            &lt;SPAN class="m"&gt;
+               &lt;xsl:text&gt;&gt;&lt;/xsl:text&gt;
+            &lt;/SPAN&gt;
+         &lt;/DIV&gt;
+         &lt;DIV&gt;
+            &lt;xsl:apply-templates/&gt;
+            &lt;DIV&gt;
+               &lt;SPAN class="b"&gt;
+                  &lt;xsl:call-template name="entity-ref"&gt;
+                     &lt;xsl:with-param name="name"&gt;nbsp&lt;/xsl:with-param&gt;
+                  &lt;/xsl:call-template&gt;
+               &lt;/SPAN&gt;
+               &lt;SPAN class="m"&gt;
+                  &lt;xsl:text&gt;&amp;lt;/&lt;/xsl:text&gt;
+               &lt;/SPAN&gt;
+               &lt;SPAN&gt;
+                  &lt;xsl:attribute name="class"&gt;
+                     &lt;xsl:if test="xsl:*"&gt;
+                        &lt;xsl:text&gt;x&lt;/xsl:text&gt;
+                     &lt;/xsl:if&gt;
+                     &lt;xsl:text&gt;t&lt;/xsl:text&gt;
+                  &lt;/xsl:attribute&gt;
+                  &lt;xsl:value-of select="name(.)"/&gt;
+               &lt;/SPAN&gt;
+               &lt;SPAN class="m"&gt;
+                  &lt;xsl:text&gt;&gt;&lt;/xsl:text&gt;
+               &lt;/SPAN&gt;
+            &lt;/DIV&gt;
+         &lt;/DIV&gt;
+      &lt;/DIV&gt;
+   &lt;/xsl:template&gt;
+
+   &lt;xsl:template name="entity-ref"&gt;
+      &lt;xsl:param name="name"/&gt;
+      &lt;xsl:text disable-output-escaping="yes"&gt;&amp;amp;&lt;/xsl:text&gt;
+      &lt;xsl:value-of select="$name"/&gt;
+      &lt;xsl:text&gt;;&lt;/xsl:text&gt;
+   &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</value>
+  </data>
+  <data name="Xml2HtmlStyleSheet" xml:space="preserve">
+    <value>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;!--
+
+Pretty XML Tree Viewer 1.0 (15 Oct 2001):
+An XPath/XSLT visualisation tool for XML documents
+
+Use this stylesheet to produce an HTML document containing an ASCII art
+representation of an XML document's node tree, as exposed by the XML parser
+and interpreted by the XSLT processor. Note that the parser may not expose
+comments to the XSLT processor.
+
+Usage notes
+===========
+
+The output from this stylesheet is HTML that relies heavily on the tree-view.css
+stylesheet. If you need plain text output, use the ASCII-only version, not this
+stylesheet.
+
+By default, this stylesheet will not show namespace nodes. If the XSLT processor
+supports the namespace axis and you want to see namespace nodes, just pass a
+non-empty "show_ns" parameter to the stylesheet. Example using Instant Saxon:
+
+    saxon somefile.xml tree-view.xsl show_ns=yes
+
+If you want to ignore whitespace-only text nodes, uncomment the xsl:strip-space
+instruction below. This is recommended if you are a beginner.
+
+--&gt;
+
+&lt;xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"&gt;
+
+  &lt;xsl:output method="html" indent="no"/&gt;
+
+  &lt;!--
+  &lt;xsl:strip-space elements="*"/&gt;
+--&gt;
+
+  &lt;xsl:param name="show_ns"/&gt;
+  &lt;xsl:variable name="apos"&gt;'&lt;/xsl:variable&gt;
+
+  &lt;xsl:template match="/"&gt;
+    &lt;html&gt;
+      &lt;head&gt;
+        &lt;title&gt;tree.xslt output&lt;/title&gt;
+        &lt;link type="text/css" rel="stylesheet" href="tree-view.css"/&gt;
+        &lt;style type="text/css" media="screen"&gt;
+          &lt;!--
+            body       { font-family: sans-serif; font-size: 80%; background-color: #EAEAD9; color: black }
+
+            .connector { font-family: monospace; }
+
+            .name      { color: navy; background-color: white; text-decoration: underline; font-weight: bold;
+                           padding-top: 0px; padding-bottom: 1px; padding-left: 3px; padding-right: 3px }
+            .altname   { color: navy; text-decoration: underline }
+            .uri       { color: #444; font-style: italic }
+            .value     { color: #040; background-color: #CCC; font-weight: bold }
+            .escape    { color: #620; font-family: monospace }
+
+            .root      { color: yellow; background-color: black }
+            .element   { color: yellow; background-color: navy }
+            .namespace { color: yellow; background-color: #333 }
+            .attribute { color: yellow; background-color: #040 }
+            .text      { color: yellow; background-color: #400 }
+            .pi        { color: yellow; background-color: #044 }
+            .comment   { color: yellow; background-color: #303 }
+
+            .root,.element,.attribute,.namespace,.text,.comment,.pi
+              { font-weight: bold;
+                padding-top: 0px; padding-bottom: 1px; padding-left: 3px; padding-right: 3px }
+          --&gt;
+        &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+        &lt;h3&gt;tree-view.xsl output&lt;/h3&gt;
+        &lt;xsl:apply-templates select="." mode="render"/&gt;
+      &lt;/body&gt;
+    &lt;/html&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="/" mode="render"&gt;
+    &lt;span class="root"&gt;root&lt;/span&gt;
+    &lt;br/&gt;
+    &lt;xsl:apply-templates mode="render"/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="*" mode="render"&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;br/&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;span class='connector'&gt;___&lt;/span&gt;
+    &lt;span class="element"&gt;element&lt;/span&gt;
+    &lt;xsl:text&gt;&amp;#160;&lt;/xsl:text&gt;
+    &lt;xsl:if test="namespace-uri()"&gt;
+      &lt;xsl:text&gt;{&lt;/xsl:text&gt;
+      &lt;span class="uri"&gt;
+        &lt;xsl:value-of select="namespace-uri()"/&gt;
+      &lt;/span&gt;
+      &lt;xsl:text&gt;}&lt;/xsl:text&gt;
+    &lt;/xsl:if&gt;
+    &lt;span class="name"&gt;
+      &lt;xsl:value-of select="local-name()"/&gt;
+    &lt;/span&gt;
+    &lt;xsl:if test="local-name() != name()"&gt;
+      &lt;xsl:text&gt; (QName &lt;/xsl:text&gt;
+      &lt;span class="altname"&gt;
+        &lt;xsl:value-of select="name()"/&gt;
+      &lt;/span&gt;
+      &lt;xsl:text&gt;)&lt;/xsl:text&gt;
+    &lt;/xsl:if&gt;
+    &lt;br/&gt;
+    &lt;xsl:apply-templates select="@*" mode="render"/&gt;
+    &lt;xsl:if test="$show_ns"&gt;
+      &lt;xsl:for-each select="namespace::*"&gt;
+        &lt;xsl:sort select="name()"/&gt;
+        &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+        &lt;span class='connector'&gt;&amp;#160;&amp;#160;&lt;/span&gt;
+        &lt;span class='connector'&gt;\___&lt;/span&gt;
+        &lt;span class="namespace"&gt;namespace&lt;/span&gt;
+        &lt;xsl:text&gt;&amp;#160;&lt;/xsl:text&gt;
+        &lt;xsl:choose&gt;
+          &lt;xsl:when test="name()"&gt;
+            &lt;span class="name"&gt;
+              &lt;xsl:value-of select="name()"/&gt;
+            &lt;/span&gt;
+          &lt;/xsl:when&gt;
+          &lt;xsl:otherwise&gt;#default&lt;/xsl:otherwise&gt;
+        &lt;/xsl:choose&gt;
+        &lt;xsl:text&gt; = &lt;/xsl:text&gt;
+        &lt;span class="uri"&gt;
+          &lt;xsl:value-of select="."/&gt;
+        &lt;/span&gt;
+        &lt;br/&gt;
+      &lt;/xsl:for-each&gt;
+    &lt;/xsl:if&gt;
+    &lt;xsl:apply-templates mode="render"/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="@*" mode="render"&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;span class='connector'&gt;&amp;#160;&amp;#160;&lt;/span&gt;
+    &lt;span class='connector'&gt;\___&lt;/span&gt;
+    &lt;span class="attribute"&gt;attribute&lt;/span&gt;
+    &lt;xsl:text&gt;&amp;#160;&lt;/xsl:text&gt;
+    &lt;xsl:if test="namespace-uri()"&gt;
+      &lt;xsl:text&gt;{&lt;/xsl:text&gt;
+      &lt;span class="uri"&gt;
+        &lt;xsl:value-of select="namespace-uri()"/&gt;
+      &lt;/span&gt;
+      &lt;xsl:text&gt;}&lt;/xsl:text&gt;
+    &lt;/xsl:if&gt;
+    &lt;span class="name"&gt;
+      &lt;xsl:value-of select="local-name()"/&gt;
+    &lt;/span&gt;
+    &lt;xsl:if test="local-name() != name()"&gt;
+      &lt;xsl:text&gt; (QName &lt;/xsl:text&gt;
+      &lt;span class="altname"&gt;
+        &lt;xsl:value-of select="name()"/&gt;
+      &lt;/span&gt;
+      &lt;xsl:text&gt;)&lt;/xsl:text&gt;
+    &lt;/xsl:if&gt;
+    &lt;xsl:text&gt; = &lt;/xsl:text&gt;
+    &lt;span class="value"&gt;
+      &lt;!-- make spaces be non-breaking spaces, since this is HTML --&gt;
+      &lt;xsl:call-template name="escape-ws"&gt;
+        &lt;xsl:with-param name="text" select="translate(.,' ','&amp;#160;')"/&gt;
+      &lt;/xsl:call-template&gt;
+    &lt;/span&gt;
+    &lt;br/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="text()" mode="render"&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;br/&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;span class='connector'&gt;___&lt;/span&gt;
+    &lt;span class="text"&gt;text&lt;/span&gt;
+    &lt;xsl:text&gt;&amp;#160;&lt;/xsl:text&gt;
+    &lt;span class="value"&gt;
+      &lt;!-- make spaces be non-breaking spaces, since this is HTML --&gt;
+      &lt;xsl:call-template name="escape-ws"&gt;
+        &lt;xsl:with-param name="text" select="translate(.,' ','&amp;#160;')"/&gt;
+      &lt;/xsl:call-template&gt;
+    &lt;/span&gt;
+    &lt;br/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="comment()" mode="render"&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;br/&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;span class='connector'&gt;___&lt;/span&gt;
+    &lt;span class="comment"&gt;comment&lt;/span&gt;
+    &lt;xsl:text&gt;&amp;#160;&lt;/xsl:text&gt;
+    &lt;span class="value"&gt;
+      &lt;!-- make spaces be non-breaking spaces, since this is HTML --&gt;
+      &lt;xsl:call-template name="escape-ws"&gt;
+        &lt;xsl:with-param name="text" select="translate(.,' ','&amp;#160;')"/&gt;
+      &lt;/xsl:call-template&gt;
+    &lt;/span&gt;
+    &lt;br/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template match="processing-instruction()" mode="render"&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;br/&gt;
+    &lt;xsl:call-template name="ascii-art-hierarchy"/&gt;
+    &lt;span class='connector'&gt;___&lt;/span&gt;
+    &lt;span class="pi"&gt;processing instruction&lt;/span&gt;
+    &lt;xsl:text&gt;&amp;#160;&lt;/xsl:text&gt;
+    &lt;xsl:text&gt;target=&lt;/xsl:text&gt;
+    &lt;span class="value"&gt;
+      &lt;xsl:value-of select="name()"/&gt;
+    &lt;/span&gt;
+    &lt;xsl:text&gt;&amp;#160;instruction=&lt;/xsl:text&gt;
+    &lt;span class="value"&gt;
+      &lt;xsl:value-of select="."/&gt;
+    &lt;/span&gt;
+    &lt;br/&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;xsl:template name="ascii-art-hierarchy"&gt;
+    &lt;xsl:for-each select="ancestor::*"&gt;
+      &lt;xsl:choose&gt;
+        &lt;xsl:when test="following-sibling::node()"&gt;
+          &lt;span class='connector'&gt;&amp;#160;&amp;#160;&lt;/span&gt;|&lt;span class='connector'&gt;&amp;#160;&amp;#160;&lt;/span&gt;
+          &lt;xsl:text&gt;&amp;#160;&lt;/xsl:text&gt;
+        &lt;/xsl:when&gt;
+        &lt;xsl:otherwise&gt;
+          &lt;span class='connector'&gt;&amp;#160;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;
+          &lt;span class='connector'&gt;&amp;#160;&amp;#160;&lt;/span&gt;
+        &lt;/xsl:otherwise&gt;
+      &lt;/xsl:choose&gt;
+    &lt;/xsl:for-each&gt;
+    &lt;xsl:choose&gt;
+      &lt;xsl:when test="parent::node() and ../child::node()"&gt;
+        &lt;span class='connector'&gt;&amp;#160;&amp;#160;&lt;/span&gt;
+        &lt;xsl:text&gt;|&lt;/xsl:text&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:otherwise&gt;
+        &lt;span class='connector'&gt;&amp;#160;&amp;#160;&amp;#160;&lt;/span&gt;
+      &lt;/xsl:otherwise&gt;
+    &lt;/xsl:choose&gt;
+  &lt;/xsl:template&gt;
+
+  &lt;!-- recursive template to escape linefeeds, tabs --&gt;
+  &lt;xsl:template name="escape-ws"&gt;
+    &lt;xsl:param name="text"/&gt;
+    &lt;xsl:choose&gt;
+      &lt;xsl:when test="contains($text, '&amp;#xA;')"&gt;
+        &lt;xsl:call-template name="escape-ws"&gt;
+          &lt;xsl:with-param name="text" select="substring-before($text, '&amp;#xA;')"/&gt;
+        &lt;/xsl:call-template&gt;
+        &lt;span class="escape"&gt;\n&lt;/span&gt;
+        &lt;xsl:call-template name="escape-ws"&gt;
+          &lt;xsl:with-param name="text" select="substring-after($text, '&amp;#xA;')"/&gt;
+        &lt;/xsl:call-template&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:when test="contains($text, '&amp;#x9;')"&gt;
+        &lt;xsl:value-of select="substring-before($text, '&amp;#x9;')"/&gt;
+        &lt;span class="escape"&gt;\t&lt;/span&gt;
+        &lt;xsl:call-template name="escape-ws"&gt;
+          &lt;xsl:with-param name="text" select="substring-after($text, '&amp;#x9;')"/&gt;
+        &lt;/xsl:call-template&gt;
+      &lt;/xsl:when&gt;
+      &lt;xsl:otherwise&gt;
+        &lt;xsl:value-of select="$text"/&gt;
+      &lt;/xsl:otherwise&gt;
+    &lt;/xsl:choose&gt;
+  &lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;</value>
+  </data>
+</root>

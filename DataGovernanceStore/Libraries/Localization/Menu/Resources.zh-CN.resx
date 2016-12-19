@@ -1,0 +1,657 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="1 dynamictaxonomy found" xml:space="preserve">
+    <value>发现1个动态层次 </value>
+  </data>
+  <data name="Add DynamicTaxonomy:Width" xml:space="preserve">
+    <value>150 </value>
+  </data>
+  <data name="Administration" xml:space="preserve">
+    <value>管理 </value>
+  </data>
+  <data name="Advanced Search" xml:space="preserve">
+    <value>高级搜索 </value>
+  </data>
+  <data name="Aggregation" xml:space="preserve">
+    <value>输入</value>
+  </data>
+  <data name="API" xml:space="preserve">
+    <value>API</value>
+  </data>
+  <data name="API Delta" xml:space="preserve">
+    <value>动态API</value>
+  </data>
+  <data name="Approver Configuration" xml:space="preserve">
+    <value>审批人员配置 </value>
+  </data>
+  <data name="Assign Tasks" xml:space="preserve">
+    <value>分配任务 </value>
+  </data>
+  <data name="Attribute Generator" xml:space="preserve">
+    <value>属性发生器 </value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>属性 </value>
+  </data>
+  <data name="Auto Classification" xml:space="preserve">
+    <value>自动分类 </value>
+  </data>
+  <data name="Browse Catalog" xml:space="preserve">
+    <value>浏览目录 </value>
+  </data>
+  <data name="Browse Contracts" xml:space="preserve">
+    <value>浏览合同 </value>
+  </data>
+  <data name="Bulk Edit" xml:space="preserve">
+    <value>批量修改 </value>
+  </data>
+  <data name="Bulk Simulation" xml:space="preserve">
+    <value>批量仿真 </value>
+  </data>
+  <data name="Catalog" xml:space="preserve">
+    <value>目录 </value>
+  </data>
+  <data name="Catalog Profile" xml:space="preserve">
+    <value>目录简介 </value>
+  </data>
+  <data name="Catalog Staging" xml:space="preserve">
+    <value>目录分期 </value>
+  </data>
+  <data name="catalogs were found" xml:space="preserve">
+    <value>容器被发现 </value>
+  </data>
+  <data name="Category Attribute Mapping" xml:space="preserve">
+    <value>分类属性映射 </value>
+  </data>
+  <data name="Category Mapping" xml:space="preserve">
+    <value>分类映射 </value>
+  </data>
+  <data name="Channel Management" xml:space="preserve">
+    <value>渠道管理 </value>
+  </data>
+  <data name="Close DynamicTaxonomy" xml:space="preserve">
+    <value>关闭动态层次 </value>
+  </data>
+  <data name="Close DynamicTaxonomy:Width" xml:space="preserve">
+    <value>150 </value>
+  </data>
+  <data name="Columnar Files" xml:space="preserve">
+    <value>列状文件 </value>
+  </data>
+  <data name="Component" xml:space="preserve">
+    <value>组件 </value>
+  </data>
+  <data name="Configure" xml:space="preserve">
+    <value>配置 </value>
+  </data>
+  <data name="Configure Category Attribute Approvers" xml:space="preserve">
+    <value>配置类别属性审批 </value>
+  </data>
+  <data name="Configure Manufactures" xml:space="preserve">
+    <value>配置制造 </value>
+  </data>
+  <data name="Configure Notification Users" xml:space="preserve">
+    <value>配置通知用户 </value>
+  </data>
+  <data name="Configure Org Delta" xml:space="preserve">
+    <value>配置动态组织</value>
+  </data>
+  <data name="Configure Organization for Notifications" xml:space="preserve">
+    <value>配置组织的通知 </value>
+  </data>
+  <data name="Configure Relations" xml:space="preserve">
+    <value>配置关系 </value>
+  </data>
+  <data name="Configure Stages" xml:space="preserve">
+    <value>配置阶段 </value>
+  </data>
+  <data name="Configure Suppliers" xml:space="preserve">
+    <value>配置供应商 </value>
+  </data>
+  <data name="Configure System Delta" xml:space="preserve">
+    <value>配置系统动态</value>
+  </data>
+  <data name="Configure WorkFlow Approvers" xml:space="preserve">
+    <value>配置工作流审批 </value>
+  </data>
+  <data name="Configure Workflow Events" xml:space="preserve">
+    <value>配置工作流活动 </value>
+  </data>
+  <data name="Configure Workflow Users" xml:space="preserve">
+    <value>用户配置的工作流 </value>
+  </data>
+  <data name="Conoco Demo" xml:space="preserve">
+    <value>Conoco演示 </value>
+  </data>
+  <data name="Conoco Report" xml:space="preserve">
+    <value>Conoco报告 </value>
+  </data>
+  <data name="Content Cleanser" xml:space="preserve">
+    <value>内容清洗</value>
+  </data>
+  <data name="Contracts" xml:space="preserve">
+    <value>合同 </value>
+  </data>
+  <data name="Country Factor &amp; Discount" xml:space="preserve">
+    <value>国家因子及贴现 </value>
+  </data>
+  <data name="Create Category Mapping" xml:space="preserve">
+    <value>创建类别映射 </value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>消费者 </value>
+  </data>
+  <data name="Data Cleansing" xml:space="preserve">
+    <value>数据清洗 </value>
+  </data>
+  <data name="Data Pools" xml:space="preserve">
+    <value>数据池 </value>
+  </data>
+  <data name="Database" xml:space="preserve">
+    <value>数据库 </value>
+  </data>
+  <data name="Delete DynamicTaxonomy" xml:space="preserve">
+    <value>删除动态层次 </value>
+  </data>
+  <data name="Direct Connect" xml:space="preserve">
+    <value>直接连接 </value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>草稿 </value>
+  </data>
+  <data name="dynamic taxonomies were found" xml:space="preserve">
+    <value>动态层次被发现 </value>
+  </data>
+  <data name="Dynamic Taxonomy(s) successfully deleted." xml:space="preserve">
+    <value>动态层次已成功删除。 </value>
+  </data>
+  <data name="DynamicTaxonomy" xml:space="preserve">
+    <value>动态层次 </value>
+  </data>
+  <data name="DynamicTaxonomy Maintenance" xml:space="preserve">
+    <value>动态层次维修 </value>
+  </data>
+  <data name="Edit DynamicTaxonomy" xml:space="preserve">
+    <value>编辑动态层次 </value>
+  </data>
+  <data name="Edit DynamicTaxonomy Locales" xml:space="preserve">
+    <value>编辑动态层次设置 </value>
+  </data>
+  <data name="Estimate Default" xml:space="preserve">
+    <value>估计默认值</value>
+  </data>
+  <data name="Event Log" xml:space="preserve">
+    <value>事件日志 </value>
+  </data>
+  <data name="Export Inbox" xml:space="preserve">
+    <value>出口收件匣 </value>
+  </data>
+  <data name="Export Price Factors" xml:space="preserve">
+    <value>出口价格因素 </value>
+  </data>
+  <data name="External NPI" xml:space="preserve">
+    <value>外部新产品引进 </value>
+  </data>
+  <data name="Generate Rules" xml:space="preserve">
+    <value>生成规则 </value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>帮助 </value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="Import Inbox" xml:space="preserve">
+    <value>进口收件匣 </value>
+  </data>
+  <data name="Integration" xml:space="preserve">
+    <value>一体化 </value>
+  </data>
+  <data name="Job Status" xml:space="preserve">
+    <value>工作状态 </value>
+  </data>
+  <data name="Languages and Locales" xml:space="preserve">
+    <value>语言和区域设置 </value>
+  </data>
+  <data name="Link Components" xml:space="preserve">
+    <value>链接组件 </value>
+  </data>
+  <data name="Link Pricing Types To Tiers" xml:space="preserve">
+    <value>链接定价类型第三世界 </value>
+  </data>
+  <data name="Load Jobs" xml:space="preserve">
+    <value>负载工作</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>注销 </value>
+  </data>
+  <data name="Maintain Attribute Metadata" xml:space="preserve">
+    <value>维护属性数据 </value>
+  </data>
+  <data name="Maintain Bulk Pricing" xml:space="preserve">
+    <value>维护散装定价 </value>
+  </data>
+  <data name="Maintain Catalog" xml:space="preserve">
+    <value>维护目录 </value>
+  </data>
+  <data name="Maintain Columns" xml:space="preserve">
+    <value>维护专栏 </value>
+  </data>
+  <data name="Maintain Component" xml:space="preserve">
+    <value>维护组件 </value>
+  </data>
+  <data name="Maintain Component Type" xml:space="preserve">
+    <value>维护组件类型 </value>
+  </data>
+  <data name="Maintain Contract" xml:space="preserve">
+    <value>维护合同 </value>
+  </data>
+  <data name="Maintain Country/Regions" xml:space="preserve">
+    <value>维护国家/地区 </value>
+  </data>
+  <data name="Maintain Currency" xml:space="preserve">
+    <value>维持货币 </value>
+  </data>
+  <data name="Maintain Customer" xml:space="preserve">
+    <value>维持客户 </value>
+  </data>
+  <data name="Maintain DynamicTaxonomy" xml:space="preserve">
+    <value>保持动态层次 </value>
+  </data>
+  <data name="Maintain Ext Sys Key Data" xml:space="preserve">
+    <value>保持分机系统关键数据 </value>
+  </data>
+  <data name="Maintain Interface Definition" xml:space="preserve">
+    <value>保持接口定义 </value>
+  </data>
+  <data name="Maintain Jobs" xml:space="preserve">
+    <value>保持乔布斯 </value>
+  </data>
+  <data name="Maintain Languages" xml:space="preserve">
+    <value>保持语言 </value>
+  </data>
+  <data name="Maintain Locales" xml:space="preserve">
+    <value>保持区域设置 </value>
+  </data>
+  <data name="Maintain Metadata" xml:space="preserve">
+    <value>保持数据 </value>
+  </data>
+  <data name="Maintain Object Type" xml:space="preserve">
+    <value>保持对象类型 </value>
+  </data>
+  <data name="Maintain Org Structure" xml:space="preserve">
+    <value>保持组织结构 </value>
+  </data>
+  <data name="Maintain Organization" xml:space="preserve">
+    <value>保持组织 </value>
+  </data>
+  <data name="Maintain Organization Types" xml:space="preserve">
+    <value>保持组织类型 </value>
+  </data>
+  <data name="Maintain Pricing" xml:space="preserve">
+    <value>保持定价 </value>
+  </data>
+  <data name="Maintain Pricing Tiers" xml:space="preserve">
+    <value>保持定价层次</value>
+  </data>
+  <data name="Maintain Pricing Types" xml:space="preserve">
+    <value>保持价格类型 </value>
+  </data>
+  <data name="Maintain Profiles" xml:space="preserve">
+    <value>保持概况 </value>
+  </data>
+  <data name="Maintain Quotes" xml:space="preserve">
+    <value>维持行情 </value>
+  </data>
+  <data name="Maintain Roles" xml:space="preserve">
+    <value>保持角色 </value>
+  </data>
+  <data name="Maintain Scheme" xml:space="preserve">
+    <value>保持计划 </value>
+  </data>
+  <data name="Maintain Scripts" xml:space="preserve">
+    <value>维护脚本 </value>
+  </data>
+  <data name="Maintain SKU" xml:space="preserve">
+    <value>维护SKU </value>
+  </data>
+  <data name="Maintain Statuses" xml:space="preserve">
+    <value>保持状态 </value>
+  </data>
+  <data name="Maintain System" xml:space="preserve">
+    <value>保持系统 </value>
+  </data>
+  <data name="Maintain Taxonomy" xml:space="preserve">
+    <value>保持生物分类 </value>
+  </data>
+  <data name="Maintain Taxonomy Metadata" xml:space="preserve">
+    <value>保持生物分类数据 </value>
+  </data>
+  <data name="Maintain Users" xml:space="preserve">
+    <value>维护用户 </value>
+  </data>
+  <data name="Maintain Utilitilies" xml:space="preserve">
+    <value>维护工具 </value>
+  </data>
+  <data name="Maintain View" xml:space="preserve">
+    <value>保持观 </value>
+  </data>
+  <data name="Manage Alerts and Notifications" xml:space="preserve">
+    <value>管理警示和通知 </value>
+  </data>
+  <data name="Manage Content" xml:space="preserve">
+    <value>管理内容 </value>
+  </data>
+  <data name="Map Locales to Organization" xml:space="preserve">
+    <value>映射语言组织 </value>
+  </data>
+  <data name="Mapping Configuration" xml:space="preserve">
+    <value>映射配置 </value>
+  </data>
+  <data name="Mapping Currency to Organization" xml:space="preserve">
+    <value>测绘货币组织 </value>
+  </data>
+  <data name="Master Catalog" xml:space="preserve">
+    <value>主目录 </value>
+  </data>
+  <data name="My Workspace" xml:space="preserve">
+    <value>我的工作 </value>
+  </data>
+  <data name="NPI" xml:space="preserve">
+    <value>新产品引进 </value>
+  </data>
+  <data name="Object Extended Attributes" xml:space="preserve">
+    <value>对象扩展属性 </value>
+  </data>
+  <data name="Open DynamicTaxonomy" xml:space="preserve">
+    <value>开放式动态层次 </value>
+  </data>
+  <data name="Open DynamicTaxonomy:Width" xml:space="preserve">
+    <value>150 </value>
+  </data>
+  <data name="Org Commercial Attribute Relations" xml:space="preserve">
+    <value>组织商业属性关系 </value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>组织 </value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>其他 </value>
+  </data>
+  <data name="Price Factors" xml:space="preserve">
+    <value>价格因素 </value>
+  </data>
+  <data name="Price Syndication" xml:space="preserve">
+    <value>价格联合 </value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>定价 </value>
+  </data>
+  <data name="Pricing Metadata" xml:space="preserve">
+    <value>定价元 </value>
+  </data>
+  <data name="Pricing Tiers" xml:space="preserve">
+    <value>定价第三世界 </value>
+  </data>
+  <data name="Pricing Types" xml:space="preserve">
+    <value>价格类型 </value>
+  </data>
+  <data name="Proposal Center" xml:space="preserve">
+    <value>建议中心 </value>
+  </data>
+  <data name="Quote Reports" xml:space="preserve">
+    <value>引用报告 </value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>报告 </value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>计划 </value>
+  </data>
+  <data name="Scheme Determination" xml:space="preserve">
+    <value>计划确定 </value>
+  </data>
+  <data name="Scheme  Pricing Types" xml:space="preserve">
+    <value>计划定价类型 </value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>安全 </value>
+  </data>
+  <data name="Siemens" xml:space="preserve">
+    <value>西门子 </value>
+  </data>
+  <data name="Simulation" xml:space="preserve">
+    <value>仿真 </value>
+  </data>
+  <data name="SPIR Report" xml:space="preserve">
+    <value>SPIR报告 </value>
+  </data>
+  <data name="Staging WorkFlow" xml:space="preserve">
+    <value>中转流程 </value>
+  </data>
+  <data name="Standard Inbox" xml:space="preserve">
+    <value>标准收件匣 </value>
+  </data>
+  <data name="Supplier Content Portal" xml:space="preserve">
+    <value>内容供应商门户 </value>
+  </data>
+  <data name="Supplier Inbox" xml:space="preserve">
+    <value>供应商收件匣 </value>
+  </data>
+  <data name="Supplier Portal" xml:space="preserve">
+    <value>供应商门户 </value>
+  </data>
+  <data name="Synchronization" xml:space="preserve">
+    <value>同步 </value>
+  </data>
+  <data name="Synchronize" xml:space="preserve">
+    <value>同步 </value>
+  </data>
+  <data name="Synchronizer" xml:space="preserve">
+    <value>同步器 </value>
+  </data>
+  <data name="Syndication" xml:space="preserve">
+    <value>联合供稿 </value>
+  </data>
+  <data name="Synonyms" xml:space="preserve">
+    <value>别名 </value>
+  </data>
+  <data name="Take Back Tasks" xml:space="preserve">
+    <value>收回任务 </value>
+  </data>
+  <data name="taxonomies were found" xml:space="preserve">
+    <value>等级被发现 </value>
+  </data>
+  <data name="Taxonomy" xml:space="preserve">
+    <value>分类 </value>
+  </data>
+  <data name="Taxonomy History" xml:space="preserve">
+    <value>分类历史 </value>
+  </data>
+  <data name="Trading Partners" xml:space="preserve">
+    <value>贸易伙伴 </value>
+  </data>
+  <data name="TradingCenter" xml:space="preserve">
+    <value>TradingCenter </value>
+  </data>
+  <data name="TradingCenter-DS" xml:space="preserve">
+    <value>TradingCenter-DS</value>
+  </data>
+  <data name="TradingCenter-SS" xml:space="preserve">
+    <value>TradingCenter-SS</value>
+  </data>
+  <data name="Transora" xml:space="preserve">
+    <value>Transora公司 </value>
+  </data>
+  <data name="UCCnet" xml:space="preserve">
+    <value>UCCnet </value>
+  </data>
+  <data name="Upload Data" xml:space="preserve">
+    <value>数据上传 </value>
+  </data>
+  <data name="Upload File" xml:space="preserve">
+    <value>上传文件 </value>
+  </data>
+  <data name="Upload SPIR" xml:space="preserve">
+    <value>上传SPIR </value>
+  </data>
+  <data name="Upload SPIR Status" xml:space="preserve">
+    <value>上传SPIR状态 </value>
+  </data>
+  <data name="Upload Status" xml:space="preserve">
+    <value>上载状态 </value>
+  </data>
+  <data name="User Information" xml:space="preserve">
+    <value>用户信息 </value>
+  </data>
+  <data name="User Preferences" xml:space="preserve">
+    <value>用户首选项 </value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>查看 </value>
+  </data>
+  <data name="View Messages" xml:space="preserve">
+    <value>查看邮件 </value>
+  </data>
+  <data name="views were found" xml:space="preserve">
+    <value>意见被发现 </value>
+  </data>
+  <data name="Work Bench" xml:space="preserve">
+    <value>工作台 </value>
+  </data>
+  <data name="Work List" xml:space="preserve">
+    <value>工作列表 </value>
+  </data>
+  <data name="Workflow" xml:space="preserve">
+    <value>工作流 </value>
+  </data>
+  <data name="Workflow Console" xml:space="preserve">
+    <value>控制台 </value>
+  </data>
+  <data name="Workflow Inbox" xml:space="preserve">
+    <value>工作流程收件箱 </value>
+  </data>
+  <data name="WWRE" xml:space="preserve">
+    <value>世界零售商联盟 </value>
+  </data>
+  <data name="XML Files" xml:space="preserve">
+    <value>XML文件 </value>
+  </data>
+</root>

@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MDM.Services.ConfigurationService" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConfigurationService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.Services.DataModelService" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAEEABAAAEAABACA=</HashCode>
+      <FileName>DataModelService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.Services.DataService" Collapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAAAAAAACAQAAAAAAAAAAQAAAAAQCAAAAAA=</HashCode>
+      <FileName>DataService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.Services.MessageService" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAA=</HashCode>
+      <FileName>MessageService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MDM.Services.ConfigurationServiceClient.ConfigurationServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ConfigurationServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.Services.DataModelServiceClient.DataModelServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAKAAAAAAAAAAAAAAAAEEABAAAEAABACA=</HashCode>
+      <FileName>Service References\DataModelServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.Services.DataServiceClient.DataServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAAAAAAACAQAAAAAAAAAAQAAAAAQCAAAAAA=</HashCode>
+      <FileName>Service References\DataServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MDM.Services.MessageServiceClient.MessageServiceClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hBAAAAAAAAAAAEAEAgAMAAAAgAoEAACAAAAAgBBACAA=</HashCode>
+      <FileName>Service References\MessageServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="MDM.Services.ConfigurationServiceClient.IConfigurationService" Collapsed="true">
+    <Position X="3.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAAAAEAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ConfigurationServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MDM.Services.ConfigurationServiceClient.IConfigurationServiceChannel" Collapsed="true">
+    <Position X="3.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ConfigurationServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MDM.Services.DataModelServiceClient.IDataModelService" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAKAAAAAAAAAAAAAAAAEEABAAAEAABACA=</HashCode>
+      <FileName>Service References\DataModelServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MDM.Services.DataModelServiceClient.IDataModelServiceChannel" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\DataModelServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MDM.Services.DataServiceClient.IDataService" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EACAAAAAAAAAAAAACAQAAAAAAAAAAQAAAAAQCAAAAAA=</HashCode>
+      <FileName>Service References\DataServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MDM.Services.DataServiceClient.IDataServiceChannel" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\DataServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MDM.Services.MessageServiceClient.IMessageService" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>hBAAAAAAAAAAAEAEAgAMAAAAgAoEAACAAAAAgBBACAA=</HashCode>
+      <FileName>Service References\MessageServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="MDM.Services.MessageServiceClient.IMessageServiceChannel" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\MessageServiceClient\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

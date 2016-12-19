@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="AuthenticationService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import namespace="http://wcfservices.riversand.com" />
+      <xsd:import namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/System.Security.Claims" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IAuthenticationService_AuthenticateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUser" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_AuthenticateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthenticateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_AuthenticateUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_GetSecurityPrincipal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipal" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_GetSecurityPrincipal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSecurityPrincipalResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_GetSecurityPrincipal_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ProcessUserCredentialRequest_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUserCredentialRequest" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ProcessUserCredentialRequest_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessUserCredentialRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAuthenticationService_ProcessUserCredentialRequest_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IAuthenticationService">
+    <wsdl:operation name="AuthenticateUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/AuthenticateUser" message="tns:IAuthenticationService_AuthenticateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/AuthenticateUserResponse" message="tns:IAuthenticationService_AuthenticateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/AuthenticateUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IAuthenticationService_AuthenticateUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSecurityPrincipal">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/GetSecurityPrincipal" message="tns:IAuthenticationService_GetSecurityPrincipal_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/GetSecurityPrincipalResponse" message="tns:IAuthenticationService_GetSecurityPrincipal_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/GetSecurityPrincipalMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IAuthenticationService_GetSecurityPrincipal_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessUserCredentialRequest">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/ProcessUserCredentialRequest" message="tns:IAuthenticationService_ProcessUserCredentialRequest_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/ProcessUserCredentialRequestResponse" message="tns:IAuthenticationService_ProcessUserCredentialRequest_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IAuthenticationService/ProcessUserCredentialRequestMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IAuthenticationService_ProcessUserCredentialRequest_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="AuthenticationService">
+    <wsdl:port name="WSHttpBinding_IAuthenticationService" binding="i0:WSHttpBinding_IAuthenticationService">
+      <soap12:address location="http://localhost/MDM7.6-SP6-HF_WCFServices/AuthenticationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/MDM7.6-SP6-HF_WCFServices/AuthenticationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

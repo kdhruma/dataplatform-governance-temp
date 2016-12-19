@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D56E6C79-DC3D-4A11-922B-4F540A01934F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>_rdParty</RootNamespace>
+    <AssemblyName>3rdParty</AssemblyName>   
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Apache.NMS\Apache.NMS.ActiveMQ.dll" />
+    <Content Include="Apache.NMS\Apache.NMS.dll" />
+    <Content Include="AppFabric\Microsoft.ApplicationServer.Caching.Client.dll" />
+    <Content Include="AppFabric\Microsoft.ApplicationServer.Caching.Core.dll" />
+    <Content Include="AppFabric\Microsoft.WindowsFabric.Common.dll" />
+    <Content Include="AppFabric\Microsoft.WindowsFabric.Data.Common.dll" />
+    <Content Include="Divelements\License Restrictions.txt" />
+    <Content Include="Divelements\SandBar.dll" />
+    <Content Include="Divelements\SandDock.dll" />
+    <Content Include="DockingLibrary\DockingLibrary.dll" />
+    <Content Include="DUNDAS\5.5\DundasWebChart.dll" />
+    <Content Include="DUNDAS\5.5\DundasWebChart.xml" />
+    <Content Include="DUNDAS\5.5\DundasWinChart.dll" />
+    <Content Include="DUNDAS\5.5\DundasWinChart.xml" />
+    <Content Include="Enyim\Changes.html" />
+    <Content Include="Enyim\Enyim.Caching.dll" />
+    <Content Include="Enyim\Enyim.Caching.pdb" />
+    <Content Include="Enyim\Enyim.Caching.xml" />
+    <Content Include="Enyim\log4net\Enyim.Caching.Log4NetAdapter.dll" />
+    <Content Include="Enyim\log4net\Enyim.Caching.Log4NetAdapter.pdb" />
+    <Content Include="Enyim\NLog\Enyim.Caching.NLogAdapter.dll" />
+    <Content Include="Enyim\NLog\Enyim.Caching.NLogAdapter.pdb" />
+    <Content Include="Enyim\Readme.html" />
+    <Content Include="IBM\MQSeries\amqmdnet.dll" />
+    <Content Include="JsonDotNet\Newtonsoft.Json.dll" />
+    <Content Include="JsonDotNet\Newtonsoft.Json.xml" />
+    <Content Include="KafkaNet2\kafka-net.dll" />
+    <Content Include="KafkaNet2\kafka-net.pdb" />
+    <Content Include="KafkaNet2\Readme.TXT" />
+    <Content Include="KafkaNet\KafkaNET.Library.dll" />
+    <Content Include="KafkaNet\log4net.dll" />
+    <Content Include="KafkaNet\ZooKeeperNet.dll" />
+    <Content Include="log4net\1.2.10\log4net.dll" />
+    <Content Include="log4net\1.2.10\log4net.xml" />
+    <Content Include="log4net\1.2.9\log4net.dll" />
+    <Content Include="log4net\1.2.9\log4net.license.txt" />
+    <Content Include="log4net\1.2.9\log4net.xml" />
+    <Content Include="MemcachedClient\NMemcached.Client.dll" />
+    <Content Include="MemcachedService\Install.txt" />
+    <Content Include="MemcachedService\memcached.exe" />
+    <Content Include="MemcachedService\pthreadGC2.dll" />
+    <Content Include="MemcachedService\version.txt" />
+    <Content Include="MetaBuilders\1.1\MetaBuilders.WebControls.RowSelectorColumn.dll" />
+    <Content Include="Microsoft\Word\8.1\Interop.Office.dll" />
+    <Content Include="Microsoft\Word\8.1\Interop.VBIDE.dll" />
+    <Content Include="Microsoft\Word\8.1\Interop.Word.dll" />
+    <Content Include="Microsoft\Word\8.3\Interop.Word.dll" />
+    <Content Include="Microsoft\WorkflowActivitiesLibrary\Microsoft.VisualStudio.Activities.dll" />
+    <Content Include="MigraDoc\MigraDoc.DocumentObjectModel.dll" />
+    <Content Include="MigraDoc\MigraDoc.Rendering.dll" />
+    <Content Include="MigraDoc\PdfSharp.Charting.dll" />
+    <Content Include="MigraDoc\PdfSharp.dll" />
+    <Content Include="Netrics\NetricsServerInterface.dll" />
+    <Content Include="OpenXML\V2.5\DocumentFormat.OpenXml.dll" />
+    <Content Include="OpenXML\V2.5\DocumentFormat.OpenXml.xml" />
+    <Content Include="OpenXML\V2.5\readme.htm" />
+    <Content Include="OracleDataAccess\10.1\Oracle.DataAccess.dll" />
+    <Content Include="Protobuf-net\protobuf-net.dll" />
+    <Content Include="Protobuf-net\protobuf-net.xml" />
+    <Content Include="RabbitMQ\RabbitMQ.Client.dll" />
+    <Content Include="Telerik\2009 Q2\Telerik.Web.Design.dll" />
+    <Content Include="Telerik\2009 Q2\Telerik.Web.UI.dll" />
+    <Content Include="Telerik\2009 Q2\Telerik.Web.UI.XML" />
+    <Content Include="Telerik\2010 Q3\Telerik.Web.Design.dll" />
+    <Content Include="Telerik\2010 Q3\Telerik.Web.UI.dll" />
+    <Content Include="Telerik\2010 Q3\Telerik.Web.UI.XML" />
+    <Content Include="Telerik\Current\Telerik.Web.Design.dll" />
+    <Content Include="Telerik\Current\Telerik.Web.UI.dll" />
+    <Content Include="Telerik\Current\Telerik.Web.UI.xml" />
+    <Content Include="Telerik\Current\VersionInfo.txt" />
+    <Content Include="Tibco\TIBCO.EMS.dll" />
+    <Content Include="Tools\instsrv.exe" />
+    <Content Include="Tools\Interop.PDFOUTLib.dll" />
+    <Content Include="Tools\srvany.exe" />
+    <Content Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.XML" />
+    <Content Include="TPLDataFlow\4.5.11\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="TPLDataFlow\4.5.11\system.threading.tasks.dataflow.xml" />
+    <Content Include="TPLDataFlow\Current\System.Threading.Tasks.Dataflow.dll" />
+    <Content Include="TPLDataFlow\Current\system.threading.tasks.dataflow.xml" />
+    <Content Include="Win32Security\1.0\Win32Security.dll" />
+    <Content Include="Xceed\Xceed.FileSystem.dll" />
+    <Content Include="Xceed\Xceed.FileSystem.xml" />
+    <Content Include="Xceed\Xceed.Ftp.dll" />
+    <Content Include="Xceed\Xceed.Ftp.xml" />
+    <Content Include="ZipLibrary\0.5\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="ZipLibrary\0.8\ICSharpCode.SharpZipLib.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Apache.NMS\nmsprovider-activemq.config" />
+    <None Include="Apache.NMS\nmsprovider-tcp.config" />
+    <None Include="Apache.NMS\nmsprovider-test.config" />
+    <None Include="DUNDAS\5.5\Dundas.Charting.WebControl.Chart.lic" />
+    <None Include="Enyim\Demo.config" />
+    <None Include="Enyim\LICENSE" />
+    <None Include="Enyim\log4net\Demo.config" />
+    <None Include="Enyim\NLog\Demo.config" />
+    <None Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.chm" />
+    <None Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.chw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Distiller\1.0\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

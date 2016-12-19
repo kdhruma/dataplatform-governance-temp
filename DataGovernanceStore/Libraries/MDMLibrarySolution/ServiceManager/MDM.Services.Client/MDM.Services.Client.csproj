@@ -1,0 +1,1762 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E277413E-FDD8-47E0-8558-614E5AECAE2C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.Services</RootNamespace>
+    <AssemblyName>RS.MDM.Services.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.Services.Client.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.Services.Client.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Client">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\AppFabric 1.1 for Windows Server\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationServer.Caching.Core">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Program Files\AppFabric 1.1 for Windows Server\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="RS.MDM.BusinessObjects, Version=7.8.1100.10244, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="RS.MDM.Core, Version=7.8.1100.10244, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AuthenticationService.cs" />
+    <Compile Include="DiagnosticService.cs" />
+    <Compile Include="EnsureEntityUtility.cs" />
+    <Compile Include="CoreService.cs" />
+    <Compile Include="DenormService.cs" />
+    <Compile Include="IWCFClientConfiguration.cs" />
+    <Compile Include="IntegrationService.cs" />
+    <Compile Include="KnowledgeBaseService.cs" />
+    <Compile Include="SecurityService.cs" />
+    <Compile Include="ConfigurationService.cs" />
+    <Compile Include="DataModelService.cs" />
+    <Compile Include="DataService.cs" />
+    <Compile Include="MessageService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AuthenticationServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ConfigurationServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\CoreServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataModelServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DataServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DenormServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DiagnosticServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\EntityExportServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\IntegrationServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\KnowledgeBaseServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\MessageServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\SecurityServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WorkflowDesignerServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\WorkflowServiceClient\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="ServiceClientBase.cs" />
+    <Compile Include="ServiceClientInitializers\AppConfigProviderUsingService.cs" />
+    <Compile Include="ServiceClientInitializers\MDMFeatureConfigProviderUsingService.cs" />
+    <Compile Include="ServiceClientInitializers\ServiceClientInitializer.cs" />
+    <Compile Include="ServiceConstants.cs" />
+    <Compile Include="ServiceProxies\ConfigurationServiceProxy.cs" />
+    <Compile Include="ServiceProxies\DiagnosticServiceProxy.cs" />
+    <Compile Include="ServiceProxies\KnowledgeBaseServiceProxy.cs" />
+    <Compile Include="ServiceProxies\IntegrationServiceProxy.cs" />
+    <Compile Include="ServiceProxies\DenormServiceProxy.cs" />
+    <Compile Include="ServiceProxies\SecurityServiceProxy.cs" />
+    <Compile Include="ServiceProxies\WorkflowServiceProxy.cs" />
+    <Compile Include="ServiceProxies\MessageServiceProxy.cs" />
+    <Compile Include="ServiceProxies\CoreServiceProxy.cs" />
+    <Compile Include="ServiceProxies\DataModelServiceProxy.cs" />
+    <Compile Include="ServiceProxies\DataServiceProxy.cs" />
+    <Compile Include="WorkflowDesignerService.cs" />
+    <Compile Include="WorkflowService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177ae776-aabc-4e81-99de-733fff5221d0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CacheManager\MDM.CacheManager.Business\MDM.CacheManager.Business.csproj">
+      <Project>{9078D667-A162-4258-8E8C-53725D5C2BE8}</Project>
+      <Name>MDM.CacheManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{b907bb1d-d3ba-4316-a05f-b3a99d66a6b9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5A452CD7-42CF-41B0-83E9-759C68B43EEF}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.DataProviderInterfaces\MDM.DataProviderInterfaces.csproj">
+      <Project>{8ab47cc5-a143-4341-ba1d-36030833460a}</Project>
+      <Name>MDM.DataProviderInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OperationContextManager\MDM.OperationContextManager.Business\MDM.OperationContextManager.Business.csproj">
+      <Project>{2B0D6267-080C-493A-89E6-D90E4F4EECC0}</Project>
+      <Name>MDM.OperationContextManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExceptionManager\MDM.ExceptionManager\MDM.ExceptionManager.csproj">
+      <Project>{C26B08D2-5D90-476E-8DEF-A740C9E9C4AD}</Project>
+      <Name>MDM.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.WCFServiceInterfaces\MDM.WCFServiceInterfaces.csproj">
+      <Project>{88C67D80-DDC8-4228-8C98-428E435036D3}</Project>
+      <Name>MDM.WCFServiceInterfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AppConfig.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AppConfigCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ApplicationContext1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ApplicationContextCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Attribute1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeGroup3.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeModel.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeModelCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeOperationResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AttributeVersionCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AuditInfo.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.AuditInfoCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.BuildDetail.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.BusinessRule.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.BusinessRuleAttributeMapping.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.CategoryAttributeMapping.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.CategoryAttributeMapping1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.CategoryAttributeMappingCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.CategoryCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.CategoryTreeItemCollection2.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Container.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Container1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerEntityTypeAttributeMappingCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerEntityTypeMapping1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerEntityTypeMappingCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerInheritancePathCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerRelationshipTypeAttributeMappingCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerRelationshipTypeEntityTypeMapping1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ContainerRelationshipTypeEntityTypeMappingCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Denorm.EntityProcessorErrorLogCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Denorm.ImpactedEntityErrorLogCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Denorm.ImpactedEntityLog.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Denorm.ImpactedEntityLogCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Denorm.ImpactedEntityLogCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DependentAttributeCollection3.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DependentAttributeDataMapCollection3.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DoneReportItem.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.DataQualityClass.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.DataQualityClassCollection3.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.DataQualityClassStatistics.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.DataQualityClassStatisticsCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.DQMJobQueueItemsCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.DQMJobQueueItemsStatusCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.DQMJobQueueItemStatus.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.EntityKPIData.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.EntityQualityReportDataCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.EntityValidationStatus1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.FilterCriteria.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.FilterCriteriaSettings.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.FilterCriteriaSettingsCollection3.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.JobValidationStatus1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.KPI.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.KPICollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.KPISummary.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.KPISummaryCollection2.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.MergePlanItemCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.NormalizationReportItemsCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.ValidationProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.ValidationProfile1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.ValidationProfilesCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.DQM.ValidationProfilesCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Entity.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityActivityLogCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityActivityLogItemStatus.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityActivityLogItemStatusCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityAuditInfoCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityCollectionHistory1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityExportProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityExportProfileCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityHierarchyDefinition.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityHistory1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityMap.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityMapCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityOperationResult1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityOperationResultCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityType.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityTypeAttributeMappingCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityTypeCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityView.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.EntityViewCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ExportProfile1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ExportProfileCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.EntityExportProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.EntityExportProfileCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.ExportProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.ExportProfile1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.ExportProfileCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.ExportSubscriber.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Exports.ExportSubscriberCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ExportSubscriber.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ExportSubscriberCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ExtensionRelationshipCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.File.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.File1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.FileCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Hierarchy.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Hierarchy1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.HierarchyCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.HierarchyCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.HierarchyRelationshipCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ImpactedEntityCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Imports.ImportProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Imports.ImportProfile1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Imports.ImportProfileCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Imports.ImportProfileCollection11.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.ConnectorProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.ConnectorProfileCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationActivityLog.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationItemDimensionType.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationItemDimensionTypeCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationItemDimensionValue.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationItemDimensionValueCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationItemStatusInternalCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationItemStatusValue.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationItemStatusValueCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationMessage.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationMessageCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationMessageType.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationMessageTypeCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.IntegrationQueueItem.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.MDMObjectTypeCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.MessageQualificationResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Integration.ThirdPartyObject.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.ExecutionStatus.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.Job.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.JobCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.JobImportResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.JobImportResultCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.JobOperationStatus.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.JobSchedule.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Jobs.JobScheduleCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Locale.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.LocaleCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.LocaleMessage.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.LocaleMessageCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Lookup.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.LookupCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMFeatureConfig.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMFeatureConfigCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMObjectGeneric.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMObjectGenericCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMObjectInfoCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MDMObjectType.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.MenuCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.OperationResult.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.OperationResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.OperationResultCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Organization1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.OrganizationCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ParallelizationEngineStatus1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Permission.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.QueuedEntityCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Relationship.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.RelationshipCollection2.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.RelationshipType.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.RelationshipTypeAttributeMapping1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.RelationshipTypeAttributeMappingCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.RelationshipTypeCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.RelationshipTypeEntityTypeMapping1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.RelationshipTypeEntityTypeMappingCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ScheduleCriteriaCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.SecurityPrincipal1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.SecurityRole.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.SecurityRoleCollection1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.SecurityUser.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.SecurityUserCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ServiceStatusCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Table2.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.TableCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.TimeZone.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.UserPreferences.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.ValueSegment.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Vendor.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.VendorCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.ActivityTracking.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.ActivityTracking1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.Escalation.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.Escalation1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.TrackedActivityInfo.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.TrackedActivityInfoCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.Workflow.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.Workflow1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowActivity.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowEscalationDataCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowInstance.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowInstance1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowMDMObject.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowMDMObject1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowVersion.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.Workflow.WorkflowVersion1.datasource" />
+    <None Include="Properties\DataSources\MDM.BusinessObjects.WorkflowInfoCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.Matching.BusinessObjects.MatchingProfile.datasource" />
+    <None Include="Properties\DataSources\MDM.Matching.BusinessObjects.MatchingProfileCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.Matching.BusinessObjects.MatchingResultCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.Merging.BusinessObjects.MergePlanningRuleset.datasource" />
+    <None Include="Properties\DataSources\MDM.Merging.BusinessObjects.MergePlanningRulesetCollection.datasource" />
+    <None Include="Properties\DataSources\MDM.Normalization.BusinessObjects.NormalizationProfile2.datasource" />
+    <None Include="Properties\DataSources\MDM.Normalization.BusinessObjects.NormalizationProfilesCollection2.datasource" />
+    <None Include="Properties\DataSources\MDM.Normalization.BusinessObjects.NormalizationRule2.datasource" />
+    <None Include="Properties\DataSources\MDM.Normalization.BusinessObjects.NormalizationRulesCollection2.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <None Include="Service References\AuthenticationServiceClient\Arrays2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService1.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService2.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService3.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService4.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService5.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService6.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService7.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\MDM.BusinessObjects.DataModel2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\MDM.BusinessObjects.DQM2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\MDM.BusinessObjects.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\MDM.Core.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\service1.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\System.Security.Claims1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AuthenticationServiceClient\wcfservices.riversand.com2.wsdl" />
+    <None Include="Service References\AuthenticationServiceClient\wcfservices.riversand.com2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService22.wsdl" />
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService23.wsdl" />
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService3.wsdl" />
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService4.wsdl" />
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService5.wsdl" />
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService510.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService511.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService519.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService52.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService520.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService521.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService57.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService58.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService59.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService1.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService2.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService21.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService33.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService4.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService5.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService7.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService9.wsdl" />
+    <None Include="Service References\CoreServiceClient\CoreService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\Arrays1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService.wsdl" />
+    <None Include="Service References\DataModelServiceClient\DataModelService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService1.wsdl" />
+    <None Include="Service References\DataModelServiceClient\DataModelService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\DataModelService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.DataModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.DataModel1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.DQM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.DQM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.DynamicTableSchema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.DynamicTableSchema1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.Workflow.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.Workflow1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.BusinessObjects2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.Core.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\MDM.Core1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\service.wsdl" />
+    <None Include="Service References\DataModelServiceClient\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\service1.wsdl" />
+    <None Include="Service References\DataModelServiceClient\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\wcfservices.riversand.com.wsdl" />
+    <None Include="Service References\DataModelServiceClient\wcfservices.riversand.com.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataModelServiceClient\wcfservices.riversand.com1.wsdl" />
+    <None Include="Service References\DataModelServiceClient\wcfservices.riversand.com1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\Arrays.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\Arrays1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.DataModel.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.DataModel1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.DQM.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.DQM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.DQMNormalization.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.Imports.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.Imports1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.MergeCopy.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.Workflow.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.Workflow1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.BusinessObjects1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.Core.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\MDM.Core1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\service.wsdl" />
+    <None Include="Service References\DataServiceClient\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\service1.wsdl" />
+    <None Include="Service References\DataServiceClient\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\System.Collections.Generic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\System.Collections.Generic1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\System.Text.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\wcfservices.riversand.com.wsdl" />
+    <None Include="Service References\DataServiceClient\wcfservices.riversand.com.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataServiceClient\wcfservices.riversand.com1.wsdl" />
+    <None Include="Service References\DataServiceClient\wcfservices.riversand.com1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService.wsdl" />
+    <None Include="Service References\DenormServiceClient\DenormService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService1.wsdl" />
+    <None Include="Service References\DenormServiceClient\DenormService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService2.wsdl" />
+    <None Include="Service References\DenormServiceClient\DenormService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService3.wsdl" />
+    <None Include="Service References\DenormServiceClient\DenormService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService1.wsdl" />
+    <None Include="Service References\DenormServiceClient\DenormService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService3.xsd" />
+    <None Include="Service References\DenormServiceClient\DenormService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService77.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DenormServiceClient\DenormService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService2.wsdl" />
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService21.wsdl" />
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService3.wsdl" />
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService4.wsdl" />
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService71.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService710.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService711.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService712.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService713.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService714.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService715.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService716.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService72.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService73.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService74.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService75.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService76.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService77.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService78.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService79.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService1.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService2.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService21.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService23.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService24.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService25.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService26.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService27.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService28.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService29.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService3.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService30.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService31.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService4.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService7.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService8.wsdl" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\EntityExportServiceClient\EntityExportService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\Arrays1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService.wsdl" />
+    <None Include="Service References\IntegrationServiceClient\IntegrationService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService121.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService122.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService2.wsdl" />
+    <None Include="Service References\IntegrationServiceClient\IntegrationService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\IntegrationService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects.DataModel1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects.DQM1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects.DQMNormalization1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects.Exports1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects.Imports1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects.Integration1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects.Jobs1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.BusinessObjects1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\MDM.Core1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\service1.wsdl" />
+    <None Include="Service References\IntegrationServiceClient\service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\System.Collections.Generic1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\System1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\wcfservices.riversand.com1.wsdl" />
+    <None Include="Service References\IntegrationServiceClient\wcfservices.riversand.com1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService3.wsdl" />
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService4.wsdl" />
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService5.wsdl" />
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService21.wsdl" />
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService410.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService411.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService48.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService49.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService.wsdl" />
+    <None Include="Service References\MessageServiceClient\MessageService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService1.wsdl" />
+    <None Include="Service References\MessageServiceClient\MessageService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService2.wsdl" />
+    <None Include="Service References\MessageServiceClient\MessageService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\MessageServiceClient\MessageWCFService.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService1.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService19.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService2.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService20.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService3.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService34.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService35.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService36.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService37.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService38.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService39.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService40.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService41.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService42.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService43.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService44.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService45.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService6.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService7.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService8.wsdl" />
+    <None Include="Service References\SecurityServiceClient\SecurityService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\SecurityServiceClient\SecurityService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.GetAllWorkflowDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.GetAppConfigValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.GetWorkflowViewDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.ProcessActivitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.ProcessWorkflowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService22.wsdl" />
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService23.wsdl" />
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService910.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService911.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService912.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService913.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService914.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService915.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService916.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService917.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService918.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService919.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\MDM.Services.WorkflowServiceClient.ResumeAbortedWorkflowInstancesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\MDM.Services.WorkflowServiceClient.ResumeMultipleWorkflowInstancesByMDMObjectsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\MDM.Services.WorkflowServiceClient.ResumeMultipleWorkflowInstancesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\MDM.Services.WorkflowServiceClient.ResumeWorkflowInstanceByMDMObjectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\MDM.Services.WorkflowServiceClient.ResumeWorkflowInstancesByRuntimeInstanceIdsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService.wsdl" />
+    <None Include="Service References\WorkflowServiceClient\WorkflowService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService1.wsdl" />
+    <None Include="Service References\WorkflowServiceClient\WorkflowService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService10.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService15.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService16.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService17.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService18.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService2.wsdl" />
+    <None Include="Service References\WorkflowServiceClient\WorkflowService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService21.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService22.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService5.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService6.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService7.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService8.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService9.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\WorkflowServiceClient\WorkflowWCFservice.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AuthenticationServiceClient\" />
+    <WCFMetadataStorage Include="Service References\ConfigurationServiceClient\" />
+    <WCFMetadataStorage Include="Service References\CoreServiceClient\" />
+    <WCFMetadataStorage Include="Service References\DataModelServiceClient\" />
+    <WCFMetadataStorage Include="Service References\DataServiceClient\" />
+    <WCFMetadataStorage Include="Service References\DenormServiceClient\" />
+    <WCFMetadataStorage Include="Service References\DiagnosticServiceClient\" />
+    <WCFMetadataStorage Include="Service References\EntityExportServiceClient\" />
+    <WCFMetadataStorage Include="Service References\IntegrationServiceClient\" />
+    <WCFMetadataStorage Include="Service References\KnowledgeBaseServiceClient\" />
+    <WCFMetadataStorage Include="Service References\MessageServiceClient\" />
+    <WCFMetadataStorage Include="Service References\SecurityServiceClient\" />
+    <WCFMetadataStorage Include="Service References\WorkflowDesignerServiceClient\" />
+    <WCFMetadataStorage Include="Service References\WorkflowServiceClient\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceClient\MessageService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService2.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService3.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowDesignerServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowDesignerServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.GetAllWorkflowDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.GetAppConfigValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.GetWorkflowViewDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.ProcessActivitiesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\MDM.Services.WorkflowDesignerServiceClient.ProcessWorkflowsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\WorkflowDesignerServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\AuthenticationServiceClient\AuthenticationService1.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\MessageServiceClient\MessageService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DenormServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DenormServiceClient\configuration.svcinfo" />
+    <None Include="Service References\DenormServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\DenormServiceClient\DenormService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConfigurationServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConfigurationServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ConfigurationServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CoreServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CoreServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\CoreServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\DataServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EntityExportServiceClient\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EntityExportServiceClient\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\EntityExportServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\WorkflowServiceClient\WorkflowService2.disco" />
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService3.disco" />
+    <None Include="Service References\SecurityServiceClient\SecurityService6.disco" />
+    <None Include="Service References\MessageServiceClient\MessageService2.disco" />
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService1.disco" />
+    <None Include="Service References\SecurityServiceClient\SecurityService5.disco" />
+    <None Include="Service References\WorkflowServiceClient\WorkflowService3.disco" />
+    <None Include="Service References\SecurityServiceClient\SecurityService1.disco" />
+    <None Include="Service References\MessageServiceClient\MessageService1.disco" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService2.disco" />
+    <None Include="Service References\LegacyDataAccessServiceClient\configuration.svcinfo" />
+    <None Include="Service References\LegacyDataAccessServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService2.disco" />
+    <None Include="Service References\StageTransitionFlowServiceClient\StageTransitionFlowService2.disco" />
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService2.disco" />
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService11.disco" />
+    <None Include="Service References\CoreServiceClient\CoreService12.disco" />
+    <None Include="Service References\DenormServiceClient\DenormService11.disco" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService12.disco" />
+    <None Include="Service References\DataModelServiceClient\DataModelService.disco" />
+    <None Include="Service References\DataModelServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\DataModelServiceClient\configuration.svcinfo" />
+    <None Include="Service References\DataModelServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\CoreServiceClient\CoreService.disco" />
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService1.disco" />
+    <None Include="Service References\IntegrationServiceClient\IntegrationService.disco" />
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService2.disco" />
+    <None Include="Service References\CoreServiceClient\CoreService3.disco" />
+    <None Include="Service References\CoreServiceClient\CoreService4.disco" />
+    <None Include="Service References\DenormServiceClient\DenormService1.disco" />
+    <None Include="Service References\DiagnosticServiceClient\DiagnosticService.disco" />
+    <None Include="Service References\EntityExportServiceClient\EntityExportService14.disco" />
+    <Content Include="Service References\IntegrationServiceClient\IntegrationService1.disco" />
+    <Content Include="Service References\IntegrationServiceClient\IntegrationService11.disco" />
+    <None Include="Service References\IntegrationServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DiagnosticServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\DiagnosticServiceClient\configuration.svcinfo" />
+    <None Include="Service References\DiagnosticServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ConfigurationServiceClient\ConfigurationService11.disco" />
+    <Content Include="Service References\EntityExportServiceClient\EntityExportService1.disco" />
+    <None Include="Service References\IntegrationServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\IntegrationServiceClient\configuration.svcinfo" />
+    <None Include="Service References\IntegrationServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\SecurityServiceClient\SecurityService3.disco" />
+    <None Include="Service References\SecurityServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\SecurityServiceClient\configuration.svcinfo" />
+    <None Include="Service References\SecurityServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\SecurityServiceClient\SecurityService.disco" />
+    <None Include="Service References\KnowledgeBaseServiceClient\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\KnowledgeBaseServiceClient\configuration.svcinfo" />
+    <None Include="Service References\KnowledgeBaseServiceClient\configuration91.svcinfo" />
+    <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService.disco" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

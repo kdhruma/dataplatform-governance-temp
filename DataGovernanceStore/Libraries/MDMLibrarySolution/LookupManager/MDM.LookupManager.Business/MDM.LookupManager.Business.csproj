@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{935F7E17-F114-4203-A4F5-F9997BD9F773}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.LookupManager.Business</RootNamespace>
+    <AssemblyName>RS.MDM.LookupManager.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="LookupAuditInfoBL.cs" />
+    <Compile Include="LookupBL.cs" />
+    <Compile Include="LookupDataProcessEventArgs.cs" />
+    <Compile Include="LookupDataLoadEventArgs.cs" />
+    <Compile Include="LookupEventManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\StoredProcedures\StoredProcedures.csproj">
+      <Project>{D7009E76-EE1C-4AF9-B211-FF12403E1FB3}</Project>
+      <Name>StoredProcedures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ActivityLogManager\MDM.ActivityLogManager.Business\MDM.ActivityLogManager.Business.csproj">
+      <Project>{6424B116-8F8E-4D80-B915-7B634B743972}</Project>
+      <Name>MDM.ActivityLogManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AdminManager\MDM.AdminManager.Business\MDM.AdminManager.Business.csproj">
+      <Project>{8f148d32-8428-405b-ad0f-e8aa554d6564}</Project>
+      <Name>MDM.AdminManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AttributeDependencyManager\MDM.AttributeDependencyManager.Business\MDM.AttributeDependencyManager.Business.csproj">
+      <Project>{742D04CC-77D6-4911-B94F-1B6CC4C4C171}</Project>
+      <Name>MDM.AttributeDependencyManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AttributeModelManager\MDM.AttributeModelManager.Business\MDM.AttributeModelManager.Business.csproj">
+      <Project>{7B0FB2D6-9963-4D42-BCE5-D96B2D72CEA6}</Project>
+      <Name>MDM.AttributeModelManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BufferManager\MDM.BufferManager\MDM.BufferManager.csproj">
+      <Project>{E62BF6F6-8C07-4681-9CBF-80F9E250356C}</Project>
+      <Name>MDM.BufferManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConfigurationManager\MDM.ConfigurationManager.Business\MDM.ConfigurationManager.Business.csproj">
+      <Project>{D8B5C77D-FFF9-4B31-814A-AC12DDEAC98C}</Project>
+      <Name>MDM.ConfigurationManager.Business</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5a452cd7-42cf-41b0-83e9-759c68b43eef}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IntegrationManager\MDM.IntegrationManager.Business\MDM.IntegrationManager.Business.csproj">
+      <Project>{2b1e64b2-8387-4e35-bfec-95162c90a2e3}</Project>
+      <Name>MDM.IntegrationManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776BE6C-5371-41E2-B444-3C42377CC9CA}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KnowledgeManager\MDM.KnowledgeManager.Business\MDM.KnowledgeManager.Business.csproj">
+      <Project>{6626EF27-DADA-4611-BA5A-8254DC8F8405}</Project>
+      <Name>MDM.KnowledgeManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MessageManager\MDM.MessageManager.Business\MDM.MessageManager.Business.csproj">
+      <Project>{696D72C4-BBE3-4C9D-A47C-C1508330A11A}</Project>
+      <Name>MDM.MessageManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.LookupManager.Data.SqlClient\MDM.LookupManager.Data.SqlClient.csproj">
+      <Project>{B23EA89E-74F9-4724-8E86-D2963D5D33D9}</Project>
+      <Name>MDM.LookupManager.Data.SqlClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

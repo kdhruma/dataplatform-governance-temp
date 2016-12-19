@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="WorkflowDesignerService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+      <xsd:import schemaLocation="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" />
+      <xsd:import schemaLocation="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Activities.Tracking" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkflowDesignerService_GetAppConfigValue_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfigValue" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_GetAppConfigValue_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAppConfigValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_GetWorkflowViewDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowViewDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_GetWorkflowViewDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWorkflowViewDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_ProcessWorkflows_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessWorkflows" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_ProcessWorkflows_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessWorkflowsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_ProcessActivities_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessActivities" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_ProcessActivities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_GetAllWorkflowDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkflowDetails" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowDesignerService_GetAllWorkflowDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWorkflowDetailsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkflowDesignerService">
+    <wsdl:operation name="GetAppConfigValue">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/GetAppConfigValue" message="tns:IWorkflowDesignerService_GetAppConfigValue_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/GetAppConfigValueResponse" message="tns:IWorkflowDesignerService_GetAppConfigValue_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWorkflowViewDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/GetWorkflowViewDetails" message="tns:IWorkflowDesignerService_GetWorkflowViewDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/GetWorkflowViewDetailsResponse" message="tns:IWorkflowDesignerService_GetWorkflowViewDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessWorkflows">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/ProcessWorkflows" message="tns:IWorkflowDesignerService_ProcessWorkflows_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/ProcessWorkflowsResponse" message="tns:IWorkflowDesignerService_ProcessWorkflows_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessActivities">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/ProcessActivities" message="tns:IWorkflowDesignerService_ProcessActivities_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/ProcessActivitiesResponse" message="tns:IWorkflowDesignerService_ProcessActivities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWorkflowDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/GetAllWorkflowDetails" message="tns:IWorkflowDesignerService_GetAllWorkflowDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IWorkflowDesignerService/GetAllWorkflowDetailsResponse" message="tns:IWorkflowDesignerService_GetAllWorkflowDetails_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="WorkflowDesignerService">
+    <wsdl:port name="WSHttpBinding_IWorkflowDesignerService" binding="i0:WSHttpBinding_IWorkflowDesignerService">
+      <soap12:address location="http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Dominos_WCFServices/WorkflowDesignerService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

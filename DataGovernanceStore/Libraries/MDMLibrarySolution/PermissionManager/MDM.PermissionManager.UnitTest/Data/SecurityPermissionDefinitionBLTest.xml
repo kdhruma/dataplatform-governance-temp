@@ -1,0 +1,61 @@
+﻿<ContractData>
+  <Data MethodName="Get_SecurityPermissionDefinitionCollection_With_ProperValue_SecurityRole_CallerContext">
+    <Input>
+      <Parameters>
+        <Parameter Name="SecurityRole">
+          <Role PK_Security_Role="55" ShortName="Vendor01" LongName="Vendor01" />
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <SecurityPermissionDefinitionCollection>
+        <SecurityPermissionDefinition Name="Edit And View Security Permissions" LongName="Edit And View Security Permissions" ApplicationContextId="1" PermissionValues="1" PermissionSet="Edit,View" ContextWeightage="11">
+          <ApplicationContext OrganizationId="1" OrganizationName="river Works Workspace" ContainerId="4" ContainerName="staging Master" AttributeId="4053" AttributeName="vendor Name" EntityTypeId="0" RelationshipTypeId="0" CategoryId="0" EntityId="0" UserId="0" RoleId="55" RoleName="Vendor01" />
+        </SecurityPermissionDefinition>
+      </SecurityPermissionDefinitionCollection>
+    </Output>
+  </Data>
+
+    <Data MethodName="Get_SecurityPermissionDefinitionCollection_With_ImproperValue_SecurityRole_CallerContext">
+      <Input>
+        <Parameters>
+          <Parameter Name="SecurityRole">
+            <Role PK_Security_Role="60" ShortName="Vendor03" LongName="Vendor03" />
+          </Parameter>
+        </Parameters>
+      </Input>
+      <Output>
+        <SecurityPermissionDefinitionCollection>
+         </SecurityPermissionDefinitionCollection>
+      </Output>
+    </Data>
+
+    <Data MethodName="Get_SecurityPermissionDefinitionCollection_With_ProperValue_ApplicationContext_CallerContext">
+      <Input>
+        <Parameters>
+          <Parameter Name="ApplicationContext">
+            <ApplicationContext OrganizationId="1" OrganizationName="river Works Workspace" ContainerId="4" ContainerName="staging Master" AttributeId="4053" AttributeName="vendor Name" RoleId="55" RoleName="Vendor01" />
+          </Parameter>
+        </Parameters>
+      </Input>
+      <Output>
+        <SecurityPermissionDefinition Name="Edit And View Security Permissions" LongName="Edit And View Security Permissions" ApplicationContextId="1" PermissionValues="1" PermissionSet="Edit,View" ContextWeightage="11">
+          <ApplicationContext OrganizationId="1" OrganizationName="river Works Workspace" ContainerId="4" ContainerName="staging Master" AttributeId="4053" AttributeName="vendor Name" EntityTypeId="0" RelationshipTypeId="0" CategoryId="0" EntityId="0" UserId="0" RoleId="55" RoleName="Vendor01" />
+        </SecurityPermissionDefinition>
+      </Output>
+    </Data>
+
+    <Data MethodName="Get_SecurityPermissionDefinitionCollection_With_ImproperValue_ApplicationContext_CallerContext">
+      <Input>
+        <Parameters>
+          <Parameter Name="ApplicationContext">
+            <ApplicationContext OrganizationId="2" OrganizationName="river Works" ContainerId="5" ContainerName="product Master" AttributeId="4053" AttributeName="vendor Name" RoleId="55" RoleName="Vendor01" />
+          </Parameter>
+        </Parameters>
+      </Input>
+      <Output>
+        <SecurityPermissionDefinitionCollection>
+        </SecurityPermissionDefinitionCollection>
+      </Output>
+    </Data>
+  </ContractData>

@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="IntegrationService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/IntegrationService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQMNormalization" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd12" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd13" namespace="http://schemas.datacontract.org/2004/07/System.Collections.Generic" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/IntegrationService.svc?xsd=xsd14" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IIntegrationService_GetJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJob" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJob_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobs" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsWithAbilityToSkipJobDataLoading_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithAbilityToSkipJobDataLoading" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsWithAbilityToSkipJobDataLoading_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithAbilityToSkipJobDataLoadingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsWithAbilityToSkipJobDataLoading_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsWithSqlFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithSqlFilter" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsWithSqlFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsWithSqlFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsWithSqlFilter_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsByType" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsByType_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsByTypeWithAbilityToSkipJobDataLoading_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsByTypeWithAbilityToSkipJobDataLoading" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsByTypeWithAbilityToSkipJobDataLoading_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobsByTypeWithAbilityToSkipJobDataLoadingResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobsByTypeWithAbilityToSkipJobDataLoading_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetFilteredJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredJobs" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetFilteredJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFilteredJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetFilteredJobs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessJobs_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessJobs" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessJobs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessJobsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessJobs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJob" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateJob_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJob" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateJob_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJob" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteJob_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_InitiateImportJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:InitiateImportJob" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_InitiateImportJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitiateImportJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_InitiateImportJob_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateImportJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImportJob" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateImportJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImportJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateImportJob_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportJobResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportJobResults" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportJobResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportJobResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportJobResults_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_StartImportJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartImportJob" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_StartImportJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartImportJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_StartImportJob_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://mdmobjects.riversand.com/" name="detail" element="q15:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_StartImportJobWithCallerContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartImportJobWithCallerContext" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_StartImportJobWithCallerContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartImportJobWithCallerContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_StartImportJobWithCallerContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://mdmobjects.riversand.com/" name="detail" element="q16:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetErrorStates_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorStates" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetErrorStates_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorStatesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetErrorStates_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://mdmobjects.riversand.com/" name="detail" element="q17:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetErrorStatesAsExcelFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorStatesAsExcelFile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetErrorStatesAsExcelFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetErrorStatesAsExcelFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetErrorStatesAsExcelFile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://mdmobjects.riversand.com/" name="detail" element="q18:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetDataModelImportJobResults_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataModelImportJobResults" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetDataModelImportJobResults_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataModelImportJobResultsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetDataModelImportJobResults_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://mdmobjects.riversand.com/" name="detail" element="q19:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetDataModelOperationResultSummary_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataModelOperationResultSummary" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetDataModelOperationResultSummary_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDataModelOperationResultSummaryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetDataModelOperationResultSummary_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://mdmobjects.riversand.com/" name="detail" element="q20:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://mdmobjects.riversand.com/" name="detail" element="q21:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobExecutionStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobExecutionStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobExecutionStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobExecutionStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobExecutionStatus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://mdmobjects.riversand.com/" name="detail" element="q22:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateTranslationExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTranslationExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateTranslationExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateTranslationExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateTranslationExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://mdmobjects.riversand.com/" name="detail" element="q23:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateTranslationExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTranslationExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateTranslationExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateTranslationExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateTranslationExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://mdmobjects.riversand.com/" name="detail" element="q24:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteTranslationExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTranslationExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteTranslationExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTranslationExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteTranslationExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://mdmobjects.riversand.com/" name="detail" element="q25:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetTranslationExportProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTranslationExportProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetTranslationExportProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTranslationExportProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetTranslationExportProfileById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://mdmobjects.riversand.com/" name="detail" element="q26:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteImportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteImportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteImportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteImportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteImportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://mdmobjects.riversand.com/" name="detail" element="q27:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateImportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateImportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateImportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateImportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://mdmobjects.riversand.com/" name="detail" element="q28:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateImportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateImportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateImportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateImportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateImportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://mdmobjects.riversand.com/" name="detail" element="q29:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessImportProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessImportProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessImportProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessImportProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessImportProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://mdmobjects.riversand.com/" name="detail" element="q30:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://mdmobjects.riversand.com/" name="detail" element="q31:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportProfileByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportProfileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://mdmobjects.riversand.com/" name="detail" element="q32:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllImportProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllImportProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImportProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllImportProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://mdmobjects.riversand.com/" name="detail" element="q33:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportProfileType" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImportProfileTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetImportProfileType_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://mdmobjects.riversand.com/" name="detail" element="q34:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupImportProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupImportProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupImportProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupImportProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupImportProfileById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://mdmobjects.riversand.com/" name="detail" element="q35:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupImportProfileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupImportProfileByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupImportProfileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupImportProfileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupImportProfileByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://mdmobjects.riversand.com/" name="detail" element="q36:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllLookupImportProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLookupImportProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllLookupImportProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLookupImportProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllLookupImportProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://mdmobjects.riversand.com/" name="detail" element="q37:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllExportProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllExportProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllExportProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://mdmobjects.riversand.com/" name="detail" element="q38:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportProfileById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://mdmobjects.riversand.com/" name="detail" element="q39:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportProfileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportProfileByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportProfileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportProfileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportProfileByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://mdmobjects.riversand.com/" name="detail" element="q40:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_IsExportProfileExists_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsExportProfileExists" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_IsExportProfileExists_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsExportProfileExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_IsExportProfileExists_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://mdmobjects.riversand.com/" name="detail" element="q41:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLockedExportProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockedExportProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLockedExportProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockedExportProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLockedExportProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://mdmobjects.riversand.com/" name="detail" element="q42:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ReleaseExportLockOnProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseExportLockOnProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ReleaseExportLockOnProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseExportLockOnProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ReleaseExportLockOnProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://mdmobjects.riversand.com/" name="detail" element="q43:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateLookupExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLookupExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateLookupExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateLookupExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateLookupExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://mdmobjects.riversand.com/" name="detail" element="q44:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteLookupExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLookupExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteLookupExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLookupExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteLookupExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://mdmobjects.riversand.com/" name="detail" element="q45:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateLookupExportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLookupExportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateLookupExportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLookupExportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateLookupExportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://mdmobjects.riversand.com/" name="detail" element="q46:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupExportProfileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupExportProfileByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupExportProfileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupExportProfileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupExportProfileByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://mdmobjects.riversand.com/" name="detail" element="q47:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupExportProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupExportProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupExportProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLookupExportProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetLookupExportProfileById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://mdmobjects.riversand.com/" name="detail" element="q48:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateJobSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateJobSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJobScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateJobSchedule_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://mdmobjects.riversand.com/" name="detail" element="q49:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateJobSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateJobSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJobScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateJobSchedule_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://mdmobjects.riversand.com/" name="detail" element="q50:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteJobSchedule_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobSchedule" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteJobSchedule_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteJobScheduleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteJobSchedule_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://mdmobjects.riversand.com/" name="detail" element="q51:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessJobSchedules_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessJobSchedules" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessJobSchedules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessJobSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessJobSchedules_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://mdmobjects.riversand.com/" name="detail" element="q52:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllJobSchedules_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobSchedules" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllJobSchedules_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllJobSchedulesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllJobSchedules_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://mdmobjects.riversand.com/" name="detail" element="q53:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobScheduleById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobScheduleById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobScheduleById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetJobScheduleByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetJobScheduleById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://mdmobjects.riversand.com/" name="detail" element="q54:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateExportSubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExportSubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateExportSubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateExportSubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateExportSubscriber_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://mdmobjects.riversand.com/" name="detail" element="q55:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateExportSubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportSubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateExportSubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateExportSubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateExportSubscriber_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://mdmobjects.riversand.com/" name="detail" element="q56:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteExportSubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExportSubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteExportSubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteExportSubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteExportSubscriber_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://mdmobjects.riversand.com/" name="detail" element="q57:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessExportSubscribers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessExportSubscribers" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessExportSubscribers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessExportSubscribersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ProcessExportSubscribers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://mdmobjects.riversand.com/" name="detail" element="q58:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllExportSubscribers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportSubscribers" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllExportSubscribers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllExportSubscribersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllExportSubscribers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://mdmobjects.riversand.com/" name="detail" element="q59:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportSubscriberById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportSubscriberById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportSubscriberById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetExportSubscriberByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetExportSubscriberById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://mdmobjects.riversand.com/" name="detail" element="q60:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateIntegrationActivityLogWithShortNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIntegrationActivityLogWithShortNames" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateIntegrationActivityLogWithShortNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIntegrationActivityLogWithShortNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateIntegrationActivityLogWithShortNames_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://mdmobjects.riversand.com/" name="detail" element="q61:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateIntegrationActivityLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIntegrationActivityLog" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateIntegrationActivityLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateIntegrationActivityLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateIntegrationActivityLog_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://mdmobjects.riversand.com/" name="detail" element="q62:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateConnectorProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateConnectorProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateConnectorProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateConnectorProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_CreateConnectorProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://mdmobjects.riversand.com/" name="detail" element="q63:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateConnectorProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConnectorProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateConnectorProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateConnectorProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateConnectorProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://mdmobjects.riversand.com/" name="detail" element="q64:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteConnectorProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteConnectorProfile" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteConnectorProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteConnectorProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_DeleteConnectorProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://mdmobjects.riversand.com/" name="detail" element="q65:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllConnectorProfiles_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllConnectorProfiles" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllConnectorProfiles_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllConnectorProfilesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllConnectorProfiles_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://mdmobjects.riversand.com/" name="detail" element="q66:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetConnectorProfileById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnectorProfileById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetConnectorProfileById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnectorProfileByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetConnectorProfileById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://mdmobjects.riversand.com/" name="detail" element="q67:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetConnectorProfileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnectorProfileByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetConnectorProfileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetConnectorProfileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetConnectorProfileByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://mdmobjects.riversand.com/" name="detail" element="q68:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationMessageById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationMessageByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://mdmobjects.riversand.com/" name="detail" element="q69:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllIntegrationMessageTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllIntegrationMessageTypes" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllIntegrationMessageTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllIntegrationMessageTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllIntegrationMessageTypes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://mdmobjects.riversand.com/" name="detail" element="q70:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationMessageTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationMessageTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageTypeById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://mdmobjects.riversand.com/" name="detail" element="q71:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageTypeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationMessageTypeByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageTypeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationMessageTypeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationMessageTypeByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://mdmobjects.riversand.com/" name="detail" element="q72:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllMDMObjectTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMDMObjectTypes" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllMDMObjectTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMDMObjectTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllMDMObjectTypes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://mdmobjects.riversand.com/" name="detail" element="q73:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetMDMObjectTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMObjectTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetMDMObjectTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMObjectTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetMDMObjectTypeById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q74="http://mdmobjects.riversand.com/" name="detail" element="q74:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetMDMObjectTypeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMObjectTypeByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetMDMObjectTypeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMDMObjectTypeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetMDMObjectTypeByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q75="http://mdmobjects.riversand.com/" name="detail" element="q75:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateIntegrationItemStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIntegrationItemStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateIntegrationItemStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIntegrationItemStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_UpdateIntegrationItemStatus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q76="http://mdmobjects.riversand.com/" name="detail" element="q76:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_SearchIntegrationItemStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIntegrationItemStatus" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_SearchIntegrationItemStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIntegrationItemStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_SearchIntegrationItemStatus_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q77="http://mdmobjects.riversand.com/" name="detail" element="q77:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllIntegrationItemDimensionTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllIntegrationItemDimensionTypes" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllIntegrationItemDimensionTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllIntegrationItemDimensionTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetAllIntegrationItemDimensionTypes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q78="http://mdmobjects.riversand.com/" name="detail" element="q78:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypeById_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationItemDimensionTypeById" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypeById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationItemDimensionTypeByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypeById_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q79="http://mdmobjects.riversand.com/" name="detail" element="q79:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypeByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationItemDimensionTypeByName" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypeByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationItemDimensionTypeByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypeByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q80="http://mdmobjects.riversand.com/" name="detail" element="q80:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypesByConnectorId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationItemDimensionTypesByConnectorId" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypesByConnectorId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIntegrationItemDimensionTypesByConnectorIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_GetIntegrationItemDimensionTypesByConnectorId_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q81="http://mdmobjects.riversand.com/" name="detail" element="q81:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ExportLookupCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportLookupCollection" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ExportLookupCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportLookupCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ExportLookupCollection_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q82="http://mdmobjects.riversand.com/" name="detail" element="q82:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ExportLookupToExcel_InputMessage">
+    <wsdl:part name="parameters" element="tns:ExportLookupToExcel" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ExportLookupToExcel_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ExportLookupToExcelResponse" />
+  </wsdl:message>
+  <wsdl:message name="IIntegrationService_ExportLookupToExcel_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q83="http://mdmobjects.riversand.com/" name="detail" element="q83:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IIntegrationService">
+    <wsdl:operation name="GetJob">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJob" message="tns:IIntegrationService_GetJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobResponse" message="tns:IIntegrationService_GetJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJob_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobs" message="tns:IIntegrationService_GetJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsResponse" message="tns:IIntegrationService_GetJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJobs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithAbilityToSkipJobDataLoading">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsWithAbilityToSkipJobDataLoading" message="tns:IIntegrationService_GetJobsWithAbilityToSkipJobDataLoading_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsWithAbilityToSkipJobDataLoadingResponse" message="tns:IIntegrationService_GetJobsWithAbilityToSkipJobDataLoading_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsWithAbilityToSkipJobDataLoadingMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJobsWithAbilityToSkipJobDataLoading_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsWithSqlFilter">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsWithSqlFilter" message="tns:IIntegrationService_GetJobsWithSqlFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsWithSqlFilterResponse" message="tns:IIntegrationService_GetJobsWithSqlFilter_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsWithSqlFilterMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJobsWithSqlFilter_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsByType">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsByType" message="tns:IIntegrationService_GetJobsByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsByTypeResponse" message="tns:IIntegrationService_GetJobsByType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsByTypeMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJobsByType_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobsByTypeWithAbilityToSkipJobDataLoading">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsByTypeWithAbilityToSkipJobDataLoading" message="tns:IIntegrationService_GetJobsByTypeWithAbilityToSkipJobDataLoading_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsByTypeWithAbilityToSkipJobDataLoadingResponse" message="tns:IIntegrationService_GetJobsByTypeWithAbilityToSkipJobDataLoading_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobsByTypeWithAbilityToSkipJobDataLoadingMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJobsByTypeWithAbilityToSkipJobDataLoading_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFilteredJobs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetFilteredJobs" message="tns:IIntegrationService_GetFilteredJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetFilteredJobsResponse" message="tns:IIntegrationService_GetFilteredJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetFilteredJobsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetFilteredJobs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessJobs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessJobs" message="tns:IIntegrationService_ProcessJobs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessJobsResponse" message="tns:IIntegrationService_ProcessJobs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessJobsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_ProcessJobs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJob">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateJob" message="tns:IIntegrationService_CreateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateJobResponse" message="tns:IIntegrationService_CreateJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateJobMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateJob_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJob">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateJob" message="tns:IIntegrationService_UpdateJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateJobResponse" message="tns:IIntegrationService_UpdateJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateJobMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateJob_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJob">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteJob" message="tns:IIntegrationService_DeleteJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteJobResponse" message="tns:IIntegrationService_DeleteJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteJobMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_DeleteJob_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InitiateImportJob">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/InitiateImportJob" message="tns:IIntegrationService_InitiateImportJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/InitiateImportJobResponse" message="tns:IIntegrationService_InitiateImportJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/InitiateImportJobMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_InitiateImportJob_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImportJob">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateImportJob" message="tns:IIntegrationService_UpdateImportJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateImportJobResponse" message="tns:IIntegrationService_UpdateImportJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateImportJobMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateImportJob_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportJobResults">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportJobResults" message="tns:IIntegrationService_GetImportJobResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportJobResultsResponse" message="tns:IIntegrationService_GetImportJobResults_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportJobResultsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetImportJobResults_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartImportJob">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/StartImportJob" message="tns:IIntegrationService_StartImportJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/StartImportJobResponse" message="tns:IIntegrationService_StartImportJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/StartImportJobMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_StartImportJob_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartImportJobWithCallerContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/StartImportJobWithCallerContext" message="tns:IIntegrationService_StartImportJobWithCallerContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/StartImportJobWithCallerContextResponse" message="tns:IIntegrationService_StartImportJobWithCallerContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/StartImportJobWithCallerContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_StartImportJobWithCallerContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorStates">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetErrorStates" message="tns:IIntegrationService_GetErrorStates_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetErrorStatesResponse" message="tns:IIntegrationService_GetErrorStates_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetErrorStatesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetErrorStates_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetErrorStatesAsExcelFile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetErrorStatesAsExcelFile" message="tns:IIntegrationService_GetErrorStatesAsExcelFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetErrorStatesAsExcelFileResponse" message="tns:IIntegrationService_GetErrorStatesAsExcelFile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetErrorStatesAsExcelFileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetErrorStatesAsExcelFile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataModelImportJobResults">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetDataModelImportJobResults" message="tns:IIntegrationService_GetDataModelImportJobResults_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetDataModelImportJobResultsResponse" message="tns:IIntegrationService_GetDataModelImportJobResults_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetDataModelImportJobResultsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetDataModelImportJobResults_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDataModelOperationResultSummary">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetDataModelOperationResultSummary" message="tns:IIntegrationService_GetDataModelOperationResultSummary_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetDataModelOperationResultSummaryResponse" message="tns:IIntegrationService_GetDataModelOperationResultSummary_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetDataModelOperationResultSummaryMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetDataModelOperationResultSummary_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetProfiles" message="tns:IIntegrationService_GetProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetProfilesResponse" message="tns:IIntegrationService_GetProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobExecutionStatus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobExecutionStatus" message="tns:IIntegrationService_GetJobExecutionStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobExecutionStatusResponse" message="tns:IIntegrationService_GetJobExecutionStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobExecutionStatusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJobExecutionStatus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateTranslationExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateTranslationExportProfile" message="tns:IIntegrationService_CreateTranslationExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateTranslationExportProfileResponse" message="tns:IIntegrationService_CreateTranslationExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateTranslationExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateTranslationExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateTranslationExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateTranslationExportProfile" message="tns:IIntegrationService_UpdateTranslationExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateTranslationExportProfileResponse" message="tns:IIntegrationService_UpdateTranslationExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateTranslationExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateTranslationExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTranslationExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteTranslationExportProfile" message="tns:IIntegrationService_DeleteTranslationExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteTranslationExportProfileResponse" message="tns:IIntegrationService_DeleteTranslationExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteTranslationExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_DeleteTranslationExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTranslationExportProfileById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetTranslationExportProfileById" message="tns:IIntegrationService_GetTranslationExportProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetTranslationExportProfileByIdResponse" message="tns:IIntegrationService_GetTranslationExportProfileById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetTranslationExportProfileByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetTranslationExportProfileById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteImportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteImportProfile" message="tns:IIntegrationService_DeleteImportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteImportProfileResponse" message="tns:IIntegrationService_DeleteImportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteImportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_DeleteImportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateImportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateImportProfile" message="tns:IIntegrationService_UpdateImportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateImportProfileResponse" message="tns:IIntegrationService_UpdateImportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateImportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateImportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateImportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateImportProfile" message="tns:IIntegrationService_CreateImportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateImportProfileResponse" message="tns:IIntegrationService_CreateImportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateImportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateImportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessImportProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessImportProfiles" message="tns:IIntegrationService_ProcessImportProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessImportProfilesResponse" message="tns:IIntegrationService_ProcessImportProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessImportProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_ProcessImportProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportProfileById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileById" message="tns:IIntegrationService_GetImportProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileByIdResponse" message="tns:IIntegrationService_GetImportProfileById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetImportProfileById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportProfileByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileByName" message="tns:IIntegrationService_GetImportProfileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileByNameResponse" message="tns:IIntegrationService_GetImportProfileByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetImportProfileByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImportProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllImportProfiles" message="tns:IIntegrationService_GetAllImportProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllImportProfilesResponse" message="tns:IIntegrationService_GetAllImportProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllImportProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllImportProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImportProfileType">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileType" message="tns:IIntegrationService_GetImportProfileType_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileTypeResponse" message="tns:IIntegrationService_GetImportProfileType_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetImportProfileTypeMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetImportProfileType_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupImportProfileById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupImportProfileById" message="tns:IIntegrationService_GetLookupImportProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupImportProfileByIdResponse" message="tns:IIntegrationService_GetLookupImportProfileById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupImportProfileByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetLookupImportProfileById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupImportProfileByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupImportProfileByName" message="tns:IIntegrationService_GetLookupImportProfileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupImportProfileByNameResponse" message="tns:IIntegrationService_GetLookupImportProfileByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupImportProfileByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetLookupImportProfileByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupImportProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllLookupImportProfiles" message="tns:IIntegrationService_GetAllLookupImportProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllLookupImportProfilesResponse" message="tns:IIntegrationService_GetAllLookupImportProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllLookupImportProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllLookupImportProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExportProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllExportProfiles" message="tns:IIntegrationService_GetAllExportProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllExportProfilesResponse" message="tns:IIntegrationService_GetAllExportProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllExportProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllExportProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportProfileById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportProfileById" message="tns:IIntegrationService_GetExportProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportProfileByIdResponse" message="tns:IIntegrationService_GetExportProfileById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportProfileByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetExportProfileById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportProfileByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportProfileByName" message="tns:IIntegrationService_GetExportProfileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportProfileByNameResponse" message="tns:IIntegrationService_GetExportProfileByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportProfileByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetExportProfileByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsExportProfileExists">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/IsExportProfileExists" message="tns:IIntegrationService_IsExportProfileExists_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/IsExportProfileExistsResponse" message="tns:IIntegrationService_IsExportProfileExists_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/IsExportProfileExistsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_IsExportProfileExists_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockedExportProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLockedExportProfiles" message="tns:IIntegrationService_GetLockedExportProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLockedExportProfilesResponse" message="tns:IIntegrationService_GetLockedExportProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLockedExportProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetLockedExportProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseExportLockOnProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ReleaseExportLockOnProfiles" message="tns:IIntegrationService_ReleaseExportLockOnProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ReleaseExportLockOnProfilesResponse" message="tns:IIntegrationService_ReleaseExportLockOnProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ReleaseExportLockOnProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_ReleaseExportLockOnProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateLookupExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateLookupExportProfile" message="tns:IIntegrationService_CreateLookupExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateLookupExportProfileResponse" message="tns:IIntegrationService_CreateLookupExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateLookupExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateLookupExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLookupExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteLookupExportProfile" message="tns:IIntegrationService_DeleteLookupExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteLookupExportProfileResponse" message="tns:IIntegrationService_DeleteLookupExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteLookupExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_DeleteLookupExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLookupExportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateLookupExportProfile" message="tns:IIntegrationService_UpdateLookupExportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateLookupExportProfileResponse" message="tns:IIntegrationService_UpdateLookupExportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateLookupExportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateLookupExportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupExportProfileByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupExportProfileByName" message="tns:IIntegrationService_GetLookupExportProfileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupExportProfileByNameResponse" message="tns:IIntegrationService_GetLookupExportProfileByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupExportProfileByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetLookupExportProfileByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLookupExportProfileById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupExportProfileById" message="tns:IIntegrationService_GetLookupExportProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupExportProfileByIdResponse" message="tns:IIntegrationService_GetLookupExportProfileById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetLookupExportProfileByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetLookupExportProfileById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJobSchedule">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateJobSchedule" message="tns:IIntegrationService_CreateJobSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateJobScheduleResponse" message="tns:IIntegrationService_CreateJobSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateJobScheduleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateJobSchedule_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJobSchedule">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateJobSchedule" message="tns:IIntegrationService_UpdateJobSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateJobScheduleResponse" message="tns:IIntegrationService_UpdateJobSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateJobScheduleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateJobSchedule_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteJobSchedule">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteJobSchedule" message="tns:IIntegrationService_DeleteJobSchedule_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteJobScheduleResponse" message="tns:IIntegrationService_DeleteJobSchedule_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteJobScheduleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_DeleteJobSchedule_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessJobSchedules">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessJobSchedules" message="tns:IIntegrationService_ProcessJobSchedules_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessJobSchedulesResponse" message="tns:IIntegrationService_ProcessJobSchedules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessJobSchedulesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_ProcessJobSchedules_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllJobSchedules">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllJobSchedules" message="tns:IIntegrationService_GetAllJobSchedules_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllJobSchedulesResponse" message="tns:IIntegrationService_GetAllJobSchedules_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllJobSchedulesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllJobSchedules_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetJobScheduleById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobScheduleById" message="tns:IIntegrationService_GetJobScheduleById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobScheduleByIdResponse" message="tns:IIntegrationService_GetJobScheduleById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetJobScheduleByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetJobScheduleById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateExportSubscriber">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateExportSubscriber" message="tns:IIntegrationService_CreateExportSubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateExportSubscriberResponse" message="tns:IIntegrationService_CreateExportSubscriber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateExportSubscriberMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateExportSubscriber_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateExportSubscriber">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateExportSubscriber" message="tns:IIntegrationService_UpdateExportSubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateExportSubscriberResponse" message="tns:IIntegrationService_UpdateExportSubscriber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateExportSubscriberMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateExportSubscriber_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteExportSubscriber">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteExportSubscriber" message="tns:IIntegrationService_DeleteExportSubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteExportSubscriberResponse" message="tns:IIntegrationService_DeleteExportSubscriber_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteExportSubscriberMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_DeleteExportSubscriber_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessExportSubscribers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessExportSubscribers" message="tns:IIntegrationService_ProcessExportSubscribers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessExportSubscribersResponse" message="tns:IIntegrationService_ProcessExportSubscribers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ProcessExportSubscribersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_ProcessExportSubscribers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllExportSubscribers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllExportSubscribers" message="tns:IIntegrationService_GetAllExportSubscribers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllExportSubscribersResponse" message="tns:IIntegrationService_GetAllExportSubscribers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllExportSubscribersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllExportSubscribers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetExportSubscriberById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportSubscriberById" message="tns:IIntegrationService_GetExportSubscriberById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportSubscriberByIdResponse" message="tns:IIntegrationService_GetExportSubscriberById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetExportSubscriberByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetExportSubscriberById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIntegrationActivityLogWithShortNames">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateIntegrationActivityLogWithShortNames" message="tns:IIntegrationService_CreateIntegrationActivityLogWithShortNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateIntegrationActivityLogWithShortNamesResponse" message="tns:IIntegrationService_CreateIntegrationActivityLogWithShortNames_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateIntegrationActivityLogWithShortNamesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateIntegrationActivityLogWithShortNames_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateIntegrationActivityLog">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateIntegrationActivityLog" message="tns:IIntegrationService_CreateIntegrationActivityLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateIntegrationActivityLogResponse" message="tns:IIntegrationService_CreateIntegrationActivityLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateIntegrationActivityLogMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateIntegrationActivityLog_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateConnectorProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateConnectorProfile" message="tns:IIntegrationService_CreateConnectorProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateConnectorProfileResponse" message="tns:IIntegrationService_CreateConnectorProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/CreateConnectorProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_CreateConnectorProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateConnectorProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateConnectorProfile" message="tns:IIntegrationService_UpdateConnectorProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateConnectorProfileResponse" message="tns:IIntegrationService_UpdateConnectorProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateConnectorProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateConnectorProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteConnectorProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteConnectorProfile" message="tns:IIntegrationService_DeleteConnectorProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteConnectorProfileResponse" message="tns:IIntegrationService_DeleteConnectorProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/DeleteConnectorProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_DeleteConnectorProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllConnectorProfiles">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllConnectorProfiles" message="tns:IIntegrationService_GetAllConnectorProfiles_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllConnectorProfilesResponse" message="tns:IIntegrationService_GetAllConnectorProfiles_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllConnectorProfilesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllConnectorProfiles_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectorProfileById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetConnectorProfileById" message="tns:IIntegrationService_GetConnectorProfileById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetConnectorProfileByIdResponse" message="tns:IIntegrationService_GetConnectorProfileById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetConnectorProfileByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetConnectorProfileById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetConnectorProfileByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetConnectorProfileByName" message="tns:IIntegrationService_GetConnectorProfileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetConnectorProfileByNameResponse" message="tns:IIntegrationService_GetConnectorProfileByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetConnectorProfileByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetConnectorProfileByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrationMessageById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageById" message="tns:IIntegrationService_GetIntegrationMessageById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageByIdResponse" message="tns:IIntegrationService_GetIntegrationMessageById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetIntegrationMessageById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllIntegrationMessageTypes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllIntegrationMessageTypes" message="tns:IIntegrationService_GetAllIntegrationMessageTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllIntegrationMessageTypesResponse" message="tns:IIntegrationService_GetAllIntegrationMessageTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllIntegrationMessageTypesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllIntegrationMessageTypes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrationMessageTypeById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageTypeById" message="tns:IIntegrationService_GetIntegrationMessageTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageTypeByIdResponse" message="tns:IIntegrationService_GetIntegrationMessageTypeById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageTypeByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetIntegrationMessageTypeById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrationMessageTypeByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageTypeByName" message="tns:IIntegrationService_GetIntegrationMessageTypeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageTypeByNameResponse" message="tns:IIntegrationService_GetIntegrationMessageTypeByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationMessageTypeByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetIntegrationMessageTypeByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllMDMObjectTypes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllMDMObjectTypes" message="tns:IIntegrationService_GetAllMDMObjectTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllMDMObjectTypesResponse" message="tns:IIntegrationService_GetAllMDMObjectTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllMDMObjectTypesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllMDMObjectTypes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMObjectTypeById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetMDMObjectTypeById" message="tns:IIntegrationService_GetMDMObjectTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetMDMObjectTypeByIdResponse" message="tns:IIntegrationService_GetMDMObjectTypeById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetMDMObjectTypeByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetMDMObjectTypeById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMDMObjectTypeByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetMDMObjectTypeByName" message="tns:IIntegrationService_GetMDMObjectTypeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetMDMObjectTypeByNameResponse" message="tns:IIntegrationService_GetMDMObjectTypeByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetMDMObjectTypeByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetMDMObjectTypeByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIntegrationItemStatus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateIntegrationItemStatus" message="tns:IIntegrationService_UpdateIntegrationItemStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateIntegrationItemStatusResponse" message="tns:IIntegrationService_UpdateIntegrationItemStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/UpdateIntegrationItemStatusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_UpdateIntegrationItemStatus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchIntegrationItemStatus">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/SearchIntegrationItemStatus" message="tns:IIntegrationService_SearchIntegrationItemStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/SearchIntegrationItemStatusResponse" message="tns:IIntegrationService_SearchIntegrationItemStatus_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/SearchIntegrationItemStatusMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_SearchIntegrationItemStatus_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllIntegrationItemDimensionTypes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllIntegrationItemDimensionTypes" message="tns:IIntegrationService_GetAllIntegrationItemDimensionTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllIntegrationItemDimensionTypesResponse" message="tns:IIntegrationService_GetAllIntegrationItemDimensionTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetAllIntegrationItemDimensionTypesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetAllIntegrationItemDimensionTypes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrationItemDimensionTypeById">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypeById" message="tns:IIntegrationService_GetIntegrationItemDimensionTypeById_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypeByIdResponse" message="tns:IIntegrationService_GetIntegrationItemDimensionTypeById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypeByIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetIntegrationItemDimensionTypeById_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrationItemDimensionTypeByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypeByName" message="tns:IIntegrationService_GetIntegrationItemDimensionTypeByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypeByNameResponse" message="tns:IIntegrationService_GetIntegrationItemDimensionTypeByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypeByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetIntegrationItemDimensionTypeByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIntegrationItemDimensionTypesByConnectorId">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypesByConnectorId" message="tns:IIntegrationService_GetIntegrationItemDimensionTypesByConnectorId_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypesByConnectorIdResponse" message="tns:IIntegrationService_GetIntegrationItemDimensionTypesByConnectorId_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/GetIntegrationItemDimensionTypesByConnectorIdMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_GetIntegrationItemDimensionTypesByConnectorId_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportLookupCollection">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ExportLookupCollection" message="tns:IIntegrationService_ExportLookupCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ExportLookupCollectionResponse" message="tns:IIntegrationService_ExportLookupCollection_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ExportLookupCollectionMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_ExportLookupCollection_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ExportLookupToExcel">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ExportLookupToExcel" message="tns:IIntegrationService_ExportLookupToExcel_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ExportLookupToExcelResponse" message="tns:IIntegrationService_ExportLookupToExcel_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IIntegrationService/ExportLookupToExcelMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IIntegrationService_ExportLookupToExcel_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="IntegrationService">
+    <wsdl:port name="WSHttpBinding_IIntegrationService" binding="i0:WSHttpBinding_IIntegrationService">
+      <soap12:address location="http://localhost/Development_WCFServices/IntegrationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/IntegrationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IIntegrationService" binding="i0:NetTcpBinding_IIntegrationService">
+      <soap12:address location="net.tcp://main/Development_WCFServices/IntegrationService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://main/Development_WCFServices/IntegrationService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

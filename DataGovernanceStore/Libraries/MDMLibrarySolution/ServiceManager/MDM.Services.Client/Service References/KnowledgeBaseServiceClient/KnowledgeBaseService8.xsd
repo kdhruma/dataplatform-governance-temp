@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="DataModelOperationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:OperationResult">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DataModelObjectType" type="q1:ObjectType" />
+          <xs:element minOccurs="0" name="ExternalId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="LongName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataModelOperationResult" nillable="true" type="tns:DataModelOperationResult" />
+</xs:schema>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/CoreService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Caching" />
+  <xs:element name="RemoveCacheKey">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="cacheKeys" nillable="true" type="q1:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveCacheKeyResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCacheKeys">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCacheKeysResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAllCacheKeysResult" nillable="true" type="q2:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCache">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearCacheResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearDistributedCache">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ClearDistributedCacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ClearDistributedCacheResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidateLookupCache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LookupName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InvalidateLookupCacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="InvalidateLookupCacheResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEntityFromCache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityId" type="xs:long" />
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="relatedKeyEnum" nillable="true" type="q3:EntityCacheKeyEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEntityFromCacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="RemoveEntityFromCacheResult" nillable="true" type="q4:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEntityFromCacheByShortName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="relatedKeyEnum" nillable="true" type="q5:EntityCacheKeyEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveEntityFromCacheByShortNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="RemoveEntityFromCacheByShortNameResult" nillable="true" type="q6:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFromCache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityId" type="xs:long" />
+        <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="relatedKeyEnum" nillable="true" type="q7:EntityCacheKeyEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFromCacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="GetEntityFromCacheResult" nillable="true" type="q8:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFromCacheByShortName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="relatedKeyEnum" nillable="true" type="q9:EntityCacheKeyEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityFromCacheByShortNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://mdmobjects.riversand.com/" minOccurs="0" name="GetEntityFromCacheByShortNameResult" nillable="true" type="q10:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveObjectFromCache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Caching" minOccurs="0" name="config" nillable="true" type="q11:CacheConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RemoveObjectFromCacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://mdmobjects.riversand.com/" minOccurs="0" name="RemoveObjectFromCacheResult" nillable="true" type="q12:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectFromCache">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="key" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Caching" minOccurs="0" name="config" nillable="true" type="q13:CacheConfiguration" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectFromCacheResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="GetObjectFromCacheResult" nillable="true" type="q14:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCacheConfiguration">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCacheConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCacheConfigurationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllServers">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllServersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllServersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestBuildDetail">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestBuildDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://mdmobjects.riversand.com/" minOccurs="0" name="GetLatestBuildDetailResult" nillable="true" type="q15:BuildDetail" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildFeatureId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="buildDetailId" type="xs:int" />
+        <xs:element minOccurs="0" name="featureName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBuildFeatureIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBuildFeatureIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessFileCheckSum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://mdmobjects.riversand.com/" minOccurs="0" name="buildDetailContext" nillable="true" type="q16:BuildDetailContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessFileCheckSumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessFileCheckSumResult" nillable="true" type="q17:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBuildStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="buildDetailContext" nillable="true" type="q18:BuildDetailContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBuildStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateBuildStatusResult" nillable="true" type="q19:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBuildDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://mdmobjects.riversand.com/" minOccurs="0" name="buildDetailContext" nillable="true" type="q20:BuildDetailContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveBuildDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://mdmobjects.riversand.com/" minOccurs="0" name="SaveBuildDetailsResult" nillable="true" type="q21:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

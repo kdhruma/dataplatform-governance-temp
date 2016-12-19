@@ -1,0 +1,781 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.Core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+  <xs:import namespace="http://mdmobjects.riversand.com/" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfNormalizationResultADdI0yA3">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" />
+  <xs:complexType name="ItemContractCollectionOfNormalizationResultADdI0yA3">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" minOccurs="0" name="_items" nillable="true" type="q1:ArrayOfNormalizationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfNormalizationResultADdI0yA3" nillable="true" type="tns:ItemContractCollectionOfNormalizationResultADdI0yA3" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeJobGtF4Gnug">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="Job" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfJobPtBE3Ihj">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeJobGtF4Gnug" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeJobGtF4Gnug" />
+  <xs:complexType name="ItemContractCollectionOfJobPtBE3Ihj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="Job" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="_items" nillable="true" type="q2:ArrayOfJob" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfJobPtBE3Ihj" nillable="true" type="tns:ItemContractCollectionOfJobPtBE3Ihj" />
+  <xs:complexType name="TraceSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_isTracingEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_tracingLevel" type="tns:TracingLevel" />
+      <xs:element minOccurs="0" name="_tracingMode" type="tns:TracingMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TraceSettings" nillable="true" type="tns:TraceSettings" />
+  <xs:simpleType name="TracingLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Basic" />
+      <xs:enumeration value="Detail" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TracingLevel" nillable="true" type="tns:TracingLevel" />
+  <xs:simpleType name="TracingMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="OperationTracing" />
+      <xs:enumeration value="SelectiveComponentTracing" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TracingMode" nillable="true" type="tns:TracingMode" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeImportProfileicpZqzYd">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfImportProfileWNy_PbAwg">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeImportProfileicpZqzYd" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeImportProfileicpZqzYd" />
+  <xs:complexType name="ItemContractCollectionOfImportProfileWNy_PbAwg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="_items" nillable="true" type="q3:ArrayOfImportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfImportProfileWNy_PbAwg" nillable="true" type="tns:ItemContractCollectionOfImportProfileWNy_PbAwg" />
+  <xs:simpleType name="ExecutionStepType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Core" />
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="UnKnown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExecutionStepType" nillable="true" type="tns:ExecutionStepType" />
+  <xs:simpleType name="ImportSourceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="StagingDB10" />
+      <xs:enumeration value="FlatStagingDB10" />
+      <xs:enumeration value="RSXml40" />
+      <xs:enumeration value="RSExcel10" />
+      <xs:enumeration value="RSMAM10" />
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="Generic10" />
+      <xs:enumeration value="RSXml41" />
+      <xs:enumeration value="RSDsv10" />
+      <xs:enumeration value="RSExcel11" />
+      <xs:enumeration value="LookupData10" />
+      <xs:enumeration value="LookupExcel10" />
+      <xs:enumeration value="RSLookupExcel10" />
+      <xs:enumeration value="RSLookupXml10" />
+      <xs:enumeration value="RSLookupGeneric10" />
+      <xs:enumeration value="RSLookupDSV10" />
+      <xs:enumeration value="RSXliff10" />
+      <xs:enumeration value="RSLookupXliff10" />
+      <xs:enumeration value="RSDataModelExcel" />
+      <xs:enumeration value="Generic11" />
+      <xs:enumeration value="Generic12" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ImportSourceType" nillable="true" type="tns:ImportSourceType" />
+  <xs:simpleType name="MappingDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DBColumn" />
+      <xs:enumeration value="XmlNode" />
+      <xs:enumeration value="XmlAttribute" />
+      <xs:enumeration value="ExcelColumn" />
+      <xs:enumeration value="MDMEntityObject" />
+      <xs:enumeration value="MDMAttributeObject" />
+      <xs:enumeration value="EntityData" />
+      <xs:enumeration value="AttributeData" />
+      <xs:enumeration value="UnKnown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MappingDataType" nillable="true" type="tns:MappingDataType" />
+  <xs:simpleType name="MappingMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Implicit" />
+      <xs:enumeration value="Explicit" />
+      <xs:enumeration value="InputField" />
+      <xs:enumeration value="Custom" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MappingMode" nillable="true" type="tns:MappingMode" />
+  <xs:simpleType name="ImportMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Merge" />
+      <xs:enumeration value="InitialLoad" />
+      <xs:enumeration value="ComplextAttribute" />
+      <xs:enumeration value="RelationshipLoad" />
+      <xs:enumeration value="ExtensionRelationshipLoad" />
+      <xs:enumeration value="EntityHierarchyLoad" />
+      <xs:enumeration value="EntityExtensionRelationshipAndHierarchyLoad" />
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="RelationshipInitialLoad" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ImportMode" nillable="true" type="tns:ImportMode" />
+  <xs:simpleType name="ImportProcessingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ValidationOnly" />
+      <xs:enumeration value="ValidateAndProcess" />
+      <xs:enumeration value="MatchOnly" />
+      <xs:enumeration value="ValidateAndMatch" />
+      <xs:enumeration value="ValidateProcessAndMatch" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ImportProcessingType" nillable="true" type="tns:ImportProcessingType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeProfileGroupContextRqpk4DV6">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ProfileGroupContext" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfProfileGroupContextADdI0yA3">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeProfileGroupContextRqpk4DV6" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeProfileGroupContextRqpk4DV6" />
+  <xs:complexType name="ItemContractCollectionOfProfileGroupContextADdI0yA3">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ProfileGroupContext" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" minOccurs="0" name="_items" nillable="true" type="q4:ArrayOfProfileGroupContext" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfProfileGroupContextADdI0yA3" nillable="true" type="tns:ItemContractCollectionOfProfileGroupContextADdI0yA3" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeEmailNotificationkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="EmailNotification" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfEmailNotificationpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeEmailNotificationkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeEmailNotificationkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfEmailNotificationpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="EmailNotification" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q5:ArrayOfEmailNotification" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfEmailNotificationpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfEmailNotificationpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeDataFormatterSettingkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="DataFormatterSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfDataFormatterSettingpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeDataFormatterSettingkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeDataFormatterSettingkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfDataFormatterSettingpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataFormatterSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q6:ArrayOfDataFormatterSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfDataFormatterSettingpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfDataFormatterSettingpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeDataSubscriberkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="DataSubscriber" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfDataSubscriberpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeDataSubscriberkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeDataSubscriberkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfDataSubscriberpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DataSubscriber" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q7:ArrayOfDataSubscriber" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfDataSubscriberpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfDataSubscriberpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeMDMObjectGroupkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="MDMObjectGroup" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfMDMObjectGrouppli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeMDMObjectGroupkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeMDMObjectGroupkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfMDMObjectGrouppli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MDMObjectGroup" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q8:ArrayOfMDMObjectGroup" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfMDMObjectGrouppli5DGe2" nillable="true" type="tns:ItemContractCollectionOfMDMObjectGrouppli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeMDMObject7cXCH591">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="MDMObject" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfMDMObjectXK0exmbb">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeMDMObject7cXCH591" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeMDMObject7cXCH591" />
+  <xs:complexType name="ItemContractCollectionOfMDMObjectXK0exmbb">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MDMObject" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="_items" nillable="true" type="q9:ArrayOfMDMObject" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfMDMObjectXK0exmbb" nillable="true" type="tns:ItemContractCollectionOfMDMObjectXK0exmbb" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeProfileSettingkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ProfileSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfProfileSettingpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeProfileSettingkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeProfileSettingkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfProfileSettingpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ProfileSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q10:ArrayOfProfileSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfProfileSettingpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfProfileSettingpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeExportScopekIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ExportScope" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfExportScopepli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeExportScopekIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeExportScopekIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfExportScopepli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExportScope" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q11:ArrayOfExportScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfExportScopepli5DGe2" nillable="true" type="tns:ItemContractCollectionOfExportScopepli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeLookupImportProfileicpZqzYd">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="LookupImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfLookupImportProfileWNy_PbAwg">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeLookupImportProfileicpZqzYd" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeLookupImportProfileicpZqzYd" />
+  <xs:complexType name="ItemContractCollectionOfLookupImportProfileWNy_PbAwg">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LookupImportProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Imports" minOccurs="0" name="_items" nillable="true" type="q12:ArrayOfLookupImportProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfLookupImportProfileWNy_PbAwg" nillable="true" type="tns:ItemContractCollectionOfLookupImportProfileWNy_PbAwg" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeExecutionSettingkIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ExecutionSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfExecutionSettingpli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeExecutionSettingkIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeExecutionSettingkIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfExecutionSettingpli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ExecutionSetting" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q13:ArrayOfExecutionSetting" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfExecutionSettingpli5DGe2" nillable="true" type="tns:ItemContractCollectionOfExecutionSettingpli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeLookupExportScopekIZLKYdt">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="LookupExportScope" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfLookupExportScopepli5DGe2">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeLookupExportScopekIZLKYdt" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeLookupExportScopekIZLKYdt" />
+  <xs:complexType name="ItemContractCollectionOfLookupExportScopepli5DGe2">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="LookupExportScope" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Exports" minOccurs="0" name="_items" nillable="true" type="q14:ArrayOfLookupExportScope" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfLookupExportScopepli5DGe2" nillable="true" type="tns:ItemContractCollectionOfLookupExportScopepli5DGe2" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeJobScheduleGtF4Gnug">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="JobSchedule" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfJobSchedulePtBE3Ihj">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeJobScheduleGtF4Gnug" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeJobScheduleGtF4Gnug" />
+  <xs:complexType name="ItemContractCollectionOfJobSchedulePtBE3Ihj">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="JobSchedule" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Jobs" minOccurs="0" name="_items" nillable="true" type="q15:ArrayOfJobSchedule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfJobSchedulePtBE3Ihj" nillable="true" type="tns:ItemContractCollectionOfJobSchedulePtBE3Ihj" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeConnectorProfileOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="ConnectorProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfConnectorProfileFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeConnectorProfileOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeConnectorProfileOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfConnectorProfileFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ConnectorProfile" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q16:ArrayOfConnectorProfile" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfConnectorProfileFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfConnectorProfileFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationMessageTypeOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationMessageType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationMessageTypeFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationMessageTypeOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationMessageTypeOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationMessageTypeFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationMessageType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q17:ArrayOfIntegrationMessageType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationMessageTypeFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationMessageTypeFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeMDMObjectType7cXCH591">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="MDMObjectType" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfMDMObjectTypeXK0exmbb">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeMDMObjectType7cXCH591" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeMDMObjectType7cXCH591" />
+  <xs:complexType name="ItemContractCollectionOfMDMObjectTypeXK0exmbb">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="MDMObjectType" Namespace="http://mdmobjects.riversand.com/" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="_items" nillable="true" type="q18:ArrayOfMDMObjectType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfMDMObjectTypeXK0exmbb" nillable="true" type="tns:ItemContractCollectionOfMDMObjectTypeXK0exmbb" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusDimension" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusDimension" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q19:ArrayOfIntegrationItemStatusDimension" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusDimensionFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusSearchParameterOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusSearchParameter" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusSearchParameterOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusSearchParameterOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusSearchParameter" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q20:ArrayOfIntegrationItemStatusSearchParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusSearchParameterFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusInternalOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusInternalOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusInternalOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q21:ArrayOfIntegrationItemStatusInternal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusInternalFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionInternalOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemStatusDimensionInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionInternalOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemStatusDimensionInternalOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemStatusDimensionInternal" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q22:ArrayOfIntegrationItemStatusDimensionInternal" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemStatusDimensionInternalFKbqduTG" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeIntegrationItemDimensionTypeOX2zyehR">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="IntegrationItemDimensionType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeIntegrationItemDimensionTypeOX2zyehR" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeIntegrationItemDimensionTypeOX2zyehR" />
+  <xs:complexType name="ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="IntegrationItemDimensionType" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Integration" minOccurs="0" name="_items" nillable="true" type="q23:ArrayOfIntegrationItemDimensionType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG" nillable="true" type="tns:ItemContractCollectionOfIntegrationItemDimensionTypeFKbqduTG" />
+</xs:schema>

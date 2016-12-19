@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQMNormalization" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQMNormalization" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+  <xs:complexType name="NormalizationProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" base="q1:DQMJobProfile">
+        <xs:sequence>
+          <xs:element xmlns:q2="http://mdmobjects.riversand.com/" minOccurs="0" name="DataLocales" nillable="true" type="q2:ArrayOfLocaleEnum" />
+          <xs:element minOccurs="0" name="IsSimulation" type="xs:boolean" />
+          <xs:element minOccurs="0" name="RulesetsCollection" nillable="true" type="tns:NormalizationRulesetsCollection" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalizationProfile" nillable="true" type="tns:NormalizationProfile" />
+  <xs:complexType name="NormalizationRulesetsCollection">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_normalizationRules" nillable="true" type="tns:ArrayOfNormalizationRuleset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NormalizationRulesetsCollection" nillable="true" type="tns:NormalizationRulesetsCollection" />
+  <xs:complexType name="ArrayOfNormalizationRuleset">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NormalizationRuleset" nillable="true" type="tns:NormalizationRuleset" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNormalizationRuleset" nillable="true" type="tns:ArrayOfNormalizationRuleset" />
+  <xs:complexType name="NormalizationRuleset">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://mdmobjects.riversand.com/" base="q3:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RelationshipTypeId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="RuleId" type="xs:int" />
+          <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalizationRuleset" nillable="true" type="tns:NormalizationRuleset" />
+</xs:schema>

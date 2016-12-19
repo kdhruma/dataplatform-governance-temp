@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.Core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/MainLine_WCFServices/SecurityService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+  <xs:complexType name="TraceSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_isTracingEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_tracingLevel" type="tns:TracingLevel" />
+      <xs:element minOccurs="0" name="_tracingMode" type="tns:TracingMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TraceSettings" nillable="true" type="tns:TraceSettings" />
+  <xs:simpleType name="TracingLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Basic" />
+      <xs:enumeration value="Detail" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TracingLevel" nillable="true" type="tns:TracingLevel" />
+  <xs:simpleType name="TracingMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="OperationTracing" />
+      <xs:enumeration value="SelectiveComponentTracing" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TracingMode" nillable="true" type="tns:TracingMode" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfNormalizationResultADdI0yA3">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" />
+  <xs:complexType name="ItemContractCollectionOfNormalizationResultADdI0yA3">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" minOccurs="0" name="_items" nillable="true" type="q1:ArrayOfNormalizationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfNormalizationResultADdI0yA3" nillable="true" type="tns:ItemContractCollectionOfNormalizationResultADdI0yA3" />
+</xs:schema>

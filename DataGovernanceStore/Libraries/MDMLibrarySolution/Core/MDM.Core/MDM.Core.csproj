@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.Core</RootNamespace>
+    <AssemblyName>RS.MDM.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.Core.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.Core.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\..\3rdParty\Protobuf-net\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="AppConfiguration.cs" />
+    <Compile Include="Base\IActivityBase.cs" />
+    <Compile Include="Base\InterfaceContractCollection.cs" />
+    <Compile Include="Base\ItemContractCollection.cs" />
+    <Compile Include="BusinessLogicBase.cs" />
+    <Compile Include="BenchmarkTime.cs" />
+    <Compile Include="ContextObjects\RuleExecutionInfo.cs" />
+    <Compile Include="ContextObjects\IRuleExecutionInfo.cs" />
+    <Compile Include="DDG\DDGDictionary.cs" />
+    <Compile Include="DDG\DDGEnums.cs" />
+    <Compile Include="ContextObjects\CallerContext.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="ContextObjects\CallDataContext.cs" />
+    <Compile Include="ContextObjects\ICallDataContext.cs" />
+    <Compile Include="DataModel\DataModelDictionary.cs" />
+    <Compile Include="DataModel\DataModelEnums.cs" />
+    <Compile Include="DataStructures\RSQueue.cs" />
+    <Compile Include="DataStructures\RSQueueEnumerator.cs" />
+    <Compile Include="DataStructures\RSStack.cs" />
+    <Compile Include="Diagnostics\DiagnosticResources.cs" />
+    <Compile Include="ContextObjects\ExecutionContext.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\LINQExtensions.cs" />
+    <Compile Include="Extensions\EventHandlerExtensions.cs" />
+    <Compile Include="Exceptions\DuplicateObjectException.cs" />
+    <Compile Include="Exceptions\InvalidSourceFlagException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exceptions\MDMOperationException.cs" />
+    <Compile Include="Exceptions\PermissionsNotFoundException.cs" />
+    <Compile Include="Extensions\ObjectExtensions.cs" />
+    <Compile Include="Extensions\SqlExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="FormatHelper.cs" />
+    <Compile Include="ContextObjects\ICallerContext.cs" />
+    <Compile Include="ContextObjects\IExecutionContext.cs" />
+    <Compile Include="IMDMObject.cs" />
+    <Compile Include="IRequestContextData.cs" />
+    <Compile Include="ContextObjects\ISecurityContext.cs" />
+    <Compile Include="MdmCenterEnum.cs" />
+    <Compile Include="MDMObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ObjectBase.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtoBufConstants.cs" />
+    <Compile Include="ContextObjects\SecurityContext.cs" />
+    <Compile Include="SqlClientDataAccessBase.cs" />
+    <Compile Include="TraceSettings.cs" />
+    <Compile Include="ValueTypeHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

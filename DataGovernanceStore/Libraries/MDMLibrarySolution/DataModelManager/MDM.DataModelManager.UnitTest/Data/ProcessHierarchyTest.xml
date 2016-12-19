@@ -1,0 +1,78 @@
+﻿<Testdata>
+
+  <Data MethodName="Create_Hierarchy">
+    <Input>
+      <Parameters>
+        <Parameter Name="Hierarchies">
+          <Hierarchies>
+            <Hierarchy Id="-1" Name="create test Hierarchy" LongName="Create test Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="create">
+              <Attributes />
+            </Hierarchy>
+          </Hierarchies>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Update_Hierarchy">
+    <Input>
+      <Parameters>
+        <Parameter Name="Hierarchies">
+          <Hierarchies>
+            <Hierarchy Id="-1" Name="update test Hierarchy" LongName="Update test Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="update">
+              <Attributes />
+            </Hierarchy>
+          </Hierarchies>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Delete_Hierarchy">
+    <Input>
+      <Parameters>
+        <Parameter Name="Hierarchies">
+          <Hierarchies>
+            <Hierarchy Id="-1" Name="delete test Hierarchy" LongName="delete test Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="delete">
+              <Attributes />
+            </Hierarchy>
+          </Hierarchies>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Process_Hierarchy">
+    <Input>
+      <Parameters>
+        <Parameter Name="Hierarchies">
+          <Hierarchies>
+            <Hierarchy Id="-1" Name="process 1 test Hierarchy" LongName="process 1 test Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="delete">
+              <Attributes />
+            </Hierarchy>
+            <Hierarchy Id="-1" Name="process 2 test Hierarchy" LongName="process 2 test Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="delete">
+              <Attributes />
+            </Hierarchy>
+            <Hierarchy Id="-1" Name="process 3 test Hierarchy" LongName="process 3 test Hierarchy" Locale="UnKnown" Denormalize="false" SecurityObjectTypeId="38" Action="delete">
+              <Attributes />
+            </Hierarchy>
+          </Hierarchies>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+  
+
+</Testdata>

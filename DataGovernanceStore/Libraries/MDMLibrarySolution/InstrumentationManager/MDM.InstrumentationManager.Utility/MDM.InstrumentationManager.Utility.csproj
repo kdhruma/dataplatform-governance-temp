@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A452CD7-42CF-41B0-83E9-759C68B43EEF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.InstrumentationManager.Utility</RootNamespace>
+    <AssemblyName>RS.MDM.InstrumentationManager.Utility</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.InstrumentationManager.Utility.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.InstrumentationManager.Utility.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net">
+      <HintPath>..\..\..\..\3rd Party\Protobuf-net\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DiagnosticsEnums.cs" />
+    <Compile Include="Interfaces\IDiagnosticReportSettings.cs" />
+    <Compile Include="Interfaces\IDiagnosticDataElement.cs" />
+    <Compile Include="Interfaces\IDiagnosticDataProcessor.cs" />
+    <Compile Include="Interfaces\ISecurityContextFilter.cs" />
+    <Compile Include="Interfaces\ITracingProfile.cs" />
+    <Compile Include="Objects\CallerContextFilter.cs" />
+    <Compile Include="Objects\DiagnosticActivity.cs" />
+    <Compile Include="Objects\DiagnosticActivityCollection.cs" />
+    <Compile Include="Objects\DiagnosticReportFilterUtility.cs" />
+    <Compile Include="Objects\DiagnosticReportSettings.cs" />
+    <Compile Include="Interfaces\ICallerContextFilter.cs" />
+    <Compile Include="Objects\SecurityContextFilter.cs" />
+    <Compile Include="SvcLogTraceWriter.cs" />
+    <Compile Include="Objects\TracingProfile.cs" />
+    <Compile Include="Objects\DiagnosticRecord.cs" />
+    <Compile Include="Objects\DiagnosticRecordCollection.cs" />
+    <Compile Include="Objects\DiagnosticReportBase.cs" />
+    <Compile Include="Objects\EntityOperationDiagnosticReport.cs" />
+    <Compile Include="Interfaces\IDiagnosticActivity.cs" />
+    <Compile Include="Interfaces\IDiagnosticActivityCollection.cs" />
+    <Compile Include="Interfaces\IDiagnosticRecord.cs" />
+    <Compile Include="Interfaces\IDiagnosticRecordCollection.cs" />
+    <Compile Include="Interfaces\IDiagnosticReportBase.cs" />
+    <Compile Include="Interfaces\IEntityOperationDiagnosticReport.cs" />
+    <Compile Include="Legacy\IMDMTraceConfig.cs" />
+    <Compile Include="Legacy\IMDMTraceConfigItem.cs" />
+    <Compile Include="LogicalCallstackManager.cs" />
+    <Compile Include="Legacy\MDMTraceConfig.cs" />
+    <Compile Include="Legacy\MDMTraceConfigItem.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{b907bb1d-d3ba-4316-a05f-b3a99d66a6b9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OperationContextManager\MDM.OperationContextManager.Business\MDM.OperationContextManager.Business.csproj">
+      <Project>{2b0d6267-080c-493a-89e6-d90e4f4eecc0}</Project>
+      <Name>MDM.OperationContextManager.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MDM.BusinessObjects.Exports.ExportProfile" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAgAAAQAAAAAQAgIBMBAABAAUAghA=</HashCode>
+      <FileName>Exports\ExportProfile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Exports.EntityExportProfile" Collapsed="true">
+    <Position X="5.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIgAAAQBAAAAACAIAEAAAAAAACABA=</HashCode>
+      <FileName>Exports\EntityExportProfile.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Exports.EntityExportProfileData" Collapsed="true">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>Exports\EntityExportProfileData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Exports.EntityExportUIProfileData" Collapsed="true">
+    <Position X="2.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAIAAAAAEAAAAAAAAEAAAgAABAEAA=</HashCode>
+      <FileName>Exports\EntityExportUIProfileData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MDM.BusinessObjects.Exports.EntityExportSyndicationProfileData" Collapsed="true">
+    <Position X="5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAgwAAAAAEAAIAAAoAEAAAQAAAAAQIAEAAAAggQAAAA=</HashCode>
+      <FileName>Exports\EntityExportSyndicationProfileData.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

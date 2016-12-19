@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQMNormalization" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQMNormalization" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:import namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="WordListsCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.Core" base="q1:InterfaceContractCollectionOfanyTypeWordListe4AnDxVS">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WordListsCollection" nillable="true" type="tns:WordListsCollection" />
+  <xs:complexType name="ArrayOfWordList">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WordList" nillable="true" type="tns:WordList" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWordList" nillable="true" type="tns:ArrayOfWordList" />
+  <xs:complexType name="WordList">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://mdmobjects.riversand.com/" base="q2:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateProgram" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModProgram" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WordBreakerSetId" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="WordElements" nillable="true" type="tns:WordElementsCollection" />
+          <xs:element minOccurs="0" name="WordListTypeId" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WordList" nillable="true" type="tns:WordList" />
+  <xs:complexType name="WordElementsCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.Core" base="q3:InterfaceContractCollectionOfanyTypeWordElemente4AnDxVS">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="TotalWordsCount" nillable="true" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WordElementsCollection" nillable="true" type="tns:WordElementsCollection" />
+  <xs:complexType name="ArrayOfWordElement">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WordElement" nillable="true" type="tns:WordElement" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWordElement" nillable="true" type="tns:ArrayOfWordElement" />
+  <xs:complexType name="WordElement">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://mdmobjects.riversand.com/" base="q4:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="CreateDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CreateProgram" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CreateUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="EncodedWord" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="ModProgram" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ModUser" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Sequence" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" name="Substitute" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Word" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="WordListId" type="xs:int" />
+          <xs:element minOccurs="0" name="WordListName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="WordElement" nillable="true" type="tns:WordElement" />
+  <xs:complexType name="WordElementReportSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountFrom" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CountTo" nillable="true" type="xs:int" />
+      <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="WordElementsSearchColumns" nillable="true" type="q5:ArrayOfGenericSearchRuleOfWordElementColumnXK0exmbb" />
+      <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="WordElementsSortColumns" nillable="true" type="q6:ArrayOfGenericSortRuleOfWordElementColumnXK0exmbb" />
+      <xs:element minOccurs="0" name="WordListId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WordElementReportSettings" nillable="true" type="tns:WordElementReportSettings" />
+</xs:schema>

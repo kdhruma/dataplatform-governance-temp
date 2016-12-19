@@ -1,0 +1,799 @@
+﻿<ContractData>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_Entity_Match_ApplicationContext_EditAndViewPermission">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+         <Entity Id="36" ExternalId="" Name="BK00002-V1" LongName="BK00002-V1" SKU="" Path="river Works Workspace#@#staging Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="4" ContainerName="staging Master" ContainerLongName="Staging Master" OrganizationId="1" OrganizationName="river Works Workspace" OrganizationLongName="River Works WorkSpace" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="1" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[1]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="36" Name="BK00002-V1" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_Entity_Match_ApplicationContext_ViewPermission">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="274" ExternalId="" Name="Books002" LongName="Books002" SKU="" Path="river Works Asia#@#asia Spring Catalog#@#Books#@#Fiction#@#Books002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="16" ContainerName="asia Spring Catalog" ContainerLongName="Asia Spring Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="2" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[2]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="274" Name="Books002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>View</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ImproperValue_Entity_NotMatch_ApplicationContext">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="45" ExternalId="" Name="BK001102" LongName="BK001102" SKU="" Path="river Works#@#product Master#@#Apparel#@#BK001102" CategoryPath="Apparel" BranchLevel="2" ParentEntityId="1" ParentExternalId="" ParentEntityName="Apparel" ParentEntityLongName="Apparel" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="1" CategoryName="Apparel" CategoryLongName="Apparel" ContainerId="5" ContainerName="product Master" ContainerLongName="Product Master" OrganizationId="2" OrganizationName="river Works" OrganizationLongName="River Works Corporation" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4053" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4004" AttributeParentName="Core Attributes" AttributeParentLongName="Core Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="45" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="1" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[1]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="45" Name="BK001102" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_Entity_Match_ApplicationContext_EditAndViewPermission_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="272" ExternalId="" Name="ABC002" LongName="ABC002" SKU="" Path="river Works Asia#@#asia Product Master#@#Books#@#Fiction#@#ABC002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="13" ContainerName="asia Product Master" ContainerLongName="Asia product Master" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="1" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[1]]></Value>
+                  <Value Id="-1" Uom="" ValueRefId="2" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[2]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="272" Name="ABC002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View</Output>
+  </Data>
+  
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_Entity_Match_ApplicationContext_ViewPermission_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="273" ExternalId="" Name="Books001" LongName="Books001" SKU="" Path="river Works Asia#@#asia Fall Catalog#@#Books#@#Fiction#@#Books001" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="18" ContainerName="asia Fall Catalog" ContainerLongName="Asia Fall Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="3" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[3]]></Value>
+                  <Value Id="-1" Uom="" ValueRefId="4" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[4]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="273" Name="Books001" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>View</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_NegativeTest_NoAttributeValue_ViewPermissionConfig_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="274" ExternalId="" Name="Books002" LongName="Books002" SKU="" Path="river Works Asia#@#asia Spring Catalog#@#Books#@#Fiction#@#Books002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="16" ContainerName="asia Spring Catalog" ContainerLongName="Asia Spring Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O"/>
+                 <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="274" Name="Books002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_NegativeTest_NoAttributeValue_ViewPermissionConfig_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="273" ExternalId="" Name="Books001" LongName="Books001" SKU="" Path="river Works Asia#@#asia Fall Catalog#@#Books#@#Fiction#@#Books001" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="18" ContainerName="asia Fall Catalog" ContainerLongName="Asia Fall Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O"/>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="273" Name="Books001" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_NegativeTest_NoAttributeValue_EditAndViewPermissionConfig_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="36" ExternalId="" Name="BK00002-V1" LongName="BK00002-V1" SKU="" Path="river Works Workspace#@#staging Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="4" ContainerName="staging Master" ContainerLongName="Staging Master" OrganizationId="1" OrganizationName="river Works Workspace" OrganizationLongName="River Works WorkSpace" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O" />
+                 <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="36" Name="BK00002-V1" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+ 
+  <Data MethodName="GetValueBasedEntityPermission_NegativeTest_NoAttributeValue_EditAndViewPermissionConfig_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="272" ExternalId="" Name="ABC002" LongName="ABC002" SKU="" Path="river Works Asia#@#asia Product Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="13" ContainerName="asia Product Master" ContainerLongName="Asia product Master" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O" />
+                 <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="272" Name="ABC002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ImproperValue_AttributeValue_NotMatch_EditAndViewPermissionConfig_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="36" ExternalId="" Name="BK00002-V1" LongName="BK00002-V1" SKU="" Path="river Works Workspace#@#staging Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="4" ContainerName="staging Master" ContainerLongName="Staging Master" OrganizationId="1" OrganizationName="river Works Workspace" OrganizationLongName="River Works WorkSpace" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="2" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[4]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="36" Name="BK00002-V1" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ImproperValue_AttributeValue_NotMatch_EditAndViewPermissionConfig_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="272" ExternalId="" Name="ABC002" LongName="ABC002" SKU="" Path="river Works Asia#@#asia Product Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="13" ContainerName="asia Product Master" ContainerLongName="Asia product Master" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="3" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[3]]></Value>
+                  <Value Id="-1" Uom="" ValueRefId="4" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[4]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="272" Name="ABC002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ImproperValue_AttributeValue_NotMatch_ViewPermissionConfig_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="274" ExternalId="" Name="Books002" LongName="Books002" SKU="" Path="river Works Asia#@#asia Spring Catalog#@#Books#@#Fiction#@#Books002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="16" ContainerName="asia Spring Catalog" ContainerLongName="Asia Spring Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="2" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[3]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="274" Name="Books002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ImproperValue_AttributeValue_NotMatch_ViewPermissionConfig_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="273" ExternalId="" Name="Books001" LongName="Books001" SKU="" Path="river Works Asia#@#asia Fall Catalog#@#Books#@#Fiction#@#Books001" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="18" ContainerName="asia Fall Catalog" ContainerLongName="Asia Fall Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="3" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[5]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="273" Name="Books001" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+  
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_MatchOneofRecord_EditAndViewPermissionConfig_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="272" ExternalId="" Name="ABC002" LongName="ABC002" SKU="" Path="river Works Asia#@#asia Product Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="13" ContainerName="asia Product Master" ContainerLongName="Asia product Master" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="3" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[1]]></Value>
+                  <Value Id="-1" Uom="" ValueRefId="4" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[5]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="272" Name="ABC002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View</Output>
+  </Data>
+  
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_MatchOneofRecord_ViewPermissionConfig_LookupCollection">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="273" ExternalId="" Name="Books001" LongName="Books001" SKU="" Path="river Works Asia#@#asia Fall Catalog#@#Books#@#Fiction#@#Books001" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="18" ContainerName="asia Fall Catalog" ContainerLongName="Asia Fall Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4022" Name="color" LongName="Color" InstanceRefId="-1" Sequence="-1" AttributeParentId="4005" AttributeParentName="Merchandising" AttributeParentLongName="Merchandising" IsCollection="True" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="4" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[4]]></Value>
+                  <Value Id="-1" Uom="" ValueRefId="5" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[5]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="273" Name="Books001" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>View</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_SingleUserMultipleRoles_WithViewEditPermission_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="36" ExternalId="" Name="BK00002-V1" LongName="BK00002-V1" SKU="" Path="river Works Workspace#@#staging Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="4" ContainerName="staging Master" ContainerLongName="Staging Master" OrganizationId="1" OrganizationName="river Works Workspace" OrganizationLongName="River Works WorkSpace" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="1" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[1]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="36" Name="BK00002-V1" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View</Output>
+  </Data>
+  
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_SingleUserMultipleRoles_WithViewPermission_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="274" ExternalId="" Name="Books002" LongName="Books002" SKU="" Path="river Works Asia#@#asia Spring Catalog#@#Books#@#Fiction#@#Books002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="16" ContainerName="asia Spring Catalog" ContainerLongName="Asia Spring Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="2" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[2]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="274" Name="Books002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>View</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_SingleUserMultipleRoles_WithBothViewEditPermission_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="36" ExternalId="" Name="BK0002-V1" LongName="BK0002-V1" SKU="" Path="river Works Workspace#@#staging Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="4" ContainerName="staging Master" ContainerLongName="Staging Master" OrganizationId="1" OrganizationName="river Works Workspace" OrganizationLongName="River Works WorkSpace" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="4" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[4]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="36" Name="BK0002-V1" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_SingleUserMultipleRoles_WithBothViewPermission_Lookup">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="274" ExternalId="" Name="Books002" LongName="Books002" SKU="" Path="river Works Asia#@#asia Spring Catalog#@#Books#@#Fiction#@#Books002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="16" ContainerName="asia Spring Catalog" ContainerLongName="Asia Spring Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="2" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[2]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="274" Name="Books002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>View</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ImproperValue_Lookup_NotMapStyle_View">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="282" ExternalId="" Name="Fiction001" LongName="Fiction001" SKU="" Path="river Works Asia#@#na Summer Catalog#@#Books#@#Fiction#@#Fiction001" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="17" ContainerName="asia Summer Catalog" ContainerLongName="Asia Summer Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes/>
+              <!--<Attribute Id="4053" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4004" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[]]></Value
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>-->
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="282" Name="Fiction001" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ImproperValue_LookupCollection_NotMapStyle_View">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="285" ExternalId="" Name="Fiction0002" LongName="Fiction0002" SKU="" Path="river Works Europe#@#europe Product Master#@#Books#@#Fiction#@#Fiction002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="19" ContainerName="europe Product Master" ContainerLongName="Europe product Master" OrganizationId="5" OrganizationName="river Works Europe" OrganizationLongName="River Works Europe" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes />
+              <!--<Attribute Id="4053" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4004" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>-->
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="285" Name="Fiction002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output></Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_RSAll_NoOrgNoCatalog">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="0" ExternalId="" Name="" LongName="" SKU="" Path="" CategoryPath="" BranchLevel="2" ParentEntityId="1" ParentExternalId="" ParentEntityName="" ParentEntityLongName="" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="0" CategoryName="" CategoryLongName="Apparel" ContainerId="5" ContainerName="product Master" ContainerLongName="Product Master" OrganizationId="2" OrganizationName="river Works" OrganizationLongName="River Works Corporation" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="0" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="0" Name="" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View,WorkflowActions</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_RSAll_AllOrgAllCatalog_AttributeRsAll">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="0" ExternalId="" Name="" LongName="" SKU="" Path="" CategoryPath="" BranchLevel="2" ParentEntityId="1" ParentExternalId="" ParentEntityName="" ParentEntityLongName="" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="0" CategoryName="" CategoryLongName="Apparel" ContainerId="5" ContainerName="product Master" ContainerLongName="Product Master" OrganizationId="2" OrganizationName="river Works" OrganizationLongName="River Works Corporation" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="0" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[RSAll]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="0" Name="" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View,WorkflowActions</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_RSAll_ViewPermissionConfigured">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="274" ExternalId="" Name="Books002" LongName="Books002" SKU="" Path="river Works Asia#@#asia Spring Catalog#@#Books#@#Fiction#@#Books002" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="15" ContainerName="asia Spring Catalog" ContainerLongName="Asia Spring Catalog" OrganizationId="4" OrganizationName="river Works Asia" OrganizationLongName="River Works Asia" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4006" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="2" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[2]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="274" Name="Books002" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View,WorkflowActions</Output>
+  </Data>
+
+  <Data MethodName="GetValueBasedEntityPermission_ProperValue_RSAll_ViewAndEditPermissionConfigured">
+    <Input>
+      <Parameters>
+        <Parameter Name="Entity">
+          <Entity Id="36" ExternalId="" Name="BK00002-V1" LongName="BK00002-V1" SKU="" Path="river Works Workspace#@#staging Master#@#Books#@#Fiction#@#BK00002-V1" CategoryPath="Books#@#Fiction" BranchLevel="2" ParentEntityId="11" ParentExternalId="" ParentEntityName="Fiction" ParentEntityLongName="Fiction" ParentExtensionEntityId="0" ParentExtensionEntityName="" ParentExtensionEntityLongName="" ParentExtensionEntityExternalId="" ParentExtensionEntityContainerId="0" ParentExtensionEntityContainerName="" ParentExtensionEntityContainerLongName="" ParentExtensionEntityCategoryId="0" ParentExtensionEntityCategoryName="" ParentExtensionEntityCategoryLongName="" ParentExtensionEntityCategoryPath="" CategoryId="11" CategoryName="Fiction" CategoryLongName="Fiction" ContainerId="4" ContainerName="staging Master" ContainerLongName="Staging Master" OrganizationId="1" OrganizationName="river Works Workspace" OrganizationLongName="River Works WorkSpace" EntityTypeId="16" EntityTypeName="style" EntityTypeLongName="Style" Locale="en_WW" Action="Read" SequenceNumber="-1" EffectiveFrom="" EffectiveTo="" EntityLastModTime="" EntityLastModUser="">
+            <Attributes>
+              <Attribute Id="4047" Name="vendor Name" LongName="Vendor Name" InstanceRefId="-1" Sequence="-1" AttributeParentId="4004" AttributeParentName="Vendor Attributes" AttributeParentLongName="Vendor Attributes" IsCollection="False" IsComplex="False" IsLookup="True" IsLocalizable="False" ApplyLocaleFormat="False" ApplyTimeZoneConversion="False" Precision="0" AttributeType="Simple" AttributeModelType="Common" AttributeDataType="String" SourceFlag="O" SourceEntityId="36" Locale="en_WW" Action="Read">
+                <Values SourceFlag="O">
+                  <Value Id="-1" Uom="" ValueRefId="1" Sequence="-1" Locale="en_WW" Action="Read"><![CDATA[1]]></Value>
+                </Values>
+                <Values SourceFlag="I" />
+                <Attributes />
+              </Attribute>
+            </Attributes>
+            <Hierarchies></Hierarchies>
+            <Relationships></Relationships>
+            <Extensions></Extensions>
+          </Entity>
+        </Parameter>
+        <Parameter Name ="EntityOperationResult">
+          <EntityOperationResult Id="36" Name="BK00002-V1" Status="None" >
+            <Errors />
+            <Informations />
+            <ReturnValues />
+            <AttributeOperationResults/>
+          </EntityOperationResult>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>Update,View,WorkflowActions</Output>
+  </Data>
+</ContractData>

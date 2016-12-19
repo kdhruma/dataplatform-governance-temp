@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7009E76-EE1C-4AF9-B211-FF12403E1FB3}</ProjectGuid>   
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>StoredProcedures</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Riversand.StoredProcedures</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <SignAssembly>false</SignAssembly>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\Assemblies\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>pdbonly</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="Administration.cs" />
+    <Compile Include="Aggregation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Alerts.cs" />
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttExtract.cs" />
+    <Compile Include="Attribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BulkOperation.cs" />
+    <Compile Include="Catalog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Component.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Connection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustomSecurity.cs" />
+    <Compile Include="EntityImport.cs" />
+    <Compile Include="DataConvert.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Denorm.cs" />
+    <Compile Include="Documents.cs" />
+    <Compile Include="ErrorHandling.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Events.cs" />
+    <Compile Include="ImportExport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Job.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="JobBase.cs" />
+    <Compile Include="JobScheduler.cs" />
+    <Compile Include="Language.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Lookup.cs" />
+    <Compile Include="Matching.cs" />
+    <Compile Include="Messaging.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Migrate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Organization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RegularExpressions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RelationshipTypeEntityTypeCardinality.cs" />
+    <Compile Include="Report.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripts.cs" />
+    <Compile Include="Security.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlAlerts.cs" />
+    <Compile Include="SqlServer\SqlCustomSecurity.cs" />
+    <Compile Include="SqlServer\SqlEntityImport.cs" />
+    <Compile Include="SqlServer\SqlAdministration.cs" />
+    <Compile Include="SqlServer\SqlAggregation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlAttExtract.cs" />
+    <Compile Include="SqlServer\SqlAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlBulkOperation.cs" />
+    <Compile Include="SqlServer\SqlCatalog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlCNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlCommon.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlComponent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlContainerEntityTypeAttributeMappingDA.cs" />
+    <Compile Include="SqlServer\SqlContainerEntityTypeMappingDA.cs" />
+    <Compile Include="SqlServer\SqlDenorm.cs" />
+    <Compile Include="SqlServer\SqlDocuments.cs" />
+    <Compile Include="SqlServer\SqlEntityTypeAttributeMappingDA.cs" />
+    <Compile Include="SqlServer\SqlErrorHandling.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlEvents.cs" />
+    <Compile Include="SqlServer\SqlImportExport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlJob.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlJobBase.cs" />
+    <Compile Include="SqlServer\SqlJobScheduler.cs" />
+    <Compile Include="SqlServer\SqlLanguage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlLookup.cs" />
+    <Compile Include="SqlServer\SqlMatching.cs" />
+    <Compile Include="SqlServer\SqlMessaging.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlOrganization.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlRegularExpressions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlRelationshipTypeEntityTypeCardinality.cs" />
+    <Compile Include="SqlServer\SqlReport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlRules.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlScripts.cs" />
+    <Compile Include="SqlServer\SqlSecurity.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlSynonyms.cs" />
+    <Compile Include="SqlServer\SqlTaxonomy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlServer\SqlUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Synonyms.cs" />
+    <Compile Include="Taxonomy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Util.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="ShellBuilder.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MDMLibrarySolution\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{b907bb1d-d3ba-4316-a05f-b3a99d66a6b9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDMLibrarySolution\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{c465d67c-eb64-4b40-82ba-04cc0c202c03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>::"$(ProjectDir)..\..\Tools\Shellbuilder.exe" "$(ProjectDir)\" "$(ProjectDir)shellbuilder.config"</PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

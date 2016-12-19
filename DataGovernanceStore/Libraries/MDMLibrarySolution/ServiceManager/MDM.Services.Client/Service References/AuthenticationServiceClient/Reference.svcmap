@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="fcf5db7c-a4a9-4e61-acbd-3e787833d901" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="wcfservices.riversand.com2.wsdl" MetadataType="Wsdl" ID="46a960d4-e2b5-4e0a-8349-61cf1e7b0a39" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="service1.wsdl" MetadataType="Wsdl" ID="a843d554-1d57-4c37-bc4c-16ba30cbe754" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="wcfservices.riversand.com2.xsd" MetadataType="Schema" ID="5f38d090-25a8-4497-bccf-faacbd429bf8" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="service3.xsd" MetadataType="Schema" ID="58c47fa2-372c-404d-abda-2207f1407c0a" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="service4.xsd" MetadataType="Schema" ID="fd40c29d-3440-4964-8c29-7e786e8cb420" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="Arrays2.xsd" MetadataType="Schema" ID="5fd75a06-d96f-4feb-9b5c-858268e87013" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="System.Security.Claims1.xsd" MetadataType="Schema" ID="ebd600d1-d1a9-4aa0-83a7-0be84e965240" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="MDM.BusinessObjects.xsd" MetadataType="Schema" ID="592a3846-b0fb-472a-ae90-10ddd386898f" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="MDM.Core.xsd" MetadataType="Schema" ID="07a5bea2-0efc-4b00-a652-13fda7e54a7f" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="MDM.BusinessObjects.DataModel2.xsd" MetadataType="Schema" ID="df07354b-021e-4a8c-9c06-94d6b9098968" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+    <MetadataFile FileName="MDM.BusinessObjects.DQM2.xsd" MetadataType="Schema" ID="f45a074b-1910-40da-b717-4203678dd15e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/AuthenticationService.svc/mex" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

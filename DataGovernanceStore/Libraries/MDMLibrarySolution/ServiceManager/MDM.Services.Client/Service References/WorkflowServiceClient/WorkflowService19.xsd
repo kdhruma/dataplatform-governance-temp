@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/System.Activities.Tracking" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/System.Activities.Tracking" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/MainLine_WCFServices/WorkflowService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="TrackingProfile">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActivityDefinitionId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImplementationVisibility" type="tns:ImplementationVisibility" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Queries" nillable="true" type="tns:ArrayOfTrackingQuery" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingProfile" nillable="true" type="tns:TrackingProfile" />
+  <xs:simpleType name="ImplementationVisibility">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RootScope" />
+      <xs:enumeration value="All" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ImplementationVisibility" nillable="true" type="tns:ImplementationVisibility" />
+  <xs:complexType name="ArrayOfTrackingQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TrackingQuery" nillable="true" type="tns:TrackingQuery" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTrackingQuery" nillable="true" type="tns:ArrayOfTrackingQuery" />
+  <xs:complexType name="TrackingQuery">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="QueryAnnotations" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TrackingQuery" nillable="true" type="tns:TrackingQuery" />
+</xs:schema>

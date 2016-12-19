@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/ConfigurationService.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Dominos764_WCFServices/ConfigurationService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:element name="GetApplicationConfigurations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EventSourceId" type="xs:int" />
+        <xs:element minOccurs="0" name="EventSubscriberId" type="xs:int" />
+        <xs:element minOccurs="0" name="SecurityRoleId" type="xs:int" />
+        <xs:element minOccurs="0" name="SecurityUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="OrgId" type="xs:int" />
+        <xs:element minOccurs="0" name="CatalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="CategoryId" type="xs:long" />
+        <xs:element minOccurs="0" name="CNodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="AttributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="NodeTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="RelationshipTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="LocalId" type="xs:int" />
+        <xs:element minOccurs="0" name="ApplicationConfigId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationConfigurationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetApplicationConfigurationsResult" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appConfigKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAppConfigResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppConfigObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="appConfigKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppConfigObjectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAppConfigObjectResult" nillable="true" type="q2:AppConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAppConfigs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q3:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAppConfigsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllAppConfigsResult" nillable="true" type="q4:AppConfigCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAppConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="appConfig" nillable="true" type="q5:AppConfig" />
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q6:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateAppConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateAppConfigResult" nillable="true" type="q7:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAppConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="appConfig" nillable="true" type="q8:AppConfig" />
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q9:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateAppConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateAppConfigResult" nillable="true" type="q10:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAppConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://mdmobjects.riversand.com/" minOccurs="0" name="appConfig" nillable="true" type="q11:AppConfig" />
+        <xs:element xmlns:q12="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q12:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteAppConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteAppConfigResult" nillable="true" type="q13:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessAppConfigs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="appConfigs" nillable="true" type="q14:AppConfigCollection" />
+        <xs:element xmlns:q15="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q15:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessAppConfigsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessAppConfigsResult" nillable="true" type="q16:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUserConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://mdmobjects.riversand.com/" minOccurs="0" name="userConfig" nillable="true" type="q17:UserConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUserConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessUserConfigResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationContextById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicationContextId" type="xs:int" />
+        <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q18:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationContextByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://mdmobjects.riversand.com/" minOccurs="0" name="GetApplicationContextByIdResult" nillable="true" type="q19:ApplicationContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateApplicationContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://mdmobjects.riversand.com/" minOccurs="0" name="applicationContext" nillable="true" type="q20:ApplicationContext" />
+        <xs:element xmlns:q21="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q21:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateApplicationContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateApplicationContextResult" nillable="true" type="q22:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateApplicationContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://mdmobjects.riversand.com/" minOccurs="0" name="applicationContext" nillable="true" type="q23:ApplicationContext" />
+        <xs:element xmlns:q24="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q24:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateApplicationContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateApplicationContextResult" nillable="true" type="q25:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteApplicationContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://mdmobjects.riversand.com/" minOccurs="0" name="applicationContext" nillable="true" type="q26:ApplicationContext" />
+        <xs:element xmlns:q27="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q27:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteApplicationContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteApplicationContextResult" nillable="true" type="q28:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessApplicationContexts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://mdmobjects.riversand.com/" minOccurs="0" name="applicationContexts" nillable="true" type="q29:ApplicationContextCollection" />
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q30:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessApplicationContextsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessApplicationContextsResult" nillable="true" type="q31:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocaleMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://mdmobjects.riversand.com/" minOccurs="0" name="locale" type="q32:LocaleEnum" />
+        <xs:element xmlns:q33="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="messageCodeList" nillable="true" type="q33:ArrayOfstring" />
+        <xs:element minOccurs="0" name="loadLatest" type="xs:boolean" />
+        <xs:element xmlns:q34="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q34:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocaleMessagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://mdmobjects.riversand.com/" minOccurs="0" name="GetLocaleMessagesResult" nillable="true" type="q35:LocaleMessageCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessLocaleMessage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://mdmobjects.riversand.com/" minOccurs="0" name="localeMessage" nillable="true" type="q36:LocaleMessage" />
+        <xs:element xmlns:q37="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q37:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessLocaleMessageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessLocaleMessageResult" nillable="true" type="q38:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessLocaleMessages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://mdmobjects.riversand.com/" minOccurs="0" name="localeMessages" nillable="true" type="q39:LocaleMessageCollection" />
+        <xs:element xmlns:q40="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q40:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessLocaleMessagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessLocaleMessagesResult" nillable="true" type="q41:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMFeatureConfigCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://mdmobjects.riversand.com/" minOccurs="0" name="CallerContext" nillable="true" type="q42:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMFeatureConfigCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://mdmobjects.riversand.com/" minOccurs="0" name="GetMDMFeatureConfigCollectionResult" nillable="true" type="q43:MDMFeatureConfigCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeatureConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q44:MDMCenterApplication" />
+        <xs:element minOccurs="0" name="modulePath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="version" nillable="true" type="xs:string" />
+        <xs:element xmlns:q45="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q45:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFeatureConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://mdmobjects.riversand.com/" minOccurs="0" name="GetFeatureConfigResult" nillable="true" type="q46:MDMFeatureConfig" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

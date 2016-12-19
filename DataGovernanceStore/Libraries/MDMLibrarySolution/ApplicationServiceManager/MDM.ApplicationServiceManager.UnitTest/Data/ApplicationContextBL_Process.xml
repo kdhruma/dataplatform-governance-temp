@@ -1,0 +1,162 @@
+﻿<ContractData>
+  <Data MethodName="CreateAndGet_AppContext">
+    <Input>
+      <Parameters>
+        <Parameter Name="IApplicationContextCollection" Type="MDM.BusinessObjects.ApplicationContextCollection">
+          <Applicationcontexts>
+            <ApplicationContext Id="-1" Name="ApplicationContext-01" LongName="ApplicationContext-01" OrganizationId="0" OrganizationName="river Works" OrganizationLongName="" ContainerId="0"
+               ContainerName="Product Master" ContainerLongName="" EntityTypeId="0" EntityTypeName="" EntityTypeLongName=""
+                RelationshipTypeId="0" RelationshipTypeName="" RelationshipTypeLongName="" CategoryId="0" CategoryName="890004" CategoryLongName=""
+                 CategoryPath="" EntityId="0" EntityName="" EntityLongName="" AttributeId="0" AttributeName="" AttributeLongName="" RoleId="0" RoleName=""
+                   RoleLongName="" Locale="" UserId="0" ContextType="ACNCO" ReferenceId="-1" Action="Create"/>
+          </Applicationcontexts>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Parameters>
+        <Parameter Name="IOperationResultCollection" Type="MDM.BusinessObjects.OperationResultCollection">
+          <OperationResults>
+            <OperationResult PerformedAction="Create">
+              <Errors />
+              <Informations />
+              <Warnings />
+              <ReturnValues>
+                <ReturnValue>3006</ReturnValue>
+              </ReturnValues>
+              <OperationResultStatus>Successful</OperationResultStatus>
+              <ExtendedProperties />
+            </OperationResult>
+          </OperationResults>
+        </Parameter>
+      </Parameters>
+    </Output>
+  </Data>
+
+  <Data MethodName="CreateAndGet_AppContext_Exist">
+    <Input>
+      <Parameters>
+        <Parameter Name="IApplicationContextCollection" Type="MDM.BusinessObjects.ApplicationContextCollection">
+          <Applicationcontexts>
+            <ApplicationContext Id="-1" Name="ApplicationContext-01" LongName="ApplicationContext-01" OrganizationId="0" OrganizationName="river Works" OrganizationLongName="" ContainerId="0"
+               ContainerName="Product Master" ContainerLongName="" EntityTypeId="0" EntityTypeName="" EntityTypeLongName=""
+                RelationshipTypeId="0" RelationshipTypeName="" RelationshipTypeLongName="" CategoryId="0" CategoryName="890004" CategoryLongName=""
+                 CategoryPath="" EntityId="0" EntityName="" EntityLongName="" AttributeId="0" AttributeName="" AttributeLongName="" RoleId="0" RoleName=""
+                   RoleLongName="" Locale="" UserId="0" ContextType="ACNCO" ReferenceId="-1" Action="Create"/>
+          </Applicationcontexts>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Parameters>
+        <Parameter Name="IOperationResultCollection" Type="MDM.BusinessObjects.OperationResultCollection">
+          <OperationResults>
+            <OperationResult PerformedAction="Read">
+              <Errors />
+              <Informations>
+                <Information Code="-1" Message="Application Context: ORG2_CT5_CAT781_ET0_EN0_ATTR0_RT0_ROLE0_USER0_TYPE0 already exists and hence removed from Processing" ReasonType="NotSpecified" RuleMapContextId="-1">
+                  <Params />
+                </Information>
+              </Informations>
+              <Warnings />
+              <ReturnValues>
+                <ReturnValue>-1</ReturnValue>
+              </ReturnValues>
+              <OperationResultStatus>Successful</OperationResultStatus>
+              <ExtendedProperties />
+            </OperationResult>
+          </OperationResults>
+        </Parameter>
+      </Parameters>
+    </Output>
+  </Data>
+
+  <Data MethodName="CreateAndGet_Update_Exist">
+    <Input>
+      <Parameters>
+        <Parameter Name="IApplicationContextCollection" Type="MDM.BusinessObjects.ApplicationContextCollection">
+          <Applicationcontexts>
+            <ApplicationContext Id="-1" Name="ApplicationContext-01" LongName="ApplicationContext-01" OrganizationId="0" OrganizationName="river Works" OrganizationLongName="" ContainerId="0"
+               ContainerName="Product Master" ContainerLongName="" EntityTypeId="0" EntityTypeName="" EntityTypeLongName=""
+                RelationshipTypeId="0" RelationshipTypeName="" RelationshipTypeLongName="" CategoryId="0" CategoryName="890003" CategoryLongName=""
+                 CategoryPath="" EntityId="0" EntityName="" EntityLongName="" AttributeId="0" AttributeName="" AttributeLongName="" RoleId="0" RoleName=""
+                   RoleLongName="" Locale="" UserId="0" ContextType="ACNCO" ReferenceId="-1" Action="Update"/>
+          </Applicationcontexts>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Parameters>
+        <Parameter Name="IOperationResultCollection" Type="MDM.BusinessObjects.OperationResultCollection">
+          <OperationResults>
+            <OperationResult PerformedAction="Unknown">
+              <Errors>
+                <Error Code="-99" Message="'{0}' does not exist and, therefore, could not be deleted." ReferenceId="" ReasonType="NotSpecified" RuleMapContextId="-1">
+                  <Params>
+                    <Param>
+                      <![CDATA[ORG2_CT5_CAT780_ET0_EN0_ATTR0_RT0_ROLE0_USER0_TYPE0]]>
+                    </Param>
+                  </Params>
+                </Error>
+              </Errors>
+              <Informations />
+              <Warnings />
+              <ReturnValues />
+              <OperationResultStatus>Failed</OperationResultStatus>
+              <ExtendedProperties />
+            </OperationResult>
+            <OperationResult PerformedAction="Update">
+              <Errors />
+              <Informations />
+              <Warnings />
+              <ReturnValues>
+                <ReturnValue>-1</ReturnValue>
+              </ReturnValues>
+              <OperationResultStatus>Successful</OperationResultStatus>
+              <ExtendedProperties />
+            </OperationResult>
+          </OperationResults>
+        </Parameter>
+      </Parameters>
+    </Output>
+  </Data>
+
+  <Data MethodName="CreateAndGet_Delete_Exist">
+    <Input>
+      <Parameters>
+        <Parameter Name="IApplicationContextCollection" Type="MDM.BusinessObjects.ApplicationContextCollection">
+          <Applicationcontexts>
+            <ApplicationContext Id="-1" Name="ApplicationContext-01" LongName="ApplicationContext-01" OrganizationId="0" OrganizationName="river Works" OrganizationLongName="" ContainerId="0"
+               ContainerName="Product Master" ContainerLongName="" EntityTypeId="0" EntityTypeName="" EntityTypeLongName=""
+                RelationshipTypeId="0" RelationshipTypeName="" RelationshipTypeLongName="" CategoryId="0" CategoryName="890004" CategoryLongName=""
+                 CategoryPath="" EntityId="0" EntityName="" EntityLongName="" AttributeId="0" AttributeName="" AttributeLongName="" RoleId="0" RoleName=""
+                   RoleLongName="" Locale="" UserId="0" ContextType="ACNCO" ReferenceId="-1" Action="Create"/>
+          </Applicationcontexts>
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Parameters>
+        <Parameter Name="IOperationResultCollection" Type="MDM.BusinessObjects.OperationResultCollection">
+          <OperationResults>
+            <OperationResult PerformedAction="Read">
+              <Errors />
+              <Informations>
+                <Information Code="-1" Message="Application Context: ORG2_CT5_CAT781_ET0_EN0_ATTR0_RT0_ROLE0_USER0_TYPE0 already exists and hence removed from Processing" ReasonType="NotSpecified" RuleMapContextId="-1">
+                  <Params />
+                </Information>
+              </Informations>
+              <Warnings />
+              <ReturnValues>
+                <ReturnValue>-1</ReturnValue>
+              </ReturnValues>
+              <OperationResultStatus>Successful</OperationResultStatus>
+              <ExtendedProperties />
+            </OperationResult>
+          </OperationResults>
+        </Parameter>
+      </Parameters>
+    </Output>
+  </Data>
+  
+</ContractData>

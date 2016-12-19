@@ -1,0 +1,2 @@
+Current version of Telerik ASP.NET AJAX Web Controls: 
+2011.1.315.40

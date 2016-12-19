@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/EntityExportService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:complexType name="ValidationProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DQMJobProfile">
+        <xs:sequence>
+          <xs:element xmlns:q1="http://mdmobjects.riversand.com/" minOccurs="0" name="DataLocales" nillable="true" type="q1:ArrayOfLocaleEnum" />
+          <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="DataQualityIndicatorIds" nillable="true" type="q2:ArrayOfshort" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ValidationProfile" nillable="true" type="tns:ValidationProfile" />
+  <xs:complexType name="DQMJobProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://mdmobjects.riversand.com/" base="q3:BaseProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Enabled" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JobType" type="q3:DQMJobType" />
+          <xs:element minOccurs="0" name="SourceScopeFilter" nillable="true" type="tns:JobSourceScopeFilter" />
+          <xs:element minOccurs="0" name="Weightage" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DQMJobProfile" nillable="true" type="tns:DQMJobProfile" />
+  <xs:complexType name="JobSourceScopeFilter">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:JobScopeFilter">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="IsDeltaMode" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="JobSourceScopeFilter" nillable="true" type="tns:JobSourceScopeFilter" />
+  <xs:complexType name="JobScopeFilter">
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="CategoryIds" nillable="true" type="q4:ArrayOflong" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ContainerIds" nillable="true" type="q5:ArrayOfint" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EntityTypeIds" nillable="true" type="q6:ArrayOfint" />
+      <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="SearchAttributeRules" nillable="true" type="q7:ArrayOfSearchAttributeRule" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobScopeFilter" nillable="true" type="tns:JobScopeFilter" />
+  <xs:complexType name="MatchingProfile">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DQMJobProfile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AbsoluteCutOff" type="xs:double" />
+          <xs:element minOccurs="0" name="EnableDetailedStats" type="xs:boolean" />
+          <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="EngineType" type="q8:MatchingEngineType" />
+          <xs:element minOccurs="0" name="EntityTypeId" type="xs:int" />
+          <xs:element minOccurs="0" name="ExactPlusNRecord" type="xs:int" />
+          <xs:element minOccurs="0" name="MatchReviewProfileId" type="xs:int" />
+          <xs:element minOccurs="0" name="MaxReturnRecords" type="xs:int" />
+          <xs:element minOccurs="0" name="PercentOfTopCutOff" type="xs:double" />
+          <xs:element minOccurs="0" name="ProfileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Resultset" nillable="true" type="tns:MatchResultSet" />
+          <xs:element minOccurs="0" name="RuleId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RuleName" nillable="true" type="xs:string" />
+          <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="SaveAttributeValues" type="q9:SaveAttributeValuesType" />
+          <xs:element minOccurs="0" name="SaveNativeResults" type="xs:boolean" />
+          <xs:element minOccurs="0" name="ScoreType" type="xs:int" />
+          <xs:element minOccurs="0" name="SimpleGapCutOff" type="xs:double" />
+          <xs:element minOccurs="0" name="SourceAttributes" nillable="true" type="tns:ArrayOfMatchSourceAttribute" />
+          <xs:element minOccurs="0" name="SourceId" type="xs:int" />
+          <xs:element minOccurs="0" name="TargetTableName" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="MatchingProfile" nillable="true" type="tns:MatchingProfile" />
+  <xs:complexType name="MatchResultSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MatchResults" nillable="true" type="tns:ArrayOfMatchResult" />
+      <xs:element minOccurs="0" name="MaxRecords" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MatchResultSet" nillable="true" type="tns:MatchResultSet" />
+  <xs:complexType name="ArrayOfMatchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MatchResult" nillable="true" type="tns:MatchResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatchResult" nillable="true" type="tns:ArrayOfMatchResult" />
+  <xs:complexType name="MatchResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FieldName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FieldValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Locale" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MatchResult" nillable="true" type="tns:MatchResult" />
+  <xs:complexType name="ArrayOfMatchSourceAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MatchSourceAttribute" nillable="true" type="tns:MatchSourceAttribute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMatchSourceAttribute" nillable="true" type="tns:ArrayOfMatchSourceAttribute" />
+  <xs:complexType name="MatchSourceAttribute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttributeId" type="xs:int" />
+      <xs:element minOccurs="0" name="AttributeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AttributeParentId" type="xs:int" />
+      <xs:element minOccurs="0" name="AttributeParentName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsComplexChild" type="xs:boolean" />
+      <xs:element xmlns:q10="http://mdmobjects.riversand.com/" minOccurs="0" name="Locale" type="q10:LocaleEnum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MatchSourceAttribute" nillable="true" type="tns:MatchSourceAttribute" />
+  <xs:complexType name="ArrayOfNamedDataQualityIndicatorValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NamedDataQualityIndicatorValue" nillable="true" type="tns:NamedDataQualityIndicatorValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNamedDataQualityIndicatorValue" nillable="true" type="tns:ArrayOfNamedDataQualityIndicatorValue" />
+  <xs:complexType name="NamedDataQualityIndicatorValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataQualityIndicatorValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NamedDataQualityIndicatorValue" nillable="true" type="tns:NamedDataQualityIndicatorValue" />
+  <xs:complexType name="DataQualityIndicatorValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataQualityIndicatorId" type="xs:short" />
+      <xs:element minOccurs="0" name="FailureInfoCollection" nillable="true" type="tns:DataQualityIndicatorFailureInfoCollection" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataQualityIndicatorValue" nillable="true" type="tns:DataQualityIndicatorValue" />
+  <xs:complexType name="DataQualityIndicatorFailureInfoCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q11="http://mdmobjects.riversand.com/" base="q11:InterfaceContractCollectionOfanyTypeDataQualityIndicatorFailureInfoRqpk4DV6">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataQualityIndicatorFailureInfoCollection" nillable="true" type="tns:DataQualityIndicatorFailureInfoCollection" />
+  <xs:complexType name="ArrayOfDataQualityIndicatorFailureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataQualityIndicatorFailureInfo" nillable="true" type="tns:DataQualityIndicatorFailureInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataQualityIndicatorFailureInfo" nillable="true" type="tns:ArrayOfDataQualityIndicatorFailureInfo" />
+  <xs:complexType name="DataQualityIndicatorFailureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttributeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AttributeValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocaleId" nillable="true" type="xs:short" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q12:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="RelationshipId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataQualityIndicatorFailureInfo" nillable="true" type="tns:DataQualityIndicatorFailureInfo" />
+  <xs:complexType name="NormalizationResultsCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.Core" base="q13:InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProfileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Simulation" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalizationResultsCollection" nillable="true" type="tns:NormalizationResultsCollection" />
+  <xs:complexType name="ArrayOfNormalizationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NormalizationResult" nillable="true" type="tns:NormalizationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNormalizationResult" nillable="true" type="tns:ArrayOfNormalizationResult" />
+  <xs:complexType name="NormalizationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q14="http://mdmobjects.riversand.com/" base="q14:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeId" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CnodeId" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="IsNormalizationSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JobId" type="xs:long" />
+          <xs:element minOccurs="0" name="NewAttributeValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldAttributeValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResultMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RuleId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalizationResult" nillable="true" type="tns:NormalizationResult" />
+</xs:schema>

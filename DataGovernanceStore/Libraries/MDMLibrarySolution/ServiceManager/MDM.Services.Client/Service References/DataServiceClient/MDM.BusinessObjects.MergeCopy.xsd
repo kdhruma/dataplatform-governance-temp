@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.MergeCopy" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.MergeCopy" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/System.Text" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="MergeCopyContext.Context">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="auditHandler" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="callerContext" nillable="true" type="tns:MergeCopyContext.MergeCopyCallerContext" />
+      <xs:element minOccurs="0" name="captureAuditRefIds" type="xs:boolean" />
+      <xs:element minOccurs="0" name="compressJsonBuffer" type="xs:boolean" />
+      <xs:element minOccurs="0" name="conflictContext" nillable="true" type="tns:MergeCopyContext.MergeCopyConflictContext" />
+      <xs:element minOccurs="0" name="copyCommonAttributes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="copyComplexAttributes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="copyRelationshipAttributes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="copyRelationships" type="xs:boolean" />
+      <xs:element minOccurs="0" name="copyRequiredAttributesOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="copySystemAttributes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="copyTechnicalAttributes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="doNotProcessAttributesFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="flushAndFillAttributeIfDestinationExists" type="xs:boolean" />
+      <xs:element minOccurs="0" name="flushAndFillEntityIfDestinationExists" type="xs:boolean" />
+      <xs:element minOccurs="0" name="generateDeltaOnly" type="xs:boolean" />
+      <xs:element minOccurs="0" name="marshallerState" nillable="true" type="tns:MergeCopyContext.MergeCopyJsonMarshallerState" />
+      <xs:element minOccurs="0" name="mergeByTimestamp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="neverCallCustomHandler" type="xs:boolean" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Text" minOccurs="0" name="outputDelta" nillable="true" type="q1:StringBuilder" />
+      <xs:element minOccurs="0" name="outputStatus" type="tns:MergeCopyOutputStatus" />
+      <xs:element minOccurs="0" name="overrideNativeImplementation" type="xs:boolean" />
+      <xs:element minOccurs="0" name="stopAtFirstConflict" type="xs:boolean" />
+      <xs:element minOccurs="0" name="stopCoreEntityLoadTimeEventGeneration" type="xs:boolean" />
+      <xs:element minOccurs="0" name="stopCoreEventGeneration" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MergeCopyContext.Context" nillable="true" type="tns:MergeCopyContext.Context" />
+  <xs:complexType name="MergeCopyContext.MergeCopyCallerContext">
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="attributeExclusionList" nillable="true" type="q2:ArrayOfstring" />
+      <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="attributeMandatoryInclusionList" nillable="true" type="q3:ArrayOfstring" />
+      <xs:element xmlns:q4="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="callerManagedInformation" nillable="true" type="q4:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="currentConflictMode" type="tns:MergeCopyHandlerConflictMode" />
+      <xs:element minOccurs="0" name="doNotCreateJsonIfTargetEntityOfTreeNodeIsNonExsistent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="extensionProvider" nillable="true" type="xs:anyType" />
+      <xs:element xmlns:q5="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="handlers" nillable="true" type="q5:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="ignoreIdenticalItemsInJson" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ignoreUnmappedAttributes" type="xs:boolean" />
+      <xs:element minOccurs="0" name="jsonEntitiesOffset" type="xs:int" />
+      <xs:element minOccurs="0" name="jsonEntitiesToReturn" type="xs:int" />
+      <xs:element minOccurs="0" name="mergeCopySource" type="tns:MergeCopySource" />
+      <xs:element minOccurs="0" name="processExtensionsFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="processOnlyFirstLevelFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="processRelationshipsFlag" type="xs:boolean" />
+      <xs:element minOccurs="0" name="processRelationshipsOnlyAtFirstLevelFlag" type="xs:boolean" />
+      <xs:element xmlns:q6="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subscribedAttributeFilterMap" nillable="true" type="q6:ArrayOfKeyValueOfstringboolean" />
+      <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subscribedBeforeAfterFilterMap" nillable="true" type="q7:ArrayOfKeyValueOfstringboolean" />
+      <xs:element minOccurs="0" name="subscribedConflictModes" nillable="true" type="tns:ArrayOfMergeCopyHandlerConflictMode" />
+      <xs:element xmlns:q8="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subscribedEntityTypeFilterMap" nillable="true" type="q8:ArrayOfKeyValueOfstringboolean" />
+      <xs:element minOccurs="0" name="subscribedOptions" nillable="true" type="tns:ArrayOfMergeCopyOption" />
+      <xs:element xmlns:q9="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subscribedRelationshipAttributeFilterMap" nillable="true" type="q9:ArrayOfKeyValueOfstringboolean" />
+      <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="subscribedRelationshipTypeFilterMap" nillable="true" type="q10:ArrayOfKeyValueOfstringboolean" />
+      <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MergeCopyContext.MergeCopyCallerContext" nillable="true" type="tns:MergeCopyContext.MergeCopyCallerContext" />
+  <xs:simpleType name="MergeCopyHandlerConflictMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BeforeEntityOperation" />
+      <xs:enumeration value="AfterEntityOperation" />
+      <xs:enumeration value="BeforeAttributeOperation" />
+      <xs:enumeration value="AfterAttributeOperation" />
+      <xs:enumeration value="EntityConflictSourceNewer" />
+      <xs:enumeration value="EntityConflictSourceOlder" />
+      <xs:enumeration value="EntityConflictSourceNonexistent" />
+      <xs:enumeration value="EntityConflictDestinationNonexistent" />
+      <xs:enumeration value="AttributeConflictSourceNewer" />
+      <xs:enumeration value="AttributeConflictSourceOlder" />
+      <xs:enumeration value="AttributeConflictSourceNonexistent" />
+      <xs:enumeration value="AttributeConflictDestinationNonexistent" />
+      <xs:enumeration value="RelationshipConflictSourceNewer" />
+      <xs:enumeration value="RelationshipConflictSourceOlder" />
+      <xs:enumeration value="RelationshipConflictSourceNonexistent" />
+      <xs:enumeration value="RelationshipConflictDestinationNonexistent" />
+      <xs:enumeration value="RelationshipAttributeConflictSourceNewer" />
+      <xs:enumeration value="RelationshipAttributeConflictSourceOlder" />
+      <xs:enumeration value="RelationshipAttributeConflictSourceNonexistent" />
+      <xs:enumeration value="RelationshipAttributeConflictDestinationNonexistent" />
+      <xs:enumeration value="ALL" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MergeCopyHandlerConflictMode" nillable="true" type="tns:MergeCopyHandlerConflictMode" />
+  <xs:simpleType name="MergeCopySource">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Promote">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Checkout">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Import">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="MDL">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MergeCopySource" nillable="true" type="tns:MergeCopySource" />
+  <xs:complexType name="ArrayOfMergeCopyHandlerConflictMode">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MergeCopyHandlerConflictMode" type="tns:MergeCopyHandlerConflictMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMergeCopyHandlerConflictMode" nillable="true" type="tns:ArrayOfMergeCopyHandlerConflictMode" />
+  <xs:complexType name="ArrayOfMergeCopyOption">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MergeCopyOption" type="tns:MergeCopyOption" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMergeCopyOption" nillable="true" type="tns:ArrayOfMergeCopyOption" />
+  <xs:simpleType name="MergeCopyOption">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FlushAndFillEntityIfDestinationExists" />
+      <xs:enumeration value="FlushAndFillAttributeIfDestinationExists" />
+      <xs:enumeration value="MergeByTimestamp" />
+      <xs:enumeration value="GenerateDeltaOnly" />
+      <xs:enumeration value="StopAtFirstConflict" />
+      <xs:enumeration value="CopyRelationshipAttributes" />
+      <xs:enumeration value="CopyRelationships" />
+      <xs:enumeration value="CopySystemAttributes" />
+      <xs:enumeration value="CopyTechnicalAttributes" />
+      <xs:enumeration value="CopyCommonAttributes" />
+      <xs:enumeration value="CopyRequiredAttributesOnly" />
+      <xs:enumeration value="CopyComplexAttributes" />
+      <xs:enumeration value="CompressJsonBuffer" />
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MergeCopyOption" nillable="true" type="tns:MergeCopyOption" />
+  <xs:complexType name="MergeCopyContext.MergeCopyJsonMarshallerState">
+    <xs:sequence>
+      <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/System.Text" minOccurs="0" name="complexAttributeConflictBuffer" nillable="true" type="q11:StringBuilder" />
+      <xs:element minOccurs="0" name="isInAttributeConflictsArray" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isInEntityConflictArray" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isInEntityConflictElement" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isInPreamble" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isInRelationshipConflictsArray" type="xs:boolean" />
+      <xs:element minOccurs="0" name="isInRelationshipConflictsElement" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MergeCopyContext.MergeCopyJsonMarshallerState" nillable="true" type="tns:MergeCopyContext.MergeCopyJsonMarshallerState" />
+  <xs:simpleType name="MergeCopyOutputStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Error">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unknown">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MergeCopyOutputStatus" nillable="true" type="tns:MergeCopyOutputStatus" />
+  <xs:complexType name="MergeCopyContext.MergeCopyInternalHandler">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="MergeCopyContext.MergeCopyInternalHandler" nillable="true" type="tns:MergeCopyContext.MergeCopyInternalHandler" />
+  <xs:complexType name="MergeCopyContext.MergeCopyConflictContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="areAttributeValuesDifferent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="attributeModel" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="skipEngineProcessingForCurrentNode" type="xs:boolean" />
+      <xs:element minOccurs="0" name="sourceAttribute" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="sourceEntity" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="sourceRelationship" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="targetAttribute" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="targetEntity" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="targetRelationship" nillable="true" type="xs:anyType" />
+      <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userManagedNodeInformation" nillable="true" type="q12:ArrayOfanyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MergeCopyContext.MergeCopyConflictContext" nillable="true" type="tns:MergeCopyContext.MergeCopyConflictContext" />
+</xs:schema>

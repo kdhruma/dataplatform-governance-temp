@@ -1,0 +1,4126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/LegacyDataAccessService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/LegacyDataAccessService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/LegacyDataAccessService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/LegacyDataAccessService.svc?xsd=xsd10" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/LegacyDataAccessService.svc?xsd=xsd11" namespace="http://schemas.datacontract.org/2004/07/System" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/LegacyDataAccessService.svc?xsd=xsd15" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DynamicTableSchema" />
+  <xs:element name="GetFile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fileId" type="xs:int" />
+        <xs:element minOccurs="0" name="chrDetailsOnly" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFileResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportPermission">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImportPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://mdmobjects.riversand.com/" minOccurs="0" name="GetImportPermissionResult" nillable="true" type="q1:ArrayOfUserAction" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="domain" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="textProfile" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fileType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="profileId" type="xs:int" />
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SaveProfileResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProfile">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="profileId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="domain" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteProfileResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteProfileResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubscribers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="subscriberId" type="xs:int" />
+        <xs:element minOccurs="0" name="subscriberName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchStr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inBound" type="xs:boolean" />
+        <xs:element minOccurs="0" name="outBound" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSubscribersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSubscribersResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfiles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="profilesId" type="xs:int" />
+        <xs:element minOccurs="0" name="profileName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="profileTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="typeShortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchStr" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitIncludeData" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetProfilesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetProfilesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChannels">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChannelsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChannelsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogCharacteristicTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="cNodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="includeComplexAttrChildren" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogCharacteristicTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogCharacteristicTemplateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelTypesXML">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelTypesXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRelTypesXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogNodeTypeAttr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="nodeTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogNodeTypeAttrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogNodeTypeAttrResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeRegEx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attribute" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeRegExResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeRegExResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechSpecsMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocaleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechSpecsMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTechSpecsMapResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxonomyByCatalog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTaxonomyByCatalogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTaxonomyByCatalogResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstimateChanges">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="changeProgram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cNodeList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="EstimateChangesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="EstimateChangesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogNodeTypeAttrbiuteAsXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="organizationId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="nodeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="branchLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="includeComplexAttrChildren" type="xs:boolean" />
+        <xs:element minOccurs="0" name="excludeableSearchable" type="xs:boolean" />
+        <xs:element xmlns:q2="http://mdmobjects.riversand.com/" minOccurs="0" name="locales" nillable="true" type="q2:ArrayOfLocaleEnum" />
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="systemDataLocale" type="q3:LocaleEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogNodeTypeAttrbiuteAsXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogNodeTypeAttrbiuteAsXmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommonAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCommonAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllCommonAttributesResult" nillable="true" type="q4:ArrayOfAttributeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTechnicalAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllTechnicalAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllTechnicalAttributesResult" nillable="true" type="q5:ArrayOfAttributeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonAttributesByContainerAndEntityType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="entityTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCommonAttributesByContainerAndEntityTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="GetCommonAttributesByContainerAndEntityTypeResult" nillable="true" type="q6:ArrayOfAttributeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechAttributesByTaxonomyAndCategory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="taxonomyId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechAttributesByTaxonomyAndCategoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="GetTechAttributesByTaxonomyAndCategoryResult" nillable="true" type="q7:ArrayOfAttributeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByAttributeType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="common" type="xs:int" />
+        <xs:element minOccurs="0" name="technical" type="xs:int" />
+        <xs:element minOccurs="0" name="relationship" type="xs:int" />
+        <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="locales" nillable="true" type="q8:ArrayOfLocaleEnum" />
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="systemLocale" type="q9:LocaleEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByAttributeTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://mdmobjects.riversand.com/" minOccurs="0" name="GetByAttributeTypeResult" nillable="true" type="q10:ArrayOfAttributeGroup" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByAttributeGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attributeGroupId" type="xs:int" />
+        <xs:element xmlns:q11="http://mdmobjects.riversand.com/" minOccurs="0" name="locales" nillable="true" type="q11:ArrayOfLocaleEnum" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetByAttributeGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://mdmobjects.riversand.com/" minOccurs="0" name="GetByAttributeGroupResult" nillable="true" type="q12:ArrayOfAttributeModel" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchEntities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://mdmobjects.riversand.com/" minOccurs="0" name="searchCriteria" nillable="true" type="q13:SearchCriteria" />
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="searchContext" nillable="true" type="q14:SearchContext" />
+        <xs:element minOccurs="0" name="totalCount" nillable="true" type="xs:string" />
+        <xs:element xmlns:q15="http://mdmobjects.riversand.com/" minOccurs="0" name="searchOperationResult" nillable="true" type="q15:OperationResult" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q16:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchEntitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SearchEntitiesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportSubscriberExists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="objectParentName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectParentId" type="xs:int" />
+        <xs:element minOccurs="0" name="raiseError" type="xs:boolean" />
+        <xs:element minOccurs="0" name="errorMessage" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExportSubscriberExistsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ExportSubscriberExistsResult" nillable="true" type="q17:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAffectedInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIds" nillable="true" type="q18:ArrayOflong" />
+        <xs:element minOccurs="0" name="attributeIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+        <xs:element minOccurs="0" name="currentDataLocaleId" type="xs:int" />
+        <xs:element minOccurs="0" name="systemDataLocaleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAffectedInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAffectedInfoResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowStatusXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activityId" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowStatusXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetWorkflowStatusXmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDLsByIdList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:long" />
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDLsByIdListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://mdmobjects.riversand.com/" minOccurs="0" name="GetMDLsByIdListResult" nillable="true" type="q19:ArrayOfEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImpactedEntities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="cnodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="toTotalImpacted" type="xs:int" />
+        <xs:element minOccurs="0" name="totalAffected" type="xs:int" />
+        <xs:element minOccurs="0" name="maxReturnCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImpactedEntitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetImpactedEntitiesResult" nillable="true" type="q20:ArrayOfKeyValueOfstringanyType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cnodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="cnodeParentId" type="xs:long" />
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+        <xs:element minOccurs="0" name="bitUseDraftTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="dataLocale" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetParentResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeValuesForMDLs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="extSystemId" type="xs:int" />
+        <xs:element minOccurs="0" name="inputXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="coreAttrList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="techAttrList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="includeInheritedValue" type="xs:boolean" />
+        <xs:element minOccurs="0" name="computeInheritedValues" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeValuesForMDLsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeValuesForMDLsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cnodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="catalogIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="delimiter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnSelf" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://mdmobjects.riversand.com/" minOccurs="0" name="GetMDLResult" nillable="true" type="q21:ArrayOfEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParentOPBL">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cnodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="cnodeParentId" type="xs:long" />
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+        <xs:element minOccurs="0" name="dataLocale" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParentOPBLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://mdmobjects.riversand.com/" minOccurs="0" name="GetParentOPBLResult" nillable="true" type="q22:ArrayOfEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDLBasedOnConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cnodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="dataConfigXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="catalogIdList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="delimiter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnSelf" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDLBasedOnConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://mdmobjects.riversand.com/" minOccurs="0" name="GetMDLBasedOnConfigResult" nillable="true" type="q23:ArrayOfEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowTasks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cNodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowTasksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="GetWorkflowTasksResult" nillable="true" type="q24:ArrayOfWorkflowActivity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Reclassify">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dataXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isCategoryReclassify" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReclassifyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ReclassifyResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobId" type="xs:int" />
+        <xs:element xmlns:q25="http://mdmobjects.riversand.com/" minOccurs="0" name="jobAction" type="q25:JobAction" />
+        <xs:element minOccurs="0" name="jobType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q26="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q26:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateUserActionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChildJobsInXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="parentJobId" type="xs:int" />
+        <xs:element xmlns:q27="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q27:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetChildJobsInXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetChildJobsInXmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="scheduleId" type="xs:int" />
+        <xs:element minOccurs="0" name="jobType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q28:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/System" minOccurs="0" name="GetScheduleResult" nillable="true" type="q29:TupleOfArrayOfJobArrayOfExportProfileK6YRQvOz" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="scheduleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduleLongName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="content" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isEnable" type="xs:boolean" />
+        <xs:element minOccurs="0" name="profiles" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="jobType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q30:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddScheduleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateSchedule">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="scheduleId" type="xs:int" />
+        <xs:element minOccurs="0" name="scheduleName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="scheduleLongName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="content" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isEnable" type="xs:boolean" />
+        <xs:element minOccurs="0" name="profiles" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="jobType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q31="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q31:MDMCenterApplication" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateScheduleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateScheduleResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRulesById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ruleIds" nillable="true" type="q32:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRulesByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://mdmobjects.riversand.com/" minOccurs="0" name="GetBusinessRulesByIdResult" nillable="true" type="q33:ArrayOfBusinessRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRulesByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRulesByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://mdmobjects.riversand.com/" minOccurs="0" name="GetBusinessRulesByUserIdResult" nillable="true" type="q34:ArrayOfBusinessRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBusinessRules">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://mdmobjects.riversand.com/" minOccurs="0" name="businessRules" nillable="true" type="q35:ArrayOfBusinessRule" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBusinessRulesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessBusinessRulesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRulesByContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eventSourceID" type="xs:int" />
+        <xs:element minOccurs="0" name="eventSubscriberID" type="xs:int" />
+        <xs:element minOccurs="0" name="loginUserID" type="xs:int" />
+        <xs:element minOccurs="0" name="loginUserRole" type="xs:int" />
+        <xs:element minOccurs="0" name="orgID" type="xs:int" />
+        <xs:element minOccurs="0" name="containerID" type="xs:int" />
+        <xs:element minOccurs="0" name="entityTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="businessRuleTypeIDs" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRulesByContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://mdmobjects.riversand.com/" minOccurs="0" name="GetBusinessRulesByContextResult" nillable="true" type="q36:ArrayOfBusinessRule" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleAttributeMappingsByRuleId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="businessRuleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleAttributeMappingsByRuleIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://mdmobjects.riversand.com/" minOccurs="0" name="GetBusinessRuleAttributeMappingsByRuleIdResult" nillable="true" type="q37:ArrayOfBusinessRuleAttributeMapping" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBusinessRuleMappings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://mdmobjects.riversand.com/" minOccurs="0" name="businessRuleAttributeMappings" nillable="true" type="q38:ArrayOfBusinessRuleAttributeMapping" />
+        <xs:element minOccurs="0" name="ViewId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBusinessRuleMappingsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessBusinessRuleMappingsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBusinessRuleContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://mdmobjects.riversand.com/" minOccurs="0" name="businessRuleSetRules" nillable="true" type="q39:ArrayOfBusinessRuleSetRule" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessBusinessRuleContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessBusinessRuleContextResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableStructure">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="getFromSysObj" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableStructureResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTableStructureResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableTypeTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TableType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableTypeTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTableTypeTemplateResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableTypes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTableTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectType" type="xs:int" />
+        <xs:element minOccurs="0" name="searchString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="getFromSysObj" type="xs:boolean" />
+        <xs:element minOccurs="0" name="getAttrCountColumn" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTableNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTableNamesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefTableData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="refColumnName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="refMask" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="displayColumns" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortOrder" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumns" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRefTableDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRefTableDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNormalizationJobResults">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="jobServiceId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNormalizationJobResultsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNormalizationJobResultsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranslationMemory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="origLocale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transLocale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="origText" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTranslationMemoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTranslationMemoryResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="cnodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="viewPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCNodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelationshipCardinality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="nodeTypeFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="relationshipType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelationshipCardinalityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRelationshipCardinalityResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRelationshipCardinality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnValue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRelationshipCardinalityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessRelationshipCardinalityResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRelationshipTypeEntityTypeCardinality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnValue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRelationshipTypeEntityTypeCardinalityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessRelationshipTypeEntityTypeCardinalityResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelationshipTypeEntityTypeCardinality">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nodeTypeFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="relationshipType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelationshipTypeEntityTypeCardinalityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRelationshipTypeEntityTypeCardinalityResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTranslationMemory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="origLocale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transLocale" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="OrigText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="transText" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="moduser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnValue" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTranslationMemoryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessTranslationMemoryResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContainerRelationshipTypeEntityTypeMappingsByCnodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cnodeGroupIds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContainerRelationshipTypeEntityTypeMappingsByCnodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://mdmobjects.riversand.com/" minOccurs="0" name="GetContainerRelationshipTypeEntityTypeMappingsByCnodesResult" nillable="true" type="q40:ArrayOfContainerRelationshipTypeEntityTypeMapping" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDynamicTableSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DynamicTableSchema" minOccurs="0" name="dbTable" nillable="true" type="q41:DBTable" />
+        <xs:element xmlns:q42="http://mdmobjects.riversand.com/" minOccurs="0" name="dynamicTableType" type="q42:DynamicTableType" />
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q43:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDynamicTableSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessDynamicTableSchemaResult" nillable="true" type="q44:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDynamicTableSchemas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DynamicTableSchema" minOccurs="0" name="dbTables" nillable="true" type="q45:DBTableCollection" />
+        <xs:element xmlns:q46="http://mdmobjects.riversand.com/" minOccurs="0" name="dynamicTableType" type="q46:DynamicTableType" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q47:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessDynamicTableSchemasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessDynamicTableSchemasResult" nillable="true" type="q48:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDynamicTableSchema">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+        <xs:element xmlns:q49="http://mdmobjects.riversand.com/" minOccurs="0" name="dynamicTableType" type="q49:DynamicTableType" />
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q50:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDynamicTableSchemaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://mdmobjects.riversand.com/" minOccurs="0" name="GetDynamicTableSchemaResult" nillable="true" type="q51:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoreAttrXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localeID" type="xs:int" />
+        <xs:element minOccurs="0" name="customerID" type="xs:int" />
+        <xs:element minOccurs="0" name="CNodeID" type="xs:long" />
+        <xs:element minOccurs="0" name="CNodeParentID" type="xs:long" />
+        <xs:element minOccurs="0" name="attrGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="orgID" type="xs:int" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="backupLocaleID" type="xs:int" />
+        <xs:element minOccurs="0" name="viewPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="useDraftTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="encodeCollections" type="xs:boolean" />
+        <xs:element minOccurs="0" name="attrIDList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoreAttrXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCoreAttrXmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechAttrXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CNodeID" type="xs:int" />
+        <xs:element minOccurs="0" name="CNodeParentID" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="attrGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="localeID" type="xs:int" />
+        <xs:element minOccurs="0" name="customerID" type="xs:int" />
+        <xs:element minOccurs="0" name="user" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="backupLocaleID" type="xs:int" />
+        <xs:element minOccurs="0" name="viewPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="useDraftTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="encodeCollections" type="xs:boolean" />
+        <xs:element minOccurs="0" name="attrIDList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechAttrXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTechAttrXmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationConfigData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eventSourceId" type="xs:int" />
+        <xs:element minOccurs="0" name="eventSubscriberId" type="xs:int" />
+        <xs:element minOccurs="0" name="securityRoleId" type="xs:int" />
+        <xs:element minOccurs="0" name="securityUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="cNodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="nodeTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="relationshipTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="localId" type="xs:int" />
+        <xs:element minOccurs="0" name="applicationConfigId" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationConfigDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetApplicationConfigDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateApplicationConfigXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FK_Application_ContextDefinition" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Application_ConfigParent" type="xs:int" />
+        <xs:element minOccurs="0" name="ShortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LongName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FK_Event_Source" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Event_Subscriber" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Org" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Category" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_CNode" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Attribute" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_NodeType" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_RelationshipType" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Security_Role" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Security_user" type="xs:int" />
+        <xs:element minOccurs="0" name="ConfigXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PreCondition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PostCondition" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="XSDSchema" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="SampleXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userProgram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FK_Locale" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateApplicationConfigXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateApplicationConfigXMLResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContextualApplicationConfigData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eventSourceId" type="xs:int" />
+        <xs:element minOccurs="0" name="eventSubscriberId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetContextualApplicationConfigDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetContextualApplicationConfigDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSearchCriterias">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchCriteriaID" type="xs:int" />
+        <xs:element minOccurs="0" name="loginId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSearchCriteriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSearchCriteriasResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryNavPanel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="sysAttrSelectionXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categorySearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="categorySearchString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parentCategoryId" type="xs:long" />
+        <xs:element minOccurs="0" name="countFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+        <xs:element minOccurs="0" name="strvchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="currentDataLocale" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryNavPanelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryNavPanelResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSearchCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="action" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="criteriaId" type="xs:int" />
+        <xs:element minOccurs="0" name="criteriaName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="isGlobalSearch" type="xs:boolean" />
+        <xs:element minOccurs="0" name="searchXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userProgram" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessSearchCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessSearchCriteriaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCategories">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="altTaxId" type="xs:int" />
+        <xs:element minOccurs="0" name="currentDataLocale" type="xs:int" />
+        <xs:element minOccurs="0" name="filter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCategoriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllCategoriesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="excludeSearchable" type="xs:boolean" />
+        <xs:element minOccurs="0" name="currentDataLocale" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSystemAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSystemAttributesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCharacteristicTemplate">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="selectedCategoryId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="currentDataLocale" type="xs:int" />
+        <xs:element minOccurs="0" name="useDraftAccess" type="xs:boolean" />
+        <xs:element minOccurs="0" name="usesChilds" type="xs:int" />
+        <xs:element minOccurs="0" name="orgID" type="xs:int" />
+        <xs:element minOccurs="0" name="excludeSearchable" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCharacteristicTemplateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCharacteristicTemplateResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleViewAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cNodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="businessRuleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRuleViewAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRuleViewAttributesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleFromContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="strContentXml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBusinessRuleFromContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBusinessRuleFromContextResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSearchCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="searchCriteriaId" type="xs:int" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="modProgram" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSearchCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSearchCriteriaResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleOrgsDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetLoginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localId" type="xs:int" />
+        <xs:element minOccurs="0" name="countFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameters" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleOrgsDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserVisibleOrgsDTResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleCatalogsDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetLoginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="countFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="includeTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="includeDynamicTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="includeCatalog" type="xs:boolean" />
+        <xs:element minOccurs="0" name="includeView" type="xs:boolean" />
+        <xs:element minOccurs="0" name="includeProduction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="includeDraft" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleCatalogsDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserVisibleCatalogsDTResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignmentButtons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="assignmentStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cNodeList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toolbarButtonXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignmentButtonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssignmentButtonsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreadcrumbAttributeValueString">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="breadcrumbConfigXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="fkOrgId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="cNodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetBreadcrumbAttributeValueStringResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetBreadcrumbAttributeValueStringResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Get">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityId" type="xs:long" />
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="entityParentId" type="xs:long" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q52:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://mdmobjects.riversand.com/" minOccurs="0" name="GetResult" nillable="true" type="q53:AttributeVersionCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessServiceResult">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eventSource" type="xs:int" />
+        <xs:element minOccurs="0" name="applicationConfig" type="xs:int" />
+        <xs:element minOccurs="0" name="dataXmlString" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userProgram" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessServiceResultResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessServiceResultResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobTypeEventSourceMapping">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eventSourceId" type="xs:int" />
+        <xs:element minOccurs="0" name="jobId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetJobTypeEventSourceMappingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetJobTypeEventSourceMappingResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelationshipTypeHierarchy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_RelationshipType_Top" type="xs:int" />
+        <xs:element minOccurs="0" name="MaxLevel" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRelationshipTypeHierarchyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRelationshipTypeHierarchyResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractCatalogByIDLocalRel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intExtSystemID" type="xs:int" />
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrRelAttrList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractCatalogByIDLocalRelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExtractCatalogByIDLocalRelResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractBulkAttributeMetadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitUseDraftTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="ignoreComplexAttributes" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractBulkAttributeMetadataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExtractBulkAttributeMetadataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractBulkAttributeMetadataRel">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitUseDraftTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractBulkAttributeMetadataRelResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExtractBulkAttributeMetadataRelResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitUseDraftTax" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExtractAttributesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryAttributeMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCategoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocaleID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoryAttributeMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoryAttributeMapResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCharacteristicTemplateDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCategoryID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocaleID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCharacteristicTemplateDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCharacteristicTemplateDTResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleCatalogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FK_Org" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Locale" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="IncludeTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeDynamicTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeCatalog" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeView" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeProduction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeDraft" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleCatalogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserVisibleCatalogsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogPermissionsByOrg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FK_Org" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Locale" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="IncludeTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeDynamicTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeCatalog" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeView" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeProduction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeDraft" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogPermissionsByOrgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogPermissionsByOrgResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="FK_Org" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Locale" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="IncludeTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeDynamicTaxonomy" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeCatalog" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeView" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeProduction" type="xs:boolean" />
+        <xs:element minOccurs="0" name="IncludeDraft" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogDTResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByOrg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orgId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogsByOrgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogsByOrgResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCatalogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_Org" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCatalogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessCatalogsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogLocaleByID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogLocaleByIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogLocaleByIDResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCatalogLocales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_Org" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCatalogLocalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessCatalogLocalesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodePermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_ParentCNode" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Locale" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Customer" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_CNode" type="xs:int" />
+        <xs:element minOccurs="0" name="bitIncludeComponents" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitEnableComponentMapping" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitUseDrafTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitEnableUnassignedCategory" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ToolTipAttributeList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodePermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNodePermissionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodePermissionsByCNode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="CnodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Locale" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Customer" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitIncludeComponents" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitEnableComponentMapping" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitUseDrafTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitEnableUnassignedCategory" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodePermissionsByCNodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNodePermissionsByCNodeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoreAttrByGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intLocaleID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCustomerID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCNodeID" type="xs:long" />
+        <xs:element minOccurs="0" name="intCNodeParentID" type="xs:long" />
+        <xs:element minOccurs="0" name="intGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="intOrgID" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intBackLocaleID" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrViewPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitUseDraftTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ShowAtCreation" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AttrIDList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCoreAttrByGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCoreAttrByGroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCoreAttr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="intOrgID" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrProgramName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocaleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessCoreAttrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessCoreAttrResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTechAttr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="intOrgID" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrProgramName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LocaleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessTechAttrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessTechAttrResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechAttr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intCnodeID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCnodeParentID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="intGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="intLocaleID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCustomerID" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intBackupLocaleID" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrViewPath" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitUseDraftTax" type="xs:boolean" />
+        <xs:element minOccurs="0" name="AttrIDList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechAttrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTechAttrResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatuses">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStatusesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SchemaValidationRulesExecution">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="JobId" type="xs:int" />
+        <xs:element minOccurs="0" name="UserID" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SchemaValidationRulesExecutionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SchemaValidationRulesExecutionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogAttributesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyCatalogAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intFromCatalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="intToCatalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="CreateProgram" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="CreateUser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CopyCatalogAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CopyCatalogAttributesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameValCollection">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdList" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNameValCollectionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNameValCollectionResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCollectionValues">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="FK_CNode" type="xs:int" />
+        <xs:element minOccurs="0" name="ParentId" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Catalog" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Customer" type="xs:int" />
+        <xs:element minOccurs="0" name="FK_Locale" type="xs:int" />
+        <xs:element minOccurs="0" name="InheritanceMode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCollectionValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCollectionValuesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogNodeTypeAttributesXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intOrgID" type="xs:int" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="nvchrNodeType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intBranchLevel" type="xs:int" />
+        <xs:element minOccurs="0" name="IncludeComplexAttrChildren" type="xs:boolean" />
+        <xs:element minOccurs="0" name="ExcludeSearchable" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCatalogNodeTypeAttributesXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCatalogNodeTypeAttributesXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSearchCategoriesByCriteria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrSearchValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="intParentID" type="xs:int" />
+        <xs:element minOccurs="0" name="toolTipAttributeList" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataLocale" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSearchCategoriesByCriteriaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSearchCategoriesByCriteriaResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVisibleComponents">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrTargetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intOrgId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCatalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="intNodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="bitRecursive" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitUseDraftTaxonomy" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVisibleComponentsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetVisibleComponentsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRelAttr">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intCatalogID" type="xs:int" />
+        <xs:element minOccurs="0" name="intOrgID" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrUserID" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrProgramName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRelAttrResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessRelAttrResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigContextData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicationContextType" type="xs:int" />
+        <xs:element minOccurs="0" name="seqDataTableforUI" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigContextDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserConfigContextDataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUOMsByUOMType">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUOMsByUOMTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllUOMsByUOMTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigMetadata">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="configXml" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigMetadataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserConfigMetadataResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventSources">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eventSourceId" type="xs:int" />
+        <xs:element minOccurs="0" name="eventSourceName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventSourcesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEventSourcesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventSubscribers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="eventSubscriberId" type="xs:int" />
+        <xs:element minOccurs="0" name="eventSubscriberName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEventSubscribersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEventSubscribersResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationConfigTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="applicationConfigTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="applicationConfigTypeName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetApplicationConfigTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetApplicationConfigTypesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchingRuleSets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="eventSourceId" type="xs:int" />
+        <xs:element minOccurs="0" name="eventSubscriberId" type="xs:int" />
+        <xs:element minOccurs="0" name="securityUserId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchingRuleSetsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMatchingRuleSetsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetViewContext">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="viewId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetViewContextResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetViewContextResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetViewContextDetail">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="contextId" type="xs:int" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetViewContextDetailResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetViewContextDetailResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateServicesJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serviceType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateServicesJobResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CreateServicesJobResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRSPLMatchingStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cNodes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRSPLMatchingStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRSPLMatchingStatusResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchedCnodes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nodeName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dataXML" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMatchedCnodesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetMatchedCnodesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractBulkOperationAttributeMetaData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="inputDataMode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="selectedNodeTypes" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitUseDraftTax" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ExtractBulkOperationAttributeMetaDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ExtractBulkOperationAttributeMetaDataResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLocales">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLocalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllLocalesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCategoriesByHierarchy">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="taxonomyId" type="xs:int" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllCategoriesByHierarchyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllCategoriesByHierarchyResult" nillable="true" type="q54:ArrayOfEntity" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAll">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllResult" nillable="true" type="q55:ArrayOfTimeZone" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitsXML">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUnitsXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUnitsXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityRelationshipDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityId" type="xs:long" />
+        <xs:element xmlns:q56="http://mdmobjects.riversand.com/" minOccurs="0" name="entityContext" nillable="true" type="q56:EntityContext" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q57:CallerContext" />
+        <xs:element minOccurs="0" name="publishEvents" type="xs:boolean" />
+        <xs:element minOccurs="0" name="applyAVS" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityRelationshipDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetEntityRelationshipDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleMenus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityRole" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleMenusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRoleMenusResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityUser" type="xs:int" />
+        <xs:element minOccurs="0" name="userType" type="xs:int" />
+        <xs:element minOccurs="0" name="countFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersWithRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityUser" type="xs:int" />
+        <xs:element minOccurs="0" name="countFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersWithRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUsersWithRolesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessUsersResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityRole" type="xs:int" />
+        <xs:element minOccurs="0" name="userType" type="xs:int" />
+        <xs:element minOccurs="0" name="chrGetPermissionSetOnly" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitDisplaySystemRole" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRolesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRolesWithUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pkSecurityRole" type="xs:int" />
+        <xs:element minOccurs="0" name="chrGetPermissionSetOnly" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="vchrSearchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrSearchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="bitDisplaySystemRole" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRolesWithUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetRolesWithUsersResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessRolesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRoleMenus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRoleMenusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessRoleMenusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectTypeAction">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectTypeActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetObjectTypeActionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHierarchyAction">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHierarchyActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetHierarchyActionResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityRole" type="xs:int" />
+        <xs:element minOccurs="0" name="chrPermissionSet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPermissionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessPermissionsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrganizationsAndCatalogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrganizationsAndCatalogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllOrganizationsAndCatalogsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsSystemUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nvchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isSystemUser" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsSystemUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsSystemUserResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasPermission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vchrUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectTypeSN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="actionSN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="parentObjectTypeSN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="categoryCNode" type="xs:long" />
+        <xs:element minOccurs="0" name="componentCNode" type="xs:long" />
+        <xs:element minOccurs="0" name="attribute" type="xs:int" />
+        <xs:element minOccurs="0" name="relationship" type="xs:int" />
+        <xs:element minOccurs="0" name="bitForDraft" type="xs:boolean" />
+        <xs:element minOccurs="0" name="bitHasPermission" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="HasPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="HasPermissionResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleOrgs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserVisibleOrgsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserVisibleOrgsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsWithPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orgParentId" type="xs:int" />
+        <xs:element minOccurs="0" name="orgClassificationId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogObjectType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsWithPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrgsWithPermissionsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsByOrgClassification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="targetUserLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orgClassificationId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogObjectType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsByOrgClassificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrgsByOrgClassificationResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrgTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orgTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrgTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllOrgTypesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orgTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="intCountTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrgTypesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessOrgTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessOrgTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessOrgTypesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrgHierarchies">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllOrgHierarchiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllOrgHierarchiesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsWithLocales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orgClassificationId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsWithLocalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrgsWithLocalesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessOrgLocales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessOrgLocalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessOrgLocalesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsWithPermissionsOrg">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgsWithPermissionsOrgResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrgsWithPermissionsOrgResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgCatalogInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="findWhat" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetOrgCatalogInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetOrgCatalogInfoResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAttributes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAllAttributesResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCNodeAttributeValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="cNodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="returnAttrType" type="xs:int" />
+        <xs:element minOccurs="0" name="showAtCreation" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCNodeAttributeValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCNodeAttributeValueResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeGroupsXML">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeGroupsXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeGroupsXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechSpecsByGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attrParentId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTechSpecsByGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTechSpecsByGroupResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComplexMetadata_GetDT">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="inputStr" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComplexMetadata_GetDTResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComplexMetadata_GetDTResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeChildrenByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attributeTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="attributeId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="cNodeId" type="xs:long" />
+        <xs:element minOccurs="0" name="viewPath" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeChildrenByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeChildrenByTypeResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSysObjectAttributesXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSysObjectAttributesXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetSysObjectAttributesXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessObjectAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attributeXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="objectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessObjectAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessObjectAttributesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UniqueComplxAttrid">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UniqueComplxAttridResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UniqueComplxAttridResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeConfigResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeUsage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeUsageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeUsageResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeGroupChildren">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="parentId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeGroupChildrenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeGroupChildrenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="parentId" type="xs:int" />
+        <xs:element minOccurs="0" name="countFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+        <xs:element minOccurs="0" name="bitUnusedOnly" type="xs:boolean" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodeAttributeDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="cNodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetNodeAttributeDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetNodeAttributeDetailsResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDataTypeMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDataTypeMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeDataTypeMapResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDataTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDataTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeDataTypesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDisplayTypeMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDisplayTypeMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeDisplayTypeMapResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDisplayTypes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDisplayTypesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeDisplayTypesResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormattersXML">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFormattersXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFormattersXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTargetAttributeValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="targetAttributeId" type="xs:int" />
+        <xs:element minOccurs="0" name="maxAllowableChars" type="xs:int" />
+        <xs:element minOccurs="0" name="inTestPage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="retAttrValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateTargetAttributeValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateTargetAttributeValueResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAttributesXml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="intGroupId" type="xs:int" />
+        <xs:element minOccurs="0" name="searchValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="level" type="xs:int" />
+        <xs:element minOccurs="0" name="getComplexChildren" type="xs:boolean" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getAttributesXmlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="getAttributesXmlResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComplexMetadataRollBack">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="versionId" type="xs:int" />
+        <xs:element minOccurs="0" name="cNodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="attributeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ComplexMetadataRollBackResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ComplexMetadataRollBackResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDataForLookupControl">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="complexTableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lookUpColumnName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="isCheckingOnly" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAttributeDataForLookupControlResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAttributeDataForLookupControlResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesFromRuleXML">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="txtRulesXML" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCategoriesFromRuleXMLResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetCategoriesFromRuleXMLResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuickSearchByShortName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="searchValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="cnodeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QuickSearchByShortNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="QuickSearchByShortNameResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="searchValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="topRows" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetObjectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetObjectResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataSet" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:element ref="xs:schema" />
+              <xs:any />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjectGet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+        <xs:element minOccurs="0" name="searchValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="topRows" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjectGetResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObjectGetResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusesByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="statusType" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetStatusesByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetStatusesByTypeResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemMetaDataActions">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetItemMetaDataActionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetItemMetaDataActionsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LookupSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LookupSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LookupSearchResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LookupRuleDataSearch">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectValue" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="tableName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchValue" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LookupRuleDataSearchResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LookupRuleDataSearchResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfig">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityUserId" type="xs:int" />
+        <xs:element minOccurs="0" name="orgId" type="xs:int" />
+        <xs:element minOccurs="0" name="userConfigTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="userConfigShortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="getFromAdmin" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserConfigResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetUserConfigResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjectDependency">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="objectName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="objectId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObjectDependencyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ObjectDependencyResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fileId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFileDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetFileDetailsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

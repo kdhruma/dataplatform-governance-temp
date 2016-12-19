@@ -1,0 +1,143 @@
+﻿<Testdata>
+
+  <Data MethodName="Process_Organizations_Create_One">
+    <Input>
+      <Parameters>
+        <Parameter Name="Organizations">
+          <Organizations>
+            <Organization Id="-1" Name="Dimetry Works Workspace Test" LongName="Dimetry Works WorkSpace Test Created" GLN="" OrganizationTypeId="1" OrganizationClassification="3" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+          </Organizations>
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Process_Organizations_Create_Many">
+    <Input>
+      <Parameters>
+        <Parameter Name="Organizations">
+          <Organizations>
+            <Organization Id="-1" Name="Dimetry Works Workspace One" LongName="Dimetry Test Works WorkSpace First" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+            <Organization Id="-1" Name="Dimetry Works Workspace Two" LongName="Dimetry Test Works WorkSpace Second" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+          </Organizations>
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Process_Organizations_Update_One">
+    <Input>
+      <Parameters>
+        <Parameter Name="Organizations">
+          <Organizations>
+            <Organization Id="-1" Name="Dimetry Works Workspace for Update" LongName="Dimetry Test Works WorkSpace for Update" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+          </Organizations>
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Organizations>
+        <Organization Id="-1" Name="Dimetry Works Workspace for Update - Updated" LongName="Dimetry Test Works WorkSpace for Update" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+          <Attributes />
+        </Organization>
+      </Organizations>
+    </Output>
+  </Data>
+
+  <Data MethodName="Process_Organizations_Update_Many">
+    <Input>
+      <Parameters>
+        <Parameter Name="Organizations">
+          <Organizations>
+            <Organization Id="-1" Name="Dimetry Works Workspace for Update One" LongName="Dimetry Test Works WorkSpace for Update First" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+            <Organization Id="-1" Name="Dimetry Works Workspace for Update Two" LongName="Dimetry Test Works WorkSpace for Update Second" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+          </Organizations>
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      <Organizations>
+        <Organization Id="-1" Name="Dimetry Works Workspace for Update One - Updated" LongName="Dimetry Test Works WorkSpace for Update First" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+          <Attributes />
+        </Organization>
+        <Organization Id="-1" Name="Dimetry Works Workspace for Update Two - Updated" LongName="Dimetry Test Works WorkSpace for Update Second" GLN="" OrganizationTypeId="3" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+          <Attributes />
+        </Organization>
+      </Organizations>
+    </Output>
+  </Data>
+
+  <Data MethodName="Process_Organizations_Delete_One">
+    <Input>
+      <Parameters>
+        <Parameter Name="Organizations">
+          <Organizations>
+            <Organization Id="-1" Name="Dimetry Works Workspace for Delete" LongName="Dimetry Test Works WorkSpace for Delete" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+          </Organizations>
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+  <Data MethodName="Process_Organizations_Delete_Many">
+    <Input>
+      <Parameters>
+        <Parameter Name="Organizations">
+          <Organizations>
+            <Organization Id="-1" Name="Dimetry Works Workspace for Delete One" LongName="Dimetry Test Works WorkSpace for Delete First" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+            <Organization Id="-1" Name="Dimetry Works Workspace for Delete Two" LongName="Dimetry Test Works WorkSpace for Delete Second" GLN="" OrganizationTypeId="1" OrganizationClassification="1" OrganizationParent="0" DenormalizationWeightage="0">
+              <Attributes />
+            </Organization>
+          </Organizations>
+        </Parameter>
+        <Parameter Name="ProgramName">
+          Unit Test
+        </Parameter>
+      </Parameters>
+    </Input>
+    <Output>
+      No Output
+    </Output>
+  </Data>
+
+</Testdata>

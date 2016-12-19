@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DiagnosticService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/DiagnosticService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd4" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/DiagnosticService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDiagnosticService_GetApplicationDiagnostic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationDiagnostic" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetApplicationDiagnostic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetApplicationDiagnosticResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetApplicationDiagnostic_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetSystemDiagnostic_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemDiagnostic" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetSystemDiagnostic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSystemDiagnosticResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetSystemDiagnostic_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_ProcessDiagnosticData_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDiagnosticData" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_ProcessDiagnosticData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDiagnosticDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_ProcessDiagnosticData_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetActivities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivities" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetActivities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetActivities_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetRecords_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecords" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetRecords_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRecordsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetRecords_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetRelatedDiagnosticRecordData_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelatedDiagnosticRecordData" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetRelatedDiagnosticRecordData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetRelatedDiagnosticRecordDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetRelatedDiagnosticRecordData_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_StartDiagnosticTraces_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartDiagnosticTraces" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_StartDiagnosticTraces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartDiagnosticTracesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_StartDiagnosticTraces_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_StopDiagnosticTraces_InputMessage">
+    <wsdl:part name="parameters" element="tns:StopDiagnosticTraces" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_StopDiagnosticTraces_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StopDiagnosticTracesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_StopDiagnosticTraces_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_ProcessDiagnosticToolsReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDiagnosticToolsReport" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_ProcessDiagnosticToolsReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessDiagnosticToolsReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_ProcessDiagnosticToolsReport_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetReportTemplate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportTemplate" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetReportTemplate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReportTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetReportTemplate_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_CreateDiagnosticReportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDiagnosticReportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_CreateDiagnosticReportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateDiagnosticReportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_CreateDiagnosticReportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_UpdateDiagnosticReportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDiagnosticReportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_UpdateDiagnosticReportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDiagnosticReportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_UpdateDiagnosticReportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetDiagnosticReportProfileByName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosticReportProfileByName" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetDiagnosticReportProfileByName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDiagnosticReportProfileByNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_GetDiagnosticReportProfileByName_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_DeleteDiagnosticReportProfile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDiagnosticReportProfile" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_DeleteDiagnosticReportProfile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDiagnosticReportProfileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDiagnosticService_DeleteDiagnosticReportProfile_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IDiagnosticService">
+    <wsdl:operation name="GetApplicationDiagnostic">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetApplicationDiagnostic" message="tns:IDiagnosticService_GetApplicationDiagnostic_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetApplicationDiagnosticResponse" message="tns:IDiagnosticService_GetApplicationDiagnostic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetApplicationDiagnosticMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_GetApplicationDiagnostic_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSystemDiagnostic">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetSystemDiagnostic" message="tns:IDiagnosticService_GetSystemDiagnostic_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetSystemDiagnosticResponse" message="tns:IDiagnosticService_GetSystemDiagnostic_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetSystemDiagnosticMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_GetSystemDiagnostic_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDiagnosticData">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/ProcessDiagnosticData" message="tns:IDiagnosticService_ProcessDiagnosticData_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/ProcessDiagnosticDataResponse" message="tns:IDiagnosticService_ProcessDiagnosticData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/ProcessDiagnosticDataMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_ProcessDiagnosticData_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivities">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetActivities" message="tns:IDiagnosticService_GetActivities_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetActivitiesResponse" message="tns:IDiagnosticService_GetActivities_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetActivitiesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_GetActivities_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRecords">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetRecords" message="tns:IDiagnosticService_GetRecords_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetRecordsResponse" message="tns:IDiagnosticService_GetRecords_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetRecordsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_GetRecords_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRelatedDiagnosticRecordData">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetRelatedDiagnosticRecordData" message="tns:IDiagnosticService_GetRelatedDiagnosticRecordData_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetRelatedDiagnosticRecordDataResponse" message="tns:IDiagnosticService_GetRelatedDiagnosticRecordData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetRelatedDiagnosticRecordDataMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_GetRelatedDiagnosticRecordData_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartDiagnosticTraces">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/StartDiagnosticTraces" message="tns:IDiagnosticService_StartDiagnosticTraces_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/StartDiagnosticTracesResponse" message="tns:IDiagnosticService_StartDiagnosticTraces_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/StartDiagnosticTracesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_StartDiagnosticTraces_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StopDiagnosticTraces">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/StopDiagnosticTraces" message="tns:IDiagnosticService_StopDiagnosticTraces_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/StopDiagnosticTracesResponse" message="tns:IDiagnosticService_StopDiagnosticTraces_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/StopDiagnosticTracesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_StopDiagnosticTraces_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessDiagnosticToolsReport">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/ProcessDiagnosticToolsReport" message="tns:IDiagnosticService_ProcessDiagnosticToolsReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/ProcessDiagnosticToolsReportResponse" message="tns:IDiagnosticService_ProcessDiagnosticToolsReport_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/ProcessDiagnosticToolsReportMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_ProcessDiagnosticToolsReport_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReportTemplate">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetReportTemplate" message="tns:IDiagnosticService_GetReportTemplate_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetReportTemplateResponse" message="tns:IDiagnosticService_GetReportTemplate_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetReportTemplateMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_GetReportTemplate_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateDiagnosticReportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/CreateDiagnosticReportProfile" message="tns:IDiagnosticService_CreateDiagnosticReportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/CreateDiagnosticReportProfileResponse" message="tns:IDiagnosticService_CreateDiagnosticReportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/CreateDiagnosticReportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_CreateDiagnosticReportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDiagnosticReportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/UpdateDiagnosticReportProfile" message="tns:IDiagnosticService_UpdateDiagnosticReportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/UpdateDiagnosticReportProfileResponse" message="tns:IDiagnosticService_UpdateDiagnosticReportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/UpdateDiagnosticReportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_UpdateDiagnosticReportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDiagnosticReportProfileByName">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetDiagnosticReportProfileByName" message="tns:IDiagnosticService_GetDiagnosticReportProfileByName_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetDiagnosticReportProfileByNameResponse" message="tns:IDiagnosticService_GetDiagnosticReportProfileByName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/GetDiagnosticReportProfileByNameMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_GetDiagnosticReportProfileByName_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDiagnosticReportProfile">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/DeleteDiagnosticReportProfile" message="tns:IDiagnosticService_DeleteDiagnosticReportProfile_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/DeleteDiagnosticReportProfileResponse" message="tns:IDiagnosticService_DeleteDiagnosticReportProfile_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IDiagnosticService/DeleteDiagnosticReportProfileMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IDiagnosticService_DeleteDiagnosticReportProfile_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="DiagnosticService">
+    <wsdl:port name="WSHttpBinding_IDiagnosticService" binding="i0:WSHttpBinding_IDiagnosticService">
+      <soap12:address location="http://localhost/Development_WCFServices/DiagnosticService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/DiagnosticService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IDiagnosticService" binding="i0:NetTcpBinding_IDiagnosticService">
+      <soap12:address location="net.tcp://tista.riversand.com/Development_WCFServices/DiagnosticService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://tista.riversand.com/Development_WCFServices/DiagnosticService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

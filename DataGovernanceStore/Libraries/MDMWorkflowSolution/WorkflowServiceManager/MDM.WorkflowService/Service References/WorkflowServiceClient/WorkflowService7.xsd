@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_MDMWorkflowWCFServices/WorkflowService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" />
+  <xs:import schemaLocation="http://localhost/Development_MDMWorkflowWCFServices/WorkflowService.svc?xsd=xsd3" namespace="http://mdmobjects.riversand.com/" />
+  <xs:element name="StartWorkflow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowDataContext" nillable="true" type="q1:WorkflowDataContext" />
+        <xs:element minOccurs="0" name="serviceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serviceId" type="xs:int" />
+        <xs:element minOccurs="0" name="currentUserName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q2="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q2:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartWorkflowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartWorkflowResult" type="xs:int" />
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q3:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartWorkflowWithRunOptions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowDataContext" nillable="true" type="q4:WorkflowDataContext" />
+        <xs:element minOccurs="0" name="serviceType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serviceId" type="xs:int" />
+        <xs:element minOccurs="0" name="currentUserName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="workflowInstanceRunOption" type="q5:WorkflowInstanceRunOptions" />
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q6:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartWorkflowWithRunOptionsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartWorkflowWithRunOptionsResult" type="xs:int" />
+        <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q7:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeWorkflowInstancesByRuntimeInstanceIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="commaSeparatedRuntimeInstanceIds" nillable="true" type="xs:string" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="actionContext" nillable="true" type="q8:WorkflowActionContext" />
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q9:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeWorkflowInstancesByRuntimeInstanceIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResumeWorkflowInstancesByRuntimeInstanceIdsResult" type="xs:int" />
+        <xs:element xmlns:q10="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q10:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeWorkflowInstanceByMDMObject">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObj" nillable="true" type="q11:WorkflowMDMObject" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="actionContext" nillable="true" type="q12:WorkflowActionContext" />
+        <xs:element xmlns:q13="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q13:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeWorkflowInstanceByMDMObjectResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResumeWorkflowInstanceByMDMObjectResult" type="xs:int" />
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q14:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeWorkflowInstance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowInstance" nillable="true" type="q15:WorkflowInstance" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="actionContext" nillable="true" type="q16:WorkflowActionContext" />
+        <xs:element xmlns:q17="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q17:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeWorkflowInstanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResumeWorkflowInstanceResult" type="xs:int" />
+        <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q18:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeMultipleWorkflowInstancesByMDMObjects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowDataContext" nillable="true" type="q19:WorkflowDataContext" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="actionContext" nillable="true" type="q20:WorkflowActionContext" />
+        <xs:element xmlns:q21="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q21:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeMultipleWorkflowInstancesByMDMObjectsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResumeMultipleWorkflowInstancesByMDMObjectsResult" type="xs:int" />
+        <xs:element xmlns:q22="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q22:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeMultipleWorkflowInstances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="instanceCollection" nillable="true" type="q23:ArrayOfWorkflowInstance" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="actionContext" nillable="true" type="q24:WorkflowActionContext" />
+        <xs:element xmlns:q25="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q25:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeMultipleWorkflowInstancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResumeMultipleWorkflowInstancesResult" type="xs:int" />
+        <xs:element xmlns:q26="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q26:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeAbortedWorkflowInstances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="instanceCollection" nillable="true" type="q27:ArrayOfWorkflowInstance" />
+        <xs:element minOccurs="0" name="instanceStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q28:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ResumeAbortedWorkflowInstancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ResumeAbortedWorkflowInstancesResult" type="xs:int" />
+        <xs:element xmlns:q29="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q29:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminateWorkflowInstances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="instanceCollection" nillable="true" type="q30:ArrayOfWorkflowInstance" />
+        <xs:element xmlns:q31="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q31:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TerminateWorkflowInstancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="TerminateWorkflowInstancesResult" type="xs:int" />
+        <xs:element xmlns:q32="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q32:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PromoteWorkflowInstances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="instanceCollection" nillable="true" type="q33:ArrayOfWorkflowInstance" />
+        <xs:element xmlns:q34="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q34:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PromoteWorkflowInstancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="PromoteWorkflowInstancesResult" type="xs:int" />
+        <xs:element xmlns:q35="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q35:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWorkflowInstances">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="instanceGUIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mdmObjectIDs" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mdmObjectType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowID" type="xs:int" />
+        <xs:element minOccurs="0" name="activityShortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="instanceStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q36="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q36:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWorkflowInstancesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateWorkflowInstancesResult" type="xs:boolean" />
+        <xs:element xmlns:q37="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q37:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindWorkflowInstanceInWorkflow">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="workflowId" type="xs:int" />
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObj" nillable="true" type="q38:WorkflowMDMObject" />
+        <xs:element xmlns:q39="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q39:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindWorkflowInstanceInWorkflowResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="FindWorkflowInstanceInWorkflowResult" nillable="true" type="q40:ArrayOfWorkflowInstance" />
+        <xs:element xmlns:q41="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q41:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindWorkflowInstance">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObj" nillable="true" type="q42:WorkflowMDMObject" />
+        <xs:element xmlns:q43="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q43:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindWorkflowInstanceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="FindWorkflowInstanceResult" nillable="true" type="q44:ArrayOfWorkflowInstance" />
+        <xs:element xmlns:q45="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q45:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllWorkflowDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowCollection" nillable="true" type="q46:ArrayOfWorkflow" />
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowVersionCollection" nillable="true" type="q47:ArrayOfWorkflowVersion" />
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowActivityCollection" nillable="true" type="q48:ArrayOfWorkflowActivity" />
+        <xs:element xmlns:q49="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q49:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllWorkflowDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowCollection" nillable="true" type="q50:ArrayOfWorkflow" />
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowVersionCollection" nillable="true" type="q51:ArrayOfWorkflowVersion" />
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowActivityCollection" nillable="true" type="q52:ArrayOfWorkflowActivity" />
+        <xs:element xmlns:q53="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q53:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstanceSummary">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="workflowType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowId" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowVersionId" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="activityShortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="roleIds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userIds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="instanceId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="mdmObjectIds" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="hasEscalation" nillable="true" type="xs:boolean" />
+        <xs:element minOccurs="0" name="returnSize" type="xs:int" />
+        <xs:element xmlns:q54="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q54:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstanceSummaryResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="GetInstanceSummaryResult" nillable="true" type="q55:ArrayOfWorkflowInstance" />
+        <xs:element xmlns:q56="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q56:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstanceDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="workflowType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="instanceId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="runningActivityCollection" nillable="true" type="q57:ArrayOfWorkflowActivity" />
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObjectCollection" nillable="true" type="q58:ArrayOfWorkflowMDMObject" />
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="escalationCollection" nillable="true" type="q59:ArrayOfEscalation" />
+        <xs:element xmlns:q60="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q60:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetInstanceDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="runningActivityCollection" nillable="true" type="q61:ArrayOfWorkflowActivity" />
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="mdmObjectCollection" nillable="true" type="q62:ArrayOfWorkflowMDMObject" />
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="escalationCollection" nillable="true" type="q63:ArrayOfEscalation" />
+        <xs:element xmlns:q64="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q64:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowStatistics">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="workflowType" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowId" type="xs:int" />
+        <xs:element minOccurs="0" name="workflowVersionId" type="xs:int" />
+        <xs:element xmlns:q65="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q65:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowStatisticsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetWorkflowStatisticsResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q66="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q66:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActionButtons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" type="xs:int" />
+        <xs:element minOccurs="0" name="toolBarButtonXML" nillable="true" type="xs:string" />
+        <xs:element xmlns:q67="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q67:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActionButtonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetActionButtonsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element xmlns:q68="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q68:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityActionButtons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" type="xs:int" />
+        <xs:element xmlns:q69="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q69:MDMCenterApplication" />
+        <xs:element xmlns:q70="http://mdmobjects.riversand.com/" minOccurs="0" name="module" type="q70:MDMCenterModules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetActivityActionButtonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://mdmobjects.riversand.com/" minOccurs="0" name="GetActivityActionButtonsResult" nillable="true" type="q71:Table" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignmentButtons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="activityId" type="xs:int" />
+        <xs:element minOccurs="0" name="assignmentStatus" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="toolBarButtonXML" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element xmlns:q72="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q72:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAssignmentButtonsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAssignmentButtonsResult" nillable="true">
+          <xs:complexType>
+            <xs:annotation>
+              <xs:appinfo>
+                <ActualType Name="DataTable" Namespace="http://schemas.datacontract.org/2004/07/System.Data" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+              </xs:appinfo>
+            </xs:annotation>
+            <xs:sequence>
+              <xs:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+              <xs:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element xmlns:q73="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q73:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEscalation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q74:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEscalationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="ProcessEscalationResult" nillable="true" type="q75:ArrayOfEscalation" />
+        <xs:element xmlns:q76="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q76:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessWorkflows">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflows" nillable="true" type="q77:ArrayOfWorkflow" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element xmlns:q78="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q78:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessWorkflowsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="ProcessWorkflowsResult" nillable="true" type="q79:WorkflowVersion" />
+        <xs:element xmlns:q80="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q80:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessActivities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowActivities" nillable="true" type="q81:ArrayOfWorkflowActivity" />
+        <xs:element minOccurs="0" name="loginUser" nillable="true" type="xs:string" />
+        <xs:element xmlns:q82="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q82:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessActivitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessActivitiesResult" type="xs:int" />
+        <xs:element xmlns:q83="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q83:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowViewDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="workflowVersionID" type="xs:int" />
+        <xs:element minOccurs="0" name="instanceGuid" nillable="true" type="xs:string" />
+        <xs:element xmlns:q84="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowVersion" nillable="true" type="q84:WorkflowVersion" />
+        <xs:element xmlns:q85="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="trackedActivityCollection" nillable="true" type="q85:ArrayOfActivityTracking" />
+        <xs:element xmlns:q86="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q86:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowViewDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q87="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="workflowVersion" nillable="true" type="q87:WorkflowVersion" />
+        <xs:element xmlns:q88="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" minOccurs="0" name="trackedActivityCollection" nillable="true" type="q88:ArrayOfActivityTracking" />
+        <xs:element xmlns:q89="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q89:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowPanelDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="catalogId" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element xmlns:q90="http://mdmobjects.riversand.com/" minOccurs="0" name="application" type="q90:MDMCenterApplication" />
+        <xs:element xmlns:q91="http://mdmobjects.riversand.com/" minOccurs="0" name="module" type="q91:MDMCenterModules" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWorkflowPanelDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q92="http://mdmobjects.riversand.com/" minOccurs="0" name="GetWorkflowPanelDetailsResult" nillable="true" type="q92:Table" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppConfigValue">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="keyName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q93="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q93:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAppConfigValueResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetAppConfigValueResult" nillable="true" type="xs:string" />
+        <xs:element xmlns:q94="http://mdmobjects.riversand.com/" minOccurs="0" name="operationResult" nillable="true" type="q94:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

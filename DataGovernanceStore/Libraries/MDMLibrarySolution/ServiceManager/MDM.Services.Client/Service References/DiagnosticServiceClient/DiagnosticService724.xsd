@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.Core" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/MDM7.8-FP0-HF_WCFServices/DiagnosticService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" />
+  <xs:import schemaLocation="http://localhost/MDM7.8-FP0-HF_WCFServices/DiagnosticService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/MDM7.8-FP0-HF_WCFServices/DiagnosticService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+  <xs:simpleType name="ApplicationDiagnosticType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DenormSpeed" />
+      <xs:enumeration value="PendingDenorm" />
+      <xs:enumeration value="ParallelProcessorStatus" />
+      <xs:enumeration value="CacheStatus" />
+      <xs:enumeration value="EntityStatus" />
+      <xs:enumeration value="ApplicationCheck" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ApplicationDiagnosticType" nillable="true" type="tns:ApplicationDiagnosticType" />
+  <xs:complexType name="TraceSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_isTracingEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="_tracingLevel" type="tns:TracingLevel" />
+      <xs:element minOccurs="0" name="_tracingMode" type="tns:TracingMode" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TraceSettings" nillable="true" type="tns:TraceSettings" />
+  <xs:simpleType name="TracingLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="Basic" />
+      <xs:enumeration value="Detail" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TracingLevel" nillable="true" type="tns:TracingLevel" />
+  <xs:simpleType name="TracingMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="None" />
+      <xs:enumeration value="OperationTracing" />
+      <xs:enumeration value="SelectiveComponentTracing" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="TracingMode" nillable="true" type="tns:TracingMode" />
+  <xs:simpleType name="SystemDiagnosticType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CPU" />
+      <xs:enumeration value="Memory" />
+      <xs:enumeration value="IO" />
+      <xs:enumeration value="Wait" />
+      <xs:enumeration value="Locks" />
+      <xs:enumeration value="Cache" />
+      <xs:enumeration value="Index" />
+      <xs:enumeration value="Statistics" />
+      <xs:enumeration value="Fulltext" />
+      <xs:enumeration value="Table" />
+      <xs:enumeration value="StoreProcedure" />
+      <xs:enumeration value="JobData" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SystemDiagnosticType" nillable="true" type="tns:SystemDiagnosticType" />
+  <xs:simpleType name="SystemDiagnosticSubType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SQLProcessorUtilization" />
+      <xs:enumeration value="CPUIntensiveQueries" />
+      <xs:enumeration value="AverageCPUConsumingQueries" />
+      <xs:enumeration value="MemoryInformation" />
+      <xs:enumeration value="MemoryGrantsPending" />
+      <xs:enumeration value="MemoryPressure" />
+      <xs:enumeration value="AVGIO" />
+      <xs:enumeration value="Health" />
+      <xs:enumeration value="IOPercent" />
+      <xs:enumeration value="IOQueries" />
+      <xs:enumeration value="Session" />
+      <xs:enumeration value="Blocks" />
+      <xs:enumeration value="HighLevel" />
+      <xs:enumeration value="CompiledPlan" />
+      <xs:enumeration value="CorruptedPlan" />
+      <xs:enumeration value="IndexUpdate" />
+      <xs:enumeration value="MissingIndex" />
+      <xs:enumeration value="UnusedIndex" />
+      <xs:enumeration value="UnusedIndexCommonlyUsedTables" />
+      <xs:enumeration value="PopulationDetails" />
+      <xs:enumeration value="Status" />
+      <xs:enumeration value="AllTableUsage" />
+      <xs:enumeration value="FrequentTableUsage" />
+      <xs:enumeration value="FrequentTableFramentation" />
+      <xs:enumeration value="TableSpace" />
+      <xs:enumeration value="LongRunning" />
+      <xs:enumeration value="IO" />
+      <xs:enumeration value="MostUsed" />
+      <xs:enumeration value="Schedule" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SystemDiagnosticSubType" nillable="true" type="tns:SystemDiagnosticSubType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeDiagnosticActivityXVjW9Azy">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="DiagnosticActivity" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfDiagnosticActivityGpsgvjAV">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeDiagnosticActivityXVjW9Azy" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeDiagnosticActivityXVjW9Azy" />
+  <xs:complexType name="ItemContractCollectionOfDiagnosticActivityGpsgvjAV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DiagnosticActivity" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="_items" nillable="true" type="q1:ArrayOfDiagnosticActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfDiagnosticActivityGpsgvjAV" nillable="true" type="tns:ItemContractCollectionOfDiagnosticActivityGpsgvjAV" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeDiagnosticRecordXVjW9Azy">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="DiagnosticRecord" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfDiagnosticRecordGpsgvjAV">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeDiagnosticRecordXVjW9Azy" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeDiagnosticRecordXVjW9Azy" />
+  <xs:complexType name="ItemContractCollectionOfDiagnosticRecordGpsgvjAV">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DiagnosticRecord" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" minOccurs="0" name="_items" nillable="true" type="q2:ArrayOfDiagnosticRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfDiagnosticRecordGpsgvjAV" nillable="true" type="tns:ItemContractCollectionOfDiagnosticRecordGpsgvjAV" />
+  <xs:simpleType name="MessageClassEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UnKnown" />
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="Warning" />
+      <xs:enumeration value="Information" />
+      <xs:enumeration value="StaticText" />
+      <xs:enumeration value="TimeSpan" />
+      <xs:enumeration value="ActivityStart" />
+      <xs:enumeration value="ActivityStop" />
+      <xs:enumeration value="Verbose" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="MessageClassEnum" nillable="true" type="tns:MessageClassEnum" />
+  <xs:complexType name="ArrayOfMessageClassEnum">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MessageClassEnum" type="tns:MessageClassEnum" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMessageClassEnum" nillable="true" type="tns:ArrayOfMessageClassEnum" />
+  <xs:simpleType name="DiagnosticRelativeDataType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MessageData">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ContextData">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DiagnosticRelativeDataType" nillable="true" type="tns:DiagnosticRelativeDataType" />
+  <xs:complexType name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="InterfaceContractCollectionOf{0}{1}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="anyType" Namespace="http://www.w3.org/2001/XMLSchema" />
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ItemContractCollectionOfNormalizationResultADdI0yA3">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" nillable="true" type="tns:InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6" />
+  <xs:complexType name="ItemContractCollectionOfNormalizationResultADdI0yA3">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="ItemContractCollectionOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/MDM.Core" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="NormalizationResult" Namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" minOccurs="0" name="_items" nillable="true" type="q3:ArrayOfNormalizationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ItemContractCollectionOfNormalizationResultADdI0yA3" nillable="true" type="tns:ItemContractCollectionOfNormalizationResultADdI0yA3" />
+  <xs:simpleType name="DiagnosticToolsReportType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+      <xs:enumeration value="SecurityIntegrityCheck" />
+      <xs:enumeration value="EntityIntegrityCheck" />
+      <xs:enumeration value="EntityAttributeIntegrityCheck" />
+      <xs:enumeration value="EntityRelationshipIntegrityCheck" />
+      <xs:enumeration value="CategoryAttributeIntegrityCheck" />
+      <xs:enumeration value="EntityCompare" />
+      <xs:enumeration value="DenormIntegrityCheck" />
+      <xs:enumeration value="CoreDenormCompare" />
+      <xs:enumeration value="ApplicationDashBoard" />
+      <xs:enumeration value="DataModelIntegrityCheck" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DiagnosticToolsReportType" nillable="true" type="tns:DiagnosticToolsReportType" />
+  <xs:simpleType name="DiagnosticToolsReportSubType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unknown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DiagnosticToolsReportSubType" nillable="true" type="tns:DiagnosticToolsReportSubType" />
+  <xs:simpleType name="ExecutionStepType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Core" />
+      <xs:enumeration value="Custom" />
+      <xs:enumeration value="UnKnown" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ExecutionStepType" nillable="true" type="tns:ExecutionStepType" />
+</xs:schema>

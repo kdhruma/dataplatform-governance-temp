@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DenormService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DenormService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DenormService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/DenormService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Denorm" />
+  <xs:element name="GetEntityActivityLogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://mdmobjects.riversand.com/" minOccurs="0" name="processingStatus" type="q1:ProcessingStatus" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q2:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityActivityLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="GetEntityActivityLogsResult" nillable="true" type="q3:EntityActivityLogCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityActivityLogsWithPagination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="processingStatus" type="q4:ProcessingStatus" />
+        <xs:element minOccurs="0" name="fromRecordNumber" type="xs:long" />
+        <xs:element minOccurs="0" name="toRecordNumber" type="xs:long" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q5:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityActivityLogsWithPaginationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="GetEntityActivityLogsWithPaginationResult" nillable="true" type="q6:EntityActivityLogCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImpactedEntitiesByEntityActivityLogId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityActivityLogId" type="xs:long" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q7:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImpactedEntitiesByEntityActivityLogIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="GetImpactedEntitiesByEntityActivityLogIdResult" nillable="true" type="q8:ImpactedEntityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImpactedEntitiesByEntityActivityLogIdWithPagination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityActivityLogId" type="xs:long" />
+        <xs:element minOccurs="0" name="fromRecordNumber" type="xs:long" />
+        <xs:element minOccurs="0" name="toRecordNumber" type="xs:long" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q9:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImpactedEntitiesByEntityActivityLogIdWithPaginationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://mdmobjects.riversand.com/" minOccurs="0" name="GetImpactedEntitiesByEntityActivityLogIdWithPaginationResult" nillable="true" type="q10:ImpactedEntityCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadImpactedEntities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://mdmobjects.riversand.com/" minOccurs="0" name="entityActivityLogCollection" nillable="true" type="q11:EntityActivityLogCollection" />
+        <xs:element xmlns:q12="http://mdmobjects.riversand.com/" minOccurs="0" name="impactType" type="q12:ImpactType" />
+        <xs:element minOccurs="0" name="programName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q13:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadImpactedEntitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoadImpactedEntitiesResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityProcessorErrorLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIdList" nillable="true" type="q14:ArrayOflong" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q15:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityProcessorErrorLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Denorm" minOccurs="0" name="GetEntityProcessorErrorLogResult" nillable="true" type="q16:EntityProcessorErrorLogCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityProcessorErrorLogWithPagination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="entityIdList" nillable="true" type="q17:ArrayOflong" />
+        <xs:element minOccurs="0" name="fromRecordNumber" type="xs:long" />
+        <xs:element minOccurs="0" name="toRecordNumber" type="xs:long" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q18:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetEntityProcessorErrorLogWithPaginationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Denorm" minOccurs="0" name="GetEntityProcessorErrorLogWithPaginationResult" nillable="true" type="q19:EntityProcessorErrorLogCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntityProcessorErrorLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q20:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntityProcessorErrorLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Denorm" minOccurs="0" name="GetAllEntityProcessorErrorLogResult" nillable="true" type="q21:EntityProcessorErrorLogCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntityProcessorErrorLogWithPagination">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="fromRecordNumber" type="xs:long" />
+        <xs:element minOccurs="0" name="toRecordNumber" type="xs:long" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q22:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllEntityProcessorErrorLogWithPaginationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Denorm" minOccurs="0" name="GetAllEntityProcessorErrorLogWithPaginationResult" nillable="true" type="q23:EntityProcessorErrorLogCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshEntityProcessorErrorLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="impactedEntityId" type="xs:long" />
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+        <xs:element minOccurs="0" name="processorName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="entityActivityLogId" type="xs:long" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q24:CallerContext" />
+        <xs:element xmlns:q25="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="impactedAttributeIdList" nillable="true" type="q25:ArrayOfint" />
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="impactedLocaleIdList" nillable="true" type="q26:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RefreshEntityProcessorErrorLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RefreshEntityProcessorErrorLogResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEntityActivityLogs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://mdmobjects.riversand.com/" minOccurs="0" name="entityActivityLogCollection" nillable="true" type="q27:EntityActivityLogCollection" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q28:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessEntityActivityLogsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessEntityActivityLogsResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParallelizationEngineStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetParallelizationEngineStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://mdmobjects.riversand.com/" minOccurs="0" name="GetParallelizationEngineStatusResult" nillable="true" type="q29:ParallelizationEngineStatus" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartParallelProcessingEngine">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartParallelProcessingEngineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartParallelProcessingEngineResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopParallelProcessingEngine">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopParallelProcessingEngineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StopParallelProcessingEngineResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RestartParallelProcessingEngine">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RestartParallelProcessingEngineResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RestartParallelProcessingEngineResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RestartProcessor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="dataProcessor" type="q30:CoreDataProcessorList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="RestartProcessorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="RestartProcessorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartProcessor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://mdmobjects.riversand.com/" minOccurs="0" name="dataProcessor" type="q31:CoreDataProcessorList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StartProcessorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StartProcessorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopProcessor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://mdmobjects.riversand.com/" minOccurs="0" name="dataProcessor" type="q32:CoreDataProcessorList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="StopProcessorResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="StopProcessorResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q33:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServiceStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://mdmobjects.riversand.com/" minOccurs="0" name="GetServiceStatusResult" nillable="true" type="q34:ServiceStatusCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessServiceStatus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="serverName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q35="http://mdmobjects.riversand.com/" minOccurs="0" name="service" type="q35:MDMServiceType" />
+        <xs:element xmlns:q36="http://mdmobjects.riversand.com/" minOccurs="0" name="serviceSubType" type="q36:MDMServiceSubType" />
+        <xs:element minOccurs="0" name="serviceStatusXml" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="serviceConfigXml" nillable="true" type="xs:string" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q37:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessServiceStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessServiceStatusResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

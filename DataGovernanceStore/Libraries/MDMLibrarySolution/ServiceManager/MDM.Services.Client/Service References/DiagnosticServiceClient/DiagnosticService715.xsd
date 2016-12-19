@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Diagnostics" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Mainline_WCFServices/DiagnosticService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:import schemaLocation="http://localhost/Mainline_WCFServices/DiagnosticService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost/Mainline_WCFServices/DiagnosticService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:import schemaLocation="http://localhost/Mainline_WCFServices/DiagnosticService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Mainline_WCFServices/DiagnosticService.svc?xsd=xsd4" namespace="http://mdmobjects.riversand.com/" />
+  <xs:complexType name="DiagnosticActivityCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/MDM.Core" base="q1:InterfaceContractCollectionOfanyTypeDiagnosticActivityXVjW9Azy">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DiagnosticActivityCollection" nillable="true" type="tns:DiagnosticActivityCollection" />
+  <xs:complexType name="ArrayOfDiagnosticActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiagnosticActivity" nillable="true" type="tns:DiagnosticActivity" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiagnosticActivity" nillable="true" type="tns:ArrayOfDiagnosticActivity" />
+  <xs:complexType name="DiagnosticActivity">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="_activityId" type="ser:guid" />
+      <xs:element minOccurs="0" name="_activityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="_currentSequenceNumber" type="xs:long" />
+      <xs:element minOccurs="0" name="_diagnosticActivities" nillable="true" type="tns:DiagnosticActivityCollection" />
+      <xs:element minOccurs="0" name="_diagnosticRecords" nillable="true" type="tns:DiagnosticRecordCollection" />
+      <xs:element minOccurs="0" name="_durationInMilliseconds" type="xs:double" />
+      <xs:element minOccurs="0" name="_endDateTime" type="xs:dateTime" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="_executionContext" nillable="true" type="q2:ExecutionContext" />
+      <xs:element minOccurs="0" name="_executionContextId" type="xs:long" />
+      <xs:element minOccurs="0" name="_id" type="xs:long" />
+      <xs:element minOccurs="0" name="_operationId" type="ser:guid" />
+      <xs:element minOccurs="0" name="_parentActivityId" type="ser:guid" />
+      <xs:element minOccurs="0" name="_referenceId" type="xs:long" />
+      <xs:element minOccurs="0" name="_startDateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="_threadId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiagnosticActivity" nillable="true" type="tns:DiagnosticActivity" />
+  <xs:complexType name="DiagnosticRecordCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.Core" base="q3:InterfaceContractCollectionOfanyTypeDiagnosticRecordXVjW9Azy">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DiagnosticRecordCollection" nillable="true" type="tns:DiagnosticRecordCollection" />
+  <xs:complexType name="ArrayOfDiagnosticRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DiagnosticRecord" nillable="true" type="tns:DiagnosticRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDiagnosticRecord" nillable="true" type="tns:ArrayOfDiagnosticRecord" />
+  <xs:complexType name="DiagnosticRecord">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://mdmobjects.riversand.com/" base="q4:ObjectBase">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="_activityId" type="ser:guid" />
+          <xs:element minOccurs="0" name="_dataXml" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="_durationInMilliseconds" type="xs:double" />
+          <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="_executionContext" nillable="true" type="q5:ExecutionContext" />
+          <xs:element minOccurs="0" name="_executionContextId" type="xs:long" />
+          <xs:element minOccurs="0" name="_id" type="xs:long" />
+          <xs:element minOccurs="0" name="_message" nillable="true" type="xs:string" />
+          <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="_messageClass" type="q6:MessageClassEnum" />
+          <xs:element minOccurs="0" name="_messageCode" nillable="true" type="xs:string" />
+          <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="_messageParameters" nillable="true" type="q7:ArrayOfstring" />
+          <xs:element minOccurs="0" name="_operationId" type="ser:guid" />
+          <xs:element minOccurs="0" name="_referenceId" type="xs:long" />
+          <xs:element minOccurs="0" name="_threadId" type="xs:int" />
+          <xs:element minOccurs="0" name="_threadNumber" type="xs:int" />
+          <xs:element minOccurs="0" name="_timeStamp" type="xs:dateTime" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DiagnosticRecord" nillable="true" type="tns:DiagnosticRecord" />
+  <xs:complexType name="DiagnosticDataContext">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataRequestType" type="xs:int" />
+      <xs:element minOccurs="0" name="Duration" type="xs:int" />
+      <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="DurationOperator" type="q8:SearchOperator" />
+      <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="ExecutionContext" nillable="true" type="q9:ExecutionContext" />
+      <xs:element minOccurs="0" name="IncludeData" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IncludeDataRow" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Level" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxRecordsToReturn" type="xs:int" />
+      <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MDM.Core" minOccurs="0" name="MessageClasses" nillable="true" type="q10:ArrayOfMessageClassEnum" />
+      <xs:element minOccurs="0" name="SearchColumn" type="tns:SearchColumn" />
+      <xs:element minOccurs="0" name="SearchKeyword" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DiagnosticDataContext" nillable="true" type="tns:DiagnosticDataContext" />
+  <xs:simpleType name="SearchColumn">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="All" />
+      <xs:enumeration value="Activity" />
+      <xs:enumeration value="ThreadId" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="SearchColumn" nillable="true" type="tns:SearchColumn" />
+</xs:schema>

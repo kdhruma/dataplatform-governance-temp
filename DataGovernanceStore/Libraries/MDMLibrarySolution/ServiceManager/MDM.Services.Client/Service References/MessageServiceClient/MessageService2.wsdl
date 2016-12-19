@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MessageService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/Development_WCFServices/MessageService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd4" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/System.Net.Mail" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd5" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DataModel" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.Workflow" />
+      <xsd:import schemaLocation="http://localhost/Development_WCFServices/MessageService.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMessageService_CreateMessageUsingSmartTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessageUsingSmartTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessageUsingSmartTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessageUsingSmartTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessageUsingSmartTypes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessageUsingBasicTypes_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessageUsingBasicTypes" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessageUsingBasicTypes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessageUsingBasicTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessageUsingBasicTypes_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessage" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMessageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_CreateMessage_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://mdmobjects.riversand.com/" name="detail" element="q5:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://mdmobjects.riversand.com/" name="detail" element="q6:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://mdmobjects.riversand.com/" name="detail" element="q7:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://mdmobjects.riversand.com/" name="detail" element="q8:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://mdmobjects.riversand.com/" name="detail" element="q9:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://mdmobjects.riversand.com/" name="detail" element="q10:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLoginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://mdmobjects.riversand.com/" name="detail" element="q11:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://mdmobjects.riversand.com/" name="detail" element="q12:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://mdmobjects.riversand.com/" name="detail" element="q13:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://mdmobjects.riversand.com/" name="detail" element="q14:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLoginsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://mdmobjects.riversand.com/" name="detail" element="q15:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowInstances_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowInstances" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowInstances_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByWorkflowInstancesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByWorkflowInstances_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://mdmobjects.riversand.com/" name="detail" element="q16:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByInstanceIdList_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByInstanceIdList" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByInstanceIdList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByInstanceIdListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByInstanceIdList_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://mdmobjects.riversand.com/" name="detail" element="q17:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByEscalationCollection_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByEscalationCollection" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByEscalationCollection_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendWorkflowMessagesByEscalationCollectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendWorkflowMessagesByEscalationCollection_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://mdmobjects.riversand.com/" name="detail" element="q18:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetails_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://mdmobjects.riversand.com/" name="detail" element="q19:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingMailContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetailsUsingMailContext" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingMailContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetailsUsingMailContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingMailContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://mdmobjects.riversand.com/" name="detail" element="q20:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendGenericMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendGenericMail" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendGenericMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendGenericMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendGenericMail_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://mdmobjects.riversand.com/" name="detail" element="q21:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMail" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMail_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://mdmobjects.riversand.com/" name="detail" element="q22:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithContext" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://mdmobjects.riversand.com/" name="detail" element="q23:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingBRContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetailsUsingBRContext" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingBRContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetailsUsingBRContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingBRContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://mdmobjects.riversand.com/" name="detail" element="q24:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingBRContextAndMailContext_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetailsUsingBRContextAndMailContext" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingBRContextAndMailContext_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendMailWithWorkflowDetailsUsingBRContextAndMailContextResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMessageService_SendMailWithWorkflowDetailsUsingBRContextAndMailContext_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://mdmobjects.riversand.com/" name="detail" element="q25:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IMessageService">
+    <wsdl:operation name="CreateMessageUsingSmartTypes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageUsingSmartTypes" message="tns:IMessageService_CreateMessageUsingSmartTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageUsingSmartTypesResponse" message="tns:IMessageService_CreateMessageUsingSmartTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageUsingSmartTypesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_CreateMessageUsingSmartTypes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMessageUsingBasicTypes">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageUsingBasicTypes" message="tns:IMessageService_CreateMessageUsingBasicTypes_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageUsingBasicTypesResponse" message="tns:IMessageService_CreateMessageUsingBasicTypes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageUsingBasicTypesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_CreateMessageUsingBasicTypes_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMessage">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessage" message="tns:IMessageService_CreateMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageResponse" message="tns:IMessageService_CreateMessage_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/CreateMessageMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_CreateMessage_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUserResponse" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToSingleUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsersResponse" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFIDToMultipleUsers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUserResponse" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUserMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToSingleUser_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsersResponse" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsersMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByWorkflowMDMObjectAndWFVersionToMultipleUsers_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserIDResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserIDMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserID_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDsResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserIDs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLoginResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLoginMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToSingleUserLogin_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLoginsResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLoginsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFIDToMultipleUserLogins_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserIDResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserIDMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserID_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDsResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserIDs_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLoginResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLoginMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToSingleUserLogin_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLoginsResponse" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLoginsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByMDMObjectIdListAndWFVersionToMultipleUserLogins_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByWorkflowInstances">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowInstances" message="tns:IMessageService_SendWorkflowMessagesByWorkflowInstances_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowInstancesResponse" message="tns:IMessageService_SendWorkflowMessagesByWorkflowInstances_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByWorkflowInstancesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByWorkflowInstances_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByInstanceIdList">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByInstanceIdList" message="tns:IMessageService_SendWorkflowMessagesByInstanceIdList_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByInstanceIdListResponse" message="tns:IMessageService_SendWorkflowMessagesByInstanceIdList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByInstanceIdListMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByInstanceIdList_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendWorkflowMessagesByEscalationCollection">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByEscalationCollection" message="tns:IMessageService_SendWorkflowMessagesByEscalationCollection_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByEscalationCollectionResponse" message="tns:IMessageService_SendWorkflowMessagesByEscalationCollection_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendWorkflowMessagesByEscalationCollectionMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendWorkflowMessagesByEscalationCollection_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithWorkflowDetails">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetails" message="tns:IMessageService_SendMailWithWorkflowDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsResponse" message="tns:IMessageService_SendMailWithWorkflowDetails_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendMailWithWorkflowDetails_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithWorkflowDetailsUsingMailContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingMailContext" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingMailContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingMailContextResponse" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingMailContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingMailContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingMailContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendGenericMail">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendGenericMail" message="tns:IMessageService_SendGenericMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendGenericMailResponse" message="tns:IMessageService_SendGenericMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendGenericMailMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendGenericMail_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMail" message="tns:IMessageService_SendMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailResponse" message="tns:IMessageService_SendMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendMail_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithContext" message="tns:IMessageService_SendMailWithContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithContextResponse" message="tns:IMessageService_SendMailWithContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendMailWithContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithWorkflowDetailsUsingBRContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingBRContext" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingBRContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingBRContextResponse" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingBRContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingBRContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingBRContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMailWithWorkflowDetailsUsingBRContextAndMailContext">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingBRContextAndMailContext" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingBRContextAndMailContext_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingBRContextAndMailContextResponse" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingBRContextAndMailContext_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IMessageService/SendMailWithWorkflowDetailsUsingBRContextAndMailContextMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IMessageService_SendMailWithWorkflowDetailsUsingBRContextAndMailContext_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="MessageService">
+    <wsdl:port name="WSHttpBinding_IMessageService" binding="i0:WSHttpBinding_IMessageService">
+      <soap12:address location="http://localhost/Development_WCFServices/MessageService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/Development_WCFServices/MessageService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IMessageService" binding="i0:NetTcpBinding_IMessageService">
+      <soap12:address location="net.tcp://tista.riversand.com/Development_WCFServices/MessageService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://tista.riversand.com/Development_WCFServices/MessageService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

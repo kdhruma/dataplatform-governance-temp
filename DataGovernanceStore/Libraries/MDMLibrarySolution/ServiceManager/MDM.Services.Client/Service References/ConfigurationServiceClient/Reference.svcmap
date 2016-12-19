@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="07d6d775-a588-4b25-bd48-d901e4bce6f9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.Collection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/Development_WCFServices/ConfigurationService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ConfigurationService11.xsd" MetadataType="Schema" ID="9909dd4c-3dff-4528-acb5-3af1c402cd3e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ConfigurationService12.xsd" MetadataType="Schema" ID="08181acd-52e5-414d-b4a4-2e03ed2fcfb6" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ConfigurationService4.wsdl" MetadataType="Wsdl" ID="8c291667-6e61-460c-9d83-7efd42b07ba3" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?wsdl" />
+    <MetadataFile FileName="ConfigurationService13.xsd" MetadataType="Schema" ID="533682fc-e991-40da-86d0-6c93290f6872" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ConfigurationService14.xsd" MetadataType="Schema" ID="1303591d-75df-45ef-aa17-1459595d8f3e" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd7" />
+    <MetadataFile FileName="ConfigurationService15.xsd" MetadataType="Schema" ID="500dda65-d38d-4256-9d0b-ec871e4cb3f9" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ConfigurationService16.xsd" MetadataType="Schema" ID="76f0596d-0d4f-496d-b48c-e05828a8b872" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ConfigurationService17.xsd" MetadataType="Schema" ID="2710579f-cedb-4f1b-9601-1f8774f0a51f" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ConfigurationService18.xsd" MetadataType="Schema" ID="5e7ce31b-8c07-4b9d-9124-e0eec38d8cd7" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ConfigurationService5.wsdl" MetadataType="Wsdl" ID="8b5078fb-e3ef-4b2c-ab88-456031d5cbfb" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ConfigurationService2.disco" MetadataType="Disco" ID="be0ad95f-b36c-43f1-bbdd-371180f09567" SourceId="1" SourceUrl="http://localhost/Development_WCFServices/ConfigurationService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

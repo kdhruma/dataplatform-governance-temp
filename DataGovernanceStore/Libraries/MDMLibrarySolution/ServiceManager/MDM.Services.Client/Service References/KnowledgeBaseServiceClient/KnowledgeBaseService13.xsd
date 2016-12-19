@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/KnowledgeBaseService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:element name="GetLocale">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="localeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocaleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://mdmobjects.riversand.com/" minOccurs="0" name="GetLocaleResult" nillable="true" type="q1:Locale" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableLocales">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAvailableLocalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAvailableLocalesResult" nillable="true" type="q2:LocaleCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLocales">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLocalesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllLocalesResult" nillable="true" type="q3:LocaleCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalesByContainer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="containerId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLocalesByContainerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="GetLocalesByContainerResult" nillable="true" type="q4:LocaleCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLookupTableNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q5:CallerContext" />
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="lookupContext" nillable="true" type="q6:LookupContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllLookupTableNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAllLookupTableNamesResult" nillable="true" type="q7:ArrayOfstring" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllWordLists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q8:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllWordListsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllWordListsResult" nillable="true" type="q9:WordListsCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordListById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="wordListId" type="xs:int" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q10:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordListByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://mdmobjects.riversand.com/" minOccurs="0" name="GetWordListByIdResult" nillable="true" type="q11:WordList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordListByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="wordListName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q12:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordListByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://mdmobjects.riversand.com/" minOccurs="0" name="GetWordListByNameResult" nillable="true" type="q13:WordList" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateWordList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="wordList" nillable="true" type="q14:WordList" />
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q15:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateWordListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateWordListResult" nillable="true" type="q16:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWordList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://mdmobjects.riversand.com/" minOccurs="0" name="wordList" nillable="true" type="q17:WordList" />
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q18:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateWordListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateWordListResult" nillable="true" type="q19:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWordList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://mdmobjects.riversand.com/" minOccurs="0" name="wordList" nillable="true" type="q20:WordList" />
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q21:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteWordListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteWordListResult" nillable="true" type="q22:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessWordLists">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://mdmobjects.riversand.com/" minOccurs="0" name="wordLists" nillable="true" type="q23:WordListsCollection" />
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q24:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessWordListsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessWordListsResult" nillable="true" type="q25:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordElements">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://mdmobjects.riversand.com/" minOccurs="0" name="pagingCriteria" nillable="true" type="q26:WordElementReportSettings" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q27:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetWordElementsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="GetWordElementsResult" nillable="true" type="q28:WordElementsCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckWordlistForDuplicateSubstitute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="wordlistId" type="xs:int" />
+        <xs:element minOccurs="0" name="substitute" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ignoreCase" type="xs:boolean" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects" minOccurs="0" name="callerContext" nillable="true" type="q29:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckWordlistForDuplicateSubstituteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="CheckWordlistForDuplicateSubstituteResult" nillable="true" type="q30:WordElement" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

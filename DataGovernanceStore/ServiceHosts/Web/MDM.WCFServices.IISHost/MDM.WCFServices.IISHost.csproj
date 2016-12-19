@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{584B44F5-EB29-482A-BFB7-F508D1BFAA0C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.WCFServices</RootNamespace>
+    <AssemblyName>RS.MDM.WCFServices.IISHost</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CommonServiceLocator.StructureMapAdapter.Unofficial">
+      <HintPath>..\..\..\3rd Party\StructureMap\CommonServiceLocator.StructureMapAdapter.Unofficial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\..\..\3rd Party\Microsoft\EnterpriseLibraries\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="StructureMap">
+      <HintPath>..\..\..\3rd Party\StructureMap\StructureMap.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap.Net4">
+      <HintPath>..\..\..\3rd Party\StructureMap\StructureMap.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities.Core.Presentation" />
+    <Reference Include="System.Activities.Presentation" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel.Activation" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\ExternalPlugins.xml" />
+    <Content Include="ConfigurationService.svc" />
+    <Content Include="JigsawIntegrationService.svc" />
+    <Content Include="DiagnosticService.svc" />
+    <Content Include="InteropConfigurationService.svc" />
+    <Content Include="InternalCommonService.svc" />
+    <Content Include="InteropDataModelService.svc" />
+    <Content Include="InteropEntityService.svc" />
+    <Content Include="InteropSecurityService.svc" />
+    <Content Include="LegacyDataAccessService.svc" />
+    <Content Include="DenormService.svc" />
+    <Content Include="EntityExportService.svc" />
+    <Content Include="IntegrationService.svc" />
+    <Content Include="WorkflowRestService.svc" />
+    <Content Include="SecurityService.svc" />
+    <Content Include="KnowledgeBaseService.svc" />
+    <Content Include="CoreService.svc" />
+    <Content Include="DataModelService.svc" />
+    <Content Include="MessageService.svc" />
+    <Content Include="AuthenticationService.svc" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="WorkflowDesignerService.svc" />
+    <Content Include="WorkflowService.svc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Content Include="App_Code\AppInitializer.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\AdminManager\MDM.AdminManager.Business\MDM.AdminManager.Business.csproj">
+      <Project>{8f148d32-8428-405b-ad0f-e8aa554d6564}</Project>
+      <Name>MDM.AdminManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\ConfigurationManager\MDM.ConfigurationManager.Business\MDM.ConfigurationManager.Business.csproj">
+      <Project>{D8B5C77D-FFF9-4B31-814A-AC12DDEAC98C}</Project>
+      <Name>MDM.ConfigurationManager.Business</Name>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\DiagnosticManager\MDM.DiagnosticManager.TraceListeners\MDM.DiagnosticManager.TraceListeners.csproj">
+      <Project>{441510dd-a458-419e-bc04-109ea5a87f1b}</Project>
+      <Name>MDM.DiagnosticManager.TraceListeners</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\EntityManager\MDM.EntityManager.Business\MDM.EntityManager.Business.csproj">
+      <Project>{a796d6e2-bc0b-441b-9703-eb2204552536}</Project>
+      <Name>MDM.EntityManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\Interfaces\MDM.DataProviderInterfaces\MDM.DataProviderInterfaces.csproj">
+      <Project>{8ab47cc5-a143-4341-ba1d-36030833460a}</Project>
+      <Name>MDM.DataProviderInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776BE6C-5371-41E2-B444-3C42377CC9CA}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\OperationContextManager\MDM.OperationContextManager.Business\MDM.OperationContextManager.Business.csproj">
+      <Project>{2b0d6267-080c-493a-89e6-d90e4f4eecc0}</Project>
+      <Name>MDM.OperationContextManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\ServiceManager\MDM.WCFServiceInterfaces\MDM.WCFServiceInterfaces.csproj">
+      <Project>{88C67D80-DDC8-4228-8C98-428E435036D3}</Project>
+      <Name>MDM.WCFServiceInterfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\ServiceManager\MDM.WCFServices\MDM.WCFServices.csproj">
+      <Project>{D477A2F7-F17A-4073-ABB8-0C5C2DFDD2E8}</Project>
+      <Name>MDM.WCFServices</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMLibrarySolution\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMWorkflowSolution\EntityWorkflowManager\MDM.EntityWorkflowManager.Business\MDM.EntityWorkflowManager.Business.csproj">
+      <Project>{4d42272d-3cd4-478a-b699-e4e3ca2fdb8c}</Project>
+      <Name>MDM.EntityWorkflowManager.Business %28200-Engines\220-WorkflowEngine\MDM.EntityWorkflowManager.Business%29</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMWorkflowSolution\WorkflowActivitiesLibrary\MDM.Workflow.Activities.Core\MDM.Workflow.Activities.Core.csproj">
+      <Project>{BFEA6044-5C4D-472D-BC43-415BB5D61353}</Project>
+      <Name>MDM.Workflow.Activities.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMWorkflowSolution\WorkflowActivitiesLibrary\MDM.Workflow.Activities.Entity\MDM.Workflow.Activities.Entity.csproj">
+      <Project>{2B0AC7BE-0784-4D3A-969F-5B999C5A713F}</Project>
+      <Name>MDM.Workflow.Activities.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Libraries\MDMWorkflowSolution\WorkflowActivitiesLibrary\MDM.Workflow.Activities.IntegrationService\MDM.Workflow.Activities.IntegrationService.csproj">
+      <Project>{b4f4b21e-05b3-445d-9804-2b94d7e5a7fc}</Project>
+      <Name>MDM.Workflow.Activities.IntegrationService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataService.svc" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\" />
+    <Folder Include="Connectors\bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LocalAppSettings.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="PostBuild.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>7470</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/MDMCenterLite_WCFServices</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>::Copy common/shared configs from bin to project dir
+::These configs are copied from ConfigurationManager
+::"$(ProjectDir)"PostBuild.bat "$(ProjectDir)" "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+</Project>

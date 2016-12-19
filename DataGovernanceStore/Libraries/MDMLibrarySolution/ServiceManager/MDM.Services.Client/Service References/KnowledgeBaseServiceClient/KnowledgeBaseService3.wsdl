@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://wcfservices.riversand.com" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:i0="http://tempuri.org/" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="KnowledgeBaseService" targetNamespace="http://wcfservices.riversand.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:import namespace="http://tempuri.org/" location="http://localhost/MainLine_WCFServices/KnowledgeBaseService.svc?wsdl=wsdl0" />
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://wcfservices.riversand.com/Imports">
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/KnowledgeBaseService.svc?xsd=xsd0" namespace="http://wcfservices.riversand.com" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/KnowledgeBaseService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/KnowledgeBaseService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/MainLine_WCFServices/KnowledgeBaseService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IKnowledgeBaseService_GetLocale_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocale" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetLocale_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocaleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetLocale_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://mdmobjects.riversand.com/" name="detail" element="q1:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAvailableLocales_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableLocales" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAvailableLocales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAvailableLocalesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAvailableLocales_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://mdmobjects.riversand.com/" name="detail" element="q2:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetByOrg_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetByOrg" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetByOrg_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetByOrgResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetByOrg_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://mdmobjects.riversand.com/" name="detail" element="q3:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLookupTableNames_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLookupTableNames" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLookupTableNames_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllLookupTableNamesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnowledgeBaseService_GetAllLookupTableNames_MDMExceptionDetailsFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://mdmobjects.riversand.com/" name="detail" element="q4:MDMExceptionDetails" />
+  </wsdl:message>
+  <wsdl:portType name="IKnowledgeBaseService">
+    <wsdl:operation name="GetLocale">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocale" message="tns:IKnowledgeBaseService_GetLocale_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocaleResponse" message="tns:IKnowledgeBaseService_GetLocale_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetLocaleMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetLocale_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAvailableLocales">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAvailableLocales" message="tns:IKnowledgeBaseService_GetAvailableLocales_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAvailableLocalesResponse" message="tns:IKnowledgeBaseService_GetAvailableLocales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAvailableLocalesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetAvailableLocales_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetByOrg">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetByOrg" message="tns:IKnowledgeBaseService_GetByOrg_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetByOrgResponse" message="tns:IKnowledgeBaseService_GetByOrg_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetByOrgMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetByOrg_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllLookupTableNames">
+      <wsdl:input wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLookupTableNames" message="tns:IKnowledgeBaseService_GetAllLookupTableNames_InputMessage" />
+      <wsdl:output wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLookupTableNamesResponse" message="tns:IKnowledgeBaseService_GetAllLookupTableNames_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://wcfservices.riversand.com/IKnowledgeBaseService/GetAllLookupTableNamesMDMExceptionDetailsFault" name="MDMExceptionDetailsFault" message="tns:IKnowledgeBaseService_GetAllLookupTableNames_MDMExceptionDetailsFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="KnowledgeBaseService">
+    <wsdl:port name="WSHttpBinding_IKnowledgeBaseService" binding="i0:WSHttpBinding_IKnowledgeBaseService">
+      <soap12:address location="http://localhost/MainLine_WCFServices/KnowledgeBaseService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/MainLine_WCFServices/KnowledgeBaseService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+    <wsdl:port name="NetTcpBinding_IKnowledgeBaseService" binding="i0:NetTcpBinding_IKnowledgeBaseService">
+      <soap12:address location="net.tcp://om.riversand.com/MainLine_WCFServices/KnowledgeBaseService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>net.tcp://om.riversand.com/MainLine_WCFServices/KnowledgeBaseService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Spn>host/localhost</Spn>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

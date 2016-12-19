@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Administration" xml:space="preserve">
+    <value>Administration</value>
+  </data>
+  <data name="Advanced Search" xml:space="preserve">
+    <value>Advanced Search</value>
+  </data>
+  <data name="Aggregation" xml:space="preserve">
+    <value>Aggregation</value>
+  </data>
+  <data name="API" xml:space="preserve">
+    <value>API</value>
+  </data>
+  <data name="API Delta" xml:space="preserve">
+    <value>API Delta</value>
+  </data>
+  <data name="Approver Configuration" xml:space="preserve">
+    <value>Approver Configuration</value>
+  </data>
+  <data name="Assign Tasks" xml:space="preserve">
+    <value>Assign Tasks</value>
+  </data>
+  <data name="Attribute Generator" xml:space="preserve">
+    <value>Attribute Generator</value>
+  </data>
+  <data name="Attributes" xml:space="preserve">
+    <value>Attributes</value>
+  </data>
+  <data name="Auto Classification" xml:space="preserve">
+    <value>Auto Classification</value>
+  </data>
+  <data name="Browse Catalog" xml:space="preserve">
+    <value>Browse Catalog</value>
+  </data>
+  <data name="Browse Contracts" xml:space="preserve">
+    <value>Browse Contracts</value>
+  </data>
+  <data name="Bulk Edit" xml:space="preserve">
+    <value>Bulk Edit</value>
+  </data>
+  <data name="Bulk Simulation" xml:space="preserve">
+    <value>Bulk Simulation</value>
+  </data>
+  <data name="Catalog" xml:space="preserve">
+    <value>Catalog</value>
+  </data>
+  <data name="Catalog Profile" xml:space="preserve">
+    <value>Catalog Profile</value>
+  </data>
+  <data name="Catalog Staging" xml:space="preserve">
+    <value>Catalog Staging</value>
+  </data>
+  <data name="Category Attribute Mapping" xml:space="preserve">
+    <value>Category Attribute Mapping</value>
+  </data>
+  <data name="Category Mapping" xml:space="preserve">
+    <value>Category Mapping</value>
+  </data>
+  <data name="Channel Management" xml:space="preserve">
+    <value>Channel Management</value>
+  </data>
+  <data name="Columnar Files" xml:space="preserve">
+    <value>Columnar Files</value>
+  </data>
+  <data name="Component" xml:space="preserve">
+    <value>Component</value>
+  </data>
+  <data name="Configure" xml:space="preserve">
+    <value>Configure</value>
+  </data>
+  <data name="Configure Category Attribute Approvers" xml:space="preserve">
+    <value>Configure Category Attribute Approvers</value>
+  </data>
+  <data name="Configure Manufactures" xml:space="preserve">
+    <value>Configure Manufactures</value>
+  </data>
+  <data name="Configure Notification Users" xml:space="preserve">
+    <value>Configure Notification Users</value>
+  </data>
+  <data name="Configure Org Delta" xml:space="preserve">
+    <value>Configure Org Delta</value>
+  </data>
+  <data name="Configure Organization for Notifications" xml:space="preserve">
+    <value>Configure Organization for Notifications</value>
+  </data>
+  <data name="Configure Relations" xml:space="preserve">
+    <value>Configure Relations</value>
+  </data>
+  <data name="Configure Stages" xml:space="preserve">
+    <value>Configure Stages</value>
+  </data>
+  <data name="Configure Suppliers" xml:space="preserve">
+    <value>Configure Suppliers</value>
+  </data>
+  <data name="Configure System Delta" xml:space="preserve">
+    <value>Configure System Delta</value>
+  </data>
+  <data name="Configure WorkFlow Approvers" xml:space="preserve">
+    <value>Configure WorkFlow Approvers</value>
+  </data>
+  <data name="Configure Workflow Events" xml:space="preserve">
+    <value>Configure Workflow Events</value>
+  </data>
+  <data name="Configure Workflow Users" xml:space="preserve">
+    <value>Configure Workflow Users</value>
+  </data>
+  <data name="Conoco Demo" xml:space="preserve">
+    <value>Conoco Demo</value>
+  </data>
+  <data name="Conoco Report" xml:space="preserve">
+    <value>Conoco Report</value>
+  </data>
+  <data name="Content Cleanser" xml:space="preserve">
+    <value>Content Cleanser</value>
+  </data>
+  <data name="Contracts" xml:space="preserve">
+    <value>Contracts</value>
+  </data>
+  <data name="Country Factor &amp; Discount" xml:space="preserve">
+    <value>Country Factor &amp; Discount</value>
+  </data>
+  <data name="Create Category Mapping" xml:space="preserve">
+    <value>Create Category Mapping</value>
+  </data>
+  <data name="Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="Data Cleansing" xml:space="preserve">
+    <value>Data Cleansing</value>
+  </data>
+  <data name="Data Pools" xml:space="preserve">
+    <value>Data Pools</value>
+  </data>
+  <data name="Database" xml:space="preserve">
+    <value>Database</value>
+  </data>
+  <data name="Direct Connect" xml:space="preserve">
+    <value>Direct Connect</value>
+  </data>
+  <data name="Draft" xml:space="preserve">
+    <value>Draft</value>
+  </data>
+  <data name="Estimate Default" xml:space="preserve">
+    <value>Estimate Default</value>
+  </data>
+  <data name="Event Log" xml:space="preserve">
+    <value>Event Log</value>
+  </data>
+  <data name="Export Inbox" xml:space="preserve">
+    <value>Export Inbox</value>
+  </data>
+  <data name="Export Price Factors" xml:space="preserve">
+    <value>Export Price Factors</value>
+  </data>
+  <data name="External NPI" xml:space="preserve">
+    <value>External NPI</value>
+  </data>
+  <data name="Generate Rules" xml:space="preserve">
+    <value>Generate Rules</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Help</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Import Inbox" xml:space="preserve">
+    <value>Import Inbox</value>
+  </data>
+  <data name="Integration" xml:space="preserve">
+    <value>Integration</value>
+  </data>
+  <data name="Job Status" xml:space="preserve">
+    <value>Job Status</value>
+  </data>
+  <data name="Languages and Locales" xml:space="preserve">
+    <value>Languages and Locales</value>
+  </data>
+  <data name="Link Components" xml:space="preserve">
+    <value>Link Components</value>
+  </data>
+  <data name="Link Pricing Types To Tiers" xml:space="preserve">
+    <value>Link Pricing Types To Tiers</value>
+  </data>
+  <data name="Load Jobs" xml:space="preserve">
+    <value>Load Jobs</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Maintain Attribute Metadata" xml:space="preserve">
+    <value>Maintain Attribute Metadata</value>
+  </data>
+  <data name="Maintain Bulk Pricing" xml:space="preserve">
+    <value>Maintain Bulk Pricing</value>
+  </data>
+  <data name="Maintain Catalog" xml:space="preserve">
+    <value>Maintain Catalog</value>
+  </data>
+  <data name="Maintain Columns" xml:space="preserve">
+    <value>Maintain Columns</value>
+  </data>
+  <data name="Maintain Component" xml:space="preserve">
+    <value>Maintain Component</value>
+  </data>
+  <data name="Maintain Component Type" xml:space="preserve">
+    <value>Maintain Component Type</value>
+  </data>
+  <data name="Maintain Contract" xml:space="preserve">
+    <value>Maintain Contract</value>
+  </data>
+  <data name="Maintain Country/Regions" xml:space="preserve">
+    <value>Maintain Country/Regions</value>
+  </data>
+  <data name="Maintain Currency" xml:space="preserve">
+    <value>Maintain Currency</value>
+  </data>
+  <data name="Maintain Customer" xml:space="preserve">
+    <value>Maintain Customer</value>
+  </data>
+  <data name="Maintain Ext Sys Key Data" xml:space="preserve">
+    <value>Maintain Ext Sys Key Data</value>
+  </data>
+  <data name="Maintain Interface Definition" xml:space="preserve">
+    <value>Maintain Interface Definition</value>
+  </data>
+  <data name="Maintain Jobs" xml:space="preserve">
+    <value>Maintain Jobs</value>
+  </data>
+  <data name="Maintain Languages" xml:space="preserve">
+    <value>Maintain Languages</value>
+  </data>
+  <data name="Maintain Locales" xml:space="preserve">
+    <value>Maintain Locales</value>
+  </data>
+  <data name="Maintain Metadata" xml:space="preserve">
+    <value>Maintain Metadata</value>
+  </data>
+  <data name="Maintain Object Type" xml:space="preserve">
+    <value>Maintain Object Type</value>
+  </data>
+  <data name="Maintain Org Structure" xml:space="preserve">
+    <value>Maintain Org Structure</value>
+  </data>
+  <data name="Maintain Organization" xml:space="preserve">
+    <value>Maintain Organization</value>
+  </data>
+  <data name="Maintain Organization Types" xml:space="preserve">
+    <value>Maintain Organization Types</value>
+  </data>
+  <data name="Maintain Pricing" xml:space="preserve">
+    <value>Maintain Pricing</value>
+  </data>
+  <data name="Maintain Pricing Tiers" xml:space="preserve">
+    <value>Maintain Pricing Tiers</value>
+  </data>
+  <data name="Maintain Pricing Types" xml:space="preserve">
+    <value>Maintain Pricing Types</value>
+  </data>
+  <data name="Maintain Profiles" xml:space="preserve">
+    <value>Maintain Profiles</value>
+  </data>
+  <data name="Maintain Quotes" xml:space="preserve">
+    <value>Maintain Quotes</value>
+  </data>
+  <data name="Maintain Roles" xml:space="preserve">
+    <value>Maintain Roles</value>
+  </data>
+  <data name="Maintain Scheme" xml:space="preserve">
+    <value>Maintain Scheme</value>
+  </data>
+  <data name="Maintain Scripts" xml:space="preserve">
+    <value>Maintain Scripts</value>
+  </data>
+  <data name="Maintain SKU" xml:space="preserve">
+    <value>Maintain SKU</value>
+  </data>
+  <data name="Maintain Statuses" xml:space="preserve">
+    <value>Maintain Statuses</value>
+  </data>
+  <data name="Maintain System" xml:space="preserve">
+    <value>Maintain System</value>
+  </data>
+  <data name="Maintain Taxonomy" xml:space="preserve">
+    <value>Maintain Taxonomy</value>
+  </data>
+  <data name="Maintain Taxonomy Metadata" xml:space="preserve">
+    <value>Maintain Taxonomy Metadata</value>
+  </data>
+  <data name="Maintain Users" xml:space="preserve">
+    <value>Maintain Users</value>
+  </data>
+  <data name="Maintain Utilitilies" xml:space="preserve">
+    <value>Maintain Utilitilies</value>
+  </data>
+  <data name="Maintain View" xml:space="preserve">
+    <value>Maintain View</value>
+  </data>
+  <data name="Manage Alerts and Notifications" xml:space="preserve">
+    <value>Manage Alerts and Notifications</value>
+  </data>
+  <data name="Manage Content" xml:space="preserve">
+    <value>Manage Content</value>
+  </data>
+  <data name="Map Locales to Organization" xml:space="preserve">
+    <value>Map Locales to Organization</value>
+  </data>
+  <data name="Mapping Configuration" xml:space="preserve">
+    <value>Mapping Configuration</value>
+  </data>
+  <data name="Mapping Currency to Organization" xml:space="preserve">
+    <value>Mapping Currency to Organization</value>
+  </data>
+  <data name="Master Catalog" xml:space="preserve">
+    <value>Master Catalog</value>
+  </data>
+  <data name="My Workspace" xml:space="preserve">
+    <value>My Workspace</value>
+  </data>
+  <data name="NPI" xml:space="preserve">
+    <value>NPI</value>
+  </data>
+  <data name="Object Extended Attributes" xml:space="preserve">
+    <value>Object Extended Attributes</value>
+  </data>
+  <data name="Org Commercial Attribute Relations" xml:space="preserve">
+    <value>Org Commercial Attribute Relations</value>
+  </data>
+  <data name="Organization" xml:space="preserve">
+    <value>Organization</value>
+  </data>
+  <data name="Others" xml:space="preserve">
+    <value>Others</value>
+  </data>
+  <data name="Price Factors" xml:space="preserve">
+    <value>Price Factors</value>
+  </data>
+  <data name="Price Syndication" xml:space="preserve">
+    <value>Price Syndication</value>
+  </data>
+  <data name="Pricing" xml:space="preserve">
+    <value>Pricing</value>
+  </data>
+  <data name="Pricing Metadata" xml:space="preserve">
+    <value>Pricing Metadata</value>
+  </data>
+  <data name="Pricing Tiers" xml:space="preserve">
+    <value>Pricing Tiers</value>
+  </data>
+  <data name="Pricing Types" xml:space="preserve">
+    <value>Pricing Types</value>
+  </data>
+  <data name="Proposal Center" xml:space="preserve">
+    <value>Proposal Center</value>
+  </data>
+  <data name="Quote Reports" xml:space="preserve">
+    <value>Quote Reports</value>
+  </data>
+  <data name="Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Scheme" xml:space="preserve">
+    <value>Scheme</value>
+  </data>
+  <data name="Scheme  Pricing Types" xml:space="preserve">
+    <value>Scheme  Pricing Types</value>
+  </data>
+  <data name="Scheme Determination" xml:space="preserve">
+    <value>Scheme Determination</value>
+  </data>
+  <data name="Security" xml:space="preserve">
+    <value>Security</value>
+  </data>
+  <data name="Siemens" xml:space="preserve">
+    <value>Siemens</value>
+  </data>
+  <data name="Simulation" xml:space="preserve">
+    <value>Simulation</value>
+  </data>
+  <data name="SPIR Report" xml:space="preserve">
+    <value>SPIR Report</value>
+  </data>
+  <data name="Staging WorkFlow" xml:space="preserve">
+    <value>Staging WorkFlow</value>
+  </data>
+  <data name="Standard Inbox" xml:space="preserve">
+    <value>Standard Inbox</value>
+  </data>
+  <data name="Supplier Content Portal" xml:space="preserve">
+    <value>Supplier Content Portal</value>
+  </data>
+  <data name="Supplier Inbox" xml:space="preserve">
+    <value>Supplier Inbox</value>
+  </data>
+  <data name="Supplier Portal" xml:space="preserve">
+    <value>Supplier Portal</value>
+  </data>
+  <data name="Synchronization" xml:space="preserve">
+    <value>Synchronization</value>
+  </data>
+  <data name="Synchronize" xml:space="preserve">
+    <value>Synchronize</value>
+  </data>
+  <data name="Synchronizer" xml:space="preserve">
+    <value>Synchronizer</value>
+  </data>
+  <data name="Syndication" xml:space="preserve">
+    <value>Syndication</value>
+  </data>
+  <data name="Synonyms" xml:space="preserve">
+    <value>Synonyms</value>
+  </data>
+  <data name="Take Back Tasks" xml:space="preserve">
+    <value>Take Back Tasks</value>
+  </data>
+  <data name="Taxonomy" xml:space="preserve">
+    <value>Taxonomy</value>
+  </data>
+  <data name="Taxonomy History" xml:space="preserve">
+    <value>Taxonomy History</value>
+  </data>
+  <data name="Trading Partners" xml:space="preserve">
+    <value>Trading Partners</value>
+  </data>
+  <data name="TradingCenter" xml:space="preserve">
+    <value>TradingCenter</value>
+  </data>
+  <data name="TradingCenter-DS" xml:space="preserve">
+    <value>TradingCenter-DS</value>
+  </data>
+  <data name="TradingCenter-SS" xml:space="preserve">
+    <value>TradingCenter-SS</value>
+  </data>
+  <data name="Transora" xml:space="preserve">
+    <value>Transora</value>
+  </data>
+  <data name="UCCnet" xml:space="preserve">
+    <value>UCCnet</value>
+  </data>
+  <data name="Upload Data" xml:space="preserve">
+    <value>Upload Data</value>
+  </data>
+  <data name="Upload File" xml:space="preserve">
+    <value>Upload File</value>
+  </data>
+  <data name="Upload SPIR" xml:space="preserve">
+    <value>Upload SPIR</value>
+  </data>
+  <data name="Upload SPIR Status" xml:space="preserve">
+    <value>Upload SPIR Status</value>
+  </data>
+  <data name="Upload Status" xml:space="preserve">
+    <value>Upload Status</value>
+  </data>
+  <data name="User Information" xml:space="preserve">
+    <value>User Information</value>
+  </data>
+  <data name="User Preferences" xml:space="preserve">
+    <value>User Preferences</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>View</value>
+  </data>
+  <data name="View Messages" xml:space="preserve">
+    <value>View Messages</value>
+  </data>
+  <data name="Work Bench" xml:space="preserve">
+    <value>Work Bench</value>
+  </data>
+  <data name="Work List" xml:space="preserve">
+    <value>Work List</value>
+  </data>
+  <data name="Workflow" xml:space="preserve">
+    <value>Workflow</value>
+  </data>
+  <data name="Workflow Console" xml:space="preserve">
+    <value>Console</value>
+  </data>
+  <data name="Workflow Inbox" xml:space="preserve">
+    <value>Workflow Inbox</value>
+  </data>
+  <data name="WWRE" xml:space="preserve">
+    <value>WWRE</value>
+  </data>
+  <data name="XML Files" xml:space="preserve">
+    <value>XML Files</value>
+  </data>
+  <data name="1 dynamictaxonomy found" xml:space="preserve">
+    <value>1 dynamic hierarchy found</value>
+  </data>
+  <data name="Add DynamicTaxonomy:Width" xml:space="preserve">
+    <value>150</value>
+  </data>
+  <data name="catalogs were found" xml:space="preserve">
+    <value>Containers were found</value>
+  </data>
+  <data name="Close DynamicTaxonomy" xml:space="preserve">
+    <value>Close Dynamic Hierarchy</value>
+  </data>
+  <data name="Close DynamicTaxonomy:Width" xml:space="preserve">
+    <value>150</value>
+  </data>
+  <data name="Delete DynamicTaxonomy" xml:space="preserve">
+    <value>Delete Dynamic Hierarchy</value>
+  </data>
+  <data name="dynamic taxonomies were found" xml:space="preserve">
+    <value>Dynamic Hierarchies were found</value>
+  </data>
+  <data name="Dynamic Taxonomy(s) successfully deleted" xml:space="preserve">
+    <value>Dynamic Hierarchy(s) successfully deleted</value>
+  </data>
+  <data name="DynamicTaxonomy" xml:space="preserve">
+    <value>Dynamic Hierarchy</value>
+  </data>
+  <data name="DynamicTaxonomy Maintenance" xml:space="preserve">
+    <value>Dynamic Hierarchy Maintenance</value>
+  </data>
+  <data name="Edit DynamicTaxonomy" xml:space="preserve">
+    <value>Edit Dynamic Hierarchy</value>
+  </data>
+  <data name="Edit DynamicTaxonomy Locales" xml:space="preserve">
+    <value>Edit Dynamic Hierarchy Locales</value>
+  </data>
+  <data name="Maintain DynamicTaxonomy" xml:space="preserve">
+    <value>Maintain Dynamic Hierarchy</value>
+  </data>
+  <data name="Open DynamicTaxonomy" xml:space="preserve">
+    <value>Open Dynamic Hierarchy</value>
+  </data>
+  <data name="Open DynamicTaxonomy:Width" xml:space="preserve">
+    <value>150</value>
+  </data>
+  <data name="taxonomies were found" xml:space="preserve">
+    <value>Hierarchies were found</value>
+  </data>
+  <data name="views were found" xml:space="preserve">
+    <value>Views were found</value>
+  </data>
+  <data name="Allowable Values" xml:space="preserve">
+    <value>Allowable Values</value>
+  </data>
+  <data name="Assembly" xml:space="preserve">
+    <value>Assembly</value>
+  </data>
+  <data name="Attribute Maintenance" xml:space="preserve">
+    <value>Attribute Maintenance</value>
+  </data>
+  <data name="Auto Generation" xml:space="preserve">
+    <value>Auto Generation</value>
+  </data>
+  <data name="Business Rule" xml:space="preserve">
+    <value>Business Rule</value>
+  </data>
+  <data name="Classification" xml:space="preserve">
+    <value>Classification</value>
+  </data>
+  <data name="Complex Table Name" xml:space="preserve">
+    <value>Complex Table Name</value>
+  </data>
+  <data name="Custom Action" xml:space="preserve">
+    <value>Custom Action</value>
+  </data>
+  <data name="Custom Validation" xml:space="preserve">
+    <value>Custom Validation</value>
+  </data>
+  <data name="Data Type" xml:space="preserve">
+    <value>Data Type</value>
+  </data>
+  <data name="Default UOM" xml:space="preserve">
+    <value>Default UOM</value>
+  </data>
+  <data name="Default Value" xml:space="preserve">
+    <value>Default Value</value>
+  </data>
+  <data name="Definition" xml:space="preserve">
+    <value>Definition</value>
+  </data>
+  <data name="Denormalize" xml:space="preserve">
+    <value>Denormalize</value>
+  </data>
+  <data name="Display Type" xml:space="preserve">
+    <value>Display Type</value>
+  </data>
+  <data name="Enable History" xml:space="preserve">
+    <value>Enable History</value>
+  </data>
+  <data name="Example" xml:space="preserve">
+    <value>Example</value>
+  </data>
+  <data name="Export Mask" xml:space="preserve">
+    <value>Export Mask</value>
+  </data>
+  <data name="Extension" xml:space="preserve">
+    <value>Extension</value>
+  </data>
+  <data name="Hidden" xml:space="preserve">
+    <value>Hidden</value>
+  </data>
+  <data name="Inheritable" xml:space="preserve">
+    <value>Inheritable</value>
+  </data>
+  <data name="Initial Population Method" xml:space="preserve">
+    <value>Initial Population Method</value>
+  </data>
+  <data name="Is Collection" xml:space="preserve">
+    <value>Is Collection</value>
+  </data>
+  <data name="Label" xml:space="preserve">
+    <value>Label</value>
+  </data>
+  <data name="Long Name" xml:space="preserve">
+    <value>Long Name</value>
+  </data>
+  <data name="LookUp Display Columns" xml:space="preserve">
+    <value>LookUp Display Columns</value>
+  </data>
+  <data name="LookUp Display Format" xml:space="preserve">
+    <value>LookUp Display Format</value>
+  </data>
+  <data name="Lookup Duplicates Allowed" xml:space="preserve">
+    <value>Lookup Duplicates Allowed</value>
+  </data>
+  <data name="LookUp Search Columns" xml:space="preserve">
+    <value>LookUp Search Columns</value>
+  </data>
+  <data name="Lookup Sort Order" xml:space="preserve">
+    <value>Lookup Sort Order</value>
+  </data>
+  <data name="LookUp Storage Format" xml:space="preserve">
+    <value>LookUp Storage Format</value>
+  </data>
+  <data name="LookUp Table" xml:space="preserve">
+    <value>LookUp Table</value>
+  </data>
+  <data name="Max Length" xml:space="preserve">
+    <value>Max Length</value>
+  </data>
+  <data name="Method" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="Min Length" xml:space="preserve">
+    <value>Min Length</value>
+  </data>
+  <data name="OnClick JavaScript Event" xml:space="preserve">
+    <value>OnClick JavaScript Event</value>
+  </data>
+  <data name="OnLoad JavaScript Event" xml:space="preserve">
+    <value>OnLoad JavaScript Event</value>
+  </data>
+  <data name="Persists" xml:space="preserve">
+    <value>Persists</value>
+  </data>
+  <data name="Precision" xml:space="preserve">
+    <value>Precision</value>
+  </data>
+  <data name="Range From" xml:space="preserve">
+    <value>Range From</value>
+  </data>
+  <data name="Range To" xml:space="preserve">
+    <value>Range To</value>
+  </data>
+  <data name="ReadOnly" xml:space="preserve">
+    <value>ReadOnly</value>
+  </data>
+  <data name="Reference Columns" xml:space="preserve">
+    <value>Reference Columns</value>
+  </data>
+  <data name="Regular Expressions" xml:space="preserve">
+    <value>Regular Expressions</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>Required</value>
+  </data>
+  <data name="Searchable" xml:space="preserve">
+    <value>Searchable</value>
+  </data>
+  <data name="Short Name" xml:space="preserve">
+    <value>Short Name</value>
+  </data>
+  <data name="Show At Creation" xml:space="preserve">
+    <value>Show At Creation</value>
+  </data>
+  <data name="Sort Order" xml:space="preserve">
+    <value>Sort Order</value>
+  </data>
+  <data name="Store Lookup Reference" xml:space="preserve">
+    <value>Store Lookup Reference</value>
+  </data>
+  <data name="Test Expression" xml:space="preserve">
+    <value>Test Expression</value>
+  </data>
+  <data name="UOM Type" xml:space="preserve">
+    <value>UOM Type</value>
+  </data>
+  <data name="Valid UOMs" xml:space="preserve">
+    <value>Valid UOMs</value>
+  </data>
+  <data name="Validate Expression" xml:space="preserve">
+    <value>Validate Expression</value>
+  </data>
+  <data name="Web URI" xml:space="preserve">
+    <value>Web URI</value>
+  </data>
+  <data name="Next Page" xml:space="preserve">
+    <value>Next Page</value>
+  </data>
+  <data name="of" xml:space="preserve">
+    <value>of</value>
+  </data>
+  <data name="Previous Page" xml:space="preserve">
+    <value>Previous Page</value>
+  </data>
+  <data name="to" xml:space="preserve">
+    <value>to</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Changes saved successfully." xml:space="preserve">
+    <value>Changes saved successfully.</value>
+  </data>
+  <data name="Error occurred processing the changes" xml:space="preserve">
+    <value>Error occurred processing the changes</value>
+  </data>
+  <data name="Error occurred while fetching View attribute mapping data" xml:space="preserve">
+    <value>Error occurred while fetching View attribute mapping data</value>
+  </data>
+  <data name="No ViewID / View Name found" xml:space="preserve">
+    <value>No ViewID / View Name found</value>
+  </data>
+  <data name="There was an error saving the changes:" xml:space="preserve">
+    <value>There was an error saving the changes:</value>
+  </data>
+  <data name="No containers found" xml:space="preserve">
+    <value>No containers found</value>
+  </data>
+  <data name="No my views found" xml:space="preserve">
+    <value>No my views found</value>
+  </data>
+  <data name="No state views found" xml:space="preserve">
+    <value>No state views found</value>
+  </data>
+  <data name="No variants found" xml:space="preserve">
+    <value>No variants found</value>
+  </data>
+  <data name="No attributes to publish" xml:space="preserve">
+    <value>No attributes to publish</value>
+  </data>
+  <data name="publish" xml:space="preserve">
+    <value>publish</value>
+  </data>
+  <data name="Attributes successfully published" xml:space="preserve">
+    <value>Attributes successfully published</value>
+  </data>
+  <data name="Entity Attribute Publish" xml:space="preserve">
+    <value>Entity Attribute Publish</value>
+  </data>
+  <data name="No Container and / or Attributes found" xml:space="preserve">
+    <value>No Container and / or Attributes found</value>
+  </data>
+  <data name="Attribute" xml:space="preserve">
+    <value>Attribute</value>
+  </data>
+  <data name="Business rule not found" xml:space="preserve">
+    <value>Business rule not found</value>
+  </data>
+  <data name="Changed" xml:space="preserve">
+    <value>Changed</value>
+  </data>
+  <data name="Disabled attribute (see tooltip for more detail)" xml:space="preserve">
+    <value>Disabled attribute (see tooltip for more detail)</value>
+  </data>
+  <data name="failed" xml:space="preserve">
+    <value>failed</value>
+  </data>
+  <data name="Inherited" xml:space="preserve">
+    <value>Inherited</value>
+  </data>
+  <data name="Not applicable" xml:space="preserve">
+    <value>Not applicable</value>
+  </data>
+  <data name="Right click header row for option" xml:space="preserve">
+    <value>Right click header row for option</value>
+  </data>
+  <data name="value" xml:space="preserve">
+    <value>value</value>
+  </data>
+  <data name="Please reopen the page" xml:space="preserve">
+    <value>Please reopen the page</value>
+  </data>
+  <data name="not mapped" xml:space="preserve">
+    <value>not mapped</value>
+  </data>
+  <data name="delete" xml:space="preserve">
+    <value>delete</value>
+  </data>
+  <data name="deleted" xml:space="preserve">
+    <value>deleted</value>
+  </data>
+  <data name="filter" xml:space="preserve">
+    <value>filter</value>
+  </data>
+  <data name="Job" xml:space="preserve">
+    <value>Job</value>
+  </data>
+  <data name="Jobs were" xml:space="preserve">
+    <value>Jobs were</value>
+  </data>
+  <data name="No Jobs were selected to" xml:space="preserve">
+    <value>No Jobs were selected to</value>
+  </data>
+  <data name="Not all selected Jobs were" xml:space="preserve">
+    <value>Not all selected Jobs were</value>
+  </data>
+  <data name="paginating" xml:space="preserve">
+    <value>paginating</value>
+  </data>
+  <data name="refresh" xml:space="preserve">
+    <value>refresh</value>
+  </data>
+  <data name="returning to Profile" xml:space="preserve">
+    <value>returning to Profile</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>search</value>
+  </data>
+  <data name="Some error occured" xml:space="preserve">
+    <value>Some error occured</value>
+  </data>
+  <data name="updating" xml:space="preserve">
+    <value>updating</value>
+  </data>
+  <data name="while" xml:space="preserve">
+    <value>while</value>
+  </data>
+  <data name="Add Item To Category" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Edit Category" xml:space="preserve">
+    <value>Edit Category</value>
+  </data>
+</root>

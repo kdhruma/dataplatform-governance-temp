@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://wcfservices.riversand.com" elementFormDefault="qualified" targetNamespace="http://wcfservices.riversand.com" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/SecurityService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/SecurityService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/SecurityService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/System.Security.Claims" />
+  <xs:element name="AuthenticateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLoginName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AuthenticateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AuthenticateUserResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreference">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLoginName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserPreferenceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://mdmobjects.riversand.com/" minOccurs="0" name="GetUserPreferenceResult" nillable="true" type="q1:UserPreferences" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="LoginId" type="xs:int" />
+        <xs:element minOccurs="0" name="userLoginName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://mdmobjects.riversand.com/" minOccurs="0" name="GetUserRolesResult" nillable="true" type="q2:SecurityRoleCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorsByRoleId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorsByRoleIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://mdmobjects.riversand.com/" minOccurs="0" name="GetVendorsByRoleIdResult" nillable="true" type="q3:VendorCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorsByUserId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorsByUserIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://mdmobjects.riversand.com/" minOccurs="0" name="GetVendorsByUserIdResult" nillable="true" type="q4:VendorCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorsByRoleName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetVendorsByRoleNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://mdmobjects.riversand.com/" minOccurs="0" name="GetVendorsByRoleNameResult" nillable="true" type="q5:VendorCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUserPermissions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LoadUserPermissionsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUserPreferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://mdmobjects.riversand.com/" minOccurs="0" name="userPreferences" nillable="true" type="q6:UserPreferences" />
+        <xs:element xmlns:q7="http://mdmobjects.riversand.com/" minOccurs="0" name="context" nillable="true" type="q7:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUserPreferencesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ProcessUserPreferencesResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserMenus">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserMenusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://mdmobjects.riversand.com/" minOccurs="0" name="GetUserMenusResult" nillable="true" type="q8:MenuCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAuditInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://mdmobjects.riversand.com/" minOccurs="0" name="auditInfo" nillable="true" type="q9:AuditInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SetAuditInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SetAuditInfoResult" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditInfoByIds">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="auditRefIds" nillable="true" type="q10:ArrayOflong" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditInfoByIdsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAuditInfoByIdsResult" nillable="true" type="q11:AuditInfoCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="entityId" type="xs:long" />
+        <xs:element xmlns:q12="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="attributeIds" nillable="true" type="q12:ArrayOfint" />
+        <xs:element xmlns:q13="http://mdmobjects.riversand.com/" minOccurs="0" name="locale" type="q13:LocaleEnum" />
+        <xs:element minOccurs="0" name="sequence" type="xs:decimal" />
+        <xs:element minOccurs="0" name="returnEntityAudit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="returnAttirbuteAudit" type="xs:boolean" />
+        <xs:element minOccurs="0" name="returnOnlyLatestAudit" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAuditInfoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAuditInfoResult" nillable="true" type="q14:EntityAuditInfoCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersAllowedForWorkflowActivity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="workflowActivityId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="activityShortName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workflowVersionId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="userId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersAllowedForWorkflowActivityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://mdmobjects.riversand.com/" minOccurs="0" name="GetUsersAllowedForWorkflowActivityResult" nillable="true" type="q15:ArrayOfSecurityUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersInRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUsersInRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://mdmobjects.riversand.com/" minOccurs="0" name="GetUsersInRoleResult" nillable="true" type="q16:ArrayOfSecurityUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersOld">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userType" type="xs:int" />
+        <xs:element minOccurs="0" name="countFrom" type="xs:int" />
+        <xs:element minOccurs="0" name="countTo" type="xs:int" />
+        <xs:element minOccurs="0" name="sortColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchColumn" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="searchParameter" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userLogin" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersOldResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllUsersOldResult" nillable="true" type="q17:ArrayOfSecurityUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q18:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllUsersResult" nillable="true" type="q19:SecurityUserCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userId" type="xs:int" />
+        <xs:element xmlns:q20="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q20:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://mdmobjects.riversand.com/" minOccurs="0" name="GetUserByIdResult" nillable="true" type="q21:SecurityUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://mdmobjects.riversand.com/" minOccurs="0" name="securityUser" nillable="true" type="q22:SecurityUser" />
+        <xs:element xmlns:q23="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q23:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateUserResult" nillable="true" type="q24:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://mdmobjects.riversand.com/" minOccurs="0" name="securityUser" nillable="true" type="q25:SecurityUser" />
+        <xs:element xmlns:q26="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q26:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateUserResult" nillable="true" type="q27:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://mdmobjects.riversand.com/" minOccurs="0" name="securityUser" nillable="true" type="q28:SecurityUser" />
+        <xs:element xmlns:q29="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q29:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteUserResult" nillable="true" type="q30:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUsers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://mdmobjects.riversand.com/" minOccurs="0" name="securityUsers" nillable="true" type="q31:SecurityUserCollection" />
+        <xs:element xmlns:q32="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q32:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUsersResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessUsersResult" nillable="true" type="q33:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUserUsingClaimsIdentity">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/System.Security.Claims" minOccurs="0" name="claimsIdentity" nillable="true" type="q34:ClaimsIdentity" />
+        <xs:element xmlns:q35="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q35:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessUserUsingClaimsIdentityResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessUserUsingClaimsIdentityResult" nillable="true" type="q36:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q37:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://mdmobjects.riversand.com/" minOccurs="0" name="GetAllRolesResult" nillable="true" type="q38:SecurityRoleCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="roleId" type="xs:int" />
+        <xs:element xmlns:q39="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q39:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetRoleByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://mdmobjects.riversand.com/" minOccurs="0" name="GetRoleByIdResult" nillable="true" type="q40:SecurityRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRoleType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetUserRoleTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://mdmobjects.riversand.com/" minOccurs="0" name="GetUserRoleTypeResult" type="q41:RoleType" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://mdmobjects.riversand.com/" minOccurs="0" name="securityRole" nillable="true" type="q42:SecurityRole" />
+        <xs:element xmlns:q43="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q43:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://mdmobjects.riversand.com/" minOccurs="0" name="CreateRoleResult" nillable="true" type="q44:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://mdmobjects.riversand.com/" minOccurs="0" name="securityRole" nillable="true" type="q45:SecurityRole" />
+        <xs:element xmlns:q46="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q46:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdateRoleResult" nillable="true" type="q47:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://mdmobjects.riversand.com/" minOccurs="0" name="securityRole" nillable="true" type="q48:SecurityRole" />
+        <xs:element xmlns:q49="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q49:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://mdmobjects.riversand.com/" minOccurs="0" name="DeleteRoleResult" nillable="true" type="q50:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRoles">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://mdmobjects.riversand.com/" minOccurs="0" name="securityRoles" nillable="true" type="q51:SecurityRoleCollection" />
+        <xs:element xmlns:q52="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q52:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessRolesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://mdmobjects.riversand.com/" minOccurs="0" name="ProcessRolesResult" nillable="true" type="q53:OperationResultCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityPrincipalForWindowsAuthentication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q54="http://mdmobjects.riversand.com/" minOccurs="0" name="system" type="q54:MDMCenterSystem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityPrincipalForWindowsAuthenticationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://mdmobjects.riversand.com/" minOccurs="0" name="GetSecurityPrincipalForWindowsAuthenticationResult" nillable="true" type="q55:SecurityPrincipal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityPrincipalForFormsAuthentication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="formsAuthenticationTicket" nillable="true" type="xs:string" />
+        <xs:element xmlns:q56="http://mdmobjects.riversand.com/" minOccurs="0" name="system" type="q56:MDMCenterSystem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityPrincipalForFormsAuthenticationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://mdmobjects.riversand.com/" minOccurs="0" name="GetSecurityPrincipalForFormsAuthenticationResult" nillable="true" type="q57:SecurityPrincipal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityPrincipalForClaimsBasedAuthentication">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/System.Security.Claims" minOccurs="0" name="claimsIdentity" nillable="true" type="q58:ClaimsIdentity" />
+        <xs:element xmlns:q59="http://mdmobjects.riversand.com/" minOccurs="0" name="system" type="q59:MDMCenterSystem" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityPrincipalForClaimsBasedAuthenticationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://mdmobjects.riversand.com/" minOccurs="0" name="GetSecurityPrincipalForClaimsBasedAuthenticationResult" nillable="true" type="q60:SecurityPrincipal" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityRoleByName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityRoleShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q61="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q61:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityRoleByNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://mdmobjects.riversand.com/" minOccurs="0" name="GetSecurityRoleByNameResult" nillable="true" type="q62:SecurityRole" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityUserByLoginName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityUserLogingName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q63="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q63:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityUserByLoginNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://mdmobjects.riversand.com/" minOccurs="0" name="GetSecurityUserByLoginNameResult" nillable="true" type="q64:SecurityUser" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityUsersByLoginNames">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="userLogins" nillable="true" type="q65:ArrayOfstring" />
+        <xs:element xmlns:q66="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q66:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityUsersByLoginNamesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://mdmobjects.riversand.com/" minOccurs="0" name="GetSecurityUsersByLoginNamesResult" nillable="true" type="q67:SecurityUserCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityUsersInSecurityRole">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityRoleShortName" nillable="true" type="xs:string" />
+        <xs:element xmlns:q68="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q68:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSecurityUsersInSecurityRoleResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://mdmobjects.riversand.com/" minOccurs="0" name="GetSecurityUsersInSecurityRoleResult" nillable="true" type="q69:SecurityUserCollection" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMObjectPermission">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="mdmObjectId" type="xs:int" />
+        <xs:element minOccurs="0" name="mdmObjectTypeId" type="xs:int" />
+        <xs:element minOccurs="0" name="mdmObjectType" nillable="true" type="xs:string" />
+        <xs:element xmlns:q70="http://mdmobjects.riversand.com/" minOccurs="0" name="context" nillable="true" type="q70:PermissionContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMDMObjectPermissionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://mdmobjects.riversand.com/" minOccurs="0" name="GetMDMObjectPermissionResult" nillable="true" type="q71:Permission" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPasswordResetRequestValid">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="passwordRequestId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q72="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q72:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPasswordResetRequestValidResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://mdmobjects.riversand.com/" minOccurs="0" name="IsPasswordResetRequestValidResult" nillable="true" type="q73:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePassword">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="passwordRequestId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+        <xs:element xmlns:q74="http://mdmobjects.riversand.com/" minOccurs="0" name="callerContext" nillable="true" type="q74:CallerContext" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePasswordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q75="http://mdmobjects.riversand.com/" minOccurs="0" name="UpdatePasswordResult" nillable="true" type="q75:OperationResult" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

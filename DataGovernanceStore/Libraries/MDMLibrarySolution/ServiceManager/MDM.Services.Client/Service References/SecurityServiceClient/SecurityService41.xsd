@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MDM.BusinessObjects.DQM" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/SecurityService.svc?xsd=xsd2" namespace="http://mdmobjects.riversand.com/" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/SecurityService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://localhost/Development_WCFServices/SecurityService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/MDM.Core" />
+  <xs:complexType name="ArrayOfNamedDataQualityIndicatorValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NamedDataQualityIndicatorValue" nillable="true" type="tns:NamedDataQualityIndicatorValue" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNamedDataQualityIndicatorValue" nillable="true" type="tns:ArrayOfNamedDataQualityIndicatorValue" />
+  <xs:complexType name="NamedDataQualityIndicatorValue">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:DataQualityIndicatorValue">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NamedDataQualityIndicatorValue" nillable="true" type="tns:NamedDataQualityIndicatorValue" />
+  <xs:complexType name="DataQualityIndicatorValue">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DataQualityIndicatorId" type="xs:short" />
+      <xs:element minOccurs="0" name="FailureInfoCollection" nillable="true" type="tns:DataQualityIndicatorFailureInfoCollection" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataQualityIndicatorValue" nillable="true" type="tns:DataQualityIndicatorValue" />
+  <xs:complexType name="DataQualityIndicatorFailureInfoCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://mdmobjects.riversand.com/" base="q1:InterfaceContractCollectionOfanyTypeDataQualityIndicatorFailureInfoRqpk4DV6">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="DataQualityIndicatorFailureInfoCollection" nillable="true" type="tns:DataQualityIndicatorFailureInfoCollection" />
+  <xs:complexType name="ArrayOfDataQualityIndicatorFailureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DataQualityIndicatorFailureInfo" nillable="true" type="tns:DataQualityIndicatorFailureInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDataQualityIndicatorFailureInfo" nillable="true" type="tns:ArrayOfDataQualityIndicatorFailureInfo" />
+  <xs:complexType name="DataQualityIndicatorFailureInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AttributeId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="AttributeValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FailureMessageCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LocaleId" nillable="true" type="xs:short" />
+      <xs:element xmlns:q2="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="Params" nillable="true" type="q2:ArrayOfanyType" />
+      <xs:element minOccurs="0" name="RelationshipId" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DataQualityIndicatorFailureInfo" nillable="true" type="tns:DataQualityIndicatorFailureInfo" />
+  <xs:complexType name="NormalizationResultsCollection">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/MDM.Core" base="q3:InterfaceContractCollectionOfanyTypeNormalizationResultRqpk4DV6">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProfileName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Simulation" type="xs:boolean" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalizationResultsCollection" nillable="true" type="tns:NormalizationResultsCollection" />
+  <xs:complexType name="ArrayOfNormalizationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NormalizationResult" nillable="true" type="tns:NormalizationResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNormalizationResult" nillable="true" type="tns:ArrayOfNormalizationResult" />
+  <xs:complexType name="NormalizationResult">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://mdmobjects.riversand.com/" base="q4:MDMObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AttributeId" type="xs:int" />
+          <xs:element minOccurs="0" name="ChangeDateTime" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="CnodeId" type="xs:long" />
+          <xs:element minOccurs="0" name="Id" type="xs:long" />
+          <xs:element minOccurs="0" name="IsNormalizationSucceeded" type="xs:boolean" />
+          <xs:element minOccurs="0" name="JobId" type="xs:long" />
+          <xs:element minOccurs="0" name="NewAttributeValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="OldAttributeValue" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ResultMessage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="RuleId" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="NormalizationResult" nillable="true" type="tns:NormalizationResult" />
+</xs:schema>

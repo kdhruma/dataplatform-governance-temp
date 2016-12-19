@@ -1,0 +1,36 @@
+﻿<Tables>
+	<Table Name="Supplier" LongName="Supplier" Locale="en_WW">
+		<ExtendedProperties>
+			<Property Key="UniqueKey">Number</Property>
+		</ExtendedProperties>
+		<Rows>
+			<Row Id="-1" Action="Update">
+				<Cells>
+					<Cell ColumnName="Number"><![CDATA[704122798]]></Cell>
+					<Cell ColumnName="Name"><![CDATA[GOOD LAD]]></Cell>
+					<Cell ColumnName="Vendor_Name"><![CDATA[GOOD LAD CO]]></Cell>
+					<Cell ColumnName="Vendor_Number"><![CDATA[38962]]></Cell>
+					<Cell ColumnName="Supp_Status_Code"><![CDATA[I]]></Cell>
+					<Cell ColumnName="Data_Source_Code">OAP</Cell>
+				</Cells>
+			</Row>
+		</Rows>
+	</Table>
+	<Table Name="Supplier" LongName="Supplier" Locale="de_DE">
+		<ExtendedProperties>
+			<Property Key="UniqueKey">Number</Property>
+		</ExtendedProperties>
+		<Rows>
+			<Row Id="-1" Action="Update">
+				<Cells>
+					<Cell ColumnName="Number"><![CDATA[704122798]]></Cell>
+					<Cell ColumnName="Name"><![CDATA[GOOD LAD]]></Cell>
+					<Cell ColumnName="Vendor_Name"><![CDATA[GOOD LAD CO]]></Cell>
+					<Cell ColumnName="Vendor_Number"><![CDATA[38962]]></Cell>
+					<Cell ColumnName="Supp_Status_Code"><![CDATA[I]]></Cell>
+					<Cell ColumnName="Data_Source_Code">OAP</Cell>
+				</Cells>
+			</Row>
+		</Rows>
+	</Table>
+</Tables>
