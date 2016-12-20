@@ -54,20 +54,20 @@ namespace MDM.JigsawIntegrationManager
 		{
 			ConcurrentDictionary<Int32, Boolean> entityTypeMatchinProfileExists = new ConcurrentDictionary<Int32, Boolean>();
 
-			IMatchingManager matchingmanager = ServiceLocator.Current.GetInstance(typeof(IMatchingManager)) as IMatchingManager;
+			//IMatchingManager matchingmanager = ServiceLocator.Current.GetInstance(typeof(IMatchingManager)) as IMatchingManager;
 
-			if (matchingmanager != null)
-			{
-				MatchingProfileCollection profileCollection = matchingmanager.GetAllMatchingProfiles();
+			//if (matchingmanager != null)
+			//{
+			//	MatchingProfileCollection profileCollection = matchingmanager.GetAllMatchingProfiles();
 
-				if (profileCollection != null)
-				{
-					foreach (MatchingProfile profile in profileCollection)
-					{
-						entityTypeMatchinProfileExists.TryAdd(profile.EntityTypeId,true);
-					}
-				}
-			}
+			//	if (profileCollection != null)
+			//	{
+			//		foreach (MatchingProfile profile in profileCollection)
+			//		{
+			//			entityTypeMatchinProfileExists.TryAdd(profile.EntityTypeId,true);
+			//		}
+			//	}
+			//}
 
 			return entityTypeMatchinProfileExists;
 		}

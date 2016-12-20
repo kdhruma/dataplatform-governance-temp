@@ -50,7 +50,6 @@
     </Compile>
     <Compile Include="Bases\BaseCoreDataProcessor.cs" />
     <Compile Include="Interfaces\ICoreDataProcessor.cs" />
-    <Compile Include="Objects\DQMDataBufferMessage.cs" />
     <Compile Include="ParallelProcessingEngine.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -163,6 +162,9 @@
       <Project>{F02695A5-7293-4E0F-A2AF-0A6711C2F20F}</Project>
       <Name>MDM.ParallelizationManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Objects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

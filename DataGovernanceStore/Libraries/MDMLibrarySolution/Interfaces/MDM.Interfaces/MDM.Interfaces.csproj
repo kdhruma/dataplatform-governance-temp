@@ -66,12 +66,9 @@
     <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
-    <Compile Include="IEntityFamilyQueueManager.cs" />
     <Compile Include="IEntityStateValidationManager.cs" />
     <Compile Include="IContainerEntityTypeMappingManager.cs" />
     <Compile Include="IEntityWorkflowManager.cs" />
-    <Compile Include="IExportQueueManager.cs" />
-    <Compile Include="IExtensionRelationshipManager.cs" />
     <Compile Include="ILocaleMessageManager.cs" />
     <Compile Include="ICategoryDataProvider.cs" />
     <Compile Include="ICategoryManager.cs" />
@@ -84,16 +81,8 @@
     <Compile Include="IEntityModelManager.cs" />
     <Compile Include="IEntityTypeManager.cs" />
     <Compile Include="IHierarchyManager.cs" />
-    <Compile Include="IImpactedEntityManager.cs" />
     <Compile Include="ILookupManager.cs" />
-    <Compile Include="IMatchingManager.cs" />
-    <Compile Include="IMatchingResultManager .cs" />
-    <Compile Include="IMergePlanItemManager.cs" />
-    <Compile Include="IMergePlanningManager.cs" />
-    <Compile Include="IMatchReviewProfileManager.cs" />
-    <Compile Include="IMergingManager.cs" />
     <Compile Include="IOrganizationManager.cs" />
-    <Compile Include="IPromoteManager.cs" />
     <Compile Include="IRelationshipTypeManager.cs" />
     <Compile Include="IWorkflowRuntimeManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -133,9 +122,7 @@
       <Install>true</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configurations\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

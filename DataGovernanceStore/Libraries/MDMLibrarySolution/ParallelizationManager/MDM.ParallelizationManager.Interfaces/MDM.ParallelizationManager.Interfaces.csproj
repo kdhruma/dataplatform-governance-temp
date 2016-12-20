@@ -10,7 +10,7 @@
     <RootNamespace>MDM.ParallelizationManager.Interfaces</RootNamespace>
     <AssemblyName>RS.MDM.ParallelizationManager.Interfaces</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>   
+    <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -45,7 +45,6 @@
     <Compile Include="IDataProcessor.cs" />
     <Compile Include="IDataProcessorSource.cs" />
     <Compile Include="IMDMMessagePackage.cs" />
-    <Compile Include="IParallelQueue.cs" />
     <Compile Include="MDMMessagePackageCollection.cs" />
     <Compile Include="MDMMessagePakage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

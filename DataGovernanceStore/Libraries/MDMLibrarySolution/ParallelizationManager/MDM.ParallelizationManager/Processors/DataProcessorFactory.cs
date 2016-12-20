@@ -14,7 +14,6 @@ namespace MDM.ParallelizationManager.Processors
 {
     using MDM.Core;
     using MDM.BusinessObjects;
-    using MDM.ParallelizationManager.Objects;
     using MDM.ParallelizationManager.Interfaces;
 
     /// <summary>

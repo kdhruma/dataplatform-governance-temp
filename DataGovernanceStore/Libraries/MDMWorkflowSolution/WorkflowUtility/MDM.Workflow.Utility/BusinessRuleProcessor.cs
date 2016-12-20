@@ -123,9 +123,10 @@ namespace MDM.Workflow.Utility
         public static OperationResult CallAsyncProcess(Int64 entityId, WorkflowActionContext actionContext, Int64 workflowVersion, String activityName, String workflowRuntimeInstanceId, EntityActivityList activityList)
         {
             EntityFamilyQueue entityFamilyQueue = GetEntityFamilyQueueWithWorkflowChangeContext(entityId, actionContext, workflowVersion, activityName, workflowRuntimeInstanceId, activityList, "BusinessRuleProcessor.CallAsyncProcess");
-            IEntityFamilyQueueManager entityFamilyQueueManager = ServiceLocator.Current.GetInstance(typeof(IEntityFamilyQueueManager)) as IEntityFamilyQueueManager;
+            //IEntityFamilyQueueManager entityFamilyQueueManager = ServiceLocator.Current.GetInstance(typeof(IEntityFamilyQueueManager)) as IEntityFamilyQueueManager;
 
-            return entityFamilyQueueManager.Process(entityFamilyQueue, new CallerContext(MDMCenterApplication.WindowsWorkflow, MDMCenterModules.MDMAdvanceWorkflow));
+            //return entityFamilyQueueManager.Process(entityFamilyQueue, new CallerContext(MDMCenterApplication.WindowsWorkflow, MDMCenterModules.MDMAdvanceWorkflow));
+            return null;
         }
 
         /// <summary>
@@ -231,99 +232,6 @@ namespace MDM.Workflow.Utility
                 {
                     diagnosticActivity.Start();
                 }
-
-                #region Get Match Results
-
-                IMatchingManager matchingManager = ServiceLocator.Current.GetInstance(typeof(IMatchingManager)) as IMatchingManager;
-
-                if (matchingManager == null)
-                {
-                    if (currentTraceSettings.IsBasicTracingEnabled)
-                    {
-                        diagnosticActivity.LogWarning("ProcessMatchReview: Service Locator returned a null instance of matching manager.");
-                    }
-
-                    return false;
-                }
-
-                IMatchingResult matchResult = matchingManager.GetMatchingResult(entityId, (Int64?)null);
-                
-                MatchingProfile matchProfile = matchingManager.GetMatchingProfile(matchResult.ProfileId);
-
-                if (matchProfile == null)
-                {
-                    if (currentTraceSettings.IsBasicTracingEnabled)
-                    {
-                        diagnosticActivity.LogWarning("ProcessMatchReview: Unable to find the match profile.");
-                    }
-
-                    return false;
-                }
-                
-                #endregion
-                
-                #region Get the MergePlanItem from the match results and MergePlanning Profile
-                IMatchReviewProfileManager mergePlanningProfileManager = ServiceLocator.Current.GetInstance(typeof(IMatchReviewProfileManager)) as IMatchReviewProfileManager;
-
-                if (mergePlanningProfileManager == null)
-                {
-                    if (currentTraceSettings.IsBasicTracingEnabled)
-                    {
-                        diagnosticActivity.LogWarning("ProcessMatchReview: Service Locator returned a null instance of mergeplanning profile manager.");
-                    }
-
-                    return false;
-                }
-
-                MatchReviewProfile mergePlanningProfile = mergePlanningProfileManager.GetById(matchProfile.MatchReviewProfileId, callerContext);
-                IMergePlanningManager mergePlanningManager = ServiceLocator.Current.GetInstance(typeof(IMergePlanningManager)) as IMergePlanningManager;
-
-                if (mergePlanningManager == null)
-                {
-                    if (currentTraceSettings.IsBasicTracingEnabled)
-                    {
-                        diagnosticActivity.LogWarning("ProcessMatchReview: Service Locator returned a null instance of merge planning manager.");
-                    }
-
-                    return false;
-                }
-
-                MergePlanItem mergePlanItem = mergePlanningManager.BuildMergePlanItem(matchResult as MatchingResult, mergePlanningProfile, callerContext);
-                #endregion
-
-                if (mergePlanItem == null)
-                {
-                    if (currentTraceSettings.IsBasicTracingEnabled)
-                    {
-                        diagnosticActivity.LogWarning("ProcessMatchReview: Call to BuildMergePlanItem returned a null mergeplanitem.");
-                    }
-                    return false;
-                }
-
-                #region Persist the MergePlanItem for the entity
-
-                IMergePlanItemManager mergePlanItemManager = ServiceLocator.Current.GetInstance(typeof(IMergePlanItemManager)) as IMergePlanItemManager;
-
-                if (mergePlanItemManager == null)
-                {
-                    if (currentTraceSettings.IsBasicTracingEnabled)
-                    {
-                        diagnosticActivity.LogWarning("ProcessMatchReview: Service Locator returned a null instance of merge plan item manager.");
-                    }
-
-                    return false;
-                }
-
-
-                OperationResult result = mergePlanItemManager.Create(mergePlanItem, callerContext);
-
-                if (result.OperationResultStatus == OperationResultStatusEnum.Failed)
-                {
-                    return false;
-                }
-
-                #endregion
-
             }
             catch (Exception ex)
             {
@@ -357,8 +265,6 @@ namespace MDM.Workflow.Utility
 		/// <returns></returns>
 		public static Boolean ExecuteMatchingReviewDecision(Int64 entityId, CallerContext callerContext)
 	    {
-			Boolean reviewComplete = false;
-
 			DiagnosticActivity diagnosticActivity = new DiagnosticActivity();
 			TraceSettings currentTraceSettings = MDMOperationContextHelper.GetCurrentTraceSettings();
 			try
@@ -367,72 +273,7 @@ namespace MDM.Workflow.Utility
 				{
 					diagnosticActivity.Start();
 				}
-
-				#region Get the MatchPlanItem Associated with an entity.
-
-				IMergePlanItemManager mergePlanItemManager = ServiceLocator.Current.GetInstance(typeof (IMergePlanItemManager)) as IMergePlanItemManager;
-
-				if (mergePlanItemManager == null)
-				{
-					if (currentTraceSettings.IsBasicTracingEnabled)
-					{
-						diagnosticActivity.LogWarning("ExecuteMatchingReviewDecision: Service Locator returned a null instance of merge plan item manager.");
-					}
-
-					return false;
-				}
-
-				MergePlanItemCollection mergePlanItemColl = mergePlanItemManager.GetByJobForSourceEntities(null, null, new System.Collections.ObjectModel.Collection<long>() {entityId}, callerContext);
-
-				if (mergePlanItemColl == null)
-				{
-					if (currentTraceSettings.IsBasicTracingEnabled)
-					{
-						diagnosticActivity.LogWarning("ExecuteMatchingReviewDecision: Service Locator returned a null instance of merge plan item collection.");
-					}
-
-					return false;
-				}
-
-				MergePlanItem mergePlanItem = mergePlanItemColl.FirstOrDefault();
-
-				if (mergePlanItem == null)
-				{
-					if (currentTraceSettings.IsBasicTracingEnabled)
-					{
-						diagnosticActivity.LogWarning("ExecuteMatchingReviewDecision: Merge plan item collection is empty.");
-					}
-
-					return false;
-				}
-
-				//Send the review status and uncomplete for user to take action.
-				if (mergePlanItem.MergeActions.Contains(MergeAction.NeedsManualReview) || mergePlanItem.MergeActions.Contains(MergeAction.Unknown))
-				{
-					return false;
-				}
-
-				IMergingManager mergingManager = ServiceLocator.Current.GetInstance(typeof(IMergingManager)) as IMergingManager;
-
-				if (mergingManager == null)
-				{
-					if (currentTraceSettings.IsBasicTracingEnabled)
-					{
-						diagnosticActivity.LogWarning("ExecuteMatchingReviewDecision: Service Locator returned a null instance of merging manager.");
-					}
-
-					return false;
-				}
-
-				MergeOperationResult operationResult = mergingManager.ProcessMergePlanItem(mergePlanItem, MergeMode.MergeExisting, null, callerContext);
-
-				reviewComplete = (mergePlanItem.UserReviewStatus == MergePlanUserReviewStatus.NotRequired || mergePlanItem.UserReviewStatus == MergePlanUserReviewStatus.Complete);
-
-				#endregion
-
-				#region Execute Merge
-
-				#endregion
+                
 			}
 			catch(Exception ex)
 		    {
@@ -454,7 +295,7 @@ namespace MDM.Workflow.Utility
 				}
 			}
 
-		    return reviewComplete;
+		    return true;
 	    }
 
 	    #region Private Methods
