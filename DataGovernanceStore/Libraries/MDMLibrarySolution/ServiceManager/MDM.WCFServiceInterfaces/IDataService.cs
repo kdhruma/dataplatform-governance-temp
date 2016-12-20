@@ -117,47 +117,11 @@ namespace MDM.WCFServiceInterfaces
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         Entity GetEntityHierarchy(EntityUniqueIdentifier entityUniqueIdentifier, EntityContext entityContext, EntityGetOptions entityGetOptions, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Table CalculateEntityHierarchyDimensions(EntityVariantLevel entityHierarchyLevel, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Boolean ProcessEntityHierarchyGenerationRules(Int64 entityId, EntityVariantDefinition entityHierarchyDefinition, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityVariantDefinition GetEntityHierarchyDimensionValues(Int64 entityId, EntityVariantDefinition entityHierarchyDefinition, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Table GetEntityHierarchyMatrix(Int64 entityId, EntityVariantDefinition entityHierarchyDefinition, OperationResult operationResult, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        OperationResult ProcessEntityHierarchyMatrix(Int64 entityId, Table matrixTable, EntityVariantDefinition entityHierarchyDefinition, CallerContext callerContext);
-
-        [OperationContract(Name = "GenerateEntityHierarchyWithDimensionValues")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        OperationResult GenerateEntityHierarchy(Entity entity, EntityVariantDefinition entityHierarchyDefinition, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        OperationResult GenerateEntityHierarchy(Entity entity, Table matrixTable, EntityVariantDefinition entityHierarchyDefinition, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityCollection GetChildEntitiesByEntityType(Int64 entityId, Int32 entityTypeId, Collection<KeyValuePair<Int32, LocaleEnum>> attributeInfoList, MDMCenterApplication application, MDMCenterModules module);
-
+        
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         Collection<Int64> GetChildEntitiesIdsByEntityType(Collection<Int64> entityIds, Collection<Int32> childEntityTypeIds);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityCollection GetChildEntities(Int64 parentEntityId, Int32 childEntityTypeId, LocaleEnum locale, Collection<Int32> returnAttributeIds, Boolean getCompleteDetailsOfEntity, Int32 maxRecordsToReturn, CallerContext callerContext, Boolean getRecursiveChildren = false);
-
+        
         #endregion Entity Hierarchy Contracts
 
         #region File Contracts

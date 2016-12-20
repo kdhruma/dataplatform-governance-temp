@@ -106,10 +106,6 @@
       <Project>{d92ee921-e637-4789-9c1b-5a06fef05d6d}</Project>
       <Name>MDM.NotificationManager.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\MDMLibrarySolution\SearchManager\MDM.SearchManager.Business\MDM.SearchManager.Business.csproj">
-      <Project>{e5dd1e5b-c0a7-4857-98da-41a287b5545d}</Project>
-      <Name>MDM.SearchManager.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\MDMLibrarySolution\Utility\MDM.Utility\MDM.Utility.csproj">
       <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
       <Name>MDM.Utility</Name>

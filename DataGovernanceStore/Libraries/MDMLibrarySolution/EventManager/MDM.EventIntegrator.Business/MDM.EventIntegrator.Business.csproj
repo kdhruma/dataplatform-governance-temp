@@ -92,10 +92,6 @@
       <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
       <Name>MDM.BusinessObjects</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\BusinessRuleManager\MDM.BusinessRuleManager.Business\MDM.BusinessRuleManager.Business.csproj">
-      <Project>{F726AA52-FC28-4738-BA53-C4BFBC01BDCD}</Project>
-      <Name>MDM.BusinessRuleManager.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\CacheManager\MDM.CacheManager.Business\MDM.CacheManager.Business.csproj">
       <Project>{9078D667-A162-4258-8E8C-53725D5C2BE8}</Project>
       <Name>MDM.CacheManager.Business</Name>

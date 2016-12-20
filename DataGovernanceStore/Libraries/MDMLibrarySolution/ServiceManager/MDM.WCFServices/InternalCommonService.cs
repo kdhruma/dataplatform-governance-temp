@@ -291,19 +291,7 @@ namespace MDM.WCFServices
 
             return table;
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entityId"></param>
-        /// <param name="entityHierarchyDefinitionId"></param>
-        /// <param name="callerContext"></param>
-        /// <returns></returns>
-        public Boolean IsEntityHierarchyMatrixLatest(Int64 entityId, Int32 entityHierarchyDefinitionId, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<EntityHierarchyBL, Boolean>("IsEntityHierarchyMatrixLatest", businessLogic => businessLogic.IsLatestMatrix(entityId, entityHierarchyDefinitionId, callerContext), MDMTraceSource.EntityGet);
-        }
-
+        
         /// <summary>
         /// Gets entity variants level and entity types based on given entity id
         /// </summary>

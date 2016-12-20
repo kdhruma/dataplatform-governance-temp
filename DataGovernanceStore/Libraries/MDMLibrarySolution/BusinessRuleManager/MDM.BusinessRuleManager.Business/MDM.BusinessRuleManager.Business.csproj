@@ -84,10 +84,6 @@
       <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
       <Name>MDM.Utility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MDM.BusinessRuleManager.Data.SqlClient\MDM.BusinessRuleManager.Data.SqlClient.csproj">
-      <Project>{059ECB08-7832-4A19-8129-5600C33B43D8}</Project>
-      <Name>MDM.BusinessRuleManager.Data.SqlClient</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

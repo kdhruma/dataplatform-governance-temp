@@ -11,7 +11,7 @@
     <RootNamespace>MDM.ConfigurationManager.Business</RootNamespace>
     <AssemblyName>RS.MDM.ConfigurationManager.Business</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>    
+    <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -63,7 +63,6 @@
     <Content Include="Config\SqlParameters\AttributeManager.Parameters.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Config\SqlParameters\BusinessRuleManager.Parameters.config" />
     <Content Include="Config\SqlParameters\DataModelManager.Parameters.config">
       <SubType>Designer</SubType>
     </Content>
@@ -190,9 +189,6 @@
     <Content Include="Config\SqlParameters\CategoryManager.Parameters.config">
       <SubType>Designer</SubType>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Config\SqlParameters\SearchManager.Parameters.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Config\SqlParameters\VendorManager.Parameters.config">

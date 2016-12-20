@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -146,10 +146,6 @@
     <ProjectReference Include="..\..\RelationshipManager\MDM.RelationshipManager.Business\MDM.RelationshipManager.Business.csproj">
       <Project>{ca52a7a9-36fb-4ac1-baed-1092381b1f72}</Project>
       <Name>MDM.RelationshipManager.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\SearchManager\MDM.SearchManager.Business\MDM.SearchManager.Business.csproj">
-      <Project>{E5DD1E5B-C0A7-4857-98DA-41A287B5545D}</Project>
-      <Name>MDM.SearchManager.Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
       <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>

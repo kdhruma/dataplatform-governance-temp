@@ -2271,13 +2271,13 @@ namespace MDM.EntityManager.Business.EntityOperations
 
             //Note: caching is part of hierarchy relationships BL..
 
-            HierarchyRelationshipBL hierarchyRelationshipBL = new HierarchyRelationshipBL();
-            Boolean successFlag = hierarchyRelationshipBL.LoadHierarchyRelationships(entity, false, loadLatest, entityCacheStatus, updateCache, false);
+            //HierarchyRelationshipBL hierarchyRelationshipBL = new HierarchyRelationshipBL();
+            //Boolean successFlag = hierarchyRelationshipBL.LoadHierarchyRelationships(entity, false, loadLatest, entityCacheStatus, updateCache, false);
 
             if (isTracingEnabled)
                 MDMTraceHelper.EmitTraceEvent(TraceEventType.Information, String.Format("Done with load hierarchy relationships logic for entity id:{0}.", entity.Id), MDMTraceSource.EntityGet);
 
-            return successFlag;
+            return true;
         }
 
         #endregion
@@ -2305,13 +2305,13 @@ namespace MDM.EntityManager.Business.EntityOperations
 
             Boolean successFlag = true;
 
-            ExtensionRelationshipBL extensionRelationshipBL = new ExtensionRelationshipBL();
-            EntityOperationResult entityOperationResult = extensionRelationshipBL.Load(entity, loadLatest, entityCacheStatus, application, module, updateCache, false);
+            //ExtensionRelationshipBL extensionRelationshipBL = new ExtensionRelationshipBL();
+            //EntityOperationResult entityOperationResult = extensionRelationshipBL.Load(entity, loadLatest, entityCacheStatus, application, module, updateCache, false);
 
-            if (entityOperationResult != null && entityOperationResult.HasError)
-            {
-                successFlag = false;
-            }
+            //if (entityOperationResult != null && entityOperationResult.HasError)
+            //{
+            //    successFlag = false;
+            //}
 
             if (isTracingEnabled)
                 MDMTraceHelper.EmitTraceEvent(TraceEventType.Information, String.Format("Done with load extension relationships logic for entity id:{0}.", entity.Id), MDMTraceSource.EntityGet);

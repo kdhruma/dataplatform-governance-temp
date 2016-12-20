@@ -260,13 +260,13 @@ namespace MDM.EntityManager.Business.EntityOperations
 
             Boolean successFlag = true;
 
-            var extensionRelationshipBL = new ExtensionRelationshipBL();
-            EntityOperationResult entityOperationResult = extensionRelationshipBL.Load(entity, loadLatest, entityCacheStatus, application, module, updateCache, false);
+            //var extensionRelationshipBL = new ExtensionRelationshipBL();
+            //EntityOperationResult entityOperationResult = extensionRelationshipBL.Load(entity, loadLatest, entityCacheStatus, application, module, updateCache, false);
 
-            if (entityOperationResult != null && entityOperationResult.HasError)
-            {
-                successFlag = false;
-            }
+            //if (entityOperationResult != null && entityOperationResult.HasError)
+            //{
+            //    successFlag = false;
+            //}
 
             if (Constants.TRACING_ENABLED)
                 MDMTraceHelper.EmitTraceEvent(TraceEventType.Information, String.Format("Done with load extension relationships logic for entity id:{0}.", entity.Id), MDMTraceSource.EntityGet);

@@ -81,7 +81,6 @@
     </Compile>
     <Compile Include="EntityCacheStatusBL.cs" />
     <Compile Include="EntityEventArgs.cs" />
-    <Compile Include="EntityHierarchyBL.cs" />
     <Compile Include="EntityOperations\EntityParallelGetManager.cs" />
     <Compile Include="EntityOperations\EntityHierarchyGetManager.cs" />
     <Compile Include="EntityOperations\Helpers\EntityAttributeDefaultValueHelper.cs" />
@@ -104,8 +103,6 @@
     <Compile Include="EntityMapBufferManager.cs" />
     <Compile Include="EntityMapBL.cs" />
     <Compile Include="EntityValidationBL.cs" />
-    <Compile Include="ExtensionRelationshipBL.cs" />
-    <Compile Include="HierarchyRelationshipBL.cs" />
     <Compile Include="EntityOperationsBL.cs" />
     <Compile Include="EntityBL.cs" />
     <Compile Include="EntityEventManager.cs" />
@@ -146,10 +143,6 @@
       <Project>{742D04CC-77D6-4911-B94F-1B6CC4C4C171}</Project>
       <Name>MDM.AttributeDependencyManager.Business</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\AttributeManager\MDM.AttributeManager.Business\MDM.AttributeManager.Business.csproj">
-      <Project>{A1E41E01-2FE2-4388-8E3E-C901F4D619E6}</Project>
-      <Name>MDM.AttributeManager.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\AttributeModelManager\MDM.AttributeModelManager.Business\MDM.AttributeModelManager.Business.csproj">
       <Project>{7B0FB2D6-9963-4D42-BCE5-D96B2D72CEA6}</Project>
       <Name>MDM.AttributeModelManager.Business</Name>
@@ -161,10 +154,6 @@
     <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
       <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
       <Name>MDM.BusinessObjects</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\BusinessRuleManager\MDM.BusinessRuleManager.Business\MDM.BusinessRuleManager.Business.csproj">
-      <Project>{F726AA52-FC28-4738-BA53-C4BFBC01BDCD}</Project>
-      <Name>MDM.BusinessRuleManager.Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\CacheManager\MDM.CacheManager.Business\MDM.CacheManager.Business.csproj">
       <Project>{9078D667-A162-4258-8E8C-53725D5C2BE8}</Project>
@@ -246,10 +235,6 @@
     <ProjectReference Include="..\..\RelationshipManager\MDM.RelationshipManager.Business\MDM.RelationshipManager.Business.csproj">
       <Project>{CA52A7A9-36FB-4AC1-BAED-1092381B1F72}</Project>
       <Name>MDM.RelationshipManager.Business</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\SearchManager\MDM.SearchManager.Business\MDM.SearchManager.Business.csproj">
-      <Project>{E5DD1E5B-C0A7-4857-98DA-41A287B5545D}</Project>
-      <Name>MDM.SearchManager.Business</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\UomManager\MDM.UomManager.Business\MDM.UomManager.Business.csproj">
       <Project>{089C7C1D-180B-4335-96D8-1BCD9AFC47DF}</Project>

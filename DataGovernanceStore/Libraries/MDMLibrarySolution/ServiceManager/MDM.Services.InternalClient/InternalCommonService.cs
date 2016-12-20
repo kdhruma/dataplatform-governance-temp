@@ -468,38 +468,7 @@ namespace MDM.Services
         {
             return MakeServiceCall("ReclassifyLegacy", "ReclassifyLegacy", client => client.ReclassifyLegacy(dataXml, userLogin, isCategoryReclassify));
         }
-
-        /// <summary>
-        /// Checks wheather the HierarchyDefinition is modified or not
-        /// </summary>
-        /// <param name="entityId">Id of an Entity</param>
-        /// <param name="entityHierarchyDefinitionId">Id of a HierarchyDefinition</param>
-        /// <param name="callerContext">Specifies the caller context which contains the application and module that has invoked the API</param>
-        /// <returns>True if Hierarchy Definition has been modified</returns>
-        /// <exception cref="EndpointNotFoundException">Thrown when a remote endpoint could not be found or reached</exception>
-        /// <exception cref="InvalidOperationException">Thrown when a method call is invalid</exception>
-        /// <exception cref="TimeoutException">Thrown when the time allotted for an operation has expired</exception>
-        /// <exception cref="MDMOperationException">Thrown when the MDM operation fails</exception>
-        /// <exception cref="CommunicationException">Thrown when there is a communication error in either the service or client application</exception>
-        public Boolean IsEntityHierarchyMatrixLatest(Int64 entityId, Int32 entityHierarchyDefinitionId, CallerContext callerContext)
-        {
-            DiagnosticActivity curActivity = new DiagnosticActivity();
-
-            CallerContext clonedCallerContext = null;
-
-            if (callerContext != null)
-            {
-                clonedCallerContext = callerContext.Clone() as CallerContext;
-
-                if (clonedCallerContext != null)
-                {
-                    clonedCallerContext.ActivityId = curActivity.ActivityId;
-                }
-            }
-
-            return MakeServiceCall("IsEntityHierarchyMatrixLatest", "IsEntityHierarchyMatrixLatest", client => client.IsEntityHierarchyMatrixLatest(entityId, entityHierarchyDefinitionId, clonedCallerContext));
-        }
-
+        
         /// <summary>
         /// Gets entity variants level and entity types based on given entity id
         /// </summary>

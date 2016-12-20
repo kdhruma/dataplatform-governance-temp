@@ -370,11 +370,11 @@ namespace MDM.EntityManager.Business
                     //then do not try to validate it for max and min extension validation check
                     if (extensionEntityIdCountDictionary != null && extensionEntityIdCountDictionary.Count > 0)
                     {
-                        ExtensionRelationshipBL extensionRelationshipBL = new ExtensionRelationshipBL();
+                        //ExtensionRelationshipBL extensionRelationshipBL = new ExtensionRelationshipBL();
 
-                        //Dictionary with key as parent extension entity id and value contains dictionary of combination of 
-                        //container and entity type id and the respective value is the extension count in specific context.
-                        Dictionary<Int64, Dictionary<Int32, Int32>> originalExtensionEntitiesCountDictionary = extensionRelationshipBL.GetExtensionsRelationshipsCount(extensionEntityIdCountDictionary.Keys.ToCollection(), callerContext);
+                        ////Dictionary with key as parent extension entity id and value contains dictionary of combination of 
+                        ////container and entity type id and the respective value is the extension count in specific context.
+                        //Dictionary<Int64, Dictionary<Int32, Int32>> originalExtensionEntitiesCountDictionary = extensionRelationshipBL.GetExtensionsRelationshipsCount(extensionEntityIdCountDictionary.Keys.ToCollection(), callerContext);
                         Collection<Int64> erroredParentEntityIds = new Collection<Int64>();
 
                         foreach (Entity entity in entityCollection)
@@ -398,11 +398,11 @@ namespace MDM.EntityManager.Business
                             Int32 key = Utility.GetInternalUniqueKeyBasedOnParam(entity.ContainerId, entity.EntityTypeId);
                             Dictionary<Int32, Int32> originalContextEntityCountDictionary = null;
 
-                            if (originalExtensionEntitiesCountDictionary != null && originalExtensionEntitiesCountDictionary.Count > 0)
-                            {
-                                //This dictionary is container Id and count of extended entity in this container wrt parent extension entity id.
-                                originalExtensionEntitiesCountDictionary.TryGetValue(entity.ParentExtensionEntityId, out originalContextEntityCountDictionary);
-                            }
+                            //if (originalExtensionEntitiesCountDictionary != null && originalExtensionEntitiesCountDictionary.Count > 0)
+                            //{
+                            //    //This dictionary is container Id and count of extended entity in this container wrt parent extension entity id.
+                            //    originalExtensionEntitiesCountDictionary.TryGetValue(entity.ParentExtensionEntityId, out originalContextEntityCountDictionary);
+                            //}
 
                             Int32 originalExtensionCount = 0;
 

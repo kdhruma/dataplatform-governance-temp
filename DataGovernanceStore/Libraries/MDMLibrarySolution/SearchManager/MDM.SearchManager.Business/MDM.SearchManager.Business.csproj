@@ -121,10 +121,6 @@
       <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
       <Name>MDM.Utility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\MDM.SearchManager.Data.SqlClient\MDM.SearchManager.Data.SqlClient.csproj">
-      <Project>{9E7AC1EA-3193-4A80-9DA4-B37D59613353}</Project>
-      <Name>MDM.SearchManager.Data.SqlClient</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

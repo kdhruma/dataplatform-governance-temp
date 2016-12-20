@@ -66,11 +66,7 @@ namespace MDM.WCFServiceInterfaces
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         Table ReclassifyLegacy(String dataXml, String userLogin, Boolean isCategoryReclassify);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Boolean IsEntityHierarchyMatrixLatest(Int64 entityid, Int32 entityHierarchyDefinitionId, CallerContext callerContext);
-
+        
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         Dictionary<Int32, EntityType> GetEntityVariantLevels(Int64 entityId, CallerContext callerContext);
