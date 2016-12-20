@@ -71,8 +71,6 @@
     <Content Include="Microsoft\EnterpriseLibraries\Microsoft.Practices.ServiceLocation.dll" />
     <Content Include="Microsoft\WorkflowActivitiesLibrary\Microsoft.VisualStudio.Activities.dll" />
     <Content Include="OpenXML\V2.5\DocumentFormat.OpenXml.dll" />
-    <Content Include="OpenXML\V2.5\DocumentFormat.OpenXml.xml" />
-    <Content Include="OpenXML\V2.5\readme.htm" />
     <Content Include="Protobuf-net\protobuf-net.dll" />
     <Content Include="Protobuf-net\protobuf-net.xml" />
     <Content Include="StructureMap\CommonServiceLocator.StructureMapAdapter.Unofficial.dll" />
