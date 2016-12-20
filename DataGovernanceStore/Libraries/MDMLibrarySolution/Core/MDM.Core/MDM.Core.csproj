@@ -86,7 +86,6 @@
     <Compile Include="ContextObjects\ExecutionContext.cs" />
     <Compile Include="Extensions\CollectionExtensions.cs" />
     <Compile Include="Extensions\EnumExtensions.cs" />
-    <Compile Include="Extensions\LINQExtensions.cs" />
     <Compile Include="Extensions\EventHandlerExtensions.cs" />
     <Compile Include="Exceptions\DuplicateObjectException.cs" />
     <Compile Include="Exceptions\InvalidSourceFlagException.cs">

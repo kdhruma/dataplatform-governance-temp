@@ -77,11 +77,7 @@
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="IDiagnosticService.cs" />
-    <Compile Include="IInteropConfigurationService.cs" />
     <Compile Include="IInternalCommonService.cs" />
-    <Compile Include="IInteropDataModelService.cs" />
-    <Compile Include="IInteropEntityService.cs" />
-    <Compile Include="IInteropSecurityService.cs" />
     <Compile Include="IJigsawIntegrationService.cs" />
     <Compile Include="ILegacyDataAccessService.cs" />
     <Compile Include="IAuthenticationService.cs" />

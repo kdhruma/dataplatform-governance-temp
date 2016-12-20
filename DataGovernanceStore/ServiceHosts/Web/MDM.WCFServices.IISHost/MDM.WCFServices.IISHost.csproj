@@ -93,11 +93,7 @@
     <Content Include="ConfigurationService.svc" />
     <Content Include="JigsawIntegrationService.svc" />
     <Content Include="DiagnosticService.svc" />
-    <Content Include="InteropConfigurationService.svc" />
     <Content Include="InternalCommonService.svc" />
-    <Content Include="InteropDataModelService.svc" />
-    <Content Include="InteropEntityService.svc" />
-    <Content Include="InteropSecurityService.svc" />
     <Content Include="LegacyDataAccessService.svc" />
     <Content Include="DenormService.svc" />
     <Content Include="EntityExportService.svc" />

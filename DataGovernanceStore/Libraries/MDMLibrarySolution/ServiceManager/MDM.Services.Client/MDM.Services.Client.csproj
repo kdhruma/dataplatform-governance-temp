@@ -208,7 +208,6 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\DataSources\MDM.BusinessObjects.AppConfig.datasource" />
     <None Include="Properties\DataSources\MDM.BusinessObjects.AppConfigCollection1.datasource" />
     <None Include="Properties\DataSources\MDM.BusinessObjects.ApplicationContext1.datasource" />
@@ -1175,27 +1174,6 @@
     <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService8.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService10.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService11.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService12.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService13.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService14.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService15.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Service References\LegacyDataAccessServiceClient\LegacyDataAccessService8.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService2.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -1690,10 +1668,7 @@
     <None Include="Service References\SecurityServiceClient\SecurityService1.disco" />
     <None Include="Service References\MessageServiceClient\MessageService1.disco" />
     <None Include="Service References\EntityExportServiceClient\EntityExportService2.disco" />
-    <None Include="Service References\LegacyDataAccessServiceClient\configuration.svcinfo" />
-    <None Include="Service References\LegacyDataAccessServiceClient\configuration91.svcinfo" />
     <None Include="Service References\WorkflowDesignerServiceClient\WorkflowDesignerService2.disco" />
-    <None Include="Service References\StageTransitionFlowServiceClient\StageTransitionFlowService2.disco" />
     <None Include="Service References\KnowledgeBaseServiceClient\KnowledgeBaseService2.disco" />
     <None Include="Service References\ConfigurationServiceClient\ConfigurationService11.disco" />
     <None Include="Service References\CoreServiceClient\CoreService12.disco" />
