@@ -1524,16 +1524,6 @@
     <Compile Include="Workflow\WorkflowDataContext.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="CategoryObjectModel.cd" />
-    <None Include="ClassDiagram5.cd" />
-    <None Include="EntityContextObjectModel.cd" />
-    <None Include="Imports\ImportProfileObjectModel.cd" />
-    <None Include="EntityClassDiagram.cd" />
-    <None Include="ObjectModel.cd">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
       <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
       <Name>MDM.Core</Name>
