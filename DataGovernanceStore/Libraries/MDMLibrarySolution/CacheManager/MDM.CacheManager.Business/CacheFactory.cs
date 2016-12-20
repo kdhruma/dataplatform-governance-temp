@@ -138,12 +138,6 @@ namespace MDM.CacheManager.Business
             {
                 switch (cacheType)
                 {
-                    //Implement Memcached
-                    case CacheType.Memcached:
-                        {
-                            cache = new MemcachedCache();
-                            break;
-                        }
                     //Use ASP.NET Caching
                     case CacheType.AspNet:
                         {
@@ -224,12 +218,6 @@ namespace MDM.CacheManager.Business
             {
                 switch (cacheType)
                 {
-                    //Implement Memcached
-                    case CacheType.Memcached:
-                        {
-                            cache  = new MemcachedCache();
-                            break;
-                        }
                     //Use ASP.NET Caching
                     case CacheType.AspNet:
                         {
@@ -299,12 +287,6 @@ namespace MDM.CacheManager.Business
                 CacheType cacheType = CacheFactory.DefaultNotificationCacheType;
                 switch (cacheType)
                 {
-                    //Implement Memcached
-                    case CacheType.Memcached:
-                        {
-                            cache = new MemcachedCache();
-                            break;
-                        }
                     //Use ASP.NET Caching
                     case CacheType.AspNet:
                         {

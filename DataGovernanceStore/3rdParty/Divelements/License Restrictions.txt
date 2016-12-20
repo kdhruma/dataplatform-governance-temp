@@ -1,4 +1,0 @@
-The controls in this folder are trial versions and cannot be used for production builds.
-
-Thanks,
-Tamma.

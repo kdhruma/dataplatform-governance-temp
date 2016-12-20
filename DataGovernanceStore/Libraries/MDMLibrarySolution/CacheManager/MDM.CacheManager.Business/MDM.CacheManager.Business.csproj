@@ -73,9 +73,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\..\3rdParty\AppFabric\Microsoft.WindowsFabric.Data.Common.dll</HintPath>
     </Reference>
-    <Reference Include="NMemcached.Client">
-      <HintPath>..\..\..\..\3rdParty\MemcachedClient\NMemcached.Client.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core">
@@ -105,7 +102,6 @@
     <Compile Include="ICache.cs" />
     <Compile Include="InternalCache.cs" />
     <Compile Include="JobServiceCacheNotificationProcessor.cs" />
-    <Compile Include="MemcachedCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -68,11 +68,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DockingLibrary">
-      <HintPath>..\..\..\..\3rd Party\DockingLibrary\DockingLibrary.dll</HintPath>
+      <HintPath>..\..\..\..\3rdParty\DockingLibrary\DockingLibrary.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.Activities, Version=10.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\3rd Party\Microsoft\WorkflowActivitiesLibrary\Microsoft.VisualStudio.Activities.dll</HintPath>
+      <HintPath>..\..\..\..\3rdParty\Microsoft\WorkflowActivitiesLibrary\Microsoft.VisualStudio.Activities.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Activities" />

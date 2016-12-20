@@ -68,7 +68,7 @@
       <HintPath>..\..\..\..\3rdParty\Microsoft\EnterpriseLibraries\Microsoft.Practices.ServiceLocation.dll</HintPath>
     </Reference>
     <Reference Include="protobuf-net">
-      <HintPath>..\..\..\..\3rd Party\Protobuf-net\protobuf-net.dll</HintPath>
+      <HintPath>..\..\..\..\3rdParty\Protobuf-net\protobuf-net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />

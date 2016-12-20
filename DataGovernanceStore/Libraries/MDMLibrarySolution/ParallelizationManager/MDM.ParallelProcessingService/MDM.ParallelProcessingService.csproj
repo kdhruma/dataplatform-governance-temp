@@ -40,7 +40,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.9.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\3rd Party\TPLDataFlow\Current\System.Threading.Tasks.Dataflow.dll</HintPath>
+      <HintPath>..\..\..\..\3rdParty\TPLDataFlow\Current\System.Threading.Tasks.Dataflow.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
