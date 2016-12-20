@@ -15,6 +15,7 @@ namespace MDM.BusinessRuleManager.Data
     /// </summary>
     public class BusinessRuleViewContextDA : SqlClientDataAccessBase
     {
+
         #region Fields
 
         #endregion
