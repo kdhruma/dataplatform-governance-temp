@@ -18,6 +18,7 @@ namespace Riversand.JobService
 	/// </summary>
 	public abstract class Job : Interfaces.IJob
 	{
+
 		/// <summary>
 		/// Base contructor that takes the job id
 		/// </summary>

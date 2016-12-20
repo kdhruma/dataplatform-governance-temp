@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -136,4 +137,144 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{685C0E09-3385-4BDA-96D3-0AB568049DF1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.JigsawIntegrationManager</RootNamespace>
+    <AssemblyName>RS.MDM.JigsawIntegrationManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>  
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3rd Party\Microsoft\EnterpriseLibraries\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\3rd Party\JsonDotNet\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="DataPackages\AppConfigManageDataPackage.cs" />
+    <Compile Include="DataPackages\ExportEventData.cs" />
+    <Compile Include="DTO\AppConfigManageMessage.cs" />
+    <Compile Include="DTO\MatchRequestContextFilter.cs" />
+    <Compile Include="DTO\WorkflowInfo.cs" />
+    <Compile Include="InboundMessageProcessManager.cs" />
+    <Compile Include="DataPackages\IEventData.cs" />
+    <Compile Include="DataPackages\Enums.cs" />
+    <Compile Include="DataPackages\WorkflowEventData.cs" />
+    <Compile Include="DataPackages\EventDataPackage.cs" />
+    <Compile Include="DataPackages\EntityMessageDataPackage.cs" />
+    <Compile Include="DTO\IMessageBase.cs" />
+    <Compile Include="MessageProducers\AppConfigManageMessageProducer10.cs" />
+    <Compile Include="MessageProducers\EventMessageProducer10.cs" />
+    <Compile Include="MessageProducers\EntityMessageProducer10.cs" />
+    <Compile Include="JsonSerializers\MessageJsonGenerator10.cs" />
+    <Compile Include="DTO\AttributesInfo.cs" />
+    <Compile Include="DTO\Attribute.cs" />
+    <Compile Include="DTO\EventMessage.cs" />
+    <Compile Include="DTO\EventExtendedAttributesInfo.cs" />
+    <Compile Include="DTO\EntityExtendedAttributesInfo.cs" />
+    <Compile Include="DTO\ChangeContext.cs" />
+    <Compile Include="DTO\BusinessConditionsSummary.cs" />
+    <Compile Include="DTO\IExtendedAttributesInfo.cs" />
+    <Compile Include="DTO\Relationship.cs" />
+    <Compile Include="DTO\EntityMessage.cs" />
+    <Compile Include="DTO\ValidationState.cs" />
+    <Compile Include="DTO\ValidationStatesSummary.cs" />
+    <Compile Include="DTO\Workflow.cs" />
+    <Compile Include="DTO\WorkflowStage.cs" />
+    <Compile Include="DTO\RequestParams.cs" />
+    <Compile Include="DTO\EntityInfo.cs" />
+    <Compile Include="DTO\MessageBase.cs" />
+    <Compile Include="JigsawUtility.cs" />
+    <Compile Include="JsonSerializers\IJigsawJsonDeserializable.cs" />
+    <Compile Include="JsonSerializers\IJigsawJsonSerializable.cs" />
+    <Compile Include="JigsawConstants.cs" />
+    <Compile Include="JigsawExtensionMethods.cs" />
+    <Compile Include="JsonSerializers\JigsawJsonSerializer.cs" />
+    <Compile Include="JigsawTransformer.cs" />
+    <Compile Include="DTO\SystemInfo.cs" />
+    <Compile Include="MessageProducers\ProducerHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177ae776-aabc-4e81-99de-733fff5221d0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{b907bb1d-d3ba-4316-a05f-b3a99d66a6b9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5a452cd7-42cf-41b0-83e9-759c68b43eef}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776BE6C-5371-41E2-B444-3C42377CC9CA}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceManager\MDM.Services.Client\MDM.Services.Client.csproj">
+      <Project>{E277413E-FDD8-47E0-8558-614E5AECAE2C}</Project>
+      <Name>MDM.Services.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{c465d67c-eb64-4b40-82ba-04cc0c202c03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.IntegrationManager.Business\MDM.IntegrationManager.Business.csproj">
+      <Project>{2b1e64b2-8387-4e35-bfec-95162c90a2e3}</Project>
+      <Name>MDM.IntegrationManager.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> a0c31d09068493c4b4054de03679a37608ae4ad1
 </Project>

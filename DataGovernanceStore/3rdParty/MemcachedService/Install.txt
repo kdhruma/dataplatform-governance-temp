@@ -1,0 +1,113 @@
+mdmcached settings
+-p <num>      TCP port number to listen on (default: 11211)
+-U <num>      UDP port number to listen on (default: 11211, 0 is off)
+-s <file>     UNIX socket path to listen on (disables network support)
+-a <mask>     access mask for UNIX socket, in octal (default: 0700)
+-l <ip_addr>  interface to listen on (default: INADDR_ANY, all addresses)
+-d            run as a daemon
+-r            maximize core file limit
+-u <username> assume identity of <username> (only when run as root)
+-m <num>      max memory to use for items in megabytes (default: 64 MB)
+-M            return error on memory exhausted (rather than removing items)
+-c <num>      max simultaneous connections (default: 1024)
+-k            lock down all paged memory.  Note that there is a
+              limit on how much memory you may lock.  Trying to
+              allocate more than that would fail, so be sure you
+              set the limit correctly for the user you started
+              the daemon with (not for -u <username> user;
+              under sh this is done with 'ulimit -S -l NUM_KB').
+-v            verbose (print errors/warnings while in event loop)
+-vv           very verbose (also print client commands/reponses)
+-vvv          extremely verbose (also print internal state transitions)
+-h            print this help and exit
+-i            print memcached and libevent license
+-P <file>     save PID in <file>, only used with -d option
+-f <factor>   chunk size growth factor (default: 1.25)
+-n <bytes>    minimum space allocated for key+value+flags (default: 48)
+-L            Try to use large memory pages (if available). Increasing
+              the memory page size could reduce the number of TLB misses
+              and improve the performance. In order to get large pages
+              from the OS, memcached will allocate the total item-cache
+              in one large chunk.
+-D <char>     Use <char> as the delimiter between key prefixes and IDs.
+              This is used for per-prefix stats reporting. The default is
+              ":" (colon). If this option is specified, stats collection
+              is turned on automatically; if not, then it may be turned on
+              by sending the "stats detail on" command to the server.
+-t <num>      number of threads to use (default: 4)
+-R            Maximum number of requests per event, limits the number of
+              requests process for a given connection to prevent
+              starvation (default: 20)
+-C            Disable use of CAS
+-b            Set the backlog queue limit (default: 1024)
+-B            Binding protocol - one of ascii, binary, or auto (default)
+-I            Override the size of each slab page. Adjusts max item size
+              (default: 1mb, min: 1k, max: 128m)
+
+C:\Services\memcached1-4-5>sc ?
+
+ERROR:  Unrecognized command
+
+DESCRIPTION:
+        SC is a command line program used for communicating with the
+        Service Control Manager and services.
+USAGE:
+        sc <server> [command] [service name] <option1> <option2>...
+
+
+        The option <server> has the form "\\ServerName"
+        Further help on commands can be obtained by typing: "sc [command]"
+        Commands:
+          query-----------Queries the status for a service, or
+                          enumerates the status for types of services.
+          queryex---------Queries the extended status for a service, or
+                          enumerates the status for types of services.
+          start-----------Starts a service.
+          pause-----------Sends a PAUSE control request to a service.
+          interrogate-----Sends an INTERROGATE control request to a service.
+          continue--------Sends a CONTINUE control request to a service.
+          stop------------Sends a STOP request to a service.
+          config----------Changes the configuration of a service (persistent).
+          description-----Changes the description of a service.
+          failure---------Changes the actions taken by a service upon failure.
+          failureflag-----Changes the failure actions flag of a service.
+          sidtype---------Changes the service SID type of a service.
+          privs-----------Changes the required privileges of a service.
+          qc--------------Queries the configuration information for a service.
+          qdescription----Queries the description for a service.
+          qfailure--------Queries the actions taken by a service upon failure.
+          qfailureflag----Queries the failure actions flag of a service.
+          qsidtype--------Queries the service SID type of a service.
+          qprivs----------Queries the required privileges of a service.
+          qtriggerinfo----Queries the trigger parameters of a service.
+          qpreferrednode--Queries the preferred NUMA node of a service.
+          delete----------Deletes a service (from the registry).
+          create----------Creates a service. (adds it to the registry).
+          control---------Sends a control to a service.
+          sdshow----------Displays a service's security descriptor.
+          sdset-----------Sets a service's security descriptor.
+          showsid---------Displays the service SID string corresponding to an ar
+bitrary name.
+          triggerinfo-----Configures the trigger parameters of a service.
+          preferrednode---Sets the preferred NUMA node of a service.
+          GetDisplayName--Gets the DisplayName for a service.
+          GetKeyName------Gets the ServiceKeyName for a service.
+          EnumDepend------Enumerates Service Dependencies.
+
+        The following commands don't require a service name:
+        sc <server> <command> <option>
+          boot------------(ok | bad) Indicates whether the last boot should
+                          be saved as the last-known-good boot configuration
+          Lock------------Locks the Service Database
+          QueryLock-------Queries the LockStatus for the SCManager Database
+EXAMPLE:
+        sc start MyService
+
+Would you like to see help for the QUERY and QUERYEX commands? [ y | n ]:
+
+
+
+
+sc create "Memcached11211" binPath= "C:\Services\memcached1-4-2\memcached.exe -d runservice -p 11211 -m 1024" DisplayName= "Memcached11211" start= auto
+
+sc delete "Memcached11211"

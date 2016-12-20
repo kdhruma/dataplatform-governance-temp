@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -102,4 +103,110 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0F256724-C567-4B1F-A676-26CD7C456861}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.ImportSources.RSExcel</RootNamespace>
+    <AssemblyName>RS.MDM.ImportSources.RSExcel</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>  
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.0.5022.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3rd Party\OpenXML\V2.5\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ExcelSource10.cs" />
+    <Compile Include="ExcelSource12.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CachedDataModelManager\MDM.CachedDataModelManager\MDM.CachedDataModelManager.csproj">
+      <Project>{e431beb8-1c52-45b4-b151-23eca7981e0e}</Project>
+      <Name>MDM.CachedDataModelManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5a452cd7-42cf-41b0-83e9-759c68b43eef}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776be6c-5371-41e2-b444-3c42377cc9ca}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.ExcelUtility\MDM.ExcelUtility.csproj">
+      <Project>{3C6AC272-927E-4F12-B7BA-BD3EDC219092}</Project>
+      <Name>MDM.ExcelUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{c465d67c-eb64-4b40-82ba-04cc0c202c03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.Imports.Interfaces\MDM.Imports.Interfaces.csproj">
+      <Project>{A9DC2CE7-0BB2-46EF-BA51-A7AD371B91A7}</Project>
+      <Name>MDM.Imports.Interfaces</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Samples\RSExcel11 Sample.xls" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> a0c31d09068493c4b4054de03679a37608ae4ad1
 </Project>

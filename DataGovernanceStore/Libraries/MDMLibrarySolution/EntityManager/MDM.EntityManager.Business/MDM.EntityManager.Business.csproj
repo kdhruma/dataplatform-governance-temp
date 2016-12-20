@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -303,4 +304,311 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A796D6E2-BC0B-441B-9703-EB2204552536}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.EntityManager.Business</RootNamespace>
+    <AssemblyName>RS.MDM.EntityManager.Business</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3rd Party\Microsoft\EnterpriseLibraries\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3rd Party\TPLDataFlow\Current\System.Threading.Tasks.Dataflow.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="EntityCacheStatusBL.cs" />
+    <Compile Include="EntityCopyPasteContentBL.cs" />
+    <Compile Include="EntityEventArgs.cs" />
+    <Compile Include="EntityFamilyBL.cs" />
+    <Compile Include="EntityFamilyQueueBL.cs" />
+    <Compile Include="EntityHierarchyBL.cs" />
+    <Compile Include="EntityHierarchyProcessManager.cs" />
+    <Compile Include="EntityHistoryBL.cs" />
+    <Compile Include="EntityOperations\EntityParallelGetManager.cs" />
+    <Compile Include="EntityOperations\EnsureEntityDataManager.cs" />
+    <Compile Include="EntityOperations\EntityHierarchyGetManager.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityAttributeDefaultValueHelper.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityAttributeModelHelper.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityChangeContextHelper.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityCompareAndMergeHelper.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityJigsawIntegrationHelper.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityContextHelper.cs" />
+    <Compile Include="EntityOperations\EntityIdentificationManager.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityOperationsCommonUtility.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityCacheHelper.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityFillHelper.cs" />
+    <Compile Include="EntityOperations\EntityModelGetManager.cs" />
+    <Compile Include="EntityOperations\EntityProcessManager.cs" />
+    <Compile Include="EntityOperations\EntityGetManager.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityLookupAttributeHelper.cs" />
+    <Compile Include="EntityOperations\EntityReclassificationManager.cs" />
+    <Compile Include="EntityOperations\Helpers\EntityStateValidationHelper.cs" />
+    <Compile Include="EntityOperations\Helpers\ExportQualificationHelper.cs" />
+    <Compile Include="EntityQueueBL.cs" />
+    <Compile Include="EntityUniqueIdentificationMapBL.cs" />
+    <Compile Include="EntityStateValidationBL.cs" />
+    <Compile Include="ImpactedEntityBL.cs" />
+    <Compile Include="EntityLocaleBL.cs" />
+    <Compile Include="EntityMapBufferManager.cs" />
+    <Compile Include="EntityMapBL.cs" />
+    <Compile Include="EntityValidationBL.cs" />
+    <Compile Include="ExtensionRelationshipBL.cs" />
+    <Compile Include="HierarchyRelationshipBL.cs" />
+    <Compile Include="EntityOperationsBL.cs" />
+    <Compile Include="EntityBL.cs" />
+    <Compile Include="EntityEventManager.cs" />
+    <Compile Include="EntityViewBL.cs" />
+    <Compile Include="PromoteBL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SourceValueBL.cs" />
+    <Compile Include="SourceBL.cs" />
+    <Compile Include="StronglyTypedEntityCacheStatusBL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\MDMWorkflowSolution\WorkflowPersistenceManager\MDM.Workflow.PersistenceManager.Business\MDM.Workflow.PersistenceManager.Business.csproj">
+      <Project>{7dd7fb57-a1e5-4e1b-b481-4f0a0f7f3d46}</Project>
+      <Name>MDM.Workflow.PersistenceManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\MDMWorkflowSolution\WorkflowUtility\MDM.Workflow.Utility\MDM.Workflow.Utility.csproj">
+      <Project>{e7c6965e-b494-43eb-85ce-05fe2d502a31}</Project>
+      <Name>MDM.Workflow.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AdminManager\MDM.AdminManager.Business\MDM.AdminManager.Business.csproj">
+      <Project>{8f148d32-8428-405b-ad0f-e8aa554d6564}</Project>
+      <Name>MDM.AdminManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\RS.MDM\RS.MDM.csproj">
+      <Project>{62BE22DC-9029-4885-A814-37E6C3CE65B5}</Project>
+      <Name>RS.MDM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\StoredProcedures\StoredProcedures.csproj">
+      <Project>{D7009E76-EE1C-4AF9-B211-FF12403E1FB3}</Project>
+      <Name>StoredProcedures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ActivityLogManager\MDM.ActivityLogManager.Business\MDM.ActivityLogManager.Business.csproj">
+      <Project>{6424b116-8f8e-4d80-b915-7b634b743972}</Project>
+      <Name>MDM.ActivityLogManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ApplicationServiceManager\MDM.ApplicationServiceManager.Business\MDM.ApplicationServiceManager.Business.csproj">
+      <Project>{2CE73ED1-47EE-46DF-B8D1-39AC4DB02D14}</Project>
+      <Name>MDM.ApplicationServiceManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AttributeDependencyManager\MDM.AttributeDependencyManager.Business\MDM.AttributeDependencyManager.Business.csproj">
+      <Project>{742D04CC-77D6-4911-B94F-1B6CC4C4C171}</Project>
+      <Name>MDM.AttributeDependencyManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AttributeManager\MDM.AttributeManager.Business\MDM.AttributeManager.Business.csproj">
+      <Project>{A1E41E01-2FE2-4388-8E3E-C901F4D619E6}</Project>
+      <Name>MDM.AttributeManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\AttributeModelManager\MDM.AttributeModelManager.Business\MDM.AttributeModelManager.Business.csproj">
+      <Project>{7B0FB2D6-9963-4D42-BCE5-D96B2D72CEA6}</Project>
+      <Name>MDM.AttributeModelManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BufferManager\MDM.BufferManager\MDM.BufferManager.csproj">
+      <Project>{e62bf6f6-8c07-4681-9cbf-80f9e250356c}</Project>
+      <Name>MDM.BufferManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessRuleManager\MDM.BusinessRuleManager.Business\MDM.BusinessRuleManager.Business.csproj">
+      <Project>{F726AA52-FC28-4738-BA53-C4BFBC01BDCD}</Project>
+      <Name>MDM.BusinessRuleManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CacheManager\MDM.CacheManager.Business\MDM.CacheManager.Business.csproj">
+      <Project>{9078D667-A162-4258-8E8C-53725D5C2BE8}</Project>
+      <Name>MDM.CacheManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CategoryManager\MDM.CategoryManager.Business\MDM.CategoryManager.Business.csproj">
+      <Project>{b45f3b95-23d7-4928-90f4-604bbd02baa9}</Project>
+      <Name>MDM.CategoryManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ConfigurationManager\MDM.ConfigurationManager.Business\MDM.ConfigurationManager.Business.csproj">
+      <Project>{D8B5C77D-FFF9-4B31-814A-AC12DDEAC98C}</Project>
+      <Name>MDM.ConfigurationManager.Business</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ContainerManager\MDM.ContainerManager.Business\MDM.ContainerManager.Business.csproj">
+      <Project>{A3D69479-12CC-4F03-8DAD-FADED4C301A1}</Project>
+      <Name>MDM.ContainerManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataModelManager\MDM.DataModelManager.Business\MDM.DataModelManager.Business.csproj">
+      <Project>{DA6ADC6F-7AB6-4120-8EFB-A866EAA4EEA4}</Project>
+      <Name>MDM.DataModelManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\EntityModelManager\MDM.EntityModelManager.Business\MDM.EntityModelManager.Business.csproj">
+      <Project>{a0fa2cab-e4ff-4007-bb0a-dfe2b7ce1b42}</Project>
+      <Name>MDM.EntityModelManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExceptionManager\MDM.ExceptionManager\MDM.ExceptionManager.csproj">
+      <Project>{C26B08D2-5D90-476E-8DEF-A740C9E9C4AD}</Project>
+      <Name>MDM.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\HierarchyManager\MDM.HierarchyManager.Business\MDM.HierarchyManager.Business.csproj">
+      <Project>{276a91f6-c585-41a3-9bdb-fcfc92583e8a}</Project>
+      <Name>MDM.HierarchyManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5A452CD7-42CF-41B0-83E9-759C68B43EEF}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IntegrationManager\MDM.IntegrationManager.Business\MDM.IntegrationManager.Business.csproj">
+      <Project>{2b1e64b2-8387-4e35-bfec-95162c90a2e3}</Project>
+      <Name>MDM.IntegrationManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\IntegrationManager\MDM.JigsawIntegrationManager\MDM.JigsawIntegrationManager.csproj">
+      <Project>{685c0e09-3385-4bda-96d3-0ab568049df1}</Project>
+      <Name>MDM.JigsawIntegrationManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776BE6C-5371-41E2-B444-3C42377CC9CA}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KnowledgeManager\MDM.KnowledgeManager.Business\MDM.KnowledgeManager.Business.csproj">
+      <Project>{6626EF27-DADA-4611-BA5A-8254DC8F8405}</Project>
+      <Name>MDM.KnowledgeManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LookupManager\MDM.LookupManager.Business\MDM.LookupManager.Business.csproj">
+      <Project>{935F7E17-F114-4203-A4F5-F9997BD9F773}</Project>
+      <Name>MDM.LookupManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MessageManager\MDM.MessageBrokerManager\MDM.MessageBrokerManager.csproj">
+      <Project>{f1a7148f-2409-4ab4-9be0-17be240d1da9}</Project>
+      <Name>MDM.MessageBrokerManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\MessageManager\MDM.MessageManager.Business\MDM.MessageManager.Business.csproj">
+      <Project>{696D72C4-BBE3-4C9D-A47C-C1508330A11A}</Project>
+      <Name>MDM.MessageManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ParallelizationManager\MDM.ParallelizationManager\MDM.ParallelizationManager.csproj">
+      <Project>{f02695a5-7293-4e0f-a2af-0a6711c2f20f}</Project>
+      <Name>MDM.ParallelizationManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\PermissionManager\MDM.PermissionManager.Business\MDM.PermissionManager.Business.csproj">
+      <Project>{42A072E3-D599-4EBB-A96D-18A1A2F87CF8}</Project>
+      <Name>MDM.PermissionManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\RelationshipManager\MDM.RelationshipManager.Business\MDM.RelationshipManager.Business.csproj">
+      <Project>{CA52A7A9-36FB-4AC1-BAED-1092381B1F72}</Project>
+      <Name>MDM.RelationshipManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\SearchManager\MDM.SearchManager.Business\MDM.SearchManager.Business.csproj">
+      <Project>{E5DD1E5B-C0A7-4857-98DA-41A287B5545D}</Project>
+      <Name>MDM.SearchManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\UomManager\MDM.UomManager.Business\MDM.UomManager.Business.csproj">
+      <Project>{089C7C1D-180B-4335-96D8-1BCD9AFC47DF}</Project>
+      <Name>MDM.UomManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MDM.EntityManager.Data.SqlClient\MDM.EntityManager.Data.SqlClient.csproj">
+      <Project>{E9C56CE1-D8C7-4DF7-A57C-5F8B4B5FE039}</Project>
+      <Name>MDM.EntityManager.Data.SqlClient</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> a0c31d09068493c4b4054de03679a37608ae4ad1
 </Project>

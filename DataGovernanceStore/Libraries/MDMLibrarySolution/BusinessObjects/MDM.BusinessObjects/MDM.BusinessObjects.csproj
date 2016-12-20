@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -1580,4 +1581,1588 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{177AE776-AABC-4E81-99DE-733FFF5221D0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.BusinessObjects</RootNamespace>
+    <AssemblyName>RS.MDM.BusinessObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.BusinessObjects.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.BusinessObjects.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3rdParty\JsonDotNet\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3rd Party\Protobuf-net\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApplicationContextObjectMapping.cs" />
+    <Compile Include="ApplicationContextObjectMappingCollection.cs" />
+    <Compile Include="ApplicationContextTypeItem.cs" />
+    <Compile Include="ApplicationConfigurationItem.cs" />
+    <Compile Include="ApplicationContextTypeItemCollection.cs" />
+    <Compile Include="ApplicationConfigurationItemCollection.cs" />
+    <Compile Include="ApplicationContextCollection.cs" />
+    <Compile Include="AppConfigCollection.cs" />
+    <Compile Include="AttributeChangeContext.cs" />
+    <Compile Include="AttributeInfo.cs" />
+    <Compile Include="AttributeInfoCollection.cs" />
+    <Compile Include="AttributeModelBaseProperties.cs" />
+    <Compile Include="AttributeModelBasePropertiesCollection.cs" />
+    <Compile Include="AttributeModelContext.cs" />
+    <Compile Include="AttributeModelLocaleProperties.cs" />
+    <Compile Include="AttributeModelLocalePropertiesCollection.cs" />
+    <Compile Include="AttributeModelMappingProperties.cs" />
+    <Compile Include="AttributeModelMappingPropertiesCollection.cs" />
+    <Compile Include="AttributeOperationResult.cs" />
+    <Compile Include="AttributeOperationResultCollection.cs" />
+    <Compile Include="AttributeProcessingOptions.cs" />
+    <Compile Include="AttributeProcessingOptionsCollection.cs" />
+    <Compile Include="AttributeUniqueIdentifierCollection.cs" />
+    <Compile Include="AuthenticationData.cs" />
+    <Compile Include="BaseProfile.cs" />
+    <Compile Include="BaseProfileCollection.cs" />
+    <Compile Include="Base\InterfaceContractCollection.cs" />
+    <Compile Include="Base\ItemContractCollection.cs" />
+    <Compile Include="Base\StronglyTypedEntities\SpecialTypes\ValueUomPair.cs" />
+    <Compile Include="Base\StronglyTypedEntities\StronglyTypedClassMetaDataAttribute.cs" />
+    <Compile Include="Base\StronglyTypedEntities\StronglyTypedEntityBase.cs" />
+    <Compile Include="Base\StronglyTypedEntities\StronglyTypedMetaDataAttribute.cs" />
+    <Compile Include="DDG\BaseMDMRuleContextFilter.cs" />
+    <Compile Include="DDG\BusinessRuleOperationResult.cs" />
+    <Compile Include="DDG\BusinessRuleOperationResultCollection.cs" />
+    <Compile Include="DDG\DDGOperationResultSummary.cs" />
+    <Compile Include="DDG\DDGOperationResultSummaryCollection.cs" />
+    <Compile Include="DDG\MDMRuleBusinessConditionRule.cs" />
+    <Compile Include="DDG\MDMRuleBusinessConditionRuleCollection.cs" />
+    <Compile Include="DDG\MDMRuleAttributeModelContext.cs" />
+    <Compile Include="DDG\MDMRuleDisplayList.cs" />
+    <Compile Include="DDG\MDMRuleKeywordGroupCollection.cs" />
+    <Compile Include="DDG\MDMRuleKeywordGroup.cs" />
+    <Compile Include="DDG\MDMRuleKeywordCollection.cs" />
+    <Compile Include="DDG\MDMRuleAttributeGroupCollection.cs" />
+    <Compile Include="DDG\MDMRuleEntityExtensionContext.cs" />
+    <Compile Include="DDG\MDMRuleEntityExtensionContextCollection.cs" />
+    <Compile Include="DDG\MDMRuleKeyword.cs" />
+    <Compile Include="DDG\MDMRuleErrorInfo.cs" />
+    <Compile Include="DDG\MDMRuleMapRule.cs" />
+    <Compile Include="DDG\MDMRuleMapRuleCollection.cs" />
+    <Compile Include="DDG\MDMRuleParams.cs" />
+    <Compile Include="BusinessConditionStatus.cs" />
+    <Compile Include="BusinessConditionStatusCollection.cs" />
+    <Compile Include="DQM\MatchBoostingAttribute.cs" />
+    <Compile Include="DQM\MatchBoostingAttributeCollection.cs" />
+    <Compile Include="DQM\MatchEvent.cs" />
+    <Compile Include="DQM\MatchSearchAttribute.cs" />
+    <Compile Include="DQM\MatchSearchAttributeCollection.cs" />
+    <Compile Include="EntityBusinessCondition.cs" />
+    <Compile Include="EntityBusinessConditionCollection.cs" />
+    <Compile Include="EntityExtensionContext.cs" />
+    <Compile Include="DDG\MDMRule.cs" />
+    <Compile Include="DDG\MDMRuleAttribute.cs" />
+    <Compile Include="DDG\MDMRuleAttributeCollection.cs" />
+    <Compile Include="DDG\MDMRuleAttributeContext.cs" />
+    <Compile Include="DDG\MDMRuleAttributeContextCollection.cs" />
+    <Compile Include="DDG\MDMRuleCollection.cs" />
+    <Compile Include="DDG\MDMRuleContext.cs" />
+    <Compile Include="DDG\MDMRuleContextFilter.cs" />
+    <Compile Include="DDG\MDMRuleMap.cs" />
+    <Compile Include="DDG\MDMRuleMapCollection.cs" />
+    <Compile Include="DDG\MDMRuleMapContextFilter.cs" />
+    <Compile Include="DDG\MDMRuleMapDetail.cs" />
+    <Compile Include="DDG\MDMRuleMapDetailCollection.cs" />
+    <Compile Include="DDG\MDMRuleRelationshipContext.cs" />
+    <Compile Include="DDG\MDMRuleRelationshipContextCollection.cs" />
+    <Compile Include="CachedObjectEnum.cs" />
+    <Compile Include="Caching\CacheConfiguration.cs" />
+    <Compile Include="Caching\CacheConfigurationCollection.cs" />
+    <Compile Include="AttributeChangeContextCollection.cs" />
+    <Compile Include="CollectionAttribute.cs" />
+    <Compile Include="ComplexAttribute.cs" />
+    <Compile Include="ComplexAttributeCollection.cs" />
+    <Compile Include="ContainerRelationshipTypeEntityTypeMappingCardinality.cs" />
+    <Compile Include="ContainerRelationshipTypeEntityTypeMappingCardinalityCollection.cs" />
+    <Compile Include="DataModelActivityLog.cs" />
+    <Compile Include="DataModelActivityLogCollection.cs" />
+    <Compile Include="DataModel\DataModelConfigurationItemDictionary.cs" />
+    <Compile Include="DataModel\DataModelValidationOptions.cs" />
+    <Compile Include="Diagnostics\DiagnosticReportExecutionStep.cs" />
+    <Compile Include="Diagnostics\DiagnosticReportExecutionStepCollection.cs" />
+    <Compile Include="Diagnostics\DiagnosticReportExecutionStepConfiguration.cs" />
+    <Compile Include="Diagnostics\DiagnosticReportProfile.cs" />
+    <Compile Include="Diagnostics\DiagnosticReportProfileCollection.cs" />
+    <Compile Include="Diagnostics\DiagnosticToolsReportResultWrapper.cs" />
+    <Compile Include="EntityChangeContextCollection.cs" />
+    <Compile Include="EntityFamilyChangeContext.cs" />
+    <Compile Include="EntityFamilyChangeContextCollection.cs" />
+    <Compile Include="EntityFamilyProcessingOptions.cs" />
+    <Compile Include="EntityFamilyQueue.cs" />
+    <Compile Include="ExportQueueCollection.cs" />
+    <Compile Include="EntityFamilyQueueCollection.cs" />
+    <Compile Include="EntityUniqueIdentifierCollection.cs" />
+    <Compile Include="EntityUniqueIdentifier.cs" />
+    <Compile Include="AttributeContext.cs" />
+    <Compile Include="EntityStateValidationScore.cs" />
+    <Compile Include="EntityStateValidationScoreCollection.cs" />
+    <Compile Include="EntityStateValidation.cs" />
+    <Compile Include="EntityStateValidationAttributeScoreCollection.cs" />
+    <Compile Include="EntityStateValidationCollection.cs" />
+    <Compile Include="EntityVariantDefinitionCollection.cs" />
+    <Compile Include="EntityVariantDefinitionMapping.cs" />
+    <Compile Include="EntityVariantDefinitionMappingCollection.cs" />
+    <Compile Include="EntityVariantLevelCollection.cs" />
+    <Compile Include="EnttityStateValidationAttributeScore.cs" />
+    <Compile Include="ExportQueue.cs" />
+    <Compile Include="Exports\CategoryGroup.cs" />
+    <Compile Include="Exports\ExportDataFormatterCollection.cs" />
+    <Compile Include="Exports\ExportDataFormatter.cs" />
+    <Compile Include="Exports\ExportSetting.cs" />
+    <Compile Include="Exports\ExportSettingCollection.cs" />
+    <Compile Include="Exports\NotificationSetting.cs" />
+    <Compile Include="Exports\NotificationSettingCollection.cs" />
+    <Compile Include="ExtendedSearchCriteria.cs" />
+    <Compile Include="ExtensionChangeContext.cs" />
+    <Compile Include="ExtensionChangeContextCollection.cs" />
+    <Compile Include="HierarchicalAttribute.cs" />
+    <Compile Include="Interfaces\IAttributeInfoCollection.cs" />
+    <Compile Include="Imports\DDG\DDGImportProfile.cs" />
+    <Compile Include="Imports\DDG\DDGJobProcessingOptions.cs" />
+    <Compile Include="Imports\DDG\DDGImportProfileCollection.cs" />
+    <Compile Include="Integration\JigsawIntegrationConfiguration.cs" />
+    <Compile Include="Integration\JigsawNode.cs" />
+    <Compile Include="Integration\JigsawReportConfigurationInstance.cs" />
+    <Compile Include="Integration\JigsawMatchConfiguration.cs" />
+    <Compile Include="Integration\JigsawTenant.cs" />
+    <Compile Include="Integration\JigsawTopic.cs" />
+    <Compile Include="Interfaces\DDG\IBusinessRuleObject.cs" />
+    <Compile Include="Interfaces\DDG\IBusinessRuleObjectCollection.cs" />
+    <Compile Include="Interfaces\DDG\IBusinessRuleOperationResult.cs" />
+    <Compile Include="Interfaces\DDG\IBusinessRuleOperationResultCollection.cs" />
+    <Compile Include="Interfaces\DDG\IDDGImportProfile.cs" />
+    <Compile Include="Interfaces\DDG\IDDGImportProfileCollection.cs" />
+    <Compile Include="Interfaces\DDG\IDDGOperationResultSummary.cs" />
+    <Compile Include="Interfaces\DDG\IDDGOperationResultSummaryCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleAttributeModelContext.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleBusinessConditionRule.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleBusinessConditionRuleCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleDisplayList.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRule.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleAttribute.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleKeywordGroupCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleKeywordGroup.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleKeywordCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleAttributeCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleAttributeContext.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleAttributeContextCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleAttributeGroupCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleContext.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleContextFilter.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleEntityExtensionContext.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleEntityExtensionContextCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleKeyword.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleParams.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleMap.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleMapCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleMapContextFilter.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleMapRule.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleMapRuleCollection.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleRelationshipContext.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleRelationshipContextCollection.cs" />
+    <Compile Include="Interfaces\DQM\IMatchAttribute.cs" />
+    <Compile Include="Interfaces\DQM\IMatchBoostingAttribute.cs" />
+    <Compile Include="Interfaces\DQM\IMatchBoostingAttributeCollection.cs" />
+    <Compile Include="Interfaces\DQM\IMatchEvent.cs" />
+    <Compile Include="Interfaces\DQM\IMatchRule.cs" />
+    <Compile Include="Interfaces\DQM\IMatchSearchAttribute.cs" />
+    <Compile Include="Interfaces\DQM\IMatchSearchAttributeCollection.cs" />
+    <Compile Include="Interfaces\Exports\IExportDataFormatterCollection.cs" />
+    <Compile Include="Interfaces\Exports\IExportDataFormatter.cs" />
+    <Compile Include="Interfaces\IAttributeInfo.cs" />
+    <Compile Include="Interfaces\IBusinessConditionStatus.cs" />
+    <Compile Include="Interfaces\Exports\ICategoryGroup.cs" />
+    <Compile Include="Interfaces\Exports\IExportSetting.cs" />
+    <Compile Include="Interfaces\Exports\IExportSettingCollection.cs" />
+    <Compile Include="Interfaces\Exports\INotificationSetting.cs" />
+    <Compile Include="Interfaces\Exports\INotificationSettingCollection.cs" />
+    <Compile Include="Interfaces\IApplicationContextObjectMapping.cs" />
+    <Compile Include="Interfaces\IApplicationContextObjectMappingCollection.cs" />
+    <Compile Include="Interfaces\IAttributeChangeContext.cs" />
+    <Compile Include="Interfaces\IAttributeChangeContextCollection.cs" />
+    <Compile Include="Interfaces\IBusinessConditionStatusCollection.cs" />
+    <Compile Include="Interfaces\IEntityBusinessCondition.cs" />
+    <Compile Include="Interfaces\IEntityBusinessConditionCollection.cs" />
+    <Compile Include="Interfaces\IEntityExtensionContext.cs" />
+    <Compile Include="Interfaces\IEntityFamilyChangeContext.cs" />
+    <Compile Include="Interfaces\IEntityFamilyChangeContextCollection.cs" />
+    <Compile Include="Interfaces\IEntityFamilyProcessingOptions.cs" />
+    <Compile Include="Interfaces\IEntityFamilyQueue.cs" />
+    <Compile Include="Interfaces\IEntityChangeContextCollection.cs" />
+    <Compile Include="Interfaces\IExportQueueCollection.cs" />
+    <Compile Include="Interfaces\IEntityFamilyQueueCollection.cs" />
+    <Compile Include="Interfaces\IEntityStateValidationScore.cs" />
+    <Compile Include="Interfaces\IEntityStateValidationScoreCollection.cs" />
+    <Compile Include="Interfaces\IEntityStateValidation.cs" />
+    <Compile Include="Interfaces\IEntityStateValidationAttributeScore.cs" />
+    <Compile Include="Interfaces\IEntityStateValidationAttributeScoreCollection.cs" />
+    <Compile Include="Interfaces\IEntityStateValidationCollection.cs" />
+    <Compile Include="Interfaces\IEntityVariantDefinitionCollection.cs" />
+    <Compile Include="Interfaces\IEntityVariantDefinitionMapping.cs" />
+    <Compile Include="Interfaces\IEntityVariantDefinitionMappingCollection.cs" />
+    <Compile Include="Interfaces\IEntityVariantLevelCollection.cs" />
+    <Compile Include="Interfaces\IExportQueue.cs" />
+    <Compile Include="Interfaces\IExtensionChangeContext.cs" />
+    <Compile Include="Interfaces\IExtensionChangeContextCollection.cs" />
+    <Compile Include="Interfaces\ILocaleChangeContext.cs" />
+    <Compile Include="Interfaces\ILocaleChangeContextCollection.cs" />
+    <Compile Include="Interfaces\Integration\IJigsawIntegrationConfiguration.cs" />
+    <Compile Include="Interfaces\Integration\IJigsawMatchConfiguration.cs" />
+    <Compile Include="Interfaces\Integration\IMessageBrokerOptions.cs" />
+    <Compile Include="Interfaces\Integration\IJigsawNode.cs" />
+    <Compile Include="Interfaces\Integration\IJigsawReportConfigurationInstance.cs" />
+    <Compile Include="Interfaces\Integration\IJigsawTenant.cs" />
+    <Compile Include="Interfaces\Integration\IJigsawTopic.cs" />
+    <Compile Include="Interfaces\IRelationshipChangeContext.cs" />
+    <Compile Include="Interfaces\IRelationshipChangeContextCollection.cs" />
+    <Compile Include="Interfaces\IRevalidateContext.cs" />
+    <Compile Include="Interfaces\ISearchMDMRuleRule.cs" />
+    <Compile Include="Interfaces\ISearchReadResult.cs" />
+    <Compile Include="Interfaces\ISearchXml.cs" />
+    <Compile Include="Interfaces\ISearchMDMRuleRuleGroup.cs" />
+    <Compile Include="Interfaces\ISearchValidationStatesRuleGroup.cs" />
+    <Compile Include="Interfaces\ISearchValidationStatesRule.cs" />
+    <Compile Include="Interfaces\IValidationStates.cs" />
+    <Compile Include="Interfaces\IVariantsChangeContext.cs" />
+    <Compile Include="Interfaces\Workflow\IDataObject.cs" />
+    <Compile Include="Interfaces\Workflow\IDataObjectOperationRequest.cs" />
+    <Compile Include="Interfaces\Workflow\IDataObjectOperationResponse.cs" />
+    <Compile Include="Interfaces\Workflow\IWorkflowInvokableEntityInfo.cs" />
+    <Compile Include="Interfaces\Workflow\IWorkflowInvokableEntityInfoCollection.cs" />
+    <Compile Include="Interfaces\Workflow\IWorkflowInfo.cs" />
+    <Compile Include="Interfaces\Workflow\IWorkflowInfoCollection.cs" />
+    <Compile Include="RevalidateContext.cs" />
+    <Compile Include="SearchMDMRuleRuleGroup.cs" />
+    <Compile Include="SearchMDMRuleRule.cs" />
+    <Compile Include="SearchMDMRuleRuleCollection.cs" />
+    <Compile Include="SearchReadResult.cs" />
+    <Compile Include="SearchValidationStatesRuleCollection.cs" />
+    <Compile Include="SearchValidateStatesRuleGroup.cs" />
+    <Compile Include="SearchMDMRuleRuleGroupCollection.cs" />
+    <Compile Include="SearchValidationStatesRuleGroupCollection.cs" />
+    <Compile Include="SearchValidationStatesRule.cs" />
+    <Compile Include="ValidationState.cs" />
+    <Compile Include="ValidationStates.cs" />
+    <Compile Include="Interfaces\IWorkflowChangeContext.cs" />
+    <Compile Include="VariantsChangeContext.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleMapDetail.cs" />
+    <Compile Include="Interfaces\DDG\IMDMRuleMapDetailCollection.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelConfigurationItemDictionary.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelValidationOptions.cs" />
+    <Compile Include="Interfaces\Diagnostics\IDiagnosticReportProfile.cs" />
+    <Compile Include="Interfaces\Diagnostics\IDiagnosticReportProfileCollection.cs" />
+    <Compile Include="Interfaces\IApplicationConfiguration.cs" />
+    <Compile Include="Interfaces\IConfigurationObject.cs" />
+    <Compile Include="Interfaces\IDataModelActivityLogCollection.cs" />
+    <Compile Include="Interfaces\IEntityDataContextCollection.cs" />
+    <Compile Include="Interfaces\IEntityModelContext.cs" />
+    <Compile Include="Interfaces\IEntityDataContext.cs" />
+    <Compile Include="Interfaces\IAttributeContext.cs" />
+    <Compile Include="Interfaces\IEntityUniqueIdentifierCollection.cs" />
+    <Compile Include="Interfaces\IEntityUniqueIdentifier.cs" />
+    <Compile Include="Interfaces\IExtendedSearchCriteria.cs" />
+    <Compile Include="Interfaces\IHierarchicalAttribute.cs" />
+    <Compile Include="Interfaces\ILocaleConfig.cs" />
+    <Compile Include="Interfaces\ILookupModel.cs" />
+    <Compile Include="Interfaces\IObject.cs" />
+    <Compile Include="Interfaces\IStronglyTypedEntity.cs" />
+    <Compile Include="LocaleChangeContext.cs" />
+    <Compile Include="LocaleChangeContextCollection.cs" />
+    <Compile Include="LookupModel.cs" />
+    <Compile Include="LookupModelCollection.cs" />
+    <Compile Include="EntityConversionContext.cs" />
+    <Compile Include="MDMEventHandlerCollection.cs" />
+    <Compile Include="MDMEventHandler.cs" />
+    <Compile Include="MDMEventInfoCollection.cs" />
+    <Compile Include="MDMEventInfo.cs" />
+    <Compile Include="DataModelExclusionContext.cs" />
+    <Compile Include="DataModelExclusionContextCollection.cs" />
+    <Compile Include="DataModel\DataModelOperationResult.cs" />
+    <Compile Include="DataModel\DataModelOperationResultCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataModel\DataModelOperationResultSummary.cs" />
+    <Compile Include="DataModel\DataModelOperationResultSummaryCollection.cs" />
+    <Compile Include="DQMMerging\MergePlanningRule.cs" />
+    <Compile Include="DQMMerging\MatchReviewProfile.cs" />
+    <Compile Include="DQMMerging\MatchReviewProfileCollection.cs" />
+    <Compile Include="DQMMerging\RangeRule.cs" />
+    <Compile Include="DQMMerging\RangeRuleCollection.cs" />
+    <Compile Include="DQMMerging\RematchRule.cs" />
+    <Compile Include="DQMMerging\RematchRuleCollection.cs" />
+    <Compile Include="DQMMerging\RematchRuleCondition.cs" />
+    <Compile Include="DQMMerging\RematchRuleConditionCollection.cs" />
+    <Compile Include="DQMNormalization\BaseSynonymizationRuleParameters.cs" />
+    <Compile Include="DQMNormalization\SubstringNormalizationParameters.cs" />
+    <Compile Include="DQMNormalization\NormalizationHelper.cs" />
+    <Compile Include="DQMNormalization\NormalizationProfile.cs" />
+    <Compile Include="DQMNormalization\NormalizationProfilesCollection.cs" />
+    <Compile Include="DQMNormalization\NormalizationRule.cs" />
+    <Compile Include="DQMNormalization\NormalizationRulesCollection.cs" />
+    <Compile Include="DQMNormalization\NormalizationRuleset.cs" />
+    <Compile Include="DQMNormalization\NormalizationRulesetsCollection.cs" />
+    <Compile Include="DQMNormalization\SynonymizationRuleParameters.cs" />
+    <Compile Include="Exports\DataModelExportContext.cs" />
+    <Compile Include="Exports\DataModelExportProfile.cs" />
+    <Compile Include="Exports\DataModelExportProfileCollection.cs" />
+    <Compile Include="Exports\DataModelExportProfileData.cs" />
+    <Compile Include="HierarchyCopyPasteContext.cs" />
+    <Compile Include="EntityContextCollection.cs" />
+    <Compile Include="EntityHierarchyContext.cs" />
+    <Compile Include="EntityIdentification\EntityUniqueIdentificationMap.cs" />
+    <Compile Include="EntityIdentification\EntityUniqueIdentificationMapCollection.cs" />
+    <Compile Include="EntityReadResult.cs" />
+    <Compile Include="EntityScope.cs" />
+    <Compile Include="EntityScopeCollection.cs" />
+    <Compile Include="Interfaces\IMDMEventHandlerCollection.cs" />
+    <Compile Include="Interfaces\EntityIdentification\IEntityUniqueIdentificationMap.cs" />
+    <Compile Include="Interfaces\EntityIdentification\IEntityUniqueIdentificationMapCollection.cs" />
+    <Compile Include="Interfaces\Exports\IDataModelExportContext.cs" />
+    <Compile Include="Interfaces\Exports\IDataModelExportProfile.cs" />
+    <Compile Include="Interfaces\Exports\IDataModelExportProfileCollection.cs" />
+    <Compile Include="Interfaces\Exports\IDataModelExportProfileData.cs" />
+    <Compile Include="Interfaces\IAuthenticationData.cs" />
+    <Compile Include="Interfaces\IHierarchyCopyPasteContext.cs" />
+    <Compile Include="Interfaces\IDataModelExclusionContext.cs" />
+    <Compile Include="Interfaces\IDataModelExclusionContextCollection.cs" />
+    <Compile Include="Interfaces\IEntityContextCollection.cs" />
+    <Compile Include="Interfaces\IEntityHierarchyContext.cs" />
+    <Compile Include="Interfaces\IEntityReadResult.cs" />
+    <Compile Include="Interfaces\IEntityScope.cs" />
+    <Compile Include="Interfaces\IEntityScopeCollection.cs" />
+    <Compile Include="Interfaces\IMDMEventInfo.cs" />
+    <Compile Include="Interfaces\IMDMEventInfoCollection.cs" />
+    <Compile Include="Interfaces\IMDMEventHandler.cs" />
+    <Compile Include="Interfaces\IUniqueIdGenerationContext.cs" />
+    <Compile Include="RelationshipChangeContext.cs" />
+    <Compile Include="RelationshipChangeContextCollection.cs" />
+    <Compile Include="UniqueIdGenerationContext.cs" />
+    <Compile Include="WordElement.cs" />
+    <Compile Include="WordElementReportSettings.cs" />
+    <Compile Include="WordElementsCollection.cs" />
+    <Compile Include="WordList.cs" />
+    <Compile Include="WordListsCollection.cs" />
+    <Compile Include="DQM\MatchingEngineCommandStatistics.cs" />
+    <Compile Include="DQM\DataQualityIndicatorFailureInfo.cs" />
+    <Compile Include="DQM\DataQualityIndicatorFailureInfoCollection.cs" />
+    <Compile Include="DQM\DQMConfig.cs" />
+    <Compile Include="DQM\DQMConfigCollection.cs" />
+    <Compile Include="DQM\DQMProfileGroupProfile.cs" />
+    <Compile Include="DQM\DQMProfileGroupProfileCollection.cs" />
+    <Compile Include="DQM\DQMRule.cs" />
+    <Compile Include="DQM\DQMRuleCollection.cs" />
+    <Compile Include="DQM\DQMStoreFieldNameGenerator.cs" />
+    <Compile Include="DQM\MergeOperationResult.cs" />
+    <Compile Include="DQM\MergeResultsReportSettings.cs" />
+    <Compile Include="DQM\ProfileGroupContext.cs" />
+    <Compile Include="DQM\ProfileGroupContextCollection.cs" />
+    <Compile Include="DQM\ExternalStrategyParameters.cs" />
+    <Compile Include="DQM\MatchingCondition.cs" />
+    <Compile Include="DQM\MatchAttribute.cs" />
+    <Compile Include="DQM\MatchConnectionInfo.cs" />
+    <Compile Include="DQM\MatchDefinition.cs" />
+    <Compile Include="DQM\MatchPredicate.cs" />
+    <Compile Include="DQM\MatchingProfile.cs" />
+    <Compile Include="DQM\MatchingProfileCollection.cs" />
+    <Compile Include="DQM\MatchingResult.cs" />
+    <Compile Include="DQM\MatchingResultCollection.cs" />
+    <Compile Include="DQM\MatchResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ClaimTypesMapping.cs" />
+    <Compile Include="DQM\MatchResultset.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DQM\MatchRule.cs" />
+    <Compile Include="DQM\MatchSourceAttribute.cs" />
+    <Compile Include="DQM\MatchTargetTable.cs" />
+    <Compile Include="DQM\XmlOutPut.cs" />
+    <Compile Include="EntityGetOptions.cs" />
+    <Compile Include="CategoryBasePropertiesCollection.cs" />
+    <Compile Include="CategoryLocalePropertiesCollection.cs" />
+    <Compile Include="CategorySearchRule.cs" />
+    <Compile Include="CategorySearchRuleCollection.cs" />
+    <Compile Include="EntityModelContext.cs" />
+    <Compile Include="EntityPaginationResult.cs" />
+    <Compile Include="Exports\TranslationExportProfile.cs" />
+    <Compile Include="Exports\TranslationExportProfileData.cs" />
+    <Compile Include="FilterCriteria.cs" />
+    <Compile Include="FilterCriteriaCollection.cs" />
+    <Compile Include="GenericSortRule.cs" />
+    <Compile Include="GenericSearchRule.cs" />
+    <Compile Include="HierachyCategoryMapping.cs" />
+    <Compile Include="HierachyCategoryMappingCollection.cs" />
+    <Compile Include="Imports\DataModelImportProfile.cs" />
+    <Compile Include="Imports\DataModelImportProfileCollection.cs" />
+    <Compile Include="Imports\DataModelJobProcessingOptions.cs" />
+    <Compile Include="ImportWordListDTO.cs" />
+    <Compile Include="ImportWordListDTOCollection.cs" />
+    <Compile Include="Interfaces\Caching\ICacheConfiguration.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelImportProfileCollection.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelObject.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelObjectCollection.cs" />
+    <Compile Include="Imports\MatchProcessingOptions.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelOperationResult.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelOperationResultCollection.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelOperationResultSummary.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelOperationResultSummaryCollection.cs" />
+    <Compile Include="Interfaces\DQMMerging\IMergeOperationResult.cs" />
+    <Compile Include="Interfaces\DQMMerging\IMergePlanningRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IMatchReviewProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IMatchReviewProfileCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IMergeResultsReportSettings.cs" />
+    <Compile Include="Interfaces\DQMMerging\IRangeRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IRangeRuleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IRematchRule.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IRematchRuleCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IRematchRuleCondition.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMMerging\IRematchRuleConditionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\DQMNormalization\IBaseSynonymizationRuleParameters.cs" />
+    <Compile Include="Interfaces\DQMNormalization\INormalizationProfile.cs" />
+    <Compile Include="Interfaces\DQMNormalization\INormalizationProfilesCollection.cs" />
+    <Compile Include="Interfaces\DQMNormalization\INormalizationRule.cs" />
+    <Compile Include="Interfaces\DQMNormalization\INormalizationRulesCollection.cs" />
+    <Compile Include="Interfaces\DQMNormalization\INormalizationRuleset.cs" />
+    <Compile Include="Interfaces\DQMNormalization\INormalizationRulesetsCollection.cs" />
+    <Compile Include="Interfaces\DQMNormalization\ISynonymizationRuleParameters.cs" />
+    <Compile Include="Interfaces\IWordElement.cs" />
+    <Compile Include="Interfaces\IWordElementReportSettings.cs" />
+    <Compile Include="Interfaces\IWordElementsCollection.cs" />
+    <Compile Include="Interfaces\IWordList.cs" />
+    <Compile Include="Interfaces\IWordListsCollection.cs" />
+    <Compile Include="Interfaces\IBaseProfile.cs" />
+    <Compile Include="Interfaces\DataModel\IDataModelProfile.cs" />
+    <Compile Include="Interfaces\IBaseProfileCollection.cs" />
+    <Compile Include="Interfaces\ICollectionAttribute.cs" />
+    <Compile Include="Interfaces\IComplexAttribute.cs" />
+    <Compile Include="Interfaces\IComplexAttributeCollection.cs" />
+    <Compile Include="Interfaces\IContainerRelationshipTypeEntityTypeMappingCardinality.cs" />
+    <Compile Include="Interfaces\IContainerRelationshipTypeEntityTypeMappingCardinalityCollection.cs" />
+    <Compile Include="Interfaces\IEntityGetOptions.cs" />
+    <Compile Include="Integration\AggregationQueueItem.cs" />
+    <Compile Include="Integration\AggregationInboundQueueItem.cs" />
+    <Compile Include="Integration\AggregationOutboundQueueItem.cs" />
+    <Compile Include="Integration\AggregationInboundQueueItemCollection.cs" />
+    <Compile Include="Integration\AggregationOutboundQueueItemCollection.cs" />
+    <Compile Include="Integration\IntegrationErrorLogCollection.cs" />
+    <Compile Include="Interfaces\IDQMConfig.cs" />
+    <Compile Include="Interfaces\IDQMConfigCollection.cs" />
+    <Compile Include="Interfaces\IDQMRuleCollection.cs" />
+    <Compile Include="Interfaces\Exports\ITranslationExportProfile.cs" />
+    <Compile Include="Interfaces\Exports\ITranslationExportProfileData.cs" />
+    <Compile Include="Integration\AggregationConfiguration.cs" />
+    <Compile Include="Interfaces\IApplicationContextTypeItem.cs" />
+    <Compile Include="Interfaces\IApplicationContextTypeItemCollection.cs" />
+    <Compile Include="Interfaces\IApplicationConfigurationItemCollection.cs" />
+    <Compile Include="Interfaces\ICategory.cs" />
+    <Compile Include="Interfaces\ICategoryCollection.cs" />
+    <Compile Include="Interfaces\ICategoryContext.cs" />
+    <Compile Include="Interfaces\ICategorySearchRule.cs" />
+    <Compile Include="Interfaces\ICategorySearchRuleCollection.cs" />
+    <Compile Include="Interfaces\IEntityPaginationResult.cs" />
+    <Compile Include="Interfaces\IFilterCriteria.cs" />
+    <Compile Include="Interfaces\IFilterCriteriaCollection.cs" />
+    <Compile Include="Interfaces\IDQMRule.cs" />
+    <Compile Include="Interfaces\IGenericSearchRule.cs" />
+    <Compile Include="Interfaces\IGenericSortRule.cs" />
+    <Compile Include="Interfaces\IHierachyCategoryMapping.cs" />
+    <Compile Include="Interfaces\IHierachyCategoryMappingCollection.cs" />
+    <Compile Include="Interfaces\IImportWordListDTO.cs" />
+    <Compile Include="Interfaces\ILocalizable.cs" />
+    <Compile Include="Interfaces\ILookupAttribute.cs" />
+    <Compile Include="Interfaces\ISubstringNormalizationParameters.cs" />
+    <Compile Include="Interfaces\IDataQualityIndicatorFailureInfo.cs" />
+    <Compile Include="Interfaces\IDataQualityIndicatorFailureInfoCollection.cs" />
+    <Compile Include="Interfaces\IMatchResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IMatchResultCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IClaimTypesMapping.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationErrorLogCollection.cs" />
+    <Compile Include="Interfaces\Integration\IAggregationOutboundQueueItemCollection.cs" />
+    <Compile Include="Interfaces\Integration\IAggregationInboundQueueItemCollection.cs" />
+    <Compile Include="Interfaces\Integration\IAggregationInboundQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IAggregationOutboundQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IAggregationQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IAggregationConfiguration.cs" />
+    <Compile Include="Interfaces\IExternalStrategyParameters.cs" />
+    <Compile Include="Interfaces\IPagingCriteria.cs" />
+    <Compile Include="Interfaces\IProfileGroupContext.cs" />
+    <Compile Include="Interfaces\IProfileGroupContextCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipTypeEntityTypeMappingCardinality.cs" />
+    <Compile Include="Interfaces\IRelationshipTypeEntityTypeMappingCardinalityCollection.cs" />
+    <Compile Include="Interfaces\IRoleMapping.cs" />
+    <Compile Include="Interfaces\IRoleMappingCollection.cs" />
+    <Compile Include="Interfaces\IMergeResult.cs" />
+    <Compile Include="Interfaces\IMergeResultCollection.cs" />
+    <Compile Include="Interfaces\ISortCriteria.cs" />
+    <Compile Include="Interfaces\ISortCriteriaCollection.cs" />
+    <Compile Include="Interfaces\IUserPreferencesCollection.cs" />
+    <Compile Include="Interfaces\IEmailContext.cs" />
+    <Compile Include="Interfaces\IWorkflowEscalationData.cs" />
+    <Compile Include="Interfaces\IWorkflowEscalationDataCollection.cs" />
+    <Compile Include="Interfaces\IWorkflowEscalationContext.cs" />
+    <Compile Include="Interfaces\ILookupCollectionAttribute.cs" />
+    <Compile Include="Interfaces\IMergingProfile.cs" />
+    <Compile Include="Interfaces\IMergingProfileCollection.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleStrategyPriority.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleStrategyPriorityCollection.cs" />
+    <Compile Include="Interfaces\ISourceInfo.cs" />
+    <Compile Include="Interfaces\Matching\IMatchingProfile.cs" />
+    <Compile Include="Interfaces\Matching\IMatchingProfileCollection.cs" />
+    <Compile Include="Interfaces\Matching\IMatchingResultCollection.cs" />
+    <Compile Include="DQM\MatchQueryData.cs" />
+    <Compile Include="LookupAttribute.cs" />
+    <Compile Include="LookupCollectionAttribute.cs" />
+    <Compile Include="RelationshipTypeEntityTypeMappingCardinality.cs" />
+    <Compile Include="RelationshipTypeEntityTypeMappingCardinalityCollection.cs" />
+    <Compile Include="RoleMapping.cs" />
+    <Compile Include="RoleMappingCollection.cs" />
+    <Compile Include="MergeResult.cs" />
+    <Compile Include="MergeResultCollection.cs" />
+    <Compile Include="MergingProfile.cs" />
+    <Compile Include="MergingProfileCollection.cs" />
+    <Compile Include="PagingCriteria.cs" />
+    <Compile Include="SortCriteria.cs" />
+    <Compile Include="SortCriteriaCollection.cs" />
+    <Compile Include="SourceInfo.cs" />
+    <Compile Include="SurvivorshipRuleAttributeValueCondition.cs" />
+    <Compile Include="SurvivorshipRuleAttributeValueConditionCollection.cs" />
+    <Compile Include="AttributeVersion.cs" />
+    <Compile Include="AttributeVersionCollection.cs" />
+    <Compile Include="AuditInfo.cs" />
+    <Compile Include="AuditInfoCollection.cs" />
+    <Compile Include="BusinessObject.cs" />
+    <Compile Include="BusinessObjectAttribute.cs" />
+    <Compile Include="CategoryContext.cs" />
+    <Compile Include="CategoryCollection.cs" />
+    <Compile Include="CategoryLocaleProperties.cs" />
+    <Compile Include="CategoryBaseProperties.cs" />
+    <Compile Include="Category.cs" />
+    <Compile Include="CategoryAttributeMappingCollection.cs" />
+    <Compile Include="CategoryTreeItem.cs" />
+    <Compile Include="CategoryTreeItemCollection.cs" />
+    <Compile Include="Cell.cs" />
+    <Compile Include="CellCollection.cs" />
+    <Compile Include="Column.cs" />
+    <Compile Include="ColumnCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApplicationContext.cs" />
+    <Compile Include="ConnectionProperties.cs" />
+    <Compile Include="CacheKeyGenerator.cs" />
+    <Compile Include="EntityCopyPasteContext.cs" />
+    <Compile Include="DQM\DQMEntityTasksQueueItemsCollection.cs" />
+    <Compile Include="DQM\DQMJobProfile.cs" />
+    <Compile Include="DQM\DQMJobQueueItem.cs" />
+    <Compile Include="DQM\DQMJobQueueItemsCollection.cs" />
+    <Compile Include="DQM\DQMEntityTasksQueueItem.cs" />
+    <Compile Include="DQM\DQMJobQueueItemsStatusCollection.cs" />
+    <Compile Include="DQM\DQMJobQueueItemStatus.cs" />
+    <Compile Include="DQM\DQMProcessorErrorLogItem.cs" />
+    <Compile Include="DQM\DQMProcessorErrorLogItemsCollection.cs" />
+    <Compile Include="DQM\JobScopeFilter.cs" />
+    <Compile Include="DQM\JobSourceScopeFilter.cs" />
+    <Compile Include="DQM\MergePlanItem.cs" />
+    <Compile Include="DQM\MergePlanItemCollection.cs" />
+    <Compile Include="Exports\LookupExportProfile.cs" />
+    <Compile Include="Exports\LookupExportProfileData.cs" />
+    <Compile Include="Exports\LookupExportScope.cs" />
+    <Compile Include="Exports\LookupExportScopeCollection.cs" />
+    <Compile Include="Exports\LookupExportSyndicationProfileData.cs" />
+    <Compile Include="Integration\IntegrationErrorLog.cs" />
+    <Compile Include="DQM\JobReportSettings.cs" />
+    <Compile Include="DQM\NormalizationReportItem.cs" />
+    <Compile Include="DQM\NormalizationReportItemsCollection.cs" />
+    <Compile Include="DQM\NormalizationReportSettings.cs" />
+    <Compile Include="Integration\InboundQueueItem.cs" />
+    <Compile Include="Integration\InboundQueueItemCollection.cs" />
+    <Compile Include="Integration\IntegrationItemStatusDimension.cs" />
+    <Compile Include="Integration\IntegrationItemStatusDimensionCollection.cs" />
+    <Compile Include="Integration\IntegrationItemStatusDimensionInternal.cs" />
+    <Compile Include="Integration\IntegrationItemStatusDimensionInternalCollection.cs" />
+    <Compile Include="Integration\IntegrationItemDimensionType.cs" />
+    <Compile Include="Integration\IntegrationItemDimensionTypeCollection.cs" />
+    <Compile Include="Integration\IntegrationItemStatus.cs" />
+    <Compile Include="Integration\IntegrationItemStatusCollection.cs" />
+    <Compile Include="Integration\IntegrationItemStatusInternalCollection.cs" />
+    <Compile Include="Integration\IntegrationItemStatusSearchCriteria.cs" />
+    <Compile Include="Integration\IntegrationItemStatusInternal.cs" />
+    <Compile Include="Integration\IntegrationItemStatusSearchParameter.cs" />
+    <Compile Include="Integration\IntegrationItemStatusSearchParameterCollection.cs" />
+    <Compile Include="Integration\IntegrationMessageTypeCollection.cs" />
+    <Compile Include="Integration\IntegrationActivity.cs" />
+    <Compile Include="Integration\MessageQualificationResult.cs" />
+    <Compile Include="Integration\ProcessingQueueItem.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleAttributeValueCondition.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleAttributeValueConditionCollection.cs" />
+    <Compile Include="Interfaces\Exports\ILookupExportProfile.cs" />
+    <Compile Include="Interfaces\Exports\ILookupExportProfileData.cs" />
+    <Compile Include="Interfaces\Exports\ILookupExportScope.cs" />
+    <Compile Include="Interfaces\Exports\ILookupExportScopeCollection.cs" />
+    <Compile Include="Interfaces\Exports\ILookupExportSyndicationProfileData.cs" />
+    <Compile Include="Interfaces\IApplicationConfigurationItem.cs" />
+    <Compile Include="Interfaces\IAttributeProcessingOptions.cs" />
+    <Compile Include="Interfaces\IEntityCopyPasteContext.cs" />
+    <Compile Include="Interfaces\IDQMEntityTasksQueueItem.cs" />
+    <Compile Include="Interfaces\IDQMEntityTasksQueueItemsCollection.cs" />
+    <Compile Include="Interfaces\IDQMJobProfile.cs" />
+    <Compile Include="Interfaces\IDQMJobQueueItem.cs" />
+    <Compile Include="Interfaces\IDQMJobQueueItemsCollection.cs" />
+    <Compile Include="Integration\ConnectorProfileCollection.cs" />
+    <Compile Include="Integration\ProcessingConfiguration.cs" />
+    <Compile Include="Integration\QualificationConfiguration.cs" />
+    <Compile Include="Interfaces\IDQMJobQueueItemsStatusCollection.cs" />
+    <Compile Include="Interfaces\IDQMJobQueueItemStatus.cs" />
+    <Compile Include="Interfaces\IDQMProcessorErrorLogItem.cs" />
+    <Compile Include="Interfaces\IDQMProcessorErrorLogItemsCollection.cs" />
+    <Compile Include="Interfaces\IJobReportSettings.cs" />
+    <Compile Include="Interfaces\IJobScopeFilter.cs" />
+    <Compile Include="Interfaces\IJobSourceScopeFilter.cs" />
+    <Compile Include="Interfaces\IMDMFeatureConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IMDMFeatureConfigCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IMDMFeatureConfigDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IMDMFeatureConfigDetailCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IMergePlanItem.cs" />
+    <Compile Include="Interfaces\IMergePlanItemCollection.cs" />
+    <Compile Include="Interfaces\INormalizationReportItem.cs" />
+    <Compile Include="Interfaces\INormalizationReportItemsCollection.cs" />
+    <Compile Include="Interfaces\INormalizationReportSettings.cs" />
+    <Compile Include="Interfaces\Integration\IInboundQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IInboundQueueItemCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationActivity.cs" />
+    <Compile Include="Interfaces\IMDMObjectType.cs" />
+    <Compile Include="Interfaces\IMDMObjectTypeCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItem.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationErrorLog.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusDimension.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemDimensionTypeCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusDimensionInternal.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemDimensionStatusInternalCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemDimensionType.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusDimensionCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatus.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusInternal.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusInternalCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusSearchCriteria.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusSearchParameter.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationItemStatusSearchParameterCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationMessageTypeCollection.cs" />
+    <Compile Include="Interfaces\Integration\IProcessingConfiguration.cs" />
+    <Compile Include="Interfaces\Integration\IProcessingQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IQualificationConfiguration.cs" />
+    <Compile Include="Interfaces\Integration\IRunTimeSpecifications.cs" />
+    <Compile Include="Integration\RunTimeSpecifications.cs" />
+    <Compile Include="Interfaces\Integration\IConnectorProfile.cs" />
+    <Compile Include="Integration\OutboundQueueItem.cs" />
+    <Compile Include="Integration\OutboundQueueItemCollection.cs" />
+    <Compile Include="Integration\QualifyingQueueItem.cs" />
+    <Compile Include="Integration\QualifyingQueueItemCollection.cs" />
+    <Compile Include="Interfaces\Integration\IConnectorProfileCollection.cs" />
+    <Compile Include="DQM\NormalizationResult.cs" />
+    <Compile Include="DQM\NormalizationResultCollection.cs" />
+    <Compile Include="DQM\NormalizationRuleParameters.cs" />
+    <Compile Include="Interfaces\INormalizationResult.cs" />
+    <Compile Include="Interfaces\INormalizationResultsCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationMessageType.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationQueueItem.cs" />
+    <Compile Include="Integration\IntegrationMessageType.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationMessageHeader.cs" />
+    <Compile Include="Integration\IntegrationActivityLog.cs" />
+    <Compile Include="Integration\IntegrationActvityLogCollection.cs" />
+    <Compile Include="Integration\IntegrationMessageCollection.cs" />
+    <Compile Include="Integration\IntegrationMessageHeader.cs" />
+    <Compile Include="Integration\ConnectorProfile.cs" />
+    <Compile Include="Integration\IntegrationMessage.cs" />
+    <Compile Include="Integration\IntegrationData.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationActivityLog.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationActivityLogCollection.cs" />
+    <Compile Include="Integration\IntegrationQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationMessageCollection.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationMessage.cs" />
+    <Compile Include="ContainerContext.cs" />
+    <Compile Include="ContainerEntityTypeAttributeMappingCollection.cs" />
+    <Compile Include="ContainerEntityTypeMappingCollection.cs" />
+    <Compile Include="ContainerRelationshipTypeAttributeMappingCollection.cs" />
+    <Compile Include="ContainerRelationshipTypeEntityTypeMappingCollection.cs" />
+    <Compile Include="ContainerTemplateCopyContext.cs" />
+    <Compile Include="BuildDetail.cs" />
+    <Compile Include="BuildDetailContext.cs" />
+    <Compile Include="DQM\DataQualityClassCollection.cs" />
+    <Compile Include="DQM\EntityQualityDataCollection.cs" />
+    <Compile Include="DQM\FilterCriteriaSettingsCollection.cs" />
+    <Compile Include="DQM\DataQualityIndicatorSummaryCollection.cs" />
+    <Compile Include="DQM\NamedDataQualityIndicatorValue.cs" />
+    <Compile Include="DQM\ValidationProfilesCollection.cs" />
+    <Compile Include="DQM\DataQualityPdf.cs" />
+    <Compile Include="DQM\DQMFilterPdf.cs" />
+    <Compile Include="DQM\ValidationProfile.cs" />
+    <Compile Include="DQM\DataQualityIndicatorCollection.cs" />
+    <Compile Include="DQM\SearchColumnRule.cs" />
+    <Compile Include="DQM\SearchDataQualityIndicatorRule.cs" />
+    <Compile Include="DynamicTableSchema\DBRelationship.cs" />
+    <Compile Include="DynamicTableSchema\DBRelationshipCollection.cs" />
+    <Compile Include="EntityActivityLogItemStatusCollection.cs" />
+    <Compile Include="EntityCacheInvalidateContext.cs" />
+    <Compile Include="EntityCacheInvalidateContextCollection.cs" />
+    <Compile Include="EntityCacheLoadContext.cs" />
+    <Compile Include="EntityCacheLoadContextItem.cs" />
+    <Compile Include="EntityCacheLoadContextItemCollection.cs" />
+    <Compile Include="EntityCacheStatusLoadRequest.cs" />
+    <Compile Include="EntityCollectionHistory.cs" />
+    <Compile Include="EntityCacheStatus.cs" />
+    <Compile Include="EntityCacheStatusCollection.cs" />
+    <Compile Include="EntityHistory.cs" />
+    <Compile Include="EntityHistoryContext.cs" />
+    <Compile Include="EntityHistoryDetailsTemplate.cs" />
+    <Compile Include="EntityHistoryDetailsTemplateCollection.cs" />
+    <Compile Include="EntityHistoryRecord.cs" />
+    <Compile Include="Exports\DataFormatter.cs" />
+    <Compile Include="Exports\DataFormatterCollection.cs" />
+    <Compile Include="Exports\DataSubscriber.cs" />
+    <Compile Include="Exports\DataSubscriberCollection.cs" />
+    <Compile Include="Exports\EmailNotification.cs" />
+    <Compile Include="Exports\EmailNotificationCollection.cs" />
+    <Compile Include="Exports\EntityExportProfileData.cs" />
+    <Compile Include="Exports\DataFormatterSetting.cs" />
+    <Compile Include="Exports\ExecutionSetting.cs" />
+    <Compile Include="Exports\DataFormatterSettingCollection.cs" />
+    <Compile Include="Exports\ExecutionSettingCollection.cs" />
+    <Compile Include="Exports\ExecutionSpecification.cs" />
+    <Compile Include="Exports\ExportProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exports\ExportProfileCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Exports\EntityExportSyndicationProfileData.cs" />
+    <Compile Include="Exports\ExportScope.cs" />
+    <Compile Include="Exports\ExportScopeCollection.cs" />
+    <Compile Include="Interfaces\IContainerEntityTypeMapping.cs" />
+    <Compile Include="Interfaces\IContainerEntityTypeMappingCollection.cs" />
+    <Compile Include="Interfaces\IContainerRelationshipTypeEntityTypeMapping.cs" />
+    <Compile Include="Interfaces\IContainerRelationshipTypeEntityTypeMappingCollection.cs" />
+    <Compile Include="Interfaces\Exports\IEntityExportUIProfileData.cs" />
+    <Compile Include="Interfaces\Exports\IEntityExportProfileData.cs" />
+    <Compile Include="Interfaces\Exports\IDataFormatterSetting.cs" />
+    <Compile Include="Interfaces\Exports\IDataFormatterSettingCollection.cs" />
+    <Compile Include="Interfaces\Exports\IExportProfile.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Exports\IExportProfileCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IPermissionContext.cs" />
+    <Compile Include="Interfaces\IPermission.cs" />
+    <Compile Include="Interfaces\IRelationshipTypeEntityTypeMapping.cs" />
+    <Compile Include="Interfaces\IRelationshipTypeEntityTypeMappingCollection.cs" />
+    <Compile Include="Interfaces\IServerInfo.cs" />
+    <Compile Include="Interfaces\IServerInfoCollection.cs" />
+    <Compile Include="Interfaces\ISource.cs" />
+    <Compile Include="Interfaces\ISourceCollection.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRulesetCollection.cs" />
+    <Compile Include="Interfaces\IUserConfig.cs" />
+    <Compile Include="Interfaces\IEntityCacheInvalidateContext.cs" />
+    <Compile Include="Interfaces\IEntityCacheInvalidateContextCollection.cs" />
+    <Compile Include="Interfaces\IPasswordResetRequest.cs" />
+    <Compile Include="Interfaces\ISearchAttributeRuleGroup.cs" />
+    <Compile Include="Interfaces\ISearchAttributeRuleGroupCollection.cs" />
+    <Compile Include="Interfaces\IUserCredentialRequestContext.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleSourceListItem.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleSourceListItemCollection.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRule.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleCollection.cs" />
+    <Compile Include="Interfaces\ISurvivorshipRuleset.cs" />
+    <Compile Include="MDMFeatureConfig.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MDMFeatureConfigCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MDMFeatureConfigDetail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MDMFeatureConfigDetailCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Matching\IMatchConfig.cs" />
+    <Compile Include="Interfaces\Matching\IMatchingContext.cs" />
+    <Compile Include="Interfaces\Matching\IMatchingResult.cs" />
+    <Compile Include="Interfaces\Matching\IMatchingService.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MDMObjectCollection.cs" />
+    <Compile Include="Exports\MDMObjectGroup.cs" />
+    <Compile Include="Exports\MDMObjectGroupCollection.cs" />
+    <Compile Include="Exports\Notification.cs" />
+    <Compile Include="Exports\OutputDataSpecification.cs" />
+    <Compile Include="Exports\OutputSpecification.cs" />
+    <Compile Include="Exports\ProfileSetting.cs" />
+    <Compile Include="Exports\ProfileSettingCollection.cs" />
+    <Compile Include="Exports\ScopeSpecification.cs" />
+    <Compile Include="Exports\TriggeringDataSpecification.cs" />
+    <Compile Include="FileCollection.cs" />
+    <Compile Include="Imports\LookupImportProfile.cs" />
+    <Compile Include="Imports\LookupImportProfileCollection.cs" />
+    <Compile Include="Imports\LookupJobProcessingOptions.cs" />
+    <Compile Include="Interfaces\IBuildDetailContext.cs" />
+    <Compile Include="Interfaces\IBuildDetail.cs" />
+    <Compile Include="Interfaces\Exports\IDataFormatter.cs" />
+    <Compile Include="Interfaces\Exports\IDataFormatterCollection.cs" />
+    <Compile Include="Interfaces\IDataQualityClassCollection.cs" />
+    <Compile Include="Interfaces\Exports\IDataSubscriber.cs" />
+    <Compile Include="Interfaces\Exports\IDataSubscriberCollection.cs" />
+    <Compile Include="Interfaces\Exports\IEmailNotification.cs" />
+    <Compile Include="Interfaces\Exports\IEmailNotificationCollection.cs" />
+    <Compile Include="Interfaces\IEntityCollectionHistory.cs" />
+    <Compile Include="Interfaces\IEntityHistory.cs" />
+    <Compile Include="Interfaces\IEntityActivityLogItemStatusCollection.cs" />
+    <Compile Include="Interfaces\IEntityHistoryContext.cs" />
+    <Compile Include="Interfaces\IEntityHistoryDetailsTemplate.cs" />
+    <Compile Include="Interfaces\IEntityHistoryDetailsTemplateCollection.cs" />
+    <Compile Include="Interfaces\IEntityHistoryRecord.cs" />
+    <Compile Include="Interfaces\IEntityQualityDataCollection.cs" />
+    <Compile Include="Interfaces\IAttributeUniqueIdentifierCollection.cs" />
+    <Compile Include="EntityActivityLogItemStatus.cs" />
+    <Compile Include="Interfaces\IEntityActivityLogItemStatus.cs" />
+    <Compile Include="Interfaces\Exports\IExecutionSetting.cs" />
+    <Compile Include="Interfaces\Exports\IExecutionSettingCollection.cs" />
+    <Compile Include="Interfaces\Exports\IExecutionSpecification.cs" />
+    <Compile Include="Interfaces\Exports\IExportScope.cs" />
+    <Compile Include="Interfaces\Exports\IExportScopeCollection.cs" />
+    <Compile Include="Interfaces\IFileCollection.cs" />
+    <Compile Include="Interfaces\IFilterCriteriaSettingsCollection.cs" />
+    <Compile Include="Interfaces\IDataQualityIndicatorCollection.cs" />
+    <Compile Include="Interfaces\IDataQualityIndicatorSummaryCollection.cs" />
+    <Compile Include="Interfaces\ILookupExportContext.cs" />
+    <Compile Include="Interfaces\ILookupImportProfile.cs" />
+    <Compile Include="Interfaces\ILookupImportProfileCollection.cs" />
+    <Compile Include="Interfaces\IMDMObjectCollection.cs" />
+    <Compile Include="Interfaces\Exports\IMDMObjectGroup.cs" />
+    <Compile Include="Interfaces\Exports\IMDMObjectGroupCollection.cs" />
+    <Compile Include="Interfaces\Exports\INotification.cs" />
+    <Compile Include="Interfaces\Exports\IOutputDataSpecification.cs" />
+    <Compile Include="Interfaces\Exports\IOutputSpecification.cs" />
+    <Compile Include="Interfaces\Exports\IProfileSetting.cs" />
+    <Compile Include="Interfaces\Exports\IProfileSettingCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipCardinality.cs" />
+    <Compile Include="Interfaces\IRelationshipCardinalityCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipDenormAction.cs" />
+    <Compile Include="Interfaces\IRelationshipDenormActionCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipDenormProcessingSetting.cs" />
+    <Compile Include="Interfaces\IRelationshipDenormProcessingSettingCollection.cs" />
+    <Compile Include="Interfaces\Exports\IScopeSpecification.cs" />
+    <Compile Include="Interfaces\ISearchAttributeRuleCollection.cs" />
+    <Compile Include="Interfaces\Exports\ITriggeringDataSpecification.cs" />
+    <Compile Include="Interfaces\Integration\IOutboundQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IOutboundQueueItemCollection.cs" />
+    <Compile Include="Interfaces\Integration\IQualifyingQueueItem.cs" />
+    <Compile Include="Interfaces\Integration\IQualifyingQueueItemCollection.cs" />
+    <Compile Include="Interfaces\Integration\IMessageQualificationResult.cs" />
+    <Compile Include="Interfaces\Integration\IIntegrationData.cs" />
+    <Compile Include="Interfaces\ISummarizationJobQueueItem.cs" />
+    <Compile Include="Interfaces\ISummarizationJobQueueItemCollection.cs" />
+    <Compile Include="Interfaces\IValidationProfilesCollection.cs" />
+    <Compile Include="Interfaces\IDataQualityClassStatisticsCollection.cs" />
+    <Compile Include="Interfaces\IValidationProfile.cs" />
+    <Compile Include="Interfaces\IMDMObjectInfo.cs" />
+    <Compile Include="Interfaces\IMDMObjectInfoCollection.cs" />
+    <Compile Include="Interfaces\ISearchColumnRule.cs" />
+    <Compile Include="Interfaces\ISearchDataQualityIndicatorRule.cs" />
+    <Compile Include="Interfaces\IRelationshipDenormProcessingSettingContext.cs" />
+    <Compile Include="LookupExportContext.cs" />
+    <Compile Include="LookupRelationship.cs" />
+    <Compile Include="LookupRelationshipCollection.cs" />
+    <Compile Include="MDMObjectInfo.cs" />
+    <Compile Include="MDMObjectInfoCollection.cs" />
+    <Compile Include="PasswordResetRequest.cs" />
+    <Compile Include="MDMObjectType.cs" />
+    <Compile Include="MDMObjectTypeCollection.cs" />
+    <Compile Include="DQM\SummarizationJobQueueItem.cs" />
+    <Compile Include="DataProcessorConfig.cs" />
+    <Compile Include="DataProcessorConfigCollection.cs" />
+    <Compile Include="DependentAttribute.cs" />
+    <Compile Include="DependentAttributeCollection.cs" />
+    <Compile Include="DependentAttributeDataMap.cs" />
+    <Compile Include="DependentAttributeDataMapCollection.cs" />
+    <Compile Include="EntityTypeUniqueIdentifier.cs" />
+    <Compile Include="EntityTypeUniqueIdentifierCollection.cs" />
+    <Compile Include="DQM\DataQualityClass.cs" />
+    <Compile Include="DQM\DataQualityClassStatisticsCollection.cs" />
+    <Compile Include="DQM\DQMReport.cs" />
+    <Compile Include="DQM\EntityQualityData.cs" />
+    <Compile Include="DQM\DataQualityClassStatistics.cs" />
+    <Compile Include="DQM\DQMFilter.cs" />
+    <Compile Include="DQM\FilterCriteriaSettings.cs" />
+    <Compile Include="DQM\EntityQualityReportData.cs" />
+    <Compile Include="DQM\EntityQualityReportDataCollection.cs" />
+    <Compile Include="DQM\DataQualityIndicator.cs" />
+    <Compile Include="DQM\DataQualityIndicatorSummary.cs" />
+    <Compile Include="DQM\DataQualityIndicatorValueCollection.cs" />
+    <Compile Include="DQM\DataQualityIndicatorValue.cs" />
+    <Compile Include="Hierarchy.cs" />
+    <Compile Include="Interfaces\IEntityQualityReportDataCollection.cs" />
+    <Compile Include="Interfaces\IJobFilterContext.cs" />
+    <Compile Include="Interfaces\IAttributeModelBaseProperties.cs" />
+    <Compile Include="Interfaces\ICategoryAttributeMapping.cs" />
+    <Compile Include="Interfaces\ICategoryAttributeMappingCollection.cs" />
+    <Compile Include="Interfaces\IDataQualityClass.cs" />
+    <Compile Include="Interfaces\IDQMFilter.cs" />
+    <Compile Include="Interfaces\IEntityQualityReportData.cs" />
+    <Compile Include="Interfaces\IDQMReport.cs" />
+    <Compile Include="Interfaces\IEntityQualityData.cs" />
+    <Compile Include="Interfaces\IFilterCriteriaSettings.cs" />
+    <Compile Include="Interfaces\IJobScheduleCollection.cs" />
+    <Compile Include="Interfaces\IJobSchedule.cs" />
+    <Compile Include="Interfaces\IDataQualityClassStatistics.cs" />
+    <Compile Include="Interfaces\IDataQualityIndicator.cs" />
+    <Compile Include="Interfaces\IDataQualityIndicatorSummary.cs" />
+    <Compile Include="Interfaces\IDataQualityIndicatorValue.cs" />
+    <Compile Include="Interfaces\IHierarchy.cs" />
+    <Compile Include="Interfaces\IHierarchyCollection.cs" />
+    <Compile Include="Interfaces\IValueSegment.cs" />
+    <Compile Include="JobFilterContext.cs" />
+    <Compile Include="Jobs\JobScheduleCollection.cs" />
+    <Compile Include="Jobs\JobSchedule.cs" />
+    <Compile Include="RelationshipCardinality.cs" />
+    <Compile Include="RelationshipCardinalityCollection.cs" />
+    <Compile Include="RelationshipDenormAction.cs" />
+    <Compile Include="RelationshipDenormActionCollection.cs" />
+    <Compile Include="RelationshipDenormProcessingSetting.cs" />
+    <Compile Include="RelationshipDenormProcessingSettingCollection.cs" />
+    <Compile Include="RelationshipDenormProcessingSettingContext.cs" />
+    <Compile Include="RelationshipProcessingContext.cs" />
+    <Compile Include="RelationshipTypeEntityTypeMappingCollection.cs" />
+    <Compile Include="DQM\SummarizationJobQueueItemCollection.cs" />
+    <Compile Include="ScheduleCriteriaCollection.cs" />
+    <Compile Include="Exports\EntityExportProfile.cs" />
+    <Compile Include="EntityTypeAttributeMappingCollection.cs" />
+    <Compile Include="Exports\ExportContext.cs" />
+    <Compile Include="Exports\EntityExportProfileCollection.cs" />
+    <Compile Include="Exports\ExportProfileContext.cs" />
+    <Compile Include="Exports\EntityExportUIProfileData.cs" />
+    <Compile Include="Exports\ExportSubscriber.cs" />
+    <Compile Include="Exports\ExportSubscriberCollection.cs" />
+    <Compile Include="Exports\ExportType.cs" />
+    <Compile Include="Interfaces\IContainerContext.cs" />
+    <Compile Include="Interfaces\IApplicationContextCollection.cs" />
+    <Compile Include="Interfaces\IDataProcessorConfig.cs" />
+    <Compile Include="Interfaces\IDataProcessorConfigCollection.cs" />
+    <Compile Include="Interfaces\IDependentAttribute.cs" />
+    <Compile Include="Interfaces\IDependentAttributeCollection.cs" />
+    <Compile Include="Interfaces\IDependentAttributeDataMap.cs" />
+    <Compile Include="Interfaces\IDependentAttributeDataMapCollection.cs" />
+    <Compile Include="Interfaces\IScheduleCriteriaCollection.cs" />
+    <Compile Include="Interfaces\IAppConfig.cs" />
+    <Compile Include="Interfaces\IAppConfigCollection.cs" />
+    <Compile Include="Interfaces\Exports\IExportProfileContext.cs" />
+    <Compile Include="Interfaces\IEntityType.cs" />
+    <Compile Include="Interfaces\Exports\IEntityExportSyndicationProfileData.cs" />
+    <Compile Include="Interfaces\Exports\IExportSubscriberCollection.cs" />
+    <Compile Include="Interfaces\Exports\IExportSubscriber.cs" />
+    <Compile Include="Interfaces\IContainerRelationshipTypeAttributeMappingCollection.cs" />
+    <Compile Include="Interfaces\IContainerEntityTypeAttributeMappingCollection.cs" />
+    <Compile Include="Interfaces\IContainerRelationshipTypeAttributeMapping.cs" />
+    <Compile Include="Interfaces\IContainerEntityTypeAttributeMapping.cs" />
+    <Compile Include="Interfaces\IEntityTypeAttributeMapping.cs" />
+    <Compile Include="Interfaces\IEntityTypeAttributeMappingCollection.cs" />
+    <Compile Include="Interfaces\IEntityTypeUniqueIdentifier.cs" />
+    <Compile Include="Interfaces\IEntityTypeUniqueIdentifierCollection.cs" />
+    <Compile Include="Interfaces\ILookupSearchRule.cs" />
+    <Compile Include="Interfaces\ILookupSearchRuleCollection.cs" />
+    <Compile Include="Interfaces\Exports\IEntityExportProfile.cs" />
+    <Compile Include="Interfaces\Exports\IEntityExportProfileCollection.cs" />
+    <Compile Include="Interfaces\IImportProfile.cs" />
+    <Compile Include="Interfaces\IImportProfileCollection.cs" />
+    <Compile Include="Interfaces\IMailConfigCollection.cs" />
+    <Compile Include="Interfaces\ICategoryTreeItem.cs" />
+    <Compile Include="Interfaces\ICategoryTreeItemCollection.cs" />
+    <Compile Include="Interfaces\IContainerTemplateCopyContext.cs" />
+    <Compile Include="Interfaces\IDoneReportItem.cs" />
+    <Compile Include="Interfaces\IDoneReportItemWorkflowInfo.cs" />
+    <Compile Include="Interfaces\IMailConfig.cs" />
+    <Compile Include="Interfaces\IEntityProcessorErrorLog.cs" />
+    <Compile Include="Interfaces\IDataProcessorEntity.cs" />
+    <Compile Include="Interfaces\IOperationResultCollection.cs" />
+    <Compile Include="Interfaces\IOrganization.cs" />
+    <Compile Include="Interfaces\IOrganizationCollection.cs" />
+    <Compile Include="Interfaces\IOrganizationContext.cs" />
+    <Compile Include="Interfaces\IQueuedEntityCollection.cs" />
+    <Compile Include="Interfaces\ISearchWeightageAttribute.cs" />
+    <Compile Include="Interfaces\ISecurityUserCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipTypeAttributeMapping.cs" />
+    <Compile Include="Interfaces\IUOM.cs" />
+    <Compile Include="Interfaces\IUOMCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipTypeAttributeMappingCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipTypeCollection.cs" />
+    <Compile Include="Interfaces\IScheduleCriteria.cs" />
+    <Compile Include="Interfaces\IUomContext.cs" />
+    <Compile Include="Jobs\JobOperationStatus.cs" />
+    <Compile Include="LookupSearchRule.cs" />
+    <Compile Include="LookupSearchRuleCollection.cs" />
+    <Compile Include="MailConfig.cs" />
+    <Compile Include="MailConfigCollection.cs" />
+    <Compile Include="MergeCopy\IMergeCopyExtensionProvider.cs" />
+    <Compile Include="MergeCopy\IMergeCopyHandler.cs" />
+    <Compile Include="MergeCopy\MergeCopyContext.cs" />
+    <Compile Include="OperationResultCollection.cs" />
+    <Compile Include="OrganizationCollection.cs" />
+    <Compile Include="OrganizationContext.cs" />
+    <Compile Include="PageSource.cs" />
+    <Compile Include="QueuedEntityCollection.cs" />
+    <Compile Include="QueuedEntity.cs" />
+    <Compile Include="RelationshipTypeAttributeMappingCollection.cs" />
+    <Compile Include="RelationshipTypeCollection.cs" />
+    <Compile Include="ScheduleCriteria.cs" />
+    <Compile Include="SearchAttributeRuleCollection.cs" />
+    <Compile Include="SearchAttributeRuleGroup.cs" />
+    <Compile Include="SearchAttributeRuleGroupCollection.cs" />
+    <Compile Include="SearchWeightageAttribute.cs" />
+    <Compile Include="SecurityUserCollection.cs" />
+    <Compile Include="HierarchyCollection.cs" />
+    <Compile Include="ServerInfo.cs" />
+    <Compile Include="ServerInfoCollection.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="SourceCollection.cs" />
+    <Compile Include="SurvivorshipRuleSourceListItem.cs" />
+    <Compile Include="SurvivorshipRuleSourceListItemCollection.cs" />
+    <Compile Include="SurvivorshipRule.cs" />
+    <Compile Include="SurvivorshipRuleCollection.cs" />
+    <Compile Include="SurvivorshipRuleset.cs" />
+    <Compile Include="SurvivorshipRulesetCollection.cs" />
+    <Compile Include="SurvivorshipRuleStrategyPriority.cs" />
+    <Compile Include="SurvivorshipRuleStrategyPriorityCollection.cs" />
+    <Compile Include="DQM\MatchSuspect.cs" />
+    <Compile Include="DQM\MatchSuspectCollection.cs" />
+    <Compile Include="DQM\MatchSuspectField.cs" />
+    <Compile Include="Template.cs" />
+    <Compile Include="Interfaces\ITemplate.cs" />
+    <Compile Include="DataProcessorStatus.cs" />
+    <Compile Include="DataProcessorStatusCollection.cs" />
+    <Compile Include="EntityAuditInfo.cs" />
+    <Compile Include="EntityAuditInfoCollection.cs" />
+    <Compile Include="ErrorCollection.cs" />
+    <Compile Include="Interfaces\IDataProcessorStatus.cs" />
+    <Compile Include="Interfaces\IDataProcessorStatusCollection.cs" />
+    <Compile Include="Imports\RelationshipTypeMap.cs" />
+    <Compile Include="Imports\RelationshipTypeMaps.cs" />
+    <Compile Include="InformationCollection.cs" />
+    <Compile Include="Interfaces\IEntityAuditInfoCollection.cs" />
+    <Compile Include="Interfaces\IEntityAuditInfo.cs" />
+    <Compile Include="Interfaces\IErrorCollection.cs" />
+    <Compile Include="Interfaces\IImpactedEntityErrorLogCollection.cs" />
+    <Compile Include="Interfaces\IEntityActivityLogCollection.cs" />
+    <Compile Include="Denorm\EntityProcessorErrorLog.cs" />
+    <Compile Include="Denorm\EntityProcessorErrorLogCollection.cs" />
+    <Compile Include="EntityActivityLog.cs" />
+    <Compile Include="EntityActivityLogCollection.cs" />
+    <Compile Include="Interfaces\IInformationCollection.cs" />
+    <Compile Include="Interfaces\IServiceStatusCollection.cs" />
+    <Compile Include="Interfaces\IServiceStatus.cs" />
+    <Compile Include="Interfaces\IWarning.cs" />
+    <Compile Include="Interfaces\IWarningCollection.cs" />
+    <Compile Include="Interfaces\IParallelizationEngineStatus.cs" />
+    <Compile Include="ContainerCollection.cs" />
+    <Compile Include="Interfaces\IContainer.cs" />
+    <Compile Include="Interfaces\IContainerCollection.cs" />
+    <Compile Include="ImpactedEntityCollection.cs" />
+    <Compile Include="ImpactedEntity.cs" />
+    <Compile Include="Interfaces\IImpactedEntity.cs" />
+    <Compile Include="Interfaces\IImpactedEntityCollection.cs" />
+    <Compile Include="CustomProfile.cs" />
+    <Compile Include="DynamicTableSchema\DBConstraintCollection.cs" />
+    <Compile Include="DynamicTableSchema\DBConstraint.cs" />
+    <Compile Include="Denorm\DenormResult.cs" />
+    <Compile Include="Denorm\DenormResultCollection.cs" />
+    <Compile Include="Denorm\ExecutionStep.cs" />
+    <Compile Include="Denorm\ExecutionStepCollection.cs" />
+    <Compile Include="DynamicTableSchema\DBColumn.cs" />
+    <Compile Include="DynamicTableSchema\DBColumnCollection.cs" />
+    <Compile Include="DynamicTableSchema\DBTable.cs" />
+    <Compile Include="DynamicTableSchema\DBTableCollection.cs" />
+    <Compile Include="EntityVariantRuleAttribute.cs" />
+    <Compile Include="EntityVariantRuleAttributeCollection.cs" />
+    <Compile Include="EntityMoveContext.cs" />
+    <Compile Include="EntityProviderContext.cs" />
+    <Compile Include="EntitySearchData.cs" />
+    <Compile Include="EntitySearchDataCollection.cs" />
+    <Compile Include="ExtensionRelationship.cs" />
+    <Compile Include="ExtensionRelationshipCollection.cs" />
+    <Compile Include="Imports\ContainerMap.cs" />
+    <Compile Include="Imports\AttributeMap.cs" />
+    <Compile Include="Imports\AttributeMapCollection.cs" />
+    <Compile Include="Imports\AttributeSource.cs" />
+    <Compile Include="Imports\AttributeTarget.cs" />
+    <Compile Include="Imports\LocaleMap.cs" />
+    <Compile Include="Imports\JobProcessingOptions.cs" />
+    <Compile Include="Imports\HierarchyParentEntityMap.cs" />
+    <Compile Include="Imports\MDLParentEntityMap.cs" />
+    <Compile Include="Imports\TargetCategoryMap.cs" />
+    <Compile Include="Imports\SourceCategoryMap.cs" />
+    <Compile Include="Imports\EntityTypeMap.cs" />
+    <Compile Include="Imports\LongNameMap.cs" />
+    <Compile Include="Imports\ShortNameMap.cs" />
+    <Compile Include="Imports\EntityMetadataMap.cs" />
+    <Compile Include="Imports\Provider.cs" />
+    <Compile Include="Imports\ProviderCollection.cs" />
+    <Compile Include="Imports\ReaderSetting.cs" />
+    <Compile Include="Imports\ReaderSettingCollection.cs" />
+    <Compile Include="Imports\ProviderSetting.cs" />
+    <Compile Include="Imports\ProviderSettingCollection.cs" />
+    <Compile Include="Interfaces\IAuditInfo.cs" />
+    <Compile Include="Interfaces\IAuditInfoCollection.cs" />
+    <Compile Include="Interfaces\IEntityProviderContext.cs" />
+    <Compile Include="Interfaces\IEntitySearchData.cs" />
+    <Compile Include="Interfaces\IEntitySearchDataCollection.cs" />
+    <Compile Include="Interfaces\IProviderSetting.cs" />
+    <Compile Include="Interfaces\IProviderSettingCollection.cs" />
+    <Compile Include="Interfaces\IReaderSetting.cs" />
+    <Compile Include="Interfaces\IReaderSettingCollection.cs" />
+    <Compile Include="Interfaces\IEntityVariantRuleAttribute.cs" />
+    <Compile Include="Imports\KeywordProcessingOptions.cs" />
+    <Compile Include="Imports\ImportProfileCollection.cs" />
+    <Compile Include="Interfaces\IApplicationMessage.cs" />
+    <Compile Include="Interfaces\IBusinessRuleContext.cs" />
+    <Compile Include="Interfaces\IEntityVariantRuleAttributeCollection.cs" />
+    <Compile Include="Interfaces\IEntityMoveContext.cs" />
+    <Compile Include="Interfaces\IDBColumn.cs" />
+    <Compile Include="Interfaces\IDBColumnCollection.cs" />
+    <Compile Include="Interfaces\IDBConstraint.cs" />
+    <Compile Include="Interfaces\IDBConstraintCollection.cs" />
+    <Compile Include="Interfaces\IDBTable.cs" />
+    <Compile Include="Interfaces\IDBTableCollection.cs" />
+    <Compile Include="Interfaces\ILocaleCollection.cs" />
+    <Compile Include="Interfaces\IMenu.cs" />
+    <Compile Include="Interfaces\IMenuCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipOperationResult.cs" />
+    <Compile Include="Interfaces\IRelationshipOperationResultCollection.cs" />
+    <Compile Include="Interfaces\ISecurityPermissionDefinition.cs" />
+    <Compile Include="Interfaces\ISecurityPermissionDefinitionCollection.cs" />
+    <Compile Include="Interfaces\ISecurityPrincipal.cs" />
+    <Compile Include="Interfaces\ISecurityRole.cs" />
+    <Compile Include="Interfaces\ISecurityRoleCollection.cs" />
+    <Compile Include="Interfaces\ISecurityUser.cs" />
+    <Compile Include="Interfaces\ILocaleMessage.cs" />
+    <Compile Include="Interfaces\ILocaleMessageCollection.cs" />
+    <Compile Include="Interfaces\IKeywordProcessingOptions.cs" />
+    <Compile Include="Interfaces\IExecutionStatus.cs" />
+    <Compile Include="Interfaces\IExtensionRelationship.cs" />
+    <Compile Include="Interfaces\IExtensionRelationshipCollection.cs" />
+    <Compile Include="Interfaces\IJob.cs" />
+    <Compile Include="Interfaces\IJobCollection.cs" />
+    <Compile Include="Interfaces\IJobData.cs" />
+    <Compile Include="Interfaces\IJobImportResult.cs" />
+    <Compile Include="Interfaces\IJobImportResultCollection.cs" />
+    <Compile Include="Interfaces\IJobParameter.cs" />
+    <Compile Include="Interfaces\IJobParameterCollection.cs" />
+    <Compile Include="Interfaces\ITrackedActivityInfo.cs" />
+    <Compile Include="Interfaces\ITrackedActivityInfoCollection .cs" />
+    <Compile Include="Interfaces\IWorkflow.cs" />
+    <Compile Include="Interfaces\IWorkflowBusinessRuleContext.cs" />
+    <Compile Include="Interfaces\IWorkflowDataContext.cs" />
+    <Compile Include="Interfaces\IWorkflowMDMObject.cs" />
+    <Compile Include="Interfaces\IWorkflowMDMObjectCollection.cs" />
+    <Compile Include="JobProfileCollection.cs" />
+    <Compile Include="Jobs\JobExecutionStep.cs" />
+    <Compile Include="Jobs\JobExecutionStepCollection.cs" />
+    <Compile Include="LocaleCollection.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="MenuCollection.cs" />
+    <Compile Include="ParallelizationEngineStatus.cs" />
+    <Compile Include="RelationshipOperationResult.cs" />
+    <Compile Include="RelationshipOperationResultCollection.cs" />
+    <Compile Include="LocaleMessage.cs" />
+    <Compile Include="LocaleMessageCollection.cs" />
+    <Compile Include="RuleFramework\RuleGenericPropertyType.cs" />
+    <Compile Include="SecurityPermissionDefinition.cs" />
+    <Compile Include="SecurityPermissionDefinitionCollection.cs" />
+    <Compile Include="SecurityRoleCollection.cs" />
+    <Compile Include="ServiceStatusCollection.cs" />
+    <Compile Include="EntityChangeContext.cs" />
+    <Compile Include="EntityMap.cs" />
+    <Compile Include="EntityMapCollection.cs" />
+    <Compile Include="EntityProcessingOptions.cs" />
+    <Compile Include="DBCommandProperties.cs" />
+    <Compile Include="EntityVariantDefinition.cs" />
+    <Compile Include="EntityVariantLevel.cs" />
+    <Compile Include="EntityOperationResult.cs" />
+    <Compile Include="EntityOperationResultCollection.cs" />
+    <Compile Include="EntityTypeCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EntityView.cs" />
+    <Compile Include="EntityViewCollection.cs" />
+    <Compile Include="Interfaces\IEntityChangeContext.cs" />
+    <Compile Include="Interfaces\IApplicationContext.cs" />
+    <Compile Include="Interfaces\IAttributeVersion.cs" />
+    <Compile Include="Interfaces\IAttributeVersionCollection.cs" />
+    <Compile Include="Interfaces\IEntityIdentificationMap.cs" />
+    <Compile Include="Interfaces\ILocale.cs" />
+    <Compile Include="HierarchyRelationshipCollection.cs" />
+    <Compile Include="HierarchyRelationship.cs" />
+    <Compile Include="Interfaces\IConnectionProperties.cs" />
+    <Compile Include="Interfaces\IEntityMap.cs" />
+    <Compile Include="Interfaces\IEntityMapCollection.cs" />
+    <Compile Include="Imports\ExecutionStepCollection.cs" />
+    <Compile Include="Imports\StepConfiguration.cs" />
+    <Compile Include="Imports\EntityIdentificationMap.cs" />
+    <Compile Include="Imports\MappingCollection.cs" />
+    <Compile Include="Imports\Mapping.cs" />
+    <Compile Include="Imports\ProcessingSpecifications.cs" />
+    <Compile Include="Imports\MappingSpecifications.cs" />
+    <Compile Include="Imports\InputSpecifications.cs" />
+    <Compile Include="Imports\ExecutionStep.cs" />
+    <Compile Include="Imports\ImportProfile.cs" />
+    <Compile Include="Interfaces\IEntityProcessingOptions.cs" />
+    <Compile Include="Interfaces\IAttributeOperationResult.cs" />
+    <Compile Include="Interfaces\IAttributeOperationResultCollection.cs" />
+    <Compile Include="Interfaces\IEntityOperationResult.cs" />
+    <Compile Include="Interfaces\IEntityOperationResultCollection.cs" />
+    <Compile Include="Interfaces\IEntityVariantLevel.cs" />
+    <Compile Include="Interfaces\IEntityVariantDefinition.cs" />
+    <Compile Include="Interfaces\IEntityTypeCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Interfaces\IEntityView.cs" />
+    <Compile Include="Interfaces\IEntityViewCollection.cs" />
+    <Compile Include="Interfaces\IFile.cs" />
+    <Compile Include="Interfaces\IHierarchyRelationship.cs" />
+    <Compile Include="Interfaces\IHierarchyRelationshipCollection.cs" />
+    <Compile Include="Interfaces\ILookup.cs" />
+    <Compile Include="Interfaces\ILookupCollection.cs" />
+    <Compile Include="Interfaces\IRelationship.cs" />
+    <Compile Include="Interfaces\IRelationshipBase.cs" />
+    <Compile Include="Interfaces\IRelationshipBaseCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipCollection.cs" />
+    <Compile Include="Interfaces\IRelationshipContext.cs" />
+    <Compile Include="Interfaces\IRelationshipType.cs" />
+    <Compile Include="JobProfile.cs" />
+    <Compile Include="Jobs\JobCollection.cs" />
+    <Compile Include="Jobs\ExecutionStatus.cs" />
+    <Compile Include="Jobs\JobImportResult.cs" />
+    <Compile Include="Jobs\JobImportResultCollection.cs" />
+    <Compile Include="Jobs\JobParameterCollection.cs" />
+    <Compile Include="Jobs\JobData.cs" />
+    <Compile Include="Jobs\Job.cs" />
+    <Compile Include="Jobs\JobParameter.cs" />
+    <Compile Include="Lookup.cs" />
+    <Compile Include="LookupCollection.cs" />
+    <Compile Include="PermissionCollection.cs" />
+    <Compile Include="EntityCollection.cs" />
+    <Compile Include="ApplicationMessage.cs" />
+    <Compile Include="EntityContext.cs" />
+    <Compile Include="Interfaces\IAttribute.cs" />
+    <Compile Include="Interfaces\IAttributeCollection.cs" />
+    <Compile Include="Interfaces\IAttributeModel.cs" />
+    <Compile Include="Interfaces\IAttributeModelCollection.cs" />
+    <Compile Include="Interfaces\IAttributeModelContext.cs" />
+    <Compile Include="Interfaces\IAttributeUniqueIdentifier.cs" />
+    <Compile Include="Interfaces\ICell.cs" />
+    <Compile Include="Interfaces\ICellCollection.cs" />
+    <Compile Include="Interfaces\IColumn.cs" />
+    <Compile Include="Interfaces\IColumnCollection.cs" />
+    <Compile Include="Interfaces\IEntity.cs" />
+    <Compile Include="Interfaces\IEntityCollection.cs" />
+    <Compile Include="Interfaces\IEntityContext.cs" />
+    <Compile Include="Interfaces\IError.cs" />
+    <Compile Include="Interfaces\IInformation.cs" />
+    <Compile Include="Interfaces\ILookupContext.cs" />
+    <Compile Include="Interfaces\IOperationResult.cs" />
+    <Compile Include="Interfaces\IRow.cs" />
+    <Compile Include="Interfaces\IRowCollection.cs" />
+    <Compile Include="Interfaces\ISearchAttributeRule.cs" />
+    <Compile Include="Interfaces\ISearchCriteria.cs" />
+    <Compile Include="Interfaces\ISearchContext.cs" />
+    <Compile Include="Interfaces\ITable.cs" />
+    <Compile Include="Interfaces\ITableCollection.cs" />
+    <Compile Include="Interfaces\IUserPreferences.cs" />
+    <Compile Include="Interfaces\IValue.cs" />
+    <Compile Include="Interfaces\IValueCollection.cs" />
+    <Compile Include="Interfaces\IVendor.cs" />
+    <Compile Include="Interfaces\IVendorCollection.cs" />
+    <Compile Include="Interfaces\IWorkflowActivity.cs" />
+    <Compile Include="Interfaces\IWorkflowActionContext.cs" />
+    <Compile Include="Interfaces\MDMObjectFactory.cs" />
+    <Compile Include="LookupContext.cs" />
+    <Compile Include="Permission.cs" />
+    <Compile Include="PermissionContext.cs" />
+    <Compile Include="Relationship.cs" />
+    <Compile Include="RelationshipBaseCollection.cs" />
+    <Compile Include="RelationshipCollection.cs" />
+    <Compile Include="Row.cs" />
+    <Compile Include="RowCollection.cs" />
+    <Compile Include="SearchAttributeRule.cs" />
+    <Compile Include="SearchCriteria.cs" />
+    <Compile Include="SearchContext.cs" />
+    <Compile Include="ServiceStatus.cs" />
+    <Compile Include="ServiceUserContext.cs" />
+    <Compile Include="Table.cs" />
+    <Compile Include="TableCollection.cs" />
+    <Compile Include="UnitTestContext.cs" />
+    <Compile Include="UOM.cs" />
+    <Compile Include="UOMCollection.cs" />
+    <Compile Include="UomContext.cs" />
+    <Compile Include="UserCredentialRequestContext.cs" />
+    <Compile Include="UserPreferencesCollection.cs" />
+    <Compile Include="Utility.cs" />
+    <Compile Include="ValueCollection.cs" />
+    <Compile Include="DataSecurity.cs" />
+    <Compile Include="File.cs" />
+    <Compile Include="Information.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="MessageTemplate.cs" />
+    <Compile Include="UserConfig.cs" />
+    <Compile Include="ValueSegment.cs" />
+    <Compile Include="Vendor.cs" />
+    <Compile Include="VendorCollection.cs" />
+    <Compile Include="Warning.cs" />
+    <Compile Include="WarningCollection.cs" />
+    <Compile Include="Interfaces\IWorkflowState.cs" />
+    <Compile Include="Interfaces\IWorkflowStateCollection.cs" />
+    <Compile Include="WorkflowChangeContext.cs" />
+    <Compile Include="Workflow\DataObject.cs" />
+    <Compile Include="Workflow\DataObjectOperationRequest.cs" />
+    <Compile Include="Workflow\DataObjectOperationResponse.cs" />
+    <Compile Include="Workflow\DoneReportItem.cs" />
+    <Compile Include="Workflow\DoneReportItemWorkflowInfo.cs" />
+    <Compile Include="Workflow\JsonString.cs" />
+    <Compile Include="Workflow\WorkflowInvokableEntityInfo.cs" />
+    <Compile Include="Workflow\TrackedActivityInfoCollection.cs" />
+    <Compile Include="Workflow\WorkflowBusinessRuleContext.cs" />
+    <Compile Include="Workflow\ActivityAction.cs" />
+    <Compile Include="Workflow\Escalation.cs" />
+    <Compile Include="Workflow\WorkflowActionContext.cs" />
+    <Compile Include="EmailContext.cs" />
+    <Compile Include="Workflow\WorkflowEscalationData.cs" />
+    <Compile Include="Workflow\WorkflowEscalationDataCollection.cs" />
+    <Compile Include="Workflow\WorkflowEscalationContext.cs" />
+    <Compile Include="Workflow\WorkflowInfo.cs" />
+    <Compile Include="Workflow\WorkflowInfoCollection.cs" />
+    <Compile Include="Workflow\WorkflowInvokableEntityInfoCollection.cs" />
+    <Compile Include="Workflow\WorkflowMDMObject.cs" />
+    <Compile Include="Workflow\WorkflowMDMObjectCollection.cs" />
+    <Compile Include="Workflow\TrackedActivityInfo.cs" />
+    <Compile Include="AttributeGroup.cs" />
+    <Compile Include="AttributeModelCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AttributeUniqueIdentifier.cs" />
+    <Compile Include="Value.cs" />
+    <Compile Include="BusinessRule.cs" />
+    <Compile Include="BusinessRuleAttributeMapping.cs" />
+    <Compile Include="BusinessRuleSet.cs" />
+    <Compile Include="BusinessRuleSetRule.cs" />
+    <Compile Include="BusinessRuleType.cs" />
+    <Compile Include="BusinessRuleViewContext.cs" />
+    <Compile Include="CategoryAttributeMapping.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="ContainerEntityTypeMapping.cs" />
+    <Compile Include="AttributeCollection.cs" />
+    <Compile Include="ContainerEntityTypeAttributeMapping.cs" />
+    <Compile Include="ContainerRelationshipTypeAttributeMapping.cs" />
+    <Compile Include="ContainerRelationshipTypeEntityTypeMapping.cs" />
+    <Compile Include="AppConfig.cs" />
+    <Compile Include="Workflow\WorkflowInstance.cs" />
+    <Compile Include="Workflow\WorkflowState.cs" />
+    <Compile Include="Workflow\WorkflowStateCollection.cs" />
+    <Compile Include="Workflow\WorkflowVersion.cs" />
+    <Compile Include="Workflow\Workflow.cs" />
+    <Compile Include="Workflow\WorkflowActivity.cs" />
+    <Compile Include="EntityTypeAttributeMapping.cs" />
+    <Compile Include="Error.cs" />
+    <Compile Include="Workflow\FaultTracking.cs" />
+    <Compile Include="Workflow\InstanceTracking.cs" />
+    <Compile Include="OperationResult.cs" />
+    <Compile Include="RelationshipBase.cs" />
+    <Compile Include="RelationshipContext.cs" />
+    <Compile Include="RelationshipType.cs" />
+    <Compile Include="Entity.cs" />
+    <Compile Include="Culture.cs" />
+    <Compile Include="EntityType.cs" />
+    <Compile Include="Language.cs" />
+    <Compile Include="Locale.cs" />
+    <Compile Include="Organization.cs" />
+    <Compile Include="OrganizationType.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Attribute.cs" />
+    <Compile Include="Region.cs" />
+    <Compile Include="AttributeModel.cs" />
+    <Compile Include="RelationshipTypeAttributeMapping.cs" />
+    <Compile Include="RelationshipTypeEntityTypeMapping.cs" />
+    <Compile Include="SecurityPrincipal.cs" />
+    <Compile Include="SecurityRole.cs" />
+    <Compile Include="SecurityUser.cs" />
+    <Compile Include="TimeZone.cs" />
+    <Compile Include="UserIdentity.cs" />
+    <Compile Include="UserPreferences.cs" />
+    <Compile Include="MDMExceptionDetails.cs" />
+    <Compile Include="Workflow\WorkflowDataContext.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CategoryObjectModel.cd" />
+    <None Include="ClassDiagram5.cd" />
+    <None Include="EntityContextObjectModel.cd" />
+    <None Include="Imports\ImportProfileObjectModel.cd" />
+    <None Include="EntityClassDiagram.cd" />
+    <None Include="ObjectModel.cd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5A452CD7-42CF-41B0-83E9-759C68B43EEF}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\OperationContextManager\MDM.OperationContextManager.Business\MDM.OperationContextManager.Business.csproj">
+      <Project>{2b0d6267-080c-493a-89e6-d90e4f4eecc0}</Project>
+      <Name>MDM.OperationContextManager.Business</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Workflow\Formatters\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> a0c31d09068493c4b4054de03679a37608ae4ad1
 </Project>

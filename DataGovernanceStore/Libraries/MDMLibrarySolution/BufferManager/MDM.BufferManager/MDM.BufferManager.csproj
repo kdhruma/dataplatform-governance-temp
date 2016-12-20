@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -130,4 +131,138 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+=======
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E62BF6F6-8C07-4681-9CBF-80F9E250356C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MDM.BufferManager</RootNamespace>
+    <AssemblyName>RS.MDM.BufferManager</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>   
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\..\..\Assemblies\RS.MDM.BufferManager.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="protobuf-net, Version=2.0.0.668, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\3rd Party\Protobuf-net\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
+      <Link>AssemblyVersionInfo.cs</Link>
+    </Compile>
+    <Compile Include="ApplicationConfigurationItemBufferManager.cs" />
+    <Compile Include="AttributeModelBufferManager.cs" />
+    <Compile Include="BufferHelper.cs" />
+    <Compile Include="CacheBufferManager.cs" />
+    <Compile Include="CategoryBufferManager.cs" />
+    <Compile Include="ConnectorProfileBufferManager.cs" />
+    <Compile Include="ContainerBufferManager.cs" />
+    <Compile Include="ContainerEntityTypeMappingBufferManager.cs" />
+    <Compile Include="DataModelVersionManager.cs" />
+    <Compile Include="EntityBufferManager.cs" />
+    <Compile Include="ExportProfileBufferManager.cs" />
+    <Compile Include="EntityHistoryBufferManager.cs" />
+    <Compile Include="EntityTypeBufferManager.cs" />
+    <Compile Include="IntegrationItemDimensionTypeBufferManager.cs" />
+    <Compile Include="IntegrationMessageTypeBufferManager.cs" />
+    <Compile Include="LocaleBufferManager.cs" />
+    <Compile Include="LookupBufferManager.cs" />
+    <Compile Include="MappingBufferManager.cs" />
+    <Compile Include="MDMObjectTypeBufferManager.cs" />
+    <Compile Include="OrganizationBufferManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SecurityPrincipalBufferManager.cs" />
+    <Compile Include="SecurityRoleBufferManager.cs" />
+    <Compile Include="ServerInfoBufferManager.cs" />
+    <Compile Include="RelationshipBufferManager.cs" />
+    <Compile Include="UomBufferManager.cs" />
+    <Compile Include="HierarchyBufferManager.cs" />
+    <Compile Include="ValidationProfileBufferManager.cs" />
+    <Compile Include="WordListBufferManager.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\StoredProcedures\StoredProcedures.csproj">
+      <Project>{D7009E76-EE1C-4AF9-B211-FF12403E1FB3}</Project>
+      <Name>StoredProcedures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
+      <Project>{177AE776-AABC-4E81-99DE-733FFF5221D0}</Project>
+      <Name>MDM.BusinessObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\CacheManager\MDM.CacheManager.Business\MDM.CacheManager.Business.csproj">
+      <Project>{9078D667-A162-4258-8E8C-53725D5C2BE8}</Project>
+      <Name>MDM.CacheManager.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\MDM.Core\MDM.Core.csproj">
+      <Project>{B907BB1D-D3BA-4316-A05F-B3A99D66A6B9}</Project>
+      <Name>MDM.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ExceptionManager\MDM.ExceptionManager\MDM.ExceptionManager.csproj">
+      <Project>{C26B08D2-5D90-476E-8DEF-A740C9E9C4AD}</Project>
+      <Name>MDM.ExceptionManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\InstrumentationManager\MDM.InstrumentationManager.Utility\MDM.InstrumentationManager.Utility.csproj">
+      <Project>{5a452cd7-42cf-41b0-83e9-759c68b43eef}</Project>
+      <Name>MDM.InstrumentationManager.Utility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Interfaces\MDM.Interfaces\MDM.Interfaces.csproj">
+      <Project>{3776BE6C-5371-41E2-B444-3C42377CC9CA}</Project>
+      <Name>MDM.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\ServiceManager\MDM.Services.Client\MDM.Services.Client.csproj">
+      <Project>{E277413E-FDD8-47E0-8558-614E5AECAE2C}</Project>
+      <Name>MDM.Services.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Utility\MDM.Utility\MDM.Utility.csproj">
+      <Project>{C465D67C-EB64-4B40-82BA-04CC0C202C03}</Project>
+      <Name>MDM.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+>>>>>>> a0c31d09068493c4b4054de03679a37608ae4ad1
 </Project>
