@@ -18,7 +18,6 @@ namespace MDM.WCFServices
     using MDM.BusinessObjects;
     using MDM.BusinessObjects.DynamicTableSchema;
     using MDM.BusinessObjects.Jobs;
-    using MDM.BusinessRuleManager.Business;
     using MDM.Core;
     using MDM.DataModelManager.Business;
     using MDM.EntityManager.Business;
@@ -2292,113 +2291,6 @@ namespace MDM.WCFServices
         }
         #endregion
         #endregion JobManager
-
-        #region BusinessRuleBL
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="ruleIds"></param>
-        /// <returns></returns>
-        public Collection<BusinessRule> GetBusinessRulesById(IEnumerable<Int32> ruleIds)
-        {
-
-            return MakeMethodCall(() => new BusinessRuleBL().GetById(ruleIds));
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="LoginUser"></param>
-        /// <returns></returns>
-        public Collection<BusinessRule> GetBusinessRulesByUserId(String loginUser)
-        {
-            return MakeMethodCall(() => new BusinessRuleBL().GetAllByUser(loginUser));
-
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="businessRules"></param>
-        /// <param name="loginUser"></param>
-        /// <param name="programName"></param>
-        /// <param name="action"></param>
-        public Boolean ProcessBusinessRules(Collection<BusinessRule> businessRules, String loginUser, String programName, String action)
-        {
-            MakeMethodCall(() => new BusinessRuleBL().Process(businessRules, loginUser, programName, action));
-            return true;
-        }
-
-        /// <summary>
-        /// Get collection of BusinessRule based on Context
-        /// </summary>
-        /// <param name="eventSourceID">Indicates identifier of event source for retrieving business rules</param>
-        /// <param name="eventSubscriberID">Indicates identifier of event subscriber for retrieving business rules</param>
-        /// <param name="loginUserID">Indicates identifier of login user for retrieving business rules</param>
-        /// <param name="loginUserRole">Indicates identifier of login user role for retrieving business rules</param>
-        /// <param name="orgID">Indicates identifier of organization for retrieving business rules</param>
-        /// <param name="containerID">Indicates identifier of container for retrieving business rules</param>
-        /// <param name="entityTypeID">Indicates identifier of entity type for retrieving business rules</param>
-        /// <param name="businessRuleTypeIDs">Indicates identifiers of business rule types for retrieving business rules</param>
-        /// <returns>Returns collection of BusinessRule</returns>
-        public Collection<BusinessRule> GetBusinessRulesByContext(Int32 eventSourceID, Int32 eventSubscriberID, Int32 loginUserID, Int32 loginUserRole, Int32 orgID, Int32 containerID, Int32 entityTypeID, String businessRuleTypeIDs)
-        {
-            return MakeMethodCall(() => new BusinessRuleBL().GetBusinessRulesByContext(eventSourceID, eventSubscriberID, loginUserID, loginUserRole, orgID, containerID, entityTypeID, businessRuleTypeIDs));
-        }
-
-        #endregion
-
-        #region BusinessRuleAttributeMappingBL
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="businessRuleId"></param>
-        /// <returns></returns>
-        public Collection<BusinessRuleAttributeMapping> GetBusinessRuleAttributeMappingsByRuleId(Int32 businessRuleId)
-        {
-            BusinessRuleAttributeMappingBL businessRuleAttributeMappingBL = new BusinessRuleAttributeMappingBL();
-
-            Collection<BusinessRuleAttributeMapping> businessRuleCollection = new Collection<BusinessRuleAttributeMapping>();
-            return MakeMethodCall(() => businessRuleAttributeMappingBL.GetByBusinessRuleID(businessRuleId));
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="businessRuleAttributeMappings"></param>
-        /// <param name="ViewId"></param>
-        /// <returns></returns>
-        public Boolean ProcessBusinessRuleMappings(Collection<BusinessRuleAttributeMapping> businessRuleAttributeMappings, String ViewId)
-        {
-            BusinessRuleAttributeMappingBL businessRuleAttributeMappingBL = new BusinessRuleAttributeMappingBL();
-            MakeMethodCall(() => businessRuleAttributeMappingBL.Process(businessRuleAttributeMappings, ViewId));
-            return true;
-
-        }
-
-
-        #endregion
-
-        #region BusinessRuleContextBL
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="businessRuleSetRules"></param>
-        /// <param name="loginUser"></param>
-        /// <param name="programName"></param>
-        /// <param name="action"></param>
-        /// <returns></returns>
-        public Boolean ProcessBusinessRuleContext(Collection<BusinessRuleSetRule> businessRuleSetRules, String loginUser, String programName, String action)
-        {
-            BusinessRuleViewContextBL businessRuleViewContext = new BusinessRuleViewContextBL();
-
-            MakeMethodCall(() => businessRuleViewContext.ProcessContext(businessRuleSetRules, loginUser, programName, action));
-            return true;
-
-        }
-
-        #endregion
 
         #region Lookup
         /// <summary>

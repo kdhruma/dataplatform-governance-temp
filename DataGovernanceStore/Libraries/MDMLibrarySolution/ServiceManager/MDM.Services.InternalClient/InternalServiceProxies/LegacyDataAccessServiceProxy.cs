@@ -56,16 +56,5 @@ namespace MDM.Services.ServiceProxies
         {
             return base.GetParentOPBL(cnodeId, cnodeParentId, containerId, dataLocale).ToList();
         }
-
-        /// <summary>
-        /// Gets collection of business rule based on rule identifiers
-        /// </summary>
-        /// <param name="ruleIds">Indicates rule identifiers</param>
-        /// <returns>Returns collection of business rule based on rule identifiers</returns>
-        public Collection<BusinessRule> GetBusinessRulesById(IEnumerable<int> ruleIds)
-        {
-            return base.GetBusinessRulesById(new Collection<int>(ruleIds.ToList()));
-        }
-
     }
 }

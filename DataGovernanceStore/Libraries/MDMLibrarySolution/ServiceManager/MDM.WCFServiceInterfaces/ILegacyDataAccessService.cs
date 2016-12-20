@@ -858,46 +858,7 @@ namespace MDM.WCFServiceInterfaces
         #endregion
 
         #endregion
-
-        #region BusinessRuleBL
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Collection<BusinessRule> GetBusinessRulesById(IEnumerable<Int32> ruleIds);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Collection<MDM.BusinessObjects.BusinessRule> GetBusinessRulesByUserId(String loginUser);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Boolean ProcessBusinessRules(Collection<BusinessRule> businessRules, String loginUser, String programName, String action);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Collection<BusinessRule> GetBusinessRulesByContext(Int32 eventSourceID, Int32 eventSubscriberID, Int32 loginUserID, Int32 loginUserRole, Int32 orgID, Int32 containerID, Int32 entityTypeID, String businessRuleTypeIDs);
-        #endregion
-
-        #region BusinessRuleAttributeMappingBL
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Collection<BusinessRuleAttributeMapping> GetBusinessRuleAttributeMappingsByRuleId(Int32 businessRuleId);
-
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Boolean ProcessBusinessRuleMappings(Collection<BusinessRuleAttributeMapping> businessRuleAttributeMappings, String ViewId);
-
-        #endregion
-
-        #region BusinessRuleViewContextBL
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Boolean ProcessBusinessRuleContext(Collection<BusinessRuleSetRule> businessRuleSetRules, String loginUser, String programName, String action);
-
-        #endregion
+        
         #region Lookup
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
