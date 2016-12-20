@@ -24,7 +24,6 @@ namespace MDM.WCFServices
     using MDM.Interfaces;
     using MDM.CategoryManager.Business;
     using MDM.UomManager.Business;
-    using MDM.SearchManager.Business;
     using MDM.ApplicationServiceManager.Business;
     using MDM.EntityModelManager.Business;
     using MDM.AdminManager.Business;
@@ -3587,28 +3586,7 @@ namespace MDM.WCFServices
         }
 
         #endregion
-
-        #region Search Category Methods
-
-        /// <summary>
-        /// Search Categories for given search criteria and return list of categories with specified context. 
-        /// </summary>
-        /// <param name="searchCriteria">Provides search criteria.</param>
-        /// <param name="searchContext">Provides search context. Example: SearchContext.MaxRecordCount indicates max records to be fetched while searching and AttributeIdList indicates List of attributes to load in returned categories.</param>
-        /// <param name="callerContext">Provides search criteria.</param>
-        /// <param name="searchOperationResult"></param>
-        /// <param name="iEntityManager">Indicates IEntityManager</param>
-        /// <param name="callerContext">Indicates in which context caller is calling the method</param>
-        /// <returns>Search results - collection of entities</returns>
-        public EntityCollection SearchCategories(SearchCriteria searchCriteria, SearchContext searchContext, OperationResult searchOperationResult, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<CategorySearchBL, EntityCollection>("SearchCategories",
-                                                  businessLogic =>
-                                                      businessLogic.SearchCategories(searchCriteria, searchContext, searchOperationResult, new EntityBL(), callerContext));
-        }
-
-        #endregion
-
+        
         # region Unique Id Methods
         /// <summary>
         /// Generate unique (id / list of ids) based on the context provided

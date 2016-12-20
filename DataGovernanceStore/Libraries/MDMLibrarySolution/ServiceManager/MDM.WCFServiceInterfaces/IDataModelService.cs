@@ -1021,14 +1021,6 @@ namespace MDM.WCFServiceInterfaces
         string GetUomConversionsAsXml(CallerContext callerContext);
 
         #endregion
-
-        #region Search Category Methods
-
-        [OperationContract(Name = "SearchCategoriesByCategoryAttributeValues")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityCollection SearchCategories(SearchCriteria searchCriteria, SearchContext searchContext, OperationResult searchOperationResult, CallerContext callerContext);
-
-        #endregion
         
         #region Unique Id Methods
 

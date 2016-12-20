@@ -23,8 +23,6 @@ namespace MDM.WCFServices
     using MDM.HierarchyManager.Business;
     using MDM.JobManager.Business;
     using MDM.KnowledgeManager.Business;
-    using MDM.RelationshipManager.Business;
-    using MDM.SearchManager.Business;
     using MDM.Utility;
     using MDM.WCFServiceInterfaces;
     using SP = Riversand.StoredProcedures;

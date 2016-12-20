@@ -14,8 +14,6 @@ namespace MDM.WCFServices
     using BusinessObjects.Diagnostics;
     using AdminManager.Business;
     using EntityManager.Business;
-    using RelationshipManager.Business;
-    using SearchManager.Business;
     using Utility;
 
     [DiagnosticActivity]

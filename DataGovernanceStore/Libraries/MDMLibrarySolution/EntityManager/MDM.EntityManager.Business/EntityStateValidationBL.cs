@@ -20,7 +20,6 @@ namespace MDM.EntityManager.Business
     using MDM.MessageBrokerManager;
     using MDM.MessageManager.Business;
     using MDM.RelationshipManager.Business;
-    using MDM.SearchManager.Business;
     using MDM.Utility;
 
     /// <summary>

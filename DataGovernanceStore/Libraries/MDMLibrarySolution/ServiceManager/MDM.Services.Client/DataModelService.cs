@@ -3159,58 +3159,7 @@ namespace MDM.Services
         }
 
         #endregion
-
-        #region Search Category Methods
-
-        /// <summary>
-        /// Searches categories for a given search criteria and returns a list of entities with a specified context
-        /// </summary>
-        /// <example>
-        /// <code>
-        /// // Get MDM data service
-        ///    DataModelService mdmDataService = GetMDMDataModelService();
-        ///    
-        ///    SearchCriteria searchCriteria = new SearchCriteria();
-        ///    searchCriteria.CategoryIds = new <![CDATA[Collection<Int64>() ]]> { 11 }; // Search Category Fiction
-        ///    searchCriteria.EntityTypeIds = new <![CDATA[Collection<Int32> ]]> { 16 }; // Search Entity Type Style
-        ///    searchCriteria.ContainerIds = new <![CDATA[Collection<Int32>()]]> { 4 }; // Search Container Staging master
-        ///    searchCriteria.Locales = new <![CDATA[Collection<LocaleEnum> ]]>{ LocaleEnum.en_WW }; 
-        ///    searchCriteria.Locale = LocaleEnum.en_WW;
-        ///
-        ///    SearchContext searchContext = new SearchContext();
-        ///    SearchContext.MaxRecordsToReturn = 200; // Defines the maximum search records to return
-        ///    SearchContext.Locale = LocaleEnum.en_WW; // Set the Locale in which Search data needs to returned
-        /// 
-        /// // Get new instance of IOperationResult and ICallerContext using MDMObjectFactory
-        ///    IOperationResult searchOperationResult = <![CDATA[MDMObjectFactory.GetIOperationResult()]]>;
-        ///    ICallerContext callerContext = <![CDATA[MDMObjectFactory.GetICallerContext()]]>;
-        ///
-        ///    callerContext.Application = MDMCenterApplication.MDMCenter;
-        ///    callerContext.Module = MDMCenterModules.Entity;
-        ///
-        ///    IEntityCollection iSearchedEntityCollection = mdmDataService.SearchEntities(iSearchCriteria, iSearchContext, searchOperationResult, callerContext);
-        ///
-        /// </code>
-        /// </example>
-        /// <param name="iSearchCriteria">Indicates the search criteria</param>
-        /// <param name="iSearchContext">Indicates the search context. Example: SearchContext.MaxRecordCount indicates maximum records to be fetched while searching and AttributeIdList indicates the list of attributes to load in returned entities</param>
-        ///  <param name="iSearchOperationResult">Indicates the search operation result</param>
-        /// <param name="iCallerContext">Indicates  the caller context, which contains the application and module that has invoked the API</param>
-        /// <returns>Returns a list of entities with a specified context</returns>
-        /// <exception cref="EndpointNotFoundException">Thrown when a remote endpoint could not be found or reached</exception>
-        /// <exception cref="InvalidOperationException">Thrown when a method call is invalid</exception>
-        /// <exception cref="TimeoutException">Thrown when the time allotted for an operation has expired</exception>
-        /// <exception cref="MDMOperationException">Thrown when the MDM operation fails</exception>
-        /// <exception cref="CommunicationException">Thrown when there is a communication error in either the service or client application</exception>
-        public IEntityCollection SearchCategories(ISearchCriteria iSearchCriteria, ISearchContext iSearchContext, IOperationResult iSearchOperationResult, ICallerContext iCallerContext)
-        {
-            return MakeServiceCall<IEntityCollection>("SearchCategories", "SearchCategories",
-                                                  client =>
-                                                      client.SearchCategories(iSearchCriteria as SearchCriteria, iSearchContext as SearchContext, iSearchOperationResult as OperationResult, FillDiagnosticTraces(iCallerContext)));
-        }
-
-        #endregion
-
+        
         #region Unique Id Methods
 
         /// <summary>
