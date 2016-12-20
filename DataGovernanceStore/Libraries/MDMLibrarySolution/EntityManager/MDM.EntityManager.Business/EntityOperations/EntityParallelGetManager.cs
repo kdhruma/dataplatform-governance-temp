@@ -771,10 +771,10 @@ namespace MDM.EntityManager.Business.EntityOperations
         /// <returns></returns>
         private Boolean LoadRelationships(Entity entity, EntityGetOptions entityGetOptions, EntityCacheStatus entityCacheStatus, CallerContext callerContext)
         {
-            var relationshipBL = new RelationshipBL();
-            bool successFlag = relationshipBL.LoadRelationship(entity, entityCacheStatus, callerContext, false, _entityManager);
+            //var relationshipBL = new RelationshipBL();
+            //bool successFlag = relationshipBL.LoadRelationship(entity, entityCacheStatus, callerContext, false, _entityManager);
 
-            return successFlag;
+            return true;
         }
 
         /// <summary>

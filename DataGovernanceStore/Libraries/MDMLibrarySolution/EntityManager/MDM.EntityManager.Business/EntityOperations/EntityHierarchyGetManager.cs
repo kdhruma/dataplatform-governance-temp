@@ -371,8 +371,8 @@ namespace MDM.EntityManager.Business.EntityOperations
 
                     if (relationshipContextToEntityCollectionMaps != null && relationshipContextToEntityCollectionMaps.Count > 0)
                     {
-                        var relationshipBL = new RelationshipBL();
-                        relationshipBL.LoadRelationships(relationshipContextToEntityCollectionMaps, _entityManager, callerContext);
+                        //var relationshipBL = new RelationshipBL();
+                        //relationshipBL.LoadRelationships(relationshipContextToEntityCollectionMaps, _entityManager, callerContext);
 
                         if (_currentTraceSettings.IsBasicTracingEnabled)
                         {

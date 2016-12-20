@@ -2131,25 +2131,7 @@ namespace MDM.Services
         }
 
         #endregion
-
-        #region Search Entity (Entity Explorer Search)
-
-        /// <summary>
-        /// /// Search entities in system for given search criteria and return list of entities with specified context. 
-        /// </summary>
-        /// <param name="searchCriteria">Provides search criteria.</param>
-        /// <param name="searchContext">Provides search context. Example: SearchContext.MaxRecordCount indicates max records to be fetched while searching and AttributeIdList indicates List of attributes to load in returned entities.</param>
-        /// <param name="totalCount">Indicates count of results fetched</param>
-        /// <param name="searchOperationResult">Indicates operation result of search</param>
-        /// <param name="callerContext">Indicates application and method which called this method</param>
-        /// <returns>Returns dataset which is containing datatable with entities searched and total count.</returns>
-        public DataSet SearchEntities(SearchCriteria searchCriteria, SearchContext searchContext, String totalCount, OperationResult searchOperationResult, CallerContext callerContext)
-        {
-            return MakeServiceCall("SearchEntities", "SearchEntities", client => client.SearchEntities(searchCriteria, searchContext, totalCount, searchOperationResult, FillDiagnosticTraces(callerContext)));
-        }
-
-        #endregion
-
+        
         #region EntityOperationBL
 
         /// <summary>

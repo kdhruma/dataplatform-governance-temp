@@ -782,7 +782,7 @@ namespace MDM.EntityManager.Business
                 //If not all entity types are allowed.
                 if (relationshipCardinalities == null)
                 {
-                    relationshipCardinalities = new RelationshipBL().GetRelationshsipCardinalities(relationship.RelationshipTypeId, containerId, entityTypeId, new CallerContext(MDMCenterApplication.MDMCenter, MDMCenterModules.Entity));
+                    //relationshipCardinalities = new RelationshipBL().GetRelationshsipCardinalities(relationship.RelationshipTypeId, containerId, entityTypeId, new CallerContext(MDMCenterApplication.MDMCenter, MDMCenterModules.Entity));
                 }
 
                 if (relationshipCardinalities != null && relationshipCardinalities.Count > 0)
@@ -1365,7 +1365,7 @@ namespace MDM.EntityManager.Business
 
                             if (currentRelationshipCardinality == null)
                             {
-                                currentRelationshipCardinality = new RelationshipBL().GetRelationshsipCardinalities(relationship.RelationshipTypeId, entity.ContainerId, entity.EntityTypeId, callerContext);
+                                //currentRelationshipCardinality = new RelationshipBL().GetRelationshsipCardinalities(relationship.RelationshipTypeId, entity.ContainerId, entity.EntityTypeId, callerContext);
 
                                 if (currentRelationshipCardinality != null)
                                 {
@@ -2765,7 +2765,7 @@ namespace MDM.EntityManager.Business
 
                         if (relationshipCardinality == null)
                         {
-                            relationshipCardinality = new RelationshipBL().GetRelationshsipCardinalities(childRelationship.RelationshipTypeId, childRelationship.ContainerId, relationship.ToEntityTypeId, new CallerContext(MDMCenterApplication.MDMCenter, MDMCenterModules.Entity));
+                            //relationshipCardinality = new RelationshipBL().GetRelationshsipCardinalities(childRelationship.RelationshipTypeId, childRelationship.ContainerId, relationship.ToEntityTypeId, new CallerContext(MDMCenterApplication.MDMCenter, MDMCenterModules.Entity));
 
                             if (relationshipCardinality != null)
                             {

@@ -2239,15 +2239,15 @@ namespace MDM.EntityManager.Business.EntityOperations
                 MDMTraceHelper.EmitTraceEvent(TraceEventType.Information, String.Format("Starting load relationships (in bulk) for entity ids:{0}...", ValueTypeHelper.JoinCollection<Int64>(entities.GetEntityIdList(), ",")), MDMTraceSource.EntityGet);
             }
 
-            RelationshipBL relationshipBL = new RelationshipBL();
-            Boolean successFlag = relationshipBL.LoadRelationships(entities, relationshipContext, entityCacheStatusCollection, callerContext, loadLatest, _entityManager, updateCache);
+            //RelationshipBL relationshipBL = new RelationshipBL();
+            //Boolean successFlag = relationshipBL.LoadRelationships(entities, relationshipContext, entityCacheStatusCollection, callerContext, loadLatest, _entityManager, updateCache);
 
             if (isTracingEnabled)
             {
                 MDMTraceHelper.EmitTraceEvent(TraceEventType.Information, String.Format("Done with loading relationships (in bulk) for entity ids:{0}...", ValueTypeHelper.JoinCollection<Int64>(entities.GetEntityIdList(), ",")), MDMTraceSource.EntityGet);
             }
 
-            return successFlag;
+            return true;
         }
 
         #endregion

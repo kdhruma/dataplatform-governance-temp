@@ -1580,36 +1580,21 @@ namespace MDM.EntityManager.Business
                                 diagnosticActivity.LogInformation("Starting entity database process...");
                             }
 
-                            EntityHierarchyProcessManager entityHierarchyProcessManager = new EntityHierarchyProcessManager();
-                            EntitySearchDataBL entitySearchDataBL = new EntitySearchDataBL(entityBL);
+                            //EntityHierarchyProcessManager entityHierarchyProcessManager = new EntityHierarchyProcessManager();
 
-                            foreach (EntityFamilyChangeContext entityFamilyChangeContext in entityFamilyChangeContexts)
-                            {
-                                EntityCollection filteredEntities = (EntityCollection)entities.GetEntitiesByFamilyId(entityFamilyChangeContext.EntityFamilyId);
+                            //foreach (EntityFamilyChangeContext entityFamilyChangeContext in entityFamilyChangeContexts)
+                            //{
+                            //    EntityCollection filteredEntities = (EntityCollection)entities.GetEntitiesByFamilyId(entityFamilyChangeContext.EntityFamilyId);
 
-                                if (filteredEntities != null && filteredEntities.Count > 0)
-                                {
-                                    #region Step : Perform entity updates in database
+                            //    if (filteredEntities != null && filteredEntities.Count > 0)
+                            //    {
+                            //        #region Step : Perform entity updates in database
 
-                                    entityHierarchyProcessManager.Process(filteredEntities, entityOperationResults, entityProcessingOptions, entityFamilyChangeContext, clonedCallerContext);
+                            //        entityHierarchyProcessManager.Process(filteredEntities, entityOperationResults, entityProcessingOptions, entityFamilyChangeContext, clonedCallerContext);
 
-                                    #endregion Step : Perform entity updates in database
-
-                                    #region Step : DN search population
-
-                                    EntityOperationResultCollection dnSerachResults = entitySearchDataBL.RefreshEntitiesSearchData(filteredEntities, entityFamilyChangeContext, clonedCallerContext);
-
-                                    // Do not copy entity metadata here as current entity operation results already have it. So passing false here.
-                                    entityOperationResults.CopyEntityOperationResults(dnSerachResults, false);
-
-                                    if (isTracingEnabled)
-                                    {
-                                        diagnosticActivity.LogDurationInfo("DN Search population for entity family is completed.");
-                                    }
-
-                                    #endregion Step : DN search population
-                                }
-                            }
+                            //        #endregion Step : Perform entity updates in database
+                            //    }
+                            //}
                         }
 
                         #region Step : Perform database update for state validation

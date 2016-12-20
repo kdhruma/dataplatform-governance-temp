@@ -11,7 +11,7 @@
     <RootNamespace>MDM.RelationshipManager.Data</RootNamespace>
     <AssemblyName>RS.MDM.RelationshipManager.Data.SqlClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>   
+    <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,9 +39,7 @@
     <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
-    <Compile Include="RelationshipDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RelationshipDenormDA.cs" />
     <Compile Include="RelationshipTypeDA.cs" />
   </ItemGroup>
   <ItemGroup>

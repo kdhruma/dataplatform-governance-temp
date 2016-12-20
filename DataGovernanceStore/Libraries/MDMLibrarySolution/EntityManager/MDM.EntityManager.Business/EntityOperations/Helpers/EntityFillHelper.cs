@@ -82,7 +82,7 @@ namespace MDM.EntityManager.Business.EntityOperations.Helpers
         {
             if (entities != null && entities.Count > 0)
             {
-                var relationshipManager = new RelationshipBL();
+                //var relationshipManager = new RelationshipBL();
                 UOMCollection allUoms = null;
 
                 if (fillOptions.FillUOMValues)
@@ -115,10 +115,10 @@ namespace MDM.EntityManager.Business.EntityOperations.Helpers
                         }
                     }
 
-                    if (entity.Relationships != null && entity.Relationships.Count > 0)
-                    {
-                        relationshipManager.FillEntityRelationships(entity, entityManager, allUoms, fillOptions, callerContext);
-                    }
+                    //if (entity.Relationships != null && entity.Relationships.Count > 0)
+                    //{
+                    //    relationshipManager.FillEntityRelationships(entity, entityManager, allUoms, fillOptions, callerContext);
+                    //}
                 }
             }
 

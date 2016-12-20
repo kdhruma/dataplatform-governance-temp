@@ -8,7 +8,7 @@ namespace MDM.EntityManager.Business.EntityOperations.Helpers
     using Core;
     using Interfaces;
     using Utility;
-    using RelationshipManager.Business;
+    //using RelationshipManager.Business;
 
     /// <summary>
     /// 
@@ -38,9 +38,9 @@ namespace MDM.EntityManager.Business.EntityOperations.Helpers
 
             #endregion
 
-            var relationshipManager = new RelationshipBL();
+            //var relationshipManager = new RelationshipBL();
 
-            Int32 relationshipCreateId = -1;
+            //Int32 relationshipCreateId = -1;
 
             foreach (Entity entity in entities)
             {
@@ -156,19 +156,19 @@ namespace MDM.EntityManager.Business.EntityOperations.Helpers
 
                 #endregion
 
-                #region Entity Relationships
+                //#region Entity Relationships
 
-                if (entity.Action != ObjectAction.Delete
-                    && entity.Relationships != null
-                    && entity.Relationships.Count > 0)
-                {
-                    //Get the entity operation result
-                    var entityOperationResult = entityOperationResults.GetEntityOperationResult(entity.Id) ?? new EntityOperationResult(entity.Id, entity.LongName);
+                //if (entity.Action != ObjectAction.Delete
+                //    && entity.Relationships != null
+                //    && entity.Relationships.Count > 0)
+                //{
+                //    //Get the entity operation result
+                //    var entityOperationResult = entityOperationResults.GetEntityOperationResult(entity.Id) ?? new EntityOperationResult(entity.Id, entity.LongName);
 
-                    relationshipManager.CompareAndMerge(entity, entityOperationResult, callerContext, ref relationshipCreateId, stringComparision, entityProcessingOptions.ProcessingMode);
-                }
+                //    relationshipManager.CompareAndMerge(entity, entityOperationResult, callerContext, ref relationshipCreateId, stringComparision, entityProcessingOptions.ProcessingMode);
+                //}
 
-                #endregion
+                //#endregion
             }
         }
 

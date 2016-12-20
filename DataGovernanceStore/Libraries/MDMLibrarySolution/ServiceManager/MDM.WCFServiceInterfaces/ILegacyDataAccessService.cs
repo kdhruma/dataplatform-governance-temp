@@ -749,15 +749,7 @@ namespace MDM.WCFServiceInterfaces
         Collection<AttributeModel> GetByAttributeGroup(int attributeGroupId, Collection<LocaleEnum> locales);
 
         #endregion
-
-        #region Search Entity (Entity Explorer Search)
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        DataSet SearchEntities(SearchCriteria searchCriteria, SearchContext searchContext, String totalCount, OperationResult searchOperationResult, CallerContext callerContext);
-
-        #endregion
-
+        
         #region Syndication Export
 
         //[OperationContract]

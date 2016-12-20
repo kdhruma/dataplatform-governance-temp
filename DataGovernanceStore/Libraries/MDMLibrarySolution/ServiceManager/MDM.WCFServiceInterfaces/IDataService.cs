@@ -93,27 +93,7 @@ namespace MDM.WCFServiceInterfaces
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         EntityCollection GetEntitiesByExternalIds(Collection<String> externalIdList, EntityContext entityContext, CallerContext callerContext, Boolean publishEvents, Boolean applyAVS);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        RelationshipCollection GetWhereUsedRelationships(Int64 entityId, Int32 relationshipTypeId, Collection<Int32> attributeIds, LocaleEnum dataLocale, CallerContext context);
-
-        [OperationContract(Name = "GetWhereUsedRelationshipsForEntities")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        RelationshipCollection GetWhereUsedRelationships(Collection<Int64> entityId, Int32 relationshipTypeId, Collection<Int32> attributeIds, LocaleEnum dataLocale, CallerContext context);
-
-        [OperationContract(Name = "GetWhereUsedRelationshipsByRelationshipTypeIds")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        RelationshipCollection GetWhereUsedRelationships(Int64 entityId, Collection<Int32> relationshipTypeId, Collection<Int32> attributeIds, LocaleEnum dataLocale, CallerContext context);
-
-        [OperationContract(Name = "GetWhereUsedRelationshipsForEntitiesByRelationshipTypeIds")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        RelationshipCollection GetWhereUsedRelationships(Collection<Int64> entityId, Collection<Int32> relationshipTypeId, Collection<Int32> attributeIds, LocaleEnum dataLocale, CallerContext context);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Relationship GetRelationshipModel(Int32 relationshipTypeId, Int32 containerId, Collection<LocaleEnum> locales, CallerContext context);
-
+        
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         EntityOperationResultCollection BulkUpdateEntityAttributes(EntityCollection templateEntities, Collection<Int64> entityIdsToProcess, String actionPerformed, CallerContext callerContext);
@@ -131,15 +111,7 @@ namespace MDM.WCFServiceInterfaces
         EntityCollection GetEntityLocale(Int64 entityId, Collection<Locale> datalocales, CallerContext callerContext);
 
         #endregion
-
-        #region Search Contracts
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityCollection SearchEntities(SearchCriteria searchCriteria, SearchContext searchContext, OperationResult searchOperationResult, CallerContext callerContext);
-
-        #endregion
-
+        
         #region Entity Hierarchy Contracts
 
         [OperationContract]

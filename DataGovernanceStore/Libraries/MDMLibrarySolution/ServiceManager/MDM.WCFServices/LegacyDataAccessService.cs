@@ -945,15 +945,15 @@ namespace MDM.WCFServices
 
                 //Check whether Relationship Denorm is needed before getting details...
                 //This is needed only when second level relationships are requested...
-                if (entityContext != null && entityContext.RelationshipContext != null && entityContext.RelationshipContext.Level > 1)
-                {
-                    //Request is for second level relationship get...
-                    //Try to process relationship tree denorm.. If not done.. Based on settings...
-                    RelationshipDenormBL relationshipDenormBL = new RelationshipDenormBL();
-                    relationshipDenormBL.EnsureInheritedEntityRelationships(new Collection<Int64>() { entityId }, entityContext, false, false, false,
-                                true, false, true, new EntityBL(), null,
-                        callerContext);
-                }
+                //if (entityContext != null && entityContext.RelationshipContext != null && entityContext.RelationshipContext.Level > 1)
+                //{
+                //    //Request is for second level relationship get...
+                //    //Try to process relationship tree denorm.. If not done.. Based on settings...
+                //    RelationshipDenormBL relationshipDenormBL = new RelationshipDenormBL();
+                //    relationshipDenormBL.EnsureInheritedEntityRelationships(new Collection<Int64>() { entityId }, entityContext, false, false, false,
+                //                true, false, true, new EntityBL(), null,
+                //        callerContext);
+                //}
 
                 EntityBL entityManager = new EntityBL();
                 Entity entityObject = entityManager.Get(entityId, entityContext, callerContext.Application, callerContext.Module, publishEvents, applyAVS);
@@ -1896,43 +1896,7 @@ namespace MDM.WCFServices
             return MakeMethodCall(() => new AttributeModelOperationsBL().GetByAttributeGroup(attributeGroupId, locales));
         }
         #endregion
-
-        #region Search Entity (Entity Explorer Search)
-
-        /// <summary>
-        /// /// Search entities in system for given search criteria and return list of entities with specified context. 
-        /// </summary>
-        /// <param name="searchCriteria">Provides search criteria.</param>
-        /// <param name="searchContext">Provides search context. Example: SearchContext.MaxRecordCount indicates max records to be fetched while searching and AttributeIdList indicates List of attributes to load in returned entities.</param>
-        /// <param name="totalCount">Indicates count of results fetched</param>
-        /// <param name="searchOperationResult"></param>
-        /// <param name="callerContext">Indicates application and method which called this method</param>
-        /// <returns>DataSet with the first table  with entities records and the other with the count</returns>
-        public DataSet SearchEntities(SearchCriteria searchCriteria, SearchContext searchContext, String totalCount, OperationResult searchOperationResult, CallerContext callerContext)
-        {
-            Int32 intTotalCount = ValueTypeHelper.Int32TryParse(totalCount, -1);
-
-            SearchReadResult searchReadResult = MakeMethodCall(() => new EntitySearchBL(new EntityBL()).SearchEntities(searchCriteria, searchContext, ref intTotalCount, callerContext));
-
-            DataSet ds = new DataSet();
-            ds.Tables.Add(searchReadResult.DataTable);
-
-            //Create a dummy table for the other one
-            DataTable dtOtherTable = new DataTable();
-            dtOtherTable.Columns.Add("TotalCount", typeof(String));
-
-            DataRow dr = dtOtherTable.NewRow();
-            dr["TotalCount"] = intTotalCount.ToString();
-
-            dtOtherTable.Rows.Add(dr);
-
-            ds.Tables.Add(dtOtherTable);
-
-            return ds;
-        }
-
-        #endregion
-
+        
         #region Syndication Export
 
         ///// <summary>

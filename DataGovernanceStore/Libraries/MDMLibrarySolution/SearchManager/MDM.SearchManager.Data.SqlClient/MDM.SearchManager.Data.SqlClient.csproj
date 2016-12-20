@@ -11,7 +11,7 @@
     <RootNamespace>MDM.SearchManager.Data</RootNamespace>
     <AssemblyName>RS.MDM.SearchManager.Data.SqlClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>   
+    <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -50,10 +50,7 @@
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="CategorySearchDA.cs" />
-    <Compile Include="CategorySearchDataDA.cs" />
-    <Compile Include="EntitySearchDataDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EntitySearchDA.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">

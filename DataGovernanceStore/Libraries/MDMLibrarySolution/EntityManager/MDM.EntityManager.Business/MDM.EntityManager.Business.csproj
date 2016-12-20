@@ -82,7 +82,6 @@
     <Compile Include="EntityCacheStatusBL.cs" />
     <Compile Include="EntityEventArgs.cs" />
     <Compile Include="EntityHierarchyBL.cs" />
-    <Compile Include="EntityHierarchyProcessManager.cs" />
     <Compile Include="EntityOperations\EntityParallelGetManager.cs" />
     <Compile Include="EntityOperations\EntityHierarchyGetManager.cs" />
     <Compile Include="EntityOperations\Helpers\EntityAttributeDefaultValueHelper.cs" />

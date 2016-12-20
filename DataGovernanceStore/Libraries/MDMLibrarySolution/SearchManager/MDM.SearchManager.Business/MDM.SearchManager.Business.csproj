@@ -11,7 +11,7 @@
     <RootNamespace>MDM.SearchManager.Business</RootNamespace>
     <AssemblyName>RS.MDM.SearchManager.Business</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>   
+    <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -70,10 +70,7 @@
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="CategorySearchBL.cs" />
-    <Compile Include="CategorySearchDataBL.cs" />
-    <Compile Include="EntitySearchDataBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="EntitySearchBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\RS.MDM\RS.MDM.csproj">
