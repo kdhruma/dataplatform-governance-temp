@@ -63,7 +63,6 @@
     <Content Include="JsonDotNet\Newtonsoft.Json.dll" />
     <Content Include="JsonDotNet\Newtonsoft.Json.xml" />
     <Content Include="KafkaNet2\kafka-net.dll" />
-    <Content Include="KafkaNet2\kafka-net.pdb" />
     <Content Include="KafkaNet2\Readme.TXT" />
     <Content Include="KafkaNet\KafkaNET.Library.dll" />
     <Content Include="KafkaNet\log4net.dll" />
@@ -89,17 +88,11 @@
     <Content Include="Tools\instsrv.exe" />
     <Content Include="Tools\Interop.PDFOUTLib.dll" />
     <Content Include="Tools\srvany.exe" />
-    <Content Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.dll" />
-    <Content Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.XML" />
-    <Content Include="TPLDataFlow\4.5.11\System.Threading.Tasks.Dataflow.dll" />
-    <Content Include="TPLDataFlow\4.5.11\system.threading.tasks.dataflow.xml" />
     <Content Include="TPLDataFlow\Current\System.Threading.Tasks.Dataflow.dll" />
     <Content Include="TPLDataFlow\Current\system.threading.tasks.dataflow.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="DUNDAS\5.5\Dundas.Charting.WebControl.Chart.lic" />
-    <None Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.chm" />
-    <None Include="TPLDataFlow\4.0\System.Threading.Tasks.Dataflow.chw" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Core">
