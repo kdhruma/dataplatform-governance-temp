@@ -17,22 +17,6 @@ namespace MDM.WCFServiceInterfaces
     [ServiceContract(Namespace = "http://wcfservices.riversand.com")]
     public interface IDenormService
     {
-        #region Get Impacted Entity
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        ImpactedEntityCollection GetImpactedEntitiesByEntityActivityLogId(Int64 entityActivityLogId, CallerContext callerContext);
-
-        [OperationContract(Name = "GetImpactedEntitiesByEntityActivityLogIdWithPagination")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        ImpactedEntityCollection GetImpactedEntitiesByEntityActivityLogId(Int64 entityActivityLogId, Int64 fromRecordNumber, Int64 toRecordNumber, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Int64 LoadImpactedEntities(EntityActivityLogCollection entityActivityLogCollection, ImpactType impactType, String programName, CallerContext callerContext);
-
-        #endregion Get Impacted Entity
-
         #region Get Entity Processor Error Log
 
         [OperationContract]

@@ -44,15 +44,11 @@ namespace MDM.WCFServices
         /// </summary>
         public WCFRegistry()
         {
-            For<IPromoteManager>().Use<PromoteBL>();
             For<IEntityManager>().Use<EntityBL>();
             For<IWorkflowRuntimeManager>().Use<WorkflowRuntimeBL>();
-            For<IEntityStateValidationManager>().Use<EntityStateValidationBL>();
             For<IEntityWorkflowManager>().Use<EntityWorkflowBL>();
             For<ILookupManager>().Use<LookupBL>();
-            For<IEntityFamilyQueueManager>().Use<EntityFamilyQueueBL>();
             For<IWorkflowRuntimeManager>().Use<WorkflowRuntimeBL>();
-            For<IExtensionRelationshipManager>().Use<ExtensionRelationshipBL>();
             For<IContainerManager>().Use<ContainerBL>();
             For<ICategoryManager>().Use(new CategoryBL());
             For<IContainerEntityTypeMappingManager>().Use<ContainerEntityTypeMappingBL>();

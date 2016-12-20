@@ -21,14 +21,6 @@ namespace MDM.Services
     /// </summary>
     public class DenormService : ServiceClientBase
     {
-        #region Fields
-
-        #endregion
-
-        #region Properties
-
-        #endregion
-
         #region Constructors
 
         /// <summary>
@@ -112,71 +104,7 @@ namespace MDM.Services
         }
 
         #endregion
-
-
-
-        #region Impacted Entity Contracts
-
-        /// <summary>
-        /// Load impacted entities in Impacted entities table in database. 
-        /// </summary>
-        /// <param name="iEntityActivityLogCollection">Collection of entities for which impacted entities are to be loaded</param>
-        /// <param name="impactType">Indicates what kind of impacted entities are to be fetched.</param>
-        /// <param name="programName">Indicates ProgramName which has made call.</param>
-        /// <param name="iCallerContext">Context indicating who called the method.</param>
-        /// <returns>No. of entities loaded for given entities.</returns>
-        /// <exception cref="EndpointNotFoundException">Thrown when a remote endpoint could not be found or reached</exception>
-        /// <exception cref="InvalidOperationException">Thrown when a method call is invalid</exception>
-        /// <exception cref="TimeoutException">Thrown when the time allotted for an operation has expired</exception>
-        /// <exception cref="MDMOperationException">Thrown when the MDM operation fails</exception>
-        /// <exception cref="CommunicationException">Thrown when there is a communication error in either the service or client application</exception>
-        public Int64 LoadImpactedEntities(IEntityActivityLogCollection iEntityActivityLogCollection, ImpactType impactType, String programName, ICallerContext iCallerContext)
-        {
-            return MakeServiceCall("LoadImpactedEntities",
-                                   "LoadImpactedEntities",
-                                   service => service.LoadImpactedEntities(
-                                       (EntityActivityLogCollection) iEntityActivityLogCollection,
-                                       impactType,
-                                       programName,
-                                       FillDiagnosticTraces(iCallerContext)));
-        }
-
-        /// <summary>
-        /// Get impacted entities by given entityActivityLogId
-        /// </summary>
-        /// <param name="entityActivityLogId">PK of entityActivityLog table</param>
-        /// <param name="iCallerContext">Context indicating who called the method</param>
-        /// <returns>Collection of impacted entities.</returns>
-        public IImpactedEntityCollection GetImpactedEntities(Int64 entityActivityLogId, ICallerContext iCallerContext)
-        {
-            return MakeServiceCall("GetImpactedEntities",
-                                   "GetImpactedEntitiesByEntityActivityLogId",
-                                   service => service.GetImpactedEntitiesByEntityActivityLogId(
-                                       entityActivityLogId,
-                                       FillDiagnosticTraces(iCallerContext)));
-        }
-
-        /// <summary>
-        /// Get impacted entities by given entityActivityLogId
-        /// </summary>
-        /// <param name="entityActivityLogId">PK of entityActivityLog table</param>
-        /// <param name="fromRecordNumber">Starting index no. of record which are to be fetched</param>
-        /// <param name="toRecordNumber">End index no. of record which are to be fetched</param>
-        /// <param name="iCallerContext">Context indicating who called the method</param>
-        /// <returns>Collection of impacted entities.</returns>
-        public IImpactedEntityCollection GetImpactedEntities(Int64 entityActivityLogId, Int64 fromRecordNumber, Int64 toRecordNumber, ICallerContext iCallerContext)
-        {
-            return MakeServiceCall("GetImpactedEntities",
-                                   "GetImpactedEntitiesByEntityActivityLogId",
-                                   service => service.GetImpactedEntitiesByEntityActivityLogId(
-                                       entityActivityLogId,
-                                       fromRecordNumber,
-                                       toRecordNumber,
-                                       FillDiagnosticTraces(iCallerContext)));
-        }
-
-        #endregion Impacted Entity Contracts
-
+        
         #region Entity Processor Error Log Contracts
 
         /// <summary>

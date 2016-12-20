@@ -2265,7 +2265,7 @@ namespace MDM.EntityWorkflowManager.Business
                     MDMTraceHelper.EmitTraceEvent(TraceEventType.Information, String.Format("MDM.EntityWorkflowManager.Business.EntityWorkflowBL.ValidateStateViews: Attributes to be checked {0}", stateviewAttributesUQList.Select(auid => auid.AttributeName).Aggregate((cur, next) => cur + ", " + next)), MDMTraceSource.AdvancedWorkflow);
                 }
 
-                var ensure = _entityManager.EnsureAttributes(eventEntities, stateviewAttributesUQList, false, callContext);
+                //var ensure = _entityManager.EnsureAttributes(eventEntities, stateviewAttributesUQList, false, callContext);
 
                 if (Constants.TRACING_ENABLED)
                 {

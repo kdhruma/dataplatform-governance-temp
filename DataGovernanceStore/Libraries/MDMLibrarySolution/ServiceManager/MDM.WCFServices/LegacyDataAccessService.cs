@@ -13,7 +13,6 @@ using System.Xml;
 
 namespace MDM.WCFServices
 {
-    using MDM.AttributeManager.Business;
     using MDM.AttributeModelManager.Business;
     using MDM.BusinessObjects;
     using MDM.BusinessObjects.DynamicTableSchema;
@@ -419,48 +418,7 @@ namespace MDM.WCFServices
                 throw WrapException(ex);
             }
         }
-
-        /// <summary>
-
-        /// </summary>
-        /// <returns>DataTable</returns>
-        public DataTable GetBreadcrumbAttributeValueString(String breadcrumbConfigXML, Int32 fkOrgId, Int32 catalogId, Int64 cNodeId, Int32 localeId)
-        {
-            try
-            {
-                AttributeBL attributeBL = new AttributeBL();
-                DataTable dtAttributeValue = null;
-                dtAttributeValue = attributeBL.GetBreadcrumbAttributeValueString(breadcrumbConfigXML, fkOrgId, catalogId, cNodeId, localeId);
-                if (dtAttributeValue != null)
-                    dtAttributeValue.TableName = "AttributeValue";
-                return dtAttributeValue;
-
-            }
-            catch (Exception ex)
-            {
-                this.LogException(ex);
-                throw WrapException(ex);
-            }
-        }
-
-        /// <summary>
-
-        /// </summary>
-        /// <returns>AttributeVersionCollection</returns>
-        public AttributeVersionCollection Get(Int64 entityId, Int32 attributeId, Int32 localeId, Int32 catalogId, Int64 entityParentId, CallerContext callerContext)
-        {
-            try
-            {
-                AttributeVersionBL attributeVersionBL = new AttributeVersionBL();
-                return attributeVersionBL.Get(entityId, attributeId, localeId, catalogId, entityParentId, callerContext);
-            }
-            catch (Exception ex)
-            {
-                this.LogException(ex);
-                throw WrapException(ex);
-            }
-        }
-
+        
         /// <summary>
 
         /// </summary>
@@ -993,7 +951,7 @@ namespace MDM.WCFServices
                     //Try to process relationship tree denorm.. If not done.. Based on settings...
                     RelationshipDenormBL relationshipDenormBL = new RelationshipDenormBL();
                     relationshipDenormBL.EnsureInheritedEntityRelationships(new Collection<Int64>() { entityId }, entityContext, false, false, false,
-                                true, false, true, new EntityBL(), new ImpactedEntityBL(),
+                                true, false, true, new EntityBL(), null,
                         callerContext);
                 }
 

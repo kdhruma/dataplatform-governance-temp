@@ -9,7 +9,6 @@ namespace MDM.EntityManager.Business.EntityOperations.Helpers
     using BusinessObjects;
     using AttributeModelManager.Business;
     using Utility;
-    using AttributeManager.Business;
     using BusinessObjects.Diagnostics;
 
     /// <summary>
@@ -273,21 +272,7 @@ namespace MDM.EntityManager.Business.EntityOperations.Helpers
                 }
             }
         }
-
-        /// <summary>
-        ///     Gets the attributes and attribute models
-        /// </summary>
-        /// <param name="attributeIds">Ids of the attributes for which models are required</param>
-        /// <param name="attributeGroupIds">Ids of attribute groups for which models are required</param>
-        /// <param name="excludeAttributeIds">Ids to be excluded from the requested models</param>
-        /// <param name="attributeModelContext">The attribute model context for which models needs to be fetched</param>
-        /// <param name="attributeCollection">Resulting attributes collection</param>
-        /// <param name="attributeModelCollection">Resulting attributes models collection</param>
-        public static void LoadAttributeModelsWithBlankAttributeInstances(Collection<Int32> attributeIds, Collection<Int32> attributeGroupIds, Collection<Int32> excludeAttributeIds, AttributeModelContext attributeModelContext, out AttributeCollection attributeCollection, out AttributeModelCollection attributeModelCollection)
-        {
-            var attributeManager = new AttributeBL();
-            attributeManager.GetAttributesAndModels(attributeIds, attributeGroupIds, excludeAttributeIds, attributeModelContext, out attributeCollection, out attributeModelCollection);
-        }
+        
 
         /// <summary>
         /// Gets the state validation attribute models

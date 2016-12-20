@@ -50,30 +50,7 @@ namespace MDM.ExcelUtility
                 PopulateComplexAttribute(workbookPart, workSheet, complexAttributes);
             }
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="workbookPart"></param>
-        /// <param name="entityCollection"></param>
-        /// <param name="complexAttributes"></param>
-        public static void PopulateReportMetadataSheet(WorkbookPart workbookPart, Collection<StronglyTypedEntityBase> entityCollection, Dictionary<String, String> complexAttributes)
-        {
-            Worksheet workSheet = OpenSpreadsheetUtility.GetWorksheet(workbookPart, RSExcelConstants.MetadataSheetName);
-
-            if (workSheet != null)
-            {
-                if (entityCollection.Any())
-                {
-                    SheetData sheetData = workSheet.GetFirstChild<SheetData>();
-                    PopulateReportEntityMetadata(workbookPart, sheetData, entityCollection);
-                    PopulateProcessingOptions(workbookPart, sheetData);
-                }
-
-                PopulateComplexAttribute(workbookPart, workSheet, complexAttributes);
-            }
-        }
-
+        
         private static void PopulateComplexAttribute(WorkbookPart workbookPart, Worksheet workSheet, Dictionary<String, String> complexAttributes)
         {
             if (complexAttributes == null)
@@ -234,29 +211,7 @@ namespace MDM.ExcelUtility
                 UpdateCellWithValue(sheetData, ColumnTwo, startingIndex, firstEntity.ParentExtensionEntityCategoryPath);
             }
         }
-
-        private static void PopulateReportEntityMetadata(WorkbookPart workbookPart, SheetData sheetData, IEnumerable<StronglyTypedEntityBase> entityCollection)
-        {
-            UInt32 startingIndex = GetStartingIndexByText(workbookPart, sheetData, ColumnOne, "Default Organization");
-
-            if (startingIndex > 0)
-            {
-                StronglyTypedEntityBase firstEntity = entityCollection.First();
-
-                UpdateCellWithValue(sheetData, ColumnTwo, startingIndex++, firstEntity.OrganizationName);
-                UpdateCellWithValue(sheetData, ColumnTwo, startingIndex++, firstEntity.ContainerName);
-                UpdateCellWithValue(sheetData, ColumnTwo, startingIndex++, firstEntity.EntityTypeName);
-                UpdateCellWithValue(sheetData, ColumnTwo, startingIndex++, firstEntity.CategoryPath);
-                //UpdateCellWithValue(sheetData, ColumnTwo, startingIndex++, firstEntity.Locale);
-
-                // TODO: Entity doesn't contain Default Parent Extension Organization
-                UpdateCellWithValue(sheetData, ColumnTwo, startingIndex++, string.Empty);
-
-                UpdateCellWithValue(sheetData, ColumnTwo, startingIndex++, firstEntity.ParentExtensionEntityContainerLongName);
-                UpdateCellWithValue(sheetData, ColumnTwo, startingIndex, firstEntity.ParentExtensionEntityCategoryPath);
-            }
-        }
-
+        
         private static void PopulateProcessingOptions(WorkbookPart workbookPart, SheetData sheetData)
         {
             UInt32 startingIndex = GetStartingIndexByText(workbookPart, sheetData, ColumnSeven, "Collection Separator");

@@ -249,39 +249,6 @@ namespace MDM.ExcelUtility
         }
         
         /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entityCollection"></param>
-        /// <param name="dataTemplate"></param>
-        /// <param name="fullFileName"></param>
-        /// <param name="creationOptions"></param>
-        /// <param name="templateName"></param>
-        public void GenerateRSExcelReport(Collection<BO.StronglyTypedEntityBase> entityCollection, DataTemplate dataTemplate, String fullFileName, RSExcelCreationOptions creationOptions, String templateName = "")
-        {
-            // The report will contains only Entity data only in en_WW locale including complex attributes but it will not have smart input feature.
-            String templateFileName = GetTemplateFileName(templateName, GetTemporaryFileLocation());
-            CopyFile(templateFileName, fullFileName);
-
-            SpreadsheetDocument document = SpreadsheetDocument.Open(fullFileName, true);
-
-            if (document != null)
-            {
-                RsExcelDocumentContentVerification.ReviewAndCleanContent(document);
-
-                WorkbookPart workbookPart = document.WorkbookPart;
-
-                if (workbookPart != null)
-                {
-                    PopulateReportEntitySheet(workbookPart, entityCollection, dataTemplate, creationOptions);
-                    MetadataSheetDecorator.PopulateReportMetadataSheet(workbookPart, entityCollection, _complexAttributes);
-                }
-
-                document.Close();
-            }
-        }
-
-
-        /// <summary>
         /// Gets the coordinates for where on the excel spreadsheet to display the VML comment shape
         /// </summary>
         /// <param name="rowIndex">Row index of where the comment is located (ie. 2)</param>
@@ -594,153 +561,7 @@ namespace MDM.ExcelUtility
                 workSheet.Save();
             }
         }
-
-        private void PopulateReportEntitySheet(WorkbookPart workbookPart, Collection<BO.StronglyTypedEntityBase> entityCollection, DataTemplate dataTemplate, RSExcelCreationOptions creationOptions)
-        {
-            UInt32 rowIndex = 1;
-            List<String> metadataAttributes = null;
-            Dictionary<Int32, UInt32Value> columnStyles = null;
-            PopulateEntitySheetCommon(workbookPart, dataTemplate, creationOptions, ref rowIndex, ref metadataAttributes, ref columnStyles, null, false, false);
-
-            Worksheet workSheet = OpenSpreadsheetUtility.GetWorksheet(workbookPart, RSExcelConstants.EntityDataSheetName);
-
-            if (workSheet != null)
-            {
-                SheetData sheetData = workSheet.GetFirstChild<SheetData>();
-                WorksheetPart replacementPart = workbookPart.AddNewPart<WorksheetPart>();
-                string replacementId = workbookPart.GetIdOfPart(replacementPart);
-
-                String originalId = workbookPart.GetIdOfPart(workSheet.WorksheetPart);
-
-                OpenXmlReader reader = OpenXmlReader.Create(workSheet.WorksheetPart);
-                OpenXmlWriter writer = OpenXmlWriter.Create(replacementPart);
-
-                while (reader.Read())
-                {
-                    if (reader.ElementType == typeof(SheetData))
-                    {
-                        if (reader.IsEndElement)
-                        {
-                            continue;
-                        }
-                        SheetData baseSheetData = workSheet.WorksheetPart.Worksheet.Elements<SheetData>().First();
-
-                        writer.WriteStartElement(new SheetData());
-
-                        foreach (Row r in baseSheetData.Elements<Row>())
-                        {
-                            writer.WriteStartElement(r);
-                            foreach (Cell c in r.Elements<Cell>())
-                            {
-                                writer.WriteElement(c);
-                            }
-                            writer.WriteEndElement();
-                        }
-
-                        IList<IAttributeModel> nonComplexAttributeModels = dataTemplate.EntityAttributeModels.Where(model => model.IsComplex == false).ToList<IAttributeModel>();
-                        IList<IAttributeModel> complexAttributeModels = dataTemplate.EntityAttributeModels.Where(model => model.IsComplex).ToList<IAttributeModel>();
-                        InitializeReportComplexAttributeSheets(complexAttributeModels, creationOptions, workbookPart);
-                        foreach (BO.StronglyTypedEntityBase entity in entityCollection)
-                        {
-                            Row entityRow = new Row();
-                            entityRow.RowIndex = rowIndex++;
-                            PopulateReportMetadataValues(entityRow, metadataAttributes, entity, creationOptions);
-
-                            List<Cell> cells = PopulateReportEntityRow(entityRow, entity, dataTemplate, creationOptions, workbookPart, columnStyles, nonComplexAttributeModels, complexAttributeModels);
-                            writer.WriteStartElement(entityRow);
-                            foreach (Cell cell in entityRow.Elements<Cell>())
-                            {
-                                writer.WriteElement(cell);
-                            }
-
-                            if (cells != null && cells.Count > 0)
-                            {
-                                foreach (Cell cell in cells)
-                                {
-                                    writer.WriteElement(cell);
-                                }
-                            }
-                            writer.WriteEndElement();
-                        }
-                        CloseReportComplexAttributeSheets(complexAttributeModels, creationOptions, workbookPart);
-                        writer.WriteEndElement();
-                    }
-                    else if (reader.ElementType == typeof(DataValidations))
-                    {
-                        if (reader.IsEndElement)
-                            continue;
-
-                        writer.WriteStartElement(new DataValidations());
-                        reader.Read();
-
-                        while (reader.IsStartElement && reader.ElementType == typeof(DataValidation))
-                        {
-                            writer.WriteStartElement(reader);
-                            reader.Read();
-
-                            while (reader.ElementType == typeof(Formula1) || reader.ElementType == typeof(Formula2))
-                            {
-                                if (reader.IsStartElement)
-                                {
-                                    writer.WriteStartElement(reader);
-                                    writer.WriteString(reader.GetText());
-                                    writer.WriteEndElement();
-                                }
-                                reader.Read();
-                            }
-
-                            writer.WriteEndElement();
-                            reader.Read();
-                        }
-
-                        writer.WriteEndElement();
-                    }
-                    else if (reader.ElementType == typeof(Drawing) || reader.ElementType == typeof(LegacyDrawing))
-                    {
-                        //Skipping Drawing and LegacyDrawing as they contain comments which are corrupting the workSheet
-                    }
-                    else
-                    {
-                        if (reader.IsStartElement)
-                        {
-                            writer.WriteStartElement(reader);
-                        }
-                        else if (reader.IsEndElement)
-                        {
-                            writer.WriteEndElement();
-                        }
-                    }
-                }
-                reader.Close();
-                writer.Close();
-
-                // Note - Code will be required if header needs to be populated with Comments
-                //rowIndex = 1;
-                //if (nonComplexAttributeModels.Count > 0)
-                //{
-                //    headerRow = OpenSpreadsheetUtility.GetRow(replacementPart.Worksheet.GetFirstChild<SheetData>(), rowIndex);
-                //    headerFirstCell = OpenSpreadsheetUtility.GetDataCell(replacementPart.Worksheet.GetFirstChild<SheetData>(), 1, rowIndex);
-                //    PopulateAttributeHeaderCells(replacementPart, headerRow, nonComplexAttributeModels, creationOptions, OpenSpreadsheetUtility.GetCellStyleIndex(headerFirstCell), messages);
-                //}
-
-                // Removing empty redundant rows
-                Int32 rowsNumber = sheetData.Elements<Row>().Count();
-
-                if (rowsNumber > rowIndex)
-                {
-                    for (Int32 i = rowsNumber - 1; i >= (Int32)rowIndex - 1; i--)
-                    {
-                        sheetData.Elements<Row>().ElementAt(i).Remove();
-                    }
-                }
-                workSheet.Save();
-                Sheet entitiesSheet = workbookPart.Workbook.Descendants<Sheet>().FirstOrDefault(s => s.Name == "Entities");
-                entitiesSheet.Id = replacementId;
-                workbookPart.DeletePart(workSheet.WorksheetPart);
-                workbookPart.Workbook.Save();
-            }
-        }
-
+        
         private void PopulateEntitySheetCommon(WorkbookPart workbookPart, DataTemplate dataTemplate, RSExcelCreationOptions creationOptions, ref UInt32 rowIndex, ref List<String> metadataAttributes, ref Dictionary<Int32, UInt32Value> columnStyles, BO.EntityCollection entityCollection, Boolean isValidationsRequired, Boolean isCommentsRequired)
         {
             Worksheet workSheet = OpenSpreadsheetUtility.GetWorksheet(workbookPart, RSExcelConstants.EntityDataSheetName);
@@ -1355,20 +1176,7 @@ namespace MDM.ExcelUtility
 
           return cells;
         }
-
-        private List<Cell> PopulateReportEntityRow(Row entityRow, BO.StronglyTypedEntityBase entity, DataTemplate dataTemplate, RSExcelCreationOptions creationOptions, WorkbookPart workbookPart, Dictionary<Int32, UInt32Value> columnStyles, IList<IAttributeModel> nonComplexAttributeModels, IList<IAttributeModel> complexAttributeModels)
-        {
-            UInt32 columnIndex = (UInt32)entityRow.Elements<Cell>().Count() + 1;
-
-            // First write non complex attributes
-            List<Cell> cells = PopulateReportAttributeCells(entityRow, entity, ref columnIndex, MDMObjectFactory.GetIAttributeModelCollection(nonComplexAttributeModels), creationOptions, columnStyles);
-
-            // Write complex attributes
-            PopulateReportComplexAttributeCells(entity, MDMObjectFactory.GetIAttributeModelCollection(complexAttributeModels), creationOptions, workbookPart);
-
-            return cells;
-        }
-
+        
         private void PopulateEntityRow(Row entityRow, IEntity entity, DataTemplate dataTemplate, RSExcelCreationOptions creationOptions, WorkbookPart workbookPart, Boolean includeValidations, Dictionary<Int32, UInt32Value> columnStyles = null)
         {
             UInt32 columnIndex = (UInt32)entityRow.Elements<Cell>().Count() + 1;
@@ -1468,77 +1276,7 @@ namespace MDM.ExcelUtility
                 OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex, String.Empty); // ParentExtensionEntityOrganization..
             }
         }
-
-        private void PopulateReportMetadataValues(Row entityRow, IList<string> metadataAttributes, BO.StronglyTypedEntityBase entity, RSExcelCreationOptions creationOptions)
-        {
-            UInt32 columnIndex = 1;
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.Id]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithNumberCell(entityRow, columnIndex++, entity.Id); // Id
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.ExtenalId]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.Name); // ExternalId
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.LongName]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.LongName); // LongName
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.EntityType]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.EntityTypeName); // EntityType
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.CategoryPath]))
-            {
-                // Get category path value based on RSExcelCreationOptions.CategoryPathType
-                String categoryPath = GetReportCategoryPath(entity, creationOptions);
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, categoryPath); // CateogryPath
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.Container]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.ContainerName); // ContainerName
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.Organization]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.OrganizationName); // OrganizationName
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.ParentExternalId]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.ParentEntityName); // ParentExternalId
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.ParentExtensionExternalId]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.ParentExtensionEntityExternalId); // ParentExtensionEntityExternalId
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.ParentExtensionCategoryPath]))
-            {
-                // Get parent extension category path value based on RSExcelCreationOptions.CategoryPathType
-                String parentExtensionCategoryPath = GetReportParentExtensionCategoryPath(entity, creationOptions);
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, parentExtensionCategoryPath); // ParentExtensionEntityCategoryPath
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.ParentExtensionContainer]))
-            {
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex++, entity.ParentExtensionEntityContainerName); // ParentExtensionEntityContainerName
-            }
-
-            if (metadataAttributes.Contains(RSExcelConstants.EntityDataTemplateColumns[EntityDataTemplateFieldEnum.ParentExtensionOrganization]))
-            {
-                // TODO:: We don't have entity.ParentExtensionEntityOrganization property...
-                OpenSpreadsheetUtility.AppendRowWithTextCell(entityRow, columnIndex, String.Empty); // ParentExtensionEntityOrganization..
-            }
-        }
-
+        
         private void AddNumberFormatingsToSheet(Worksheet workSheet, Stylesheet stylesheet, List<BO.AttributeModel> nonComplexAttributeModels, Int32 skipColumns)
         {
             // Adding formats restrictions
@@ -2086,40 +1824,7 @@ namespace MDM.ExcelUtility
             }
         }
         }
-
-        private List<Cell> PopulateReportAttributeCells(Row dataRow, BO.StronglyTypedEntityBase entity, ref UInt32 columnIndex, IAttributeModelCollection attributeModelCollection, RSExcelCreationOptions creationOptions, Dictionary<Int32, UInt32Value> columnStyles = null)
-        {
-            Boolean areStylesProvided = columnStyles != null && columnStyles.Any();
-            List<Cell> cells = new List<Cell>();
-
-            foreach (IAttributeModel attributeModel in attributeModelCollection)
-            {
-                String value = String.Empty;
-
-                if (attributeModel.IsCollection)
-                {
-                    value = StronglyTypedEntitiesUtility.GetCollectionAttrValByAttrId(entity, attributeModel, creationOptions.UomSeparator, creationOptions.CollectionSeparator);
-                }
-                else
-                    value = StronglyTypedEntitiesUtility.GetSimpleAttrValByAttrId(entity, attributeModel, creationOptions.UomSeparator);
-
-                Int32 index = (Int32)columnIndex - 1;
-
-                SpaceProcessingModeValues spaceProcessingMode = SpaceProcessingModeValues.Preserve;
-
-                UInt32? columnStyle = null;
-                if (areStylesProvided && columnStyles.ContainsKey(index))
-                {
-                    columnStyle = columnStyles[index];
-                }
-
-                Cell cell = OpenSpreadsheetUtility.CreateSAXTextCell(dataRow, columnIndex++, value, spaceProcessingMode, columnStyle);
-                cells.Add(cell);
-            }
-
-            return cells;
-        }
-
+        
         private void PopulateComplexAttributeCells(IEntity entity, IAttributeCollection attributeCollection, IAttributeModelCollection attributeModelCollection,
             RSExcelCreationOptions creationOptions, WorkbookPart workbookPart)
         {
@@ -2566,116 +2271,7 @@ namespace MDM.ExcelUtility
             return childAttributes;
 
         }
-
-        private void PopulateReportComplexAttributeCells(BO.StronglyTypedEntityBase entity, IAttributeModelCollection attributeModelCollection, RSExcelCreationOptions creationOptions, WorkbookPart workbookPart)
-        {
-            foreach (IAttributeModel attributeModel in attributeModelCollection)
-            {
-                ComplexAttributeExcelInfo excelInfo = null;
-                IEnumerable<KeyValuePair<Int32, ComplexAttributeExcelInfo>> matchedPair = from pair in _complexAttributeWiseExcelInfos
-                                                                                          where pair.Key == attributeModel.Id
-                                                                                          select pair;
-
-                if (matchedPair.Count() > 0)
-                {
-                    excelInfo = matchedPair.FirstOrDefault().Value;
-                }
-
-                if (excelInfo != null)
-                {
-                    SheetData baseSheetData = excelInfo.SheetData;
-
-                    PropertyInfo complexAttrProp = StronglyTypedEntitiesUtility.GetAttrPropByAttr(entity, attributeModel.Name, attributeModel.AttributeParentName);
-                    Object complexAttrPropInstance = null;
-                    if (complexAttrProp != null)
-                    {
-                        complexAttrPropInstance = complexAttrProp.GetValue(entity, null);
-                    }
-
-                    if (complexAttrPropInstance != null)
-                    {
-                        UInt32 rowIndex = 2;
-
-                        #region Write Complex Attribute Record
-
-                        rowIndex = excelInfo.RowIndex;
-
-                        if (attributeModel.IsCollection)
-                        {
-                            IEnumerable complexAttributes = complexAttrPropInstance as IEnumerable;
-                            if (complexAttributes != null)
-                            {
-                                foreach (var instanceAttribute in complexAttributes)
-                                {
-                                    WriteReportComplexChildAttribute(excelInfo.SheetData, entity, instanceAttribute, attributeModel, creationOptions, ref rowIndex, excelInfo.Writer);
-                                }
-                            }
-                        }
-                        else
-                        {
-                            var instanceAttribute = complexAttrPropInstance;
-                            WriteReportComplexChildAttribute(excelInfo.SheetData, entity, instanceAttribute, attributeModel, creationOptions, ref rowIndex, excelInfo.Writer);
-                        }
-
-                        #endregion
-
-                        //Update the current row index back into dictionary
-                        _complexAttributeWiseExcelInfos.Remove(new KeyValuePair<Int32, ComplexAttributeExcelInfo>(attributeModel.Id, excelInfo));
-                        excelInfo.RowIndex = rowIndex;
-                        _complexAttributeWiseExcelInfos.Add(new KeyValuePair<Int32, ComplexAttributeExcelInfo>(attributeModel.Id, excelInfo));
-                    }
-                }
-            }
-        }
-
-        private void WriteReportComplexChildAttribute(SheetData sheetData, BO.StronglyTypedEntityBase entity, object instanceAttribute, IAttributeModel attributeModel, RSExcelCreationOptions creationOptions, ref UInt32 rowIndex, OpenXmlWriter writer)
-        {
-            Row entityRow = OpenSpreadsheetUtility.AddRow(sheetData, rowIndex++);
-            UInt32 columnIndex = 1;
-
-            #region Create Fixed field cells
-
-            //Get category path value based on RSExcelCreationOptions.CategoryPathType
-            String categoryPath = GetReportCategoryPath(entity, creationOptions);
-
-            List<Cell> cells = new List<Cell>();
-
-            cells.Add(OpenSpreadsheetUtility.CreateSAXNumberCell(entityRow, columnIndex++, entity.Id)); //Id
-            cells.Add(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, entity.Name, SpaceProcessingModeValues.Preserve)); //ExternalId
-            cells.Add(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, entity.LongName, SpaceProcessingModeValues.Preserve)); //LongName
-            cells.Add(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, entity.EntityTypeName, SpaceProcessingModeValues.Preserve)); // EntityType
-            cells.Add(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, categoryPath, SpaceProcessingModeValues.Preserve)); // CateogryPath
-            cells.Add(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, entity.ContainerName, SpaceProcessingModeValues.Preserve)); // ContainerName
-            cells.Add(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, entity.OrganizationName, SpaceProcessingModeValues.Preserve)); // OrganizationName
-            cells.Add(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, attributeModel.Locale, SpaceProcessingModeValues.Preserve)); // ParentExtensionEntityOrganization..
-
-            #endregion
-
-            writer.WriteStartElement(entityRow);
-
-            foreach (Cell entitycell in cells)
-            {
-                writer.WriteElement(entitycell);
-            }
-
-
-            foreach (IAttributeModel childAttributeModel in attributeModel.GetChildAttributeModels().OrderBy(attrModel => attrModel.Name))
-            {
-                String value = String.Empty;
-                PropertyInfo complexChildAttrProp = StronglyTypedEntitiesUtility.GetAttrPropByAttr(instanceAttribute, childAttributeModel.Name, childAttributeModel.AttributeParentName);
-                if (complexChildAttrProp != null)
-                {
-                    object complexChildVal = complexChildAttrProp.GetValue(instanceAttribute, null);
-                    if (complexChildVal != null)
-                    {
-                        value = complexChildVal.ToString();
-                    }
-                }
-                writer.WriteElement(OpenSpreadsheetUtility.CreateSAXTextCell(entityRow, columnIndex++, value, SpaceProcessingModeValues.Preserve));
-            }
-            writer.WriteEndElement();
-        }
-
+        
         private String GetAttributeValue(IAttribute attribute, MDM.BusinessObjects.AttributeModel attributeModel, RSExcelCreationOptions creationOptions, LocaleEnum locale = LocaleEnum.UnKnown)
         {
             String stringVal = String.Empty;
@@ -4010,25 +3606,7 @@ namespace MDM.ExcelUtility
             }
             return categoryPath;
         }
-
-        private string GetReportCategoryPath(BO.StronglyTypedEntityBase entity, RSExcelCreationOptions creationOptions)
-        {
-            String categoryPath = string.Empty;
-            if (entity != null)
-            {
-                switch (creationOptions.CategoryPathType)
-                {
-                    case RSExcelCategoryPathType.LongNamePath:
-                        categoryPath = entity.CategoryLongNamePath;
-                        break;
-                    default:
-                        categoryPath = entity.CategoryPath;
-                        break;
-                }
-            }
-            return categoryPath;
-        }
-
+        
         /// <summary>
         /// Get category path based on option - Long name path or short name path
         /// </summary>
@@ -4052,25 +3630,7 @@ namespace MDM.ExcelUtility
             }
             return categoryPath;
         }
-
-        private string GetReportParentExtensionCategoryPath(BO.StronglyTypedEntityBase entity, RSExcelCreationOptions creationOptions)
-        {
-            String categoryPath = string.Empty;
-            if (entity != null)
-            {
-                switch (creationOptions.CategoryPathType)
-                {
-                    case RSExcelCategoryPathType.LongNamePath:
-                        categoryPath = entity.ParentExtensionEntityCategoryLongNamePath;
-                        break;
-                    default:
-                        categoryPath = entity.ParentExtensionEntityCategoryPath;
-                        break;
-                }
-            }
-            return categoryPath;
-        }
-
+        
         private Boolean IsAttributeInCollection(List<IAttributeModel> sourceList, IAttributeModel searchModel)
         {
             return sourceList.Any(model => model.Id == searchModel.Id);

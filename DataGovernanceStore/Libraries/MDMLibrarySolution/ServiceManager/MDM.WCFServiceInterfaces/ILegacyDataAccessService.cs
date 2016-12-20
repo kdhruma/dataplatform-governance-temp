@@ -88,15 +88,7 @@ namespace MDM.WCFServiceInterfaces
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         DataTable GetAssignmentButtons(String assignmentStatus, String cNodeList, String toolbarButtonXml, String vchrUserLogin);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        DataTable GetBreadcrumbAttributeValueString(String breadcrumbConfigXML, Int32 fkOrgId, Int32 catalogId, Int64 cNodeId, Int32 localeId);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        AttributeVersionCollection Get(Int64 entityId, Int32 attributeId, Int32 localeId, Int32 catalogId, Int64 entityParentId, CallerContext callerContext);
-
+        
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         int ProcessServiceResult(Int32 eventSource, Int32 applicationConfig, String dataXmlString, String loginUser, String userProgram);

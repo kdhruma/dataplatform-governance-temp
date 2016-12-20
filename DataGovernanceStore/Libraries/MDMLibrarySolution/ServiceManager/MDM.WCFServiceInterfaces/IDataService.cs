@@ -81,27 +81,7 @@ namespace MDM.WCFServiceInterfaces
         [OperationContract(Name = "ProcessEntitiesWithCallerContext")]
         [FaultContract(typeof(MDMExceptionDetails))]
         EntityOperationResultCollection ProcessEntities(EntityCollection entities, EntityProcessingOptions entityProcessingOptions, CallerContext callerContext);
-
-        [OperationContract(Name = "EnsureAttributesForEntityAndAttributeIds")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Entity EnsureAttributes(Entity entity, IEnumerable<Int32> attributeIds, Boolean loadAttributeModels, CallerContext callerContext);
-
-        [OperationContract(Name = "EnsureAttributesForEntityAndAttributeUniqueIdentifier")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Entity EnsureAttributes(Entity entity, AttributeUniqueIdentifier attributeUniqueIdentifier, Boolean loadAttributeModels, CallerContext callerContext);
-
-        [OperationContract(Name = "EnsureAttributesForEntityCollectionAndAttributeIds")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityCollection EnsureAttributes(EntityCollection entityCollection, IEnumerable<Int32> attributeIds, Boolean loadAttributeModels, CallerContext callerContext);
-
-        [OperationContract(Name = "EnsureAttributesForEntityCollectionAndAttributeUniqueIdentifiers")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityCollection EnsureAttributes(EntityCollection entityCollection, Collection<AttributeUniqueIdentifier> attributeUniqueIdentifiers, Boolean loadAttributeModels, CallerContext callerContext);
-
-        [OperationContract(Name = "EnsureAttributesForEntityCollectionAndAttributeModelContext")]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityCollection EnsureAttributes(EntityCollection entityCollection, AttributeModelContext attributeModelContext, Boolean loadAttributeModels, CallerContext callerContext);
-
+        
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         Entity GetEntityByExternalId(String externalId, EntityContext entityContext, CallerContext context);
@@ -137,15 +117,7 @@ namespace MDM.WCFServiceInterfaces
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         EntityOperationResultCollection BulkUpdateEntityAttributes(EntityCollection templateEntities, Collection<Int64> entityIdsToProcess, String actionPerformed, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityOperationResultCollection EnsureInheritedEntityRelationships(Collection<Int64> entityIdList, EntityContext entityContext, Boolean processWhereUsed, Boolean processImpactedExtensions, Boolean processImpactedHierarchies, Boolean processRelationshipTree, Boolean processInheritable, Boolean processRelationshipAttributes, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        OperationResultCollection Promote(Collection<Int64> entityIds, CallerContext callerContext);
-
+        
         #endregion
 
         #region Entity Locale Contracts
@@ -263,14 +235,6 @@ namespace MDM.WCFServiceInterfaces
         Boolean RemoveEntityCache(EntityCacheInvalidateContextCollection entityCacheInvalidateContexts, CallerContext callerContext);
 
         #endregion
-
-        #region Copy Paste Content Methods
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityOperationResultCollection CopyPasteEntityContents(EntityCopyPasteContext copyPasteConext, CallerContext callerContext);
-
-        #endregion
-
+        
     }
 }

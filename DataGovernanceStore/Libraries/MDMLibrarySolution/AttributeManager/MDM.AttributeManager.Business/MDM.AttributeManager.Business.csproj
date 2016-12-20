@@ -69,8 +69,6 @@
     <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
-    <Compile Include="AttributeBL.cs" />
-    <Compile Include="AttributeVersionBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

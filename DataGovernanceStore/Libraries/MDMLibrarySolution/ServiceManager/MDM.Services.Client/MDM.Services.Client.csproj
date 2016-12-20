@@ -62,7 +62,6 @@
     </Compile>
     <Compile Include="AuthenticationService.cs" />
     <Compile Include="DiagnosticService.cs" />
-    <Compile Include="EnsureEntityUtility.cs" />
     <Compile Include="CoreService.cs" />
     <Compile Include="DenormService.cs" />
     <Compile Include="IWCFClientConfiguration.cs" />

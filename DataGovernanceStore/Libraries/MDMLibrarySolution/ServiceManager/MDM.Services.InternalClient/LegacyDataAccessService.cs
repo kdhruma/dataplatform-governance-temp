@@ -470,36 +470,7 @@ namespace MDM.Services
         {
             return MakeServiceCall("GetAssignmentButtons", "GetAssignmentButtons", client => client.GetAssignmentButtons(assignmentStatus, cNodeList, toolbarButtonXml, vchrUserLogin));
         }
-
-        /// <summary>
-        /// Gets collection of attribute versions
-        /// </summary>
-        /// <param name="entityId">Indicates identifier of an entity</param>
-        /// <param name="attributeId">Indicates identifier of an attribute</param>
-        /// <param name="localeId">Indicates identifier of locale</param>
-        /// <param name="catalogId">Indicates identifier of a catalog</param>
-        /// <param name="entityParentId">Indicates parent identifier of an entity</param>
-        /// <param name="callerContext">Indicates the name of application and the module that are performing the action</param>
-        /// <returns>Returns collection of attribute versions</returns>
-        public AttributeVersionCollection Get(Int64 entityId, Int32 attributeId, Int32 localeId, Int32 catalogId, Int64 entityParentId, CallerContext callerContext)
-        {
-            return MakeServiceCall("Get", "Get", client => client.Get(entityId, attributeId, localeId, catalogId, entityParentId, FillDiagnosticTraces(callerContext)));
-        }
-
-        /// <summary>
-        /// Gets breadcrumb attribute value
-        /// </summary>
-        /// <param name="breadcrumbConfigXML">Indicates breadcrumb configuration xml</param>
-        /// <param name="fkOrgId">Indicates identifier of an organization</param>
-        /// <param name="catalogId">Indicates identifier of a catalog</param>
-        /// <param name="cNodeId">Indicates identifier of an entity</param>
-        /// <param name="localeId">Indicates identifier of locale</param>
-        /// <returns>Returns datatable of breadcrumb attribute value</returns>
-        public DataTable GetBreadcrumbAttributeValueString(String breadcrumbConfigXML, Int32 fkOrgId, Int32 catalogId, Int64 cNodeId, Int32 localeId)
-        {
-            return MakeServiceCall("GetBreadcrumbAttributeValueString", "GetBreadcrumbAttributeValueString", client => client.GetBreadcrumbAttributeValueString(breadcrumbConfigXML, fkOrgId, catalogId, cNodeId, localeId));
-        }
-
+        
         /// <summary>
         /// Process service result based on given input parameters
         /// </summary>

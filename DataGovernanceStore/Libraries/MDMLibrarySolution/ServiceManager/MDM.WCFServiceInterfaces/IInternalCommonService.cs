@@ -38,11 +38,7 @@ namespace MDM.WCFServiceInterfaces
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         EntityOperationResult UpdateEntityHavingImageAttributes(Entity entity, Dictionary<KeyValuePair<Int32, LocaleEnum>, MDM.BusinessObjects.File> imageDetails, String programName, MDMCenterApplication application, MDMCenterModules module);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        EntityViewCollection GetEntityViewCompletionStatus(Int64 entityId, Int32 userId, String entityViewXml, EntityContext entityContext, Boolean isRecalculationRequired, MDMCenterApplication application, MDMCenterModules module);
-
+        
         [OperationContract]
         [FaultContract(typeof(MDMExceptionDetails))]
         Boolean IsEntityExists(Entity entity, Int64 entityId, Int32 catalogId, MDMCenterApplication application, MDMCenterModules module);
@@ -80,33 +76,7 @@ namespace MDM.WCFServiceInterfaces
         Dictionary<Int32, EntityType> GetEntityVariantLevels(Int64 entityId, CallerContext callerContext);
 
         #endregion
-
-        #region Attribute Version
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        AttributeVersionCollection GetComplexAttributeVersions(Int64 entityId, Int64 entityParentId, Int32 attributeId, Int32 catalogId, Collection<LocaleEnum> locales, Int32 sequence, CallerContext callerContext);
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Attribute GetComplexDataByAuditRefId(Int64 entityId, Int32 containerId, Int32 attributeId, Int64 auditRefId, LocaleEnum locale, CallerContext callerContext);
-
-        /// <summary>
-        /// Get Hierarchical attribute at specific version of version history for requested auditRefId, attribute id, entity id
-        /// </summary>
-        /// <param name="entityId">EntityId for which attribute history is needed</param>
-        /// <param name="containerId">Container Id under which Entity is created</param>
-        /// <param name="attributeId">Attribute id for which we needs data</param>
-        /// <param name="auditRefId">AuditRefId for which we needs data</param>
-        /// <param name="locale">locale details</param>
-        /// <param name="callerContext">Indicates the Caller Context</param>
-        /// <returns>Hierarchical attribute at some specific point of history</returns>
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        Attribute GetHierarchicalAttributeByAuditRefId(Int64 entityId, Int32 containerId, Int32 attributeId, Int64 auditRefId, LocaleEnum locale, CallerContext callerContext);
-
-        #endregion
-
+        
         #region File Methods
 
         [OperationContract]
@@ -169,15 +139,7 @@ namespace MDM.WCFServiceInterfaces
         ContainerRelationshipTypeEntityTypeMappingCollection GetContainerRelationshipTypeEntityTypeMappings(EntityModelContext entityModelContext, CallerContext callerContext);
 
         #endregion
-
-        #region Promote Methods
-
-        [OperationContract]
-        [FaultContract(typeof(MDMExceptionDetails))]
-        OperationResultCollection EnqueueForPromote(EntityFamilyQueueCollection entityFamilyQueueCollection, CallerContext callerContext);
-
-        #endregion Promote Methods
-
+        
         #region Entity State Validation Methods
 
         /// <summary>

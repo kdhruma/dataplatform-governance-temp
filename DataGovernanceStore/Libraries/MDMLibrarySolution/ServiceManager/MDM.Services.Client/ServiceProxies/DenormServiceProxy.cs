@@ -59,21 +59,7 @@ namespace MDM.Services.ServiceProxies
         {
             return GetEntityActivityLogsWithPagination(processingStatus, fromRecordNumber, toRecordNumber, callerContext);
         }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entityActivityLogId"></param>
-        /// <param name="fromRecordNumber"></param>
-        /// <param name="toRecordNumber"></param>
-        /// <param name="callerContext"></param>
-        /// <returns></returns>
-        public ImpactedEntityCollection GetImpactedEntitiesByEntityActivityLogId(long entityActivityLogId, long fromRecordNumber, long toRecordNumber, CallerContext callerContext)
-        {
-            return GetImpactedEntitiesByEntityActivityLogIdWithPagination(entityActivityLogId, fromRecordNumber,
-                                                                          toRecordNumber, callerContext);
-        }
-
+        
         /// <summary>
         /// 
         /// </summary>

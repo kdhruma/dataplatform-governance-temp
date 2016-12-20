@@ -355,30 +355,7 @@ namespace MDM.Services
 
             return MakeServiceCall<IEntityOperationResult>("UpdateEntityHavingImageAttributes", "UpdateEntityHavingImageAttributes", client => client.UpdateEntityHavingImageAttributes(entity, imageDetails, programName, application, module));
         }
-
-        /// <summary>
-        /// Gets the completion status for Entity Views based on criterion defined in the Entity View XML
-        /// </summary>
-        /// <param name="entityId">Indicates the Entity ID for which the status needs to be determined</param>
-        /// <param name="userId">Indicates the User ID for which the status needs to be determined</param>
-        /// <param name="entityViewXml">Indicates the Entity Editor left panel Config XML containing Views, and the completion criteria</param>
-        /// <param name="iEntityContext">Indicates the data context for which Entity needs to be fetched</param>
-        /// <param name="isRecalculationRequired">Indicates whether the completion status needs to be recalculated or fetched from the cache</param>
-        /// <param name="application">Indicates the name of the application which is performing the action</param>
-        /// <param name="module">Indicates the name of the module which is performing the action</param>
-        /// <returns>Collection of Entity Views with the completion status</returns>
-        /// <exception cref="EndpointNotFoundException">Thrown when a remote endpoint could not be found or reached</exception>
-        /// <exception cref="InvalidOperationException">Thrown when a method call is invalid</exception>
-        /// <exception cref="TimeoutException">Thrown when the time allotted for an operation has expired</exception>
-        /// <exception cref="MDMOperationException">Thrown when the MDM operation fails</exception>
-        /// <exception cref="CommunicationException">Thrown when there is a communication error in either the service or client application</exception>
-        public IEntityViewCollection GetEntityViewCompletionStatus(Int64 entityId, Int32 userId, String entityViewXml, IEntityContext iEntityContext, Boolean isRecalculationRequired, MDMCenterApplication application, MDMCenterModules module)
-        {
-            EntityContext entityContext = (EntityContext)iEntityContext;
-
-            return MakeServiceCall<IEntityViewCollection>("GetEntityViewCompletionStatus", "GetEntityViewCompletionStatus", client => client.GetEntityViewCompletionStatus(entityId, userId, entityViewXml, entityContext, isRecalculationRequired, application, module));
-        }
-
+        
         /// <summary>
         /// Checks whether the requested entity exists or not
         /// </summary>
@@ -536,108 +513,7 @@ namespace MDM.Services
         }
 
         #endregion Entity Hierarchy Methods
-
-        #region Attribute Version
-
-        /// <summary>
-        /// Gets the version history details of the attribute 
-        /// </summary>
-        /// <param name="entityId">Indicates the entity identifier</param>
-        /// <param name="entityParentId">Indicates the Parent identifier of an entity</param>
-        /// <param name="attributeId">Indicates the attribute identifier</param>
-        /// <param name="catalogId">Indicates the catalog identifier</param>
-        /// <param name="locales">Indicates the locale identifier</param>
-        /// <param name="sequence">Indicates the sequence</param>
-        /// <param name="iCallerContext">Indicates the name of application and the module that are performing the action</param>
-        /// <returns>Returns the attribute version collection details</returns>
-        public IAttributeVersionCollection GetComplexAttributeVersions(Int64 entityId, Int64 entityParentId, Int32 attributeId, Int32 catalogId, Collection<LocaleEnum> locales, Int32 sequence, ICallerContext iCallerContext)
-        {
-            return MakeServiceCall("GetComplexAttributeVersions", "GetComplexAttributeVersions", client => client.GetComplexAttributeVersions(entityId, entityParentId, attributeId, catalogId, locales, sequence, FillDiagnosticTraces(iCallerContext)), MDMTraceSource.EntityGet);
-        }
-
-        /// <summary>
-        /// Gets the complex data for complex attribute's version history for the requested attribute id and AuditRefId
-        /// </summary>
-        /// <example>
-        /// <code>
-        /// DataService dataService = new DataService();
-        /// 
-        /// // Entity Id for which version history is requested
-        /// Int64 entityId = 54716;
-        /// 
-        /// // ContainerId under entity is created
-        /// Int32 containerId = 5;
-        /// 
-        /// // AuditRefId for which history is requested
-        /// Int64 auditRefId = 29598;
-        /// 
-        /// // Attribute Id for which the version history details is requested
-        /// Int32 attributeId = 4032;
-        /// 
-        /// // Locale for which data is requested
-        /// LocaleEnum locale = LocaleEnum.en_WW;
-        /// 
-        /// iCallerContext icallerContext = new CallerContext() { Application = MDMCenterApplication.MDMCenter, Module = MDMCenterModules.Entity };
-        /// 
-        /// Attribute attr = (Attribute)dataService.GetComplexDataByAuditRefId(entityId, containerId, attributeId, auditRefId, locale, callerContext);
-        /// 
-        /// </code>
-        /// </example>
-        /// <param name="entityId">Indicates the Entity Id for which data is requested</param>
-        /// <param name="containerId">Indicates the containerId for which data is requested</param>
-        /// <param name="attributeId">Indicates the attribute id for which the data is requested</param>
-        /// <param name="auditRefId">AuditRefId for which history is requested</param>
-        /// <param name="locale">Indicates the locale details</param>
-        /// <param name="iCallerContext">Indicates the name of application and the module that are performing the action</param>
-        /// <returns>Returns the attribute object with the complex attribute's data</returns>
-        public IAttribute GetComplexDataByAuditRefId(Int64 entityId, Int32 containerId, Int32 attributeId, Int64 auditRefId, LocaleEnum locale, ICallerContext iCallerContext)
-        {
-            return this.MakeServiceCall<IAttribute>("GetComplexDataByAuditRefId", "GetComplexDataByAuditRefId", client => client.GetComplexDataByAuditRefId(entityId, containerId, attributeId, auditRefId, locale, FillDiagnosticTraces(iCallerContext)), MDMTraceSource.EntityGet);
-        }
-
-        /// <summary>
-        /// Gets the hierarchical attribute for hierarchical version history for the requested attribute id and AuditRefId
-        /// </summary>
-        /// <example>
-        /// <code>
-        /// DataService dataService = new DataService();
-        /// 
-        /// // Entity Id for which version history is requested
-        /// Int64 entityId = 54716;
-        /// 
-        /// // ContainerId under entity is created
-        /// Int32 containerId = 5;
-        /// 
-        /// // AuditRefId for which history is requested
-        /// Int64 auditRefId = 29598;
-        /// 
-        /// // Attribute Id for which the version history details is requested
-        /// Int32 attributeId = 4032;
-        /// 
-        /// // Locale for which data is requested
-        /// LocaleEnum locale = LocaleEnum.en_WW;
-        /// 
-        /// iCallerContext icallerContext = new CallerContext() { Application = MDMCenterApplication.MDMCenter, Module = MDMCenterModules.Entity };
-        /// 
-        /// Attribute hierarchicalAttribute = (Attribute)dataService.GetHierarchicalAttributeByAuditRefId(entityId, containerId, attributeId, auditRefId, locale, callerContext);
-        /// 
-        /// </code>
-        /// </example>
-        /// <param name="entityId">Indicates the Entity Id for which data is requested</param>
-        /// <param name="containerId">Indicates the containerId for which data is requested</param>
-        /// <param name="attributeId">Indicates the attribute id for which the data is requested</param>
-        /// <param name="auditRefId">AuditRefId for which history is requested</param>
-        /// <param name="locale">Indicates the locale details</param>
-        /// <param name="iCallerContext">Indicates the name of application and the module that are performing the action</param>
-        /// <returns>Hierarchical attribute at some specific point of history</returns>
-        public IAttribute GetHierarchicalAttributeByAuditRefId(Int64 entityId, Int32 containerId, Int32 attributeId, Int64 auditRefId, LocaleEnum locale, ICallerContext iCallerContext)
-        {
-            return this.MakeServiceCall<IAttribute>("GetHierarchicalAttributeByAuditRefId", "GetHierarchicalAttributeByAuditRefId", client => client.GetHierarchicalAttributeByAuditRefId(entityId, containerId, attributeId, auditRefId, locale, FillDiagnosticTraces(iCallerContext)), MDMTraceSource.EntityGet);
-        }
-
-
-        #endregion
-
+        
         #region File Methods
 
         /// <summary>        
@@ -739,21 +615,7 @@ namespace MDM.Services
             return MakeServiceCall("GetMappedAttributeModelsByContainers", "GetMappedAttributeModelsByContainers",
                 client => client.GetMappedAttributeModelsByContainers(containerIdList, FillDiagnosticTraces(iCallerContext)));
         }
-
-        #region Promote Methods
-        /// <summary>
-        /// Enqueues for promote.
-        /// </summary>
-        /// <param name="entityFamilyQueueCollection">The entity family queue collection.</param>
-        /// <param name="callerContext">The caller context.</param>
-        /// <returns>OperationResultCollection containing the results of operation</returns>
-        public IOperationResultCollection EnqueueForPromote(IEntityFamilyQueueCollection entityFamilyQueueCollection, ICallerContext callerContext)
-        {
-            return MakeServiceCall<IOperationResultCollection>("EnqueueForPromote", "EnqueueForPromote", client => client.EnqueueForPromote(entityFamilyQueueCollection as EntityFamilyQueueCollection, FillDiagnosticTraces(callerContext)));
-        }
-
-        #endregion Promote Methods
-
+        
         #region Entity State Validation Methods
 
         /// <summary>

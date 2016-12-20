@@ -2502,18 +2502,18 @@ namespace MDM.Imports.Processor
                 }
                 #endregion
 
-                #region Bulk Process Impacted Entities
+                //#region Bulk Process Impacted Entities
 
-                if (importProcessingType == ImportProcessingType.ValidateAndProcess)
-                {
-                    ImpactedEntityBL impactedEntityManager = new ImpactedEntityBL();
-                    EntityCollection impactedEntities = new EntityCollection();
-                    IEnumerable<Entity> impactedEntityCollection = entityCollection.Where(e => e.Id > 0).ToList();
-                    impactedEntities = new EntityCollection(impactedEntityCollection.ToList());
-                    impactedEntityManager.ImpactedEntityBulkProcess(impactedEntities, this.callerContext);
-                }
+                //if (importProcessingType == ImportProcessingType.ValidateAndProcess)
+                //{
+                //    ImpactedEntityBL impactedEntityManager = new ImpactedEntityBL();
+                //    EntityCollection impactedEntities = new EntityCollection();
+                //    IEnumerable<Entity> impactedEntityCollection = entityCollection.Where(e => e.Id > 0).ToList();
+                //    impactedEntities = new EntityCollection(impactedEntityCollection.ToList());
+                //    impactedEntityManager.ImpactedEntityBulkProcess(impactedEntities, this.callerContext);
+                //}
                 
-                #endregion Bulk Process Impacted Entities
+                //#endregion Bulk Process Impacted Entities
 
             }
             catch (Exception)

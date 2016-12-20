@@ -116,10 +116,6 @@
     <Compile Include="BaseProfileCollection.cs" />
     <Compile Include="Base\InterfaceContractCollection.cs" />
     <Compile Include="Base\ItemContractCollection.cs" />
-    <Compile Include="Base\StronglyTypedEntities\SpecialTypes\ValueUomPair.cs" />
-    <Compile Include="Base\StronglyTypedEntities\StronglyTypedClassMetaDataAttribute.cs" />
-    <Compile Include="Base\StronglyTypedEntities\StronglyTypedEntityBase.cs" />
-    <Compile Include="Base\StronglyTypedEntities\StronglyTypedMetaDataAttribute.cs" />
     <Compile Include="DDG\BaseMDMRuleContextFilter.cs" />
     <Compile Include="DDG\BusinessRuleOperationResult.cs" />
     <Compile Include="DDG\BusinessRuleOperationResultCollection.cs" />
@@ -366,7 +362,6 @@
     <Compile Include="Interfaces\ILocaleConfig.cs" />
     <Compile Include="Interfaces\ILookupModel.cs" />
     <Compile Include="Interfaces\IObject.cs" />
-    <Compile Include="Interfaces\IStronglyTypedEntity.cs" />
     <Compile Include="LocaleChangeContext.cs" />
     <Compile Include="LocaleChangeContextCollection.cs" />
     <Compile Include="LookupModel.cs" />

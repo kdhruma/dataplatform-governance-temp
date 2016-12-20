@@ -19,21 +19,7 @@ namespace MDM.Interfaces
 
         EntityOperationResult Delete(Entity entity, string programName, MDMCenterApplication application, MDMCenterModules module);
         EntityOperationResultCollection Delete(EntityCollection entities, string programName, MDMCenterApplication application, MDMCenterModules module);
-
-        Boolean EnsureAttributes(Entity entity, AttributeUniqueIdentifier attributeUniqueIdentifier, Boolean loadAttributeModels, CallerContext callerContext);
-        Boolean EnsureAttributes(Entity entity, IEnumerable<int> attributeIds, Boolean loadAttributeModels, CallerContext callerContext);        
-        Boolean EnsureAttributes(EntityCollection entityCollection, AttributeModelContext attributeModelContext, Boolean loadAttributeModels, CallerContext callerContext);
-        Boolean EnsureAttributes(EntityCollection entityCollection, System.Collections.Generic.IEnumerable<int> attributeIds, Boolean loadAttributeModels, CallerContext callerContext);
-        Boolean EnsureAttributes(EntityCollection entityCollection, IEnumerable<AttributeUniqueIdentifier> attributeUniqueIdentifiers, Boolean loadAttributeModels, CallerContext callerContext);
-        Boolean EnsureEntityData(EntityCollection entities, EntityContext entityContext, CallerContext callerContext);
-
-        Boolean EnsureRelationships(EntityCollection entityCollection, Boolean loadExistingRelationships, Collection<String> relationshipTypeNames, AttributeUniqueIdentifierCollection attributeUniqueIdentifiers, CallerContext callerContext);
-        Boolean EnsureRelationships(EntityCollection entityCollection, Boolean loadExistingRelationships, Collection<Int32> relationshipTypeIds, Collection<Int32> attributeIds, AttributeUniqueIdentifierCollection attributeUniqueIdentifiers, CallerContext callerContext);
         
-        Boolean EnsureInheritedAttributes(Entity entity, CallerContext callerContext);
-
-        Boolean EnsureEntityHierarchy(Entity entity, EntityHierarchyContext entityHierarchyContext, EntityGetOptions entityGetOptions, CallerContext callerContext);
-
         Boolean Exists(Entity entity, Int64 entityId, int containerId, MDMCenterApplication application, MDMCenterModules module, Boolean excludeSelfReference = false);
 
         EntityCollection Get(Collection<Int64> entityIdList, EntityContext entityContext, EntityGetOptions entityGetOptions, CallerContext callerContext);

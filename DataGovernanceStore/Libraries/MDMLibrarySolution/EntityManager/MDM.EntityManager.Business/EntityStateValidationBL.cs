@@ -604,9 +604,9 @@ namespace MDM.EntityManager.Business
                 {
                     entityFamilyQueue.EntityActivityList = EntityActivityList.EntityRevalidate;
                     entityFamilyQueue.Action = ObjectAction.Create;
-                    EntityFamilyQueueBL entityFamilyQueueBL = new EntityFamilyQueueBL();
+                    //EntityFamilyQueueBL entityFamilyQueueBL = new EntityFamilyQueueBL();
 
-                    operationResult = entityFamilyQueueBL.Process(entityFamilyQueue, callerContext);
+                    //operationResult = entityFamilyQueueBL.Process(entityFamilyQueue, callerContext);
                 }
 
                 #endregion Step : Enqueue for Re-validate
@@ -1639,7 +1639,7 @@ namespace MDM.EntityManager.Business
                         if (!hasAnySystemError)
                         {
                             //Release a lock once process is done.
-                            new EntityFamilyQueueBL().MarkCompleteAndReleaseLock(mainEntityId, clonedCallerContext);
+                            //new EntityFamilyQueueBL().MarkCompleteAndReleaseLock(mainEntityId, clonedCallerContext);
                         }
 
                         #endregion Step : Mark Complete And Release Lock
@@ -1804,7 +1804,7 @@ namespace MDM.EntityManager.Business
                         if (!hasAnySystemError)
                         {
                             //Release a lock once process is done.
-                            new EntityFamilyQueueBL().MarkCompleteAndReleaseLock(entityFamilyQueue.EntityGlobalFamilyId, clonedCallerContext);
+                            //new EntityFamilyQueueBL().MarkCompleteAndReleaseLock(entityFamilyQueue.EntityGlobalFamilyId, clonedCallerContext);
                         }
 
                         #endregion Step : Mark Complete And Release Lock

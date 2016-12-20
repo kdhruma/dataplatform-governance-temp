@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -80,15 +80,10 @@
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
     <Compile Include="EntityCacheStatusBL.cs" />
-    <Compile Include="EntityCopyPasteContentBL.cs" />
     <Compile Include="EntityEventArgs.cs" />
-    <Compile Include="EntityFamilyBL.cs" />
-    <Compile Include="EntityFamilyQueueBL.cs" />
     <Compile Include="EntityHierarchyBL.cs" />
     <Compile Include="EntityHierarchyProcessManager.cs" />
-    <Compile Include="EntityHistoryBL.cs" />
     <Compile Include="EntityOperations\EntityParallelGetManager.cs" />
-    <Compile Include="EntityOperations\EnsureEntityDataManager.cs" />
     <Compile Include="EntityOperations\EntityHierarchyGetManager.cs" />
     <Compile Include="EntityOperations\Helpers\EntityAttributeDefaultValueHelper.cs" />
     <Compile Include="EntityOperations\Helpers\EntityAttributeModelHelper.cs" />
@@ -96,21 +91,16 @@
     <Compile Include="EntityOperations\Helpers\EntityCompareAndMergeHelper.cs" />
     <Compile Include="EntityOperations\Helpers\EntityJigsawIntegrationHelper.cs" />
     <Compile Include="EntityOperations\Helpers\EntityContextHelper.cs" />
-    <Compile Include="EntityOperations\EntityIdentificationManager.cs" />
     <Compile Include="EntityOperations\Helpers\EntityOperationsCommonUtility.cs" />
     <Compile Include="EntityOperations\Helpers\EntityCacheHelper.cs" />
     <Compile Include="EntityOperations\Helpers\EntityFillHelper.cs" />
     <Compile Include="EntityOperations\EntityModelGetManager.cs" />
-    <Compile Include="EntityOperations\EntityProcessManager.cs" />
     <Compile Include="EntityOperations\EntityGetManager.cs" />
     <Compile Include="EntityOperations\Helpers\EntityLookupAttributeHelper.cs" />
     <Compile Include="EntityOperations\EntityReclassificationManager.cs" />
     <Compile Include="EntityOperations\Helpers\EntityStateValidationHelper.cs" />
-    <Compile Include="EntityOperations\Helpers\ExportQualificationHelper.cs" />
     <Compile Include="EntityQueueBL.cs" />
-    <Compile Include="EntityUniqueIdentificationMapBL.cs" />
     <Compile Include="EntityStateValidationBL.cs" />
-    <Compile Include="ImpactedEntityBL.cs" />
     <Compile Include="EntityLocaleBL.cs" />
     <Compile Include="EntityMapBufferManager.cs" />
     <Compile Include="EntityMapBL.cs" />
@@ -120,12 +110,9 @@
     <Compile Include="EntityOperationsBL.cs" />
     <Compile Include="EntityBL.cs" />
     <Compile Include="EntityEventManager.cs" />
-    <Compile Include="EntityViewBL.cs" />
-    <Compile Include="PromoteBL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceValueBL.cs" />
     <Compile Include="SourceBL.cs" />
-    <Compile Include="StronglyTypedEntityCacheStatusBL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\MDMWorkflowSolution\WorkflowPersistenceManager\MDM.Workflow.PersistenceManager.Business\MDM.Workflow.PersistenceManager.Business.csproj">

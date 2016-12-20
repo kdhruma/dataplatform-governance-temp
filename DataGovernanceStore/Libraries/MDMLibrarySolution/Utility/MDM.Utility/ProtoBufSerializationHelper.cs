@@ -23,17 +23,7 @@ namespace MDM.Utility
         #region Fields
 
         private static Boolean _isInitialized = false;
-
-        /// <summary>
-        /// Field representing the Entity type strong type map
-        /// </summary>
-        public static Dictionary<Int32, Type> EntityTypeStrongTypeMap = new Dictionary<Int32, Type>();
-
-        /// <summary>
-        /// Field representing the Strong type property map
-        /// </summary>
-        public static Dictionary<Type, Dictionary<String, PropertyInfo>> StrongTypePropertyMap = new Dictionary<Type, Dictionary<String, PropertyInfo>>();
-
+        
         #endregion Fields
 
         #region Public Methods
@@ -49,7 +39,6 @@ namespace MDM.Utility
                 {
                     InitializeMetaTypeForObjectBase();
                     InitializeMetaTypeForMDMObject();
-                    InitializeMetaTypeForStrongTypes(assemblyName);
                     _isInitialized = true;
                 }
             }
@@ -136,52 +125,7 @@ namespace MDM.Utility
             mdmObjectMetaType.AddSubType(ProtoBufConstants.MDMOBJECT + 13, typeof(RelationshipContext));
             mdmObjectMetaType.AddSubType(ProtoBufConstants.MDMOBJECT + 14, typeof(EntityHierarchyContext));
         }
-
-
-        private static void InitializeMetaTypeForStrongTypes(String assemblyName)
-        {
-            if (!String.IsNullOrWhiteSpace(assemblyName))
-            {
-                MetaType strongTypeBaseMetaType = RuntimeTypeModel.Default.Add(typeof(StronglyTypedEntityBase), true);
-                Assembly assembly = Assembly.LoadFrom(String.Format("{0}\\{1}", Path.GetDirectoryName(new Uri(Assembly.GetExecutingAssembly().CodeBase).LocalPath), assemblyName));
-                if (assembly != null)
-                {
-                    Int32 protobufIndex = 1;
-                    Type stronglyTypedMetaDataAttribute = typeof(StronglyTypedMetaDataAttribute);
-                    Type stronglyTypedClassMetaDataAttribute = typeof(StronglyTypedClassMetaDataAttribute);
-                    foreach (Type strongType in assembly.GetTypes())
-                    {
-                        StronglyTypedClassMetaDataAttribute metaAttribute = strongType.GetCustomAttributes(stronglyTypedClassMetaDataAttribute, true).Cast<StronglyTypedClassMetaDataAttribute>().FirstOrDefault();
-                        if (metaAttribute != null)
-                        {
-                            strongTypeBaseMetaType.AddSubType(ProtoBufConstants.STRONGLYTYPEDENTITYBASE + protobufIndex++, strongType);
-                            if (!EntityTypeStrongTypeMap.ContainsKey(metaAttribute.EntityTypeId))
-                            {
-                                EntityTypeStrongTypeMap.Add(metaAttribute.EntityTypeId, strongType);
-                            }
-                        }
-                        if (!StrongTypePropertyMap.ContainsKey(strongType))
-                        {
-                            Dictionary<String, PropertyInfo> keyPropertyMap = new Dictionary<string, PropertyInfo>();
-
-                            foreach (PropertyInfo property in strongType.GetProperties())
-                            {
-                                StronglyTypedMetaDataAttribute propertyAttribute = property.GetCustomAttributes(stronglyTypedMetaDataAttribute, true).Cast<StronglyTypedMetaDataAttribute>().FirstOrDefault();
-                                if (propertyAttribute != null)
-                                {
-                                    keyPropertyMap.Add(propertyAttribute.ShortName + "##@##" + propertyAttribute.ParentName, property);
-                                }
-                            }
-                            if (keyPropertyMap.Keys.Count > 0)
-                            {
-                                StrongTypePropertyMap.Add(strongType, keyPropertyMap);
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
+        
         #endregion
     }
 }

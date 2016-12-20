@@ -98,9 +98,9 @@ namespace MDM.EntityManager.Business.EntityOperations
                 //Prepare AttributeModelContext
                 var attributeModelContext = new AttributeModelContext(entity.ContainerId, entity.EntityTypeId, 0, entity.CategoryId, entityContext.DataLocales, 0, entityContext.AttributeModelType, entityContext.LoadCreationAttributes, false /*only required attributes*/, false /*load complete details*/);
                 attributeModelContext.ApplySorting = false;
-                AttributeCollection attributeCollection;
-                AttributeModelCollection attributeModelCollection;
-                EntityAttributeModelHelper.LoadAttributeModelsWithBlankAttributeInstances(attributeIdList, attributeGroupIdList, null, attributeModelContext, out attributeCollection, out attributeModelCollection);
+                AttributeCollection attributeCollection = null;
+                AttributeModelCollection attributeModelCollection = null;
+                //EntityAttributeModelHelper.LoadAttributeModelsWithBlankAttributeInstances(attributeIdList, attributeGroupIdList, null, attributeModelContext, out attributeCollection, out attributeModelCollection);
 
                 if (entityContext.LoadAttributes)
                 {

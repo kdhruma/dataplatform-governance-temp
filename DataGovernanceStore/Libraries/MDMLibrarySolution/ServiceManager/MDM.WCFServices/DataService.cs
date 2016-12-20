@@ -602,136 +602,7 @@ namespace MDM.WCFServices
 
             return entityOperationResultCollection;
         }
-
-        #region Ensure Attribute methods
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <param name="attributeIds"></param>
-        /// <param name="loadAttributeModels"></param>
-        /// <param name="callerContext"></param>
-        /// <returns></returns>
-        public Entity EnsureAttributes(Entity entity, IEnumerable<Int32> attributeIds, Boolean loadAttributeModels, CallerContext callerContext)
-        {
-            try
-            {
-                //No need to store boolean result of calling API,client is taking care of result based on entity object
-                EntityBL entityBL = new EntityBL();
-                entityBL.EnsureAttributes(entity, attributeIds, loadAttributeModels, callerContext);
-            }
-            catch (Exception ex)
-            {
-                this.LogException(ex);
-                throw base.WrapException(ex);
-            }
-
-            return entity;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entity"></param>
-        /// <param name="attributeUniqueIdentifier"></param>
-        /// <param name="loadAttributeModels"></param>
-        /// <param name="callerContext"></param>
-        /// <returns></returns>
-        public Entity EnsureAttributes(Entity entity, AttributeUniqueIdentifier attributeUniqueIdentifier, Boolean loadAttributeModels, CallerContext callerContext)
-        {
-            try
-            {
-                //No need to store boolean result of calling API,client is taking care of result based on entity object
-                EntityBL entityBL = new EntityBL();
-                entityBL.EnsureAttributes(entity, attributeUniqueIdentifier, loadAttributeModels, callerContext);
-            }
-            catch (Exception ex)
-            {
-                this.LogException(ex);
-                throw base.WrapException(ex);
-            }
-
-            return entity;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entityCollection"></param>
-        /// <param name="attributeIds"></param>
-        /// <param name="loadAttributeModels"></param>
-        /// <param name="callerContext"></param>
-        /// <returns></returns>
-        public EntityCollection EnsureAttributes(EntityCollection entityCollection, IEnumerable<Int32> attributeIds, Boolean loadAttributeModels, CallerContext callerContext)
-        {
-            try
-            {
-                //No need to store boolean result of calling API,client is taking care of result based on entity object
-                EntityBL entityBL = new EntityBL();
-                entityBL.EnsureAttributes(entityCollection, attributeIds, loadAttributeModels, callerContext);
-            }
-            catch (Exception ex)
-            {
-                this.LogException(ex);
-                throw base.WrapException(ex);
-            }
-
-            return entityCollection;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entityCollection"></param>
-        /// <param name="attributeUniqueIdentifiers"></param>
-        /// <param name="loadAttributeModels"></param>
-        /// <param name="callerContext"></param>
-        /// <returns></returns>
-        public EntityCollection EnsureAttributes(EntityCollection entityCollection, Collection<AttributeUniqueIdentifier> attributeUniqueIdentifiers, Boolean loadAttributeModels, CallerContext callerContext)
-        {
-            try
-            {
-                //No need to store boolean result of calling API,client is taking care of result based on entity object
-                EntityBL entityBL = new EntityBL();
-                entityBL.EnsureAttributes(entityCollection, attributeUniqueIdentifiers, loadAttributeModels, callerContext);
-            }
-            catch (Exception ex)
-            {
-                this.LogException(ex);
-                throw base.WrapException(ex);
-            }
-
-            return entityCollection;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="entityCollection"></param>
-        /// <param name="attributeModelContext"></param>
-        /// <param name="loadAttributeModels"></param>
-        /// <param name="callerContext"></param>
-        /// <returns></returns>
-        public EntityCollection EnsureAttributes(EntityCollection entityCollection, AttributeModelContext attributeModelContext, Boolean loadAttributeModels, CallerContext callerContext)
-        {
-            try
-            {
-                //No need to store boolean result of calling API,client is taking care of result based on entity object
-                EntityBL entityBL = new EntityBL();
-                entityBL.EnsureAttributes(entityCollection, attributeModelContext, loadAttributeModels, callerContext);
-            }
-            catch (Exception ex)
-            {
-                this.LogException(ex);
-                throw base.WrapException(ex);
-            }
-
-            return entityCollection;
-        }
-
-        #endregion
-
+        
         /// <summary>
         /// Get Entity By given ExternalId
         /// </summary>
@@ -961,39 +832,7 @@ namespace MDM.WCFServices
                     context.CallDataContext.EntityIdList = entityIdsToProcess;
                 });
         }
-
-        /// <summary>
-        /// Ensures the relationship tree denorm for the non-denormalized entities.
-        /// </summary>
-        /// <param name="entityIdList">Entities for which relationship needs to be denormalized</param>
-        /// <param name="entityContext">Specifies EntityContext which indicates what all information is to be loaded in Entity object</param>
-        /// <param name="processWhereUsed">Boolean flag to determine if we have to process where used for current entity or not.</param>
-        /// <param name="processImpactedExtensions">Boolean flag to determine if we have to process impacted extensions for current entity or not.</param>
-        /// <param name="processImpactedHierarchies">Boolean flag to determine if we have to process processImpactedHierarchies for current entity or not</param>
-        /// <param name="processRelationshipTree">Boolean flag to determine if we have to process processInheritable for current entity or not</param>
-        /// <param name="processInheritable">Boolean flag to determine if we have to process processInheritable for current entity or not</param>
-        /// <param name="processRelationshipAttributes">Boolean flag to determine if we have to process processRelationshipAttributes for current entity or not</param>
-        /// <param name="callerContext">Indicates Application and Module name by which operation is being performed</param>
-        /// <returns></returns>
-        public EntityOperationResultCollection EnsureInheritedEntityRelationships(Collection<Int64> entityIdList, EntityContext entityContext, Boolean processWhereUsed, Boolean processImpactedExtensions, Boolean processImpactedHierarchies, Boolean processRelationshipTree, Boolean processInheritable, Boolean processRelationshipAttributes, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<RelationshipDenormBL, EntityOperationResultCollection>("EnsureInheritedEntityRelationships", businessLogic =>
-                   businessLogic.EnsureInheritedEntityRelationships(entityIdList, entityContext, processWhereUsed, processImpactedExtensions,
-                            processImpactedHierarchies, processRelationshipTree, processInheritable, processRelationshipAttributes,
-                            new EntityBL(), new ImpactedEntityBL(), callerContext));
-        }
-
-
-        /// <summary>
-        /// Queues the specified entity ids for promote process.
-        /// </summary>
-        /// <param name="entityIds">The entity ids.</param>
-        /// <param name="callerContext">The caller context.</param>
-        /// <returns></returns>
-        public OperationResultCollection Promote(Collection<Int64> entityIds, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<PromoteBL, OperationResultCollection>("Promote", businessLogic => businessLogic.EnqueueForPromote(entityIds, callerContext));
-        }
+        
         #endregion
 
         #region Entity Locale Methods
@@ -1816,23 +1655,7 @@ namespace MDM.WCFServices
         }
 
         #endregion
-
-        #region Copy Paste Methods
-
-        /// <summary>
-        /// Copies requested attributes and relationships from source entity to multiple target entities
-        /// </summary>
-        /// <param name="entityCopyPasteContext">EntityCopyPasteContext contains source and target entityId, attributes and Relationships that needs to be copied.</param>
-        /// <param name="callerContext">Indicates Application and Module name by which action is being performed</param>
-        /// <returns>Returns the results of the operation having errors and information, if any</returns>
-        public EntityOperationResultCollection CopyPasteEntityContents(EntityCopyPasteContext entityCopyPasteContext, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<EntityCopyPasteContentBL, EntityOperationResultCollection>("CopyPasteEntityContents", businessLogic =>
-                   businessLogic.CopyPasteEntityContents(entityCopyPasteContext, callerContext));
-        }
-
-        #endregion
-
+        
         #region Private Methods
 
         /// <summary>

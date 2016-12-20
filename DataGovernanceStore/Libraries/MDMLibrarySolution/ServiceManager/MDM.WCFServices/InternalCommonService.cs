@@ -8,7 +8,6 @@ using System.ServiceModel;
 namespace MDM.WCFServices
 {
     using MDM.AdminManager.Business;
-    using MDM.AttributeManager.Business;
     using MDM.BusinessObjects;
     using MDM.BusinessObjects.DataModel;
     using MDM.BusinessObjects.Diagnostics;
@@ -242,23 +241,7 @@ namespace MDM.WCFServices
         {
             return MakeBusinessLogicCall<EntityBL, EntityOperationResult>("UpdateEntityHavingImageAttributes", businessLogic => businessLogic.Update(entity, imageDetails, programName, application, module), MDMTraceSource.EntityProcess);
         }
-
-        /// <summary>
-        /// Gets the completion status for entity views based on criterion defined in the entity view xml
-        /// </summary>
-        /// <param name="entityId">Id of the entity for which status needs to be determined</param>
-        /// <param name="userId">User Id for which status needs to be determined</param>
-        /// <param name="entityViewXml">Entity editor left panel config xml containing views and the completion criteria</param>
-        /// <param name="entityContext">Context parameters of the entity</param>
-        /// <param name="isRecalculationRequired">Flag which says whether the completion status needs to be recalculated or needs to be get from the cache</param>
-        /// <param name="application"></param>
-        /// <param name="module"></param>
-        /// <returns>Collection of entity views with the completion status</returns>
-        public EntityViewCollection GetEntityViewCompletionStatus(Int64 entityId, Int32 userId, String entityViewXml, EntityContext entityContext, Boolean isRecalculationRequired, MDMCenterApplication application, MDMCenterModules module)
-        {
-            return MakeBusinessLogicCall<EntityViewBL, EntityViewCollection>("GetEntityViewCompletionStatus", businessLogic => businessLogic.GetEntityViewCompletionStatus(entityId, userId, entityViewXml, entityContext, isRecalculationRequired, application, module), MDMTraceSource.EntityGet);
-        }
-
+        
         /// <summary>
         /// Check the if Entity exists or not.
         /// </summary>
@@ -365,58 +348,7 @@ namespace MDM.WCFServices
         }
 
         #endregion
-
-        #region Attribute Version
-
-        /// <summary>
-        /// Get Version History of Attribute
-        /// </summary>
-        /// <param name="entityId">Specifies Id of Entity</param>
-        /// <param name="entityParentId">Specifies ParentId of entity</param>
-        /// <param name="attributeId">Specifies Id of Attribute</param>
-        /// <param name="catalogId">Specifies Id of Catalog</param>
-        /// <param name="locales">Specifies the data Locales</param>
-        /// <param name="sequence">Specifies a sequence</param>
-        /// <param name="callerContext">Specifies Caller context</param>
-        /// <returns>AttributeVersionCollection</returns>
-        public AttributeVersionCollection GetComplexAttributeVersions(Int64 entityId, Int64 entityParentId, Int32 attributeId, Int32 catalogId, Collection<LocaleEnum> locales, Int32 sequence, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<AttributeVersionBL, AttributeVersionCollection>("GetComplexAttributeVersions", businessLogic => businessLogic.GetComplexAttributeVersions(entityId, entityParentId, attributeId, catalogId, locales, sequence, callerContext), MDMTraceSource.EntityGet);
-        }
-
-        /// <summary>
-        /// Get Complex Data for Complex Attribute's version history for requested attribute id
-        /// </summary>
-        /// <param name="entityId">EntityId for which attribute history is needed</param>
-        /// <param name="containerId">Container Id under which Entity is created</param>
-        /// <param name="attributeId">Attribute id for which we needs data</param>
-        /// <param name="auditRefId">AuditRefId for which we needs data</param>
-        /// <param name="locale">locale details</param>
-        /// <param name="callerContext">Indicates the Caller Context</param>
-        /// <returns>Attribute object with complex attribute's data</returns>
-        public Attribute GetComplexDataByAuditRefId(Int64 entityId, Int32 containerId, Int32 attributeId, Int64 auditRefId, LocaleEnum locale, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<AttributeBL, Attribute>("GetComplexDataByAuditRefId", businessLogic => businessLogic.GetComplexDataByAuditRefId(entityId, containerId, attributeId, auditRefId, locale, callerContext), MDMTraceSource.EntityGet);
-        }
-
-        /// <summary>
-        /// Get Hierarchical attribute at specific version of version history for requested auditRefId, attribute id, entity id
-        /// </summary>
-        /// <param name="entityId">EntityId for which attribute history is needed</param>
-        /// <param name="containerId">Container Id under which Entity is created</param>
-        /// <param name="attributeId">Attribute id for which we needs data</param>
-        /// <param name="auditRefId">AuditRefId for which we needs data</param>
-        /// <param name="locale">locale details</param>
-        /// <param name="callerContext">Indicates the Caller Context</param>
-        /// <returns>Hierarchical attribute at some specific point of history</returns>
-        public Attribute GetHierarchicalAttributeByAuditRefId(long entityId, int containerId, int attributeId, long auditRefId,
-            LocaleEnum locale, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<AttributeBL, Attribute>("GetHierarchicalAttributeByAuditRefId", businessLogic => businessLogic.GetHierarchicalAttributeByAuditRefId(entityId, containerId, attributeId, auditRefId, locale, callerContext), MDMTraceSource.EntityGet);
-        }
-
-        #endregion
-
+        
         #region File Methods
 
         /// <summary>
@@ -512,22 +444,7 @@ namespace MDM.WCFServices
         }
 
         #endregion
-
-        #region Promote Methods
-
-        /// <summary>
-        /// Enqueues for promote.
-        /// </summary>
-        /// <param name="entityFamilyQueueCollection">The entity family queue collection.</param>
-        /// <param name="callerContext">The caller context.</param>
-        /// <returns></returns>
-        public OperationResultCollection EnqueueForPromote(EntityFamilyQueueCollection entityFamilyQueueCollection, CallerContext callerContext)
-        {
-            return MakeBusinessLogicCall<PromoteBL, OperationResultCollection>("EnqueueForPromote", businessLogic => businessLogic.EnqueueForPromote(entityFamilyQueueCollection, callerContext), MDMTraceSource.Entity);
-        }
-
-        #endregion Promote Methods
-
+        
         #region Entity State Validation Methods
 
         /// <summary>

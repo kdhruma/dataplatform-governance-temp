@@ -706,14 +706,7 @@ namespace MDM.EntityManager.Business.EntityOperations
                     //EntityContext preLoadEntityContext = PreLoadContextHelper.GetEntityContext(ruleParams, _entityManager);
 
                     #endregion Step : Load Entity Context for Pre load
-
-                    #region Step : Ensure entities data for given entity context
-
-                    var ensureEntityDataManager = new EnsureEntityDataManager(_entityManager);
-                    //ensureEntityDataManager.EnsureEntityData(entityCollection, preLoadEntityContext, callerContext);
-
-                    #endregion Step : Ensure entities data for given entity context
-
+                    
                     #region Diagnostics and tracing
 
                     if (isTracingEnabled)

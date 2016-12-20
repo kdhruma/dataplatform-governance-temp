@@ -429,7 +429,7 @@ namespace MDM.EntityManager.Business.EntityOperations
 
                 ValidateInputEntityUniqueIdentifier(entityUniqueIdentifier);
 
-                EntityIdentificationManager.ResolveEntityUniqueIdentifier(entityUniqueIdentifier, callerContext, _currentTraceSettings);
+                //EntityIdentificationManager.ResolveEntityUniqueIdentifier(entityUniqueIdentifier, callerContext, _currentTraceSettings);
 
                 ValidateResolvedEntitiyIdentifier(entityUniqueIdentifier);
 
@@ -1864,7 +1864,7 @@ namespace MDM.EntityManager.Business.EntityOperations
             if (entityContext.LoadExtensionRelationships)
             {
                 //Resolve entity unique identifier for requested entity
-                EntityIdentificationManager.ResolveEntityUniqueIdentifier(entityUniqueIdentifier, callerContext, _currentTraceSettings);
+                //EntityIdentificationManager.ResolveEntityUniqueIdentifier(entityUniqueIdentifier, callerContext, _currentTraceSettings);
                 EntityExtensionContext entityExtensionContext = entityContext.GetEntityExtensionContext() as EntityExtensionContext;
 
                 if (entityExtensionContext != null && entityExtensionContext.EntityContexts != null && entityExtensionContext.EntityContexts.Count > 0)

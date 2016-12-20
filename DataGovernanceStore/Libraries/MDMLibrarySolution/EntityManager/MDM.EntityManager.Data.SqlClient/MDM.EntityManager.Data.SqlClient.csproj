@@ -11,7 +11,7 @@
     <RootNamespace>MDM.EntityManager.Data</RootNamespace>
     <AssemblyName>RS.MDM.EntityManager.Data.SqlClient</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>   
+    <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <OldToolsVersion>3.5</OldToolsVersion>
@@ -69,14 +69,10 @@
     <Compile Include="..\..\..\..\AssemblyVersionInfo.cs">
       <Link>AssemblyVersionInfo.cs</Link>
     </Compile>
-    <Compile Include="EntityFamilyQueueDA.cs" />
-    <Compile Include="EntityUniqueIdentificationMapDA.cs" />
-    <Compile Include="EntityHistoryDA.cs" />
     <Compile Include="EntityCacheStatusDA.cs" />
     <Compile Include="EntityQueueDA.cs" />
     <Compile Include="EntityValidationDA.cs" />
     <Compile Include="EntityStateValidationDA.cs" />
-    <Compile Include="ImpactedEntityDA.cs" />
     <Compile Include="EntityLocaleDA.cs" />
     <Compile Include="EntityMapDA.cs" />
     <Compile Include="ExtensionRelationshipDA.cs" />
@@ -84,11 +80,9 @@
     <Compile Include="EntityHierarchyDA.cs" />
     <Compile Include="EntityOperationsDA.cs" />
     <Compile Include="EntityDA.cs" />
-    <Compile Include="PromoteDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SourceDA.cs" />
     <Compile Include="SourceValueDA.cs" />
-    <Compile Include="StronglyTypedEntityCacheStatusDA.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\BusinessObjects\MDM.BusinessObjects\MDM.BusinessObjects.csproj">
