@@ -60,10 +60,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ApplicationServer.Caching.Client">
-      <HintPath>C:\Program Files\AppFabric 1.1 for Windows Server\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
+      <HintPath>..\..\..\..\3rdParty\AppFabric\Microsoft.ApplicationServer.Caching.Client.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ApplicationServer.Caching.Core">
-      <HintPath>C:\Program Files\AppFabric 1.1 for Windows Server\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
+      <HintPath>..\..\..\..\3rdParty\AppFabric\Microsoft.ApplicationServer.Caching.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.WindowsFabric.Common, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
